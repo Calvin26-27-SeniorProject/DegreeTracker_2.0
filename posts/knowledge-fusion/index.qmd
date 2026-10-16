@@ -1,0 +1,19 @@
+---
+title: "Language Models for Species-Scale Collaboration"
+description: "How knowledge fusion will continue the trend of scaling humam collaboration"
+author: "Ken Arnold"
+date: "2023-01-11"
+categories: [ai, ml, lm, ia]
+---
+
+Large lanugage models like ChatGPT (and its peers like PaLM, BLOOMZ, etc.) are surprisingly powerful tools for knowledge *fusion*. For example, if I ask GPT-3 to continue "A list of exercises for beginning computer science students: 1.", it will generate that list based on all exercises that ever have been listed in plausibly similar contexts. Communities of practice have been exchanging ideas and knowledge throughout human history, but the tools and scale have increased with technological developments like the printing press, video capture, and the Internet, and social developments like academic conferences and social media. Language models are continuing the trend of increasing knowledge sharing by becoming, in a sense, dynamic summaries of slices of others' ideas. Like reading a textbook or a review article, we can benefit from the insights and ideas of others without directly having to read them. But it can do this without nearly as much human effort as writing such reviews.
+
+## Implications
+
+- We'll be able to collaborate at even greater scales than before. AI systems will help cross-pollinate ideas between disparate communities of practice. Instructors will still make our own educational materials, for example, but instead of blank pages, we'll start with ideas synthesized from everyone else who's ever taught a related subject.
+- But, LMs will need to get better at citing their sources. There's thankfully some work going on in that area: [Attributed Question Answering: Evaluation and Modeling for Attributed Large Language Models | Abstract](https://arxiv.org/abs/2212.08037)
+- And: since LMs conflate popularity (i.e., what's common) with quality---and that's really tricky to untangle---we'll need more discernment about when, and when not, to seek and use LM suggestions.
+
+## Related
+
+- [Margaret Boden, Computer Models of Creativity | AI Magazine](https://ojs.aaai.org/index.php/aimagazine/article/view/2254)

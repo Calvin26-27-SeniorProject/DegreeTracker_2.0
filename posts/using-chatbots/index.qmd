@@ -1,0 +1,36 @@
+---
+title: "Principles for Thoughtful Conversations with Chatbots"
+date: "2025-02-20"
+draft: 1
+---
+
+Even if you're not [using AI in reflective mode](/posts/reflective-ai/), I suggest a few principles for having conversations with chatbots.
+
+- **Recollection**. It’s an idol factory. So seek God the wonderful counselor before, during, and after. Ascribe insights to him, not to the AI. Desire his honor and kingdom first.
+- *Cognitive engagement*: don’t get distracted.
+- *Integrity*. Assume it’s public. Behave in a way that you want other people and other models to learn from.
+- *Humility*. Assume both it and you are not just wrong but not even asking the right questions. *Prompt for alternative perspectives*.
+- Keep it from doing things for you that you should do yourself. ("Don't write for me, instead, ...")
+
+
+Here's how Claude summarized the way that I use chatbots:
+
+-   Supporting reflective and meta-reflective practice 
+    -   Synthesizing voice memos and identifying follow-up tasks and insights 
+    -   Reflect on how to improve prompts 
+    -   Prompt for areas of low confidence 
+-   Iterative exploration 
+    -   Refining rough ideas 
+    -   Trying different organizational structures 
+    -   Many conversations are many steps not one-shot interactions (build on, challenge, iteratively refine an artifact 
+-   Teaching 
+    -   Analyze alignment between objectives and materials 
+    -   Iterating on course structure, progression, policies, assessments 
+    -   Suggest reflection questions for students 
+    -   Identifying materials in my library that can support my current objectives 
+    -   Exploring ways to scaffold student learning 
+    -   Identifying potential confusions, misunderstandings, or difficulties 
+-   Translation (for multilingual hospitality at church) 
+    -   Theological sensitivity 
+    -   Back-translation to verify accuracy 
+    -   Consideration of singability of song translations 

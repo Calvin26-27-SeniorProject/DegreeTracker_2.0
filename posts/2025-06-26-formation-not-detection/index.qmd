@@ -1,0 +1,28 @@
+---
+title: "Formation, not Detection: AI detection misses the point"
+description: "How can educators cultivate intellectual virtue in an AI age?"
+author: "Ken Arnold"
+date: "2025-06-26"
+categories: [ai, education]
+featured: 1
+---
+
+A thoughtful colleague just asked me for advice about how to handle questions of academic integrity in AI. I wrote an answer that I thought might help others too.
+
+If you’re asking “should I fail this paper because it used AI”, you’re intervening much too late. We need to be starting with the formational questions (spiritual, character, disposition, wisdom, etc.) and deliberately teaching the details of virtuous practice. In situations where we have a moral imperative to reflect on our work before distributing it, intellectual humility may lead us to reflective use of AI.
+
+::: {.callout-important}
+The biggest distinction isn’t between “used AI” and “didn’t use AI”, but how we use it and why we chose to do that.
+:::
+
+Informally, I’ve noticed that many students seem hungry for thoughtful ways of using AI but find a huge temptation to use it for cognitive shortcuts. This calls for holistic response: we may need to place guardrails around the temptation, but also strengthen appropriate desires, encourage reflection and openness about when we do fall into temptation, and restructure the kinds of things we ask students to do so that they don’t come so close to harmful temptations of the appearance of productivity.
+ 
+Some educators ask how to spot AI use. *do not under any circumstances use an “AI detector” tool*. They are unreliable by nature (technology improvements are not going to make them better), their false positives can disproportionately flag non-native speakers, using them often ends up sharing student data illegally, and most concerningly, they measure the wrong thing: Example: Someone who outsources all their thinking to a GenAI and then rephrases its output in their own words will not get caught by the AI detector.
+ 
+I thought I’d seen a headline once that people who used AI more themselves were better able to identify AI-generated text. I can’t find the article in a quick search now, but it seems plausible to me: systems tend to have a “default” voice and you can learn to hear it—but also the more someone uses some of these systems, the more the system will pick up on the person’s idiosyncrasies, so that voice will drift from the default.
+
+In summary, I think educators should:
+
+- Avoid AI detection tools.
+- Shape interactions with students to form healthy intellectual dispositions.
+- Don't shy away from allowing or even assigning AI use with guidelines for how to do it well.

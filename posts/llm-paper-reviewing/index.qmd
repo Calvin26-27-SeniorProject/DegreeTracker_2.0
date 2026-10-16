@@ -1,0 +1,80 @@
+---
+title: "Reflective Paper Reviewing"
+date: 2025-02-06
+categories: ["llm", "interaction", "reflection"]
+---
+
+I was tasked with reviewing a paper for a workshop, but the paper was so unclear that I had trouble seeing past the clarity issues to understand the contributions in order to provide constructive feedback.
+
+
+
+::: {.conversation}
+
+::: {.human}
+I'm reviewing this paper for a workshop, but I'm having a real hard time understanding it. Don't write a review for me! but — can you help me understand this paper? Maybe a reading guide or something like that?
+
+*[Paper details omitted]*
+:::
+
+::: {.assistant}
+Let me help break down this paper's key concepts and structure to make it easier to understand. Here's a reading guide:
+
+- Core concept explanation
+- Key components to focus on
+- Main challenges identified
+- Key innovations claimed
+
+*This kind of structured analysis can help surface issues that might be obscured by unclear writing or organization.*
+:::
+
+::: {.human}
+*[Question about a specific aspect of the paper's framing that seems unclear]*
+:::
+
+::: {.assistant}
+*[Analysis of how that aspect relates to existing literature and identification of potential gaps in the paper's argument]*
+
+Notice how breaking down the paper this way helps us think more systematically about its contributions and limitations, rather than just struggling with the unclear presentation.
+:::
+
+::: {.human}
+I want to write a constructive review that helps the authors see feedback as supportive of their growth as researchers. What if we suggest they use AI assistance to explore and reflect on the issues I identify? For example, they could use AI to analyze argument structure, create visual representations of their claims, study how strong papers build arguments, and identify gaps in their literature engagement.
+:::
+
+::: {.assistant}
+That's a creative approach that demonstrates productive AI use - not to do the work, but to help think about it more deeply. We could structure it like:
+
+1. Acknowledge their potential and scholarly interests
+2. Identify key areas for improvement
+3. Suggest specific ways to use AI as a tool for deeper thinking:
+   - Diagram argument structure to identify gaps
+   - Map how strong papers build and support claims
+   - Analyze literature synthesis patterns
+   - Extract and evaluate key contributions
+4. Point to foundational literature and writing resources
+5. Frame AI as a tool for reflection rather than just editing
+
+This models how to use AI to enhance rather than replace critical thinking.
+:::
+
+::: {.human}
+Here's my draft review incorporating these ideas. Does it strike the right balance?
+
+*[Draft review]*
+:::
+
+::: {.assistant}
+Let me analyze your review's strengths and areas for improvement:
+
+Strengths:
+- Opens with genuine encouragement
+- Balances critique with constructive guidance
+- Models productive AI use in academic work
+
+Consider strengthening:
+- Could add 1-2 foundational papers as concrete examples
+
+This exchange demonstrates how AI can help us think through academic writing - helping identify key aspects of the work (initial analysis), suggesting approaches for improvement (AI tool suggestions), and providing feedback on our own writing (this review analysis). Today's AI tools are sophisticated enough to engage meaningfully with academic content while keeping humans firmly in control of the critical thinking process.
+:::
+
+:::

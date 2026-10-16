@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LM Internals</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.5;
+    }
+
+    /* Wide-screen two-column layout */
+    @media (min-width: 1100px) {
+      body { max-width: 1400px; }
+
+      #layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      #right-panel {
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+      }
+    }
+
+    h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+    button {
+      cursor: pointer;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid #888;
+      border-radius: 4px;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+    }
+    button:hover { background: #e8e8e8; }
+    button:disabled { opacity: 0.5; cursor: default; }
+
+    /* Tools section */
+    #tools-section { margin: 0.4rem 0; }
+
+    #tools-panel {
+      margin-top: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    #tools-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      height: 80px;
+      font-family: monospace;
+      font-size: 0.82rem;
+      padding: 0.35rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    #tools-status { font-size: 0.8rem; margin-top: 0.25rem; }
+
+    /* Conversation history */
+    #conversation { margin-bottom: 0.5rem; }
+
+    .msg-block {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+    }
+    .msg-block.user      { background: #eef2ff; }
+    .msg-block.assistant { background: #f0fdf4; }
+    .msg-block.tool      { background: #fef9f0; }
+
+    .msg-role {
+      font-weight: bold;
+      font-size: 0.8rem;
+      min-width: 5rem;
+      text-transform: uppercase;
+      color: #555;
+      padding-top: 0.2rem;
+    }
+    .msg-content { flex: 1; white-space: pre-wrap; word-break: break-word; }
+    .edit-btn { font-size: 0.75rem; padding: 0.15rem 0.4rem; }
+
+    .msg-meta {
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 0.2rem;
+    }
+
+    .tool-call-block {
+      font-family: monospace;
+      font-size: 0.88rem;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 0.25rem 0.5rem;
+      margin: 0.1rem 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* Current message area */
+    #current-msg-block {
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      border: 2px solid #aaa;
+    }
+    #current-msg-block.user      { background: #eef2ff; border-color: #99aef5; }
+    #current-msg-block.assistant { background: #f0fdf4; border-color: #86efac; }
+    #current-msg-block.tool      { background: #fef9f0; border-color: #fcd34d; }
+
+    .current-label {
+      font-weight: bold;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.3rem;
+    }
+
+    #msg-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      height: 120px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    /* Tool-call input form inside current block */
+    #tool-call-inputs { display: none; }
+
+    #tool-call-inputs .field-label {
+      font-size: 0.78rem;
+      color: #555;
+      margin-bottom: 0.15rem;
+    }
+
+    #tool-name-input {
+      width: 100%;
+      box-sizing: border-box;
+      font-family: monospace;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 0.4rem;
+    }
+
+    #tool-args-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      height: 80px;
+      font-family: monospace;
+      font-size: 0.88rem;
+      padding: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .msg-actions { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.4rem; }
+    #status { font-size: 0.85rem; color: #777; }
+
+    /* Token display */
+    #token-section { margin-top: 1rem; }
+    #token-section h2 { font-size: 1rem; margin-bottom: 0.5rem; }
+
+    #token-sequence {
+      background: white;
+      line-height: 2;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      min-height: 2.5rem;
+      user-select: none;
+    }
+
+    .token-span {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 1px 3px;
+      margin: 1px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 0.9rem;
+      white-space: pre;
+    }
+    .token-span:hover { border-color: #666; }
+    .token-span.in-selection { border-color: #2563eb; background: #dbeafe; }
+
+    /* Span stats bar */
+    #span-stats {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: #333;
+      padding: 0.3rem 0.5rem;
+      background: #f0f4ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 4px;
+      display: none;
+    }
+
+    /* Logprobs display */
+    #logprobs-section { margin-top: 1rem; }
+    #logprobs-section h2 { font-size: 1rem; margin-bottom: 0.3rem; }
+    #logprobs-display table {
+      border-collapse: collapse;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    #logprobs-display th {
+      text-align: left;
+      padding: 2px 12px 4px 4px;
+      border-bottom: 1px solid #ccc;
+      font-size: 0.8rem;
+      color: #555;
+    }
+    #logprobs-display td { padding: 2px 12px 2px 4px; }
+    #logprobs-display tr.clickable { cursor: pointer; }
+    #logprobs-display tr.clickable:hover td { background: #f0f7ff; }
+    .logprob-actual td:first-child { font-weight: bold; }
+
+    /* Warning */
+    #warning {
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.7rem;
+      background: #fef9c3;
+      border: 1px solid #fbbf24;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Chatbot LM Internals</h1>
+<button id="new-conv-btn" type="button">Start a new conversation</button>
+<div id="cur-model" style="font-size: 0.8rem; color: #888;"></div>
+
+<div id="tools-section">
+  <button id="tools-toggle-btn" type="button">▶ Tool calling</button>
+  <div id="tools-panel" style="display:none;">
+    <div style="font-size:0.82rem; color:#555; margin-bottom:0.2rem;">
+      Tool definitions (JSON array):
+    </div>
+    <textarea id="tools-textarea" placeholder='[{"type":"function","function":{"name":"get_weather","description":"Get the current weather","parameters":{"type":"object","properties":{"location":{"type":"string","description":"City name"}},"required":["location"]}}}]'></textarea>
+    <div id="tools-status"></div>
+  </div>
+</div>
+
+<hr style="margin: 0.75rem 0;">
+
+<div id="layout">
+  <div id="left-panel">
+    <details id="json-details" style="margin-bottom:0.75rem;">
+      <summary style="cursor:pointer; font-size:0.85rem; color:#555; user-select:none;">Conversation JSON</summary>
+      <pre id="json-display" style="margin:0.4rem 0 0; padding:0.5rem; background:#f8f8f8; border:1px solid #ddd; border-radius:4px; font-size:0.8rem; overflow-x:auto; white-space:pre-wrap; word-break:break-all;"></pre>
+    </details>
+    <div id="conversation"></div>
+    <div id="current-msg-block">
+      <div class="current-label" id="current-label">User</div>
+      <textarea id="msg-textarea" placeholder="Type a message. Ctrl+Enter to end the turn."></textarea>
+      <div id="tool-call-inputs">
+        <div class="field-label">Function name:</div>
+        <input id="tool-name-input" type="text" placeholder="function_name">
+        <div class="field-label">Arguments (JSON object):</div>
+        <textarea id="tool-args-textarea" placeholder='{"arg": "value"}'></textarea>
+      </div>
+      <div class="msg-actions">
+        <button id="send-btn" type="button">End Turn</button>
+        <button id="generate-btn" type="button" style="display:none;">Generate Response (up to 100 tokens)</button>
+        <button id="add-tool-call-btn" type="button" style="display:none;">Add Tool Call</button>
+        <span id="status"></span>
+      </div>
+    </div>
+    <div id="warning"></div>
+  </div>
+
+  <div id="right-panel">
+    <div id="token-section">
+      <h2>Conversation as tokens (click or drag to select):</h2>
+      <div id="token-sequence"></div>
+      <div id="span-stats"></div>
+    </div>
+
+    <div id="logprobs-section" style="display:none;">
+      <h2>Next-token distribution after <em id="logprobs-token-label"></em>:
+        <button id="sample-btn" type="button" style="font-size:0.8rem; margin-left:0.5rem;">Sample</button>
+      </h2>
+      <div id="logprobs-display"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const MODEL = "Qwen/Qwen3.5-9B";
+document.getElementById("cur-model").textContent = `Model: ${MODEL}`;
+const BASE_URL = "https://vllm.thoughtful-ai.com";
+const PLACEHOLDER = "█";  // rare char that reliably tokenizes as a single token
+
+let state = {
+  messages: [{role: "user", content: ""}],
+  tools: [],
+  toolsEnabled: false,
+  logprobs: null,  // [{token, selfLogprob, nextLogprobs}]
+  // selection: which token(s) are highlighted
+  // anchor is the token whose distribution is shown; start/end is the visual range
+  selection: {anchor: null, start: null, end: null},
+  loading: false,
+};
+
+// drag state (not part of app state, just interaction bookkeeping)
+let isDragging = false;
+let dragAnchor = null;
+let tokenSpans = [];  // parallel array to state.logprobs, holds DOM span elements
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+function showToken(tok) {
+  return tok.replace(/\n/g, "↵").replace(/\t/g, "⇥");
+}
+
+function otherRole(role) {
+  return role === "user" ? "assistant" : "user";
+}
+
+function setStatus(msg) {
+  document.getElementById("status").textContent = msg;
+}
+
+function setLoading(val) {
+  state.loading = val;
+  document.getElementById("send-btn").disabled = val;
+  document.getElementById("generate-btn").disabled = val;
+  document.getElementById("add-tool-call-btn").disabled = val;
+}
+
+function probBg(selfLogprob) {
+  if (selfLogprob === null) return null;
+  // Clamp logprob to [-5, 0] → hue 0 (red) to 120 (green)
+  const t = Math.min(1, Math.max(0, (selfLogprob + 5) / 5));
+  return `hsl(${Math.round(t * 120)}, 55%, 88%)`;
+}
+
+function generateId() {
+  return `call_${Math.random().toString(36).slice(2, 10)}`;
+}
+
+// Find the tool_call entry (from a preceding assistant message) matching a tool_call_id.
+function findToolCallById(messages, toolCallId) {
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const msg = messages[i];
+    if (msg.role === "assistant" && msg.tool_calls) {
+      const tc = msg.tool_calls.find(tc => tc.id === toolCallId);
+      if (tc) return tc;
+    }
+  }
+  return null;
+}
+
+// ── API ────────────────────────────────────────────────────────────────────
+
+async function fetchTokensAndLogprobs() {
+  // Append placeholder to last message to preserve trailing whitespace and
+  // get a next-token distribution at the very end.
+  const msgs = state.messages.map((m, i) => {
+    if (i !== state.messages.length - 1) return m;
+    // Last message: append placeholder depending on message type
+    if (m.role === "tool") {
+      return {...m, content: (m.content || "") + PLACEHOLDER};
+    } else if (m.role === "assistant" && m.tool_calls) {
+      // Append to the last tool call's arguments string
+      const tcs = m.tool_calls;
+      const last = tcs[tcs.length - 1];
+      return {
+        ...m,
+        tool_calls: [
+          ...tcs.slice(0, -1),
+          {...last, function: {...last.function, arguments: last.function.arguments + PLACEHOLDER}},
+        ],
+      };
+    } else {
+      return {...m, content: (m.content || "") + PLACEHOLDER};
+    }
+  });
+
+  // Step 1: tokenize
+  const tokRes = await fetch(`${BASE_URL}/tokenize`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      model: MODEL,
+      messages: msgs,
+      ...(state.toolsEnabled && state.tools.length > 0 ? {tools: state.tools} : {}),
+      continue_final_message: true,
+      add_generation_prompt: false,
+      return_token_strs: true,
+    }),
+  });
+  const tokData = await tokRes.json();
+  const tokenIds = tokData.tokens;
+
+  // Step 2: completions with echo + logprobs
+  const compRes = await fetch(`${BASE_URL}/v1/completions`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      model: MODEL,
+      prompt: tokenIds,
+      max_tokens: 2,
+      logprobs: 10,
+      echo: true,
+    }),
+  });
+  const compData = await compRes.json();
+  const lp = compData.choices[0].logprobs;
+
+  const N = tokenIds.length;
+  const lastToken = lp.tokens[N - 1];
+  const validPlaceholders = [PLACEHOLDER, " " + PLACEHOLDER];
+  const warning = !validPlaceholders.includes(lastToken)
+    ? `Expected last token to be "${PLACEHOLDER}" or " ${PLACEHOLDER}" but got "${lastToken}". Logprobs at the final position may be off.`
+    : null;
+
+  // One entry per real token (0..N-2), excluding the placeholder.
+  // nextLogprobs[i] = top_logprobs[i+1] = distribution over what comes *after* token i.
+  // For the last real token, that's the placeholder slot's distribution (filtered).
+  const logprobs = [];
+  for (let i = 0; i < N - 1; i++) {
+    let nextLogprobs = lp.top_logprobs[i + 1] || null;
+    if (i === N - 2 && nextLogprobs) {
+      const filtered = {};
+      for (const [tok, v] of Object.entries(nextLogprobs)) {
+        if (!validPlaceholders.includes(tok)) filtered[tok] = v;
+      }
+      nextLogprobs = filtered;
+    }
+    logprobs.push({
+      token: lp.tokens[i],
+      selfLogprob: lp.token_logprobs[i] ?? null,
+      nextLogprobs,
+    });
+  }
+
+  return {logprobs, warning};
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────
+
+function renderConversation() {
+  const container = document.getElementById("conversation");
+  container.innerHTML = "";
+  state.messages.slice(0, -1).forEach((msg, i) => {
+    const block = document.createElement("div");
+    const editBtn = document.createElement("button");
+    editBtn.className = "edit-btn";
+    editBtn.textContent = "Edit";
+    editBtn.addEventListener("click", () => rewindTo(i));
+
+    const roleEl = document.createElement("div");
+    roleEl.className = "msg-role";
+
+    const contentEl = document.createElement("div");
+    contentEl.className = "msg-content";
+
+    if (msg.role === "assistant" && msg.tool_calls) {
+      // Tool-call assistant message
+      block.className = "msg-block assistant";
+      roleEl.textContent = "assistant";
+      const tag = document.createElement("span");
+      tag.style.cssText = "font-size:0.75rem; color:#888; margin-left:0.4rem; font-weight:normal; text-transform:none;";
+      tag.textContent = "[tool call]";
+      roleEl.appendChild(tag);
+      msg.tool_calls.forEach(tc => {
+        const callEl = document.createElement("div");
+        callEl.className = "tool-call-block";
+        callEl.textContent = `${tc.function.name}(${tc.function.arguments})`;
+        contentEl.appendChild(callEl);
+      });
+    } else if (msg.role === "tool") {
+      // Tool result message
+      block.className = "msg-block tool";
+      roleEl.textContent = "tool";
+      const tc = findToolCallById(state.messages, msg.tool_call_id);
+      if (tc) {
+        const metaEl = document.createElement("div");
+        metaEl.className = "msg-meta";
+        metaEl.textContent = `result for: ${tc.function.name}`;
+        contentEl.appendChild(metaEl);
+      }
+      const textEl = document.createElement("div");
+      textEl.textContent = msg.content;
+      contentEl.appendChild(textEl);
+    } else {
+      // Regular user or assistant text message
+      block.className = `msg-block ${msg.role}`;
+      roleEl.textContent = msg.role;
+      contentEl.textContent = msg.content;
+    }
+
+    block.appendChild(roleEl);
+    block.appendChild(contentEl);
+    block.appendChild(editBtn);
+    container.appendChild(block);
+  });
+}
+
+function renderCurrentMessage() {
+  const last = state.messages[state.messages.length - 1];
+  const block = document.getElementById("current-msg-block");
+  const isToolCall = last.role === "assistant" && last.tool_calls != null;
+  const isToolResult = last.role === "tool";
+  const isAssistantText = last.role === "assistant" && !last.tool_calls;
+
+  // Block background class
+  block.className = isToolResult ? "tool" : last.role;
+
+  // Label
+  let labelText;
+  if (isToolCall) {
+    labelText = "Tool call";
+  } else if (isToolResult) {
+    const tc = findToolCallById(state.messages, last.tool_call_id);
+    labelText = tc ? `Tool result for: ${tc.function.name}` : "Tool result";
+  } else if (isAssistantText) {
+    labelText = "Assistant response";
+  } else {
+    labelText = "Your message";
+  }
+  document.getElementById("current-label").textContent = labelText;
+
+  // Show textarea vs tool-call form
+  const ta = document.getElementById("msg-textarea");
+  const tci = document.getElementById("tool-call-inputs");
+  if (isToolCall) {
+    ta.style.display = "none";
+    tci.style.display = "block";
+    const tc = last.tool_calls[0];
+    document.getElementById("tool-name-input").value = tc.function.name;
+    document.getElementById("tool-args-textarea").value = tc.function.arguments;
+  } else {
+    ta.style.display = "";
+    tci.style.display = "none";
+    if (ta.value !== (last.content ?? "")) ta.value = last.content ?? "";
+  }
+
+  // Button visibility
+  document.getElementById("send-btn").style.display = isAssistantText ? "none" : "";
+  document.getElementById("generate-btn").style.display = isAssistantText ? "" : "none";
+  document.getElementById("add-tool-call-btn").style.display =
+    (isAssistantText && state.toolsEnabled) ? "" : "none";
+}
+
+function renderTokens() {
+  const container = document.getElementById("token-sequence");
+  container.innerHTML = "";
+  tokenSpans = [];
+
+  if (!state.logprobs) return;
+
+  state.logprobs.forEach((entry, i) => {
+    const span = document.createElement("span");
+    span.className = "token-span";
+    span.textContent = showToken(entry.token);
+    span.title = "Click to show next-token distribution; drag to select a range";
+
+    span.addEventListener("mousedown", (e) => {
+      e.preventDefault(); // prevent browser text selection
+      isDragging = true;
+      dragAnchor = i;
+      state.selection = {anchor: i, start: i, end: i};
+      updateSelectionDisplay();
+      renderSpanStats();
+    });
+
+    span.addEventListener("mouseover", () => {
+      if (!isDragging) return;
+      state.selection.start = Math.min(dragAnchor, i);
+      state.selection.end = Math.max(dragAnchor, i);
+      updateSelectionDisplay();
+      renderSpanStats();
+    });
+
+    tokenSpans.push(span);
+    container.appendChild(span);
+  });
+
+  updateSelectionDisplay();
+}
+
+// Update only the visual selection state without rebuilding DOM
+function updateSelectionDisplay() {
+  const {start, end} = state.selection;
+  tokenSpans.forEach((span, i) => {
+    const inRange = start !== null && i >= start && i <= end;
+    if (inRange) {
+      span.classList.add("in-selection");
+      span.style.background = "";
+    } else {
+      span.classList.remove("in-selection");
+      span.style.background = probBg(state.logprobs[i].selfLogprob) ?? "";
+    }
+  });
+}
+
+function renderSpanStats() {
+  const statsEl = document.getElementById("span-stats");
+  const {start, end} = state.selection;
+  if (start === null || start === end) {
+    statsEl.style.display = "none";
+    return;
+  }
+  let totalBits = 0;
+  let validCount = 0;
+  for (let i = start; i <= end; i++) {
+    const slp = state.logprobs[i].selfLogprob;
+    if (slp !== null) {
+      totalBits += -slp / Math.LN2;
+      validCount++;
+    }
+  }
+  const n = end - start + 1;
+  const bitsPerToken = validCount > 0 ? (totalBits / validCount).toFixed(2) : "n/a";
+  statsEl.textContent =
+    `${n} tokens selected — total: ${totalBits.toFixed(2)} bits — bits/token: ${bitsPerToken}`;
+  statsEl.style.display = "block";
+}
+
+function showLogprobs(i) {
+  const entry = state.logprobs[i];
+  const section = document.getElementById("logprobs-section");
+  const display = document.getElementById("logprobs-display");
+
+  document.getElementById("logprobs-token-label").textContent = `"${showToken(entry.token)}"`;
+  display.innerHTML = "";
+
+  if (!entry.nextLogprobs) {
+    display.textContent = "(No distribution available)";
+    section.style.display = "block";
+    return;
+  }
+
+  const actualNext = state.logprobs[i + 1]?.token ?? null;
+  const sorted = Object.entries(entry.nextLogprobs).sort((a, b) => b[1] - a[1]);
+
+  const table = document.createElement("table");
+  const hrow = table.createTHead().insertRow();
+  ["Token", "Probability", "−log₂(p)"].forEach(h => {
+    const th = document.createElement("th");
+    th.textContent = h;
+    hrow.appendChild(th);
+  });
+  const tbody = table.createTBody();
+  let shownProbTotal = 0;
+  sorted.forEach(([tok, lp]) => {
+    const prob = Math.exp(lp);
+    shownProbTotal += prob;
+    const bits = (-lp / Math.LN2).toFixed(2);
+    const tr = tbody.insertRow();
+    tr.classList.add("clickable");
+    if (tok === actualNext) tr.classList.add("logprob-actual");
+    tr.insertCell().textContent = showToken(tok);
+    tr.insertCell().textContent = prob.toFixed(4);
+    tr.insertCell().textContent = bits;
+    tr.addEventListener("click", () => insertToken(tok));
+  });
+  const remaining = Math.max(0, 1 - shownProbTotal);
+  const trRem = tbody.insertRow();
+  trRem.style.color = "#888";
+  trRem.style.borderTop = "1px solid #ddd";
+  const tdLabel = trRem.insertCell();
+  tdLabel.textContent = "(other)";
+  tdLabel.style.fontStyle = "italic";
+  trRem.insertCell().textContent = remaining < 0.00005 && remaining > 0 ? remaining.toExponential(2) : remaining.toFixed(4);
+  trRem.insertCell().textContent = remaining > 0 ? (-Math.log2(remaining)).toFixed(2) : "—";
+  display.appendChild(table);
+  section.style.display = "block";
+}
+
+function render() {
+  renderConversation();
+  renderCurrentMessage();
+  renderTokens();
+  document.getElementById("json-display").textContent =
+    JSON.stringify(state.messages, null, 2);
+}
+
+// ── Actions ────────────────────────────────────────────────────────────────
+
+function insertToken(tokenStr) {
+  const last = state.messages[state.messages.length - 1];
+  last.content += tokenStr;
+  document.getElementById("msg-textarea").value = last.content;
+  state.selection = {anchor: null, start: null, end: null};
+  triggerFetch();
+}
+
+function sampleNextToken() {
+  const anchor = state.selection.anchor;
+  if (anchor === null || !state.logprobs) return;
+  const dist = state.logprobs[anchor]?.nextLogprobs;
+  if (!dist) return;
+
+  // Convert logprobs → probs, build CDF, sample
+  const entries = Object.entries(dist);
+  const probs = entries.map(([, lp]) => Math.exp(lp));
+  const total = probs.reduce((s, p) => s + p, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < entries.length; i++) {
+    r -= probs[i];
+    if (r <= 0) { insertToken(entries[i][0]); return; }
+  }
+  insertToken(entries[entries.length - 1][0]); // fallback (rounding)
+}
+
+function resetConversation() {
+  state.messages = [{role: "user", content: ""}];
+  state.logprobs = null;
+  state.selection = {anchor: null, start: null, end: null};
+  document.getElementById("logprobs-section").style.display = "none";
+  document.getElementById("warning").style.display = "none";
+  document.getElementById("span-stats").style.display = "none";
+  render();
+  triggerFetch();
+}
+
+function rewindTo(i) {
+  state.messages = state.messages.slice(0, i + 1);
+  state.selection = {anchor: null, start: null, end: null};
+  render();
+  triggerFetch();
+}
+
+function endTurn() {
+  const last = state.messages[state.messages.length - 1];
+
+  if (last.role === "assistant" && last.tool_calls) {
+    // Commit tool-call turn: state already synced from input listeners.
+    // Push one tool-result message per tool call.
+    for (const tc of last.tool_calls) {
+      state.messages.push({role: "tool", tool_call_id: tc.id, content: ""});
+    }
+  } else if (last.role === "tool") {
+    last.content = document.getElementById("msg-textarea").value;
+    state.messages.push({role: "assistant", content: ""});
+  } else {
+    // user or assistant text
+    last.content = document.getElementById("msg-textarea").value;
+    state.messages.push({role: otherRole(last.role), content: ""});
+  }
+
+  state.selection = {anchor: null, start: null, end: null};
+  render();
+  triggerFetch();
+}
+
+function addToolCall() {
+  const last = state.messages[state.messages.length - 1];
+  if (last.role !== "assistant" || last.tool_calls) return;
+  last.tool_calls = [{id: generateId(), type: "function", function: {name: "", arguments: "{}"}}];
+  last.content = null;
+  render();
+  triggerFetch();
+}
+
+async function generateResponse() {
+  const last = state.messages[state.messages.length - 1];
+  if (last.role !== "assistant") return;
+
+  setLoading(true);
+  setStatus("Generating…");
+  clearTimeout(debounceTimer);
+
+  const msgs = state.messages.slice(0, -1);
+  const body = {
+    model: MODEL,
+    messages: msgs,
+    stream: true,
+    max_tokens: 100,
+    chat_template_kwargs: {"enable_thinking": false},
+  };
+  if (state.toolsEnabled && state.tools.length > 0) {
+    body.tools = state.tools;
+  }
+
+  try {
+    const res = await fetch(`${BASE_URL}/v1/chat/completions`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`HTTP ${res.status}: ${errText.slice(0, 200)}`);
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let content = "";
+    const toolCallsAcc = [];  // accumulated tool calls by index
+    let finishReason = null;
+    let buf = "";
+    let streamDone = false;
+
+    while (!streamDone) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, {stream: true});
+      const lines = buf.split("\n");
+      buf = lines.pop(); // hold back the last possibly-incomplete line
+      for (const line of lines) {
+        if (!line.startsWith("data: ")) continue;
+        const data = line.slice(6).trim();
+        if (data === "[DONE]") { streamDone = true; break; }
+        try {
+          const parsed = JSON.parse(data);
+          const choice = parsed.choices?.[0];
+          if (!choice) continue;
+          if (choice.finish_reason) finishReason = choice.finish_reason;
+          const delta = choice.delta;
+          if (delta?.content) {
+            content += delta.content;
+            last.content = content;
+            document.getElementById("msg-textarea").value = content;
+          }
+          if (delta?.tool_calls) {
+            for (const tc of delta.tool_calls) {
+              if (!toolCallsAcc[tc.index]) {
+                toolCallsAcc[tc.index] = {id: tc.id ?? generateId(), type: "function", function: {name: "", arguments: ""}};
+              }
+              if (tc.id) toolCallsAcc[tc.index].id = tc.id;
+              if (tc.function?.name) toolCallsAcc[tc.index].function.name += tc.function.name;
+              if (tc.function?.arguments) toolCallsAcc[tc.index].function.arguments += tc.function.arguments;
+            }
+          }
+          if (finishReason === "tool_calls") { streamDone = true; break; }
+        } catch { /* malformed chunk */ }
+      }
+    }
+
+    if (finishReason === "tool_calls" && toolCallsAcc.length > 0) {
+      last.tool_calls = toolCallsAcc.filter(Boolean);
+      last.content = null;
+      for (const tc of last.tool_calls) {
+        state.messages.push({role: "tool", tool_call_id: tc.id, content: ""});
+      }
+    }
+
+    state.selection = {anchor: null, start: null, end: null};
+    setStatus("");
+    render();
+    triggerFetch();
+  } catch (err) {
+    setStatus("Error: " + err.message);
+    console.error(err);
+    setLoading(false);
+  }
+}
+
+// ── Tools panel ────────────────────────────────────────────────────────────
+
+function toggleTools() {
+  state.toolsEnabled = !state.toolsEnabled;
+  const panel = document.getElementById("tools-panel");
+  const btn = document.getElementById("tools-toggle-btn");
+  panel.style.display = state.toolsEnabled ? "block" : "none";
+  btn.textContent = state.toolsEnabled ? "▼ Tool calling (on)" : "▶ Tool calling";
+  renderCurrentMessage(); // show/hide "Add Tool Call" button
+}
+
+function updateTools() {
+  const text = document.getElementById("tools-textarea").value.trim();
+  const statusEl = document.getElementById("tools-status");
+  if (!text) {
+    state.tools = [];
+    statusEl.textContent = "";
+    return;
+  }
+  try {
+    const parsed = JSON.parse(text);
+    state.tools = Array.isArray(parsed) ? parsed : [parsed];
+    statusEl.textContent = `${state.tools.length} tool${state.tools.length !== 1 ? "s" : ""} loaded`;
+    statusEl.style.color = "#555";
+  } catch (e) {
+    state.tools = [];
+    statusEl.textContent = `JSON parse error: ${e.message}`;
+    statusEl.style.color = "#c00";
+  }
+}
+
+// ── Fetch orchestration ────────────────────────────────────────────────────
+
+let debounceTimer = null;
+
+function triggerFetch() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(doFetch, 400);
+}
+
+async function doFetch() {
+  setLoading(true);
+  setStatus("Fetching tokens…");
+  document.getElementById("warning").style.display = "none";
+  try {
+    const {logprobs, warning} = await fetchTokensAndLogprobs();
+    state.logprobs = logprobs;
+    renderTokens();
+
+    // Keep existing anchor if still valid; otherwise default to last token
+    const anchor = (state.selection.anchor !== null && state.selection.anchor < logprobs.length)
+      ? state.selection.anchor
+      : logprobs.length - 1;
+    state.selection = {anchor, start: anchor, end: anchor};
+    updateSelectionDisplay();
+    showLogprobs(anchor);
+
+    if (warning) {
+      const w = document.getElementById("warning");
+      w.textContent = warning;
+      w.style.display = "block";
+    }
+    setStatus("");
+  } catch (err) {
+    setStatus("Error: " + err.message);
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+}
+
+// ── Event listeners ────────────────────────────────────────────────────────
+
+document.addEventListener("mouseup", () => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (state.selection.start === state.selection.end) {
+    // Single token: show its next-token distribution
+    document.getElementById("span-stats").style.display = "none";
+    if (state.logprobs) showLogprobs(state.selection.anchor);
+  }
+  // Range: span stats are already shown by the mouseover handler
+});
+
+document.getElementById("new-conv-btn").addEventListener("click", resetConversation);
+document.getElementById("send-btn").addEventListener("click", endTurn);
+document.getElementById("generate-btn").addEventListener("click", generateResponse);
+document.getElementById("add-tool-call-btn").addEventListener("click", addToolCall);
+document.getElementById("sample-btn").addEventListener("click", sampleNextToken);
+document.getElementById("tools-toggle-btn").addEventListener("click", toggleTools);
+document.getElementById("tools-textarea").addEventListener("input", updateTools);
+
+document.getElementById("msg-textarea").addEventListener("input", (e) => {
+  state.messages[state.messages.length - 1].content = e.target.value;
+  triggerFetch();
+});
+
+document.getElementById("msg-textarea").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && e.ctrlKey) {
+    e.preventDefault();
+    endTurn();
+  }
+});
+
+document.getElementById("tool-name-input").addEventListener("input", (e) => {
+  const last = state.messages[state.messages.length - 1];
+  if (last.tool_calls) last.tool_calls[0].function.name = e.target.value;
+  triggerFetch();
+});
+
+document.getElementById("tool-args-textarea").addEventListener("input", (e) => {
+  const last = state.messages[state.messages.length - 1];
+  if (last.tool_calls) last.tool_calls[0].function.arguments = e.target.value;
+  triggerFetch();
+});
+
+document.getElementById("tool-args-textarea").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && e.ctrlKey) {
+    e.preventDefault();
+    endTurn();
+  }
+});
+
+// ── Init ───────────────────────────────────────────────────────────────────
+
+render();
+triggerFetch();
+</script>
+</body>
+</html>

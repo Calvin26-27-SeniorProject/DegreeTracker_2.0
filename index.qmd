@@ -1,0 +1,90 @@
+---
+title: "Ken Arnold"
+description: "Thinking About People with AI"
+listing:
+  id: blog-posts
+  page-size: 5
+  contents: posts
+  sort:
+    - "date desc"
+  type: default
+  fields: [date, title, reading-time, description]
+  feed: true
+about:
+  template: solana
+  links:
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/@kcarnold
+    - icon: github
+      text: GitHub
+      href: https://github.com/kcarnold
+    - icon: book
+      text: Google Scholar
+      href: https://scholar.google.com/citations?hl=en&user=u512YusAAAAJ&view_op=list_works&sortby=pubdate
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kcarnold/
+  image: static/images/profile.jpg
+---
+
+**AI should help people think better about (and with) other people.**
+I design and study interactive AI for *thoughtful written communication* and for *teaching and learning*.
+
+My [Thoughtful AI Tools Lab](https://thoughtful-ai.com/) has welcomed deep contributions from over a dozen undergraduate student researchers and developers. You can [try our writing tools](https://app.thoughtful-ai.com/) that support your writing without tainting your words. Watch the website for new tools and research results.
+
+For more, see [Publications](/pubs.qmd) and [Projects](/projects.qmd).
+
+## Posts
+
+:::{#blog-posts}
+:::
+
+My doctoral advisor, Krzysztof Gajos, has discussed my work and implications in some of his [recent talks](https://www.youtube.com/watch?v=JybLJiJpKS0).
+
+## Updates
+
+- 2026-10-08: Two talks at [Wisdom in the Age of AI](https://calvin.edu/faith-and-technology/faith-and-ai-conference) at Calvin. [Slides and links](/wisdom2026/)
+- 2025-08-21: Gave the [keynote at the Calvin Fall Conference](https://www.youtube.com/watch?v=AkNaEuXQEX8) for faculty and staff
+- 2025-05-04: Two posters presented at [In2Writing 2025](https://in2writing.glitch.me/), the Fourth Workshop on Intelligent and Interactive Writing Assistants, co-located with [NAACL 2025](https://2025.naacl.org/):
+  - [Voice Interaction with Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing](https://arxiv.org/abs/2504.08687) [publication page](/pubs/voice-interact-conversational-ai-2025/)
+  - [Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing](https://arxiv.org/abs/2504.08726) [publication page](/pubs/enact-edits/)
+- 2024-03-18: Student first author Jiho Kim presented [Towards Full Authorship with AI: Supporting Revision with AI-Generated Views](https://arxiv.org/abs/2403.01055) at [HAI-GEN 2024 workshop](https://hai-gen.github.io/2024/) at [IUI 2024](https://iui.acm.org/2024/index.html)
+- 2023-10-27: [Poster from summer research work](pubs/summer23/) presented at WMRUGS and Calvin
+- 2023-07-27: Presented at [ASA 2023](https://network.asa3.org/mpage/ASA2023) in Toronto (with 3 summer students)
+- 2023-07-01: Awarded NSF CRII grant for writing research
+- 2023-06-01: 7-student summer research team begins work
+- 2023-03-06: University Panel on ChatGPT
+- 2023-02-14: Calvin Philosophy Club roundtable on AI
+- 2023-01-26: Talk at Big Data Ignite: "ChatGPT is Not Magic"
+
+## Teaching
+
+I teach computer science, data science, and machine learning. Recent classes:
+
+- CS 212 Data Structures and Algorithms (Fall 2026)
+- CS 300 special topics
+  - Fall 2025: [Human-Centered AI](https://calvin-data-science.github.io/cs300-hcai/)
+  - Fall 2024: [Human-Computer Interaction (HCI)](https://cs.calvin.edu/courses/cs/300hci/24fa/)
+- [DATA 202 Data Science 2](https://calvin-data-science.github.io/data202/), a data wrangling, predictive modeling, and visualization course in Python (pandas, plotly, sklearn, etc.), with a project emphasis. (In prior years I taught this using R tidyverse.)
+- [CS 375 / 376 AI and Machine Learning](https://cs.calvin.edu/courses/cs/375/), formerly [CS 344 Artificial Intelligence](https://cs.calvin.edu/courses/cs/344/), a hands-on (but also concept-heavy) machine learning course based [F. Chollet's Deep Learning with Python](https://www.manning.com/books/deep-learning-with-python-second-edition) (formerly, based on the [fast.ai course](https://course.fast.ai/)) and Hugging Face Transformers
+- [CS 108 Introduction to Computing](https://cs.calvin.edu/courses/cs/108/) and [CS 106](https://cs.calvin.edu/courses/cs/106/), Calvin's first-year Computer Science courses, in Python.
+- INFO 602 Predictive Analytics (for Calvin's MBA program)
+
+See CV for others.
+
+## Doing research with me
+
+I welcome students who are interested in human-computer interaction, machine learning, data science, interactive visualization, and Christian perspectives on data and computation. I have a range of ideas and ongoing projects, but bring your own interests too! Please contact me via email (Calvin: ka37) or Teams.
+
+
+## Education
+
+- PhD in Computer Science, Harvard, 2020
+- MS in Media Arts and Sciences, MIT, 2010
+- BS in Electrical and Computer Engineering, Cornell, 2007
+
+## Selected Press Coverage
+
+- (2019-08-12) [How 'smart' email could change the way we talk](https://www.bbc.com/future/article/20190812-how-ai-powered-predictive-text-affects-your-brain). BBC Future.
+- (2023-09-11) [AI Will Shape Your Soul](https://www.christianitytoday.com/ct/2023/october/artificial-intelligence-robots-soul-formation.html). Christianity Today.

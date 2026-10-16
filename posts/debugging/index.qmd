@@ -1,0 +1,45 @@
+---
+title: "Debugging Hints"
+date: "2023-04-24"
+categories: ["coding"]
+featured: 0
+---
+
+Here are a few debugging hints that I often give students.
+
+## General Resources
+
+- [A debugging manifesto](https://jvns.ca/blog/2022/12/08/a-debugging-manifesto/)
+- [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask)
+
+## Error messages ("traceback"s)
+
+- Start at the bottom.
+- Figure out what it's talking about. Examples:
+  - if you get a `'NoneType' object is not iterable` error, figure out what object is `None` and why it's being iterated over.
+  - if you get `TypeError: can only concatenate str (not "int") to str`, figure out what the `str`ing is and what the `int` is and why they're being concatenated (probably a `+` sign).
+
+## General debugging
+
+- Make sure you're running the code you think you're running. I sometimes intentionally make a syntax error or add an `assert False` and check that it crashes. Sometimes I've been editing the wrong file, or not reloading the file.
+- Find an example that does something similar to what you're trying to do. Systematically compare and contrast your code with the example. You might try starting with the example and modifying it step by step to make it closer to what you want to do, checking at every step that it still works.
+- Make and test hypotheses.
+
+## More strategies
+
+For grins, I turned on GitHub Copilot and let it generate the following. I gave it either just the `-` for a Markdown bullet point, or a dash and a first word. All content below here is automatically generated.
+
+- Use `print` statements to check the values of variables.
+- Use `assert` statements to check that values are what you expect them to be.
+- Use `%debug` or a debugger like `pdb` to step through your code line by line.
+- Use `git diff` to see what you've changed since the last time your code worked.
+- Use `git log` to see what you've changed recently.
+- Use `git checkout` to go back to a previous version of your code.
+- Use `git stash` to temporarily set aside changes you've made.
+- Try to make your code as simple and small as possible. Remove unnecessary code. Simplify.
+- Try to make your code as modular as possible. Break it into small functions that do one thing each. Test each function separately.
+- Make sure you understand the code you're using. If you're using someone else's code, read the documentation and/or the source code.
+- Make a minimal example that demonstrates the problem you're having. Often, in the process of making a minimal example, you'll figure out what the problem is.
+- When you're stuck, take a break. Go for a walk. Take a nap. Talk to someone. Often, when you come back to the problem, you'll see it in a new light.
+- Whatever you do, don't just keep trying the same thing over and over again. If it didn't work the first time, it's not going to work the second time.
+- If you're stuck, ask for help. Ask a friend. Ask a TA. Ask on Piazza. Ask on Stack Overflow. Ask on Reddit. Ask on Twitter. Ask on Facebook. Ask on IRC. Ask on Dis

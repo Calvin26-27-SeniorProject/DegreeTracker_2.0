@@ -1,0 +1,32 @@
+---
+title: "Information and Decision"
+description: "A design space of interactions with AI systems"
+date: "2023-02-21"
+categories: ["hci", "ml", "ia"]
+---
+
+Intelligence augmentation interfaces for creative tasks differ in their effect on (1) the information content of the resulting artifact and (2) how human decisions shape the content.
+
+## Information Content
+
+The more an artifact conforms to the expectations and norms of a genre, the less information it contains. So many interactive systems seek to *remove* information, "smoothing out" the rough spots of an artifact.
+
+Spelling and grammar checkers generally suggest edits that *remove* information from the document being edited. This is the [Anna Karenina principle](https://en.wikipedia.org/wiki/Anna_Karenina_principle): there are more ways that a document can be grammatically nonstandard. This is usually desirable, since writers often want to emphasize their main points instead of unusual superficial characteristics.
+
+Many image editing filters (e.g., in Photoshop) are designed to remove information. For example, it would be surprising for professional images to have "blemishes" or red-eye, so the filters are designed to remove these.
+
+Summarization tools first add information, then remove information. Specifically, they add decisions about which information in the original to preserve, then remove all other information.
+
+Translation tools are trained to preserve information, but sometimes they end up adding or removing information anyway. This is particularly salient when languages differ in which characteristics are explicitly encoded, for example, languages with gendered pronouns or morphology.
+
+Many interfaces to the generative models that have captured headlines in the past year or so (ChatGPT, Stable Diffusion, etc.), in contrast, typically *add* large amounts of information to the artifact. A wide range of images can be described by the same caption, for example, so caption-to-image interactions add enormous amounts of information. Most ChatGPT screenshots show the human typing a small amount of text and the model generating a large amount of text, also suggesting an increase in information. (To be clear, *editing* uses of these models can, in net, reduce information.)
+
+Predictive text interfaces can have a variety of effects. My work has shown that conventional predictive text interfaces generally reduce the low-level information in text written with it. I hypothesized that the mechanism is that when acceptable and conventional options are made salient to human writers, they often tend to take them as both cognitive and physical shortcuts. But the available options can have large effects on the high-level information conveyed. For example, some of the most important information in a document is its overall stance towards its subject (e.g., a review's sentiment about a restaurant or product; an opinion piece's overall support for an opinion). My work and others' have shown that predictive text systems can shape these overall stances.
+
+I have recently been using GitHub Copilot in Visual Studio Code while writing both code and class materials. In contrast to many other predictive text interfaces, Copilot regularly shows long suggestions that contain a large amount of new information. To put it bluntly, this is problematic: the information must come from somewhere (prior work from other authors, used without license), and it imposes cognitive load and interference on the author. A simple control would be the amount of information that the model is allowed to include in a suggestion (i.e., a log-probability budget),
+
+## Impact on Human Decisions
+
+A creator's choice to use a certain tool can lead to them needing to make more or fewer, or different kinds, of decisions.
+
+TODO: More on this later.

@@ -1,0 +1,36 @@
+---
+title: "Self-Study Advice"
+description: "Practice solving problems."
+author: "Ken Arnold"
+date: "2023-01-30"
+categories: [coding]
+---
+
+I am occasionally asked for advice on how to get better at CS on your own.
+This is very well attested on the Internet, so you can probably find better examples,
+but for what it's worth here's one response I've written.
+
+For self-study, I typically suggest focusing on practicing solving
+problems; in the process you end up learning a lot about programming
+languages, data structures, algorithms, data manipulation, etc.. You
+learn fewer different things that way than you would in a course (or
+3!), but you tend to learn them much better.
+
+Here are three specific strategies (pick one):
+
+1.  Find an example of something that someone else has built that you'd
+    like to be able to build yourself. (Perhaps a data visualization, an
+    interactive application, etc.) Usually a blog post that you can
+    mostly understand already is about the right size of thing to
+    tackle. Try to build it without looking too much at how the original
+    did it.
+2.  Like \#1, but you come up with the idea yourself. It's harder
+    because you don't know before you start how easy or hard it will be,
+    but it can be more motivating to "scratch your own itch".
+3.  Work through a collection of problems,
+    like [Advent of Code](https://adventofcode.com/), [Project Euler](https://projecteuler.net/), [Pytudes](https://github.com/norvig/pytudes),
+    [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) (yes
+    it's intended for R but you can do the same in Python---or just
+    learn R, like I eventually did), or Kaggle competitions.
+
+(Addendum: you may appreciate [fast.ai Lesson "0"](https://www.youtube.com/watch?v=gGxe2mN3kAg).)

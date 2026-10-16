@@ -1,0 +1,29 @@
+---
+title: "AI Directions"
+description: "My response to the question of where AI is headed and what people of faith should be aware of?"
+author: "Ken Arnold"
+date: "2026-10-13"
+categories: [ai, faith]
+featured: 1
+---
+
+As a panelist at the [Wisdom in the Age of AI](https://calvin.edu/faith-and-technology/faith-and-ai-conference) conference last weekend, I was asked to prognosticate where AI is going and what people of faith should be aware of. And given 2 minutes. Here’s roughly what I said, expanded and clarified a bit.
+
+To understand where AI is going, look to its history. A common thread throughout the 75-plus years of human work in developing machine intelligence, we’ve been (1) identifying interesting, repeatable, and valuable tasks that can be performed by computers, (2) developing ways of quantifying and otherwise measuring how the machines perform on these tasks, and (3) developing ways of making the machines themselves improve their own performance. So my prediction is simply that these trends will continue, though amplified by the orders-of-magnitude increased investment in the computational infrastructure needed to do these things.
+So we’ll continue to see tasks that can be done repeatedly using only a computer, for which “good” is even remotely quantifiable, continue to be automated.
+
+Structural emphases on sameness (a small number of large models with vastly similar experiences) and quantifiable / performative success (clearly state-able objectives).
+
+A common mistake even knowledgeable people make is to think that progress depends on data. It’s more accurate to say that progress depends on feedback. [self-]supervised learning has provided a paradigm where lots of data can be used as feedback (try to predict/mimic the existing data, get feedback about whether the prediction/reconstruction matched), but with RL, machines can go well beyond the set of behaviors that are already captured in their data—so long as they can get feedback at scale.
+
+One STEM-track session presenter commented that today’s LLMs have read orders of magnitude more than any human ever has but has orders of magnitude less experience in physical reality. That’s true for now, but as robotics develops in both hardware and simulation, that won’t be true much longer. AI systems will develop physical-world experience through a much wider range of physical embodiments than humans have—even when any individual robotics platform is less adaptable than the human body. While they won’t have a whole childhood’s worth of experiences to learn from, they’ll learn instead by collecting a breadth of experiences across a wide range of simulated and real environments in which they’re given a wide range of quantifiable tasks (from “get these dishes clean” to “explore these woods and find something interesting”).
+
+So what do people of faith need to know?
+
+First, we need to watch out for our neighbors. Cybersecurity: keep your devices updated, and help others do the same. Tell your grandparents about deepfakes. Practice “least privilege” access. Help each other not get stuck in information rabbit-holes.
+While opinions differ broadly about impacts on jobs, be alert that employers will use AI to reshape or eliminate jobs that our neighbors currently hold. Be prepared for large increases in diaconal needs. What will happen if a factory that employs many of your lower-income neighbors starts to replace many of those workers by robots and automation?
+
+Talk about faith and work in communities. Value uniquely human expression.
+
+Discern together. Review your use of AI together. Discuss your personal and community boundaries. Maybe it’s no-chatbots-on-Sundays. Maybe it’s keeping AI out of your homes/churches/schools, as Andy Crouch suggests. Maybe you systematically set up harness fences.
+

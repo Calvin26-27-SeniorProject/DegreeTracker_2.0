@@ -1,0 +1,131 @@
+---
+title: "Screen-Free Reflective Practice using GenAI"
+date: 2025-01-23
+categories: ["llm", "interaction", "reflection"]
+description: "Voice notes make space for deep reflection on professional practice without screen distractions; LLMs help synthesize these reflections"
+featured: 0
+---
+
+
+## Example
+
+Yesterday I had the first meeting of my class on AI and machine learning. After class, I sat down away from my computer, closed the door, started a voice memo recording on my phone, and monologued my reflections from the class:
+
+- what happened, what worked and didn't, and what I thought about it
+- follow-ups I need to do
+- questions about how to practically work out things that I've been thinking about
+- reflections on my own process for preparing the class
+- ideas for what to do in upcoming classes
+- etc.
+
+Since I was not in front of a screen, I was not distracted, and I had a lot of thoughts in the 35 minutes that the voice memo recorded.
+
+Then, to turn my reflections into action:
+
+1. I copied the transcript that my iPhone generated of my voice note (transcription errors and all).
+2. I pasted the transcript into a new Claude conversation (in my Project about planning this course, although that probably didn't matter) and added a brief spec on what I wanted the LLM to do with my reflection.
+3. After it generated the summary I wanted, I asked for anything that the summary didn't capture.
+4. I went back to the computer and, exercising some self-control to not immediately act on things, updated my todo list according to the tasks that I had identified on.
+
+Then I did what I said I needed to do.
+
+
+## The Conversation
+
+::: {.conversation}
+
+::: {.human}
+I just had my first meeting of my AI and machine learning class, and I sat down with a voice note to debrief the experience. I’m gonna paste the content of the voice note below, including various transcription errors. I’d like to figure out what to do with this at the very least. I need a organized task list of things to do. Some of those things should be organized by date some things that I reflected on, might not be quite to the point of a specific task, but I still want to have an organized collection of my insights and thoughts it might also be helpful to have some questions for me to consider.
+
+*transcript here*
+:::
+
+::: {.assistant}
+*some preamble, including "Let me analyze this thoughtfully." Then it generated an "artifact" structured like this:*
+
+### First Class Reflection Summary
+
+#### Immediate Tasks (Due This Week)
+
+*numbered list*
+
+#### Tasks by Date
+
+##### Friday's Class
+
+*...bulleted list...*
+
+##### Next Week (Monday/Wednesday)
+
+*...bulleted list...*
+
+#### Course Development Tasks
+
+1. Learning Paths Organization *...bulleted list...*
+2. Student Presentations *...bulleted list...*
+3. Class Materials *...bulleted list...*
+
+#### Key Insights
+1. Class Structure *...bulleted list...*
+2. Teaching Approach *...bulleted list...*
+3. Technology Integration *...bulleted list...*
+
+#### Questions to Consider
+1. Student Engagement *...bulleted list...*
+2. Course Organization *...bulleted list...*
+3. Assessment and Feedback *...bulleted list...*
+
+#### Reflection Process Improvement
+1. Consider building a workflow: *...*
+2. Documentation needs: *...*
+
+
+:::
+
+::: {.human}
+Was there anything from my voice memo that didn't make it into the summary, perhaps because it didn't fit cleanly into that structure or because of transcription errors or some other reason?
+:::
+
+::: {.assistant}
+Let me review the transcript. A few notable items that didn't fit cleanly into the structured summary:
+
+1. Your personal story presentation went well - you mentioned wanting to grab the transcript to build it into a biographical story combining research interests and faith journey.
+
+2. A specific instance of AI influence: GitHub Copilot "short-circuited" your thinking about discussion prompts. This could be a valuable teaching example.
+
+3. A detailed interaction with student *...* who kicked off discussion about AI in writing - this specific example of productive class discussion could inform future session planning.
+
+4. An idea about using AI to estimate timing for class activities and anticipate student questions/thoughts.
+
+*...*
+:::
+
+:::
+
+
+## Implications
+
+### Screen-Free Interactions
+
+If I had done this reflection by typing on my computer, I would have distracted myself by either trying to implement something I'd thought about or by looking up something I was curious about. The voice-note format allowed me to do all of my thinking away-from-screen. I happened to be sitting in my office, but I will probably do this on a walk outside sometimes.
+
+Screen-free also meant interaction-free. But it doesn't necessarily have to be. I could have had an LLM generate questions for me as I'm reflecting, in case I ran out of ideas. But it's not clear whether this would be a good thing: pauses allowed my own mind to activate other related thoughts and ideas. If I'd prematurely asked for external thoughts, that might have short-circuited my own reflection process.
+
+### Closing loops: reflection outputs back into actionable steps
+
+An important part of the process was taking my reflections and translating them into todos. Otherwise I would have just looked at the summary, said "oh that's insightful", and moved on with life without benefiting from it much. 
+
+### Risks and Opportunities
+
+Having engaged in reflective processes using LLMs for a while, I now have lots of LLM conversations that have a lot of my thinking in them. It's been very good to externalize my thinking so I don't get fixated on small things. But I do identify a few risks here:
+
+1. Externalizing thoughts isn't actually the goal; acting on them is. If I focus on externalizing and refining, that will come at the expense of some action. I've found that it helps my action be more intentional and focused, so the trade-off has often been profitable, but that's not guaranteed.
+2. Organizing these thoughts is a challenge. An LLM conversation is *not* a good long-term place to store thoughts. That's why I've been trying to export thoughts out of the conversations (e.g., by moving action items to my todo list), but there's still far too many good thoughts that are stuck in chat logs.
+3. Over-reliance on the AI: I have implicitly trusted that the AI would synthesize everything important from my self-reflection. It makes an outline that seems to organize my thoughts nicely. But it's also clearly nudging me towards conventional ways of thinking. I was able to use prompting strategies to identify what didn't fit into conventional buckets, and that was quite helpful, but I'm still looking at my own work through LLM-tinted glasses.
+
+Opportunities:
+
+1. Building this into a workflow I can do regularly. I can reify elements of this process and reflect on *them*. Perhaps a simple phone app to help capture and process these reflections would be good.
+2. What other parts of my work or life could I reflect on using voice notes? I've previously tried using voice notes like this on my walks to/from the office to capture some of the thoughts that otherwise loop in my head.
+3. What roles could/should LLMs play in this process? Would it be helpful for it to pose questions to me? One opportunity would be *follow-up*: if I identify something in a reflection on one day, could it organically come back up in a reflective conversation later on?
+4. The result of this process is a lot of thoughts, not all of which are worth acting on. How can I wisely *choose* what to act on now, what to defer, and what to drop? What does "defer" mean, practically?

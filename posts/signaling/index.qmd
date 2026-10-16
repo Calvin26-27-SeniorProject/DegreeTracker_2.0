@@ -1,0 +1,27 @@
+---
+title: "Erosion of Superficial Signaling"
+description: "What happens when GenAI makes it easier to look competent?"
+date: 2024-05-24
+draft: 1
+---
+
+The medium is part of the message:
+
+- Aspects of the work, like its level of polish, signal that effort went into it
+- Other aspects signal that I have empathy or care.
+- Aspects like terminology use and sentence structure can signal competece, knowledge, expertise.
+- We judge accuracy or veracity based on some of these signals.
+
+For example, we receive a paper letter in the mail that looks personally handwritten, but in fact was mechanized.
+
+These cues or signals have never been 100% accurate: cons, scams, theater have been false positives; L2 writers, mistakes, cultural misunderstandings have been false negatives.
+
+Generative AI makes it easier to produce work that looks like it has these cues. It can make it easier to look competent, empathetic, or knowledgeable. In other words, the superficial signals become malleable.
+
+As second-order effects, when that happens, we will probably:
+
+- Stop paying as much attention to those signals
+  - We might even become suspicious of highly polished artifacts, e.g., from students.
+- We'll try to come up with new signals that are harder to fake (e.g., cryptographic signatures of sources)
+  - But we'll find new ways to fake those, too.
+- We might simply start caring less about discerning effort, competence, or empathy in the first place. That might be fine, but we might also stop caring to discern whether a message is true or not.

@@ -1,0 +1,30 @@
+---
+title: "Wisdom in the Age of AI 2026"
+subtitle: "Ken Arnold · Calvin University · October 8–10, 2026"
+description: "Slides and links from my talks at the [Wisdom in the Age of AI](https://calvin.edu/faith-and-technology/faith-and-ai-conference) conference."
+---
+
+## Talks
+
+- **From Every Language: Using AI for live translation in worship** — [slides](/static/wisdom2026-talks/From%20Every%20Language.pptx)
+- **Building Value-Laden Tech with (and using) AI** — [slides](/static/wisdom2026-talks/Building%20Tech%20with%20AI.pptx)
+
+## Go deeper
+
+- **Try it:** the [Thoughtful AI Tools Lab](https://thoughtful-ai.com/) builds AI that helps people think rather than think for them. You can [try our writing tools](https://app.thoughtful-ai.com/) that support your writing without tainting your words.
+- **Read:**
+  - [AI Directions](/posts/2026-10-13-ai-directions/)
+  - [AI Idolatry and Magical Thinking](/posts/ai-idolatry/)
+  - [Formation, not Detection: AI detection misses the point](/posts/2025-06-26-formation-not-detection/)
+  - [Why the University?](/posts/why-school/)
+  - [Interacting with AI: X instead of Y](/posts/instead/)
+- **Watch:** [Christian Liberal Arts Traditions in an Age of AI](https://www.youtube.com/watch?v=AkNaEuXQEX8), my keynote at Calvin's 2025 Fall Conference
+- **Research:** [Publications](/pubs.qmd) · [CV](/static/kcarnold_cv.pdf)
+
+Get in touch: <ken.arnold@calvin.edu>
+
+## Share this page
+
+![](qr.svg){width=200px fig-alt="QR code linking to kenarnold.org/wisdom2026"}
+
+kenarnold.org/wisdom2026

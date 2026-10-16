@@ -1,0 +1,37 @@
+---
+title: "GenAI in Reflective Mode"
+date: 2025-01-14
+categories: ["llm", "interaction", "reflection"]
+description: "GenAI can help you reflect on your work, not just get it done faster."
+featured: 0
+---
+
+When you hear "generative AI", you probably think about getting things done for you. And generally that's what we use computers for: getting things done faster or more accurately. But I argue there's another valuable use of computing that you should consider: reflecting on your own work.
+
+I've written about some concrete examples in this series:
+
+- [reflective communication](/posts/reflective-communication/index.qmd)
+- [screen-free reflective practice](/posts/reflective-practice/index.qmd)
+
+Other things we could be reflecting on:
+
+- in **teaching**:
+    - for a specific assignment: what will likely confuse students? what clarifying questions will they have? where might they get stuck?
+    - for a unit: how do my materials line up with the learning objectives? what learning objectives will students connect with most or least?
+- in **research**:
+  - what about this paper will confuse reviewers?
+  - what part of my experiment design makes least sense? is most likely to fail?
+  - what assumptions am I making that I haven't written down?
+- in **presentations**
+  - what will the audience be most interested in? what will they be most confused by?
+  - is anything I'm saying likely to be misinterpreted or to offend someone?
+
+(many more are possible; just ask an AI to continue this list!)
+
+We were made to be makers--not just of things or text, but of ideas, questions, hypotheses, observations.
+
+Ultimately, it's not about getting the right answers faster. It's about asking better questions, the sort of questions that will help us act virtuously.
+
+Let's use computing power to help us think *better*.
+
+Related: [AI Should Challenge, Not Obey](https://dl.acm.org/doi/10.1145/3649404)

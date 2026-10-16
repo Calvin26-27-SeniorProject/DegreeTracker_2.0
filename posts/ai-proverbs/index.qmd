@@ -1,0 +1,42 @@
+---
+title: "Solomon's proverbs about AI"
+description: "A reflection without words on the difference between wisdom and its imitation."
+author: "Ken Arnold"
+date: "2023-01-16"
+categories: [ai, ml, lm]
+---
+
+**Prompt**: Solomon's proverbs about AI:
+
+**Generated text** (by `text-davinci-003`):
+
+```
+1. "The clever man uses artificial intelligence to better understand the world."  
+2. "Artificial intelligence can be a great friend, but a dangerous enemy."
+3. "The man who trusts artificial intelligence too much will be led astray."
+4. "He who puts his trust in artificial intelligence will suffer many defeats."
+5. "Artificial intelligence is a powerful tool, but it must be used with caution."
+6. "The wise man uses artificial intelligence to gain knowledge, but not to make decisions."
+7. "Artificial intelligence is a double-edged sword; it can be used for good or harm."
+8. "The man who follows artificial intelligence blindly will suffer the consequences."
+9. "Artificial intelligence can be a helpful guide, but its advice should be taken with care."
+10. "He who uses artificial intelligence wisely will find many advantages."
+```
+
+**Prompt**: Write a blog post about how these "proverbs" are superficial.
+
+**Generated text**:
+
+```
+The age of Artificial Intelligence (AI) has arrived, bringing with it a flurry of proverbs and sayings about the technology. While these proverbs may seem wise and insightful, they are actually quite superficial when it comes to understanding the true implications of AI.
+
+Let's take a look at the first proverb: "The clever man uses artificial intelligence to better understand the world." While this proverb may be true in a certain sense, it fails to capture the full scope of what AI can do. AI can be used for a variety of purposes, from predicting market trends to helping diagnose medical conditions. It's more than just a tool for understanding the world; it's a powerful technology that can be used to improve efficiency and accuracy in many different contexts.
+
+The second proverb, "Artificial intelligence can be a great friend, but a dangerous enemy," is similarly shallow. AI may be capable of making decisions on our behalf, but it's important to remember that it's still only a machine. It lacks the capacity for moral judgement and can often lead us astray if it's used without proper oversight.
+
+The third and fourth proverbs, "The man who trusts artificial intelligence too much will be led astray" and "He who puts his trust in artificial intelligence will suffer many defeats," further illustrate the superficial nature of these proverbs. While it's true that AI can be a powerful tool, it can also be dangerous if used improperly. It's important to remember that AI is still a machine and should be used with caution and oversight.
+
+Finally, the fifth proverb, "Artificial intelligence is a powerful tool, but it must be used with caution," is the only one that captures the full scope of the implications of AI. AI is an incredibly powerful tool, but it's important to remember that it's still a machine and should be used responsibly.
+
+In conclusion, while these proverbs may seem wise and insightful, they are actually quite superficial in their approach to AI. It's important to remember that AI is a powerful tool, but it must be used with caution and oversight.
+```

@@ -1,0 +1,36 @@
+---
+title: "Why the University?"
+description: "When content is free, what's the value of educational institutions?"
+date: "2025-03-27"
+---
+
+Learning materials used to be expensive: synthesizing human knowledge into a form that others can effectively learn from was laborious, and disseminating it was expensive. But now the dissemination is basically free (e.g., YouTube, Wikipedia, etc.), and AI is making the synthesis not just easier but more personalized.
+
+With uncertainties stemming from changing demographics, politics, and economic viability, the future of the traditional university was already in question. With AI now not only promising to help learn but changing what even needs to be learned, the uncertainty is only increased. *So what's the value of school anymore?*
+
+## A few important things
+
+> If it can be done sitting at a computer and success can be clearly quantified, it will be automated sooner or later.
+
+Humanity now has unprecedentedly powerful tools to optimize measurable outcomes. But we must define what those outcomes should be. **What is good**? What outcomes are worth aiming for? And how can we quantify progress, knowing that "When a measure becomes a target, it ceases to be a good measure" ([Goodhart's law](https://en.wikipedia.org/wiki/Goodhart's_law))?
+
+As a corollary, the difference between what *is* good and what *appears* good will become harder to discern. Humans already overuse correlated features to make stereotyped judgments (most notably about other people), and LLMs can increasingly make artifacts that match superficial characteristics of quality.
+
+Finally, community matters. The university *gathers* a community from many places and backgrounds, it *lives together* as a community in a place, and it *sends* its members out into surrounding communities, both during students' time there and also afterwards.
+
+## Questions
+
+In light of this, we can ask:
+
+1. **community**: Who are we together? -> relationships with peers, faculty/staff/mentors, and surrounding community (neighbors). In a digital world that increasingly enables us to interact only with people exactly like us, it's especially important to cultivate respectful interactions across differences (stage of life, background, skills, challenges, culture, perspectives, language, etc.)
+2. **good**: What are we trying to achieve? -> this
+3. **assessment**: How do we know if we've got there?
+    - Curation: there's lots of content, but what's good? Although finding and selecting materials that align with a well-specified objective is getting easier, discerning what is good will always require human wisdom.
+    - Assessment: the difference between external performance and internal transformation
+
+Each of these connections needs to be addressed as *technical*, *perspectival* (what is good? how do we measure?), and *character / disposition*.
+
+
+## What if...
+
+- To oversimplify, what if we divide assessment into objective (correct answers, box-ticking elements) and subjective (thoughtfulness, quality, contribution to community, discernment, etc.). And **all objective assessment is automated**, in ways that are continually themselves checked and assessed.

@@ -1,0 +1,37 @@
+---
+title: "Promoting End-to-End Intentionality with Large Language Models"
+authors:
+  - Jason Chew
+  - Daniel Kim
+  - Jiho Kim
+  - Ray Flanagan
+  - Kenneth C. Arnold
+date: "2024-10-25"
+
+publication: "Calvin STEM Poster Fair"
+publication_short: internal
+
+abstract_long: ""
+
+abstract: ""
+
+categories: ["HCI", "NLP", "Undergrad"]
+
+url_pdf: ""
+url_code: ''
+url_dataset: ''
+url_poster: "poster-summer2024.pdf"
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+---
+
+![](featured.png)
+
+[Poster]({{< meta url_poster >}}) presented at 2024 Calvin University Summer Research Poster Fair.
+
+In Summer 2024, our team of undergraduate students conducted a study on how the type of information suggested by an AI writing assistant affects writers’ cognitive engagement with the suggestion and how they appropriate that suggestion in their draft. We developed a Microsoft Word sidebar  that offered next-sentence suggestions expressed in four different ways: in addition to predictive-text-style examples they could use verbatim (e.g., by copy-and-paste), we also allowed writers to request questions that the next sentence might answer, vocabulary they might use, and rhetorical moves (such as giving examples or considering counterarguments) that their next sentence might engage with.
+
+In a pilot study (N=8), writers found questions and rhetorical moves to be useful and friendly. Although writers chose to request examples more often, they often rejected the suggested text. Overall, they rated the Questions suggestion type as most compelling in post-task surveys, followed by Examples. These preliminary results suggest that writers welcomed AI suggestions that could not be inserted verbatim into their documents but instead required further thought. Overall, by offering intentionally-incomplete suggestions like Questions or Rhetorical Moves, AI systems might become better cognitive partners for writers, enriching thinking rather than circumventing it. This work has been presented at an internal poster fair; we are designing a follow-up experiment to build on these findings for broader publication.

@@ -1,0 +1,37 @@
+---
+title: "Desiderata for data science workbench"
+draft: 1
+---
+
+Jupyter notebook: bundle some cells together as a function or class, but still allow them to execute one at a time.
+So we can trace execution, show examples of intermediate steps, without duplicating the code when going real.
+Maybe an approach: name cells, refer to cells by name within the function. 
+
+Maybe: separate the "compute" from the "show" part within a cell. 
+
+- Parallelism by default
+- Lightweight versioning of code for all computational units
+- Incremental results view
+- hot-spot sampling profiler always running so you see where the slow lines are
+- Highlight what changed
+- Mark anything to put it in a notebook with context
+- Get alerted when anything you previously marked changed
+- Search (visual and text) among everything you're previously seen
+- Data views and examples are as important as code to keep track
+- Auto example collection - detect what parts of the input objects are actually used
+- Data science is collaborative data driven end user programming
+- Make it easy to try different parameter values, and see how interesting effects they have on results
+- caching
+- distinguishing scope
+- Make it hard to do stats wrong, perhaps by requiring it to be visual
+	- Should Economists Use Open Source Software for Doing Research?
+- Call attention to missing values when making relationships
+- Make changes in dimensionally be obvious
+- Expand abstractions in-place to avoid accidental sharing, automatically identify similar code “phrases” and highlight them / alert when changing one of them and not another
+- Progress reporting throughout pipelines, histograms about delays, hotspots
+- Visualization-first: data defaults to visible unless you explicitly tell it not to
+	- Default visualizations of data
+	- Show the data going through a neural net, for example
+	- Data streams through the model continuously by default; the model is always trying to fit it.
+		- yes, compute is expensive. But vis helps people avoid the wrong compute.
+- stats as a game: best stats is an algorithm that can play a game against nature well

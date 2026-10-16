@@ -1,0 +1,18 @@
+---
+title: "Stop trying to detect computer-generated writing."
+description: "It's a risky distraction that just encourages an arms race."
+author: "Ken Arnold"
+date: "2023-01-17"
+categories: [ai, ml, lm]
+featured: 1
+---
+
+Many people saw the quality of AI-generated text and immediately thought that they need to find ways to detect such "cheating". I respect those trying to make those tools (including my former colleagues who made [GLTR](http://gltr.io/) back in 2019, and more recently Edward Tian, who is "[trying to save us from ChatGPT before it changes writing forever (NPR)](https://www.npr.org/sections/money/2023/01/17/1149206188/this-22-year-old-is-trying-to-save-us-from-chatgpt-before-it-changes-writing-for)" with [GPTZero](https://gptzero.me/)), and the educators feeling like they're forced into using them---at the present moment this might be a best-of-bad-options situation. But we need to stop it. Reasons:
+
+1. It's going to have **false positives**. There will be text that's actually written by a thoughtful human but gets flagged as machine-generated. The author will get accused of cheating and will probably have no recourse. Even if they successfully counter the accusation, it's discouraging --- especially if classmates who used ChatGPT a bit more cleverly were able to sneak actual computer-generated text past the system (a *false negative*). And although I don't have specific evidence in this situation, the false positives of other AI risk assessment systems tend to fall disproportionately on those already marginalized.
+
+2. It's just going to lead to an **arms race**. We've already seen examples of how simple tweaks to how the system is used (e.g., telling it to introduce mistakes) can sneak past some ways of detection (some examples I found without trying hard: [1](https://twitter.com/nickmmark/status/1612602697492074497), [2](https://twitter.com/SmoothMikeP/status/1613750382181888001), [3](https://twitter.com/KyleLiang5/status/1611897959217790976)). If there's a clear signal of computer generation, the bad actors will find a way around it. Meanwhile the false positive rate will go up (see #1).
+
+3. It's distracting and unproductive for most common purposes of writing. For writing-as-*art*, it might be productive to detect forgeries. But when writing is used to *communicate*, *think*, and *learn*, this focus on evaluating the *output* distracts from the emphasis we need to have on the *process*. Others have written more about this, and I'll post some more thoughts myself soon.
+
+*Post-script* 2023-02-09*: OpenAI released their own [Classifier for AI-written text](https://openai.com/blog/new-ai-classifier-for-indicating-ai-written-text/). They acknowledge the first two of the above points.

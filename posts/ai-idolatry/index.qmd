@@ -1,0 +1,49 @@
+---
+title: "AI Idolatry and Magical Thinking"
+date: "2025-10-07"
+---
+
+| Their idols are silver and gold,
+|     the work of human hands.
+| They have mouths, but do not speak;
+|     eyes, but do not see.
+| They have ears, but do not hear;
+|     noses, but do not smell.
+| They have hands, but do not feel;
+|     feet, but do not walk;
+|     and they do not make a sound in their throat.
+| Those who make them become like them;
+|     so do all who trust in them.
+
+Psalm 115:4-8 ESV
+
+Beware of worshiping AI.
+
+(I'm mostly going to talk about LLM-powered chatbots here, but the same concepts could apply to other systems.)
+
+It sounds ridiculous on its face, but think about whether you've noticed any of the following thought patterns in yourself or others:
+
+- **Incantations**. When the AI output isn't what we hoped for, perhaps it's because you just didn't ask correctly. "Prompt engineering" is like figuring out the right incantations.
+- **A Context Offering**. To get the best out of your AI, you need to give it more context. The more of your life you can connect it to, the more it can do...right? [God is hungry for Context](https://www.latent.space/p/o3-pro).
+- **They have feet, but do not walk**: LLMs are adept at giving us things that are formatted like what we want, whether or not it has the substance: for example, a detailed report covering a breadth of perspectives, with everything cited and formatted correctly. But the report misses the point, omits important perspectives, and misquotes what it cites. And you can't tell unless you dig in deeply.
+- **Itching Ears**: LLMs are optimized to tell you what you want to hear. On [Chatbot Arena](https://lmarena.ai/), chatbots "battle" for human votes. Not for which is more true, honorable, just, pure, ... just which one people like better.
+- **Gambling**: Even though the payoff may be mediocre most of the time, every once in a while what you get is so good that it makes you want to keep playing. It becomes a habit.
+- **Heads I win, tails you lose**: When the AI gets something right, it's because the model is so amazing. When it gets something wrong, it's because you didn't prompt it correctly, or you didn't give it enough context, or [you just failed to iterate it](https://mikecaulfield.substack.com/p/is-the-llm-response-wrong-or-have)--and [you're responsible for the failure](https://pluralistic.net/2024/10/30/a-neck-in-a-noose/#is-also-a-human-in-the-loop).
+- **Escathological Hope**: We have a peek at the future, and it's glorious. Though life right now might seem dark and the technology jagged and spiky, improvement is inevitable, we're in the [Era of Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf) where AI capabilities will grow through interaction with the world, and the results will surpass our wildest dreams.
+
+
+### Lift up your eyes
+
+The problem with these thoughts isn't that they're wrong. In fact most of those thoughts are grounded in evidence, and I recommend reading all of the articles I linked to.
+
+The problem is that they put AI in a place where only God belongs.
+
+God made a world that’s rich yet deeply orderly. Learning even some of the order enables rich capabilities. All our technology, including AI, works because of this orderly diversity. But God's purpose in creating this order was to reveal himself.
+
+So lift up your eyes beyond the technology, to Him who made it all and sustains it to show off himself.
+
+Seek God the wonderful counselor before, during, and after using any AI.
+
+Credit him--not AI--for any insights.
+
+Desire his honor and kingdom first.

@@ -1,0 +1,34 @@
+---
+title: "Advice"
+date: "2023-02-21"
+draft: 1
+---
+
+- [jnm] The 3 central parts of my planning process are people, time, & prep: a) creating regular, substantial moments for this kind of planning, together with others b) having advance conversations and prep to ensure that those conversations have a direction
+- [kzg] The introduction, especially the thesis statement, is a good prototype of the dissertation. Although it will eventually need to be rewritten, early work on it is not wasted.
+- [kzg] A thesis title should change people’s thinking, but not be the message in itself. Should be reasonably unique.
+- [kzg] Debug the operationalization of the conceptual approach
+- [kzg] Curate. Give the rational reconstruction (Stuart) of the core.
+- [kzg] What is the message from this chapter that contributes to the overall story?
+- [kzg] The fewer the words in your brand, the better. We need to convey the value of our work clearly enough that others can identify when it’s relevant.
+- [kzg] What causal chain should be responsible for the effect we desire? At each stage in the causal chain, the effect size can only decrease, so what’s the earliest step in the chain that we can measure?
+- [kzg] Writing should clearly communicate...
+	- what specific problem is being solved, e.g., What aspect of the writing are we trying to improve? How will we know we have succeeded?
+	- What the approach is and what’s novel about it.
+- [ss,Finale] Fail early/fast.
+- [ss] Run a big enough experiment that I’ll learn something from the results. 20 is probably too small.
+- [Finale] Gap in existing knowledge -> measures ->  experiment
+- [Adam] Don’t beat them at their game; change the game.
+- [kzg] Write out the hypothesis in conceptual terms.
+- Bias towards action. Take concrete steps, small if necessary, towards a goal.
+- [kzg] Paper metadata choices should help program committee find appropriate reviewers.
+- “Can I still reach my goals and stay true to my values if I skip this task?”
+- [Maia] Guzdial charts
+- [kzg] Rebuttals: if reviewers didn’t see something in the paper, maybe there were too many other things also said. reiterate and expand the key points; prioritize.
+- Things I’ve learned myself
+	- Get feedback!
+	- Work from examples.
+	- Fix the worst thing.
+	- Clarify the goal
+	- Heed warnings, Notice when things are not right
+	- Talk with people to recognize when I don’t know what I’m doing or how to do it.

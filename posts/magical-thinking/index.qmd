@@ -1,0 +1,31 @@
+---
+title: "Avoid Magical Thinking about AI"
+description: "Even if you're not a computer scientist, you should learn enough about AI that you can steer its progress."
+author: "Ken Arnold"
+date: "2023-01-24"
+categories: [ai, ml]
+featured: 1
+---
+
+It's become too common to ascribe a sort of magical veneer to AI. News outlets personify ChatGPT, for example. Not to mention personal assistants, voice recognition, even search engines. In practice, people are viewing these things as black boxes that might have little elves inside them as far as we know.
+
+That ignorance is understandable because the technology is complex. But it's harmful, and it doesn't have to be that way.
+
+## Why avoid magical thinking?
+
+- Use the technology *better*. Work *with* it. Leverage its strengths. e.g., if you know how a language model (like ChatGPT) is just assigning a score to every possible sequence of characters, you can have it *score* things that it never would have generated.
+- Demonstrate [gratitude](../ml-gratitude/) to the humans who worked to make the data the model is trained on. And properly worship the God who made a world that's simultaneously *structured* enough to have learnable patterns and *rich* enough that those patterns are endless and fascinating.
+- Know the limits of the technology. Predict its biases. e.g., if you know how the model's capabilities come from its training data, you can think about what *doesn't* get captured in that data, and about what might happen if the model starts getting trained largely on its own outputs.
+- Steer its progress. Yes, you can build systems that use AI towards flourishing. (I'm working on that for writers and educators, but there's many more ways. Chat with me!) Imagine and envision ways that people can benefit from it.
+- Policymakers need to regulate it, both inside organizations and in broader society. It can really harm people. We also need to retain the future ability to govern it; its extreme hunger for data and computational power tends towards concentrating AI capabilities in the hands of a few. 
+
+## How to avoid magical thinking?
+
+- Try it out yourself. With ChatGPT open to everyone (at least for now), this is a great time. Try to find things it can't do well. This requires attention, because it's trained to be *believable* even when it's wrong.
+- Interrogate the model about *why* it's giving the outputs it is giving. Unfortunately ths isn't as accessible right now, but I'm hoping (and working towards) making this more accessible. (Current approaches usually visualize *attention* or *input salience*, both of which basically show how information flows through the model. That's helpful, but limited; we don't know what the model *does* with that information. I've got some ideas.)
+- Develop intuitions about how it works.
+- Learn the concepts and math behind how it works. Two concepts that keep coming up in my intuitive explanations are *distribution* and *embedding*.
+
+## Want to learn more?
+
+I teach AI at Calvin University, and I'm happy to help anyone grow in understanding in this area.

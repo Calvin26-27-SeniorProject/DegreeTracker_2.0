@@ -1,0 +1,27 @@
+---
+title: "Humanity of the Gaps"
+description: "Reality is spiky."
+author: "Ken Arnold"
+date: "2023-02-03"
+categories: [ai, perspectival]
+featured: 1
+---
+
+David Brooks wrote an NYT Opinion titled ["In the Age of A.I., Major in Being Human"](https://www.nytimes.com/2023/02/02/opinion/ai-human-education.html). I agree with the premise and the overall goal. But he then encourages people to develop "distinctly human skills". I don't think being human is mainly about which skills we have or don't have. That would be a "humanity of the gaps": by analogy to the problematic ["god of the gaps"](https://en.wikipedia.org/wiki/God_of_the_gaps), we're defining humanity as what part of our skillset hasn't yet been automated. But God *isn't* the part of the universe that science hasn't explained yet; likewise, humanity *isn't* what hasn't been automated.
+
+A distinguishing characteristic of humans is that we are formed by interaction:
+
+- with a rich and spiky ecosystem
+- with play
+- with each other
+- in rich deep lived experience that builds over contexts that far far exceed the token limit.
+
+Formation by interaction means that everyone is a bit different, since even arriving at a comparable outcome (in terms of measurable skill) took different paths. We can’t download skills into our brains *Matrix*-style because a skill takes on a character of its own as it grows and develops in our individual minds.
+
+Outside of carefully controlled simulated worlds like board games and basic (though still impressive) physics simulations, modern ML learns mostly by imitation. So it can replicate the outcome, but it will have all the rough parts smoothed out. We get a regression towards the compact manifold of the projection of exponential individual dimensions onto the video screen of a model's training data.
+
+Sure, we'll eventually make models that will imitate the rough parts. Image generation already does that somewhat. With enough examples, in the domains where there's enough data, it'll be indistinguishable of course. But beneath the veneer of believable nonsense will be a boring sameness filling in for the multicolored tapestry of the diversity of human experience.
+
+So don’t try to develop skills for the sake of developing the skill. Aim to clash creatively with people with diverse experience. Aim not to mimic the world but to sculpt it. Don't reduce the world to 5-second shorts; celebrate the fierce wildness of the real world. Don't love people's attention; love people. Don't try to get people to invest in you; invest in the "least of these".
+
+This will take skill, yes, lots of it. But it mostly takes guts. Vulnerability. Love. As a human, you already have those things. But no matter what you major in, a good school can help mature them.

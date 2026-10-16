@@ -1,0 +1,25 @@
+---
+title: "Publications"
+listing:
+  contents: pubs
+  sort:
+    - "date desc"
+    - "title"
+  type: default
+  categories: true
+page-layout: full
+title-block-banner: true
+
+---
+
+Some selected publications are below. For a more complete list, see my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=u512YusAAAAJ&view_op=list_works&sortby=pubdate).
+For less-polished but more recent thoughts, see the [blog posts](/posts.qmd) here.
+
+::: {.content-hidden}
+
+- [Towards Full Authorship with AI: Supporting Revision with AI-Generated Views](https://arxiv.org/abs/2403.01055) - work done with undergraduate students, including a student first author
+- [Faithful text prediction | Christian Courier](https://www.christiancourier.ca/faithful-text-prediction/)
+- [ChatGPT is not Magic (Talk)](https://youtu.be/Vvb3ht7uYiA)
+- dated but relevant: [AI in Christian Thought and Practice](https://medium.com/ai-and-christianity/artificial-intelligence-in-christian-thought-and-practice-20ec8635a94f) (2017)
+
+:::

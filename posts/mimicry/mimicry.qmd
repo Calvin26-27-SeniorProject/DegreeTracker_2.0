@@ -1,0 +1,40 @@
+---
+title: "Intelligence via Mimicry"
+description: |
+  AI systems aren't magic or inherently objective. For all their strengths, most
+  AI systems mimic human behavior.
+date: "2023-03-28"
+---
+
+I suspect that many laypeople think of AI as either magic or made by highly clever programmers. The main thing missing in that view is that the most common form of AI today---machine learning---is rooted in data, which mostly comes from people. Much of AI's strengths and weaknesses can be understood by thinking of it as mimicking the examples of human behavior that end up in its training data---both the good and bad parts. That means that the data needed to be collected from people (bringing up questions of privacy and of "[Ghost Work](https://ghostwork.info/)"), and that the results are rarely "rational" or "objective".
+
+## Language Modeling
+
+A very common, and surprisingly effective, kind of mimicry is the "language model": predict the next word.
+
+- Data is extremely abundant
+  - Classic approaches to machine learning required effortful collection of data. In contrast, the Internet contains a huge amount of text data.
+  - Classic approaches required expensive *labeling* of the collected data. In contrast, each document contains as many examples as words,^[Strictly speaking, most models use "tokens", which are common words or common fragments of less-common words.] with no extra labeling necessary.
+- Doing this well requires an extreme range of competence: from basic grammar (like "I am" and "you are" vs "I are") to complex deductive reasoning (e.g., in trying to mimic the worked solution to a complex deductive reasoning problem)
+- It encompasses a wide range of human experience, since people write about just about everything, eventually.
+  - especially when paired with vision, e.g., videos with subtitles
+- Partial credit is very powerful: even when it doesn't get the next word exactly right, it still gets credit for how highly it ranked that word. So it can quickly capture a wide range of nuance of different types of expressions.
+- Many different people use language for many different purposes, so language modeling implicitly includes the task of identifying the stance and purpose of an author.
+
+## LM isn't enough
+
+A few problems with language modeling as an objective:
+
+- **Representativeness**: a small fraction of people post most of the content on the Internet. So that data doesn't fully represent all of human experience.
+- **Stereotyping**: When a news article about medicine is about to name a doctor, a male name is often a better guess for the next word than a female name, because of historical biases. This means that language models incorporate gender-profession stereotypes. The same applies for other types of biases (racial, ethnic, ability, age, religion, etc.).
+- **Superficiality**: Matching superficial characteristics of language can get most of the credit. So we get output that has all of the form but without the substance.
+- **Averaging**: generally this is actually a desirable thing because of the [Anna Karenina principle](https://en.wikipedia.org/wiki/Anna_Karenina_principle): since "erroneous" examples are more diverse than standard examples, modeling common patterns often yields a good model of standard language use and "conventional wisdom" thinking. But it can smooth out the rough edges of individual experience, and even implicitly categorize the entire linguistic expression of a community as non-standard.
+- **Task alignment**: The world is currently obsessed with conversational dialogue interfaces to these systems. That's a familiar and powerful but limited interaction modality with an AI system, as I wrote about elsewhere. But still it's useful, so I should mention it: on the Internet, there are many examples of something that looks like an instruction being followed by text that seems to follow that instruction (e.g., a prompt followed by an essay that addresses that prompt), but there are also plenty of examples of lists of instructions, or things that look like instructions occurring in the middle of longer articles. So if we want a system that's essentially a parrot to be able to parrot back things that look like they're following our instructions, we need to tune the system to focus its modeling and generation on the instruction-following examples, not the other ones.
+
+## Identifying Problems via More Mimicry
+
+Most of these problems can be observed in the result of asking the model to generate something for a prompt. But we can label a few examples of these problems and then train a model to identify problematic examples.^[Perhaps we don't even need to label examples; perhaps the model itself could be prompted to identify the problems.] Then the task of identifying problems is just another mimicry task: given an example prompt and output, what label (problematic or not) would be likely to come next?
+
+## Alignment via Feedback
+
+Once a problem is identified, the system can be tuned to avoid that problem by adjusting its behavior via feedback. Empirical evidence suggests that this is accomplished mostly by emphasizing or de-emphasizing already-learned behaviors.

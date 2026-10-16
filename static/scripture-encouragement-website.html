@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripture Encouragement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s;
+        }
+        .container {
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            background-color: white;
+            transition: all 0.3s;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        textarea, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #encouragement {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            font-style: italic;
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        #apiKeyContainer {
+            transition: all 0.5s;
+        }
+        .character-count {
+            text-align: right;
+            font-size: 0.8em;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+        .privacy-note {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+        .spinner {
+            display: none;
+            width: 30px;
+            height: 30px;
+            border: 3px solid transparent;
+            border-top-color: currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        .api-provider {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        .clear-key {
+            font-size: 0.8em;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scripture Encouragement</h1>
+        <div id="apiKeyContainer">
+            <label for="apiKey">Enter your API Key (OpenAI or Anthropic):</label>
+            <input type="text" id="apiKey" placeholder="sk-..." required>
+            <button onclick="saveApiKey()">Save API Key</button>
+            <div class="privacy-note">Your API key is only sent to the AI provider.</div>
+        </div>
+        <div id="providerInfo" style="display: none">
+            Using <span id="providerName"></span>
+            <span class="clear-key" onclick="clearApiKey()">(change key)</span>
+        </div>
+        <label for="problem">What's troubling you today?</label>
+        <textarea id="problem" rows="4" placeholder="Share your concern..." maxlength="1000" required></textarea>
+        <div class="character-count">0 / 1000</div>
+        <div class="button-container">
+            <button onclick="getEncouragement()" id="submitButton">Receive Encouragement</button>
+            <button onclick="resetForm()" id="resetButton" style="display: none">New Question</button>
+        </div>
+        <div class="spinner" id="spinner"></div>
+        <div id="encouragement"></div>
+    </div>
+
+    <script>
+        // Global variables
+        let apiKey = '';
+        let provider = '';
+
+        const colorSchemes = [
+            { primary: '#5d4037', secondary: '#8d6e63', background: '#f8f4e8', text: '#333', accent: '#efebe9' },
+            { primary: '#2e7d32', secondary: '#4caf50', background: '#e8f5e9', text: '#1b5e20', accent: '#c8e6c9' },
+            { primary: '#1565c0', secondary: '#42a5f5', background: '#e3f2fd', text: '#0d47a1', accent: '#bbdefb' },
+            { primary: '#6a1b9a', secondary: '#ab47bc', background: '#f3e5f5', text: '#4a148c', accent: '#e1bee7' },
+        ];
+
+        function applyRandomColorScheme() {
+            const scheme = colorSchemes[Math.floor(Math.random() * colorSchemes.length)];
+            document.body.style.backgroundColor = scheme.background;
+            document.body.style.color = scheme.text;
+            
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.style.backgroundColor = scheme.secondary;
+            });
+
+            const encouragementDiv = document.getElementById('encouragement');
+            if (encouragementDiv) {
+                encouragementDiv.style.backgroundColor = scheme.accent;
+            }
+
+            const h1 = document.querySelector('h1');
+            if (h1) {
+                h1.style.color = scheme.primary;
+            }
+
+            const labels = document.querySelectorAll('label');
+            labels.forEach(label => {
+                label.style.color = scheme.primary;
+            });
+        }
+
+        function detectProvider(key) {
+            if (key.startsWith('sk-ant-')) return 'Anthropic';
+            if (key.startsWith('sk-')) return 'OpenAI';
+            return null;
+        }
+
+        function clearApiKey() {
+            apiKey = '';
+            provider = '';
+            document.getElementById('apiKeyContainer').style.display = 'block';
+            document.getElementById('providerInfo').style.display = 'none';
+            document.getElementById('apiKey').value = '';
+        }
+
+        function saveApiKey() {
+            const newKey = document.getElementById('apiKey').value;
+            const detectedProvider = detectProvider(newKey);
+            
+            if (!detectedProvider) {
+                alert('Please enter a valid OpenAI or Anthropic API key.');
+                return;
+            }
+
+            apiKey = newKey;
+            provider = detectedProvider;
+            
+            document.getElementById('apiKeyContainer').style.display = 'none';
+            document.getElementById('providerInfo').style.display = 'block';
+            document.getElementById('providerName').textContent = provider;
+        }
+
+        async function getEncouragement() {
+            const problem = document.getElementById('problem').value;
+            const encouragementDiv = document.getElementById('encouragement');
+            const spinner = document.getElementById('spinner');
+            const submitButton = document.getElementById('submitButton');
+
+            if (!apiKey) {
+                alert('Please enter your API key first.');
+                return;
+            }
+
+            if (!problem) {
+                alert('Please share your concern.');
+                return;
+            }
+
+            encouragementDiv.style.display = 'none';
+            spinner.style.display = 'block';
+            submitButton.disabled = true;
+
+            try {
+                let response;
+                
+                if (provider === 'OpenAI') {
+                    response = await fetch('https://api.openai.com/v1/chat/completions', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${apiKey}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            model: "gpt-4o",
+                            messages: [
+                                {role: "system", content: "You are a compassionate Christian counselor. Provide brief, empathetic encouragement using relevant scripture passages to address the user's concern."},
+                                {role: "user", content: problem}
+                            ],
+                            max_tokens: 500
+                        })
+                    });
+                } else {
+                    response = await fetch('https://api.anthropic.com/v1/messages', {
+                        method: 'POST',
+                        headers: {
+                            'x-api-key': apiKey,
+                            'anthropic-version': '2023-06-01',
+                            'anthropic-dangerous-direct-browser-access': 'true',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            model: "claude-3-5-sonnet-latest",
+                            max_tokens: 500,
+                            messages: [{
+                                role: "user",
+                                content: "As a compassionate Christian counselor, provide brief, empathetic encouragement using relevant scripture passages to address this concern: " + problem
+                            }]
+                        })
+                    });
+                }
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const encouragement = provider === 'OpenAI' ? 
+                    data.choices[0].message.content :
+                    data.content[0].text;
+
+                encouragementDiv.textContent = encouragement;
+                encouragementDiv.style.display = 'block';
+                document.getElementById('resetButton').style.display = 'inline-block';
+            } catch (error) {
+                console.error('Error:', error);
+                encouragementDiv.textContent = `Error: ${error.message}. Please check your API key and try again.`;
+                encouragementDiv.style.display = 'block';
+            } finally {
+                spinner.style.display = 'none';
+                submitButton.disabled = false;
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('problem').value = '';
+            document.getElementById('encouragement').style.display = 'none';
+            document.getElementById('resetButton').style.display = 'none';
+            updateCharCount();
+        }
+
+        function updateCharCount() {
+            const textarea = document.getElementById('problem');
+            const count = textarea.value.length;
+            document.querySelector('.character-count').textContent = 
+                `${count} / ${textarea.maxLength}`;
+        }
+
+        // Wait for DOM to be fully loaded before adding event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize color scheme
+            applyRandomColorScheme();
+            
+            // Add event listeners
+            const problemTextarea = document.getElementById('problem');
+            problemTextarea.addEventListener('input', updateCharCount);
+            problemTextarea.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    getEncouragement();
+                }
+            });
+
+            // Initialize character count
+            updateCharCount();
+        });
+    </script>
+</body>
+</html>

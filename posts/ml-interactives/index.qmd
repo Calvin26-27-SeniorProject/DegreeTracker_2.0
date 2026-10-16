@@ -1,0 +1,13 @@
+---
+title: "ML Interactives"
+date: "2024-02-15"
+categories: ["coding", "ai", "ml"]
+featured: 0
+---
+
+As I've been teaching AI / Machine Learning, I've made a few interactive demos to help students understand some concepts. Here's a few:
+
+- [Chatbot Internals](https://huggingface.co/spaces/CalvinU/writing-prototypes) - go to "Show Internals" page
+- [Softmax / Cross Entropy](https://observablehq.com/@kcarnold/softmax)
+- [ReLU interactive](https://cs.calvin.edu/courses/cs/375/24sp/fundamentals/u04n00-relu.ipynb) (name: `u04n00-relu.ipynb`; show [preview](https://cs.calvin.edu/courses/cs/375/24sp/fundamentals/u04n00-relu.html), open in [Colab](https://colab.research.google.com/github/Calvin-Data-Science/cs375-376-public/blob/main/notebooks/u04n00-relu.ipynb))
+- [Next-Token Distribution Visualization](https://huggingface.co/spaces/kcarnold/next-token) for seq2seq translation models
