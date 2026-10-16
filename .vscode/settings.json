@@ -1,5 +1,0 @@
-{
-  "workbench.editor.customLabels.patterns": {
-    "**/index.qmd": "${dirname}/.qmd"
-  }
-}
