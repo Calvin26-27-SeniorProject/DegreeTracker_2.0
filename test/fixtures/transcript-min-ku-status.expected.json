@@ -1,0 +1,206 @@
+{
+  "kuSummary": {
+    "totalHours": 8,
+    "categoriesUsed": 2,
+    "hoursByCategory": {
+      "World Languages II": {
+        "raw": 0,
+        "effective": 0,
+        "max": 4
+      },
+      "Arts, Oral Rhetoric, Visual Rhetoric": {
+        "raw": 0,
+        "effective": 0,
+        "max": 6
+      },
+      "Humanities": {
+        "raw": 4,
+        "effective": 4,
+        "max": 6
+      },
+      "Mathematical Sciences": {
+        "raw": 0,
+        "effective": 0,
+        "max": 4
+      },
+      "Natural Sciences": {
+        "raw": 4,
+        "effective": 4,
+        "max": 6
+      },
+      "Social and Behavioral Sciences": {
+        "raw": 0,
+        "effective": 0,
+        "max": 6
+      }
+    }
+  },
+  "categories": {
+    "Community and Commitments": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Foundations of Christianity I": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Foundations of Christianity II": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Foundational Writing": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Health and Movement (Personal Fitness)": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Health and Movement (Leisure, Sport, and Skills)": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "World Languages I": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "World Languages II": {
+      "status": "optional-available",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Arts, Oral Rhetoric, Visual Rhetoric": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Humanities": {
+      "status": "satisfied",
+      "hoursEarned": 4,
+      "hoursEffective": 4,
+      "takenCount": 1,
+      "subDisciplines": {
+        "Classics": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 2
+        },
+        "Literature": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 22
+        },
+        "History": {
+          "hoursEarned": 4,
+          "cap": 4,
+          "isMaxed": true,
+          "untakenCount": 27
+        },
+        "Philosophy": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 13
+        },
+        "Religion": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 7
+        },
+        "Theory & Criticism": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 6
+        }
+      }
+    },
+    "Mathematical Sciences": {
+      "status": "optional-available",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Natural Sciences": {
+      "status": "satisfied",
+      "hoursEarned": 4,
+      "hoursEffective": 4,
+      "takenCount": 1,
+      "subDisciplines": {
+        "Physics & Astronomy": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 12
+        },
+        "Biology": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 8
+        },
+        "Chemistry": {
+          "hoursEarned": 4,
+          "cap": 4,
+          "isMaxed": true,
+          "untakenCount": 8
+        },
+        "Geology & Earth Sciences": {
+          "hoursEarned": 0,
+          "cap": 4,
+          "isMaxed": false,
+          "untakenCount": 7
+        }
+      }
+    },
+    "Social and Behavioral Sciences": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Diversity and Difference (Tag)": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Environmental Sustainability (Tag)": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Global Regions and Cultures (Tag)": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    },
+    "Contemporary Challenges and Enduring Questions": {
+      "status": "incomplete",
+      "hoursEarned": 0,
+      "hoursEffective": 0,
+      "takenCount": 0
+    }
+  }
+}

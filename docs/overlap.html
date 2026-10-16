@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calvin Program Overlap Viewer Bookmarklet</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --ink: #1d2b2e;
+      --muted: #57686b;
+      --accent: #1d5c63;
+      --accent-dark: #143f44;
+      --border: #d8d0c2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.5 Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(29, 92, 99, 0.14), transparent 28%),
+        linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    .hero,
+    .card {
+      background: color-mix(in srgb, var(--panel) 92%, white 8%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(33, 40, 41, 0.08);
+    }
+
+    .hero {
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      font: 700 0.8rem/1.2 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .lede {
+      max-width: 56ch;
+      margin: 16px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .card {
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    ol,
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    code,
+    textarea {
+      font: 13px/1.45 Menlo, Consolas, Monaco, monospace;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fcfaf5;
+      color: #314042;
+      resize: vertical;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">Calvin Program Overlap Viewer</span>
+      <h1>Visualize program and core overlap</h1>
+      <p class="lede">This bookmarklet runs on any Calvin catalog program page and opens a side panel showing direct course overlap with Core requirements.</p>
+      <div class="actions">
+        <a class="button" href="javascript:(()=>{const src='https://kcarnold.github.io/calvin-core/overlap-view.js';const id='ca-overlap-view-script';document.getElementById(id)?.remove();const script=document.createElement('script');script.id=id;script.src=src+'?v='+Date.now();script.async=true;(document.head||document.documentElement).appendChild(script);})();">Program overlap viewer</a>
+        <a class="button secondary" href="https://catalog.calvin.edu/preview_program.php">Open a program page</a>
+        <a class="button secondary" href="./index.html">Core annotator bookmarklet</a>
+      </div>
+      <p class="note">Drag the bookmarklet button into your bookmarks bar, then click it while viewing any program page.</p>
+    </section>
+
+    <section class="card">
+      <h2>Install</h2>
+      <ol>
+        <li>Show your browser bookmarks bar.</li>
+        <li>Drag <strong>Program overlap viewer</strong> into the bar.</li>
+        <li>Open any page with path preview_program.php on catalog.calvin.edu.</li>
+        <li>Click the bookmark to load the viewer panel.</li>
+      </ol>
+      <p class="note">If drag-and-drop is awkward, create a bookmark manually and paste this URL:</p>
+      <textarea readonly>javascript:(()=>{const src='https://kcarnold.github.io/calvin-core/overlap-view.js';const id='ca-overlap-view-script';document.getElementById(id)?.remove();const script=document.createElement('script');script.id=id;script.src=src+'?v='+Date.now();script.async=true;(document.head||document.documentElement).appendChild(script);})();</textarea>
+    </section>
+
+    <section class="card">
+      <h2>Notes</h2>
+      <ul>
+        <li>This is a planning aid and not an official degree audit.</li>
+        <li>It is intentionally separate from the transcript-based core annotator flow.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

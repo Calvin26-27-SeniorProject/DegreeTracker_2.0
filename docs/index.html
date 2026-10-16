@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Pasted Workday data stays in the browser: this page may not send network requests. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Core Planner</title>
+  <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements.">
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --surface: #ffffff;
+      --surface-2: #f8f9fb;
+      --ink: #1b2330;
+      --muted: #5d6879;
+      --line: #dde1e8;
+      --accent: #3d4fd6;
+      --accent-ink: #ffffff;
+      --done: #1f7a4d;
+      --done-bg: #e3f4ea;
+      --min: #2457b3;
+      --min-bg: #e5edfb;
+      --todo: #9a5b00;
+      --todo-bg: #fdf0d9;
+      --plan: #8a3fb8;
+      --plan-bg: #f3e8fb;
+      --warn: #a2341b;
+      --warn-bg: #fdece7;
+      --overlap: #1a5fc8;
+      --overlap-bg: #e8f0fe;
+      --radius: 12px;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #12151b;
+        --surface: #1b2029;
+        --surface-2: #222833;
+        --ink: #e6e9ef;
+        --muted: #9aa4b5;
+        --line: #303846;
+        --accent: #8d9bff;
+        --accent-ink: #12151b;
+        --done: #6fd39d;
+        --done-bg: #183427;
+        --min: #8db4ff;
+        --min-bg: #1b2a45;
+        --todo: #f2b45a;
+        --todo-bg: #3a2c14;
+        --plan: #d3a1f2;
+        --plan-bg: #33213f;
+        --warn: #ff9b82;
+        --warn-bg: #3d1f18;
+        --overlap: #9cc0ff;
+        --overlap-bg: #1c2b44;
+        color-scheme: dark;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+    .topbar { background: var(--surface); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+    .brand { display: flex; align-items: baseline; gap: 10px; }
+    .brand h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+    .unofficial { font-size: 12px; font-weight: 600; color: var(--warn); background: var(--warn-bg); padding: 2px 8px; border-radius: 999px; }
+    .year-picker { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+    select { font: inherit; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+
+    .notice { margin: 20px 0 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
+    .notice p { margin: 0; }
+    .notice p + p { margin-top: 6px; color: var(--muted); font-size: 14px; }
+
+    .input-card { margin: 16px 0 8px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+    .input-card h2 { margin: 0 0 6px; font-size: 17px; }
+    textarea {
+      width: 100%; min-height: 110px; resize: vertical; padding: 10px 12px;
+      font: 13px/1.45 ui-monospace, Menlo, Consolas, monospace; color: var(--ink);
+      background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px;
+    }
+    textarea:focus, select:focus, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .input-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .drop-zone {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-top: 10px; padding: 14px 16px; color: var(--muted);
+      border: 2px dashed var(--line); border-radius: 8px; transition: border-color 0.1s, background 0.1s;
+    }
+    .drop-text { flex: 1 1 260px; }
+    .drop-text p { margin: 0; }
+    .drop-title { color: var(--ink); font-weight: 600; }
+    .export-hint { margin-top: 2px; font-size: 13px; }
+    .paste-route { margin-top: 10px; color: var(--muted); font-size: 14px; }
+    .paste-route summary { cursor: pointer; width: fit-content; }
+    .paste-route ol { margin: 8px 0; padding-left: 20px; }
+    /* Screenshot of Workday's export buttons; the ring pulses over Excel (the left one). */
+    .workday-buttons { position: relative; display: inline-block; line-height: 0; padding: 2px 6px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+    .workday-buttons img { display: block; }
+    .export-ring {
+      position: absolute; left: 35px; top: 50%; width: 36px; height: 36px;
+      transform: translate(-50%, -50%); border: 2px solid #3d4fd6; border-radius: 999px;
+      animation: export-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes export-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(61, 79, 214, 0.55); }
+      50% { box-shadow: 0 0 0 7px rgba(61, 79, 214, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .export-ring { animation: none; } }
+    .drop-zone.dragging { border-color: var(--accent); background: var(--surface-2); color: var(--ink); }
+    .file-button { position: relative; }
+    .file-button input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+    .file-button:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .button { font: inherit; font-weight: 600; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); cursor: pointer; }
+    .status { font-size: 14px; color: var(--muted); }
+    .status-ok { color: var(--done); }
+    .status-error { color: var(--warn); }
+    .status-warn { color: var(--todo); }
+    .privacy { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+    #results { padding-bottom: 48px; }
+    #results h2 { font-size: 18px; margin: 0 0 8px; }
+
+    .summary, .callout, .transcript { margin-top: 20px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+    .summary h2 { margin-bottom: 0 !important; }
+    .summary-sub { margin: 2px 0 8px; color: var(--muted); font-size: 13px; }
+    .summary-group h3 { margin: 14px 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .summary-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+    .summary-chip { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 8px; text-decoration: none; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-left-width: 4px; height: 100%; }
+    .summary-chip:hover { border-color: var(--accent); }
+    .chip-name { font-size: 13px; }
+    .chip-value { font-size: 13px; font-weight: 700; }
+    .summary-chip.status-done { border-left-color: var(--done); }
+    .summary-chip.status-done .chip-value { color: var(--done); }
+    .summary-chip.status-min { border-left-color: var(--min); }
+    .summary-chip.status-min .chip-value { color: var(--min); }
+    .summary-chip.status-todo { border-left-color: var(--todo); }
+    .summary-chip.status-todo .chip-value { color: var(--todo); }
+    .summary-chip.status-optional .chip-value { color: var(--muted); }
+    .ku-meter { margin: 0 0 8px; }
+    .ku-numbers { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; margin-bottom: 4px; }
+    .meter { height: 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
+    .meter-fill { height: 100%; background: var(--todo); }
+    .ku-meter.is-met .meter-fill { background: var(--done); }
+    .chip-room { font-size: 12px; color: var(--muted); }
+    .chip-room.has-room { color: var(--min); font-weight: 600; }
+    .ku-opportunities { margin: 10px 0 0; padding: 10px 12px; background: var(--min-bg); border-radius: 8px; font-size: 14px; }
+    .ku-opp-lead { margin: 0 0 4px; font-weight: 600; }
+    .ku-opportunities ul { margin: 0; padding-left: 20px; }
+    .ku-opp-full { margin: 6px 0 0; color: var(--muted); }
+
+    .callout ul { margin: 0; padding-left: 20px; }
+    .callout li + li { margin-top: 4px; }
+    .callout-warn { background: var(--warn-bg); border-color: transparent; }
+    .callout-warn h2 { color: var(--warn); }
+    .callout-mismatch { background: var(--warn-bg); border: 2px solid var(--warn); }
+    .callout-mismatch h2 { color: var(--warn); }
+    .callout-mismatch > p { margin: 0 0 10px; }
+    .mismatch + .mismatch { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .mismatch-line { margin: 0 0 6px; }
+    .bug-report textarea { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; box-sizing: border-box; margin: 6px 0; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+    .req-note.is-mismatch { color: var(--warn); font-weight: 600; }
+    .req-note.is-workday { color: var(--done); }
+    .test-case { margin-top: 28px; font-size: 13px; color: var(--muted); }
+    .test-case summary { cursor: pointer; }
+    .test-case p { margin: 6px 0; }
+    .test-case textarea { width: 100%; min-height: 160px; box-sizing: border-box; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin: 6px 0; }
+
+    .req-section { margin-top: 32px; }
+    .req-section-title { font-size: 13px !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .req-section > .catalog-wording { margin: 8px 0 12px; }
+
+    .req { margin-top: 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); scroll-margin-top: 16px; }
+    .req.status-done { border-left: 4px solid var(--done); }
+    .req.status-min { border-left: 4px solid var(--min); }
+    .req.status-todo { border-left: 4px solid var(--todo); }
+    .req-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .req-name { margin: 0; font-size: 16px; flex: 1 1 auto; }
+    .tag-label { font-size: 12px; color: var(--muted); }
+    .status-pill { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; }
+    .status-pill.status-done { color: var(--done); background: var(--done-bg); }
+    .status-pill.status-min { color: var(--min); background: var(--min-bg); }
+    .status-pill.status-todo { color: var(--todo); background: var(--todo-bg); }
+    .status-pill.status-optional { color: var(--muted); background: var(--surface-2); }
+
+    .catalog-wording { list-style: none; margin: 8px 0 0; padding: 0; font-size: 14px; }
+    .sentence { padding: 3px 0 3px 10px; border-left: 2px solid var(--line); }
+    .sentence.is-unchecked, .sentence.is-partial { border-left-color: var(--todo); }
+    .sentence-check { margin-left: 8px; font-size: 10px; font-weight: 400; text-transform: uppercase; color: var(--muted); opacity: 0.6; }
+    .sentence.is-checked .sentence-check { color: var(--done); }
+    .sentence.is-unchecked .sentence-check, .sentence.is-partial .sentence-check { color: var(--todo); }
+    .sentence-note { display: block; font-size: 12px; color: var(--muted); }
+    .req-note, .req-hours, .req-taken, .req-source { margin: 8px 0 0; font-size: 14px; }
+    .req-note, .req-source { color: var(--muted); }
+    .req-source { font-size: 13px; }
+
+    .extra-courses { margin-top: 10px; padding: 8px 12px; border-radius: 8px; background: var(--min-bg); font-size: 14px; }
+    .extra-courses .extra-label { margin: 0 0 4px; font-weight: 600; }
+    .extra-courses ul { margin: 0; padding-left: 18px; }
+    .extra-course[data-provenance="assumed"] { color: var(--warn); }
+
+    .course-options { margin-top: 10px; }
+    .course-options summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); }
+    .course-list { list-style: none; margin: 8px 0 0; padding: 0; }
+    .course { display: flex; align-items: baseline; gap: 6px 10px; flex-wrap: wrap; padding: 5px 8px; border-radius: 6px; font-size: 14px; }
+    .course:nth-child(even) { background: var(--surface-2); }
+    .course-code { font-weight: 600; white-space: nowrap; min-width: 80px; }
+    .course-title { flex: 1 1 200px; }
+    .course-flags { display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; font-size: 12px; }
+    .course.is-active { background: var(--done-bg); }
+    .course.is-planned { background: var(--plan-bg); }
+    .course.is-excluded { background: var(--warn-bg); }
+    .course.is-maxed { opacity: 0.55; }
+    .course-heading { display: flex; align-items: center; gap: 10px; margin: 12px 0 4px; font-weight: 700; font-size: 13px; }
+    .course-connector { padding: 4px 8px; font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .chip { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
+    .chip-taken { color: var(--done); background: var(--done-bg); border: 1px solid currentColor; }
+    .chip-progress { color: var(--min); background: var(--min-bg); }
+    .chip-planned { color: var(--plan); background: var(--surface); }
+    .chip-excluded { color: var(--warn); background: var(--surface); }
+    .chip-min { color: var(--min); background: var(--min-bg); }
+    .chip-muted { color: var(--muted); background: var(--surface-2); font-weight: 500; }
+    .also { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; color: var(--overlap); background: var(--overlap-bg); }
+    .also a { color: inherit; }
+    .plan-toggle { margin-left: auto; font: inherit; font-size: 12px; font-weight: 600; padding: 1px 9px; border-radius: 999px; border: 1px solid var(--plan); color: var(--plan); background: transparent; cursor: pointer; }
+    .plan-toggle.is-on { background: var(--plan); color: var(--surface); }
+    .chip-hours { color: var(--muted); background: transparent; font-weight: 500; padding: 1px 4px; }
+    .status-pill.status-plan { color: var(--plan); background: var(--plan-bg); }
+    .summary-plan { margin: 0 0 8px; color: var(--plan); font-size: 14px; font-weight: 600; }
+    .schedule-note { margin: 20px 0 0; font-size: 13px; color: var(--muted); }
+    .offered { flex-basis: 100%; font-size: 12px; color: var(--muted); }
+    .course-options .offered summary { cursor: pointer; width: fit-content; font-size: 12px; font-weight: 500; color: var(--muted); }
+    .course-options .offered summary:hover { color: var(--accent); }
+    .offered-term { margin: 4px 0 2px 14px; }
+    .offered-term-name, .offered-kind { margin: 4px 0 2px; font-weight: 600; color: var(--ink); }
+    .section-list { list-style: none; margin: 0; padding: 0; }
+    .section { padding: 1px 0; color: var(--ink); }
+    .section-period, .section-title { margin-left: 8px; color: var(--muted); }
+    .section-title { font-style: italic; }
+
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    .cell-status { display: block; font-size: 12px; color: var(--muted); }
+    .muted { color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 20px 0 40px; font-size: 13px; color: var(--muted); }
+    footer p { margin: 4px 0; }
+
+    /* Contents: a sticky sidebar beside the content on wide screens; a panel
+       opened from a floating button otherwise. */
+    .toc-title { margin: 0 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .toc-list { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+    .toc-link { display: flex; align-items: baseline; gap: 6px; padding: 3px 8px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; color: var(--ink); text-decoration: none; line-height: 1.3; }
+    .toc-link:hover { background: var(--surface-2); }
+    .toc-link.is-active { border-left-color: var(--accent); background: var(--surface-2); font-weight: 600; }
+    .toc-label { flex: 1 1 auto; }
+    .toc-section { margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .toc-list > li:first-child .toc-section { margin-top: 0; }
+    .toc-req { padding-left: 14px; }
+    .toc-tag { padding-left: 24px; font-style: italic; }
+    .toc-status { flex: none; width: 1.1em; text-align: center; font-weight: 700; font-style: normal; }
+    .toc-link.status-min .toc-status { font-size: 1.25em; line-height: 1; }
+    .toc-link.status-done .toc-status { color: var(--done); }
+    .toc-link.status-min .toc-status { color: var(--min); }
+    .toc-link.status-todo .toc-status { color: var(--todo); }
+    .toc-link.status-optional .toc-status { color: var(--muted); }
+    .toc-toggle { display: none; }
+
+    @media (min-width: 1200px) {
+      .wrap { max-width: 1220px; }
+      .layout { display: grid; grid-template-columns: minmax(0, 1fr) 236px; gap: 24px; }
+      .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 20px 0 24px; }
+    }
+    @media (max-width: 1199.98px) {
+      .toc-toggle {
+        display: block; position: fixed; right: 16px; bottom: 16px; z-index: 20;
+        font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+        color: var(--accent-ink); background: var(--accent); border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      }
+      .toc {
+        display: none; position: fixed; right: 16px; bottom: 64px; z-index: 20;
+        width: min(300px, calc(100vw - 32px)); max-height: calc(100vh - 96px); overflow-y: auto;
+        padding: 12px 8px 12px 4px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+      }
+      .toc.is-open { display: block; }
+      .toc-title { padding-left: 11px; }
+    }
+
+    @media (max-width: 560px) {
+      .course-code { min-width: 0; }
+      .plan-toggle { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Core Planner</h1>
+        <span class="unofficial">Unofficial</span>
+      </div>
+      <label class="year-picker">Requirements from the
+        <select id="catalog-select" aria-label="Catalog year"></select>
+      </label>
+    </div>
+  </header>
+
+  <div class="wrap layout">
+   <div class="layout-main">
+    <div class="notice">
+      <p><strong>Workday is the official record.</strong> Your Academic Progress page in Workday is the system of record for your core requirements. This page is a planning aid: if it disagrees with Workday, go with Workday and ask your advisor or the Registrar.</p>
+      <p>Requirements here are copied from the <a data-catalog-link href="#" target="_blank" rel="noopener"><span data-catalog-year></span> Calvin catalog</a> as saved on <span data-catalog-saved></span>. Use the catalog for the year you entered Calvin. Each sentence of catalog wording is marked as checked or not checked by this tool.</p>
+    </div>
+
+    <section class="input-card" id="input-card" aria-labelledby="input-heading">
+      <h2 id="input-heading">Add your courses from Workday</h2>
+      <div class="drop-zone" id="drop-zone">
+        <span class="workday-buttons" role="img" aria-label="Workday’s buttons: Excel (circled), PDF, bookmark">
+          <img src="./workday-export-buttons.png" width="132" height="50" alt="">
+          <span class="export-ring" aria-hidden="true"></span>
+        </span>
+        <div class="drop-text">
+          <p class="drop-title">Drop your Academic Progress export (.xlsx) here</p>
+          <p class="export-hint">On Workday’s Academic Progress page, click the Excel button at the very top right, next to PDF (not the ones above each table). Advisors: use “View Academic Progress for Student” first.</p>
+        </div>
+        <label class="button file-button">Choose file…
+          <input type="file" id="workday-file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+        </label>
+      </div>
+      <details class="paste-route">
+        <summary>Or copy and paste from Workday instead</summary>
+        <ol>
+          <li>In Workday, open Academic Record, then Academic Progress.</li>
+          <li>If a table has several pages, set it to show all rows.</li>
+          <li>Select all (Ctrl/⌘-A), copy, and paste below.</li>
+        </ol>
+        <textarea id="workday-input" spellcheck="false" placeholder="Paste Workday Academic Progress here"></textarea>
+      </details>
+      <div class="input-actions">
+        <button type="button" class="button" id="clear-button">Clear</button>
+        <span id="status" class="status" role="status" aria-live="polite"></span>
+      </div>
+      <p class="privacy">Everything runs in your browser. What you paste or choose isn’t uploaded or saved anywhere, and is gone when you close or reload this page.</p>
+    </section>
+
+    <main id="results"></main>
+   </div>
+    <nav id="toc" class="toc" aria-label="Contents"></nav>
+  </div>
+  <button type="button" class="toc-toggle" id="toc-toggle" aria-controls="toc" aria-expanded="false">Contents</button>
+
+  <footer>
+    <div class="wrap">
+      <p>An unofficial planning aid, not a degree audit. Course links open the official catalog.</p>
+      <p><a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

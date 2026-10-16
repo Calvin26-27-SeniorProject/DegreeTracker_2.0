@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Core Planner Test Cases</title>
+<style>
+  :root { --bg:#f4f5f7; --surface:#fff; --ink:#1b2330; --muted:#5d6879; --line:#dde1e8;
+    --done:#1f7a4d; --done-bg:#e3f4ea; --min:#2457b3; --min-bg:#e5edfb; --todo:#9a5b00; --todo-bg:#fdf0d9; --warn:#a2341b; --warn-bg:#fdece7; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12151b; --surface:#1b2029; --ink:#e6e9ef; --muted:#9aa4b5; --line:#303846;
+    --done:#6fd39d; --done-bg:#183427; --min:#8fb4ff; --min-bg:#1c2a45; --todo:#f0b45a; --todo-bg:#3a2a12; --warn:#ff9a80; --warn-bg:#3d1f18; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:980px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:26px; margin:0 0 6px; } h2 { font-size:20px; margin:36px 0 4px; } h3 { font-size:14px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:24px 0 8px; }
+  h4 { font-size:15px; margin:0 0 2px; } .about, .lead { color:var(--muted); margin:0 0 12px; }
+  .lead { color:var(--ink); } nav ul { padding-left:20px; } nav a { color:var(--min); }
+  .case { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:10px 0; break-inside:avoid; }
+  .meta { font-size:12px; color:var(--muted); margin:0 0 8px; } code { font-size:12px; }
+  .step { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:16px; padding:8px 0; border-top:1px solid var(--line); }
+  .step:first-of-type { border-top:0; padding-top:0; }
+  @media (max-width:700px) { .step { grid-template-columns:1fr; gap:6px; } }
+  ul { margin:0; padding-left:18px; } li + li { margin-top:2px; }
+  .outcome { list-style:none; padding:0; } .label, .then { margin:6px 0 2px; font-size:13px; color:var(--muted); } .then { margin-top:0; font-weight:600; }
+  .req { font-weight:600; } .detail { color:var(--muted); font-size:13px; }
+  .pill { font-size:12px; font-weight:700; padding:1px 8px; border-radius:999px; white-space:nowrap; }
+  .pill.done { color:var(--done); background:var(--done-bg); } .pill.min { color:var(--min); background:var(--min-bg); }
+  .pill.todo { color:var(--todo); background:var(--todo-bg); } .pill.muted { color:var(--muted); background:var(--bg); }
+  .bad { color:var(--warn); font-weight:600; } .muted { color:var(--muted); }
+  .flag { background:var(--warn-bg); border-radius:6px; padding:4px 8px; margin:2px 0; } .flag.ok { background:var(--done-bg); }
+  .key { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 16px; }
+</style>
+</head>
+<body><div class="wrap">
+<h1>Core Planner test cases</h1>
+<p class="lead">Every case the automated logic tests run, written out: the student’s courses on the left, what the tool concluded on the right. All 194 checks in these tests pass. Courses are made up except in “Reading Workday’s Excel export,” which uses a real, anonymized record.</p>
+<div class="key">
+  <p><b>How to read a case.</b> The heading says what the case is meant to show. The right side lists the requirements that list one of the student’s courses or whose result differs from a student with no courses, plus the K&amp;U total when any K&amp;U hours count. A course that counts only because of an assumption says so in italics. “Then add” continues the same student with more courses. Statuses: <span class="pill done">Complete</span> done; <span class="pill min">Minimum met</span> K&amp;U minimum met, with room for more hours; <span class="pill todo">Not yet</span> not done.</p>
+  <p class="muted">If a result looks wrong, note the case’s heading or the file and line under it.</p>
+</div>
+<nav><ul><li><a href="#s1">Requirement rules</a></li><li><a href="#s2">Grades, repeated courses, and Workday’s status</a></li><li><a href="#s3">“Minimum met” means more hours can still count</a></li><li><a href="#s4">Advising cases</a></li><li><a href="#s5">Reading Workday’s Excel export</a></li></ul></nav>
+<section id="s1"><h2>Requirement rules</h2><p class="about">One requirement rule at a time: pick-one requirements, K&amp;U hour ranges and discipline caps, the K&amp;U total, exemptions, in-progress and transfer credit, labs, renumbered courses, and AP/transfer credit with no course number.</p></section>
+<section id="s2"><h2>Grades, repeated courses, and Workday’s status</h2><p class="about">Courses with no credit (F, W, ...), repeated courses, and how the tool compares its verdict with the Status Workday shows for each requirement.</p></section>
+<section id="s3"><h2>“Minimum met” means more hours can still count</h2><p class="about">Whenever the tool says a K&amp;U category’s minimum is met but more hours could count, these cases add a course there and confirm the count goes up.</p></section>
+<section id="s4"><h2>Advising cases</h2><p class="about">Real students’ records, de-identified (grades reduced to A, D, or F; years shifted to start at 2000), copied from the Core Planner while advising. A case marked as a known bug is one where the tool is currently wrong.</p></section>
+<section id="s5"><h2>Reading Workday’s Excel export</h2><p class="about">Courses read from Academic Progress exports, including a real, anonymized one.</p></section>
+<p class="muted">0 cases. Generated by <code>npm run test-report</code> (also part of <code>npm run build</code>).</p>
+</div></body></html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calvin Core Annotator Bookmarklet</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --ink: #1d2b2e;
+      --muted: #57686b;
+      --accent: #1d5c63;
+      --accent-dark: #143f44;
+      --border: #d8d0c2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font: 16px/1.5 Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(29, 92, 99, 0.14), transparent 28%),
+        linear-gradient(180deg, #f8f4ec 0%, var(--bg) 100%);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    .hero,
+    .card {
+      background: color-mix(in srgb, var(--panel) 92%, white 8%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(33, 40, 41, 0.08);
+    }
+
+    .hero {
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      font: 700 0.8rem/1.2 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .lede {
+      max-width: 54ch;
+      margin: 16px 0 0;
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .card {
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    ol,
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    code,
+    textarea {
+      font: 13px/1.45 Menlo, Consolas, Monaco, monospace;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fcfaf5;
+      color: #314042;
+      resize: vertical;
+    }
+
+    .bookmarklet-link {
+      font-weight: 700;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .small {
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">Calvin Core Annotator</span>
+      <p class="lede">This bookmarklet loads the latest annotator script each time you click it on the Calvin catalog core-program page.</p>
+      <div class="actions">
+        <a class="button bookmarklet-link" href="javascript:(()=>{const src='https://kcarnold.github.io/calvin-core/bookmarklet.js';const id='ca-bookmarklet-script';document.getElementById(id)?.remove();const script=document.createElement('script');script.id=id;script.src=src+'?v='+Date.now();script.async=true;(document.head||document.documentElement).appendChild(script);})();">Calvin Core Annotator</a>
+        <a class="button secondary" href="https://catalog.calvin.edu/content.php?catoid=25&amp;navoid=803">2026–27 core page</a>
+        <a class="button secondary" href="https://catalog.calvin.edu/content.php?catoid=24&amp;navoid=780">2025–26 core page</a>
+        <a class="button secondary" href="./overlap.html">Program overlap viewer</a>
+      </div>
+      <p class="note">Desktop browsers usually let you drag the bookmarklet link straight into the bookmarks bar.</p>
+    </section>
+
+    <section class="card">
+      <h2>Install</h2>
+      <ol>
+        <li>Show your browser bookmarks bar.</li>
+        <li>Drag the <strong>Calvin Core Annotator</strong> link above into the bar.</li>
+        <li>Open the Calvin catalog core-program page.</li>
+        <li>Click the bookmark you just added.</li>
+      </ol>
+      <p class="note">If drag-and-drop is awkward, create a new bookmark manually and paste the URL below into the bookmark URL field.</p>
+      <textarea readonly>javascript:(()=>{const src='https://kcarnold.github.io/calvin-core/bookmarklet.js';const id='ca-bookmarklet-script';document.getElementById(id)?.remove();const script=document.createElement('script');script.id=id;script.src=src+'?v='+Date.now();script.async=true;(document.head||document.documentElement).appendChild(script);})();</textarea>
+    </section>
+
+    <section class="card">
+      <h2>Use</h2>
+      <ol>
+        <li>In Workday, open Academic Record, then Academic History.</li>
+        <li>Select all of the transcript content and copy it.</li>
+        <li>On the catalog page, click the bookmarklet.</li>
+        <li>Paste the transcript into the panel that appears above the core requirements.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Notes</h2>
+      <ul>
+        <li>This tool is unofficial and should be treated as a planning aid, not an official degree audit.</li>
+      </ul>
+      <p class="small"><a href="https://github.com/kcarnold/calvin-core">Source on GitHub</a></p>
+    </section>
+  </main>
+</body>
+</html>
