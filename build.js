@@ -44,7 +44,7 @@ await esbuild.build({
   sourcemap: false,
 });
 
-// Standalone app (docs/index.html), with the saved catalogs bundled in.
+// Standalone app (index.html), with the saved catalogs bundled in.
 await esbuild.build({
   ...common,
   entryPoints: ['src/app.js'],
