@@ -174,7 +174,7 @@ describe('app summary', () => {
 });
 
 describe('app page', () => {
-  const html = readFileSync(join(ROOT, 'docs', 'index.html'), 'utf-8');
+  const html = readFileSync(join(ROOT, 'index.html'), 'utf-8');
 
   it('says Workday is the official record', () => {
     assert.match(html, /Workday is the official record/);

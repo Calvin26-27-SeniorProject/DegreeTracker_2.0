@@ -4,7 +4,7 @@ Unofficial planning aid that checks a student's Workday courses against Calvin's
 
 ## Core Planner (standalone app)
 
-`docs/index.html`, served by GitHub Pages at https://kcarnold.github.io/calvin-core/. Students pick their entry-year catalog, paste Workday Academic Progress (or Academic History), and see each requirement's status, course options, and where each course counts.
+`index.html`, served by GitHub Pages at https://kcarnold.github.io/calvin-core/. Students pick their entry-year catalog, paste Workday Academic Progress (or Academic History), and see each requirement's status, course options, and where each course counts.
 
 - Workday is the official record; the page says so up front.
 - Requirements come from catalog snapshots in `catalog/` (saved from a browser; see CLAUDE.md). Catalog wording, course codes, titles, and list order are shown as the catalog has them; `test/test-app-fidelity.js` checks this against the saved HTML.
@@ -134,7 +134,7 @@ src/
   main.js       ← extension entry point
   bookmarklet-entry.js ← hosted bookmarklet entry point
 catalog/        ← catalog-<catoid>.html (saved from a browser) + generated catalog-categories-<catoid>.json
-docs/           ← GitHub Pages: app (index.html, app.js), bookmarklet install page + bundle
+docs/           ← GitHub Pages: bookmarklet install page, overlap viewer, and generated bundles
 test/           ← node:test suites, integration harness, catalog JSON generator
 build.js        ← esbuild config
 manifest.json   ← WebExtension manifest (Chrome, Edge, Firefox)

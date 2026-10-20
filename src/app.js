@@ -1,4 +1,4 @@
-// Standalone app entry (docs/index.html). Everything runs in the browser:
+// Standalone app entry (index.html). Everything runs in the browser:
 // pasted Workday text and chosen .xlsx exports are parsed here and never sent
 // anywhere.
 
