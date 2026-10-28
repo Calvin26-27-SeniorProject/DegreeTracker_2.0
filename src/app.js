@@ -6,10 +6,13 @@ import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, a
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
 import { renderApp, catalogLabel } from './app-render.js';
+import { renderMajor } from './major-app.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
 import schedule from '../schedule/sections.json';
+import major from '../majors/bcs.json';
+import majorCourseOptions from '../majors/bcs-course-options.json';
 
 // Newest first.
 const CATALOGS = [catalog25, catalog24];
@@ -17,6 +20,7 @@ const YEAR_KEY = 'calvin-core:catalog';
 
 const state = {
   catoid: CATALOGS[0]._meta.catoid,
+  activeTab: location.hash === '#major' || location.hash.startsWith('#bcs-') ? 'major' : 'core',
   text: '',
   // Parsed .xlsx export: { name, format, courses, overrides } or { name, error }.
   // Replaces the pasted text while set.
@@ -51,18 +55,18 @@ function setStatus(message, kind) {
 function parseInput(text) {
   const format = detectInputFormat(text);
   if (format === 'progress') {
-    const { courses, overrides, workdayStatus } = parseProgress(text);
-    return { format, courses, overrides, workdayStatus };
+    const { courses, courseAttempts, overrides, workdayStatus } = parseProgress(text);
+    return { format, courses, courseAttempts, overrides, workdayStatus };
   }
-  return { format, courses: parseTranscript(text), overrides: undefined };
+  return { format, courses: parseTranscript(text), courseAttempts: [], overrides: undefined };
 }
 
 async function readExport(file) {
   try {
     const rows = readXlsxRows(await file.arrayBuffer());
-    const { courses, overrides, workdayStatus } = parseProgressRows(rows);
+    const { courses, courseAttempts, overrides, workdayStatus } = parseProgressRows(rows);
     if (!hasCoreRequirements(workdayStatus)) throw new Error(ONE_TABLE_EXPORT_MESSAGE);
-    return { name: file.name, format: 'progress-xlsx', courses, overrides, workdayStatus };
+    return { name: file.name, format: 'progress-xlsx', courses, courseAttempts, overrides, workdayStatus };
   } catch (err) {
     return { name: file.name, error: err.message };
   }
@@ -83,8 +87,10 @@ function update() {
 
   let analysis = null;
   let projection = null;
+  let courses = [];
+  let courseAttempts = [];
   try {
-    ({ analysis, projection } = analyzeInput(catalog));
+    ({ analysis, projection, courses, courseAttempts } = analyzeInput(catalog));
   } catch (err) {
     // Never fail silently: whatever the input, say what went wrong.
     console.error('[Core Planner]', err);
@@ -93,7 +99,7 @@ function update() {
     setStatus(`Something went wrong reading your courses (${err.message}). `
       + 'Please report this, with the file or text you used if you can share it.', 'error');
   }
-  renderResults(catalog, analysis, projection);
+  renderResults(catalog, analysis, projection, courses, courseAttempts);
 }
 
 // Parses the current input and analyzes it, setting the status line.
@@ -103,13 +109,17 @@ function update() {
 function analyzeInput(catalog) {
   let analysis = null;
   let projection = null;
+  let courses = [];
+  let courseAttempts = [];
   const text = state.text.trim();
   const input = state.file ?? (text ? parseInput(text) : null);
   state.format = input && !input.error ? input.format : null;
   if (input?.error) {
     setStatus(`Couldn’t read ${input.name}: ${input.error}. Choose the .xlsx file Workday exports from Academic Progress.`, 'error');
   } else if (input) {
-    const { format, courses, overrides, workdayStatus } = input;
+    const { format, overrides, workdayStatus } = input;
+    courses = input.courses;
+    courseAttempts = input.courseAttempts || [];
     if (courses.length === 0) {
       setStatus(state.file
         ? `No courses found in ${state.file.name}. Choose the .xlsx file Workday exports from Academic Progress.`
@@ -136,10 +146,10 @@ function analyzeInput(catalog) {
   } else {
     setStatus('', null);
   }
-  return { analysis, projection };
+  return { analysis, projection, courses, courseAttempts };
 }
 
-function renderResults(catalog, analysis, projection) {
+function renderResults(catalog, analysis, projection, courses, courseAttempts) {
   renderApp($('results'), {
     catalog, catalogs: CATALOGS, analysis, projection, schedule, openLists: state.openLists, tocRoot: $('toc'),
     format: state.format, source: state.format && SOURCE_LABELS[state.format], testCase: state.testCase,
@@ -150,6 +160,7 @@ function renderResults(catalog, analysis, projection) {
     },
     onListToggle: (slug, open) => state.openLists.set(slug, open),
   });
+  renderMajor($('major-results'), major, majorCourseOptions, courses, catalog, schedule, courseAttempts);
   highlightToc();
 }
 
@@ -200,9 +211,46 @@ function initToc() {
   }, { passive: true });
 }
 
+function activateTab(tabName) {
+  state.activeTab = tabName === 'major' ? 'major' : 'core';
+  document.body.dataset.activeTab = state.activeTab;
+  document.querySelectorAll('[role="tab"][data-tab]').forEach(tab => {
+    const selected = tab.dataset.tab === state.activeTab;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+  $('core-panel').hidden = state.activeTab !== 'core';
+  $('major-panel').hidden = state.activeTab !== 'major';
+  $('app-layout').classList.toggle('is-major', state.activeTab === 'major');
+}
+
+function switchTab(tabName) {
+  const selected = tabName === 'major' ? 'major' : 'core';
+  activateTab(selected);
+  const hash = selected === 'major' ? '#major' : '#core';
+  if (location.hash !== hash) location.hash = hash;
+}
+
+function tabFromHash() {
+  return /^#(?:major|bcs(?:-|$))/.test(location.hash) ? 'major' : 'core';
+}
+
 function init() {
   loadYear();
   initToc();
+  document.querySelectorAll('[role="tab"][data-tab]').forEach(tab => {
+    tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    tab.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const next = event.key === 'ArrowRight' ? 'major' : 'core';
+      switchTab(next);
+      document.querySelector(`[role="tab"][data-tab="${next}"]`).focus();
+    });
+  });
+  window.addEventListener('hashchange', () => activateTab(tabFromHash()));
+  window.addEventListener('popstate', () => activateTab(tabFromHash()));
+  activateTab(state.activeTab);
   const select = $('catalog-select');
   select.replaceChildren(...CATALOGS.map(c => {
     const opt = document.createElement('option');

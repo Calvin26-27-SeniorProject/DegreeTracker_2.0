@@ -1,10 +1,13 @@
 import * as esbuild from 'esbuild';
+import { generateMajorCourseOptions } from './test/generate-major-course-options.js';
 
 const common = {
   bundle: true,
   sourcemap: true,
   target: ['chrome120', 'firefox120'],
 };
+
+generateMajorCourseOptions();
 
 // Chrome extension content script
 await esbuild.build({

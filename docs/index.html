@@ -6,7 +6,7 @@
   <!-- Pasted Workday data stays in the browser: this page may not send network requests. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
   <title>Core Planner</title>
-  <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements.">
+  <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements and Computer Science BCS courses.">
   <style>
     :root {
       --bg: #f4f5f7;
@@ -72,6 +72,13 @@
     .brand { display: flex; align-items: baseline; gap: 10px; }
     .brand h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
     .unofficial { font-size: 12px; font-weight: 600; color: var(--warn); background: var(--warn-bg); padding: 2px 8px; border-radius: 999px; }
+    .page-tabs { display: flex; align-items: center; gap: 4px; }
+    .page-tab { border: 0; background: transparent; padding: 6px 12px; border-radius: 8px; color: var(--muted); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .page-tab:hover, .page-tab.is-active { color: var(--ink); background: var(--surface-2); }
+    .page-tab.is-active { box-shadow: inset 0 -2px var(--accent); }
+    .tab-panel[hidden] { display: none !important; }
+    .layout.is-major { grid-template-columns: minmax(0, 1fr); }
+    .layout.is-major #toc, body[data-active-tab="major"] .toc-toggle { display: none; }
     .year-picker { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
     select { font: inherit; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
 
@@ -308,19 +315,18 @@
         <h1>Core Planner</h1>
         <span class="unofficial">Unofficial</span>
       </div>
+      <nav class="page-tabs" role="tablist" aria-label="Planner sections">
+        <button class="page-tab" id="core-tab" type="button" role="tab" data-tab="core" aria-controls="core-panel">Core requirements</button>
+        <button class="page-tab" id="major-tab" type="button" role="tab" data-tab="major" aria-controls="major-panel">BCS major</button>
+      </nav>
       <label class="year-picker">Requirements from the
         <select id="catalog-select" aria-label="Catalog year"></select>
       </label>
     </div>
   </header>
 
-  <div class="wrap layout">
+  <div class="wrap layout" id="app-layout">
    <div class="layout-main">
-    <div class="notice">
-      <p><strong>Workday is the official record.</strong> Your Academic Progress page in Workday is the system of record for your core requirements. This page is a planning aid: if it disagrees with Workday, go with Workday and ask your advisor or the Registrar.</p>
-      <p>Requirements here are copied from the <a data-catalog-link href="#" target="_blank" rel="noopener"><span data-catalog-year></span> Calvin catalog</a> as saved on <span data-catalog-saved></span>. Use the catalog for the year you entered Calvin. Each sentence of catalog wording is marked as checked or not checked by this tool.</p>
-    </div>
-
     <section class="input-card" id="input-card" aria-labelledby="input-heading">
       <h2 id="input-heading">Add your courses from Workday</h2>
       <div class="drop-zone" id="drop-zone">
@@ -352,7 +358,20 @@
       <p class="privacy">Everything runs in your browser. What you paste or choose isn’t uploaded or saved anywhere, and is gone when you close or reload this page.</p>
     </section>
 
-    <main id="results"></main>
+    <section class="tab-panel" id="core-panel" role="tabpanel" aria-labelledby="core-tab">
+      <div class="notice">
+        <p><strong>Workday is the official record.</strong> Your Academic Progress page in Workday is the system of record for your core requirements. This page is a planning aid: if it disagrees with Workday, go with Workday and ask your advisor or the Registrar.</p>
+        <p>Requirements here are copied from the <a data-catalog-link href="#" target="_blank" rel="noopener"><span data-catalog-year></span> Calvin catalog</a> as saved on <span data-catalog-saved></span>. Use the catalog for the year you entered Calvin. Each sentence of catalog wording is marked as checked or not checked by this tool.</p>
+      </div>
+      <main id="results"></main>
+    </section>
+    <section class="tab-panel" id="major-panel" role="tabpanel" aria-labelledby="major-tab" hidden>
+      <div class="notice">
+        <p><strong>Workday and your advisor are the official sources.</strong> The BCS major view checks courses against a published sample schedule; it is a planning aid, not a degree audit.</p>
+        <p>Requirement data: <a href="https://www.calvin.edu/majors-programs/bachelor-computer-science-bcs" target="_blank" rel="noopener">Calvin University Bachelor of Computer Science (BCS)</a>. Confirm course alternatives, elective choices, and program requirements with your advisor.</p>
+      </div>
+      <main id="major-results"></main>
+    </section>
    </div>
     <nav id="toc" class="toc" aria-label="Contents"></nav>
   </div>
@@ -361,10 +380,14 @@
   <footer>
     <div class="wrap">
       <p>An unofficial planning aid, not a degree audit. Course links open the official catalog.</p>
-      <p><a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
+      <p><a href="./index.html#major">BCS major</a> · <a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
     </div>
   </footer>
 
-  <script src="/DegreeTracker_2.0/app.js"></script>
+  <!-- For Deployment -->
+  <!-- <script src="/DegreeTracker_2.0/app.js"></script> -->
+
+  <!-- For local environment-->
+  <script src="./app.js"></script>
 </body>
 </html>

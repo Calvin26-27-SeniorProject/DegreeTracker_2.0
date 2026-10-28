@@ -155,7 +155,16 @@ function progressFromRecords(records) {
     byCode.set(c.code, later ? { ...c, requirements } : { ...kept, requirements });
   }
   const courses = Array.from(byCode.values());
-  return { courses, exemptions, overrides, workdayStatus };
+  const courseAttempts = [];
+  const seenAttempts = new Set();
+  for (const course of raw) {
+    const key = `${course.code}\u0000${course.period || ''}`;
+    if (course.code && !seenAttempts.has(key)) {
+      seenAttempts.add(key);
+      courseAttempts.push(course);
+    }
+  }
+  return { courses, courseAttempts, exemptions, overrides, workdayStatus };
 }
 
 // Parses copy-paste from Workday Academic Progress page: one field per line.

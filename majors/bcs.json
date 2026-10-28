@@ -1,0 +1,174 @@
+{
+  "id": "bcs",
+  "name": "Computer Science (BCS)",
+  "source": "https://www.calvin.edu/majors-programs/bachelor-computer-science-bcs",
+  "sourceDescription": "Calvin University's Bachelor of Computer Science page and its BCS Sample Schedule (2026).",
+  "requirements": [
+    {
+      "id": "cs-108",
+      "label": "Introduction to computing",
+      "primaryCode": "CS 108",
+      "codes": ["CS 108", "CS 106", "CS 104"],
+      "credits": 4,
+      "note": "The sample schedule lists CS 108 as normally required. CS 106 or CS 104 may be accepted with advisor approval."
+    },
+    {
+      "id": "cs-112",
+      "label": "CS 112",
+      "codes": ["CS 112"],
+      "credits": 4
+    },
+    {
+      "id": "cs-212",
+      "label": "CS 212",
+      "codes": ["CS 212"],
+      "credits": 4
+    },
+    {
+      "id": "cs-214",
+      "label": "CS 214",
+      "codes": ["CS 214"],
+      "credits": 4
+    },
+    {
+      "id": "cs-232",
+      "label": "CS 232",
+      "codes": ["CS 232"],
+      "credits": 4
+    },
+    {
+      "id": "cs-262",
+      "label": "CS 262",
+      "codes": ["CS 262"],
+      "credits": 4
+    },
+    {
+      "id": "cs-384",
+      "label": "CS 384",
+      "codes": ["CS 384"],
+      "credits": 4
+    },
+    {
+      "id": "cs-396",
+      "label": "CS 396",
+      "codes": ["CS 396"],
+      "credits": 2
+    },
+    {
+      "id": "cs-398",
+      "label": "CS 398",
+      "codes": ["CS 398"],
+      "credits": 2
+    },
+    {
+      "id": "engr-220",
+      "label": "ENGR 220",
+      "codes": ["ENGR 220"],
+      "credits": 4
+    },
+    {
+      "id": "math-161",
+      "label": "Calculus",
+      "primaryCode": "MATH 161",
+      "codes": ["MATH 161", "MATH 162"],
+      "credits": 4
+    },
+    {
+      "id": "math-255",
+      "label": "MATH 255",
+      "codes": ["MATH 255"],
+      "credits": 4
+    },
+    {
+      "id": "data-202",
+      "label": "DATA 202",
+      "codes": ["DATA 202"],
+      "credits": 4
+    },
+    {
+      "id": "stat-243",
+      "label": "STAT 243",
+      "codes": ["STAT 243"],
+      "credits": 4,
+      "manualWhenMissing": true,
+      "note": "The sample schedule says “or alternative” but does not name the alternative. If STAT 243 is absent, verify any substitute with your advisor."
+    },
+    {
+      "id": "math-251",
+      "label": "MATH 251",
+      "codes": ["MATH 251"],
+      "credits": null
+    },
+    {
+      "id": "math-252",
+      "label": "MATH 252",
+      "codes": ["MATH 252"],
+      "credits": null
+    },
+    {
+      "id": "cs-195",
+      "label": "CS 195",
+      "codes": ["CS 195"],
+      "credits": 0,
+      "requiredOccurrences": 3,
+      "manual": true,
+      "note": "The sample schedule lists this zero-credit seminar repeatedly. Three distinct completed academic periods are marked complete; this does not verify attendance in the exact required terms."
+    },
+    {
+      "id": "cs-295",
+      "label": "CS 295",
+      "codes": ["CS 295"],
+      "credits": 0,
+      "requiredOccurrences": 3,
+      "manual": true,
+      "note": "The sample schedule lists this zero-credit seminar repeatedly. Three distinct completed academic periods are marked complete; this does not verify attendance in the exact required terms."
+    }
+  ],
+  "courseGroups": [
+    {
+      "id": "cs-electives",
+      "label": "Computer Science electives",
+      "type": "course-options",
+      "subject": "CS",
+      "courses": [
+        { "code": "CS 300", "title": "Special Topics in Computer Science", "credits": "4" },
+        { "code": "CS 312", "title": "Logic, Computability, and Complexity", "credits": "4" },
+        { "code": "CS 320", "title": "Advanced Computer Architecture", "credits": "4" },
+        { "code": "CS 326", "title": "Embedded Systems and the Internet of Things", "credits": "4" },
+        { "code": "CS 332", "title": "Advanced Computer Networks", "credits": "4" },
+        { "code": "CS 336", "title": "Web Development", "credits": "4" },
+        { "code": "CS 338", "title": "System Administration: Infrastructure", "credits": "2" },
+        { "code": "CS 339", "title": "System Administration: Cloud Services", "credits": "2" },
+        { "code": "CS 354", "title": "Database Management Systems", "credits": "2" },
+        { "code": "CS 360", "title": "Fundamentals of Cybersecurity", "credits": "4" },
+        { "code": "CS 361", "title": "Fundamentals of Cyber Defense", "credits": "2" },
+        { "code": "CS 363", "title": "Network Security", "credits": "4" },
+        { "code": "CS 372", "title": "Computer Graphics", "credits": "4" },
+        { "code": "CS 374", "title": "High Performance Computing", "credits": "4" },
+        { "code": "CS 375", "title": "Machine Learning", "credits": "2" },
+        { "code": "CS 376", "title": "Advanced Machine Learning", "credits": "2" },
+        { "code": "ENGR 304", "title": "Fundamentals of Digital Systems", "credits": "4" },
+        { "code": "ENGR 325", "title": "Computer Architecture and Digital Systems Design", "credits": "4" }
+      ],
+      "note": "Lists the CS and ENGR electives on the Calvin BCS program page. Saved Course Search exports supply current offerings and section availability; verify elective eligibility with your advisor."
+    },
+    {
+      "id": "natural-science",
+      "label": "Lab Science",
+      "type": "lab-science-options",
+      "catalogCategory": "Natural Sciences",
+      "minHours": 6,
+      "note": "The BCS program page requires 6 hours of ABET-compatible natural science. Options shown here are limited to courses listed under Natural Sciences in the selected catalog whose Calvin course descriptions explicitly mention laboratory work or a lab fee. A lab listing alone does not establish ABET compatibility; confirm eligible courses with your advisor."
+    }
+  ],
+  "manualRequirements": [
+    {
+      "label": "Overall degree and core requirements",
+      "note": "This page checks listed course records only. It does not evaluate total degree hours, core requirements, or the official program audit."
+    }
+  ],
+  "courseOptionsSource": {
+    "url": "https://sites.calvin.edu/courses/course-search.js",
+    "description": "BCS elective options from Calvin's published BCS program page, offerings from saved Calvin Workday Course Search exports, and laboratory evidence for Natural Sciences options."
+  }
+}

@@ -1,6 +1,6 @@
 # Calvin Core
 
-Unofficial planning aid that checks a student's Workday courses against Calvin's core requirements.
+Unofficial planning aid that checks a student's Workday courses against Calvin's core requirements and the BCS major sample schedule.
 
 ## Core Planner (standalone app)
 
@@ -11,6 +11,8 @@ Unofficial planning aid that checks a student's Workday courses against Calvin's
 - Each sentence of catalog wording is labeled Checked, Partly checked, Not checked, or Advice (`INSTRUCTION_RULES` in `src/core.js`). New catalog wording fails `test/test-catalog-claims.js` until it's classified.
 - Course codes link to `preview_course_nopop.php`; each requirement links to its spot on the official catalog page.
 - Everything runs in the browser. The page's Content-Security-Policy blocks network requests (`connect-src 'none'`), so pasted data can't leave it.
+
+The **BCS major** tab shares the same Workday input as the core planner and checks course records against the published Bachelor of Computer Science sample schedule. Requirements are in `majors/bcs.json`; `majors/bcs-course-options.json` is generated during the build from the saved Workday Course Search exports and catalog snapshots. It lists the CS/ENGR BCS electives from Calvin's published program page and available terms/statuses from saved Workday Course Search exports, alongside natural-science catalog courses with laboratory evidence, filtered by selected catalog year. The catalog snapshots currently have the same Natural Sciences course list, and a lab listing alone does not establish ABET compatibility. Alternatives, repeat seminars, and elective/hour requirements may need manual review. Workday and the student's advisor remain authoritative.
 
 ## Catalog extension and bookmarklet
 
@@ -129,12 +131,15 @@ src/
   core.js       ← parsers, catalog instruction rules, analyze (pure, testable)
   app.js        ← standalone app entry (bundles catalog/*.json)
   app-render.js ← standalone app rendering (testable in jsdom)
+  major.js      ← structured major course matching
+  major-app.js  ← BCS overview and course option rendering
   render.js     ← catalog-page annotation (extension/bookmarklet)
   ui.js         ← catalog-page launcher panel
   main.js       ← extension entry point
   bookmarklet-entry.js ← hosted bookmarklet entry point
 catalog/        ← catalog-<catoid>.html (saved from a browser) + generated catalog-categories-<catoid>.json
 docs/           ← GitHub Pages: bookmarklet install page, overlap viewer, and generated bundles
+majors/         ← structured major requirements (currently BCS)
 test/           ← node:test suites, integration harness, catalog JSON generator
 build.js        ← esbuild config
 manifest.json   ← WebExtension manifest (Chrome, Edge, Firefox)
