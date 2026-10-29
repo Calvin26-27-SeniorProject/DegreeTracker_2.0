@@ -245,9 +245,22 @@ export function parseProgress(text) {
 // both a requirement and a status.
 export function parseProgressRows(rows) {
   const records = [];
+  const programs = [];
+  let programCol = -1;
   let cols = null;
   for (const row of rows) {
-    const cells = row.map(v => (v == null ? '' : String(v).replace(/ /g, ' ').trim()));
+    const cells = row.map(v => (v == null ? '' : String(v).replace(/ /g, ' ').trim()));
+    if (cells.includes('Program of Study') && cells.includes('Display ID')) {
+      programCol = cells.indexOf('Display ID');
+      continue;
+    }
+    if (programCol !== -1) {
+      if (cells[programCol] && cells.some(cell => /^\d+(\.\d+)?$/.test(cell))) {
+        if (!programs.includes(cells[programCol])) programs.push(cells[programCol]);
+        continue;
+      }
+      programCol = -1;
+    }
     const requirementCol = cells.indexOf('Requirement');
     if (requirementCol !== -1 && cells.includes('Status')) {
       const col = name => cells.indexOf(name);
@@ -268,7 +281,7 @@ export function parseProgressRows(rows) {
       status: get('status'),
     });
   }
-  return progressFromRecords(records);
+  return { ...progressFromRecords(records), programs };
 }
 
 // ========== FORMAT DETECTION ==========

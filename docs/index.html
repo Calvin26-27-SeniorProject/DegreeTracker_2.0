@@ -6,7 +6,7 @@
   <!-- Pasted Workday data stays in the browser: this page may not send network requests. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
   <title>Core Planner</title>
-  <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements and Computer Science BCS courses.">
+  <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements and your major (Computer Science BCS or Nursing BSN).">
   <style>
     :root {
       --bg: #f4f5f7;
@@ -80,6 +80,7 @@
     .layout.is-major { grid-template-columns: minmax(0, 1fr); }
     .layout.is-major #toc, body[data-active-tab="major"] .toc-toggle { display: none; }
     .year-picker { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+    .major-picker { margin-top: 20px; }
     select { font: inherit; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
 
     .notice { margin: 20px 0 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
@@ -220,6 +221,7 @@
     .course-code { font-weight: 600; white-space: nowrap; min-width: 80px; }
     .course-title { flex: 1 1 200px; }
     .course-flags { display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; font-size: 12px; }
+    .course-term-label { color: var(--muted); font-weight: 400; }
     .course.is-active { background: var(--done-bg); }
     .course.is-planned { background: var(--plan-bg); }
     .course.is-excluded { background: var(--warn-bg); }
@@ -317,7 +319,7 @@
       </div>
       <nav class="page-tabs" role="tablist" aria-label="Planner sections">
         <button class="page-tab" id="core-tab" type="button" role="tab" data-tab="core" aria-controls="core-panel">Core requirements</button>
-        <button class="page-tab" id="major-tab" type="button" role="tab" data-tab="major" aria-controls="major-panel">BCS major</button>
+        <button class="page-tab" id="major-tab" type="button" role="tab" data-tab="major" aria-controls="major-panel">Major</button>
       </nav>
       <label class="year-picker">Requirements from the
         <select id="catalog-select" aria-label="Catalog year"></select>
@@ -366,9 +368,11 @@
       <main id="results"></main>
     </section>
     <section class="tab-panel" id="major-panel" role="tabpanel" aria-labelledby="major-tab" hidden>
-      <div class="notice">
-        <p><strong>Workday and your advisor are the official sources.</strong> The BCS major view checks courses against a published sample schedule; it is a planning aid, not a degree audit.</p>
-        <p>Requirement data: <a href="https://www.calvin.edu/majors-programs/bachelor-computer-science-bcs" target="_blank" rel="noopener">Calvin University Bachelor of Computer Science (BCS)</a>. Confirm course alternatives, elective choices, and program requirements with your advisor.</p>
+      <label class="year-picker major-picker">Check requirements for
+        <select id="major-select" aria-label="Major"></select>
+      </label>
+      <div class="notice" id="major-notice">
+        <p><strong>Workday and your advisor are the official sources.</strong> The major view checks your courses against the program requirements Calvin publishes; it is a planning aid, not a degree audit.</p>
       </div>
       <main id="major-results"></main>
     </section>
@@ -380,7 +384,7 @@
   <footer>
     <div class="wrap">
       <p>An unofficial planning aid, not a degree audit. Course links open the official catalog.</p>
-      <p><a href="./index.html#major">BCS major</a> · <a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
+      <p><a href="./index.html#major">Major</a> · <a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
     </div>
   </footer>
 

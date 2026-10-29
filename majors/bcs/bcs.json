@@ -1,6 +1,9 @@
 {
   "id": "bcs",
   "name": "Computer Science (BCS)",
+  "programName": "Computer Science, BCS",
+  "sourceUrl": "https://www.calvin.edu/majors-programs/bachelor-computer-science-bcs",
+  "sourceLabel": "Calvin University Bachelor of Computer Science (BCS)",
   "source": "https://www.calvin.edu/majors-programs/bachelor-computer-science-bcs",
   "sourceDescription": "Calvin University's Bachelor of Computer Science page and its BCS Sample Schedule (2026).",
   "requirements": [
@@ -130,6 +133,7 @@
       "label": "Computer Science electives",
       "type": "course-options",
       "subject": "CS",
+      "minHours": 10,
       "courses": [
         { "code": "CS 300", "title": "Special Topics in Computer Science", "credits": "4" },
         { "code": "CS 312", "title": "Logic, Computability, and Complexity", "credits": "4" },
@@ -156,9 +160,48 @@
       "id": "natural-science",
       "label": "Lab Science",
       "type": "lab-science-options",
-      "catalogCategory": "Natural Sciences",
       "minHours": 6,
-      "note": "The BCS program page requires 6 hours of ABET-compatible natural science. Options shown here are limited to courses listed under Natural Sciences in the selected catalog whose Calvin course descriptions explicitly mention laboratory work or a lab fee. A lab listing alone does not establish ABET compatibility; confirm eligible courses with your advisor."
+      "source": "Calvin Academic Catalog: Computer Science, BCS (CPSC.BCS.MAJ) > Cognates > Take 6 Hours from the Following: Laboratory Science",
+      "catalogCourses": {
+        "24": [
+          { "code": "ASTR 201", "title": "Astrophysical Black Holes" },
+          { "code": "ASTR 211", "title": "Planetary and Stellar Astronomy" },
+          { "code": "BIOL 160", "title": "Ecological and Evolutionary Systems" },
+          { "code": "BIOL 161", "title": "Cellular and Genetic Systems" },
+          { "code": "BIOL 231", "title": "Introduction to Animal Physiology" },
+          { "code": "BIOL 232", "title": "Introduction to Plant Physiology" },
+          { "code": "CHEM 101", "title": "General Chemistry I" },
+          { "code": "CHEM 102", "title": "General Chemistry II" },
+          { "code": "CHEM 103", "title": "Accelerated General Chemistry" },
+          { "code": "GEO 151", "title": "Introduction to Geology" },
+          { "code": "GEO 152", "title": "Historical Geology" },
+          { "code": "GEO 153", "title": "Great Lakes Geology" },
+          { "code": "PHYS 130", "title": "Particles, Nuclei, and Astronomy" },
+          { "code": "PHYS 131", "title": "Matter, Light, and Energy" },
+          { "code": "PHYS 133", "title": "Introductory Physics: Mechanics and Gravity" },
+          { "code": "PHYS 235", "title": "Introductory Physics: Electricity and Magnetism" }
+        ],
+        "25": [
+          { "code": "ASTR 201", "title": "Astrophysical Black Holes" },
+          { "code": "ASTR 211", "title": "Planetary and Stellar Astronomy" },
+          { "code": "BIOL 160", "title": "Ecological and Evolutionary Systems" },
+          { "code": "BIOL 161", "title": "Cellular and Genetic Systems" },
+          { "code": "BIOL 231", "title": "Introduction to Animal Physiology" },
+          { "code": "BIOL 232", "title": "Introduction to Plant Physiology" },
+          { "code": "CHEM 101", "title": "General Chemistry I" },
+          { "code": "CHEM 102", "title": "General Chemistry II" },
+          { "code": "CHEM 103", "title": "Accelerated General Chemistry" },
+          { "code": "GEO 120", "title": "Earth Systems" },
+          { "code": "GEO 151", "title": "Introduction to Geology" },
+          { "code": "GEO 152", "title": "Earth History" },
+          { "code": "GEO 153", "title": "Great Lakes Geology" },
+          { "code": "PHYS 130", "title": "What Is the Universe? Astronomy Ancient to Modern" },
+          { "code": "PHYS 131", "title": "Matter, Light, and Energy" },
+          { "code": "PHYS 133", "title": "Introductory Physics: Mechanics and Gravity" },
+          { "code": "PHYS 235", "title": "Introductory Physics: Electricity and Magnetism" }
+        ]
+      },
+      "note": "Options are the Laboratory Science courses listed in the selected catalog year's BCS program requirements (6 hours required)."
     }
   ],
   "manualRequirements": [
@@ -169,6 +212,6 @@
   ],
   "courseOptionsSource": {
     "url": "https://sites.calvin.edu/courses/course-search.js",
-    "description": "BCS elective options from Calvin's published BCS program page, offerings from saved Calvin Workday Course Search exports, and laboratory evidence for Natural Sciences options."
+    "description": "BCS elective options from Calvin's published BCS program page, offerings from saved Calvin Workday Course Search exports, and Laboratory Science options from the Calvin Academic Catalog BCS program."
   }
 }

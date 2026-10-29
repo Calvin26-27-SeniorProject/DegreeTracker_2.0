@@ -6,13 +6,26 @@ import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, a
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
 import { renderApp, catalogLabel } from './app-render.js';
-import { renderMajor } from './major-app.js';
+import { renderMajor, renderMajorNotice, renderMajorMessage } from './major-app.js';
+import { detectMajors, findProgramNamesInText } from './major-detect.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
 import schedule from '../schedule/sections.json';
-import major from '../majors/bcs.json';
-import majorCourseOptions from '../majors/bcs-course-options.json';
+import bcsMajor from '../majors/bcs/bcs.json';
+import bcsCourseOptions from '../majors/bcs/bcs-course-options.json';
+import nursingMajor from '../majors/nursing/nursing.json';
+import nursingCourseOptions from '../majors/nursing/nursing-course-options.json';
+import csPlusMajor from '../majors/cs+/cs-plus.json';
+import csPlusCourseOptions from '../majors/cs+/cs-plus-course-options.json';
+
+// Supported majors. The first is shown until a Workday export names another.
+const MAJORS = [
+  { major: bcsMajor, courseOptions: bcsCourseOptions },
+  { major: csPlusMajor, courseOptions: csPlusCourseOptions },
+  { major: nursingMajor, courseOptions: nursingCourseOptions },
+];
+const AUTO_MAJOR = 'auto';
 
 // Newest first.
 const CATALOGS = [catalog25, catalog24];
@@ -20,12 +33,14 @@ const YEAR_KEY = 'calvin-core:catalog';
 
 const state = {
   catoid: CATALOGS[0]._meta.catoid,
-  activeTab: location.hash === '#major' || location.hash.startsWith('#bcs-') ? 'major' : 'core',
+  activeTab: location.hash === '#major' || location.hash.startsWith('#major-') ? 'major' : 'core',
   text: '',
   // Parsed .xlsx export: { name, format, courses, overrides } or { name, error }.
   // Replaces the pasted text while set.
   file: null,
   plannedCourses: new Set(),
+  // Major picked from the selector, or null to follow the Workday input.
+  majorChoice: null,
   // Format of the input last analyzed ('progress', 'progress-xlsx', 'transcript').
   format: null,
   // De-identified test case text for the current input (src/test-case.js).
@@ -54,19 +69,20 @@ function setStatus(message, kind) {
 
 function parseInput(text) {
   const format = detectInputFormat(text);
+  const programs = findProgramNamesInText(text, MAJORS.map(entry => entry.major));
   if (format === 'progress') {
     const { courses, courseAttempts, overrides, workdayStatus } = parseProgress(text);
-    return { format, courses, courseAttempts, overrides, workdayStatus };
+    return { format, courses, courseAttempts, overrides, workdayStatus, programs };
   }
-  return { format, courses: parseTranscript(text), courseAttempts: [], overrides: undefined };
+  return { format, courses: parseTranscript(text), courseAttempts: [], overrides: undefined, programs };
 }
 
 async function readExport(file) {
   try {
     const rows = readXlsxRows(await file.arrayBuffer());
-    const { courses, courseAttempts, overrides, workdayStatus } = parseProgressRows(rows);
+    const { courses, courseAttempts, overrides, workdayStatus, programs } = parseProgressRows(rows);
     if (!hasCoreRequirements(workdayStatus)) throw new Error(ONE_TABLE_EXPORT_MESSAGE);
-    return { name: file.name, format: 'progress-xlsx', courses, courseAttempts, overrides, workdayStatus };
+    return { name: file.name, format: 'progress-xlsx', courses, courseAttempts, overrides, workdayStatus, programs };
   } catch (err) {
     return { name: file.name, error: err.message };
   }
@@ -89,8 +105,9 @@ function update() {
   let projection = null;
   let courses = [];
   let courseAttempts = [];
+  let programs = [];
   try {
-    ({ analysis, projection, courses, courseAttempts } = analyzeInput(catalog));
+    ({ analysis, projection, courses, courseAttempts, programs } = analyzeInput(catalog));
   } catch (err) {
     // Never fail silently: whatever the input, say what went wrong.
     console.error('[Core Planner]', err);
@@ -99,7 +116,7 @@ function update() {
     setStatus(`Something went wrong reading your courses (${err.message}). `
       + 'Please report this, with the file or text you used if you can share it.', 'error');
   }
-  renderResults(catalog, analysis, projection, courses, courseAttempts);
+  renderResults(catalog, analysis, projection, courses, courseAttempts, programs);
 }
 
 // Parses the current input and analyzes it, setting the status line.
@@ -113,6 +130,7 @@ function analyzeInput(catalog) {
   let courseAttempts = [];
   const text = state.text.trim();
   const input = state.file ?? (text ? parseInput(text) : null);
+  const programs = input && !input.error ? input.programs || [] : [];
   state.format = input && !input.error ? input.format : null;
   if (input?.error) {
     setStatus(`Couldn’t read ${input.name}: ${input.error}. Choose the .xlsx file Workday exports from Academic Progress.`, 'error');
@@ -146,10 +164,30 @@ function analyzeInput(catalog) {
   } else {
     setStatus('', null);
   }
-  return { analysis, projection, courses, courseAttempts };
+  return { analysis, projection, courses, courseAttempts, programs };
 }
 
-function renderResults(catalog, analysis, projection, courses, courseAttempts) {
+// Shows the checklist for the major picked in the selector; otherwise the one
+// the Workday input lists (the first supported one), or the first supported
+// major while nothing is entered.
+function renderMajorTab(catalog, courses, courseAttempts, programs) {
+  const supported = MAJORS.map(entry => entry.major);
+  const select = $('major-select');
+  select.value = state.majorChoice ?? AUTO_MAJOR;
+  const hasInput = state.file !== null || state.text.trim() !== '';
+  const detected = detectMajors(programs, supported)[0];
+  const chosen = MAJORS.find(item => item.major.id === state.majorChoice);
+  const entry = chosen
+    ?? (detected ? MAJORS.find(item => item.major === detected) : (hasInput ? null : MAJORS[0]));
+  if (!entry) {
+    renderMajorMessage($('major-notice'), $('major-results'), supported, state.file ? programs : []);
+    return;
+  }
+  renderMajorNotice($('major-notice'), entry.major, chosen ? 'chosen' : detected ? 'detected' : 'default');
+  renderMajor($('major-results'), entry.major, entry.courseOptions, courses, catalog, schedule, courseAttempts);
+}
+
+function renderResults(catalog, analysis, projection, courses, courseAttempts, programs) {
   renderApp($('results'), {
     catalog, catalogs: CATALOGS, analysis, projection, schedule, openLists: state.openLists, tocRoot: $('toc'),
     format: state.format, source: state.format && SOURCE_LABELS[state.format], testCase: state.testCase,
@@ -160,7 +198,7 @@ function renderResults(catalog, analysis, projection, courses, courseAttempts) {
     },
     onListToggle: (slug, open) => state.openLists.set(slug, open),
   });
-  renderMajor($('major-results'), major, majorCourseOptions, courses, catalog, schedule, courseAttempts);
+  renderMajorTab(catalog, courses, courseAttempts, programs);
   highlightToc();
 }
 
@@ -232,7 +270,7 @@ function switchTab(tabName) {
 }
 
 function tabFromHash() {
-  return /^#(?:major|bcs(?:-|$))/.test(location.hash) ? 'major' : 'core';
+  return /^#major(?:-|$)/.test(location.hash) ? 'major' : 'core';
 }
 
 function init() {
@@ -266,11 +304,27 @@ function init() {
     update();
   });
 
+  const majorSelect = $('major-select');
+  const autoOption = document.createElement('option');
+  autoOption.value = AUTO_MAJOR;
+  autoOption.textContent = 'Detect from my Workday export';
+  majorSelect.replaceChildren(autoOption, ...MAJORS.map(({ major }) => {
+    const opt = document.createElement('option');
+    opt.value = major.id;
+    opt.textContent = major.name;
+    return opt;
+  }));
+  majorSelect.addEventListener('change', () => {
+    state.majorChoice = majorSelect.value === AUTO_MAJOR ? null : majorSelect.value;
+    update();
+  });
+
   const input = $('workday-input');
   const fileInput = $('workday-file');
   input.addEventListener('input', () => {
     state.text = input.value;
     state.file = null;
+    state.majorChoice = null;
     fileInput.value = '';
     update();
   });
@@ -280,6 +334,7 @@ function init() {
     if (!file) return;
     input.value = '';
     state.text = '';
+    state.majorChoice = null;
     state.plannedCourses.clear();
     setStatus(`Reading ${file.name}…`, null);
     state.file = await readExport(file);
@@ -320,6 +375,7 @@ function init() {
     input.value = '';
     state.text = '';
     state.file = null;
+    state.majorChoice = null;
     fileInput.value = '';
     state.plannedCourses.clear();
     state.openLists.clear();

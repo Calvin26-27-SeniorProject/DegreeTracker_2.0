@@ -81,6 +81,11 @@ describe('parseProgressRows', () => {
     assert.equal(overrides.size, 0);
   });
 
+  it('reads the programs of study listed in the export', () => {
+    assert.deepEqual(parseProgressRows(sample()).programs, ['Computer Science, BCS', 'Entrepreneurship Minor']);
+    assert.deepEqual(parseProgressRows([['Requirement', 'Status'], ['Some requirement', 'Satisfied']]).programs, []);
+  });
+
   it('analyzes the sample export end to end', () => {
     const { courses, overrides } = parseProgressRows(sample());
     const analysis = analyze(loadCategories('25'), courses, { overrides, extraCourses: KNOWN_COURSE_CATEGORIES });

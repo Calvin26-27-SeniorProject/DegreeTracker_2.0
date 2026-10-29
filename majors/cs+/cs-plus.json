@@ -1,0 +1,166 @@
+{
+  "id": "cs-plus",
+  "name": "Computer Science Plus (BS)",
+  "programName": "Computer Science Plus, BS",
+  "sourceUrl": "https://calvin.edu/majors-programs/computer-science-plus",
+  "sourceLabel": "Calvin University Computer Science Plus (BS)",
+  "source": "https://catalog.calvin.edu/ (2026-27 catalog, Computer Science Plus, BS, CS.MAJ)",
+  "sourceDescription": "Calvin Academic Catalog 2026-27 program requirements for Computer Science Plus, BS, and the CS-Plus program page at https://calvin.edu/majors-programs/computer-science-plus.",
+  "catalogYear": "2026-27",
+  "catalogId": "25",
+  "requirements": [
+    {
+      "id": "cs-108",
+      "label": "Introduction to computing",
+      "primaryCode": "CS 108",
+      "codes": ["CS 108", "CS 106", "CS 104"],
+      "credits": 3,
+      "note": "The catalog lists CS 108 (preferred) or CS 106. The CS-Plus program page also notes that CS 104 can work with advisor approval."
+    },
+    {
+      "id": "cs-112",
+      "label": "CS 112",
+      "codes": ["CS 112"],
+      "credits": 3
+    },
+    {
+      "id": "cs-212",
+      "label": "CS 212",
+      "codes": ["CS 212"],
+      "credits": 4
+    },
+    {
+      "id": "cs-214",
+      "label": "CS 214",
+      "codes": ["CS 214"],
+      "credits": 4
+    },
+    {
+      "id": "cs-232",
+      "label": "CS 232",
+      "codes": ["CS 232"],
+      "credits": 4
+    },
+    {
+      "id": "cs-262",
+      "label": "CS 262",
+      "codes": ["CS 262"],
+      "credits": 4
+    },
+    {
+      "id": "cs-384",
+      "label": "CS 384",
+      "codes": ["CS 384"],
+      "credits": 4
+    },
+    {
+      "id": "cs-capstone",
+      "label": "External practicum or senior project",
+      "primaryCode": "CS 383",
+      "codes": ["CS 383", "CS 396"],
+      "credits": 1,
+      "manual": true,
+      "note": "The catalog requires one of CS 383 (External Practicum), or CS 396 together with CS 398 (Senior Project in Computing I and II). A matching record is shown for review; verify the pair is complete."
+    },
+    {
+      "id": "data-202",
+      "label": "DATA 202",
+      "codes": ["DATA 202"],
+      "credits": 4
+    },
+    {
+      "id": "engr-220",
+      "label": "ENGR 220",
+      "codes": ["ENGR 220"],
+      "credits": 3
+    },
+    {
+      "id": "math-251",
+      "label": "MATH 251",
+      "codes": ["MATH 251"],
+      "credits": 2
+    },
+    {
+      "id": "math-252",
+      "label": "MATH 252",
+      "codes": ["MATH 252"],
+      "credits": 2
+    },
+    {
+      "id": "stat-243",
+      "label": "Statistics",
+      "primaryCode": "STAT 243",
+      "codes": ["STAT 243", "STAT 143", "STAT 145", "PSYC 255"],
+      "credits": 4
+    },
+    {
+      "id": "math-calculus",
+      "label": "Calculus",
+      "primaryCode": "MATH 132",
+      "codes": ["MATH 132", "MATH 161", "MATH 162"],
+      "credits": 4
+    },
+    {
+      "id": "cs-195",
+      "label": "CS 195",
+      "codes": ["CS 195"],
+      "credits": 0,
+      "requiredOccurrences": 3,
+      "manual": true,
+      "note": "The catalog requires CS 195 for 3 semesters. Three distinct completed academic periods are marked complete; this does not verify the exact terms."
+    },
+    {
+      "id": "cs-295",
+      "label": "CS 295",
+      "codes": ["CS 295"],
+      "credits": 0,
+      "requiredOccurrences": 3,
+      "manual": true,
+      "note": "The catalog requires CS 295 for 3 semesters. Three distinct completed academic periods are marked complete; this does not verify the exact terms."
+    }
+  ],
+  "courseGroups": [
+    {
+      "id": "cs-electives",
+      "label": "Computer Science electives",
+      "type": "course-options",
+      "subject": "CS",
+      "minHours": 6,
+      "courses": [
+        { "code": "CS 300", "title": "Special Topics in Computer Science", "credits": "2-4" },
+        { "code": "CS 312", "title": "Logic, Computability, and Complexity", "credits": "4" },
+        { "code": "CS 320", "title": "Advanced Computer Architecture", "credits": "2" },
+        { "code": "CS 326", "title": "Embedded Systems and the Internet of Things", "credits": "4" },
+        { "code": "CS 332", "title": "Advanced Computer Networks", "credits": "2" },
+        { "code": "CS 336", "title": "Web Development", "credits": "4" },
+        { "code": "CS 338", "title": "System Administration: Infrastructure", "credits": "2" },
+        { "code": "CS 339", "title": "System Administration: Cloud Services", "credits": "2" },
+        { "code": "CS 354", "title": "Database Management Systems", "credits": "2" },
+        { "code": "CS 360", "title": "Fundamentals of Cybersecurity", "credits": "2" },
+        { "code": "CS 361", "title": "Fundamentals of Cyber Defense", "credits": "2" },
+        { "code": "CS 363", "title": "Network Security", "credits": "4" },
+        { "code": "CS 372", "title": "Computer Graphics", "credits": "2" },
+        { "code": "CS 374", "title": "High Performance Computing", "credits": "2" },
+        { "code": "CS 375", "title": "Machine Learning", "credits": "2" },
+        { "code": "CS 376", "title": "Advanced Machine Learning", "credits": "2" },
+        { "code": "ENGR 304", "title": "Fundamentals of Digital Systems", "credits": "3" },
+        { "code": "ENGR 325", "title": "Computer Architecture and Digital Systems Design", "credits": "3" }
+      ],
+      "note": "Take 6 hours from the CS and ENGR electives listed in the Computer Science Plus program in the 2026-27 catalog. Saved Course Search exports supply current offerings; verify elective eligibility with your advisor."
+    }
+  ],
+  "manualRequirements": [
+    {
+      "label": "Plus Domain Study",
+      "note": "An additional 12 hours of study from the same department (or forming a cohesive body of study, with departmental approval), at least 2 hours of which must be at the 300 level. This depends on your chosen domain and is not checked automatically."
+    },
+    {
+      "label": "Overall degree and core requirements",
+      "note": "This page checks listed course records only. It does not evaluate total degree hours, core requirements, or the official program audit."
+    }
+  ],
+  "courseOptionsSource": {
+    "url": "https://catalog.calvin.edu/",
+    "description": "CS-Plus requirements and electives from the Calvin Academic Catalog 2026-27 (catoid 25), with offerings from saved Calvin Workday Course Search exports."
+  }
+}

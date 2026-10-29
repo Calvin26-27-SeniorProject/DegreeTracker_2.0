@@ -1,6 +1,6 @@
 # Calvin Core
 
-Unofficial planning aid that checks a student's Workday courses against Calvin's core requirements and the BCS major sample schedule.
+Unofficial planning aid that checks a student's Workday courses against Calvin's core requirements and their major (Computer Science BCS or Nursing BSN).
 
 ## Core Planner (standalone app)
 
@@ -12,7 +12,13 @@ Unofficial planning aid that checks a student's Workday courses against Calvin's
 - Course codes link to `preview_course_nopop.php`; each requirement links to its spot on the official catalog page.
 - Everything runs in the browser. The page's Content-Security-Policy blocks network requests (`connect-src 'none'`), so pasted data can't leave it.
 
-The **BCS major** tab shares the same Workday input as the core planner and checks course records against the published Bachelor of Computer Science sample schedule. Requirements are in `majors/bcs.json`; `majors/bcs-course-options.json` is generated during the build from the saved Workday Course Search exports and catalog snapshots. It lists the CS/ENGR BCS electives from Calvin's published program page and available terms/statuses from saved Workday Course Search exports, alongside natural-science catalog courses with laboratory evidence, filtered by selected catalog year. The catalog snapshots currently have the same Natural Sciences course list, and a lab listing alone does not establish ABET compatibility. Alternatives, repeat seminars, and elective/hour requirements may need manual review. Workday and the student's advisor remain authoritative.
+The **Major** tab shares the same Workday input as the core planner. When you add your Academic Progress export, the tab picks the checklist from the "Program of Study" table (`Computer Science, BCS` or `Nursing, BSN`; pasted text is matched by the same program names). Until something is entered, or if the input lists no supported major, it shows the first supported major (BCS) or says that no checklist exists yet. Each major lives in its own folder under `majors/`, with `programName` set to the Workday/catalog program name; add a major by adding its folder, listing it in `MAJORS` in `src/app.js` and `test/generate-major-course-options.js`, and the tab reuses the same layout. Required courses may be split into named `section`s (Nursing uses "Pre-nursing curriculum" and "Program requirements").
+
+**BCS:** checks course records against the published Bachelor of Computer Science sample schedule. Requirements are in `majors/bcs/bcs.json`; `majors/bcs/bcs-course-options.json` is generated during the build from the saved Workday Course Search exports. It lists the CS/ENGR BCS electives from Calvin's published program page and their available terms/statuses from saved Workday Course Search exports. The Lab Science options are the "Take 6 Hours from the Following: Laboratory Science" courses in the BCS program of each Calvin Academic Catalog year (2025-26 and 2026-27), stored per catalog year in `majors/bcs/bcs.json` and filtered by the selected catalog year. Alternatives, repeat seminars, and elective/hour requirements may need manual review.
+
+**Nursing (BSN):** `majors/nursing/nursing.json` holds the 2026-27 catalog's pre-nursing curriculum (9 courses) and program requirements (23 courses, with IDIS 108 waivable for patient-care experience); it has no electives. Admission to the nursing program and clinical requirements are not checked.
+
+Workday and the student's advisor remain authoritative.
 
 ## Catalog extension and bookmarklet
 
@@ -139,7 +145,10 @@ src/
   bookmarklet-entry.js ← hosted bookmarklet entry point
 catalog/        ← catalog-<catoid>.html (saved from a browser) + generated catalog-categories-<catoid>.json
 docs/           ← GitHub Pages: bookmarklet install page, overlap viewer, and generated bundles
-majors/         ← structured major requirements (currently BCS)
+majors/         ← structured major requirements, one folder per major
+  bcs/          ← bcs.json + generated bcs-course-options.json (Computer Science, BCS)
+  cs+/          ← cs-plus.json + generated cs-plus-course-options.json (Computer Science Plus, BS; 2026-27 catalog; data only, not yet in the Major tab)
+  nursing/      ← nursing.json + generated nursing-course-options.json (Nursing, BSN; 2026-27 catalog)
 test/           ← node:test suites, integration harness, catalog JSON generator
 build.js        ← esbuild config
 manifest.json   ← WebExtension manifest (Chrome, Edge, Firefox)

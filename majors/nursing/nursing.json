@@ -1,0 +1,73 @@
+{
+  "id": "nursing",
+  "name": "Nursing (BSN)",
+  "programName": "Nursing, BSN",
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13698",
+  "sourceLabel": "Calvin Academic Catalog 2026-27: Nursing, BSN",
+  "source": "https://catalog.calvin.edu/ (2026-27 catalog, Nursing, BSN, NURS.MAJ)",
+  "sourceDescription": "Calvin Academic Catalog 2026-27 program requirements for Nursing, BSN: the pre-nursing curriculum and the nursing program requirements.",
+  "catalogYear": "2026-27",
+  "catalogId": "25",
+  "requirements": [
+    { "id": "biol-141", "section": "Pre-nursing curriculum", "label": "BIOL 141", "title": "Cell Biology and Genetics for the Health Sciences", "codes": ["BIOL 141"], "credits": 3 },
+    { "id": "biol-205", "section": "Pre-nursing curriculum", "label": "BIOL 205", "title": "Human Anatomy", "codes": ["BIOL 205"], "credits": 3 },
+    { "id": "biol-206", "section": "Pre-nursing curriculum", "label": "BIOL 206", "title": "Human Physiology", "codes": ["BIOL 206"], "credits": 3 },
+    { "id": "biol-207", "section": "Pre-nursing curriculum", "label": "BIOL 207", "title": "Medical Microbiology", "codes": ["BIOL 207"], "credits": 3 },
+    { "id": "chem-160", "section": "Pre-nursing curriculum", "label": "CHEM 160", "title": "Chemistry for the Health Sciences", "codes": ["CHEM 160"], "credits": 3 },
+    { "id": "he-254", "section": "Pre-nursing curriculum", "label": "HE 254", "title": "Nutrition", "codes": ["HE 254"], "credits": 2 },
+    { "id": "psyc-151", "section": "Pre-nursing curriculum", "label": "PSYC 151", "title": "Introductory Psychology: Perspectives on the Self", "codes": ["PSYC 151"], "credits": 4 },
+    { "id": "psyc-201", "section": "Pre-nursing curriculum", "label": "PSYC 201", "title": "Developmental Psychology: Lifespan", "codes": ["PSYC 201"], "credits": 4 },
+    { "id": "soc-151", "section": "Pre-nursing curriculum", "label": "SOC 151", "title": "Sociological Principles and Perspectives", "codes": ["SOC 151"], "credits": 2 },
+    {
+      "id": "idis-108",
+      "section": "Program requirements",
+      "label": "IDIS 108",
+      "title": "Fundamentals of Patient Care",
+      "codes": ["IDIS 108"],
+      "credits": 2,
+      "manualWhenMissing": true,
+      "note": "The catalog waives IDIS 108 for students with patient-care experience, which reduces the program to 59 hours. If it is absent, verify the waiver with your advisor."
+    },
+    { "id": "nurs-201", "section": "Program requirements", "label": "NURS 201", "title": "Theory: Introduction to Professional Nursing", "codes": ["NURS 201"], "credits": 2 },
+    { "id": "nurs-205", "section": "Program requirements", "label": "NURS 205", "title": "Nursing Lab", "codes": ["NURS 205"], "credits": 1 },
+    { "id": "nurs-301", "section": "Program requirements", "label": "NURS 301", "title": "Theory: Developing Professional Nursing Practice", "codes": ["NURS 301"], "credits": 4 },
+    { "id": "nurs-302", "section": "Program requirements", "label": "NURS 302", "title": "Practicum: Community-Based Nursing", "codes": ["NURS 302"], "credits": 2 },
+    { "id": "nurs-303", "section": "Program requirements", "label": "NURS 303", "title": "Theory: Mental Health Nursing", "codes": ["NURS 303"], "credits": 4 },
+    { "id": "nurs-304", "section": "Program requirements", "label": "NURS 304", "title": "Practicum: Mental Health Nursing", "codes": ["NURS 304"], "credits": 2 },
+    { "id": "nurs-305", "section": "Program requirements", "label": "NURS 305", "title": "Lab, Sim, and Clinical Reasoning Sem: Comm & Mental Health", "codes": ["NURS 305"], "credits": 2 },
+    { "id": "nurs-321", "section": "Program requirements", "label": "NURS 321", "title": "Theory: Nursing Care of Pregnant Women and Newborns", "codes": ["NURS 321"], "credits": 4 },
+    { "id": "nurs-322", "section": "Program requirements", "label": "NURS 322", "title": "Practicum: Nursing Care of Pregnant Women and Newborns", "codes": ["NURS 322"], "credits": 2 },
+    { "id": "nurs-323", "section": "Program requirements", "label": "NURS 323", "title": "Theory: Nursing Care of Children", "codes": ["NURS 323"], "credits": 4 },
+    { "id": "nurs-324", "section": "Program requirements", "label": "NURS 324", "title": "Practicum: Nursing Care of Children", "codes": ["NURS 324"], "credits": 2 },
+    { "id": "nurs-325", "section": "Program requirements", "label": "NURS 325", "title": "Lab, Sim, and Clinical Reasoning Sem: Care of PWI & Children", "codes": ["NURS 325"], "credits": 2 },
+    { "id": "nurs-351", "section": "Program requirements", "label": "NURS 351", "title": "Theory: Nursing Care of Adults", "codes": ["NURS 351"], "credits": 4 },
+    { "id": "nurs-352", "section": "Program requirements", "label": "NURS 352", "title": "Practicum: Nursing Care of Adults", "codes": ["NURS 352"], "credits": 4 },
+    { "id": "nurs-353", "section": "Program requirements", "label": "NURS 353", "title": "Theory: Nursing Care of Complex Adults", "codes": ["NURS 353"], "credits": 4 },
+    { "id": "nurs-355", "section": "Program requirements", "label": "NURS 355", "title": "Lab, Sim, and Clinical Reasoning Sem: Adults", "codes": ["NURS 355"], "credits": 2 },
+    { "id": "nurs-371", "section": "Program requirements", "label": "NURS 371", "title": "Theory: Public Health Nursing", "codes": ["NURS 371"], "credits": 2 },
+    { "id": "nurs-372", "section": "Program requirements", "label": "NURS 372", "title": "Practicum: Public Health Nursing", "codes": ["NURS 372"], "credits": 2 },
+    { "id": "nurs-373", "section": "Program requirements", "label": "NURS 373", "title": "Theory: Leadership and Management in Nursing", "codes": ["NURS 373"], "credits": 2 },
+    { "id": "nurs-374", "section": "Program requirements", "label": "NURS 374", "title": "Practicum: Leadership and Management in Nursing", "codes": ["NURS 374"], "credits": 2 },
+    { "id": "nurs-375", "section": "Program requirements", "label": "NURS 375", "title": "Sim and Clinical Reasoning Sem: Individuals and Populations", "codes": ["NURS 375"], "credits": 2 },
+    { "id": "nurs-380", "section": "Program requirements", "label": "NURS 380", "title": "Critical Reflections on Health", "codes": ["NURS 380"], "credits": 4 }
+  ],
+  "courseGroups": [],
+  "manualRequirements": [
+    {
+      "label": "Pre-nursing laboratory sections",
+      "note": "The catalog's pre-nursing curriculum totals 34 hours, which includes lab sections attached to some science courses. Only the listed course codes are checked here."
+    },
+    {
+      "label": "Nursing program admission and clinical requirements",
+      "note": "Admission to the nursing program and any clinical or health requirements are decided by the Nursing department and are not checked here."
+    },
+    {
+      "label": "Overall degree and core requirements",
+      "note": "This page checks listed course records only. It does not evaluate total degree hours, core requirements, or the official program audit."
+    }
+  ],
+  "courseOptionsSource": {
+    "url": "https://catalog.calvin.edu/",
+    "description": "Nursing, BSN requirements from the Calvin Academic Catalog 2026-27 (catoid 25), with offerings from saved Calvin Workday Course Search exports."
+  }
+}

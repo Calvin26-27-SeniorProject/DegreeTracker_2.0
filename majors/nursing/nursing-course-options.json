@@ -1,0 +1,467 @@
+{
+  "source": "Calvin Workday Course Search exports",
+  "terms": [
+    {
+      "term": "26FA",
+      "label": "Fall 2026",
+      "savedAt": "2026-10-16",
+      "shown": false
+    },
+    {
+      "term": "27SP",
+      "label": "Spring 2027",
+      "savedAt": "2026-10-14",
+      "shown": true
+    },
+    {
+      "term": "27SU",
+      "label": "Summer 2027",
+      "savedAt": "2026-10-16",
+      "shown": true
+    }
+  ],
+  "requiredCourses": [
+    {
+      "code": "BIOL 141",
+      "title": "Cell Biology and Genetics for the Health Sciences",
+      "credits": "3",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BIOL 205",
+      "title": "Human Anatomy",
+      "credits": "3",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BIOL 206",
+      "title": "Human Physiology",
+      "credits": "3",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BIOL 207",
+      "title": "Medical Microbiology",
+      "credits": "3",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CHEM 160",
+      "title": "Chemistry for the Health Sciences",
+      "credits": "3",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HE 254",
+      "title": "Nutrition",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IDIS 108",
+      "title": "Fundamentals of Patient Care",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Closed"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 201",
+      "title": "Theory: Introduction to Professional Nursing",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 205",
+      "title": "Nursing Lab",
+      "credits": "1",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 301",
+      "title": "Theory: Developing Professional Nursing Practice",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 302",
+      "title": "Practicum: Community-Based Nursing",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed",
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 303",
+      "title": "Theory: Mental Health Nursing",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 304",
+      "title": "Practicum: Mental Health Nursing",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed",
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 305",
+      "title": "Lab, Sim, and Clinical Reasoning Sem: Comm & Mental Health",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 321",
+      "title": "Theory: Nursing Care of Pregnant Women and Newborns",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 322",
+      "title": "Practicum: Nursing Care of Pregnant Women and Newborns",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 323",
+      "title": "Theory: Nursing Care of Children",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 324",
+      "title": "Practicum: Nursing Care of Children",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 325",
+      "title": "Lab, Sim, and Clinical Reasoning Sem: Care of PWI & Children",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NURS 380",
+      "title": "Critical Reflections on Health",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSYC 151",
+      "title": "Introductory Psychology: Perspectives on The Self",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Open",
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Closed",
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSYC 201",
+      "title": "Developmental Psychology: Lifespan",
+      "credits": "4",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Open",
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        },
+        {
+          "term": "27SU",
+          "label": "Summer 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SOC 151",
+      "title": "Sociological Principles and Perspectives",
+      "credits": "2",
+      "terms": [
+        {
+          "term": "26FA",
+          "label": "Fall 2026",
+          "statuses": [
+            "Closed",
+            "Waitlist"
+          ]
+        },
+        {
+          "term": "27SP",
+          "label": "Spring 2027",
+          "statuses": [
+            "Open"
+          ]
+        }
+      ]
+    }
+  ],
+  "csCourses": [],
+  "labScience": []
+}
