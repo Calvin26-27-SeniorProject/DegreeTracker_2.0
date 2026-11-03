@@ -1,7 +1,7 @@
 # Calvin Core Annotator
 
 Shows a student's core program status from pasted Workday data. Two front ends share `src/core.js`:
-- **Core Planner** (`index.html` + `src/app.js`): standalone app; bundles the saved catalog JSON. Doesn't look like the catalog, on purpose. Keeps "Workday is the official record" hedging. Must stay entirely client-side (CSP `connect-src 'none'`; Workday .xlsx exports are read locally).
+- **Degree Tracker** (`index.html` + `src/app.js`): standalone app; bundles the saved catalog JSON. Doesn't look like the catalog, on purpose, though it uses Calvin's colors (maroon/gold; light theme only, styles inline in `docs/index.html`). Keeps "Workday is the official record" hedging. Must stay entirely client-side (CSP `connect-src 'none'`; Workday .xlsx exports are read locally).
 - **Extension / bookmarklet** (`src/ui.js`, `src/render.js`): annotates the catalog's Core Program page in place.
 
 Supported catalogs (listed in `CATALOG_PAGES` in `src/ui.js` and `CATALOGS` in `src/app.js`; students use the catalog for their entry year):
@@ -36,8 +36,8 @@ catalog.calvin.edu sits behind an AWS WAF bot challenge: `curl`/`fetch` get an e
 
 - `src/core.js` — Pure logic: `parseTranscript`, `parseProgress`, `parseProgressRows`, `parseCoreProgram(root)`, `INSTRUCTION_RULES`/`classifyInstructions`, `analyze`, `KU_NAMES`. No DOM globals; `parseCoreProgram` takes a root element (document or jsdom).
 - `src/xlsx.js` — `readXlsxRows(data, { DOMParser })`: first worksheet's cells as rows of strings (fflate unzip + DOMParser; inline and shared strings).
-- `src/app.js` — Standalone app entry: state, paste and .xlsx file handling, catalog picker. Imports `catalog/*.json`.
-- `src/app-render.js` — `renderApp(root, state)`: builds the app page from catalog JSON + optional analysis. Uses `root.ownerDocument`, so tests render it in jsdom. With `state.tocRoot`, also `renderToc`: the Contents sidebar (every section/requirement with the card's status icon; K&U section shows the aggregate). Sticky beside the content at ≥1200px, a floating "Contents" panel below; `app.js` highlights the entry in view.
+- `src/app.js` — Standalone app entry: state, paste and .xlsx file handling, catalog picker. Imports `catalog/*.json`. Two pages in `docs/index.html`, switched by `setView` (`body[data-view]`): `upload` (page 1: drop zone, paste box, export steps, official-record notice) and `results` (page 2: requirements and Contents). A file or paste that reads goes to page 2; errors stay on page 1. Both live in one HTML file because the courses are only in memory.
+- `src/app-render.js` — `renderApp(root, state)`: builds the app page from catalog JSON + optional analysis. Uses `root.ownerDocument`, so tests render it in jsdom. With `state.tocRoot`, also `renderToc`: the Contents sidebar (every section/requirement with the card's status icon; K&U section shows the aggregate). Sticky beside the content at ≥1200px, a floating "Contents" panel below; `app.js` highlights the entry in view. Requirement cards collapse to their header (`.req-collapse` button toggles `is-collapsed`; CSS hides the rest, so the DOM the fidelity test reads is unchanged); state is kept in `openLists` under `card:<slug>`.
 - `src/test-case.js` — `buildTestCase`/`formatTestCase`: the current record as a de-identified test case (grades → A/D/F keeping I, W, N, NR, CR; years shifted to start at 2000; non-core Workday requirements dropped), shown collapsed at the bottom of the app and used in bug reports. `expected` = the tool's result; advisors correct it and set `toolIsWrong` when the tool is wrong.
 - `src/render.js` — Catalog-page rendering: injects styles, badges, TOC, annotations. Browser-only.
 - `src/catalog-courses.js` — Generated: `KNOWN_COURSE_CATEGORIES`, union of course lists across `catalog-categories-*.json`. Don't edit by hand.

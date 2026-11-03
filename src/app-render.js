@@ -100,16 +100,16 @@ export function bugReport(analysis, check, context = {}) {
     .filter(a => (a.isTaken || a.isInProgress) && !a.isExcludedTransfer)
     .map(a => `  ${a.code} (${fmtHours(a.hours)} hrs${counted.length > 1 ? ', ' + r.name : ''})`));
   const lines = [
-    'Core Planner bug report: Workday and Core Planner disagree',
+    'Degree Tracker bug report: Workday and Degree Tracker disagree',
     context.catalog ? `Catalog: ${catalogLabel(context.catalog)} (catoid ${context.catalog.catoid}, saved ${context.catalog.savedAt})` : null,
     context.source ? `Input: ${context.source}` : null,
     `Requirement: ${check.requirement}`,
     `Workday requirement: ${check.workdayRequirement}`,
     `Workday status: ${check.workdayStatus}`,
-    `Core Planner status: ${OUR_STATUS_TEXT[check.ourStatus] || check.ourStatus}`,
+    `Degree Tracker status: ${OUR_STATUS_TEXT[check.ourStatus] || check.ourStatus}`,
     'Workday lists:',
     ...(check.items.length ? check.items.map(i => '  ' + i) : ['  (nothing)']),
-    'Core Planner counted:',
+    'Degree Tracker counted:',
     ...(countedLines.length ? countedLines : ['  (nothing)']),
     check.requirement === 'K&U' && analysis.kuSummary
       ? `K&U: ${fmtHours(analysis.kuSummary.totalHours)} of ${analysis.kuSummary.requiredHours} hrs, ${analysis.kuSummary.categoriesUsed} of ${analysis.kuSummary.requiredCategories} categories` : null,
@@ -338,14 +338,25 @@ export function renderApp(root, state) {
     const defaultOpen = analysis ? (r?.status !== 'complete' && !r?.isExempt) : cat.courses?.length <= 12;
     const open = openLists.has(cat.slug) ? openLists.get(cat.slug) : defaultOpen;
     const activeHere = (r?.courseAnnotations || []).filter(a => (a.isTaken || a.isInProgress) && !isExtra(a));
+    // The whole card collapses to its header (CSS hides the rest; the DOM stays the same).
+    const cardKey = 'card:' + cat.slug;
+    const expanded = openLists.has(cardKey) ? openLists.get(cardKey) : true;
+    function toggleCard(e) {
+      const card = e.currentTarget.closest('.req');
+      const nowExpanded = card.classList.toggle('is-collapsed') === false;
+      e.currentTarget.setAttribute('aria-expanded', String(nowExpanded));
+      state.onListToggle?.(cardKey, nowExpanded);
+    }
 
-    return h('article', { class: 'req' + (cat.type === 'tag' ? ' is-tag' : '') + (status ? ' status-' + status.cls : ''),
-      id: cat.slug, dataset: { coreIndex: cat.coreIndex } },
+    return h('article', { class: 'req' + (cat.type === 'tag' ? ' is-tag' : '') + (status ? ' status-' + status.cls : '')
+      + (expanded ? '' : ' is-collapsed'), id: cat.slug, dataset: { coreIndex: cat.coreIndex } },
       h('header', { class: 'req-header' },
         h('h3', { class: 'req-name' }, cat.name),
         cat.type === 'tag' ? h('span', { class: 'tag-label' }, 'Overlaps other requirements') : null,
         status ? h('span', { class: 'status-pill status-' + status.cls }, status.text) : null,
-        withPlan ? h('span', { class: 'status-pill status-plan' }, 'With plan: ' + withPlan.text) : null),
+        withPlan ? h('span', { class: 'status-pill status-plan' }, 'With plan: ' + withPlan.text) : null,
+        h('button', { type: 'button', class: 'req-collapse', 'aria-expanded': String(expanded),
+          'aria-label': `Show or hide ${cat.name}`, title: 'Show or hide details', onclick: toggleCard })),
       wording(cat.instructions),
       notes.map(n => h('p', { class: 'req-note' }, n)),
       hoursLine(cat, r),

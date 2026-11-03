@@ -28,7 +28,7 @@ const SECTIONS = [
   { file: 'test/test-opportunities.js', title: '“Minimum met” means more hours can still count',
     about: 'Whenever the tool says a K&U category’s minimum is met but more hours could count, these cases add a course there and confirm the count goes up.' },
   { file: 'test/test-advising-cases.js', title: 'Advising cases',
-    about: 'Real students’ records, de-identified (grades reduced to A, D, or F; years shifted to start at 2000), copied from the Core Planner while advising. A case marked as a known bug is one where the tool is currently wrong.' },
+    about: 'Real students’ records, de-identified (grades reduced to A, D, or F; years shifted to start at 2000), copied from the Degree Tracker while advising. A case marked as a known bug is one where the tool is currently wrong.' },
   { file: 'test/test-xlsx.js', title: 'Reading Workday’s Excel export',
     about: 'Courses read from Academic Progress exports, including a real, anonymized one.' },
 ];
@@ -188,7 +188,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Core Planner Test Cases</title>
+<title>Degree Tracker Test Cases</title>
 <style>
   :root { --bg:#f4f5f7; --surface:#fff; --ink:#1b2330; --muted:#5d6879; --line:#dde1e8;
     --done:#1f7a4d; --done-bg:#e3f4ea; --min:#2457b3; --min-bg:#e5edfb; --todo:#9a5b00; --todo-bg:#fdf0d9; --warn:#a2341b; --warn-bg:#fdece7; }
@@ -216,7 +216,7 @@ const html = `<!doctype html>
 </style>
 </head>
 <body><div class="wrap">
-<h1>Core Planner test cases</h1>
+<h1>Degree Tracker test cases</h1>
 <p class="lead">Every case the automated logic tests run, written out: the student’s courses on the left, what the tool concluded on the right. All ${passed} checks in these tests pass. Courses are made up except in “Reading Workday’s Excel export,” which uses a real, anonymized record.</p>
 <div class="key">
   <p><b>How to read a case.</b> The heading says what the case is meant to show. The right side lists the requirements that list one of the student’s courses or whose result differs from a student with no courses, plus the K&amp;U total when any K&amp;U hours count. A course that counts only because of an assumption says so in italics. “Then add” continues the same student with more courses. Statuses: <span class="pill done">Complete</span> done; <span class="pill min">Minimum met</span> K&amp;U minimum met, with room for more hours; <span class="pill todo">Not yet</span> not done.</p>

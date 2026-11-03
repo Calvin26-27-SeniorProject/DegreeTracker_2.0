@@ -42,10 +42,21 @@ function saveYear() {
   try { localStorage.setItem(YEAR_KEY, state.catoid); } catch { /* ignore */ }
 }
 
+// The status line shows on both pages: under the drop zone and above the requirements.
 function setStatus(message, kind) {
-  const el = $('status');
-  el.textContent = message;
-  el.className = 'status' + (kind ? ' status-' + kind : '');
+  for (const el of [$('status'), $('results-status')]) {
+    el.textContent = message;
+    el.className = 'status' + (kind ? ' status-' + kind : '');
+  }
+}
+
+// Page 1 ("upload") or page 2 ("results"). Both are in index.html, since the
+// courses live only in memory; index.html's CSS shows one by body[data-view].
+function setView(view) {
+  if (document.body.dataset.view === view) return;
+  document.body.dataset.view = view;
+  window.scrollTo(0, 0);
+  if (view === 'results') highlightToc();
 }
 
 function parseInput(text) {
@@ -87,13 +98,17 @@ function update() {
     ({ analysis, projection } = analyzeInput(catalog));
   } catch (err) {
     // Never fail silently: whatever the input, say what went wrong.
-    console.error('[Core Planner]', err);
+    console.error('[Degree Tracker]', err);
     analysis = null;
     projection = null;
     setStatus(`Something went wrong reading your courses (${err.message}). `
       + 'Please report this, with the file or text you used if you can share it.', 'error');
   }
   renderResults(catalog, analysis, projection);
+  $('show-results').hidden = !analysis;
+  $('back-button').textContent = analysis ? '← Upload a different file' : '← Back to upload';
+  $('clear-results').hidden = !analysis;
+  return analysis;
 }
 
 // Parses the current input and analyzes it, setting the status line.
@@ -220,12 +235,25 @@ function init() {
 
   const input = $('workday-input');
   const fileInput = $('workday-file');
-  input.addEventListener('input', () => {
+  // A paste that reads goes straight to the requirements; typing or editing
+  // stays here (the "See my requirements" button appears instead).
+  input.addEventListener('input', e => {
     state.text = input.value;
     state.file = null;
     fileInput.value = '';
-    update();
+    if (update() && e.inputType === 'insertFromPaste') setView('results');
   });
+  // "Paste text instead" opens the paste box.
+  const pasteRoute = $('paste-route');
+  const pasteButton = $('paste-button');
+  pasteButton.addEventListener('click', () => {
+    pasteRoute.open = !pasteRoute.open;
+    if (pasteRoute.open) input.focus();
+  });
+  pasteRoute.addEventListener('toggle', () => pasteButton.setAttribute('aria-expanded', String(pasteRoute.open)));
+  $('show-results').addEventListener('click', () => setView('results'));
+  $('browse-button').addEventListener('click', () => setView('results'));
+  $('back-button').addEventListener('click', () => setView('upload'));
 
   const dropZone = $('drop-zone');
   async function loadFile(file) {
@@ -237,7 +265,8 @@ function init() {
     state.file = await readExport(file);
     // Let the same file be chosen again (e.g. after re-exporting).
     fileInput.value = '';
-    update();
+    // Read: on to the requirements. Not read: stay here, where the status says why.
+    if (update()) setView('results');
   }
   fileInput.addEventListener('change', () => loadFile(fileInput.files[0]));
   // Dropping a file anywhere on the input card reads it instead of opening
@@ -268,7 +297,8 @@ function init() {
     loadFile(e.dataTransfer.files[0]);
   });
 
-  $('clear-button').addEventListener('click', () => {
+  // Clear (on either page) forgets the courses and returns to the upload page.
+  function clearInput() {
     input.value = '';
     state.text = '';
     state.file = null;
@@ -276,8 +306,10 @@ function init() {
     state.plannedCourses.clear();
     state.openLists.clear();
     update();
-    input.focus();
-  });
+    setView('upload');
+  }
+  $('clear-button').addEventListener('click', clearInput);
+  $('clear-results').addEventListener('click', clearInput);
   update();
 }
 

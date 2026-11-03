@@ -156,7 +156,7 @@ describe('the app shows Workday checks', () => {
     assert.ok(box, 'mismatch box shown');
     assert.equal(doc.querySelector('main').firstElementChild, box, 'shown first');
     const report = box.querySelector('textarea').value;
-    for (const s of ['Requirement: Foundational Writing', 'Workday status: Not Satisfied', 'Core Planner status: Complete',
+    for (const s of ['Requirement: Foundational Writing', 'Workday status: Not Satisfied', 'Degree Tracker status: Complete',
       'Catalog: 2026–27', 'Input: Academic Progress export', '  ENGL 101 (4 hrs)']) {
       assert.ok(report.includes(s), `report includes "${s}"\n${report}`);
     }
