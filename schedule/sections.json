@@ -108,6 +108,31 @@
    "max": 4,
    "term": "26FA"
   },
+  "BIOL 205": {
+   "min": 4,
+   "max": 4,
+   "term": "27SU"
+  },
+  "BIOL 206": {
+   "min": 4,
+   "max": 4,
+   "term": "27SU"
+  },
+  "BIOL 207": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "BIOL 231": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "BIOL 232": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
   "BIOL 345": {
    "min": 4,
    "max": 4,
@@ -159,6 +184,11 @@
    "term": "27SP"
   },
   "CHEM 101": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CHEM 102": {
    "min": 4,
    "max": 4,
    "term": "27SP"
@@ -278,15 +308,120 @@
    "max": 4,
    "term": "27SP"
   },
+  "CS 112": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CS 195": {
+   "min": 0,
+   "max": 0,
+   "term": "27SP"
+  },
+  "CS 212": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "CS 214": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CS 232": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CS 262": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "CS 295": {
+   "min": 0,
+   "max": 0,
+   "term": "27SP"
+  },
+  "CS 300": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "CS 326": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CS 336": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "CS 338": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "CS 339": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "CS 354": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "CS 361": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "CS 363": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "CS 375": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "CS 376": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "CS 383": {
+   "min": 1,
+   "max": 1,
+   "term": "27SP"
+  },
   "CS 384": {
    "min": 4,
    "max": 4,
+   "term": "27SP"
+  },
+  "CS 396": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "CS 398": {
+   "min": 2,
+   "max": 2,
    "term": "27SP"
   },
   "DATA 102": {
    "min": 2,
    "max": 2,
    "term": "27SP"
+  },
+  "DATA 202": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
   },
   "DUTC 102": {
    "min": 4,
@@ -453,7 +588,22 @@
    "max": 4,
    "term": "26FA"
   },
+  "ENGR 220": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "ENGR 304": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
   "ENGR 306": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "ENGR 325": {
    "min": 4,
    "max": 4,
    "term": "26FA"
@@ -513,6 +663,11 @@
    "max": 4,
    "term": "27SP"
   },
+  "GEO 152": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
   "GEO 181": {
    "min": 5,
    "max": 5,
@@ -552,6 +707,11 @@
    "min": 4,
    "max": 4,
    "term": "26FA"
+  },
+  "HE 254": {
+   "min": 2,
+   "max": 2,
+   "term": "27SU"
   },
   "HIST 151": {
    "min": 4,
@@ -673,6 +833,11 @@
    "max": 2,
    "term": "27SP"
   },
+  "IDIS 108": {
+   "min": 2,
+   "max": 2,
+   "term": "27SU"
+  },
   "IDIS 184": {
    "min": 2,
    "max": 2,
@@ -768,6 +933,21 @@
    "max": 4,
    "term": "27SP"
   },
+  "MATH 251": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "MATH 252": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "MATH 255": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
   "MATH 380": {
    "min": 4,
    "max": 4,
@@ -847,6 +1027,66 @@
    "min": 4,
    "max": 4,
    "term": "26FA"
+  },
+  "NURS 201": {
+   "min": 2,
+   "max": 2,
+   "term": "27SU"
+  },
+  "NURS 205": {
+   "min": 1,
+   "max": 1,
+   "term": "27SU"
+  },
+  "NURS 301": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "NURS 302": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "NURS 303": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "NURS 304": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "NURS 305": {
+   "min": 2,
+   "max": 2,
+   "term": "26FA"
+  },
+  "NURS 321": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "NURS 322": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "NURS 323": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
+  "NURS 324": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
+  },
+  "NURS 325": {
+   "min": 2,
+   "max": 2,
+   "term": "27SP"
   },
   "NURS 380": {
    "min": 4,
@@ -1033,6 +1273,11 @@
    "max": 4,
    "term": "27SP"
   },
+  "PHYS 235": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
   "PHYS 339": {
    "min": 2,
    "max": 2,
@@ -1109,6 +1354,11 @@
    "term": "27SP"
   },
   "PSYC 151": {
+   "min": 4,
+   "max": 4,
+   "term": "27SU"
+  },
+  "PSYC 201": {
    "min": 4,
    "max": 4,
    "term": "27SU"
@@ -1368,7 +1618,17 @@
    "max": 4,
    "term": "27SP"
   },
+  "STAT 243": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
   "STAT 245": {
+   "min": 4,
+   "max": 4,
+   "term": "26FA"
+  },
+  "STAT 343": {
    "min": 4,
    "max": 4,
    "term": "26FA"
@@ -1616,6 +1876,162 @@
     }
    ]
   },
+  "BIOL 205": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Crystal Barrett"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "TH 8:00–10:50 AM",
+     "instructors": "Crystal Barrett"
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "TH 11:15 AM–2:05 PM",
+     "instructors": "Ryan Bebej"
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": "Ryan Bebej",
+     "delivery": "Online",
+     "period": "Summer 1, 05/10–07/03"
+    },
+    {
+     "section": "OL1",
+     "lab": true,
+     "meets": null,
+     "instructors": "Ryan Bebej",
+     "delivery": "Online",
+     "period": "Summer 1, 05/10–07/03"
+    }
+   ]
+  },
+  "BIOL 206": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 12:15–1:20 PM",
+     "instructors": "Julienne Brock"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "T 7:00–9:50 PM",
+     "instructors": null
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "M 7:00–9:50 PM",
+     "instructors": "Mason Kolanowski"
+    },
+    {
+     "section": "C",
+     "lab": true,
+     "meets": "W 7:00–9:50 PM",
+     "instructors": null
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": "Crystal Barrett",
+     "delivery": "Online",
+     "period": "Summer 2, 07/05–08/28"
+    },
+    {
+     "section": "OL1",
+     "lab": true,
+     "meets": null,
+     "instructors": "Crystal Barrett",
+     "delivery": "Online",
+     "period": "Summer 2, 07/05–08/28"
+    }
+   ]
+  },
+  "BIOL 207": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": null
+    },
+    {
+     "section": "B",
+     "meets": "MWF 12:15–1:20 PM",
+     "instructors": "Erica Boldenow"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "MW 7:00–8:50 PM",
+     "instructors": "Lori Keen"
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "MW 2:45–4:35 PM",
+     "instructors": "Lori Keen"
+    },
+    {
+     "section": "C",
+     "lab": true,
+     "meets": "TTH 2:45–4:35 PM",
+     "instructors": "Allyson Dekovich"
+    },
+    {
+     "section": "D",
+     "lab": true,
+     "meets": "TTH 7:00–8:50 PM",
+     "instructors": "Lori Keen"
+    }
+   ]
+  },
+  "BIOL 231": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "Crystal Barrett"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "T 8:00–10:50 AM",
+     "instructors": "Crystal Barrett"
+    }
+   ]
+  },
+  "BIOL 232": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "David Dornbos"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "T 8:00–10:50 AM",
+     "instructors": "David Dornbos"
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "T 11:15 AM–2:05 PM",
+     "instructors": "David Dornbos"
+    }
+   ]
+  },
   "BIOL 395": {
    "27SP": [
     {
@@ -1753,6 +2169,55 @@
      "lab": true,
      "meets": "T 11:15 AM–2:05 PM",
      "instructors": "Amanda Smith"
+    }
+   ]
+  },
+  "CHEM 102": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": "Amanda Smith"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 9:15–10:20 AM",
+     "instructors": "Herb Fynewever"
+    },
+    {
+     "section": "C",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "Herb Fynewever"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "T 2:30–5:20 PM",
+     "instructors": "Elise Van Noord"
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "W 2:45–5:35 PM",
+     "instructors": "Nick Boersma"
+    },
+    {
+     "section": "C",
+     "lab": true,
+     "meets": "TH 8:00–10:50 AM",
+     "instructors": "Amanda Smith"
+    },
+    {
+     "section": "D",
+     "lab": true,
+     "meets": "TH 11:15 AM–2:05 PM",
+     "instructors": "Elise Van Noord"
+    },
+    {
+     "section": "E",
+     "lab": true,
+     "meets": "TH 2:30–5:20 PM",
+     "instructors": "Elise Van Noord"
     }
    ]
   },
@@ -1937,6 +2402,142 @@
     }
    ]
   },
+  "CS 112": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Victor Norman"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 12:15–1:20 PM",
+     "instructors": "Eric Araújo"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "T 8:00–9:40 AM",
+     "instructors": "Eric Araújo"
+    },
+    {
+     "section": "B",
+     "lab": true,
+     "meets": "T 10:20 AM–12:00 PM",
+     "instructors": "Eric Araújo"
+    }
+   ]
+  },
+  "CS 195": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "T 3:05–3:55 PM",
+     "instructors": "Victor Norman"
+    }
+   ]
+  },
+  "CS 214": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MW 2:45–3:50 PM, F 2:45–5:05 PM",
+     "instructors": "Eric Araújo"
+    },
+    {
+     "section": "B",
+     "meets": "MW 4:00–5:05 PM, F 2:45–5:05 PM",
+     "instructors": "David Meyer"
+    }
+   ]
+  },
+  "CS 232": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": "Rocky Chang （張蛟川）"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 9:15–10:20 AM",
+     "instructors": "Victor Norman"
+    }
+   ]
+  },
+  "CS 295": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "T 3:05–3:55 PM",
+     "instructors": "Victor Norman"
+    }
+   ]
+  },
+  "CS 300": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "TH 7:00–8:40 PM",
+     "instructors": "Brian Tol",
+     "title": "Special Topics: AI-Enabled Software"
+    }
+   ]
+  },
+  "CS 326": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "Derek Schuurman"
+    }
+   ]
+  },
+  "CS 338": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": "Christopher Wieringa"
+    }
+   ]
+  },
+  "CS 339": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": "Christopher Wieringa"
+    }
+   ]
+  },
+  "CS 363": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 12:15–1:20 PM",
+     "instructors": "Rocky Chang （張蛟川）"
+    }
+   ]
+  },
+  "CS 375": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Ken Arnold"
+    }
+   ]
+  },
+  "CS 376": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Ken Arnold"
+    }
+   ]
+  },
   "CS 384": {
    "27SP": [
     {
@@ -1948,6 +2549,15 @@
      "section": "B",
      "meets": "TTH 12:15–1:55 PM",
      "instructors": "Derek Schuurman"
+    }
+   ]
+  },
+  "CS 398": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "T 7:00–7:50 PM",
+     "instructors": "Ken Arnold"
     }
    ]
   },
@@ -2312,6 +2922,21 @@
     }
    ]
   },
+  "ENGR 304": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Mark Michmerhuizen"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "TH 11:15 AM–2:05 PM",
+     "instructors": "Mark Michmerhuizen"
+    }
+   ]
+  },
   "ENGR 340": {
    "27SP": [
     {
@@ -2400,6 +3025,21 @@
     }
    ]
   },
+  "GEO 152": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 12:15–1:20 PM",
+     "instructors": "Melinda Higley"
+    },
+    {
+     "section": "A",
+     "lab": true,
+     "meets": "TH 11:15 AM–2:05 PM",
+     "instructors": "Melinda Higley"
+    }
+   ]
+  },
   "GEO 210": {
    "27SP": [
     {
@@ -2433,6 +3073,34 @@
      "section": "A",
      "meets": "MWF 11:00 AM–12:05 PM",
      "instructors": "Claudia Wrogg"
+    }
+   ]
+  },
+  "HE 254": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MW 12:15–1:55 PM",
+     "instructors": "Arlene Hoogewerf"
+    },
+    {
+     "section": "B",
+     "meets": "TTH 10:20 AM–12:00 PM",
+     "instructors": null
+    },
+    {
+     "section": "C",
+     "meets": "TTH 12:15–1:55 PM",
+     "instructors": "Bre Bock"
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": "John Sparks",
+     "delivery": "Online",
+     "period": "Summer A Intensive, 05/10–06/05"
     }
    ]
   },
@@ -2611,6 +3279,16 @@
     }
    ]
   },
+  "IDIS 108": {
+   "27SU": [
+    {
+     "section": "A",
+     "meets": "MTWTHF 8:00 AM–4:00 PM",
+     "instructors": "Teri Vugteveen; Sheila Vander Wal",
+     "period": "Summer A Intensive, 05/10–06/05"
+    }
+   ]
+  },
   "IDIS 184": {
    "27SP": [
     {
@@ -2747,6 +3425,34 @@
      "section": "A",
      "meets": "MWF 1:30–2:35 PM",
      "instructors": "Jenny Griffin"
+    }
+   ]
+  },
+  "MATH 251": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "John Ferdinands"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 2:45–3:50 PM",
+     "instructors": "John Ferdinands"
+    }
+   ]
+  },
+  "MATH 252": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "John Ferdinands"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 2:45–3:50 PM",
+     "instructors": "John Ferdinands"
     }
    ]
   },
@@ -2949,6 +3655,218 @@
      "meets": "TTH 4:00–5:00 PM",
      "instructors": "Carrie Hoeksema",
      "title": "Women's Chorale"
+    }
+   ]
+  },
+  "NURS 201": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "TH 9:20–11:00 AM",
+     "instructors": "Rachel Lenko"
+    },
+    {
+     "section": "B",
+     "meets": "TH 2:00–3:40 PM",
+     "instructors": "Rachel Lenko"
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": null,
+     "delivery": "Online",
+     "period": "Summer 1, 05/10–07/03"
+    }
+   ]
+  },
+  "NURS 205": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "T 8:00–11:00 AM",
+     "instructors": null
+    },
+    {
+     "section": "B",
+     "meets": "T 8:00–11:00 AM",
+     "instructors": null
+    },
+    {
+     "section": "C",
+     "meets": "T 2:00–5:00 PM",
+     "instructors": null
+    },
+    {
+     "section": "D",
+     "meets": "T 2:00–5:00 PM",
+     "instructors": null
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": null,
+     "delivery": "Online",
+     "period": "Summer 1, 05/10–07/03"
+    }
+   ]
+  },
+  "NURS 321": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "WF 8:30 AM–12:30 PM",
+     "instructors": "Esther Afolabi; Megan Urbanick"
+    },
+    {
+     "section": "B",
+     "meets": "WF 8:30 AM–12:30 PM",
+     "instructors": "Esther Afolabi; Megan Urbanick"
+    }
+   ]
+  },
+  "NURS 322": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Rachel Nelson",
+     "offCampus": true
+    },
+    {
+     "section": "B",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Esther Afolabi",
+     "offCampus": true
+    },
+    {
+     "section": "C",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Ann Tubergen",
+     "offCampus": true
+    },
+    {
+     "section": "D",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Jennifer Laurent",
+     "offCampus": true
+    },
+    {
+     "section": "F",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Rachel Nelson",
+     "offCampus": true
+    },
+    {
+     "section": "G",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Esther Afolabi",
+     "offCampus": true
+    },
+    {
+     "section": "H",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Ann Tubergen",
+     "offCampus": true
+    },
+    {
+     "section": "I",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Jennifer Laurent",
+     "offCampus": true
+    }
+   ]
+  },
+  "NURS 323": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "WF 8:30 AM–12:30 PM",
+     "instructors": "Emily Grantham"
+    },
+    {
+     "section": "B",
+     "meets": "WF 8:30 AM–12:30 PM",
+     "instructors": "Jaclynn Lubbers"
+    }
+   ]
+  },
+  "NURS 324": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Kristin Vanderwell",
+     "offCampus": true
+    },
+    {
+     "section": "B",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Sheri Boersma",
+     "offCampus": true
+    },
+    {
+     "section": "C",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Tamara Raterink",
+     "offCampus": true
+    },
+    {
+     "section": "D",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": null,
+     "offCampus": true
+    },
+    {
+     "section": "F",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Kristin Vanderwell",
+     "offCampus": true
+    },
+    {
+     "section": "G",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Sheri Boersma",
+     "offCampus": true
+    },
+    {
+     "section": "H",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": "Tamara Raterink",
+     "offCampus": true
+    },
+    {
+     "section": "I",
+     "meets": "MT 7:00 AM–3:30 PM",
+     "instructors": null,
+     "offCampus": true
+    }
+   ]
+  },
+  "NURS 325": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "W 1:00–3:50 PM",
+     "instructors": "Jaclynn Lubbers"
+    },
+    {
+     "section": "B",
+     "meets": "TH 8:00–10:50 AM",
+     "instructors": "Emily Grantham"
+    },
+    {
+     "section": "C",
+     "meets": "W 1:00–3:50 PM",
+     "instructors": "Esther Afolabi"
+    },
+    {
+     "section": "D",
+     "meets": "TH 8:00–10:50 AM",
+     "instructors": "Elizabeth Byma"
     }
    ]
   },
@@ -3458,6 +4376,34 @@
      "delivery": "Online",
      "period": "Summer 1, 05/10–07/03",
      "title": "Introductory Psychology: Perspectives on The Self"
+    }
+   ]
+  },
+  "PSYC 201": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 11:00 AM–12:05 PM",
+     "instructors": "Tami Rigterink"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 1:30–2:35 PM",
+     "instructors": "Marjorie Gunnoe"
+    },
+    {
+     "section": "C",
+     "meets": "MWF 2:45–3:50 PM",
+     "instructors": "Marjorie Gunnoe"
+    }
+   ],
+   "27SU": [
+    {
+     "section": "OL1",
+     "meets": null,
+     "instructors": "Laura DeHaan",
+     "delivery": "Online",
+     "period": "Summer 1, 05/10–07/03"
     }
    ]
   },
@@ -3984,6 +4930,20 @@
      "section": "A",
      "meets": "MWF 11:00 AM–12:05 PM",
      "instructors": "Stacy DeRuiter"
+    }
+   ]
+  },
+  "STAT 243": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 8:00–9:05 AM",
+     "instructors": "Thomas Scofield"
+    },
+    {
+     "section": "B",
+     "meets": "MWF 9:15–10:20 AM",
+     "instructors": "Thomas Scofield"
     }
    ]
   },

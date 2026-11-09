@@ -1,7 +1,8 @@
 /**
  * schedule/CourseSchedule-<term>.json (Workday course-search exports) →
- * schedule/sections.json: hours for every core course, and the listed
- * sections of the terms SCHEDULE_INFO marks as shown.
+ * schedule/sections.json: hours for every core course and every course in the
+ * program files (catalog/programs/), and the listed sections of the terms
+ * SCHEDULE_INFO marks as shown.
  *
  * Usage:
  *   node test/generate-schedule-json.js
@@ -14,7 +15,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildScheduleJson, coreCourseTitles, SCHEDULE_INFO } from './schedule-json.js';
+import { buildScheduleJson, coreCourseTitles, programCourseTitles, SCHEDULE_INFO } from './schedule-json.js';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 
@@ -33,7 +34,11 @@ export function loadScheduleInputs() {
     .filter(Boolean)
     .sort((a, b) => Number(b[1]) - Number(a[1]))
     .map(([file]) => JSON.parse(readFileSync(join(catalogDir, file), 'utf-8')));
-  return { raw, titles: coreCourseTitles(catalogs) };
+  const programDir = join(catalogDir, 'programs');
+  const programs = readdirSync(programDir).filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(readFileSync(join(programDir, f), 'utf-8')));
+  // Core titles win: the app shows the core's catalog wording.
+  return { raw, titles: { ...programCourseTitles(programs), ...coreCourseTitles(catalogs) } };
 }
 
 export const SECTIONS_OUTPUT = join(ROOT, 'schedule', 'sections.json');
@@ -44,10 +49,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   writeFileSync(SECTIONS_OUTPUT, JSON.stringify(output, null, 1) + '\n', 'utf-8');
   const codes = Object.keys(titles);
   console.log(`Wrote ${SECTIONS_OUTPUT}`);
-  console.log(`  hours for ${Object.keys(output.hours).length} of ${codes.length} core courses`);
+  console.log(`  hours for ${Object.keys(output.hours).length} of ${codes.length} core and program courses`);
   for (const { term, label, shown } of output._meta.terms.filter(t => t.shown)) {
     const offered = Object.values(output.offerings).filter(o => o[term]);
     const n = offered.reduce((s, o) => s + o[term].length, 0);
-    console.log(`  ${label}: ${offered.length} core courses, ${n} listed sections`);
+    console.log(`  ${label}: ${offered.length} courses, ${n} listed sections`);
   }
 }

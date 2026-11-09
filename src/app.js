@@ -2,14 +2,20 @@
 // pasted Workday text and chosen .xlsx exports are parsed here and never sent
 // anywhere.
 
-import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
+import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, checkProgram, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
-import { renderApp, catalogLabel } from './app-render.js';
+import { renderApp, renderPrograms, renderDashboard, isMinor, catalogLabel } from './app-render.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
 import schedule from '../schedule/sections.json';
+import bcs25 from '../catalog/programs/bcs-25.json';
+import csPlus25 from '../catalog/programs/cs-plus-25.json';
+import nursing25 from '../catalog/programs/nursing-25.json';
+
+// Program files (majors, minors) checked against the catalog; see findProgram.
+const PROGRAMS = [bcs25, csPlus25, nursing25];
 
 // Newest first.
 const CATALOGS = [catalog25, catalog24];
@@ -27,6 +33,12 @@ const state = {
   // De-identified test case text for the current input (src/test-case.js).
   testCase: null,
   openLists: new Map(),
+  // Workday's requirements outside the core, by program (programRequirements),
+  // for the Major & minor tab; null when nothing has been read.
+  programs: null,
+  // Workday program name → { program, result }: this tool's check of each
+  // program with a program file for the selected catalog year.
+  programChecks: new Map(),
 };
 
 const $ = id => document.getElementById(id);
@@ -59,6 +71,19 @@ function setView(view) {
   if (view === 'results') highlightToc();
 }
 
+// Page 2's tabs, in order. Each tab button (#tab-<name>) controls one panel;
+// index.html's CSS shows the panel for body[data-tab].
+const TABS = ['dashboard', 'core', 'major', 'minor'];
+function setTab(tab) {
+  document.body.dataset.tab = tab;
+  for (const t of TABS) {
+    const on = t === tab;
+    $('tab-' + t).setAttribute('aria-selected', String(on));
+    $('tab-' + t).tabIndex = on ? 0 : -1;
+  }
+  if (tab === 'core') highlightToc();
+}
+
 function parseInput(text) {
   const format = detectInputFormat(text);
   if (format === 'progress') {
@@ -71,9 +96,9 @@ function parseInput(text) {
 async function readExport(file) {
   try {
     const rows = readXlsxRows(await file.arrayBuffer());
-    const { courses, overrides, workdayStatus } = parseProgressRows(rows);
+    const { courses, overrides, workdayStatus, programs } = parseProgressRows(rows);
     if (!hasCoreRequirements(workdayStatus)) throw new Error(ONE_TABLE_EXPORT_MESSAGE);
-    return { name: file.name, format: 'progress-xlsx', courses, overrides, workdayStatus };
+    return { name: file.name, format: 'progress-xlsx', courses, overrides, workdayStatus, programs };
   } catch (err) {
     return { name: file.name, error: err.message };
   }
@@ -106,7 +131,9 @@ function update() {
   }
   renderResults(catalog, analysis, projection);
   $('show-results').hidden = !analysis;
-  $('back-button').textContent = analysis ? '← Upload a different file' : '← Back to upload';
+  const backLabel = analysis ? 'Upload a different file' : 'Back to upload';
+  $('back-button').setAttribute('aria-label', backLabel);
+  $('back-button').title = backLabel;
   $('clear-results').hidden = !analysis;
   return analysis;
 }
@@ -121,6 +148,12 @@ function analyzeInput(catalog) {
   const text = state.text.trim();
   const input = state.file ?? (text ? parseInput(text) : null);
   state.format = input && !input.error ? input.format : null;
+  state.programs = input && !input.error ? programRequirements(input) : null;
+  state.programChecks = new Map();
+  for (const g of state.programs || []) {
+    const program = g.name && findProgram(PROGRAMS, g.name, catalog._meta.catoid);
+    if (program) state.programChecks.set(g.name, { program, result: checkProgram(program, input.courses) });
+  }
   if (input?.error) {
     setStatus(`Couldn’t read ${input.name}: ${input.error}. Choose the .xlsx file Workday exports from Academic Progress.`, 'error');
   } else if (input) {
@@ -144,8 +177,8 @@ function analyzeInput(catalog) {
       setStatus(`Read ${n} course${n === 1 ? '' : 's'} from ${SOURCE_LABELS[format]}`
         + (state.file ? ` (${state.file.name}).` : '.')
         + (format === 'transcript' ? ' Academic History isn’t fully supported; use Academic Progress if you can.' : '')
-        + (mismatches ? ` Workday disagrees on ${mismatches} requirement${mismatches === 1 ? '' : 's'} (see below).` : '')
-        + (analysis.warnings.length ? ` ${analysis.warnings.length} need checking (see below).` : ''),
+        + (mismatches ? ` Workday disagrees on ${mismatches} requirement${mismatches === 1 ? '' : 's'} (see the Calvin Core tab).` : '')
+        + (analysis.warnings.length ? ` ${analysis.warnings.length} need checking (see the Calvin Core tab).` : ''),
         mismatches ? 'error' : format === 'transcript' ? 'warn' : 'ok');
     }
   } else {
@@ -165,7 +198,19 @@ function renderResults(catalog, analysis, projection) {
     },
     onListToggle: (slug, open) => state.openLists.set(slug, open),
   });
+  const groups = state.programs || [];
+  const hasInput = state.programs !== null;
+  const checks = state.programChecks;
+  renderDashboard($('dashboard'), { catalog, analysis, groups, checks });
+  renderPrograms($('major'), { groups: groups.filter(g => !isMinor(g)), hasInput, kind: 'major', checks, schedule });
+  renderPrograms($('minor'), { groups: groups.filter(isMinor), hasInput, kind: 'minor', checks, schedule });
   highlightToc();
+}
+
+// After a file or paste reads: the Overview tab on page 2.
+function showResults() {
+  setTab('dashboard');
+  setView('results');
 }
 
 // Marks the contents entry for the section or requirement at the top of the
@@ -241,7 +286,7 @@ function init() {
     state.text = input.value;
     state.file = null;
     fileInput.value = '';
-    if (update() && e.inputType === 'insertFromPaste') setView('results');
+    if (update() && e.inputType === 'insertFromPaste') showResults();
   });
   // "Paste text instead" opens the paste box.
   const pasteRoute = $('paste-route');
@@ -251,9 +296,25 @@ function init() {
     if (pasteRoute.open) input.focus();
   });
   pasteRoute.addEventListener('toggle', () => pasteButton.setAttribute('aria-expanded', String(pasteRoute.open)));
-  $('show-results').addEventListener('click', () => setView('results'));
-  $('browse-button').addEventListener('click', () => setView('results'));
+  $('show-results').addEventListener('click', showResults);
+  // Browsing without courses: the catalog's requirements, on the Calvin Core tab.
+  $('browse-button').addEventListener('click', () => { setTab('core'); setView('results'); });
   $('back-button').addEventListener('click', () => setView('upload'));
+  for (const t of TABS) $('tab-' + t).addEventListener('click', () => setTab(t));
+  // The Overview cards' "See requirements" links open their tab.
+  $('dashboard').addEventListener('click', e => {
+    const tab = e.target.closest('[data-open-tab]')?.dataset.openTab;
+    if (tab) { setTab(tab); window.scrollTo(0, 0); }
+  });
+  // Arrow keys move between tabs (WAI-ARIA tabs pattern).
+  document.querySelector('.view-tabs').addEventListener('keydown', e => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!step) return;
+    e.preventDefault();
+    const next = TABS[(TABS.indexOf(document.body.dataset.tab) + step + TABS.length) % TABS.length];
+    setTab(next);
+    $('tab-' + next).focus();
+  });
 
   const dropZone = $('drop-zone');
   async function loadFile(file) {
@@ -266,7 +327,7 @@ function init() {
     // Let the same file be chosen again (e.g. after re-exporting).
     fileInput.value = '';
     // Read: on to the requirements. Not read: stay here, where the status says why.
-    if (update()) setView('results');
+    if (update()) showResults();
   }
   fileInput.addEventListener('change', () => loadFile(fileInput.files[0]));
   // Dropping a file anywhere on the input card reads it instead of opening
@@ -306,6 +367,7 @@ function init() {
     state.plannedCourses.clear();
     state.openLists.clear();
     update();
+    setTab('core');
     setView('upload');
   }
   $('clear-button').addEventListener('click', clearInput);

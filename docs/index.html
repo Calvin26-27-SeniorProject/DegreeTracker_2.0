@@ -172,7 +172,95 @@
     .results-bar { display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; margin-top: 20px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .results-step { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-ink); }
     .results-bar .status { flex: 1 1 260px; margin: 0; }
-    .results-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .topbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .header-actions { display: flex; align-items: center; gap: 6px; }
+    body[data-view="upload"] .header-actions { display: none; }
+    .icon-button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--maroon); cursor: pointer; }
+    .icon-button:hover { background: var(--maroon-bg); border-color: var(--maroon-line, #f0c9d3); }
+
+    /* Page 2 tabs: Calvin Core (this tool's reading) and Major & minor (Workday's listings).
+       app.js sets body[data-tab]. */
+    .view-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; padding: 4px; width: fit-content; max-width: 100%; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; }
+    .view-tab { font: inherit; font-size: 14px; font-weight: 600; padding: 7px 16px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); cursor: pointer; }
+    .view-tab:hover { color: var(--ink); background: var(--surface); }
+    .view-tab[aria-selected="true"] { background: var(--maroon); color: #fff; }
+    /* Only the selected tab's panel shows; Contents belongs to Calvin Core. */
+    body:not([data-tab="core"]) #results, body:not([data-tab="core"]) #toc, body:not([data-tab="core"]) .toc-toggle { display: none !important; }
+    body:not([data-tab="dashboard"]) #dashboard, body:not([data-tab="major"]) #major, body:not([data-tab="minor"]) #minor { display: none; }
+    @media (min-width: 1200px) { body:not([data-tab="core"]) .layout { grid-template-columns: minmax(0, 1fr); } }
+
+    /* Overview: a progress donut per area. Fills: satisfied (emerald), in progress (sky),
+       remaining (slate track); validated as a pair for color-vision separation. */
+    .tab-panel { padding-bottom: 48px; }
+    .dash-legend { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 0 0; padding: 0; font-size: 13px; color: var(--muted); }
+    .dash-legend li { display: flex; align-items: center; gap: 6px; }
+    .swatch { width: 12px; height: 12px; border-radius: 3px; }
+    .swatch.donut-done { background: #059669; }
+    .swatch.donut-progress { background: #0284c7; }
+    .swatch.donut-remaining { background: #e2e8f0; }
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+    .dash-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 18px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .dash-card.is-overall { border-top: 4px solid var(--maroon); }
+    .dash-card.is-empty { justify-content: center; color: var(--muted); }
+    .dash-card h3 { margin: 0 0 10px; font-size: 15px; }
+    .donut circle { transition: stroke-width 0.15s; }
+    .donut circle:hover { stroke-width: 17; }
+    .donut .donut-done { stroke: #059669; }
+    .donut .donut-progress { stroke: #0284c7; }
+    .donut .donut-remaining { stroke: #e2e8f0; }
+    .donut-value { font: 800 26px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: var(--ink); }
+    .dash-count { margin: 10px 0 0; font-size: 14px; font-weight: 600; }
+    .dash-sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .dash-source { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+    .dash-open { margin-top: 10px; font-size: 13px; }
+    .programs-note { margin: 18px 2px 0; font-size: 13px; color: var(--muted); }
+
+    /* A program checked against its catalog page (catalog/programs/): sections,
+       each requirement's course options, missing labs, and what isn't checked. */
+    .program-section { margin: 18px 20px 0; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maroon); }
+    .program-req-warn { margin: 6px 0 0; padding: 6px 10px; border-radius: 8px; font-size: 13px; color: var(--warn); background: var(--warn-bg); border: 1px solid var(--warn-line); }
+    .program-options { margin-top: 8px; font-size: 13px; }
+    .program-options summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
+    .program-options ul, .program-single { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
+    .program-option { display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; padding: 5px 8px; border-radius: 8px; background: var(--bg); font-size: 13px; }
+    .program-option.is-taken { background: var(--done-bg); }
+    .program-option.is-progress { background: var(--min-bg); }
+    /* A corequisite lab: its own row, under its lecture. */
+    .program-option.is-lab { margin-left: 18px; }
+    .program-option.is-missing { background: var(--warn-bg); color: var(--warn); }
+    .program-option-code { font-weight: 700; white-space: nowrap; min-width: 72px; }
+    .program-option-title { flex: 1 1 180px; }
+    .program-unchecked { margin: 6px 16px 0; font-size: 13px; color: var(--muted); }
+    .program-unchecked .program-section { margin-left: 4px; }
+    .program-unchecked ul { margin: 6px 0 0; padding-left: 20px; }
+    .program-unchecked li + li { margin-top: 4px; }
+    .program-workday { margin: 16px 16px 0; font-size: 14px; }
+    .program-workday > summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
+    .program-workday .program-reqs { padding: 10px 0 0; }
+
+    /* Major & minor: one card per program, Workday's requirements inside. */
+    .programs { padding-bottom: 48px; }
+    .programs-intro { margin-top: 20px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .programs-intro h2 { margin: 0 0 6px; font-size: 18px; }
+    .programs-intro p { margin: 4px 0 0; font-size: 14px; }
+    .programs-empty { margin: 16px 2px; color: var(--muted); }
+    .program { margin-top: 20px; padding-bottom: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .program-header { padding: 14px 20px; background: #f8fafc; border-bottom: 1px solid var(--line); }
+    .program-header h3 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 16px; }
+    .program-header h3::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 999px; background: var(--maroon); }
+    .program-tally { margin: 4px 0 0 20px; font-size: 13px; font-weight: 600; color: var(--ink); }
+    .program-workday { margin: 2px 0 0 20px; font-size: 12px; color: var(--muted); }
+    .program-reqs { list-style: none; margin: 0; padding: 14px 16px 0; display: grid; gap: 8px; }
+    .program-req { padding: 10px 14px; border: 1px solid var(--line); border-left-width: 4px; border-radius: 10px; background: var(--surface); }
+    .program-req.status-done { border-left-color: var(--done); background: #f6fdf9; }
+    .program-req.status-min { border-left-color: var(--min); background: #f5fbff; }
+    .program-req.status-todo { border-left-color: var(--todo-line); }
+    .program-req-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; }
+    .program-req-name { font-weight: 600; font-size: 14px; flex: 1 1 260px; }
+    .program-req-remaining { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+    .program-items { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
+    .program-items li + li { margin-top: 2px; }
+    .program-item-meta { margin-left: 8px; color: var(--muted); font-size: 12px; }
 
     #results { padding-bottom: 48px; }
     #results h2 { font-size: 18px; margin: 0 0 8px; }
@@ -369,18 +457,26 @@
     }
   </style>
 </head>
-<body data-view="upload">
+<body data-view="upload" data-tab="core">
   <header class="topbar">
     <div class="wrap">
       <div class="brand">
         <img class="brand-logo" src="./calvin-logo.png" width="145" height="40" alt="Calvin University">
         <span class="brand-divider" aria-hidden="true"></span>
         <h1>Degree Tracker</h1>
-        <span class="unofficial">Unofficial</span>
       </div>
-      <label class="year-picker">Requirements from the
-        <select id="catalog-select" aria-label="Catalog year"></select>
-      </label>
+      <div class="topbar-right">
+        <label class="year-picker">Requirements from the
+          <select id="catalog-select" aria-label="Catalog year"></select>
+        </label>
+        <span class="unofficial">Unofficial</span>
+        <div class="header-actions">
+          <button type="button" class="icon-button" id="back-button" aria-label="Upload a different file" title="Upload a different file">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 18v-6"/><path d="M9.5 14.5L12 12l2.5 2.5"/></svg>
+          </button>
+          <button type="button" class="button button-quiet" id="clear-results">Clear</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -470,15 +566,21 @@
   <div class="wrap layout" id="results-view">
    <div class="layout-main">
     <div class="results-bar">
-      <p class="results-step">Step 2 of 2: Your core requirements</p>
+      <p class="results-step">Step 2 of 2: Your requirements</p>
       <p id="results-status" class="status"></p>
-      <div class="results-actions">
-        <button type="button" class="button" id="back-button">← Upload a different file</button>
-        <button type="button" class="button button-quiet" id="clear-results">Clear</button>
-      </div>
     </div>
 
-    <main id="results"></main>
+    <div class="view-tabs" role="tablist" aria-label="Requirements">
+      <button type="button" role="tab" class="view-tab" id="tab-dashboard" data-tab="dashboard" aria-selected="false" aria-controls="dashboard" tabindex="-1">Overview</button>
+      <button type="button" role="tab" class="view-tab" id="tab-core" data-tab="core" aria-selected="true" aria-controls="results">Calvin Core</button>
+      <button type="button" role="tab" class="view-tab" id="tab-major" data-tab="major" aria-selected="false" aria-controls="major" tabindex="-1">Major</button>
+      <button type="button" role="tab" class="view-tab" id="tab-minor" data-tab="minor" aria-selected="false" aria-controls="minor" tabindex="-1">Minor</button>
+    </div>
+
+    <section id="dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-dashboard"></section>
+    <main id="results" role="tabpanel" aria-labelledby="tab-core"></main>
+    <section id="major" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-major"></section>
+    <section id="minor" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-minor"></section>
    </div>
     <nav id="toc" class="toc" aria-label="Contents"></nav>
   </div>

@@ -1,0 +1,100 @@
+{
+  "id": "cs-plus",
+  "name": "Computer Science Plus (BS)",
+  "programName": "Computer Science Plus, BS",
+  "catoid": "25",
+  "catalogYear": "2026-27",
+  "poid": "13726",
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13726",
+  "checkedAt": "2026-11-08",
+  "totalHours": "67-70",
+  "notes": [
+    "A minimum grade of C (2.0) is needed in CS 212, CS 214, CS 232, or CS 262 for admission to this concentration. (Not checked here.)"
+  ],
+  "labs": {
+    "CS 108": "CS 108L",
+    "CS 112": "CS 112L",
+    "ENGR 220": "ENGR 220L",
+    "ENGR 304": "ENGR 304L",
+    "ENGR 325": "ENGR 325L"
+  },
+  "titles": {
+    "CS 106": "Introduction to Scientific Computation and Modeling",
+    "CS 108": "Introduction to Computing",
+    "CS 112": "Introduction to Data Structures",
+    "CS 195": "Introductory Computing Seminar",
+    "CS 212": "Data Structures and Algorithms",
+    "CS 214": "Programming Language Concepts",
+    "CS 232": "Operating Systems and Networking",
+    "CS 262": "Software Engineering",
+    "CS 295": "Computing Seminar",
+    "CS 383": "External Practicum",
+    "CS 384": "Perspectives on Computing",
+    "CS 396": "Senior Project in Computing",
+    "CS 398": "Senior Project in Computing II",
+    "DATA 202": "Introduction to Machine Learning",
+    "ENGR 220": "Introduction to Computer Architecture",
+    "MATH 132": "Calculus for Management, Life, and Social Sciences",
+    "MATH 161": "Calculus: Modeling and Computation",
+    "MATH 162": "Differential and Integral Calculus",
+    "MATH 251": "Discrete Mathematics I",
+    "MATH 252": "Discrete Mathematics II",
+    "PSYC 255": "Statistics and Research Design",
+    "STAT 143": "Introduction to Probability and Statistics",
+    "STAT 145": "Biostatistics",
+    "STAT 243": "Statistics"
+  },
+  "requirements": [
+    { "id": "cs-108", "section": "Program Requirements", "label": "CS 108 (and CS 108L) or CS 106", "codes": ["CS 108", "CS 106"], "credits": 3,
+      "note": "Calvin’s CS-Plus page says CS 104 may work with advisor approval; the catalog doesn’t list it, so this tool doesn’t count it." },
+    { "id": "cs-112", "section": "Program Requirements", "label": "CS 112 and CS 112L", "codes": ["CS 112"], "credits": 3 },
+    { "id": "cs-195", "section": "Program Requirements", "label": "CS 195 (3 semesters)", "codes": ["CS 195"], "credits": 0, "requiredOccurrences": 3,
+      "note": "Workday lists this for 3 semesters. This tool can’t count semesters; check Workday." },
+    { "id": "cs-212", "section": "Program Requirements", "label": "CS 212", "codes": ["CS 212"], "credits": 4 },
+    { "id": "cs-214", "section": "Program Requirements", "label": "CS 214", "codes": ["CS 214"], "credits": 4 },
+    { "id": "cs-232", "section": "Program Requirements", "label": "CS 232", "codes": ["CS 232"], "credits": 4 },
+    { "id": "cs-262", "section": "Program Requirements", "label": "CS 262", "codes": ["CS 262"], "credits": 4 },
+    { "id": "cs-295", "section": "Program Requirements", "label": "CS 295 (3 semesters)", "codes": ["CS 295"], "credits": 0, "requiredOccurrences": 3,
+      "note": "Workday lists this for 3 semesters. This tool can’t count semesters; check Workday." },
+    { "id": "cs-384", "section": "Program Requirements", "label": "CS 384", "codes": ["CS 384"], "credits": 4 },
+    { "id": "cs-capstone", "section": "Program Requirements", "label": "CS 383, or CS 396 and CS 398", "alternatives": [["CS 383"], ["CS 396", "CS 398"]], "credits": "1 or 2 + 2" },
+    { "id": "data-202", "section": "Cognates", "label": "DATA 202", "codes": ["DATA 202"], "credits": 4 },
+    { "id": "engr-220", "section": "Cognates", "label": "ENGR 220 and ENGR 220L", "codes": ["ENGR 220"], "credits": 3 },
+    { "id": "math-251", "section": "Cognates", "label": "MATH 251", "codes": ["MATH 251"], "credits": 2 },
+    { "id": "math-252", "section": "Cognates", "label": "MATH 252", "codes": ["MATH 252"], "credits": 2 },
+    { "id": "stat", "section": "Cognates", "label": "One of STAT 143, STAT 145, STAT 243, PSYC 255", "codes": ["STAT 143", "STAT 145", "STAT 243", "PSYC 255"], "credits": 4 },
+    { "id": "calculus", "section": "Cognates", "label": "One of MATH 132, MATH 161, MATH 162", "codes": ["MATH 132", "MATH 161", "MATH 162"], "credits": 4 }
+  ],
+  "courseGroups": [
+    {
+      "id": "cs-electives",
+      "section": "Program Requirements",
+      "label": "Take 6 hours from the following",
+      "minHours": 6,
+      "note": "Students may count multiple sections of CS 300 as different advanced electives if those sections address different topics. (This tool counts each course code once.)",
+      "courses": [
+        { "code": "CS 300", "title": "Special Topics in Computer Science", "credits": "2 or 4" },
+        { "code": "CS 312", "title": "Logic, Computability, and Complexity", "credits": 4 },
+        { "code": "CS 320", "title": "Advanced Computer Architecture", "credits": 2 },
+        { "code": "CS 326", "title": "Embedded Systems and the Internet of Things", "credits": 4 },
+        { "code": "CS 332", "title": "Advanced Computer Networks", "credits": 2 },
+        { "code": "CS 336", "title": "Web Development", "credits": 4 },
+        { "code": "CS 338", "title": "System Administration: Infrastructure", "credits": 2 },
+        { "code": "CS 339", "title": "System Administration: Cloud Services", "credits": 2 },
+        { "code": "CS 354", "title": "Database Management Systems", "credits": 2 },
+        { "code": "CS 360", "title": "Fundamentals of Cybersecurity", "credits": 2 },
+        { "code": "CS 361", "title": "Fundamentals of Cyber Defense", "credits": 2 },
+        { "code": "CS 363", "title": "Network Security", "credits": 4 },
+        { "code": "CS 375", "title": "Machine Learning", "credits": 2 },
+        { "code": "CS 376", "title": "Advanced Machine Learning", "credits": 2 },
+        { "code": "CS 372", "title": "Computer Graphics", "credits": 2 },
+        { "code": "CS 374", "title": "High Performance Computing", "credits": 2 },
+        { "code": "ENGR 304", "title": "Fundamentals of Digital Systems", "credits": 3 },
+        { "code": "ENGR 325", "title": "Computer Architecture and Digital Systems Design", "credits": 3 }
+      ]
+    }
+  ],
+  "manualRequirements": [
+    { "label": "Plus Domain Study", "note": "An additional 12 hours of study from the same department (or forming a cohesive body of study, with departmental approval), at least 2 hours of which must be at the 300 level. Not checked here." }
+  ]
+}
