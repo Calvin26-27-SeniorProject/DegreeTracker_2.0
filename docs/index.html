@@ -5,164 +5,325 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Pasted Workday data stays in the browser: this page may not send network requests. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>Core Planner</title>
+  <title>Degree Tracker</title>
   <meta name="description" content="Unofficial planning aid: check your Workday courses against Calvin's core requirements.">
   <style>
     :root {
-      --bg: #f4f5f7;
+      /* Calvin brand */
+      --maroon: #8A1538;
+      --maroon-dark: #6e102c;
+      --maroon-bg: #fbf1f4;
+      --gold: #EAAA00;
+      --gold-bg: #fff8e1;
+      --gold-ink: #7a5600;
+
+      --bg: #F8FAFC;
       --surface: #ffffff;
-      --surface-2: #f8f9fb;
-      --ink: #1b2330;
-      --muted: #5d6879;
-      --line: #dde1e8;
-      --accent: #3d4fd6;
+      --surface-2: #f1f5f9;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --accent: var(--maroon);
       --accent-ink: #ffffff;
-      --done: #1f7a4d;
-      --done-bg: #e3f4ea;
-      --min: #2457b3;
-      --min-bg: #e5edfb;
-      --todo: #9a5b00;
-      --todo-bg: #fdf0d9;
-      --plan: #8a3fb8;
-      --plan-bg: #f3e8fb;
-      --warn: #a2341b;
-      --warn-bg: #fdece7;
-      --overlap: #1a5fc8;
-      --overlap-bg: #e8f0fe;
-      --radius: 12px;
+
+      /* Statuses: Completed = emerald, In progress / minimum met = sky, Missing = slate */
+      --done: #047857;
+      --done-bg: #ecfdf5;
+      --done-line: #a7f3d0;
+      --min: #0369A1;
+      --min-bg: #f0f9ff;
+      --min-line: #bae6fd;
+      --todo: #475569;
+      --todo-bg: #f8fafc;
+      --todo-line: #cbd5e1;
+      --plan: var(--gold-ink);
+      --plan-bg: var(--gold-bg);
+      --plan-line: #f5d77a;
+      --caution: #92400e;
+      --warn: #b42318;
+      --warn-bg: #fef3f2;
+      --warn-line: #fecdca;
+      --overlap: #1d4ed8;
+      --overlap-bg: #eff6ff;
+
+      --radius: 14px;
+      --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.04);
       color-scheme: light;
     }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #12151b;
-        --surface: #1b2029;
-        --surface-2: #222833;
-        --ink: #e6e9ef;
-        --muted: #9aa4b5;
-        --line: #303846;
-        --accent: #8d9bff;
-        --accent-ink: #12151b;
-        --done: #6fd39d;
-        --done-bg: #183427;
-        --min: #8db4ff;
-        --min-bg: #1b2a45;
-        --todo: #f2b45a;
-        --todo-bg: #3a2c14;
-        --plan: #d3a1f2;
-        --plan-bg: #33213f;
-        --warn: #ff9b82;
-        --warn-bg: #3d1f18;
-        --overlap: #9cc0ff;
-        --overlap-bg: #1c2b44;
-        color-scheme: dark;
-      }
-    }
     * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
-    a { color: var(--accent); }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:hover { color: var(--maroon-dark); }
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 0 16px; }
 
-    .topbar { background: var(--surface); border-bottom: 1px solid var(--line); }
+    /* White bar so the full-color Calvin logo (black lettering) reads; maroon and gold edges keep the brand. */
+    .topbar { background: var(--surface); color: var(--ink); border-top: 4px solid var(--maroon); border-bottom: 3px solid var(--gold); }
     .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
-    .brand { display: flex; align-items: baseline; gap: 10px; }
-    .brand h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
-    .unofficial { font-size: 12px; font-weight: 600; color: var(--warn); background: var(--warn-bg); padding: 2px 8px; border-radius: 999px; }
+    .brand { display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; }
+    .brand-logo { display: block; height: 40px; width: auto; }
+    .brand-divider { width: 1px; height: 30px; background: var(--line); }
+    .brand h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; color: var(--maroon); }
+    .unofficial { font-size: 12px; font-weight: 700; color: var(--ink); background: var(--gold); padding: 2px 9px; border-radius: 999px; }
     .year-picker { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
-    select { font: inherit; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+    select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
 
-    .notice { margin: 20px 0 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
-    .notice p { margin: 0; }
-    .notice p + p { margin-top: 6px; color: var(--muted); font-size: 14px; }
+    /* Two pages in one file (the data lives only in memory): app.js sets body[data-view]
+       to "upload" (page 1) or "results" (page 2, after a file or paste is read). */
+    body[data-view="upload"] #results-view, body[data-view="upload"] .toc-toggle { display: none !important; }
+    body[data-view="results"] #upload-view { display: none; }
 
-    .input-card { margin: 16px 0 8px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
-    .input-card h2 { margin: 0 0 6px; font-size: 17px; }
-    textarea {
-      width: 100%; min-height: 110px; resize: vertical; padding: 10px 12px;
-      font: 13px/1.45 ui-monospace, Menlo, Consolas, monospace; color: var(--ink);
-      background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px;
-    }
-    textarea:focus, select:focus, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .input-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
-    .drop-zone {
-      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-      margin-top: 10px; padding: 14px 16px; color: var(--muted);
-      border: 2px dashed var(--line); border-radius: 8px; transition: border-color 0.1s, background 0.1s;
-    }
-    .drop-text { flex: 1 1 260px; }
-    .drop-text p { margin: 0; }
-    .drop-title { color: var(--ink); font-weight: 600; }
-    .export-hint { margin-top: 2px; font-size: 13px; }
-    .paste-route { margin-top: 10px; color: var(--muted); font-size: 14px; }
-    .paste-route summary { cursor: pointer; width: fit-content; }
-    .paste-route ol { margin: 8px 0; padding-left: 20px; }
-    /* Screenshot of Workday's export buttons; the ring pulses over Excel (the left one). */
-    .workday-buttons { position: relative; display: inline-block; line-height: 0; padding: 2px 6px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
-    .workday-buttons img { display: block; }
-    .export-ring {
-      position: absolute; left: 35px; top: 50%; width: 36px; height: 36px;
-      transform: translate(-50%, -50%); border: 2px solid #3d4fd6; border-radius: 999px;
-      animation: export-pulse 1.8s ease-in-out infinite;
-    }
-    @keyframes export-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(61, 79, 214, 0.55); }
-      50% { box-shadow: 0 0 0 7px rgba(61, 79, 214, 0); }
-    }
-    @media (prefers-reduced-motion: reduce) { .export-ring { animation: none; } }
-    .drop-zone.dragging { border-color: var(--accent); background: var(--surface-2); color: var(--ink); }
+    /* Page 1: upload. Left: intro, drop zone, official-record notice. Right: export steps. */
+    .upload-view { display: grid; gap: 20px; padding-top: 24px; padding-bottom: 48px; }
+    @media (min-width: 880px) { .upload-view { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; } }
+    .upload-main, .upload-side { display: grid; gap: 20px; min-width: 0; }
+    .intro-card, .input-card, .steps-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+    .intro-card { padding: 26px 28px; background: linear-gradient(135deg, #fff 60%, #fdf6ea); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px; padding: 3px 10px; border-radius: 999px; background: var(--gold-bg); color: var(--gold-ink); font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .eyebrow .dot { color: var(--gold); }
+    .intro-card h2 { margin: 0; font-size: 30px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; }
+    .intro-lead { margin: 10px 0 0; color: var(--muted); font-size: 16px; }
+    .privacy-note { display: flex; gap: 12px; align-items: flex-start; margin-top: 20px; padding: 12px 14px; border-radius: 12px; background: var(--done-bg); border: 1px solid var(--done-line); }
+    .privacy-note svg { flex: none; color: var(--done); margin-top: 1px; }
+    .privacy-title { margin: 0; font-size: 14px; font-weight: 700; color: #064e3b; }
+    .privacy { margin: 2px 0 0; font-size: 13px; color: #065f46; }
+
+    .input-card { padding: 28px 24px 22px; text-align: center; border: 2px dashed var(--line-strong, #cbd5e1); transition: border-color 0.15s, background 0.15s; }
+    .input-card:hover { border-color: #94a3b8; }
+    .drop-zone { display: flex; flex-direction: column; align-items: center; color: var(--muted); }
+    .drop-zone.dragging { color: var(--ink); }
+    .input-card:has(.drop-zone.dragging) { border-color: var(--accent); border-style: solid; background: var(--maroon-bg); }
+    .file-badge { position: relative; display: grid; place-items: center; width: 60px; height: 68px; margin: 8px 0 18px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06); color: var(--maroon); }
+    .file-badge-tag { position: absolute; padding: 1px 6px; border-radius: 5px; font-size: 9px; font-weight: 800; letter-spacing: 0.04em; color: #fff; }
+    .file-badge-tag.is-xlsx { top: -8px; left: -12px; background: #15803d; }
+    .file-badge-tag.is-workday { bottom: -8px; right: -18px; background: var(--maroon); }
+    .drop-title { margin: 0; color: var(--ink); font-size: 20px; font-weight: 700; }
+    .drop-hint { margin: 4px 0 0; font-size: 13px; max-width: 420px; }
+    .drop-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+    .button { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 14px; font-weight: 600; padding: 9px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); cursor: pointer; text-decoration: none; }
+    .button:hover { border-color: var(--muted); }
+    .button-primary { color: #fff; background: var(--maroon); border-color: var(--maroon); box-shadow: 0 4px 12px rgba(138, 21, 56, 0.22); }
+    .button-primary:hover { color: #fff; background: var(--maroon-dark); border-color: var(--maroon-dark); }
+    .button-quiet { background: transparent; }
     .file-button { position: relative; }
     .file-button input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
     .file-button:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .button { font: inherit; font-weight: 600; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); cursor: pointer; }
+    /* The paste box opens from the "Paste text" button, so its own summary is hidden. */
+    .paste-route { margin-top: 16px; text-align: left; color: var(--muted); font-size: 14px; }
+    .paste-route > summary { display: none; }
+    .paste-route ol { margin: 0 0 8px; padding-left: 20px; }
+    textarea {
+      width: 100%; min-height: 130px; resize: vertical; padding: 10px 12px;
+      font: 13px/1.45 ui-monospace, Menlo, Consolas, monospace; color: var(--ink);
+      background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+    }
+    textarea:focus, select:focus, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .input-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    .input-actions:has(.status:empty) .status { display: none; }
+    .browse-link { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+    .link-button { font: inherit; font-weight: 600; padding: 0; border: 0; background: none; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+    .link-button:hover { color: var(--maroon-dark); }
     .status { font-size: 14px; color: var(--muted); }
     .status-ok { color: var(--done); }
     .status-error { color: var(--warn); }
-    .status-warn { color: var(--todo); }
-    .privacy { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+    .status-warn { color: var(--caution); }
+
+    .steps-card { padding: 22px; }
+    .steps-card h2 { margin: 0; font-size: 17px; }
+    .steps-sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .steps { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+    .step { display: flex; gap: 12px; padding: 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    .step-num { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--surface-2); color: var(--muted); font: 700 12px/1 ui-monospace, Menlo, Consolas, monospace; }
+    .step:first-child .step-num { background: var(--maroon); color: #fff; }
+    .step p { margin: 0; }
+    .step-title { color: var(--ink); font-size: 14px; font-weight: 700; margin-bottom: 2px !important; }
+    /* Screenshot of Workday's export buttons; the ring pulses over Excel (the left one). */
+    .workday-buttons { position: relative; display: inline-block; margin-top: 8px; line-height: 0; padding: 2px 6px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+    .workday-buttons img { display: block; }
+    .export-ring {
+      position: absolute; left: 35px; top: 50%; width: 36px; height: 36px;
+      transform: translate(-50%, -50%); border: 2px solid var(--maroon); border-radius: 999px;
+      animation: export-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes export-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(138, 21, 56, 0.5); }
+      50% { box-shadow: 0 0 0 7px rgba(138, 21, 56, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .export-ring { animation: none; } }
+
+    /* Official-record notice: a dark card under the drop zone. */
+    /* Classroom photo under a dark navy tint: darkest behind the text on the left, so it stays readable. */
+    .notice { padding: 24px 24px 22px; border-radius: 18px; color: #e2e8f0; background-color: #12223d;
+      background-image: linear-gradient(100deg, rgba(13, 26, 50, 0.86) 0%, rgba(16, 33, 62, 0.74) 50%, rgba(24, 48, 84, 0.5) 100%), url(./official-record-bg.jpg);
+      background-size: cover; background-position: center 35%; }
+    .notice-label { display: inline-block; margin: 0 0 10px !important; padding: 2px 8px; border-radius: 5px; background: rgba(234, 170, 0, 0.16); color: var(--gold) !important; font: 700 11px/1.6 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+    .notice p { margin: 0; }
+    .notice strong { color: #fff; }
+    .notice p + p { margin-top: 8px; color: #c3cddd; font-size: 13px; }
+    .notice a { color: var(--gold); }
+    .notice a:hover { color: #ffd257; }
+
+    /* Page 2: the bar above the requirements. */
+    .results-bar { display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; margin-top: 20px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .results-step { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-ink); }
+    .results-bar .status { flex: 1 1 260px; margin: 0; }
+    .topbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .header-actions { display: flex; align-items: center; gap: 6px; }
+    body[data-view="upload"] .header-actions { display: none; }
+
+    /* "Show grades": grades are hidden until it's on (body[data-grades="on"]). Every
+       grade the app shows is in a .grade element, or the courses table's .grade-col. */
+    body:not([data-grades="on"]) .grade, body:not([data-grades="on"]) .grade-col { display: none !important; }
+    .grades-toggle { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px 6px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); cursor: pointer; }
+    .grades-toggle:hover { border-color: var(--line-strong, #cbd5e1); color: var(--ink); }
+    .grades-toggle .switch { position: relative; width: 30px; height: 18px; border-radius: 999px; background: #cbd5e1; transition: background 0.15s; }
+    .grades-toggle .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 999px; background: #fff; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25); transition: transform 0.15s; }
+    .grades-toggle[aria-pressed="true"] { color: var(--maroon); border-color: var(--maroon-line, #f0c9d3); }
+    .grades-toggle[aria-pressed="true"] .switch { background: var(--maroon); }
+    .grades-toggle[aria-pressed="true"] .switch::after { transform: translateX(12px); }
+    @media (prefers-reduced-motion: reduce) { .grades-toggle .switch, .grades-toggle .switch::after { transition: none; } }
+    .icon-button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--maroon); cursor: pointer; }
+    .icon-button:hover { background: var(--maroon-bg); border-color: var(--maroon-line, #f0c9d3); }
+
+    /* Page 2 tabs: Calvin Core (this tool's reading) and Major & minor (Workday's listings).
+       app.js sets body[data-tab]. */
+    .view-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; padding: 4px; width: fit-content; max-width: 100%; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; }
+    .view-tab { font: inherit; font-size: 14px; font-weight: 600; padding: 7px 16px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); cursor: pointer; }
+    .view-tab:hover { color: var(--ink); background: var(--surface); }
+    .view-tab[aria-selected="true"] { background: var(--maroon); color: #fff; }
+    /* Only the selected tab's panel shows; Contents belongs to Calvin Core. */
+    body:not([data-tab="core"]) #results, body:not([data-tab="core"]) #toc, body:not([data-tab="core"]) .toc-toggle { display: none !important; }
+    body:not([data-tab="dashboard"]) #dashboard, body:not([data-tab="major"]) #major, body:not([data-tab="minor"]) #minor { display: none; }
+    @media (min-width: 1200px) { body:not([data-tab="core"]) .layout { grid-template-columns: minmax(0, 1fr); } }
+
+    /* Overview: a progress donut per area. Fills: satisfied (emerald), in progress (sky),
+       remaining (slate track); validated as a pair for color-vision separation. */
+    .tab-panel { padding-bottom: 48px; }
+    .dash-legend { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 0 0; padding: 0; font-size: 13px; color: var(--muted); }
+    .dash-legend li { display: flex; align-items: center; gap: 6px; }
+    .swatch { width: 12px; height: 12px; border-radius: 3px; }
+    .swatch.donut-done { background: #059669; }
+    .swatch.donut-progress { background: #0284c7; }
+    .swatch.donut-remaining { background: #e2e8f0; }
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+    .dash-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 18px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .dash-card.is-overall { border-top: 4px solid var(--maroon); }
+    .dash-card.is-empty { justify-content: center; color: var(--muted); }
+    .dash-card h3 { margin: 0 0 10px; font-size: 15px; }
+    .donut circle { transition: stroke-width 0.15s; }
+    .donut circle:hover { stroke-width: 17; }
+    .donut .donut-done { stroke: #059669; }
+    .donut .donut-progress { stroke: #0284c7; }
+    .donut .donut-remaining { stroke: #e2e8f0; }
+    .donut-value { font: 800 26px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: var(--ink); }
+    .dash-count { margin: 10px 0 0; font-size: 14px; font-weight: 600; }
+    .dash-sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .dash-source { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+    .dash-open { margin-top: 10px; font-size: 13px; }
+    .programs-note { margin: 18px 2px 0; font-size: 13px; color: var(--muted); }
+
+    /* Major/Minor summary: satisfied | in progress | not satisfied, left to right. */
+    .status-columns { display: grid; gap: 14px; margin-top: 10px; }
+    @media (min-width: 760px) { .status-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+    .status-column { padding: 10px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+    .status-column-title { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--ink); }
+    .status-column.is-done .dot { color: #059669; }
+    .status-column.is-progress .dot { color: #0284c7; }
+    .status-column.is-todo .dot { color: #94a3b8; }
+    .status-column .summary-chips { grid-template-columns: minmax(0, 1fr); }
+    .status-column-empty { margin: 0; font-size: 13px; color: var(--muted); }
+
+    /* A program checked against its catalog page (catalog/programs/): sections,
+       each requirement's course options, missing labs, and what isn't checked. */
+    .program-section { margin: 18px 20px 0; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maroon); }
+    .program-req-warn { margin: 6px 0 0; padding: 6px 10px; border-radius: 8px; font-size: 13px; color: var(--warn); background: var(--warn-bg); border: 1px solid var(--warn-line); }
+    .program-options { margin-top: 8px; font-size: 13px; }
+    .program-options summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
+    .program-options ul, .program-single { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
+    .program-option { display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; padding: 5px 8px; border-radius: 8px; background: var(--bg); font-size: 13px; }
+    .program-option.is-taken { background: var(--done-bg); }
+    .program-option.is-progress { background: var(--min-bg); }
+    /* A corequisite lab: its own row, under its lecture. */
+    .program-option.is-lab { margin-left: 18px; }
+    .program-option.is-missing { background: var(--warn-bg); color: var(--warn); }
+    .program-option-code { font-weight: 700; white-space: nowrap; min-width: 72px; }
+    .program-option-title { flex: 1 1 180px; }
+    .program-unchecked { margin: 6px 16px 0; font-size: 13px; color: var(--muted); }
+    .program-unchecked .program-section { margin-left: 4px; }
+    .program-unchecked ul { margin: 6px 0 0; padding-left: 20px; }
+    .program-unchecked li + li { margin-top: 4px; }
+    .program-workday { margin: 16px 16px 0; font-size: 14px; }
+    .program-workday > summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
+    .program-workday .program-reqs { padding: 10px 0 0; }
+
+    /* Major & minor: one card per program, Workday's requirements inside. */
+    .programs { padding-bottom: 48px; }
+    .programs-intro { margin-top: 20px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .programs-intro h2 { margin: 0 0 6px; font-size: 18px; }
+    .programs-intro p { margin: 4px 0 0; font-size: 14px; }
+    .programs-empty { margin: 16px 2px; color: var(--muted); }
+    .program { margin-top: 20px; padding-bottom: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .program-header { padding: 14px 20px; background: #f8fafc; border-bottom: 1px solid var(--line); }
+    .program-header h3 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 16px; }
+    .program-header h3::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 999px; background: var(--maroon); }
+    .program-tally { margin: 4px 0 0 20px; font-size: 13px; font-weight: 600; color: var(--ink); }
+    .program-workday { margin: 2px 0 0 20px; font-size: 12px; color: var(--muted); }
+    .program-reqs { list-style: none; margin: 0; padding: 14px 16px 0; display: grid; gap: 8px; }
+    .program-req { padding: 10px 14px; border: 1px solid var(--line); border-left-width: 4px; border-radius: 10px; background: var(--surface); }
+    .program-req.status-done { border-left-color: var(--done); background: #f6fdf9; }
+    .program-req.status-min { border-left-color: var(--min); background: #f5fbff; }
+    .program-req.status-todo { border-left-color: var(--todo-line); }
+    .program-req-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; }
+    .program-req-name { font-weight: 600; font-size: 14px; flex: 1 1 260px; }
+    .program-req-remaining { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+    .program-items { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
+    .program-items li + li { margin-top: 2px; }
+    .program-item-meta { margin-left: 8px; color: var(--muted); font-size: 12px; }
 
     #results { padding-bottom: 48px; }
     #results h2 { font-size: 18px; margin: 0 0 8px; }
 
-    .summary, .callout, .transcript { margin-top: 20px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+    .summary, .callout, .transcript { margin-top: 20px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .summary h2 { margin-bottom: 0 !important; }
     .summary-sub { margin: 2px 0 8px; color: var(--muted); font-size: 13px; }
-    .summary-group h3 { margin: 14px 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-    .summary-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
-    .summary-chip { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 8px; text-decoration: none; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-left-width: 4px; height: 100%; }
-    .summary-chip:hover { border-color: var(--accent); }
+    .summary-group h3 { margin: 16px 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .summary-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+    .summary-chip { display: flex; flex-direction: column; gap: 2px; padding: 9px 12px; border-radius: 10px; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-left-width: 4px; height: 100%; transition: border-color 0.15s, box-shadow 0.15s; }
+    .summary-chip:hover { color: var(--ink); box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08); }
     .chip-name { font-size: 13px; }
     .chip-value { font-size: 13px; font-weight: 700; }
     .summary-chip.status-done { border-left-color: var(--done); }
     .summary-chip.status-done .chip-value { color: var(--done); }
     .summary-chip.status-min { border-left-color: var(--min); }
     .summary-chip.status-min .chip-value { color: var(--min); }
-    .summary-chip.status-todo { border-left-color: var(--todo); }
+    .summary-chip.status-todo { border-left-color: var(--todo-line); }
     .summary-chip.status-todo .chip-value { color: var(--todo); }
     .summary-chip.status-optional .chip-value { color: var(--muted); }
     .ku-meter { margin: 0 0 8px; }
     .ku-numbers { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; margin-bottom: 4px; }
-    .meter { height: 10px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); overflow: hidden; }
-    .meter-fill { height: 100%; background: var(--todo); }
+    .meter { height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+    .meter-fill { height: 100%; border-radius: 999px; background: var(--min); }
     .ku-meter.is-met .meter-fill { background: var(--done); }
     .chip-room { font-size: 12px; color: var(--muted); }
     .chip-room.has-room { color: var(--min); font-weight: 600; }
-    .ku-opportunities { margin: 10px 0 0; padding: 10px 12px; background: var(--min-bg); border-radius: 8px; font-size: 14px; }
+    .ku-opportunities { margin: 12px 0 0; padding: 10px 14px; background: var(--min-bg); border: 1px solid var(--min-line); border-radius: 10px; font-size: 14px; }
     .ku-opp-lead { margin: 0 0 4px; font-weight: 600; }
     .ku-opportunities ul { margin: 0; padding-left: 20px; }
     .ku-opp-full { margin: 6px 0 0; color: var(--muted); }
 
     .callout ul { margin: 0; padding-left: 20px; }
     .callout li + li { margin-top: 4px; }
-    .callout-warn { background: var(--warn-bg); border-color: transparent; }
+    .callout-warn { background: var(--warn-bg); border-color: var(--warn-line); }
     .callout-warn h2 { color: var(--warn); }
     .callout-mismatch { background: var(--warn-bg); border: 2px solid var(--warn); }
     .callout-mismatch h2 { color: var(--warn); }
     .callout-mismatch > p { margin: 0 0 10px; }
-    .mismatch + .mismatch { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .mismatch + .mismatch { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--warn-line); }
     .mismatch-line { margin: 0 0 6px; }
     .bug-report textarea { width: 100%; min-height: 140px; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; box-sizing: border-box; margin: 6px 0; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
     .req-note.is-mismatch { color: var(--warn); font-weight: 600; }
@@ -172,44 +333,57 @@
     .test-case p { margin: 6px 0; }
     .test-case textarea { width: 100%; min-height: 160px; box-sizing: border-box; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin: 6px 0; }
 
-    .req-section { margin-top: 32px; }
-    .req-section-title { font-size: 13px !important; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .req-section { margin-top: 36px; }
+    .req-section-title { font-size: 13px !important; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maroon); border-bottom: 2px solid var(--gold); padding-bottom: 6px; display: inline-block; }
     .req-section > .catalog-wording { margin: 8px 0 12px; }
 
-    .req { margin-top: 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); scroll-margin-top: 16px; }
+    /* Requirement cards: collapse to the header with the chevron button. */
+    .req { margin-top: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); scroll-margin-top: 16px; position: relative; }
     .req.status-done { border-left: 4px solid var(--done); }
     .req.status-min { border-left: 4px solid var(--min); }
-    .req.status-todo { border-left: 4px solid var(--todo); }
-    .req-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .req-name { margin: 0; font-size: 16px; flex: 1 1 auto; }
+    .req.status-todo { border-left: 4px solid var(--todo-line); }
+    .req.is-collapsed > :not(.req-header) { display: none; }
+    .req-header { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; padding-right: 38px; }
+    .req-name { margin: 0; font-size: 16px; font-weight: 650; flex: 1 1 auto; }
     .tag-label { font-size: 12px; color: var(--muted); }
-    .status-pill { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; }
-    .status-pill.status-done { color: var(--done); background: var(--done-bg); }
-    .status-pill.status-min { color: var(--min); background: var(--min-bg); }
-    .status-pill.status-todo { color: var(--todo); background: var(--todo-bg); }
-    .status-pill.status-optional { color: var(--muted); background: var(--surface-2); }
+    .req-collapse { position: absolute; top: 13px; right: 12px; width: 30px; height: 30px; padding: 0; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
+    .req-collapse:hover { background: var(--surface-2); color: var(--ink); }
+    .req-collapse::before { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 0.15s; }
+    .req.is-collapsed .req-collapse::before { transform: rotate(-45deg); }
+    @media (prefers-reduced-motion: reduce) { .req-collapse::before { transition: none; } }
+    .status-pill { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+    .status-pill.status-done { color: var(--done); background: var(--done-bg); border-color: var(--done-line); }
+    .status-pill.status-min { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
+    .status-pill.status-todo { color: var(--todo); background: var(--todo-bg); border-color: var(--todo-line); }
+    .status-pill.status-optional { color: var(--muted); background: var(--surface); border-color: var(--line); }
 
-    .catalog-wording { list-style: none; margin: 8px 0 0; padding: 0; font-size: 14px; }
-    .sentence { padding: 3px 0 3px 10px; border-left: 2px solid var(--line); }
-    .sentence.is-unchecked, .sentence.is-partial { border-left-color: var(--todo); }
-    .sentence-check { margin-left: 8px; font-size: 10px; font-weight: 400; text-transform: uppercase; color: var(--muted); opacity: 0.6; }
-    .sentence.is-checked .sentence-check { color: var(--done); }
-    .sentence.is-unchecked .sentence-check, .sentence.is-partial .sentence-check { color: var(--todo); }
+    /* Catalog wording: each sentence with a small pill saying whether it's checked. */
+    .catalog-wording { list-style: none; margin: 10px 0 0; padding: 0; font-size: 14px; }
+    .sentence { padding: 3px 0 3px 12px; border-left: 2px solid var(--line); }
+    .sentence + .sentence { margin-top: 2px; }
+    .sentence.is-unchecked, .sentence.is-partial { border-left-color: var(--gold); }
+    .sentence-check { display: inline-block; margin-left: 8px; padding: 0 7px; border-radius: 999px; border: 1px solid var(--line);
+      font-size: 10.5px; font-weight: 600; line-height: 16px; letter-spacing: 0.02em; vertical-align: 1px; white-space: nowrap;
+      color: var(--muted); background: var(--surface); }
+    .sentence.is-checked .sentence-check { color: var(--done); background: var(--done-bg); border-color: var(--done-line); }
+    .sentence.is-partial .sentence-check { color: var(--gold-ink); background: var(--gold-bg); border-color: var(--plan-line); }
+    .sentence.is-unchecked .sentence-check { color: var(--todo); background: var(--surface-2); border-color: var(--todo-line); }
+    .sentence.is-advice .sentence-check { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
     .sentence-note { display: block; font-size: 12px; color: var(--muted); }
     .req-note, .req-hours, .req-taken, .req-source { margin: 8px 0 0; font-size: 14px; }
     .req-note, .req-source { color: var(--muted); }
     .req-source { font-size: 13px; }
 
-    .extra-courses { margin-top: 10px; padding: 8px 12px; border-radius: 8px; background: var(--min-bg); font-size: 14px; }
+    .extra-courses { margin-top: 10px; padding: 8px 12px; border-radius: 10px; background: var(--min-bg); border: 1px solid var(--min-line); font-size: 14px; }
     .extra-courses .extra-label { margin: 0 0 4px; font-weight: 600; }
     .extra-courses ul { margin: 0; padding-left: 18px; }
     .extra-course[data-provenance="assumed"] { color: var(--warn); }
 
-    .course-options { margin-top: 10px; }
-    .course-options summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); }
-    .course-list { list-style: none; margin: 8px 0 0; padding: 0; }
-    .course { display: flex; align-items: baseline; gap: 6px 10px; flex-wrap: wrap; padding: 5px 8px; border-radius: 6px; font-size: 14px; }
-    .course:nth-child(even) { background: var(--surface-2); }
+    .course-options { margin-top: 12px; }
+    .course-options summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); width: fit-content; }
+    .course-list { list-style: none; margin: 8px 0 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    .course { display: flex; align-items: baseline; gap: 6px 10px; flex-wrap: wrap; padding: 6px 10px; font-size: 14px; }
+    .course-list > li + li { border-top: 1px solid var(--line); }
     .course-code { font-weight: 600; white-space: nowrap; min-width: 80px; }
     .course-title { flex: 1 1 200px; }
     .course-flags { display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; font-size: 12px; }
@@ -217,21 +391,22 @@
     .course.is-planned { background: var(--plan-bg); }
     .course.is-excluded { background: var(--warn-bg); }
     .course.is-maxed { opacity: 0.55; }
-    .course-heading { display: flex; align-items: center; gap: 10px; margin: 12px 0 4px; font-weight: 700; font-size: 13px; }
-    .course-connector { padding: 4px 8px; font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
-    .chip { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
-    .chip-taken { color: var(--done); background: var(--done-bg); border: 1px solid currentColor; }
-    .chip-progress { color: var(--min); background: var(--min-bg); }
-    .chip-planned { color: var(--plan); background: var(--surface); }
-    .chip-excluded { color: var(--warn); background: var(--surface); }
-    .chip-min { color: var(--min); background: var(--min-bg); }
+    .course-heading { display: flex; align-items: center; gap: 10px; padding: 8px 10px 4px; font-weight: 700; font-size: 13px; background: var(--bg); }
+    .course-connector { padding: 4px 10px; font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; background: var(--bg); }
+    .chip { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+    .chip-taken { color: var(--done); background: var(--surface); border-color: var(--done-line); }
+    .chip-progress { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
+    .chip-planned { color: var(--plan); background: var(--surface); border-color: var(--plan-line); }
+    .chip-excluded { color: var(--warn); background: var(--surface); border-color: var(--warn-line); }
+    .chip-min { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
     .chip-muted { color: var(--muted); background: var(--surface-2); font-weight: 500; }
     .also { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; color: var(--overlap); background: var(--overlap-bg); }
     .also a { color: inherit; }
-    .plan-toggle { margin-left: auto; font: inherit; font-size: 12px; font-weight: 600; padding: 1px 9px; border-radius: 999px; border: 1px solid var(--plan); color: var(--plan); background: transparent; cursor: pointer; }
-    .plan-toggle.is-on { background: var(--plan); color: var(--surface); }
+    .plan-toggle { margin-left: auto; font: inherit; font-size: 12px; font-weight: 600; padding: 1px 10px; border-radius: 999px; border: 1px solid var(--maroon); color: var(--maroon); background: var(--surface); cursor: pointer; }
+    .plan-toggle:hover { background: var(--maroon-bg); }
+    .plan-toggle.is-on { background: var(--maroon); color: #fff; }
     .chip-hours { color: var(--muted); background: transparent; font-weight: 500; padding: 1px 4px; }
-    .status-pill.status-plan { color: var(--plan); background: var(--plan-bg); }
+    .status-pill.status-plan { color: var(--plan); background: var(--plan-bg); border-color: var(--plan-line); }
     .summary-plan { margin: 0 0 8px; color: var(--plan); font-size: 14px; font-weight: 600; }
     .schedule-note { margin: 20px 0 0; font-size: 13px; color: var(--muted); }
     .offered { flex-basis: 100%; font-size: 12px; color: var(--muted); }
@@ -246,12 +421,12 @@
 
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: var(--bg); }
     .cell-status { display: block; font-size: 12px; color: var(--muted); }
     .muted { color: var(--muted); }
 
-    footer { border-top: 1px solid var(--line); padding: 20px 0 40px; font-size: 13px; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); background: var(--surface); padding: 20px 0 40px; font-size: 13px; color: var(--muted); }
     footer p { margin: 4px 0; }
 
     /* Contents: a sticky sidebar beside the content on wide screens; a panel
@@ -259,10 +434,10 @@
     .toc-title { margin: 0 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
     .toc-list { list-style: none; margin: 0; padding: 0; font-size: 13px; }
     .toc-link { display: flex; align-items: baseline; gap: 6px; padding: 3px 8px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; color: var(--ink); text-decoration: none; line-height: 1.3; }
-    .toc-link:hover { background: var(--surface-2); }
-    .toc-link.is-active { border-left-color: var(--accent); background: var(--surface-2); font-weight: 600; }
+    .toc-link:hover { background: var(--surface-2); color: var(--ink); }
+    .toc-link.is-active { border-left-color: var(--gold); background: var(--maroon-bg); color: var(--maroon); font-weight: 600; }
     .toc-label { flex: 1 1 auto; }
-    .toc-section { margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .toc-section { margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maroon); }
     .toc-list > li:first-child .toc-section { margin-top: 0; }
     .toc-req { padding-left: 14px; }
     .toc-tag { padding-left: 24px; font-style: italic; }
@@ -275,84 +450,163 @@
     .toc-toggle { display: none; }
 
     @media (min-width: 1200px) {
-      .wrap { max-width: 1220px; }
+      /* The content column stays 1024px wide; the sidebar sits beside it. */
+      .wrap { max-width: calc(1024px + 260px); }
       .layout { display: grid; grid-template-columns: minmax(0, 1fr) 236px; gap: 24px; }
-      .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 20px 0 24px; }
+      .toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding: 24px 0; }
     }
     @media (max-width: 1199.98px) {
       .toc-toggle {
         display: block; position: fixed; right: 16px; bottom: 16px; z-index: 20;
-        font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 999px; cursor: pointer;
-        color: var(--accent-ink); background: var(--accent); border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        font: inherit; font-weight: 600; padding: 8px 18px; border-radius: 999px; cursor: pointer;
+        color: var(--accent-ink); background: var(--accent); border: 2px solid var(--gold); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
       }
       .toc {
         display: none; position: fixed; right: 16px; bottom: 64px; z-index: 20;
         width: min(300px, calc(100vw - 32px)); max-height: calc(100vh - 96px); overflow-y: auto;
         padding: 12px 8px 12px 4px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
       }
       .toc.is-open { display: block; }
       .toc-title { padding-left: 11px; }
     }
 
     @media (max-width: 560px) {
+      .brand-divider { display: none; }
+      .intro-card { padding: 20px; }
+      .intro-card h2 { font-size: 24px; }
       .course-code { min-width: 0; }
       .plan-toggle { margin-left: 0; }
     }
   </style>
 </head>
-<body>
+<body data-view="upload" data-tab="core">
   <header class="topbar">
     <div class="wrap">
       <div class="brand">
-        <h1>Core Planner</h1>
-        <span class="unofficial">Unofficial</span>
+        <img class="brand-logo" src="./calvin-logo.png" width="145" height="40" alt="Calvin University">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <h1>Degree Tracker</h1>
       </div>
-      <label class="year-picker">Requirements from the
-        <select id="catalog-select" aria-label="Catalog year"></select>
-      </label>
+      <div class="topbar-right">
+        <label class="year-picker">Requirements from the
+          <select id="catalog-select" aria-label="Catalog year"></select>
+        </label>
+        <span class="unofficial">Unofficial</span>
+        <div class="header-actions">
+          <button type="button" class="grades-toggle" id="grades-toggle" aria-pressed="false" hidden>
+            <span class="switch" aria-hidden="true"></span>Show grades
+          </button>
+          <button type="button" class="icon-button" id="back-button" aria-label="Upload a different file" title="Upload a different file">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 18v-6"/><path d="M9.5 14.5L12 12l2.5 2.5"/></svg>
+          </button>
+          <button type="button" class="button button-quiet" id="clear-results">Clear</button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <div class="wrap layout">
-   <div class="layout-main">
-    <div class="notice">
-      <p><strong>Workday is the official record.</strong> Your Academic Progress page in Workday is the system of record for your core requirements. This page is a planning aid: if it disagrees with Workday, go with Workday and ask your advisor or the Registrar.</p>
-      <p>Requirements here are copied from the <a data-catalog-link href="#" target="_blank" rel="noopener"><span data-catalog-year></span> Calvin catalog</a> as saved on <span data-catalog-saved></span>. Use the catalog for the year you entered Calvin. Each sentence of catalog wording is marked as checked or not checked by this tool.</p>
+  <div class="wrap upload-view" id="upload-view">
+    <div class="upload-main">
+      <section class="intro-card" aria-labelledby="intro-heading">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Step 1 of 2: Add your courses</p>
+        <h2 id="intro-heading">Upload Workday Academic Progress</h2>
+        <p class="intro-lead">See which Calvin Core requirements your courses meet, and what’s left, in the <span data-catalog-year></span> catalog.</p>
+        <div class="privacy-note">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <p class="privacy-title">Stays in your browser</p>
+            <p class="privacy">Everything runs in your browser. What you paste or choose isn’t uploaded or saved anywhere, and is gone when you close or reload this page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="input-card" id="input-card" aria-labelledby="input-heading">
+        <div class="drop-zone" id="drop-zone">
+          <span class="file-badge" aria-hidden="true">
+            <span class="file-badge-tag is-xlsx">.XLSX</span>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+            <span class="file-badge-tag is-workday">WORKDAY</span>
+          </span>
+          <h2 class="drop-title" id="input-heading">Drop your Academic Progress export (.xlsx) here</h2>
+          <p class="drop-hint">The Excel file from Workday’s Academic Progress page. The steps are under “How to export from Workday”.</p>
+          <div class="drop-actions">
+            <label class="button button-primary file-button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 16v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3"/></svg>
+              Choose file…
+              <input type="file" id="workday-file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+            </label>
+            <button type="button" class="button" id="paste-button" aria-controls="paste-route" aria-expanded="false">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M9 5.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.5a2 2 0 0 0-2-2h-2"/></svg>
+              Paste text instead
+            </button>
+          </div>
+        </div>
+        <details class="paste-route" id="paste-route">
+          <summary>Or copy and paste from Workday instead</summary>
+          <ol>
+            <li>In Workday, open Academic Record, then Academic Progress.</li>
+            <li>If a table has several pages, set it to show all rows.</li>
+            <li>Select all (Ctrl/⌘-A), copy, and paste below.</li>
+          </ol>
+          <textarea id="workday-input" spellcheck="false" placeholder="Paste Workday Academic Progress here" aria-label="Paste Workday Academic Progress"></textarea>
+        </details>
+        <div class="input-actions">
+          <span id="status" class="status" role="status" aria-live="polite"></span>
+          <button type="button" class="button button-primary" id="show-results" hidden>See my requirements →</button>
+          <button type="button" class="button button-quiet" id="clear-button">Clear</button>
+        </div>
+        <p class="browse-link">Just looking? <button type="button" class="link-button" id="browse-button">Browse the core requirements without uploading</button></p>
+      </section>
+
+      <div class="notice">
+        <p class="notice-label">Official record</p>
+        <p><strong>Workday is the official record.</strong> Your Academic Progress page in Workday is the system of record for your core requirements. This page is a planning aid: if it disagrees with Workday, go with Workday and ask your advisor or the Registrar.</p>
+        <p>Requirements here are copied from the <a data-catalog-link href="#" target="_blank" rel="noopener"><span data-catalog-year></span> Calvin catalog</a> as saved on <span data-catalog-saved></span>. Use the catalog for the year you entered Calvin. Each sentence of catalog wording is marked as checked or not checked by this tool.</p>
+      </div>
     </div>
 
-    <section class="input-card" id="input-card" aria-labelledby="input-heading">
-      <h2 id="input-heading">Add your courses from Workday</h2>
-      <div class="drop-zone" id="drop-zone">
-        <span class="workday-buttons" role="img" aria-label="Workday’s buttons: Excel (circled), PDF, bookmark">
-          <img src="./workday-export-buttons.png" width="132" height="50" alt="">
-          <span class="export-ring" aria-hidden="true"></span>
-        </span>
-        <div class="drop-text">
-          <p class="drop-title">Drop your Academic Progress export (.xlsx) here</p>
-          <p class="export-hint">On Workday’s Academic Progress page, click the Excel button at the very top right, next to PDF (not the ones above each table). Advisors: use “View Academic Progress for Student” first.</p>
-        </div>
-        <label class="button file-button">Choose file…
-          <input type="file" id="workday-file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-        </label>
-      </div>
-      <details class="paste-route">
-        <summary>Or copy and paste from Workday instead</summary>
-        <ol>
-          <li>In Workday, open Academic Record, then Academic Progress.</li>
-          <li>If a table has several pages, set it to show all rows.</li>
-          <li>Select all (Ctrl/⌘-A), copy, and paste below.</li>
+    <aside class="upload-side">
+      <section class="steps-card" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">How to export from Workday</h2>
+        <p class="steps-sub">Academic Progress, as an Excel file</p>
+        <ol class="steps">
+          <li class="step"><span class="step-num">01</span>
+            <div><p class="step-title">Open Academic Progress</p>
+              <p>In Workday, open Academic Record, then Academic Progress. Advisors: use “View Academic Progress for Student” first.</p></div></li>
+          <li class="step"><span class="step-num">02</span>
+            <div><p class="step-title">Click the Excel button</p>
+              <p>At the very top right, next to PDF (not the ones above each table).</p>
+              <span class="workday-buttons" role="img" aria-label="Workday’s buttons: Excel (circled), PDF, bookmark">
+                <img src="./workday-export-buttons.png" width="132" height="50" alt="">
+                <span class="export-ring" aria-hidden="true"></span>
+              </span></div></li>
+          <li class="step"><span class="step-num">03</span>
+            <div><p class="step-title">Drop the file here</p>
+              <p>Or use Choose file. Your requirements open on the next page.</p></div></li>
         </ol>
-        <textarea id="workday-input" spellcheck="false" placeholder="Paste Workday Academic Progress here"></textarea>
-      </details>
-      <div class="input-actions">
-        <button type="button" class="button" id="clear-button">Clear</button>
-        <span id="status" class="status" role="status" aria-live="polite"></span>
-      </div>
-      <p class="privacy">Everything runs in your browser. What you paste or choose isn’t uploaded or saved anywhere, and is gone when you close or reload this page.</p>
-    </section>
+      </section>
+    </aside>
+  </div>
 
-    <main id="results"></main>
+  <div class="wrap layout" id="results-view">
+   <div class="layout-main">
+    <div class="results-bar">
+      <p class="results-step">Step 2 of 2: Your requirements</p>
+      <p id="results-status" class="status"></p>
+    </div>
+
+    <div class="view-tabs" role="tablist" aria-label="Requirements">
+      <button type="button" role="tab" class="view-tab" id="tab-dashboard" data-tab="dashboard" aria-selected="false" aria-controls="dashboard" tabindex="-1">Overview</button>
+      <button type="button" role="tab" class="view-tab" id="tab-core" data-tab="core" aria-selected="true" aria-controls="results">Calvin Core</button>
+      <button type="button" role="tab" class="view-tab" id="tab-major" data-tab="major" aria-selected="false" aria-controls="major" tabindex="-1">Major</button>
+      <button type="button" role="tab" class="view-tab" id="tab-minor" data-tab="minor" aria-selected="false" aria-controls="minor" tabindex="-1">Minor</button>
+    </div>
+
+    <section id="dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-dashboard"></section>
+    <main id="results" role="tabpanel" aria-labelledby="tab-core"></main>
+    <section id="major" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-major"></section>
+    <section id="minor" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-minor"></section>
    </div>
     <nav id="toc" class="toc" aria-label="Contents"></nav>
   </div>
@@ -361,10 +615,10 @@
   <footer>
     <div class="wrap">
       <p>An unofficial planning aid, not a degree audit. Course links open the official catalog.</p>
-      <p><a href="./docs/bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./docs/overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
+      <p><a href="./bookmarklet.html">Bookmarklet for the catalog page</a> · <a href="./overlap.html">Program overlap viewer</a> · <a href="https://github.com/kcarnold/calvin-core">Source</a></p>
     </div>
   </footer>
 
-  <script src="./docs/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

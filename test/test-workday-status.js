@@ -156,7 +156,7 @@ describe('the app shows Workday checks', () => {
     assert.ok(box, 'mismatch box shown');
     assert.equal(doc.querySelector('main').firstElementChild, box, 'shown first');
     const report = box.querySelector('textarea').value;
-    for (const s of ['Requirement: Foundational Writing', 'Workday status: Not Satisfied', 'Core Planner status: Complete',
+    for (const s of ['Requirement: Foundational Writing', 'Workday status: Not Satisfied', 'Degree Tracker status: Complete',
       'Catalog: 2026–27', 'Input: Academic Progress export', '  ENGL 101 (4 hrs)']) {
       assert.ok(report.includes(s), `report includes "${s}"\n${report}`);
     }
@@ -173,7 +173,7 @@ describe('the app shows Workday checks', () => {
   });
   it('a failing grade is listed as not counted', () => {
     const doc = render(run([makeCourse('REL 121', 4, { grade: 'W' })]));
-    assert.match(doc.querySelector('.callout-warn').textContent, /REL 121.*grade W/);
+    assert.match(doc.querySelector('.callout-warn').textContent, /REL 121.*isn’t counted toward any requirement: its grade \(W\) doesn’t earn credit/);
     assert.match(doc.querySelector('.transcript').textContent, /not counted \(grade W\)/);
   });
 });

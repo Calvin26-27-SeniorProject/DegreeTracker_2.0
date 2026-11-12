@@ -59,7 +59,7 @@ const sectionCode = r => `${r.Subject_RefID} ${r.Crs_Number}`;
 const isListed = r => r.Status !== 'Closed' && r.Sec_Number !== 'CPI' && !/Handlon/i.test(r.Campus || '');
 
 // raw: { [term]: report rows }; titles: { [course code]: catalog title }, the
-// core courses to keep (and their labs).
+// courses to keep (core and program courses, and their labs).
 export function buildScheduleJson(raw, titles) {
   const terms = Object.keys(raw).sort(termOrder);
   const keep = code => code in titles || (code.endsWith('L') && code.slice(0, -1) in titles);
@@ -123,6 +123,17 @@ export function coreCourseTitles(catalogs) {
   const titles = {};
   for (const data of catalogs) {
     for (const cat of data.categories) for (const c of cat.courses || []) titles[c.code] ??= c.title;
+  }
+  return titles;
+}
+
+// Every course code in the program files (catalog/programs/*.json), with its
+// title, so majors' and minors' courses get hours and sections too.
+export function programCourseTitles(programs) {
+  const titles = {};
+  for (const p of programs) {
+    for (const [code, title] of Object.entries(p.titles || {})) titles[code] ??= title;
+    for (const g of p.courseGroups || []) for (const c of g.courses) titles[c.code] ??= c.title;
   }
   return titles;
 }

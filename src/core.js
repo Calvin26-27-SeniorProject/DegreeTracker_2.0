@@ -234,19 +234,45 @@ export function parseProgress(text) {
 // row under it is one requirement with at most one "Registrations Used"
 // entry, so no lookahead is needed. A table ends at the first row without
 // both a requirement and a status.
+// Also returns `programs`, for the Major & minor page: one per requirement table, in
+// order, named from the export's "Program of Study" summary (the tables follow it
+// in the same order; names stay null if the counts differ):
+//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours, grade }] }] }]
+// Workday's wording, verbatim (the app shows grades only when its "Show grades"
+// toggle is on). Courses and workdayStatus don't depend on it.
 export function parseProgressRows(rows) {
   const records = [];
   let cols = null;
+  const summary = [];
+  let summaryCols = null;
+  const tables = [];
+  let table = null;
   for (const row of rows) {
     const cells = row.map(v => (v == null ? '' : String(v).replace(/ /g, ' ').trim()));
     const requirementCol = cells.indexOf('Requirement');
     if (requirementCol !== -1 && cells.includes('Status')) {
       const col = name => cells.indexOf(name);
       cols = { requirement: requirementCol, status: col('Status'), item: col('Registrations Used'),
-        period: col('Academic Period'), hours: col('Hours'), grade: col('Grade') };
+        period: col('Academic Period'), hours: col('Hours'), grade: col('Grade'), remaining: col('Remaining') };
+      table = new Map();
+      tables.push(table);
       continue;
     }
-    if (!cols) continue;
+    if (!cols) {
+      if (cells[0] === 'Program of Study' && cells.includes('Display ID')) {
+        summaryCols = { name: cells.indexOf('Display ID'), total: cells.indexOf('Count of Instances in Set'),
+          satisfied: cells.indexOf('Satisfied Academic Requirements Label') };
+      } else if (summaryCols && cells[summaryCols.name] && Number.isFinite(parseFloat(cells[summaryCols.total]))) {
+        // A program row has its requirement count; the rows after the table
+        // ("GPA Including Calvin Credit Exams", "Unused Registrations") don't,
+        // even when their first cell holds a value.
+        const num = i => { const n = parseFloat(cells[i]); return i !== -1 && Number.isFinite(n) ? n : null; };
+        summary.push({ name: cells[summaryCols.name], total: num(summaryCols.total), satisfied: num(summaryCols.satisfied) });
+      } else {
+        summaryCols = null;
+      }
+      continue;
+    }
     const get = key => (cols[key] === -1 ? '' : cells[cols[key]] || '');
     if (!get('requirement') || !get('status')) { cols = null; continue; }
     const hours = parseFloat(get('hours'));
@@ -258,8 +284,14 @@ export function parseProgressRows(rows) {
       grade: get('grade') || null,
       status: get('status'),
     });
+    const name = cleanRequirementName(get('requirement'));
+    if (!table.has(name)) table.set(name, { name, status: get('status'), remaining: get('remaining') || null, items: [] });
+    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null, grade: get('grade') || null });
   }
-  return progressFromRecords(records);
+  const named = summary.length === tables.length;
+  const programs = tables.map((t, i) => ({ name: named ? summary[i].name : null,
+    satisfied: named ? summary[i].satisfied : null, total: named ? summary[i].total : null, requirements: [...t.values()] }));
+  return { ...progressFromRecords(records), programs };
 }
 
 // ========== FORMAT DETECTION ==========
@@ -554,6 +586,119 @@ const WORKDAY_REQUIREMENTS = [
 ];
 export function workdayRequirementCategory(requirement) {
   return WORKDAY_REQUIREMENTS.find(([re]) => re.test(requirement))?.[1] ?? null;
+}
+
+// Whether a Workday requirement is the core's (the Calvin Core pages cover it).
+export function isCoreWorkdayRequirement(requirement) {
+  return !!workdayRequirementCategory(requirement) || KU_REQUIREMENT_RE.test(requirement);
+}
+
+const GPA_REQUIREMENT_RE = /\bGPA\b/;
+// Workday's other requirements (major, minor, ...) by program, for the Major & minor
+// page. Shown as Workday lists them: this tool doesn't check them. Leaves out the
+// core's requirements and GPA requirements. A pasted page has no program tables
+// (`programs`), so its requirements come from workdayStatus as one unnamed group.
+// input: a progress parse ({ programs?, workdayStatus }).
+export function programRequirements(input) {
+  const groups = input?.programs?.length ? input.programs : [{
+    name: null, satisfied: null, total: null,
+    requirements: [...(input?.workdayStatus || new Map())].map(([name, ws]) => ({
+      name, status: ws.status, remaining: null, items: ws.items.map(text => ({ text, period: null, hours: null })) })),
+  }];
+  const shown = r => !isCoreWorkdayRequirement(r.name) && !GPA_REQUIREMENT_RE.test(r.name);
+  return groups.map(g => ({ ...g, requirements: g.requirements.filter(shown) })).filter(g => g.requirements.length);
+}
+
+// ========== PROGRAM CHECKS (majors, minors) ==========
+// Program files (catalog/programs/<id>-<catoid>.json) hold one program's
+// requirements from one catalog year, checked against that year's catalog page
+// (poid, checkedAt). A Workday program is checked when a file has its exact name
+// and the selected catalog year.
+export function findProgram(programs, name, catoid) {
+  return programs.find(p => p.programName === name && p.catoid === catoid) || null;
+}
+
+// A program's requirements checked against a student's courses (as parsed:
+// labs are their own entries, e.g. CS 108L). Each requirement is 'done',
+// 'progress' (everything there, something in progress), 'todo', or 'check'
+// (there, but this tool can't tell, e.g. "3 semesters" of a seminar). A
+// lecture that needs a lab (program.labs) counts only with its lab.
+// courseGroups ("Take 10 hours from") count hours, labs included. Minimum
+// grades and manualRequirements aren't checked.
+// matched lists the student's courses that count, labs as their own entries
+// (lab: true), with the title, hours, and grade from the student's record.
+//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?, ... }], done, inProgress, total }
+export function checkProgram(program, courses) {
+  const byCode = new Map();
+  for (const c of courses) {
+    if (!c.code || c.status === 'exemption' || isNonPassingGrade(c.grade)) continue;
+    byCode.set(c.code, c);
+  }
+  const state = code => { const c = byCode.get(code); return !c ? null : c.status === 'in-progress' ? 'progress' : 'done'; };
+  const labOf = code => program.labs?.[code] || null;
+  // A course and its lab together: 'done', 'progress', 'no-lab' (lecture without its lab), or null.
+  const withLab = code => {
+    const own = state(code);
+    if (!own) return null;
+    const lab = labOf(code);
+    if (!lab) return own;
+    const labState = state(lab);
+    if (!labState) return 'no-lab';
+    return own === 'done' && labState === 'done' ? 'done' : 'progress';
+  };
+  const RANK = { done: 3, progress: 2, partial: 1, todo: 0 };
+  // The student's record of a course and, when it has one on the record, its lab.
+  const records = code => {
+    const own = byCode.get(code);
+    if (!own) return [];
+    const lab = labOf(code);
+    const entry = (c, isLab) => ({ code: c.code, status: state(c.code), title: c.title || null, hours: c.hours ?? null, grade: c.grade || null, ...(isLab && { lab: true }) });
+    return [entry(own, false), ...(lab && byCode.has(lab) ? [entry(byCode.get(lab), true)] : [])];
+  };
+
+  const items = [];
+  for (const r of program.requirements) {
+    const options = r.alternatives || r.codes.map(code => [code]);
+    let best = { status: 'todo', option: options[0] };
+    for (const option of options) {
+      const states = option.map(withLab);
+      const status = states.every(s => s === 'done') ? 'done'
+        : states.every(s => s === 'done' || s === 'progress') ? 'progress'
+        : states.some(Boolean) ? 'partial' : 'todo';
+      if (RANK[status] > RANK[best.status]) best = { status, option };
+    }
+    const matched = best.option.flatMap(records);
+    const missingLabs = best.option.filter(code => withLab(code) === 'no-lab').map(labOf);
+    let status = best.status === 'partial' ? 'todo' : best.status;
+    if (r.requiredOccurrences && status !== 'todo') status = 'check';
+    items.push({ kind: 'requirement', id: r.id, section: r.section, label: r.label, credits: r.credits,
+      note: r.note || null, waivable: !!r.manualWhenMissing, options, status, matched, missingLabs });
+  }
+  for (const g of program.courseGroups || []) {
+    let doneHours = 0;
+    let progressHours = 0;
+    const matched = [];
+    const missingLabs = [];
+    for (const { code } of g.courses) {
+      const s = withLab(code);
+      if (!s) continue;
+      const lab = labOf(code);
+      const hours = (byCode.get(code).hours || 0) + (lab && byCode.has(lab) ? byCode.get(lab).hours || 0 : 0);
+      if (s === 'done') doneHours += hours;
+      else progressHours += hours;
+      if (s === 'no-lab') missingLabs.push(lab);
+      matched.push(...records(code));
+    }
+    const status = doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
+    items.push({ kind: 'group', id: g.id, section: g.section, label: g.label, note: g.note || null,
+      minHours: g.minHours, hours: doneHours, inProgressHours: progressHours, courses: g.courses, status, matched, missingLabs });
+  }
+  return {
+    items,
+    done: items.filter(i => i.status === 'done').length,
+    inProgress: items.filter(i => i.status === 'progress' || i.status === 'check').length,
+    total: items.length,
+  };
 }
 
 // Whether a progress parse (its workdayStatus) lists any core requirement.

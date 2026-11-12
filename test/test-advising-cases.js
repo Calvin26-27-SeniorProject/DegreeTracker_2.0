@@ -1,6 +1,6 @@
 /**
  * Real students' records, de-identified: each test/fixtures/cases/*.json was
- * copied from the "Test case" section at the bottom of the Core Planner page
+ * copied from the "Test case" section at the bottom of the Degree Tracker page
  * (src/test-case.js) while advising. `expected` is what's right for that
  * student. A case marked "toolIsWrong" is a known bug: reported as a todo, not
  * a failure, until it's fixed.

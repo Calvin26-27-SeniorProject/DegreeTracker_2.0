@@ -2,7 +2,7 @@
 
 Unofficial planning aid that checks a student's Workday courses against Calvin's core requirements.
 
-## Core Planner (standalone app)
+## Degree Tracker (standalone app)
 
 `index.html`, served by GitHub Pages at https://kcarnold.github.io/calvin-core/. Students pick their entry-year catalog, paste Workday Academic Progress (or Academic History), and see each requirement's status, course options, and where each course counts.
 
