@@ -1,0 +1,108 @@
+{
+  "id": "secondary-education-major-ba",
+  "name": "Secondary Education Major, BA",
+  "code": "BA_SECED",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13288",
+  "description": "Candidates interested in teaching at the secondary level complete the secondary education major with one or more of the following 5-9 or 7-12 grade band programs: English language arts: 5-9 minor, 7-12 major mathematics: 5-9 minor, 7-12 major science: 5-9 minor, 7-12 major social studies: 5-9 minor, 7-12 major",
+  "totalHours": "40",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 18711,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53899"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 22606,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54903"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 22308,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+        },
+        {
+          "code": "EDUC 243",
+          "title": "Teaching and Learning Lab",
+          "credits": "2",
+          "courseId": 22607,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54904"
+        },
+        {
+          "code": "EDUC 249",
+          "title": "The Christian Teacher",
+          "credits": "2",
+          "courseId": 22616,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54913"
+        },
+        {
+          "code": "EDUC 307",
+          "title": "Curriculum, Instruction, and Content Area Literacy",
+          "credits": "4",
+          "courseId": 18715,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53903"
+        },
+        {
+          "code": "EDUC 308",
+          "title": "Internship I",
+          "credits": "4",
+          "courseId": 22609,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54906"
+        },
+        {
+          "code": "EDUC 346",
+          "title": "Internship II: Student Teaching",
+          "credits": "12",
+          "courseId": 18724,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53912"
+        },
+        {
+          "code": "EDUC 359",
+          "title": "Student Teaching Seminar",
+          "credits": "4",
+          "courseId": 22614,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54911"
+        },
+        {
+          "code": "EDUC 399",
+          "title": "Philosophy of Education",
+          "credits": "2",
+          "courseId": 18727,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53915"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 40",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

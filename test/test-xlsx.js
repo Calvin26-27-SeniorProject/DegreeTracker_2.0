@@ -125,6 +125,21 @@ describe('parseProgressRows', () => {
     assert.deepEqual([...overrides], ['Knowledge and Understanding - minimum 26 hours']);
   });
 
+  it('keeps every semester a repeated course was taken in, apart from the one course entry', () => {
+    const rows = [
+      HEADER,
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar', '2025 Fall', '0', 'CR'],
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar', '2026 Spring', '0', 'CR'],
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar (In Progress)', '2026 Fall', '0', ''],
+      ['CS 212', 'Satisfied', '', 'CS 212 - Data Structures and Algorithms', '2026 Fall', '4', 'A'],
+    ];
+    const { courses, courseAttempts } = parseProgressRows(rows);
+    assert.equal(courses.filter(c => c.code === 'CS 195').length, 1);
+    assert.deepEqual(courseAttempts.filter(c => c.code === 'CS 195').map(c => [c.period, c.status]),
+      [['2025 Fall', 'completed'], ['2026 Spring', 'completed'], ['2026 Fall', 'in-progress']]);
+    assert.equal(courseAttempts.length, 4);
+  });
+
   it('ignores rows outside requirement tables', () => {
     const rows = [
       ['Overall Academic Progress'],

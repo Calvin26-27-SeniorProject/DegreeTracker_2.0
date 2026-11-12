@@ -10,12 +10,29 @@ import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
 import schedule from '../schedule/sections.json';
-import bcs25 from '../catalog/programs/bcs-25.json';
-import csPlus25 from '../catalog/programs/cs-plus-25.json';
-import nursing25 from '../catalog/programs/nursing-25.json';
+import bcs25 from '../programs/2025/computer-science/major/computer-science-bcs/bcs-25.json';
+import csPlus25 from '../programs/2025/computer-science/major/computer-science-plus-bs/cs-plus-25.json';
+import nursing25 from '../programs/2025/nursing/major/nursing-bsn/nursing-25.json';
+import bcs24 from '../programs/2024/computer-science/major/computer-science-bcs/bcs-24.json';
+import csPlus24 from '../programs/2024/computer-science/major/computer-science-plus-bs/cs-plus-24.json';
+import nursing24 from '../programs/2024/nursing/major/nursing-bsn/nursing-24.json';
+import bcs25Catalog from '../programs/2025/computer-science/major/computer-science-bcs/program.json';
+import csPlus25Catalog from '../programs/2025/computer-science/major/computer-science-plus-bs/program.json';
+import nursing25Catalog from '../programs/2025/nursing/major/nursing-bsn/program.json';
+import bcs24Catalog from '../programs/2024/computer-science/major/computer-science-bcs/program.json';
+import csPlus24Catalog from '../programs/2024/computer-science/major/computer-science-plus-bs/program.json';
+import nursing24Catalog from '../programs/2024/nursing/major/nursing-bsn/program.json';
+import { courseIndex } from './program-courses.js';
 
 // Program files (majors, minors) checked against the catalog; see findProgram.
-const PROGRAMS = [bcs25, csPlus25, nursing25];
+// Every checked program has a file for each catalog year the app offers, so its
+// page looks the same whichever year is selected.
+const PROGRAMS = [bcs25, csPlus25, nursing25, bcs24, csPlus24, nursing24];
+// Titles and catalog links for each program file's courses, by "<id>-<catoid>".
+const CATALOG_COURSES = new Map([
+  [bcs25, bcs25Catalog], [csPlus25, csPlus25Catalog], [nursing25, nursing25Catalog],
+  [bcs24, bcs24Catalog], [csPlus24, csPlus24Catalog], [nursing24, nursing24Catalog],
+].map(([program, catalogProgram]) => [`${program.id}-${program.catoid}`, courseIndex(catalogProgram)]));
 
 // Newest first.
 const CATALOGS = [catalog25, catalog24];
@@ -87,8 +104,8 @@ function setTab(tab) {
 function parseInput(text) {
   const format = detectInputFormat(text);
   if (format === 'progress') {
-    const { courses, overrides, workdayStatus } = parseProgress(text);
-    return { format, courses, overrides, workdayStatus };
+    const { courses, courseAttempts, overrides, workdayStatus } = parseProgress(text);
+    return { format, courses, courseAttempts, overrides, workdayStatus };
   }
   return { format, courses: parseTranscript(text), overrides: undefined };
 }
@@ -96,9 +113,9 @@ function parseInput(text) {
 async function readExport(file) {
   try {
     const rows = readXlsxRows(await file.arrayBuffer());
-    const { courses, overrides, workdayStatus, programs } = parseProgressRows(rows);
+    const { courses, courseAttempts, overrides, workdayStatus, programs } = parseProgressRows(rows);
     if (!hasCoreRequirements(workdayStatus)) throw new Error(ONE_TABLE_EXPORT_MESSAGE);
-    return { name: file.name, format: 'progress-xlsx', courses, overrides, workdayStatus, programs };
+    return { name: file.name, format: 'progress-xlsx', courses, courseAttempts, overrides, workdayStatus, programs };
   } catch (err) {
     return { name: file.name, error: err.message };
   }
@@ -152,7 +169,7 @@ function analyzeInput(catalog) {
   state.programChecks = new Map();
   for (const g of state.programs || []) {
     const program = g.name && findProgram(PROGRAMS, g.name, catalog._meta.catoid);
-    if (program) state.programChecks.set(g.name, { program, result: checkProgram(program, input.courses) });
+    if (program) state.programChecks.set(g.name, { program, result: checkProgram(program, input.courses, input.courseAttempts || []) });
   }
   if (input?.error) {
     setStatus(`Couldn’t read ${input.name}: ${input.error}. Choose the .xlsx file Workday exports from Academic Progress.`, 'error');
@@ -201,9 +218,11 @@ function renderResults(catalog, analysis, projection) {
   const groups = state.programs || [];
   const hasInput = state.programs !== null;
   const checks = state.programChecks;
+  const programState = { hasInput, checks, schedule, openLists: state.openLists,
+    onListToggle: (key, open) => state.openLists.set(key, open), catalogCourses: CATALOG_COURSES };
   renderDashboard($('dashboard'), { catalog, analysis, groups, checks });
-  renderPrograms($('major'), { groups: groups.filter(g => !isMinor(g)), hasInput, kind: 'major', checks, schedule });
-  renderPrograms($('minor'), { groups: groups.filter(isMinor), hasInput, kind: 'minor', checks, schedule });
+  renderPrograms($('major'), { ...programState, groups: groups.filter(g => !isMinor(g)), kind: 'major' });
+  renderPrograms($('minor'), { ...programState, groups: groups.filter(isMinor), kind: 'minor' });
   highlightToc();
 }
 

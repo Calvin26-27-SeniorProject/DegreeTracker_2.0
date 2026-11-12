@@ -1,0 +1,88 @@
+{
+  "id": "psychology-minor",
+  "name": "Psychology Minor",
+  "code": "PSYC.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 370,
+    "name": "Psychology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13613",
+  "description": null,
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PSYC 151",
+          "placement": "after",
+          "text": "10 hours of PSYC electives*"
+        }
+      ],
+      "children": [
+        {
+          "name": "At Least One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 256",
+              "title": "Fundamentals of Research and Practice",
+              "credits": "4",
+              "courseId": 8866,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56388"
+            },
+            {
+              "code": "PSYC 334",
+              "title": "Cognitive Psychology",
+              "credits": "4",
+              "courseId": 8872,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56394"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 8873,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56395"
+            },
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 8874,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56396"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 18",
+      "description": "*Students may count an AP equivalent for PSYC 151, but PSYC 255 (or equivalent) does not count toward the minor. Additionally, the course taken from the \"At Least One from the Following\" group may not be applied to the 10-hour requirement.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

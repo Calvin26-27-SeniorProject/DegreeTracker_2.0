@@ -1,0 +1,435 @@
+{
+  "id": "medical-humanities-minor",
+  "name": "Medical Humanities Minor",
+  "code": "MIN_MEDHUM",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 367,
+    "name": "Philosophy"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13836",
+  "description": "The medical humanities minor is tailored to students pursuing careers in healthcare, medical research, or public health who also wish to explore the insights offered by fields such as English, history, communication, political science, philosophy, and religion. Calvin's medical humanities program is housed in the Department of Philosophy, which provides a foundation in ethics. Building on this foundation, students will complete courses across four distribution domains. The minor invites students to reflect on their health-related careers through fundamental questions: What does it look like to love my neighbor as myself? What makes a just society? What does it mean to be human? What is it to live well?",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 8795,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56317"
+        },
+        {
+          "code": "PHIL 212",
+          "title": "Ethical Dimensions of Health Care",
+          "credits": "4",
+          "courseId": 8801,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56323"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": "(Courses must be taken from at least two different areas.)",
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Diversity and Culture",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CORE 290",
+                  "title": "Special Topics in Diversity, Equity, Inclusion, and Belonging",
+                  "credits": "1-2",
+                  "courseId": 11226,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56977"
+                },
+                {
+                  "code": "HIST 250",
+                  "title": "Native American History",
+                  "credits": "4",
+                  "courseId": 11732,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57083"
+                },
+                {
+                  "code": "HIST 255",
+                  "title": "African-American History",
+                  "credits": "4",
+                  "courseId": 8444,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56163"
+                },
+                {
+                  "code": "HIST 256",
+                  "title": "Women and Gender in US History",
+                  "credits": "4",
+                  "courseId": 9889,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56611"
+                },
+                {
+                  "code": "POLS 277",
+                  "title": "Asian Politics",
+                  "credits": "4",
+                  "courseId": 9452,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56573"
+                },
+                {
+                  "code": "POLS 279",
+                  "title": "African Politics",
+                  "credits": "4",
+                  "courseId": 8845,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56367"
+                },
+                {
+                  "code": "PUBH 385",
+                  "title": "The Impact of Clean Water",
+                  "credits": "4",
+                  "courseId": 10566,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56813"
+                },
+                {
+                  "code": "SOC 231",
+                  "title": "Intercultural Communication",
+                  "credits": "4",
+                  "courseId": 9144,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56466"
+                },
+                {
+                  "code": "SOC 250",
+                  "title": "Diversity and Inequality in the United States",
+                  "credits": "4",
+                  "courseId": 9143,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56465"
+                },
+                {
+                  "code": "SOC 301",
+                  "title": "Gender and Sexuality in the United States",
+                  "credits": "4",
+                  "courseId": 9471,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56592"
+                },
+                {
+                  "code": "SOWK 250",
+                  "title": "Diversity and Inequality in the United States",
+                  "credits": "4",
+                  "courseId": 9157,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56479"
+                },
+                {
+                  "code": "SOWK 260",
+                  "title": "Global Issues and Perspectives",
+                  "credits": "2",
+                  "courseId": 9159,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56481"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Historical and Literary Perspectives",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ENGL 250",
+                  "title": "Literature of Faith",
+                  "credits": "2, 4",
+                  "courseId": 10610,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56858"
+                },
+                {
+                  "code": "ENGL 290",
+                  "title": "Ways of Reading",
+                  "credits": "4",
+                  "courseId": 10327,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56752"
+                },
+                {
+                  "code": "HIST 274",
+                  "title": "Environmental History",
+                  "credits": "4",
+                  "courseId": 8453,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56172"
+                },
+                {
+                  "code": "HIST 356",
+                  "title": "American Social and Cultural History",
+                  "credits": "4",
+                  "courseId": 8459,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56178"
+                },
+                {
+                  "code": "HNRS 214",
+                  "title": "Honors Visual Art",
+                  "credits": "2",
+                  "courseId": 11746,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57097"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Society and Public Policy",
+              "description": null,
+              "courses": [
+                {
+                  "code": "COMM 141",
+                  "title": "Visual Rhetoric",
+                  "credits": "2",
+                  "courseId": 7887,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55901"
+                },
+                {
+                  "code": "COMM 305",
+                  "title": "Persuasion and Propaganda",
+                  "credits": "4",
+                  "courseId": 7906,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55920"
+                },
+                {
+                  "code": "COMM 311",
+                  "title": "Argumentation and Advocacy",
+                  "credits": "4",
+                  "courseId": 7907,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+                },
+                {
+                  "code": "COMM 362",
+                  "title": "Small Group and Organizational Communication",
+                  "credits": "4",
+                  "courseId": 7911,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55925"
+                },
+                {
+                  "code": "COMM 398",
+                  "title": "Communication, Technology, and Society",
+                  "credits": "4",
+                  "courseId": 10581,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56828"
+                },
+                {
+                  "code": "POLS 212",
+                  "title": "Institutions and Politics of US Public Policy",
+                  "credits": "2",
+                  "courseId": 8839,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56361"
+                },
+                {
+                  "code": "POLS 224",
+                  "title": "Contemporary Issues in Comparative Politics",
+                  "credits": "2",
+                  "courseId": 11204,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56955"
+                },
+                {
+                  "code": "POLS 240",
+                  "title": "Freedom, Justice, and Political Authority",
+                  "credits": "4",
+                  "courseId": 8843,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56365"
+                },
+                {
+                  "code": "PHIL 202",
+                  "title": "Philosophy, Politics, and Law",
+                  "credits": "4",
+                  "courseId": 8797,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56319"
+                },
+                {
+                  "code": "PSYC 222",
+                  "title": "Human Sexuality and Gender",
+                  "credits": "2",
+                  "courseId": 8864,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56386"
+                },
+                {
+                  "code": "PSYC 270",
+                  "title": "Children at Risk",
+                  "credits": "4",
+                  "courseId": 10365,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56790"
+                },
+                {
+                  "code": "PSYC 335",
+                  "title": "Health Psychology",
+                  "credits": "4",
+                  "courseId": 8873,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56395"
+                },
+                {
+                  "code": "PUBH 101",
+                  "title": "Introduction to Public Health",
+                  "credits": "4",
+                  "courseId": 8881,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56403"
+                },
+                {
+                  "code": "PUBH 395",
+                  "title": "Human Flourishing through Public Health",
+                  "credits": "4",
+                  "courseId": 8986,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56407"
+                },
+                {
+                  "code": "SOC 201",
+                  "title": "Families",
+                  "credits": "2",
+                  "courseId": 9147,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56469"
+                },
+                {
+                  "code": "SOC 202",
+                  "title": "Urban Sociology",
+                  "credits": "4",
+                  "courseId": 9146,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56468"
+                },
+                {
+                  "code": "SOC 203",
+                  "title": "Sociology of Deviance",
+                  "credits": "2",
+                  "courseId": 9148,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56470"
+                },
+                {
+                  "code": "SOWK 240",
+                  "title": "Introduction to Social Work and Social Welfare",
+                  "credits": "2",
+                  "courseId": 9156,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56478"
+                },
+                {
+                  "code": "SOWK 360",
+                  "title": "Social Welfare Policy and Advocacy",
+                  "credits": "4",
+                  "courseId": 9162,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56484"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "PHIL 202",
+                  "placement": "left",
+                  "text": "POLS 242 /"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Philosophical and Religious Perspectives",
+              "description": null,
+              "courses": [
+                {
+                  "code": "PHIL 205",
+                  "title": "Ethics",
+                  "credits": "4",
+                  "courseId": 8798,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56320"
+                },
+                {
+                  "code": "PHIL 207",
+                  "title": "Justice and the Common Good: Studies in Political Philosophy",
+                  "credits": "4",
+                  "courseId": 8799,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56321"
+                },
+                {
+                  "code": "PHIL 211",
+                  "title": "Philosophy of Gender",
+                  "credits": "4",
+                  "courseId": 8800,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56322"
+                },
+                {
+                  "code": "PHIL 223",
+                  "title": "Peaceable Kingdom",
+                  "credits": "4",
+                  "courseId": 10596,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56843"
+                },
+                {
+                  "code": "PHIL 225",
+                  "title": "Public Philosophy",
+                  "credits": "4",
+                  "courseId": 10598,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56845"
+                },
+                {
+                  "code": "PHIL 313",
+                  "title": "Emotions and Motivation",
+                  "credits": "4",
+                  "courseId": 10594,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56841"
+                },
+                {
+                  "code": "PHIL 318",
+                  "title": "Minds, Brains, and Persons",
+                  "credits": "4",
+                  "courseId": 8804,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56326"
+                },
+                {
+                  "code": "PHIL 365",
+                  "title": "Ethical Theory",
+                  "credits": "4",
+                  "courseId": 8807,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56329"
+                },
+                {
+                  "code": "REL 261",
+                  "title": "Christianity and Culture",
+                  "credits": "4",
+                  "courseId": 9121,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56442"
+                },
+                {
+                  "code": "REL 262",
+                  "title": "Social Justice from the Prophets to Jesus",
+                  "credits": "4",
+                  "courseId": 9905,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56628"
+                },
+                {
+                  "code": "REL 263",
+                  "title": "Theology, Beauty, and the Arts",
+                  "credits": "4",
+                  "courseId": 9906,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56629"
+                },
+                {
+                  "code": "REL 323",
+                  "title": "Studies in Christian Origins",
+                  "credits": "4",
+                  "courseId": 9125,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56446"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

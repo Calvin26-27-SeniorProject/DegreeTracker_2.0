@@ -1,0 +1,208 @@
+{
+  "id": "geology-minor",
+  "name": "Geology Minor",
+  "code": "GEOL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 362,
+    "name": "Geology, Geography, and Environment"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13695",
+  "description": null,
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "GEO 151",
+          "title": "Introduction to Geology",
+          "credits": "3",
+          "courseId": 8410,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56128"
+        },
+        {
+          "code": "GEO 152",
+          "title": "Earth History",
+          "credits": "3",
+          "courseId": 8411,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56129"
+        },
+        {
+          "code": "GEO 215",
+          "title": "Mineralogy",
+          "credits": "3",
+          "courseId": 8414,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56132"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 151",
+          "placement": "after",
+          "text": "OR GEO 120 - Earth Systems OR GEO 153 - Great Lakes Geology"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "GEO 181",
+              "title": "First-Year Research in Earth Sciences: Dunes",
+              "credits": "3",
+              "courseId": 8392,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56109"
+            },
+            {
+              "code": "GEO 212",
+              "title": "Structural Geology and Tectonics",
+              "credits": "3",
+              "courseId": 8413,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56131"
+            },
+            {
+              "code": "GEO 251",
+              "title": "Oceanography",
+              "credits": "3",
+              "courseId": 8415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56133"
+            },
+            {
+              "code": "GEO 252",
+              "title": "Geomorphology",
+              "credits": "3",
+              "courseId": 8397,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56115"
+            },
+            {
+              "code": "GEO 260",
+              "title": "GIS and Cartography",
+              "credits": "4",
+              "courseId": 8398,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56116"
+            },
+            {
+              "code": "GEO 304",
+              "title": "Geochemistry",
+              "credits": "4",
+              "courseId": 8416,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56134"
+            },
+            {
+              "code": "GEO 312",
+              "title": "Special Topics in Environmental Geology",
+              "credits": "2, 4",
+              "courseId": 8417,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56135"
+            },
+            {
+              "code": "GEO 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 8418,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56136"
+            },
+            {
+              "code": "GEO 316",
+              "title": "Igneous and Metamorphic Petrology",
+              "credits": "3",
+              "courseId": 8419,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56137"
+            },
+            {
+              "code": "GEO 317",
+              "title": "Sedimentation and Stratigraphy",
+              "credits": "3",
+              "courseId": 8420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56138"
+            },
+            {
+              "code": "GEO 322",
+              "title": "Coastal Geomorphology",
+              "credits": "2",
+              "courseId": 8402,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56120"
+            },
+            {
+              "code": "GEO 323",
+              "title": "Coastal Geomorphology Methods",
+              "credits": "2",
+              "courseId": 11168,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56918"
+            },
+            {
+              "code": "GEO 325",
+              "title": "Hydrogeology",
+              "credits": "3",
+              "courseId": 8421,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56139"
+            },
+            {
+              "code": "GEO 341",
+              "title": "Geology Field Methods",
+              "credits": "1, 2, or 4",
+              "courseId": 8422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56140"
+            },
+            {
+              "code": "GEO 385",
+              "title": "Internship in Geology, Geography, and Environment",
+              "credits": "1, 2, 4",
+              "courseId": 8407,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56125"
+            },
+            {
+              "code": "GEO 395",
+              "title": "Senior Seminar in Geology, Geography, and Environment",
+              "credits": "4",
+              "courseId": 8409,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56127"
+            },
+            {
+              "code": "GEO 396",
+              "title": "Research in Geology, Geography, and Environment",
+              "credits": "2, 4",
+              "courseId": 8424,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56142"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognate",
+          "description": null,
+          "courses": [
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 7916,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

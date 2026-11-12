@@ -1,0 +1,167 @@
+{
+  "id": "actuarial-science-ba",
+  "name": "Actuarial Science, BA",
+  "code": "ACTRY.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 364,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13666",
+  "description": "Students interested in employment in the actuarial sciences are strongly encouraged to begin taking the first actuarial exams before graduating.",
+  "totalHours": "50",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "ECON 343",
+          "title": "Applied Econometrics",
+          "credits": "4",
+          "courseId": 8190,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56006"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 7875,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+        },
+        {
+          "code": "FIN 302",
+          "title": "Investments",
+          "credits": "4",
+          "courseId": 7876,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55891"
+        },
+        {
+          "code": "MATH 161",
+          "title": "Calculus: Modeling and Computation",
+          "credits": "4",
+          "courseId": 12160,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+        },
+        {
+          "code": "MATH 162",
+          "title": "Differential and Integral Calculus",
+          "credits": "4",
+          "courseId": 12161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57856"
+        },
+        {
+          "code": "MATH 271",
+          "title": "Multivariable Calculus",
+          "credits": "4",
+          "courseId": 8622,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56243"
+        },
+        {
+          "code": "STAT 341",
+          "title": "Computational Bayesian Statistics",
+          "credits": "4",
+          "courseId": 9420,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56541"
+        },
+        {
+          "code": "STAT 343",
+          "title": "Probability and Statistics",
+          "credits": "4",
+          "courseId": 9421,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56542"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STAT 341",
+          "placement": "after",
+          "text": "OR STAT 344 - Mathematical Statistics"
+        },
+        {
+          "course": "ECON 343",
+          "placement": "after",
+          "text": "OR STAT 245 - Applied Data Analysis"
+        },
+        {
+          "course": "MATH 161",
+          "placement": "after",
+          "text": "OR MATH 163 - Calculus: Modeling, Computation, Techniques of Integration"
+        }
+      ],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 7949,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+            },
+            {
+              "code": "DATA 202",
+              "title": "Introduction to Machine Learning",
+              "credits": "4",
+              "courseId": 7969,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55984"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 106",
+              "placement": "after",
+              "text": "OR CS 108 - Introduction to Computing"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 50",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

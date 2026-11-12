@@ -1,0 +1,172 @@
+{
+  "id": "biomedical-engineering-minor",
+  "name": "Biomedical Engineering Minor",
+  "code": "BIOMD.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 763,
+    "name": "Engineering"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13230",
+  "description": "Biomedical engineering is a broad field that features many different types of engineering expertise working together to find solutions to address human health needs. This minor will prepare students for entry-level work or graduate school in the biomedical engineering field. As a biomedical engineer or biomedical technologist, you will be prepared to work on multidisciplinary teams alongside scientists, engineers, patients, nurses, and physicians to develop products, processes, or systems that can alleviate suffering and restore function and dignity. The biomedical engineering minor will contribute toward preparation for jobs involving a blend of research and development as well as experimentation and data analysis, as well as interacting collaboratively with regulatory bodies to bring innovative products to the market, or researching new materials, technologies, and processes that will enable others to unlock solutions for years to come.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 396",
+          "title": "Perspectives in Medicine",
+          "credits": "4",
+          "courseId": 17778,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53767"
+        },
+        {
+          "code": "ENGR 250",
+          "title": "Introduction to Biomedical Engineering",
+          "credits": "2",
+          "courseId": 21535,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54579"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 161",
+              "title": "Cellular and Genetic Systems",
+              "credits": "3",
+              "courseId": 17752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+            },
+            {
+              "code": "BIOL 205",
+              "title": "Human Anatomy",
+              "credits": "3",
+              "courseId": 17753,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+            },
+            {
+              "code": "BIOL 206",
+              "title": "Human Physiology",
+              "credits": "3",
+              "courseId": 17754,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 325",
+              "title": "Biotechnology",
+              "credits": "3",
+              "courseId": 17762,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53751"
+            },
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "KIN 212",
+              "title": "Anatomical Kinesiology",
+              "credits": "4",
+              "courseId": 19780,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54106"
+            },
+            {
+              "code": "KIN 213",
+              "title": "Biomechanics and Motor Learning",
+              "credits": "4",
+              "courseId": 19781,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54107"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 106",
+              "placement": "after",
+              "text": "OR CS 108 - Introduction to Computing OR CS 112 - Introduction to Data Structures"
+            },
+            {
+              "course": "STAT 145",
+              "placement": "after",
+              "text": "OR STAT 243 - Statistics OR STAT 245 - Applied Data Analysis"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGR 202",
+              "title": "Statics and Dynamics",
+              "credits": "4",
+              "courseId": 18752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53940"
+            },
+            {
+              "code": "ENGR 204",
+              "title": "Circuits Analysis and Electronics",
+              "credits": "3",
+              "courseId": 18753,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53941"
+            },
+            {
+              "code": "ENGR 205",
+              "title": "Principles of Materials Science",
+              "credits": "4",
+              "courseId": 21479,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54522"
+            },
+            {
+              "code": "ENGR 209",
+              "title": "Introduction to Conservation Laws and Fluid Mechanics",
+              "credits": "4",
+              "courseId": 18754,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53942"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

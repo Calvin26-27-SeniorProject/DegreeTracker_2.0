@@ -1,0 +1,51 @@
+{
+  "id": "kinesiology-minor",
+  "name": "Kinesiology Minor",
+  "code": "KIN.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 363,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13672",
+  "description": null,
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 8587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56206"
+        }
+      ],
+      "notes": [
+        {
+          "course": "KIN 201",
+          "placement": "after",
+          "text": "a minimum of five additional courses, at least two at the 300 level, approved by academic advisor and department chair"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

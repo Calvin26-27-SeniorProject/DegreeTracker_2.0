@@ -1,0 +1,59 @@
+{
+  "id": "geographic-information-science-certificate",
+  "name": "Geographic Information Science, Certificate",
+  "code": "GIS.CERT",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 362,
+    "name": "Geology, Geography, and Environment"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13754",
+  "description": "The Geographic Information Science Certificate is designed to be completed in 2 to 3 semesters. The program is suited for students who wish to gain expertise in geographic information systems and science (GIS/GISc) for professional work. The program is a good fit for those who want to begin their career in GIS in the public or private sector or use GIS skills in other disciplines.",
+  "totalHours": "12",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 8398,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56116"
+        },
+        {
+          "code": "GEO 361",
+          "title": "Advanced GIS",
+          "credits": "4",
+          "courseId": 8405,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56123"
+        },
+        {
+          "code": "GEO 362",
+          "title": "Remote Sensing of Earth",
+          "credits": "4",
+          "courseId": 8406,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56124"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 12",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

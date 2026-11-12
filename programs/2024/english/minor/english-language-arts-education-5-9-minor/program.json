@@ -1,0 +1,109 @@
+{
+  "id": "english-language-arts-education-5-9-minor",
+  "name": "English Language Arts Education 5-9 Minor",
+  "code": "MIN_LA_59",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13269",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 215",
+          "title": "Vocabulary, Writing, and Comprehension Instruction",
+          "credits": "4",
+          "courseId": 18719,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53907"
+        },
+        {
+          "code": "ENGL 200",
+          "title": "Introduction to Global Literature",
+          "credits": "4",
+          "courseId": 21987,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54674"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 22000,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54687"
+        },
+        {
+          "code": "ENGL 325",
+          "title": "Advanced Studies in Children's and Adolescent Literature",
+          "credits": "4",
+          "courseId": 21997,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54684"
+        },
+        {
+          "code": "ENGL 350",
+          "title": "Teaching of Writing",
+          "credits": "4",
+          "courseId": 18737,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53925"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 200",
+          "placement": "after",
+          "text": "OR ENGL 300 - Advanced Studies in Global Literature"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 270",
+              "title": "Introduction to Linguistics",
+              "credits": "4",
+              "courseId": 18741,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53929"
+            },
+            {
+              "code": "ENGL 371",
+              "title": "History of the English Language",
+              "credits": "4",
+              "courseId": 18742,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53930"
+            },
+            {
+              "code": "ENGL 372",
+              "title": "Sociolinguistics and Issues in Language Education",
+              "credits": "4",
+              "courseId": 18743,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53931"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

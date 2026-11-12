@@ -1,0 +1,72 @@
+{
+  "id": "spanish-minor",
+  "name": "Spanish Minor",
+  "code": "SPAN.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13086",
+  "description": "A minimum grade of C (2.0) in SPAN 301 is required as a prerequisite for any concentration in Spanish. Programs for students wishing to major or minor in Spanish are worked out individually with an appropriate departmental advisor. Note: Given the range of study-abroad options and opportunities to earn Core through Spanish courses, early advising is strongly encouraged, especially for students with tight schedules.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SPAN 301",
+          "title": "Advanced Grammar, Composition and Conversation I",
+          "credits": "4",
+          "courseId": 20667,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54406"
+        },
+        {
+          "code": "SPAN 302",
+          "title": "Advanced Grammar, Composition and Conversation II",
+          "credits": "4",
+          "courseId": 20668,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54407"
+        },
+        {
+          "code": "SPAN 308",
+          "title": "Introduction to the Hispanic World I",
+          "credits": "4",
+          "courseId": 20669,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54408"
+        },
+        {
+          "code": "SPAN 309",
+          "title": "Introduction to the Hispanic World II",
+          "credits": "4",
+          "courseId": 20670,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54409"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SPAN 309",
+          "placement": "after",
+          "text": "an advisor-approved Spanish semester or summer course abroad, to provide sufficient Spanish electives to reach 20 hours for the program"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

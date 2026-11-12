@@ -1,0 +1,230 @@
+{
+  "id": "statistics-ba",
+  "name": "Statistics, BA",
+  "code": "STAT.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 364,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13667",
+  "description": "Students interested in applied statistics are encouraged to take additional computer science courses. Students interested in graduate school are encouraged to take additional mathematics courses.",
+  "totalHours": "48-51",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MATH 161",
+          "title": "Calculus: Modeling and Computation",
+          "credits": "4",
+          "courseId": 12160,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+        },
+        {
+          "code": "MATH 162",
+          "title": "Differential and Integral Calculus",
+          "credits": "4",
+          "courseId": 12161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57856"
+        },
+        {
+          "code": "MATH 231",
+          "title": "Differential Equations with Linear Algebra",
+          "credits": "4",
+          "courseId": 8621,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56242"
+        },
+        {
+          "code": "MATH 355",
+          "title": "Advanced Linear Algebra",
+          "credits": "4",
+          "courseId": 8630,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56252"
+        },
+        {
+          "code": "MATH 391",
+          "title": "Colloquium",
+          "credits": "0",
+          "courseId": 8637,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56259"
+        },
+        {
+          "code": "STAT 241",
+          "title": "Engineering Statistics",
+          "credits": "2",
+          "courseId": 9417,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56538"
+        },
+        {
+          "code": "STAT 245",
+          "title": "Applied Data Analysis",
+          "credits": "4",
+          "courseId": 9419,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56540"
+        },
+        {
+          "code": "STAT 343",
+          "title": "Probability and Statistics",
+          "credits": "4",
+          "courseId": 9421,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56542"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MATH 391",
+          "placement": "right",
+          "text": "(taken twice)"
+        },
+        {
+          "course": "MATH 231",
+          "placement": "after",
+          "text": "OR MATH 255 - Introductory Linear Algebra"
+        },
+        {
+          "course": "STAT 241",
+          "placement": "after",
+          "text": "OR STAT 243 - Statistics"
+        },
+        {
+          "course": "MATH 161",
+          "placement": "after",
+          "text": "OR MATH 163 - Calculus: Modeling, Computation, Techniques of Integration"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "DATA 304",
+              "title": "Visualizing Data and Models",
+              "credits": "2",
+              "courseId": 9454,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56575"
+            },
+            {
+              "code": "DATA 385",
+              "title": "Topics in Data Science",
+              "credits": "2, 4",
+              "courseId": 11183,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56934"
+            },
+            {
+              "code": "STAT 341",
+              "title": "Computational Bayesian Statistics",
+              "credits": "4",
+              "courseId": 9420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56541"
+            },
+            {
+              "code": "STAT 344",
+              "title": "Mathematical Statistics",
+              "credits": "4",
+              "courseId": 9422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56543"
+            },
+            {
+              "code": "STAT 385",
+              "title": "Topics in Statistics",
+              "credits": "2-4",
+              "courseId": 10364,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56789"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 7949,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+            },
+            {
+              "code": "DATA 202",
+              "title": "Introduction to Machine Learning",
+              "credits": "4",
+              "courseId": 7969,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55984"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 106",
+              "placement": "after",
+              "text": "OR CS 108 - Introduction to Computing"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": "This requirement is intended to give statistics majors an opportunity to see how statistical methods are used in a particular domain context.",
+              "courses": [
+                {
+                  "code": "ECON 343",
+                  "title": "Applied Econometrics",
+                  "credits": "4",
+                  "courseId": 8190,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56006"
+                },
+                {
+                  "code": "PSYC 256",
+                  "title": "Fundamentals of Research and Practice",
+                  "credits": "4",
+                  "courseId": 8866,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56388"
+                },
+                {
+                  "code": "PUBH 248",
+                  "title": "Epidemiology",
+                  "credits": "3",
+                  "courseId": 8882,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56404"
+                },
+                {
+                  "code": "STAT 390",
+                  "title": "Independent Study",
+                  "credits": "1-4",
+                  "courseId": 9967,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56691"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "STAT 390",
+                  "placement": "right",
+                  "text": "(with approval)"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 48-51",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

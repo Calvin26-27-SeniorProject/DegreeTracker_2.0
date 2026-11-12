@@ -1,0 +1,244 @@
+{
+  "id": "marketing-professional-selling-concentration-ba",
+  "name": "Marketing: Professional Selling Concentration, BA",
+  "code": "MKTG.SELL.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13216",
+  "description": "Marketing is a broad business discipline that includes advertising, branding, sales, digital media, product development, pricing, distribution, and market research all working together to create a comprehensive marketing strategy. Marketers seek to understand their customers in order to deliver goods and services in a way that brings them the most value. Learn how this can be done in ways that glorify God and promote human flourishing. The BA in marketing is offered in three concentrations: Analytics and Research: Learn research and data analytic techniques needed to understand consumers, culture and the business environment to enable the creation of marketing strategies. Marketing Management: Learn how to develop strategies and implement marketing programs to create value for an organization and the consumers they serve. Professional Selling: Learn the skills of relationship selling and caring for customers. Overlap Policy This program may not be combined with another marketing concentration or the business minor program. No more than two majors from the School of Business may be obtained.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 17515,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53689"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 17702,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53690"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 17786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53775"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 17787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53776"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 17798,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53787"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 17791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53780"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 22879,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55779"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 17794,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53783"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "BUS 352",
+          "title": "Negotiation Skills and Theory",
+          "credits": "2",
+          "courseId": 22269,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54756"
+        },
+        {
+          "code": "BUS 394",
+          "title": "Business Capstone",
+          "credits": "4",
+          "courseId": 17799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53788"
+        },
+        {
+          "code": "MKTG 302",
+          "title": "Consumer Behavior",
+          "credits": "4",
+          "courseId": 17796,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53785"
+        },
+        {
+          "code": "MKTG 303",
+          "title": "Professional Selling",
+          "credits": "4",
+          "courseId": 21496,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54540"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 22275,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 18292,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 18293,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53883"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 18294,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53884"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 305",
+              "title": "Persuasion and Propaganda",
+              "credits": "4",
+              "courseId": 18220,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53810"
+            },
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 18221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53811"
+            },
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 20261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54300"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BUS 205",
+              "title": "Project Management",
+              "credits": "4",
+              "courseId": 22633,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54930"
+            },
+            {
+              "code": "BUS 391",
+              "title": "Business Internship",
+              "credits": "2",
+              "courseId": 17785,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53774"
+            },
+            {
+              "code": "ENGL 241",
+              "title": "Business Writing",
+              "credits": "4",
+              "courseId": 18733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53921"
+            },
+            {
+              "code": "MKTG 304",
+              "title": "Digital Marketing",
+              "credits": "4",
+              "courseId": 22880,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55780"
+            },
+            {
+              "code": "SCM 201",
+              "title": "Introduction to Operations and Supply Chain Management",
+              "credits": "4",
+              "courseId": 22270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54757"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BUS 391",
+              "placement": "right",
+              "text": "(in marketing)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at Least 66",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

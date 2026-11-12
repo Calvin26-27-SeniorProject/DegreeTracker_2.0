@@ -1,0 +1,556 @@
+{
+  "id": "psychology-major-bs",
+  "name": "Psychology Major, BS",
+  "code": "PSYC.MAJ.BS",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 802,
+    "name": "Psychology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13235",
+  "description": "Students must maintain a 2.0 in psychology courses in order to graduate with a major or minor in psychology. Psychology majors who are also ministry minors are advised to take PSYC 201. Students should ordinarily take PSYC 255 during their sophomore year and PSYC 256 in the semester following completion of PSYC 255. Students may not take PSYC 255 and PSYC 256 simultaneously. When possible, students are encouraged to postpone taking courses numbered 330 or above until after the completion of PSYC 256. PSYC 399 is a course that may be taken when the student has completed a majority of the psychology courses required for the psychology major. Students intending to do doctoral work in psychology are strongly encouraged to take PSYC 356 during their junior or senior year. When selecting courses, students are encouraged to follow the recommended four-year plan for the general psychology major or the plan for majors with a neuroscience concentration. A four-year plan is available in the psychology office. The psychology department offers a bachelor of arts (BA) degree in psychology and a bachelor of science (BS) degree in psychology. The BS course of study has stronger quantitative and research components. It is recommended that students intent on graduate study in psychology complete the coursework for the BS degree.",
+  "totalHours": "60-64",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 20255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+        },
+        {
+          "code": "PSYC 255",
+          "title": "Statistics and Research Design",
+          "credits": "4",
+          "courseId": 20259,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+        },
+        {
+          "code": "PSYC 256",
+          "title": "Fundamentals of Research and Practice",
+          "credits": "4",
+          "courseId": 20260,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54299"
+        },
+        {
+          "code": "PSYC 399",
+          "title": "Psychology and Religion",
+          "credits": "4",
+          "courseId": 20574,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54313"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 20268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54307"
+            },
+            {
+              "code": "PSYC 244",
+              "title": "Introduction to Biological Psychology",
+              "credits": "2",
+              "courseId": 22579,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54875"
+            }
+          ],
+          "notes": [
+            {
+              "course": "PSYC 244",
+              "placement": "after",
+              "text": "AND PSYC 344 - Neuropsychology"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take at Least One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 334",
+              "title": "Cognitive Psychology",
+              "credits": "4",
+              "courseId": 20266,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54305"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 20267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54306"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 356",
+              "title": "Experimental Psychology",
+              "credits": "4",
+              "courseId": 20270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54309"
+            },
+            {
+              "code": "PSYC 380",
+              "title": "Internship in Psychology",
+              "credits": "4",
+              "courseId": 20272,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54311"
+            },
+            {
+              "code": "PSYC 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 20573,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54312"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 212",
+              "title": "Psychopathology",
+              "credits": "4",
+              "courseId": 20256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+            },
+            {
+              "code": "PSYC 220",
+              "title": "Psychological Perspectives on Marriage and the Family",
+              "credits": "2",
+              "courseId": 20257,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54296"
+            },
+            {
+              "code": "PSYC 222",
+              "title": "Human Sexuality and Gender",
+              "credits": "2",
+              "courseId": 20258,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54297"
+            },
+            {
+              "code": "PSYC 244",
+              "title": "Introduction to Biological Psychology",
+              "credits": "2",
+              "courseId": 22579,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54875"
+            },
+            {
+              "code": "PSYC 270",
+              "title": "Children at Risk",
+              "credits": "4",
+              "courseId": 22038,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54725"
+            },
+            {
+              "code": "PSYC 305",
+              "title": "The Psychology of Work",
+              "credits": "4",
+              "courseId": 20271,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54310"
+            },
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 20261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54300"
+            },
+            {
+              "code": "PSYC 311",
+              "title": "Theories of Personality",
+              "credits": "2",
+              "courseId": 20262,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54301"
+            },
+            {
+              "code": "PSYC 312",
+              "title": "Clinical and Counseling Assessment",
+              "credits": "2",
+              "courseId": 20263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54302"
+            },
+            {
+              "code": "PSYC 314",
+              "title": "Theories of Counseling and Psychotherapy",
+              "credits": "2",
+              "courseId": 20264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54303"
+            },
+            {
+              "code": "PSYC 322",
+              "title": "Perspectives in Psychology",
+              "credits": "2",
+              "courseId": 20265,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54304"
+            },
+            {
+              "code": "PSYC 334",
+              "title": "Cognitive Psychology",
+              "credits": "4",
+              "courseId": 20266,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54305"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 20267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54306"
+            },
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 20268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54307"
+            },
+            {
+              "code": "PSYC 344",
+              "title": "Neuropsychology",
+              "credits": "2",
+              "courseId": 20269,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54308"
+            },
+            {
+              "code": "PSYC 356",
+              "title": "Experimental Psychology",
+              "credits": "4",
+              "courseId": 20270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54309"
+            },
+            {
+              "code": "PSYC 380",
+              "title": "Internship in Psychology",
+              "credits": "4",
+              "courseId": 20272,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54311"
+            },
+            {
+              "code": "PSYC 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 20573,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54312"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": "(16-20 hours)",
+          "courses": [
+            {
+              "code": "BIOL 161",
+              "title": "Cellular and Genetic Systems",
+              "credits": "3",
+              "courseId": 17752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BIOL 161",
+              "placement": "after",
+              "text": "OR BIOL 141 - Cell Biology and Genetics for the Health Sciences"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CHEM 101",
+                  "title": "General Chemistry I",
+                  "credits": "3",
+                  "courseId": 18230,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+                },
+                {
+                  "code": "CHEM 103",
+                  "title": "Accelerated General Chemistry",
+                  "credits": "3",
+                  "courseId": 18232,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53822"
+                },
+                {
+                  "code": "CHEM 160",
+                  "title": "Chemistry for the Health Sciences",
+                  "credits": "3",
+                  "courseId": 18233,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53823"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "CHEM 101",
+                  "placement": "right",
+                  "text": "AND CHEM 102 - General Chemistry II"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Take 8 Hours from the Following",
+              "description": "(At least two disciplines must be included.)",
+              "courses": [],
+              "notes": [],
+              "children": [
+                {
+                  "name": "Biology",
+                  "description": null,
+                  "courses": [
+                    {
+                      "code": "BIOL 160",
+                      "title": "Ecological and Evolutionary Systems",
+                      "credits": "3",
+                      "courseId": 17751,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+                    },
+                    {
+                      "code": "BIOL 205",
+                      "title": "Human Anatomy",
+                      "credits": "3",
+                      "courseId": 17753,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+                    },
+                    {
+                      "code": "BIOL 206",
+                      "title": "Human Physiology",
+                      "credits": "3",
+                      "courseId": 17754,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+                    },
+                    {
+                      "code": "BIOL 207",
+                      "title": "Medical Microbiology",
+                      "credits": "3",
+                      "courseId": 17755,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53744"
+                    },
+                    {
+                      "code": "BIOL 321",
+                      "title": "Genetics and Development",
+                      "credits": "3",
+                      "courseId": 17760,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53749"
+                    },
+                    {
+                      "code": "BIOL 325",
+                      "title": "Biotechnology",
+                      "credits": "3",
+                      "courseId": 17762,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53751"
+                    },
+                    {
+                      "code": "BIOL 333",
+                      "title": "Immunology and Hematology",
+                      "credits": "3",
+                      "courseId": 17765,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53754"
+                    },
+                    {
+                      "code": "BIOL 335",
+                      "title": "Cell Physiology",
+                      "credits": "3",
+                      "courseId": 17766,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53755"
+                    },
+                    {
+                      "code": "BIOL 338",
+                      "title": "Animal Behavior",
+                      "credits": "3",
+                      "courseId": 17768,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53757"
+                    }
+                  ],
+                  "notes": [],
+                  "children": []
+                },
+                {
+                  "name": "Chemistry",
+                  "description": null,
+                  "courses": [
+                    {
+                      "code": "BCHM 321",
+                      "title": "Principles of Biochemistry",
+                      "credits": "3",
+                      "courseId": 22756,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55029"
+                    },
+                    {
+                      "code": "CHEM 240",
+                      "title": "Survey of Organic Chemistry",
+                      "credits": "3",
+                      "courseId": 18236,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+                    },
+                    {
+                      "code": "CHEM 241",
+                      "title": "Organic Chemistry I",
+                      "credits": "3",
+                      "courseId": 18237,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53827"
+                    },
+                    {
+                      "code": "CHEM 242",
+                      "title": "Organic Chemistry II",
+                      "credits": "3",
+                      "courseId": 18238,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53828"
+                    }
+                  ],
+                  "notes": [],
+                  "children": []
+                },
+                {
+                  "name": "Physics",
+                  "description": null,
+                  "courses": [
+                    {
+                      "code": "PHYS 133",
+                      "title": "Introductory Physics: Mechanics and Gravity",
+                      "credits": "3",
+                      "courseId": 20205,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54244"
+                    },
+                    {
+                      "code": "PHYS 221",
+                      "title": "General Physics",
+                      "credits": "3",
+                      "courseId": 20208,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+                    },
+                    {
+                      "code": "PHYS 222",
+                      "title": "General Physics",
+                      "credits": "3",
+                      "courseId": 20209,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54248"
+                    },
+                    {
+                      "code": "PHYS 223",
+                      "title": "Physics for the Health Sciences",
+                      "credits": "3",
+                      "courseId": 20210,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54249"
+                    },
+                    {
+                      "code": "PHYS 235",
+                      "title": "Introductory Physics: Electricity and Magnetism",
+                      "credits": "3",
+                      "courseId": 20211,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54250"
+                    }
+                  ],
+                  "notes": [],
+                  "children": []
+                },
+                {
+                  "name": "Computer Science",
+                  "description": null,
+                  "courses": [
+                    {
+                      "code": "CS 106",
+                      "title": "Introduction to Scientific Computation and Modeling",
+                      "credits": "3",
+                      "courseId": 18263,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+                    },
+                    {
+                      "code": "CS 108",
+                      "title": "Introduction to Computing",
+                      "credits": "3",
+                      "courseId": 18264,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+                    },
+                    {
+                      "code": "CS 112",
+                      "title": "Introduction to Data Structures",
+                      "credits": "3",
+                      "courseId": 18265,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+                    },
+                    {
+                      "code": "CS 212",
+                      "title": "Data Structures and Algorithms",
+                      "credits": "4",
+                      "courseId": 18267,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+                    },
+                    {
+                      "code": "CS 300",
+                      "title": "Special Topics in Computer Science",
+                      "credits": "2, 4",
+                      "courseId": 18272,
+                      "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53862"
+                    }
+                  ],
+                  "notes": [
+                    {
+                      "course": "CS 112",
+                      "placement": "right",
+                      "text": "(prerequisites apply)"
+                    },
+                    {
+                      "course": "CS 300",
+                      "placement": "right",
+                      "text": "(bioinformatics only)"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 60-64",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

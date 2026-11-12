@@ -1,0 +1,51 @@
+{
+  "id": "semester-in-britain-stbr",
+  "name": "Semester in Britain (STBR)",
+  "code": "STBR",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 346,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13652",
+  "description": "The Semester in Britain takes place in Liverpool in partnership with Liverpool Hope University (LHU) each spring semester. Liverpool is relatively close to Ireland, Scotland, and Wales. Students are housed at Liverpool Hope University, where they may take courses in a wide variety of disciplines. Students take two courses from the Calvin director and two courses at LHU.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "STBR 210",
+          "title": "Disciplinary course of the director",
+          "credits": "4",
+          "courseId": 9424,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56545"
+        },
+        {
+          "code": "STBR 312",
+          "title": "Studies in British Culture",
+          "credits": "4",
+          "courseId": 9423,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56544"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STBR 312",
+          "placement": "after",
+          "text": "two direct-enroll courses at Liverpool Hope University (6-8 hours)"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

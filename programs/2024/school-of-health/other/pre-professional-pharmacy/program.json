@@ -1,0 +1,22 @@
+{
+  "id": "pre-professional-pharmacy",
+  "name": "Pre-professional: Pharmacy",
+  "code": "PRPHA",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 829,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13206",
+  "description": "Students interested in a career in pharmacy will complete at least two years at Calvin before transferring to a college of pharmacy to complete four additional years of study culminating in a doctor of pharmacy (PharmD) degree. Many schools now prefer that students complete a BS or BA degree before enrolling in pharmacy school. Pre-pharmacy course requirements of the pharmacy schools vary greatly. Some schools do not accept advanced placement credits. Students should carefully consult the American Association of Colleges of Pharmacy website (www.aacp.org) and the websites for the pharmacy schools to which they intend to apply to plan an appropriate course of study. The School of Health advising office (pre-health@calvin.edu) will assist students in planning a pre-pharmacy curriculum, which most students take in the context of a chemistry or biochemistry major. A few pharmacy schools require the Pharmacy College Admission Test (PCAT), which should be taken in the summer once students have completed the recommended course work and determined when they have the time to fully prepare for these tests. The timing of these tests depends on when the student intends to apply. Students should meet with the pre-health advisors to learn more about shadowing and other activities that strengthen their application. Calvin offers an elective course that identifies many of these requirements: IDIS 106 - Introduction to Health Professions .",
+  "totalHours": null,
+  "requirements": []
+}

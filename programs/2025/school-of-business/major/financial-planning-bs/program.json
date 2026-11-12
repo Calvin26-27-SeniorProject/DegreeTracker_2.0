@@ -1,0 +1,200 @@
+{
+  "id": "financial-planning-bs",
+  "name": "Financial Planning, BS",
+  "code": "FINP.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13747",
+  "description": "Financial planners assist individuals and households with their financial plans, including budgets, savings, investments, debt, insurance, retirement, taxes, and estate planning. The financial planning major prepares students to become financial advisors and planners, according to biblical principles. The program is registered with the Certified Financial Planner Board of Standards, Inc. (CFP Board), and meets the CFP Board education requirement to help students attain the CFP® designation. Overlap Policy This program may not be combined with the business minor. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "80",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 7871,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55886"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 7882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55897"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 7875,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 12133,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 7878,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "ACCT 306",
+          "title": "Income Tax",
+          "credits": "4",
+          "courseId": 7790,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55805"
+        },
+        {
+          "code": "BUS 350",
+          "title": "Business Law",
+          "credits": "4",
+          "courseId": 7867,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55882"
+        },
+        {
+          "code": "FIN 201",
+          "title": "Personal Finance",
+          "credits": "4",
+          "courseId": 10309,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56734"
+        },
+        {
+          "code": "FIN 302",
+          "title": "Investments",
+          "credits": "4",
+          "courseId": 7876,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55891"
+        },
+        {
+          "code": "FIN 311",
+          "title": "Fundamentals of Financial Planning and Insurance",
+          "credits": "4",
+          "courseId": 9949,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56673"
+        },
+        {
+          "code": "FIN 312",
+          "title": "Estate Planning",
+          "credits": "4",
+          "courseId": 9950,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56674"
+        },
+        {
+          "code": "FIN 313",
+          "title": "Retirement Planning and Employee Benefits",
+          "credits": "4",
+          "courseId": 9951,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56675"
+        },
+        {
+          "code": "FIN 394",
+          "title": "Financial Planning Capstone",
+          "credits": "4",
+          "courseId": 9952,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56676"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "SOWK 370",
+          "title": "The Helping Interview",
+          "credits": "4",
+          "courseId": 9163,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56485"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 80",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

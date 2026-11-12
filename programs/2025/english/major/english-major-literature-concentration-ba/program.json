@@ -1,0 +1,200 @@
+{
+  "id": "english-major-literature-concentration-ba",
+  "name": "English Major: Literature Concentration, BA",
+  "code": "LIT.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 360,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13674",
+  "description": "The English department offers an English major with four concentrations—linguistics, literature, writing, and general English studies—that effectively anchors earning in the integrated art, craft, and science of language. The major provides students a richly faceted set of skills with which to engage story, practice interpretation, and experience the cultural and historical diversity of language and literature. Students majoring in literature focus primarily on story, poetry, and/or drama—on the ways language shapes and reflects human experience. This concentration strengthens a reader's attentive reading and analytical skills—excellent preparation for a number of careers, including law, business, editing, writing, library science, teaching, ministry, or public relations. Students who pursue English as an additional major may waive ENGL 395, 2 semester hours of electives, and the experiential requirement (ENGL 380, ENGL 390, or HNRS 399). Overlap Policy University policy does not allow students to pursue a major in more than one English concentration.",
+  "totalHours": "44",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 8213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56029"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 8223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 10327,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56752"
+        },
+        {
+          "code": "ENGL 380",
+          "title": "Internship",
+          "credits": "2",
+          "courseId": 8228,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56044"
+        },
+        {
+          "code": "ENGL 395",
+          "title": "Senior Seminar",
+          "credits": "4",
+          "courseId": 8230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56046"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "OR ENGL 390 - Independent Study OR HNRS 399 - Honors Thesis"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 26 Hours from the Following",
+          "description": "At least four hours must primarily cover literature before 1800, and at least sixteen hours must be 300 level. Courses may be repeated within a category.",
+          "courses": [
+            {
+              "code": "ENGL 200",
+              "title": "Introduction to Global Literature",
+              "credits": "4",
+              "courseId": 10314,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56739"
+            },
+            {
+              "code": "ENGL 205",
+              "title": "Special Topics",
+              "credits": "2-4",
+              "courseId": 10315,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56740"
+            },
+            {
+              "code": "ENGL 210",
+              "title": "Introduction to Early British Literature",
+              "credits": "4",
+              "courseId": 10316,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56741"
+            },
+            {
+              "code": "ENGL 215",
+              "title": "Introduction to Later British Literature",
+              "credits": "4",
+              "courseId": 10317,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56742"
+            },
+            {
+              "code": "ENGL 220",
+              "title": "Introduction to American Literature",
+              "credits": "4",
+              "courseId": 10318,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56743"
+            },
+            {
+              "code": "ENGL 230",
+              "title": "Introduction to Genre",
+              "credits": "4",
+              "courseId": 10319,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56744"
+            },
+            {
+              "code": "ENGL 235",
+              "title": "Major Text",
+              "credits": "2",
+              "courseId": 11672,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57023"
+            },
+            {
+              "code": "ENGL 250",
+              "title": "Literature of Faith",
+              "credits": "2, 4",
+              "courseId": 10610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56858"
+            },
+            {
+              "code": "ENGL 300",
+              "title": "Advanced Studies in Global Literature",
+              "credits": "4",
+              "courseId": 8218,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56034"
+            },
+            {
+              "code": "ENGL 305",
+              "title": "Advanced Special Topics",
+              "credits": "2-4",
+              "courseId": 10320,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56745"
+            },
+            {
+              "code": "ENGL 310",
+              "title": "Advanced Studies in Early British Literature",
+              "credits": "4",
+              "courseId": 10321,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56746"
+            },
+            {
+              "code": "ENGL 315",
+              "title": "Advanced Studies in Later British Literature",
+              "credits": "4",
+              "courseId": 10322,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56747"
+            },
+            {
+              "code": "ENGL 320",
+              "title": "Advanced Studies in American Literature",
+              "credits": "4",
+              "courseId": 10323,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56748"
+            },
+            {
+              "code": "ENGL 352",
+              "title": "The Teaching of Adolescent Literature",
+              "credits": "4",
+              "courseId": 10324,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56749"
+            },
+            {
+              "code": "ENGL 330",
+              "title": "Advanced Studies in Genre",
+              "credits": "4",
+              "courseId": 10325,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56750"
+            },
+            {
+              "code": "ENGL 335",
+              "title": "Advanced Studies in a Major Author",
+              "credits": "4",
+              "courseId": 10326,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56751"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 44",
+      "description": "(If pursuing English as an additional major: 36 semester hours.)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

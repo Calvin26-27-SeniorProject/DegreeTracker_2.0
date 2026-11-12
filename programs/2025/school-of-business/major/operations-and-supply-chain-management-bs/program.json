@@ -1,0 +1,230 @@
+{
+  "id": "operations-and-supply-chain-management-bs",
+  "name": "Operations and Supply Chain Management, BS",
+  "code": "BS.OPSCM",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13773",
+  "description": "People working in operations and supply chain are concerned with designing, overseeing, and controlling how goods and services are produced, allocated, and distributed. They manage the process that converts inputs (in the forms of material, labor, and energy) into outputs (in the form of goods and services). People in this field are typically team-oriented individuals who have an interest in manufacturing, logistics, distribution, or retail careers. They ensure a business's operations are both efficient and effective and promote wise and sustainable stewardship of God-given resources. Overlap Policy This program may not be combined with the business minor. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "74",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 7871,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55886"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 7882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55897"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 7875,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 12133,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 7878,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "ACCT 305",
+          "title": "Cost Accounting",
+          "credits": "4",
+          "courseId": 7789,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55804"
+        },
+        {
+          "code": "BUS 205",
+          "title": "Project Management",
+          "credits": "4",
+          "courseId": 11235,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56986"
+        },
+        {
+          "code": "BUS 352",
+          "title": "Negotiation Skills and Theory",
+          "credits": "2",
+          "courseId": 10574,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56821"
+        },
+        {
+          "code": "BUS 394",
+          "title": "Business Capstone",
+          "credits": "4",
+          "courseId": 7883,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55898"
+        },
+        {
+          "code": "SCM 201",
+          "title": "Introduction to Operations and Supply Chain Management",
+          "credits": "4",
+          "courseId": 10575,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56822"
+        },
+        {
+          "code": "SCM 302",
+          "title": "Supply Chain",
+          "credits": "4",
+          "courseId": 7872,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55887"
+        },
+        {
+          "code": "SCM 310",
+          "title": "Global Supply Chain Practicum I",
+          "credits": "2",
+          "courseId": 10577,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56824"
+        },
+        {
+          "code": "SCM 311",
+          "title": "Global Supply Chain Practicum II",
+          "credits": "2",
+          "courseId": 11665,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57016"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SCM 304",
+              "title": "Logistics Management",
+              "credits": "2",
+              "courseId": 12129,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57179"
+            },
+            {
+              "code": "SCM 305",
+              "title": "Supply Chain Analytics",
+              "credits": "2",
+              "courseId": 12130,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57180"
+            },
+            {
+              "code": "SCM 306",
+              "title": "Supply Chain Finance",
+              "credits": "2",
+              "courseId": 12131,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57181"
+            },
+            {
+              "code": "SCM 307",
+              "title": "Supply Chain Systems",
+              "credits": "2",
+              "courseId": 12132,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57182"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 74",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

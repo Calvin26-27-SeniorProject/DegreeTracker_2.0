@@ -1,0 +1,401 @@
+{
+  "id": "international-relations-ba",
+  "name": "International Relations, BA",
+  "code": "IR.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 369,
+    "name": "Politics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13623",
+  "description": "The international relations major exposes students to the theory and practice of global politics, developing capacities for analyzing international institutions and the global economy, advocating for human rights, and resolving conflicts from a Christian perspective. Whether at home or abroad, students will be professionally prepared for careers ranging from diplomacy, international law, and international business to nonprofit humanitarian work. Overlap Policy This program may not be combined with the political science major or political science minor.",
+  "totalHours": "46",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "POLS 110",
+          "title": "Foundations of Political Community",
+          "credits": "2",
+          "courseId": 8835,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56357"
+        },
+        {
+          "code": "POLS 151",
+          "title": "Foundations of Social Research",
+          "credits": "2",
+          "courseId": 8844,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56366"
+        }
+      ],
+      "notes": [
+        {
+          "course": "POLS 110",
+          "placement": "after",
+          "text": "OR PPE 110 - Foundations of Politics, Philosophy, and Economics"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "Political Theory",
+          "courses": [
+            {
+              "code": "POLS 240",
+              "title": "Freedom, Justice, and Political Authority",
+              "credits": "4",
+              "courseId": 8843,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56365"
+            },
+            {
+              "code": "POLS 242",
+              "title": "Philosophy, Politics, and Law",
+              "credits": "4",
+              "courseId": 10368,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56793"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": "Research Methods",
+          "courses": [
+            {
+              "code": "POLS 253",
+              "title": "Introductory Econometrics",
+              "credits": "4",
+              "courseId": 10369,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56794"
+            },
+            {
+              "code": "POLS 255",
+              "title": "Qualitative Social Research Methods",
+              "credits": "4",
+              "courseId": 10370,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56795"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": "International Politics",
+          "courses": [
+            {
+              "code": "POLS 217",
+              "title": "International Cooperation and Conflict",
+              "credits": "4",
+              "courseId": 8837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56359"
+            },
+            {
+              "code": "POLS 227",
+              "title": "Contemporary Issues in International Politics",
+              "credits": "2",
+              "courseId": 11206,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56957"
+            },
+            {
+              "code": "POLS 229",
+              "title": "Contemporary Issues in US Foreign Policy",
+              "credits": "2",
+              "courseId": 11207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56958"
+            },
+            {
+              "code": "POLS 304",
+              "title": "International Peace and Security",
+              "credits": "4",
+              "courseId": 8846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56368"
+            },
+            {
+              "code": "POLS 309",
+              "title": "International Organizations and Law",
+              "credits": "4",
+              "courseId": 8849,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56371"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": "Comparative Politics",
+          "courses": [
+            {
+              "code": "POLS 214",
+              "title": "Governments and Globalization",
+              "credits": "4",
+              "courseId": 8840,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56362"
+            },
+            {
+              "code": "POLS 224",
+              "title": "Contemporary Issues in Comparative Politics",
+              "credits": "2",
+              "courseId": 11204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56955"
+            },
+            {
+              "code": "POLS 277",
+              "title": "Asian Politics",
+              "credits": "4",
+              "courseId": 9452,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56573"
+            },
+            {
+              "code": "POLS 279",
+              "title": "African Politics",
+              "credits": "4",
+              "courseId": 8845,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56367"
+            },
+            {
+              "code": "POLS 307",
+              "title": "Civil War, Ethnic Conflict, and Terrorism",
+              "credits": "4",
+              "courseId": 8848,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56370"
+            },
+            {
+              "code": "POLS 322",
+              "title": "Global Democratization",
+              "credits": "4",
+              "courseId": 8852,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56374"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 2 Hours from the Following",
+          "description": "American Politics",
+          "courses": [
+            {
+              "code": "POLS 202",
+              "title": "Democracy in America: State and Federal Government",
+              "credits": "2",
+              "courseId": 8836,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56358"
+            },
+            {
+              "code": "POLS 219",
+              "title": "Institutions and Politics of US Foreign Policy",
+              "credits": "2",
+              "courseId": 11202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56953"
+            },
+            {
+              "code": "POLS 234",
+              "title": "The President and Congress",
+              "credits": "4",
+              "courseId": 8841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56363"
+            },
+            {
+              "code": "POLS 237",
+              "title": "Political Parties and Interest Groups",
+              "credits": "4",
+              "courseId": 8842,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56364"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electives",
+          "description": "Take 8 additional hours of politics coursework, which may include up to 2 hours of internship credit.",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": "There are three ways to satisfy the cognates requirement: (1) take 8 hours of coursework from the courses below; (2) complete an approved off-campus program; or (3) take 8 hours of foreign-language coursework beyond the 202 level. Students who complete an approved off-campus program also may count up to 4 hours of the program's coursework toward the regular course requirements of the major.",
+          "courses": [
+            {
+              "code": "ECON 222",
+              "title": "Principles of Macroeconomics",
+              "credits": "2",
+              "courseId": 7979,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+            },
+            {
+              "code": "ECON 237",
+              "title": "Regional Economies of the World",
+              "credits": "2",
+              "courseId": 7981,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55996"
+            },
+            {
+              "code": "ECON 331",
+              "title": "Money and Financial Markets",
+              "credits": "4",
+              "courseId": 8085,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56001"
+            },
+            {
+              "code": "ECON 337",
+              "title": "World Poverty and Economic Development",
+              "credits": "4",
+              "courseId": 8187,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56003"
+            },
+            {
+              "code": "ECON 338",
+              "title": "International Trade and Finance",
+              "credits": "4",
+              "courseId": 8188,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56004"
+            },
+            {
+              "code": "GEO 230",
+              "title": "The Global Economy and Transforming Regions",
+              "credits": "2",
+              "courseId": 8395,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56112"
+            },
+            {
+              "code": "GEO 260",
+              "title": "GIS and Cartography",
+              "credits": "4",
+              "courseId": 8398,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56116"
+            },
+            {
+              "code": "GEO 361",
+              "title": "Advanced GIS",
+              "credits": "4",
+              "courseId": 8405,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56123"
+            },
+            {
+              "code": "HIST 233",
+              "title": "Modern Middle East",
+              "credits": "4",
+              "courseId": 8438,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56157"
+            },
+            {
+              "code": "HIST 242",
+              "title": "Africa and the World",
+              "credits": "4",
+              "courseId": 8439,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56158"
+            },
+            {
+              "code": "HIST 258",
+              "title": "US Military History",
+              "credits": "4",
+              "courseId": 8445,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56164"
+            },
+            {
+              "code": "HIST 267",
+              "title": "Modern Europe",
+              "credits": "4",
+              "courseId": 8451,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56170"
+            },
+            {
+              "code": "HIST 331",
+              "title": "Studies in Middle Eastern History",
+              "credits": "4",
+              "courseId": 8456,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56175"
+            },
+            {
+              "code": "HIST 346",
+              "title": "Modern China",
+              "credits": "4",
+              "courseId": 8457,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56176"
+            },
+            {
+              "code": "HIST 372",
+              "title": "Studies of Modern Empires",
+              "credits": "4",
+              "courseId": 8463,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56182"
+            },
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 9120,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56441"
+            },
+            {
+              "code": "REL 352",
+              "title": "Judaism",
+              "credits": "2",
+              "courseId": 9129,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56450"
+            },
+            {
+              "code": "REL 353",
+              "title": "Islam",
+              "credits": "2",
+              "courseId": 9130,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56451"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 9131,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56452"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 9132,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56453"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 9144,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56466"
+            },
+            {
+              "code": "SOWK 260",
+              "title": "Global Issues and Perspectives",
+              "credits": "2",
+              "courseId": 9159,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56481"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 46",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

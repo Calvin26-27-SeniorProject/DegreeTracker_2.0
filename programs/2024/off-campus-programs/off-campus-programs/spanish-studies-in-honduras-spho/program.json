@@ -1,0 +1,80 @@
+{
+  "id": "spanish-studies-in-honduras-spho",
+  "name": "Spanish Studies in Honduras (SPHO)",
+  "code": "SPHO",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 739,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13063",
+  "description": "The Semester in Honduras (Spanish) takes place in Honduras every other spring semester (odd years). Students live with Honduran families in Santa Lucia, a small community outside of Tegucigalpa. The emphasis of this semester program is Spanish language and Honduran culture. Students enroll in Calvin courses and courses at La Universidad Pedagógica. By completing this program, students earn 12 to 17 semester hours toward their Spanish concentration. The academic components of the programs include the following:",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SPHO 315",
+          "title": "Engaging Honduran Culture",
+          "credits": "4",
+          "courseId": 21007,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54447"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SPHO 315",
+          "placement": "after",
+          "text": "a direct-enroll course (for students who completed SPAN 302 prior to study abroad)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Additional Courses",
+      "description": "See the World Languages section in the catalog for course descriptions.",
+      "courses": [
+        {
+          "code": "SPHO 302",
+          "title": "Advanced Grammar, Conversation, and Composition II",
+          "credits": "4",
+          "courseId": 21004,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54444"
+        },
+        {
+          "code": "SPHO 308",
+          "title": "Introduction to the Hispanic World I",
+          "credits": "4",
+          "courseId": 21005,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54445"
+        },
+        {
+          "code": "SPHO 309",
+          "title": "Introduction to the Hispanic World II",
+          "credits": "4",
+          "courseId": 21006,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54446"
+        },
+        {
+          "code": "SPHO 390",
+          "title": "Direct Enroll at the Universidad Pedagógica",
+          "credits": "3",
+          "courseId": 22629,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54926"
+        }
+      ],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

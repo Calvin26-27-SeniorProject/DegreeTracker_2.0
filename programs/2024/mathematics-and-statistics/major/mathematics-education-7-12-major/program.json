@@ -1,0 +1,124 @@
+{
+  "id": "mathematics-education-7-12-major",
+  "name": "Mathematics Education 7-12 Major",
+  "code": "MAJ_MATH_712",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 782,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13272",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "34",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MATH 171",
+          "title": "Calculus I",
+          "credits": "4",
+          "courseId": 19809,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+        },
+        {
+          "code": "MATH 172",
+          "title": "Calculus II",
+          "credits": "4",
+          "courseId": 19810,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54136"
+        },
+        {
+          "code": "MATH 251",
+          "title": "Discrete Mathematics I",
+          "credits": "2",
+          "courseId": 21061,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54504"
+        },
+        {
+          "code": "MATH 255",
+          "title": "Introductory Linear Algebra",
+          "credits": "4",
+          "courseId": 21062,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54505"
+        },
+        {
+          "code": "MATH 301",
+          "title": "Foundations of Geometry",
+          "credits": "4",
+          "courseId": 19816,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54142"
+        },
+        {
+          "code": "MATH 327",
+          "title": "Mathematics Content and Teaching Methods for Middle Grades",
+          "credits": "2",
+          "courseId": 21522,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54566"
+        },
+        {
+          "code": "MATH 351",
+          "title": "Abstract Algebra",
+          "credits": "4",
+          "courseId": 19823,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54149"
+        },
+        {
+          "code": "MATH 359",
+          "title": "Mathematics Content and Teaching Methods for High School",
+          "credits": "2",
+          "courseId": 19825,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54151"
+        },
+        {
+          "code": "STAT 243",
+          "title": "Statistics",
+          "credits": "4",
+          "courseId": 21011,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

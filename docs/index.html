@@ -215,55 +215,20 @@
     .dash-open { margin-top: 10px; font-size: 13px; }
     .programs-note { margin: 18px 2px 0; font-size: 13px; color: var(--muted); }
 
-    /* A program checked against its catalog page (catalog/programs/): sections,
-       each requirement's course options, missing labs, and what isn't checked. */
-    .program-section { margin: 18px 20px 0; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--maroon); }
-    .program-req-warn { margin: 6px 0 0; padding: 6px 10px; border-radius: 8px; font-size: 13px; color: var(--warn); background: var(--warn-bg); border: 1px solid var(--warn-line); }
-    .program-options { margin-top: 8px; font-size: 13px; }
-    .program-options summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
-    .program-options ul, .program-single { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
-    .program-option { display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; padding: 5px 8px; border-radius: 8px; background: var(--bg); font-size: 13px; }
-    .program-option.is-taken { background: var(--done-bg); }
-    .program-option.is-progress { background: var(--min-bg); }
-    /* A corequisite lab: its own row, under its lecture. */
-    .program-option.is-lab { margin-left: 18px; }
-    .program-option.is-missing { background: var(--warn-bg); color: var(--warn); }
-    .program-option-code { font-weight: 700; white-space: nowrap; min-width: 72px; }
-    .program-option-title { flex: 1 1 180px; }
-    .program-unchecked { margin: 6px 16px 0; font-size: 13px; color: var(--muted); }
-    .program-unchecked .program-section { margin-left: 4px; }
-    .program-unchecked ul { margin: 6px 0 0; padding-left: 20px; }
-    .program-unchecked li + li { margin-top: 4px; }
-    .program-workday { margin: 16px 16px 0; font-size: 14px; }
-    .program-workday > summary { cursor: pointer; width: fit-content; font-weight: 600; color: var(--accent); }
-    .program-workday .program-reqs { padding: 10px 0 0; }
+    /* Major & minor use the Core page's pieces (.req-section, .req cards, .course-list
+       rows, chips); only what is specific to them is here. A corequisite lab is its own
+       row, indented under its lecture. */
+    .course.is-lab { padding-left: 28px; }
+    .program-workday { margin-top: 28px; }
 
-    /* Major & minor: one card per program, Workday's requirements inside. */
     .programs { padding-bottom: 48px; }
     .programs-intro { margin-top: 20px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .programs-intro h2 { margin: 0 0 6px; font-size: 18px; }
     .programs-intro p { margin: 4px 0 0; font-size: 14px; }
     .programs-empty { margin: 16px 2px; color: var(--muted); }
-    .program { margin-top: 20px; padding-bottom: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
-    .program-header { padding: 14px 20px; background: #f8fafc; border-bottom: 1px solid var(--line); }
-    .program-header h3 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 16px; }
-    .program-header h3::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 999px; background: var(--maroon); }
-    .program-tally { margin: 4px 0 0 20px; font-size: 13px; font-weight: 600; color: var(--ink); }
-    .program-workday { margin: 2px 0 0 20px; font-size: 12px; color: var(--muted); }
-    .program-reqs { list-style: none; margin: 0; padding: 14px 16px 0; display: grid; gap: 8px; }
-    .program-req { padding: 10px 14px; border: 1px solid var(--line); border-left-width: 4px; border-radius: 10px; background: var(--surface); }
-    .program-req.status-done { border-left-color: var(--done); background: #f6fdf9; }
-    .program-req.status-min { border-left-color: var(--min); background: #f5fbff; }
-    .program-req.status-todo { border-left-color: var(--todo-line); }
-    .program-req-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; }
-    .program-req-name { font-weight: 600; font-size: 14px; flex: 1 1 260px; }
-    .program-req-remaining { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
-    .program-items { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
-    .program-items li + li { margin-top: 2px; }
-    .program-item-meta { margin-left: 8px; color: var(--muted); font-size: 12px; }
 
     #results { padding-bottom: 48px; }
-    #results h2 { font-size: 18px; margin: 0 0 8px; }
+    #results h2, #major h2, #minor h2 { font-size: 18px; margin: 0 0 8px; }
 
     .summary, .callout, .transcript { margin-top: 20px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .summary h2 { margin-bottom: 0 !important; }

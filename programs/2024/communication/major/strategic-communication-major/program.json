@@ -1,0 +1,168 @@
+{
+  "id": "strategic-communication-major",
+  "name": "Strategic Communication Major",
+  "code": "CASSC.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 737,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13263",
+  "description": "The Department of Communication offers the strategic communication major, a program rooted in the liberal arts that helps students build the necessary faculties to be highly effective communicators in their professions and in public life. Strategic communication courses teach students to understand their listeners, articulate ideas clearly, argue logically, listen carefully, communicate ethically, unify groups of people under a common goal, and analyze and evaluate how communication works in specific contexts. Moreover, students learn to use the gift of communication as a means of glorifying God, advocating for what is true and just, and bridging divisions between people. Strategic communication alumni choose careers in public relations, advertising, social media, content creation, law, ministry, education, journalism, and politics. Overlap Policy This program may not be combined with the health communication major or sports communication major program.",
+  "totalHours": "34-36",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 17800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53789"
+        },
+        {
+          "code": "COMM 200",
+          "title": "Advanced Oral Rhetoric",
+          "credits": "4",
+          "courseId": 18205,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53795"
+        },
+        {
+          "code": "COMM 305",
+          "title": "Persuasion and Propaganda",
+          "credits": "4",
+          "courseId": 18220,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53810"
+        },
+        {
+          "code": "COMM 311",
+          "title": "Argumentation and Advocacy",
+          "credits": "4",
+          "courseId": 18221,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53811"
+        },
+        {
+          "code": "COMM 398",
+          "title": "Communication, Technology, and Society",
+          "credits": "4",
+          "courseId": 22276,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54763"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 141",
+              "title": "Visual Rhetoric",
+              "credits": "2",
+              "courseId": 18201,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53791"
+            },
+            {
+              "code": "COMM 180",
+              "title": "Communicating with Digital Media",
+              "credits": "2",
+              "courseId": 18203,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53793"
+            },
+            {
+              "code": "COMM 190",
+              "title": "Media Production I",
+              "credits": "4",
+              "courseId": 18204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53794"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 201",
+              "title": "New Media",
+              "credits": "4",
+              "courseId": 18206,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53796"
+            },
+            {
+              "code": "COMM 285",
+              "title": "Public Relations and Communication Practice",
+              "credits": "4",
+              "courseId": 18218,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53808"
+            },
+            {
+              "code": "COMM 286",
+              "title": "Advertising and Communication Strategies",
+              "credits": "4",
+              "courseId": 21498,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54542"
+            },
+            {
+              "code": "COMM 361",
+              "title": "Health Communication Theory and Practice",
+              "credits": "4",
+              "courseId": 21499,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54543"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 263",
+              "title": "Communication and Conflict Resolution",
+              "credits": "2",
+              "courseId": 18215,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53805"
+            },
+            {
+              "code": "COMM 265",
+              "title": "Leadership Communication for Organizations",
+              "credits": "2",
+              "courseId": 18216,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53806"
+            },
+            {
+              "code": "COMM 362",
+              "title": "Small Group and Organizational Communication",
+              "credits": "4",
+              "courseId": 18225,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53815"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34-36",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

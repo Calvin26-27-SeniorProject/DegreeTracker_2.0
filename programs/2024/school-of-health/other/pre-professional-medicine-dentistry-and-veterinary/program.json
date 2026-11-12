@@ -1,0 +1,22 @@
+{
+  "id": "pre-professional-medicine-dentistry-and-veterinary",
+  "name": "Pre-professional: Medicine, Dentistry, and Veterinary",
+  "code": "PRMED",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 829,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13204",
+  "description": "Students planning to apply to medical or dental schools should consult the School of Health advising office (pre-health@calvin.edu). Those planning to apply to veterinary schools should consult W. Miller (Biology). Students should also note the university Core requirements. For basic information regarding timelines, requirements, etc., pre-medical, pre-dental, and pre-veterinary students should consult the pre-med/dental/vet website using the A-Z index on Calvin's home page. A student may select nearly any major concentration and still meet the entrance requirements for all medical, dental, and veterinary schools. However, nationwide the majority of the applicants to medical, dental, and veterinary schools are science majors. Pre-medical students must balance the requirements for the Medical College Admission Test (MCAT) with the requirements for medical schools. The MCAT was revised in 2015, and many medical schools have a variety of prerequisite courses, specifically with the organic chemistry requirement (one vs. two semesters). The pre-dental prerequisites include the same courses as pre-med. We continue to recommend that students take CHEM 101-CHEM 102; CHEM 241-CHEM 242; PHYS 221- PHYS 222; STAT 143, STAT 145, or PSYC 255; PSYC 151; SOC 151; BIOL 141 or BIOL 161; and BIOL 206 or BIOL 331. Some schools require a 300-level biology course. One semester of calculus (MATH 132 or MATH 171) is recommended, but it is required by very few schools. Pre-med students should review college math requirements for medical schools, as some require 6-8 credits of college math. Some dental schools require microbiology (BIOL 207 or BIOL 336). Because a few schools have unique requirements, students should consult with the School of Health advising office (pre-health@calvin.edu) to determine specific requirements of the schools to which they intend to apply. Pre-medical and pre-dental students take their Medical College Admissions Test (MCAT) or Dental Admissions Test (DAT) once they have completed the recommended coursework and determined when they have the time to fully prepare for these tests. The timing of these tests depends on when the student intends to apply. Students should meet with the pre-health advisors to learn more about shadowing and observation hour requirements, clinical experience, and other activities that strengthen their application. Calvin offers an elective course that identifies many of these requirements: IDIS 106 - Introduction to Health Professions . Pre-veterinary students should take the following courses: 2-3 semesters of general biology (BIOL 160 and BIOL 161 for biology majors or BIOL 141, BIOL 205, and BIOL 206 for other majors); CHEM 101-CHEM 102; CHEM 241-CHEM 242; PHYS 221-PHYS 222; STAT 143 or STAT 145; MATH 132 or MATH 171; ENGL 101; 2 semesters of social science; and 2 semesters of arts/humanities. Recommended biology electives (that are required by some programs) include microbiology (BIOL 207 or BIOL 336), genetics (BIOL 321), anatomy (BIOL 205 or BIOL 323), and cell physiology (BIOL 335). Public speaking (COMM 101) and nutrition (HE 254) are also required by some veterinary programs, and some students will need to take an online animal nutrition course from another university. Students should consult with W. Miller to determine specific requirements for the programs to which they plan to apply. Some veterinary programs require that the prerequisite courses be completed at the time of application to their program. Pre-veterinary students may be required to take the Graduate Record Exam (GRE); however, many programs have dropped this testing requirement. Students should meet with the pre-veterinary advisor to learn more about shadowing and observation hour requirements, animal experience, and other activities that strengthen their application.",
+  "totalHours": null,
+  "requirements": []
+}

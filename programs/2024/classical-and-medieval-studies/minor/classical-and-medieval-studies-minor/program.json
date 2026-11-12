@@ -1,0 +1,329 @@
+{
+  "id": "classical-and-medieval-studies-minor",
+  "name": "Classical and Medieval Studies Minor",
+  "code": "MDVST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 786,
+    "name": "Classical and Medieval Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13142",
+  "description": "The interdisciplinary minor in classical and medieval studies aims to inspire students both to appreciate and to examine critically the ancient and medieval roots of modern culture. It is a useful introduction to graduate study in any of the disciplines in which classical and medieval studies play a role (e.g., classics, medieval studies, history, religion, art history, music, modern languages). The minor may be taken in conjunction with any major. This minor requires a minimum of 18 semester hours. In addition to the interdisciplinary seminar (2 hours), one course must be taken in history, and one in an ancient or modern European language. The minor in classical and medieval studies is administered by F. Van Liere (Historical Studies). Interested students should consult with him for selection of specific courses for the minor.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 206",
+          "title": "Introduction to Medieval Studies",
+          "credits": "2",
+          "courseId": 19294,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54083"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One Classical or Medieval History Course",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 261",
+              "title": "Ancient Mediterranean",
+              "credits": "4",
+              "courseId": 19267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54056"
+            },
+            {
+              "code": "HIST 262",
+              "title": "Early Medieval Worlds, 300-1000",
+              "credits": "4",
+              "courseId": 19268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54057"
+            },
+            {
+              "code": "HIST 263",
+              "title": "Medieval and Renaissance Europe, 1000-1500",
+              "credits": "4",
+              "courseId": 19269,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54058"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One European Language Course",
+          "description": "LATN 102 or higher, or one modern European language (Spanish, French, German, or Dutch) at the 201 level or higher. (Students may substitute upper-level language courses not listed here with permission of the program director.)",
+          "courses": [
+            {
+              "code": "DUTC 201",
+              "title": "Intermediate Dutch I",
+              "credits": "4",
+              "courseId": 18287,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53877"
+            },
+            {
+              "code": "DUTC 202",
+              "title": "Intermediate Dutch II",
+              "credits": "2",
+              "courseId": 18288,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53878"
+            },
+            {
+              "code": "FREN 201",
+              "title": "Intermediate French I",
+              "credits": "4",
+              "courseId": 18797,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53985"
+            },
+            {
+              "code": "FREN 202",
+              "title": "Intermediate French II",
+              "credits": "4",
+              "courseId": 18798,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53986"
+            },
+            {
+              "code": "FREN 301",
+              "title": "Advanced French I: Sustainability in France",
+              "credits": "4",
+              "courseId": 18799,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53987"
+            },
+            {
+              "code": "FREN 302",
+              "title": "Advanced French II: Discovering the Arts",
+              "credits": "4",
+              "courseId": 18800,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53988"
+            },
+            {
+              "code": "GERM 201",
+              "title": "Intermediate German I",
+              "credits": "4",
+              "courseId": 19245,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54033"
+            },
+            {
+              "code": "GERM 202",
+              "title": "Intermediate German II",
+              "credits": "4",
+              "courseId": 19246,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54034"
+            },
+            {
+              "code": "GERM 301",
+              "title": "Advanced German Language and Culture",
+              "credits": "4",
+              "courseId": 19247,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54035"
+            },
+            {
+              "code": "GERM 302",
+              "title": "German Cultures and Intercultural Studies",
+              "credits": "4",
+              "courseId": 19248,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54036"
+            },
+            {
+              "code": "LATN 102",
+              "title": "Elementary Latin II",
+              "credits": "4",
+              "courseId": 19806,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54132"
+            },
+            {
+              "code": "SPAN 201",
+              "title": "Intermediate Spanish I",
+              "credits": "4",
+              "courseId": 20665,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54404"
+            },
+            {
+              "code": "SPAN 202",
+              "title": "Intermediate Spanish II",
+              "credits": "4",
+              "courseId": 20666,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54405"
+            },
+            {
+              "code": "SPAN 301",
+              "title": "Advanced Grammar, Composition and Conversation I",
+              "credits": "4",
+              "courseId": 20667,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54406"
+            },
+            {
+              "code": "SPAN 302",
+              "title": "Advanced Grammar, Composition and Conversation II",
+              "credits": "4",
+              "courseId": 20668,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54407"
+            },
+            {
+              "code": "SPAN 307",
+              "title": "Engaging Hispanic Culture in Place",
+              "credits": "2, 4",
+              "courseId": 22264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54751"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTH 121",
+              "title": "Late Medieval Art, 1250-1400",
+              "credits": "2",
+              "courseId": 22278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54765"
+            },
+            {
+              "code": "ARTH 320",
+              "title": "Classical Architecture from Antiquity to Now",
+              "credits": "4",
+              "courseId": 22284,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54771"
+            },
+            {
+              "code": "CLAS 211",
+              "title": "Classical Literature",
+              "credits": "4",
+              "courseId": 18253,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53843"
+            },
+            {
+              "code": "CLAS 231",
+              "title": "Classical Mythology",
+              "credits": "4",
+              "courseId": 18254,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53844"
+            },
+            {
+              "code": "FREN 201",
+              "title": "Intermediate French I",
+              "credits": "4",
+              "courseId": 18797,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53985"
+            },
+            {
+              "code": "FREN 352",
+              "title": "French Culture II",
+              "credits": "4",
+              "courseId": 19208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53996"
+            },
+            {
+              "code": "HIST 261",
+              "title": "Ancient Mediterranean",
+              "credits": "4",
+              "courseId": 19267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54056"
+            },
+            {
+              "code": "HIST 262",
+              "title": "Early Medieval Worlds, 300-1000",
+              "credits": "4",
+              "courseId": 19268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54057"
+            },
+            {
+              "code": "HIST 263",
+              "title": "Medieval and Renaissance Europe, 1000-1500",
+              "credits": "4",
+              "courseId": 19269,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54058"
+            },
+            {
+              "code": "HIST 362",
+              "title": "Studies in Ancient and Medieval Europe",
+              "credits": "4",
+              "courseId": 19281,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54070"
+            },
+            {
+              "code": "IDIS 198",
+              "title": "Classical and Medieval Palaeography",
+              "credits": "2",
+              "courseId": 19293,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54082"
+            },
+            {
+              "code": "LATN 101",
+              "title": "Elementary Latin I",
+              "credits": "4",
+              "courseId": 19805,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54131"
+            },
+            {
+              "code": "LATN 102",
+              "title": "Elementary Latin II",
+              "credits": "4",
+              "courseId": 19806,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54132"
+            },
+            {
+              "code": "MUSC 301",
+              "title": "Western Music in Historical Context",
+              "credits": "4",
+              "courseId": 21511,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54555"
+            },
+            {
+              "code": "PHIL 251",
+              "title": "Legacies of Thought: Ancient Philosophy and Medieval Christianity",
+              "credits": "4",
+              "courseId": 20196,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54235"
+            },
+            {
+              "code": "REL 243",
+              "title": "Theology: From the Early Church through the Middle Ages",
+              "credits": "4",
+              "courseId": 20609,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54348"
+            },
+            {
+              "code": "REL 341",
+              "title": "Studies in Early and Medieval Theology: Medieval Scholastic Theology",
+              "credits": "4",
+              "courseId": 20620,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54359"
+            },
+            {
+              "code": "SPAN 308",
+              "title": "Introduction to the Hispanic World I",
+              "credits": "4",
+              "courseId": 20669,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54408"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

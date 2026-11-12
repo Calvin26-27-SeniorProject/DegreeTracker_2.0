@@ -1,0 +1,66 @@
+{
+  "id": "gis-graduate-certificate-for-local-government",
+  "name": "GIS Graduate Certificate for Local Government",
+  "code": "CERT_GRGIS",
+  "type": "Certificate: Graduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 771,
+    "name": "Geology and Geography"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13293",
+  "description": "The GIS certificate for local government is designed for city or county government employees seeking expertise in geographic information systems and science (GIS). The program is a good fit for those who want to learn to use GIS, mapping, and spatial analysis in public service. Grounded in a virtue-driven approach to GIS, attention is given to spatial data collection and processing, network and location intelligence, community demographics, online mapping and analysis, and cartographic communication.",
+  "totalHours": "17",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GEO 560",
+          "title": "Geographic Information Systems and Cartography",
+          "credits": "4",
+          "courseId": 21552,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54596"
+        },
+        {
+          "code": "GEO 561",
+          "title": "Advanced Geographic Information Systems",
+          "credits": "4",
+          "courseId": 21553,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54597"
+        },
+        {
+          "code": "GEO 563",
+          "title": "Spatial Demographics",
+          "credits": "4",
+          "courseId": 21555,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54599"
+        },
+        {
+          "code": "GEO 565",
+          "title": "Business Location Intelligence",
+          "credits": "5",
+          "courseId": 21557,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54601"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 17",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

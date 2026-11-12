@@ -1,0 +1,20 @@
+{
+  "id": "the-knight-scholars-program",
+  "name": "The Knight Scholars Program",
+  "code": null,
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 341,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13700",
+  "description": "The Knight Scholars Program resources students in their transition to learning at Calvin University. Knight Scholar status is granted by the Committee on Admissions to those students who show promise to succeed academically at Calvin and to contribute to the community. Admission is based on high school grades, high school coursework, standardized test scores, recommendations, and related admissions materials. The Knight Scholars Program supports students through proactive advising, personalized coursework, and engaged coaching. Students meet with their advisor before their first semester at Calvin to identify available opportunities that will help them make a smooth transition to college learning and living. Students often choose to take coursework on college learning, foundational mathematics, and enhanced written rhetoric. Other common supports include advanced access to coaches and tutors, regular communications about academic details, and help selecting a major TRIO Program TRIO Student Support Services partners with first-generation students, students from low-income families, and students with disabilities by providing academic and holistic support to enable flourishing from day one of college through graduation. TRIO SSS is federally funded to provide students with enhanced academic support as well as free workshops, resources and activities promoting success in and beyond college. In addition, the TRIO SSS program encourages involvement in TRIO cohort activities designed to foster connection with other TRIO SSS participants and foster belonging at Calvin (e.g., off-campus cultural excursions, spring break trip, graduate school visits and other activities). Students can apply to the TRIO SSS program through the Calvin website and must be a US citizen or noncitizen who is eligible for federal student financial aid.",
+  "totalHours": null,
+  "requirements": []
+}

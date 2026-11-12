@@ -1,0 +1,122 @@
+{
+  "id": "science-education-7-12-major",
+  "name": "Science Education 7-12 Major",
+  "code": "MAJ_SCIED_712",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 806,
+    "name": "Science Education Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13274",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "40",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ASTR 110",
+          "title": "Planets, Stars, and Galaxies",
+          "credits": "4",
+          "courseId": 17740,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53729"
+        },
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 17752,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 18230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+        },
+        {
+          "code": "CHEM 102",
+          "title": "General Chemistry II",
+          "credits": "3",
+          "courseId": 18231,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53821"
+        },
+        {
+          "code": "CHEM 140",
+          "title": "Organic Chemistry for Educators",
+          "credits": "2",
+          "courseId": 22619,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54916"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 19210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+        },
+        {
+          "code": "PHYS 221",
+          "title": "General Physics",
+          "credits": "3",
+          "courseId": 20208,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+        },
+        {
+          "code": "PHYS 222",
+          "title": "General Physics",
+          "credits": "3",
+          "courseId": 20209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54248"
+        },
+        {
+          "code": "SCES 211",
+          "title": "Science and Engineering Practices",
+          "credits": "2",
+          "courseId": 22618,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54915"
+        },
+        {
+          "code": "SCES 214",
+          "title": "Communication and Learning in the Natural Sciences",
+          "credits": "2",
+          "courseId": 20627,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54366"
+        },
+        {
+          "code": "SCES 314",
+          "title": "Integration Methods and Pedagogies for Secondary Science Teachers",
+          "credits": "2",
+          "courseId": 20628,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54367"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 40",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

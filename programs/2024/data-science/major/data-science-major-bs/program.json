@@ -1,0 +1,248 @@
+{
+  "id": "data-science-major-bs",
+  "name": "Data Science Major, BS",
+  "code": "DATA.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 757,
+    "name": "Data Science"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13130",
+  "description": "The data science program prepares students to be \"Big Data\" practitioners by learning how to distill new insights from large volumes of data. The program is an interdisciplinary mix of computer science, data science, and mathematics and statistics, plus a domain area (chosen by the student) in which the student can apply his or her computational and statistical skills.",
+  "totalHours": "64-66",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "CS 106",
+          "title": "Introduction to Scientific Computation and Modeling",
+          "credits": "3",
+          "courseId": 18263,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+        },
+        {
+          "code": "CS 112",
+          "title": "Introduction to Data Structures",
+          "credits": "3",
+          "courseId": 18265,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+        },
+        {
+          "code": "CS 384",
+          "title": "Perspectives on Computing",
+          "credits": "4",
+          "courseId": 18280,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53870"
+        },
+        {
+          "code": "DATA 202",
+          "title": "Predictive Analytics",
+          "credits": "4",
+          "courseId": 18284,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53874"
+        },
+        {
+          "code": "DATA 304",
+          "title": "Visualizing Data and Models",
+          "credits": "2",
+          "courseId": 21047,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54490"
+        },
+        {
+          "code": "DATA 385",
+          "title": "Topics in Data Science",
+          "credits": "2, 4",
+          "courseId": 22581,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54877"
+        },
+        {
+          "code": "DATA 396",
+          "title": "Senior Project in Data Science",
+          "credits": "2",
+          "courseId": 22273,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54760"
+        },
+        {
+          "code": "DATA 398",
+          "title": "Senior Project in Data Science II",
+          "credits": "2",
+          "courseId": 22274,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54761"
+        },
+        {
+          "code": "MATH 171",
+          "title": "Calculus I",
+          "credits": "4",
+          "courseId": 19809,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+        },
+        {
+          "code": "MATH 172",
+          "title": "Calculus II",
+          "credits": "4",
+          "courseId": 19810,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54136"
+        },
+        {
+          "code": "STAT 243",
+          "title": "Statistics",
+          "credits": "4",
+          "courseId": 21011,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+        },
+        {
+          "code": "STAT 245",
+          "title": "Applied Data Analysis",
+          "credits": "4",
+          "courseId": 21012,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54452"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CS 106",
+          "placement": "right",
+          "text": "(recommended)"
+        },
+        {
+          "course": "CS 106",
+          "placement": "after",
+          "text": "OR CS 108 - Introduction to Computing"
+        },
+        {
+          "course": "MATH 171",
+          "placement": "after",
+          "text": "OR MATH 132 - Calculus for Management, Life, and Social Sciences"
+        },
+        {
+          "course": "MATH 172",
+          "placement": "after",
+          "text": "OR MATH 255 - Introductory Linear Algebra"
+        },
+        {
+          "course": "STAT 243",
+          "placement": "after",
+          "text": "OR STAT 343 - Probability and Statistics"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": "Computer Science Electives",
+          "courses": [
+            {
+              "code": "CS 212",
+              "title": "Data Structures and Algorithms",
+              "credits": "4",
+              "courseId": 18267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+            },
+            {
+              "code": "CS 354",
+              "title": "Database Management Systems",
+              "credits": "2",
+              "courseId": 18276,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53866"
+            },
+            {
+              "code": "CS 375",
+              "title": "Artificial Intelligence",
+              "credits": "2",
+              "courseId": 22597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54894"
+            },
+            {
+              "code": "CS 376",
+              "title": "Machine Learning",
+              "credits": "2",
+              "courseId": 22583,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54879"
+            },
+            {
+              "code": "CS 374",
+              "title": "High Performance Computing",
+              "credits": "2",
+              "courseId": 18279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53869"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 212",
+              "placement": "right",
+              "text": "(recommended)"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "Mathematics and Statistics Electives",
+          "courses": [
+            {
+              "code": "MATH 355",
+              "title": "Advanced Linear Algebra",
+              "credits": "4",
+              "courseId": 19824,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54150"
+            },
+            {
+              "code": "STAT 341",
+              "title": "Computational Bayesian Statistics",
+              "credits": "4",
+              "courseId": 21013,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54453"
+            },
+            {
+              "code": "STAT 343",
+              "title": "Probability and Statistics",
+              "credits": "4",
+              "courseId": 21014,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54454"
+            },
+            {
+              "code": "STAT 344",
+              "title": "Mathematical Statistics",
+              "credits": "4",
+              "courseId": 21015,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54455"
+            },
+            {
+              "code": "STAT 385",
+              "title": "Topics in Statistics",
+              "credits": "2-4",
+              "courseId": 22037,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54724"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognate Courses",
+          "description": "an additional 12 hours, normally with the same course prefix other than CS, DATA, MATH, or STAT (e.g., BIOL, BUS, GEO, POLS), at least 4 hours of which must be at the 300 level, or with the advisor's approval.",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 64-66",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

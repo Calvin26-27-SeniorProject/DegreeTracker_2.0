@@ -1,0 +1,129 @@
+{
+  "id": "master-of-arts-in-teaching-mat",
+  "name": "Master of Arts in Teaching, MAT",
+  "code": "MAT_MAT",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Arts"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13810",
+  "description": "The Master of Arts in Teaching (MAT) program provides an accelerated pathway to initial teacher certification and a master's degree for post-baccalaureate candidates whose degrees include certifiable majors or minors. The program is designed for career-changers, those re-entering the workforce, and recent bachelor's degree graduates. Students complete a condensed 12-month cohort program and benefit from school internship placements alongside intensive coursework. The program is characterized by 1) integration of academic work with an ongoing field experience; 2) programmatic coherence throughout the academic courses and from coursework to field work; 3) systematic study of classroom practices; 4) individual, mentor teacher, and instructor-observed evaluation. Upon successful completion of the program, candidates earn a master of arts in teaching (MAT) degree and a Michigan Standard Teaching Certificate qualifying them to teach middle and high school grades. Admission Requirements Interest in working with middle or high school students Bachelor's degree with an approved certifiable area from a regionally-accredited college or university. Grade point average of 2.8 or greater. Graduate coursework and/or work history will be considered. Completion of online application including: A professional essay explaining why the candidate has chosen teaching as a profession and why they have selected Calvin's MAT program for professional preparation. A current resume. Submission of two letters of professional recommendation. Official transcripts from all colleges and universities attended. An interview with members of the MAT team, which will be scheduled after all application documents are submitted. Attempt the appropriate Michigan Test for Teacher Certification subject test. Applicants who do not pass the first attempt may enter the program with the understanding that they must retake and pass the test for teacher certification.",
+  "totalHours": "35-40",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 8193,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56009"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 11208,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56959"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        },
+        {
+          "code": "EDUC 243",
+          "title": "Teaching and Learning Lab",
+          "credits": "2",
+          "courseId": 11209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56960"
+        },
+        {
+          "code": "EDUC 249",
+          "title": "The Christian Teacher",
+          "credits": "2",
+          "courseId": 11218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56969"
+        },
+        {
+          "code": "EDUC 507",
+          "title": "Curriculum, Instruction, and Content Area Literacy",
+          "credits": "4",
+          "courseId": 11666,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57017"
+        },
+        {
+          "code": "EDUC 508",
+          "title": "Internship I",
+          "credits": "4",
+          "courseId": 11667,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57018"
+        },
+        {
+          "code": "EDUC 399",
+          "title": "Philosophy of Education",
+          "credits": "2",
+          "courseId": 8209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56025"
+        },
+        {
+          "code": "EDUC 546",
+          "title": "Internship II: Student Teaching",
+          "credits": "4",
+          "courseId": 11668,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57019"
+        },
+        {
+          "code": "EDUC 559",
+          "title": "Student Teaching Seminar",
+          "credits": "4",
+          "courseId": 11669,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57020"
+        }
+      ],
+      "notes": [
+        {
+          "course": "EDUC 241",
+          "placement": "after",
+          "text": "OR EDUC 554 - Pathways to Inclusion: Re-examining Beliefs about Learners"
+        },
+        {
+          "course": "EDUC 249",
+          "placement": "after",
+          "text": "OR EDUC 601 - Current Issues Workshop"
+        },
+        {
+          "course": "EDUC 399",
+          "placement": "after",
+          "text": "OR EDUC 510 - Framing Questions, Global Forces, Constraining Structures"
+        },
+        {
+          "course": "EDUC 559",
+          "placement": "after",
+          "text": "an additional 4-6 hours of advisor-approved disciplinary pedagogy courses"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 35-40",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

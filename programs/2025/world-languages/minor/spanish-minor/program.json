@@ -1,0 +1,152 @@
+{
+  "id": "spanish-minor",
+  "name": "Spanish Minor",
+  "code": "SPAN.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 379,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13601",
+  "description": "A minimum grade of C (2.0) in SPAN 301 is required as a prerequisite for any concentration in Spanish. Programs for students wishing to major or minor in Spanish are worked out individually with an appropriate departmental advisor. Note: Given the range of study-abroad options and opportunities to earn Core through Spanish courses, early advising is strongly encouraged, especially for students with tight schedules.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SPAN 301",
+          "title": "Advanced Grammar, Composition, and Conversation I",
+          "credits": "4",
+          "courseId": 9173,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56495"
+        },
+        {
+          "code": "SPAN 302",
+          "title": "Advanced Grammar, Composition, and Conversation II",
+          "credits": "4",
+          "courseId": 9174,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56496"
+        },
+        {
+          "code": "SPAN 308",
+          "title": "Introduction to the Hispanic World I",
+          "credits": "4",
+          "courseId": 9175,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56497"
+        },
+        {
+          "code": "SPAN 309",
+          "title": "Introduction to the Hispanic World II",
+          "credits": "4",
+          "courseId": 9176,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56498"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take enough electives from the list below to reach at least 20 hours for the program. SPAN 202 may be taken as an elective only by students who have begun studying Spanish with either SPAN 101 or SPAN 201.)",
+          "courses": [
+            {
+              "code": "SPAN 202",
+              "title": "Intermediate Spanish II",
+              "credits": "4",
+              "courseId": 9172,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56494"
+            },
+            {
+              "code": "SPAN 306",
+              "title": "Culture and Society in the Spanish-Speaking World",
+              "credits": "2",
+              "courseId": 12139,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57189"
+            },
+            {
+              "code": "SPAN 307",
+              "title": "Engaging Hispanic Culture in Place",
+              "credits": "2, 4",
+              "courseId": 10569,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56816"
+            },
+            {
+              "code": "SPAN 310",
+              "title": "Hispanic Culture in the United States",
+              "credits": "4",
+              "courseId": 11690,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57041"
+            },
+            {
+              "code": "SPAN 341",
+              "title": "Spanish Phonology, Dialectology, and Sociolinguistics",
+              "credits": "4",
+              "courseId": 9178,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56500"
+            },
+            {
+              "code": "SPHO 315",
+              "title": "Engaging Honduran Culture",
+              "credits": "4",
+              "courseId": 9414,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56535"
+            },
+            {
+              "code": "SPHO 390",
+              "title": "Direct Enroll at the Universidad Pedagógica",
+              "credits": "3",
+              "courseId": 11231,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56982"
+            },
+            {
+              "code": "STPE 315",
+              "title": "Engaging Peruvian Culture",
+              "credits": "4",
+              "courseId": 9433,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56554"
+            },
+            {
+              "code": "STPE 390",
+              "title": "Direct Enroll at the Universidad Católica San Pablo",
+              "credits": "3",
+              "courseId": 9434,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56555"
+            },
+            {
+              "code": "STSP 315",
+              "title": "Engaging Spanish Culture",
+              "credits": "4",
+              "courseId": 9436,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56557"
+            },
+            {
+              "code": "STSP 390",
+              "title": "Direct Enroll at the Universidad de Oviedo",
+              "credits": "3",
+              "courseId": 9435,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56556"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

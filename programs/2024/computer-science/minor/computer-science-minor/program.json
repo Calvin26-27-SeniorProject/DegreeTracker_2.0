@@ -1,0 +1,229 @@
+{
+  "id": "computer-science-minor",
+  "name": "Computer Science Minor",
+  "code": "CPSC.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 754,
+    "name": "Computer Science"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13128",
+  "description": "The minor in computer science provides a strong foundation in programming fundamentals and theory. Students who complete the minor will be able to apply computation to their major field of study.",
+  "totalHours": "18-20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "CS 112",
+          "title": "Introduction to Data Structures",
+          "credits": "3",
+          "courseId": 18265,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 104",
+              "title": "Applied Computing",
+              "credits": "1",
+              "courseId": 18262,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53852"
+            },
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": "(Multiple sections of CS 300 may be counted as different advanced electives, if those sections address different topics.)",
+          "courses": [
+            {
+              "code": "CS 212",
+              "title": "Data Structures and Algorithms",
+              "credits": "4",
+              "courseId": 18267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+            },
+            {
+              "code": "CS 214",
+              "title": "Programming Language Concepts",
+              "credits": "4",
+              "courseId": 18268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53858"
+            },
+            {
+              "code": "CS 232",
+              "title": "Operating Systems and Networking",
+              "credits": "4",
+              "courseId": 18269,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53859"
+            },
+            {
+              "code": "CS 262",
+              "title": "Software Engineering",
+              "credits": "4",
+              "courseId": 18270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53860"
+            },
+            {
+              "code": "CS 300",
+              "title": "Special Topics in Computer Science",
+              "credits": "2, 4",
+              "courseId": 18272,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53862"
+            },
+            {
+              "code": "CS 312",
+              "title": "Logic, Computability, and Complexity",
+              "credits": "4",
+              "courseId": 18273,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53863"
+            },
+            {
+              "code": "CS 320",
+              "title": "Advanced Computer Architecture",
+              "credits": "2",
+              "courseId": 18274,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53864"
+            },
+            {
+              "code": "CS 326",
+              "title": "Embedded Systems and the Internet of Things",
+              "credits": "4",
+              "courseId": 21551,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54595"
+            },
+            {
+              "code": "CS 332",
+              "title": "Advanced Computer Networks",
+              "credits": "2",
+              "courseId": 18275,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53865"
+            },
+            {
+              "code": "CS 336",
+              "title": "Web Development",
+              "credits": "4",
+              "courseId": 21048,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54491"
+            },
+            {
+              "code": "CS 338",
+              "title": "System Administration: Infrastructure",
+              "credits": "2",
+              "courseId": 21049,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54492"
+            },
+            {
+              "code": "CS 339",
+              "title": "System Administration: Cloud Services",
+              "credits": "2",
+              "courseId": 22582,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54878"
+            },
+            {
+              "code": "CS 354",
+              "title": "Database Management Systems",
+              "credits": "2",
+              "courseId": 18276,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53866"
+            },
+            {
+              "code": "CS 375",
+              "title": "Artificial Intelligence",
+              "credits": "2",
+              "courseId": 22597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54894"
+            },
+            {
+              "code": "CS 376",
+              "title": "Machine Learning",
+              "credits": "2",
+              "courseId": 22583,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54879"
+            },
+            {
+              "code": "CS 372",
+              "title": "Computer Graphics",
+              "credits": "2",
+              "courseId": 18277,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53867"
+            },
+            {
+              "code": "CS 364",
+              "title": "Computer Security",
+              "credits": "4",
+              "courseId": 18278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53868"
+            },
+            {
+              "code": "CS 374",
+              "title": "High Performance Computing",
+              "credits": "2",
+              "courseId": 18279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53869"
+            },
+            {
+              "code": "ENGR 220",
+              "title": "Introduction to Computer Architecture",
+              "credits": "3",
+              "courseId": 18755,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53943"
+            },
+            {
+              "code": "ENGR 325",
+              "title": "Computer Architecture and Digital Systems Design",
+              "credits": "3",
+              "courseId": 18773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53961"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 212",
+              "placement": "right",
+              "text": "(recommended)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18-20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

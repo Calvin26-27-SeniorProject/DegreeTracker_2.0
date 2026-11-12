@@ -11,6 +11,7 @@
     "test:integration": "node test/run-test.js",
     "generate-catalog": "node test/generate-catalog-json.js",
     "generate-schedule": "node test/generate-schedule-json.js",
+    "generate-programs": "node test/generate-programs-json.js",
     "test-report": "node test/build-test-report.js"
   },
   "devDependencies": {

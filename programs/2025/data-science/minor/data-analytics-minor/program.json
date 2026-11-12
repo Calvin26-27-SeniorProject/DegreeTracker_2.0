@@ -1,0 +1,206 @@
+{
+  "id": "data-analytics-minor",
+  "name": "Data Analytics Minor",
+  "code": "ANLYT.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 356,
+    "name": "Data Science"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13646",
+  "description": "The data analytics minor introduces students to the analysis of large data sets and prepares them to apply their new understanding and skill in their major field of interest. Courses in both computation and statistics are included.",
+  "totalHours": "20-22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "CS 106",
+          "title": "Introduction to Scientific Computation and Modeling",
+          "credits": "3",
+          "courseId": 7949,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "DATA 202",
+          "title": "Introduction to Machine Learning",
+          "credits": "4",
+          "courseId": 7969,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55984"
+        },
+        {
+          "code": "STAT 245",
+          "title": "Applied Data Analysis",
+          "credits": "4",
+          "courseId": 9419,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56540"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CS 106",
+          "placement": "right",
+          "text": "(recommended)"
+        },
+        {
+          "course": "CS 106",
+          "placement": "after",
+          "text": "OR CS 108 - Introduction to Computing"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 8865,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56387"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 9145,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56467"
+            },
+            {
+              "code": "SOWK 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 9158,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56480"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 9415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 9416,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56537"
+            },
+            {
+              "code": "STAT 243",
+              "title": "Statistics",
+              "credits": "4",
+              "courseId": 9418,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56539"
+            },
+            {
+              "code": "STAT 343",
+              "title": "Probability and Statistics",
+              "credits": "4",
+              "courseId": 9421,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56542"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 2 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 112",
+              "title": "Introduction to Data Structures",
+              "credits": "3",
+              "courseId": 7951,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55965"
+            },
+            {
+              "code": "CS 354",
+              "title": "Database Management Systems",
+              "credits": "2",
+              "courseId": 7962,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55976"
+            },
+            {
+              "code": "CS 375",
+              "title": "Machine Learning",
+              "credits": "2",
+              "courseId": 11199,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56950"
+            },
+            {
+              "code": "CS 376",
+              "title": "Advanced Machine Learning",
+              "credits": "2",
+              "courseId": 11185,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56936"
+            },
+            {
+              "code": "DATA 304",
+              "title": "Visualizing Data and Models",
+              "credits": "2",
+              "courseId": 9454,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56575"
+            },
+            {
+              "code": "DATA 385",
+              "title": "Topics in Data Science",
+              "credits": "2, 4",
+              "courseId": 11183,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56934"
+            },
+            {
+              "code": "STAT 341",
+              "title": "Computational Bayesian Statistics",
+              "credits": "4",
+              "courseId": 9420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56541"
+            },
+            {
+              "code": "STAT 344",
+              "title": "Mathematical Statistics",
+              "credits": "4",
+              "courseId": 9422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56543"
+            },
+            {
+              "code": "STAT 385",
+              "title": "Topics in Statistics",
+              "credits": "2-4",
+              "courseId": 10364,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56789"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20-22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

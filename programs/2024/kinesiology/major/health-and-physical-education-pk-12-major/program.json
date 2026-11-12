@@ -1,0 +1,165 @@
+{
+  "id": "health-and-physical-education-pk-12-major",
+  "name": "Health and Physical Education PK-12 Major",
+  "code": "MAJ_HEPED_PK12",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 773,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13281",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "53",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "HE 266",
+          "title": "Basic Health Concepts",
+          "credits": "4",
+          "courseId": 19252,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54041"
+        },
+        {
+          "code": "HE 308",
+          "title": "Administration and Methods",
+          "credits": "2",
+          "courseId": 19253,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54042"
+        },
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 19778,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54104"
+        },
+        {
+          "code": "KIN 204",
+          "title": "Curricular and Instructional Principles for Teaching Physical Education",
+          "credits": "2",
+          "courseId": 19779,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54105"
+        },
+        {
+          "code": "KIN 214",
+          "title": "Applied Kinesiology",
+          "credits": "4",
+          "courseId": 19782,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54108"
+        },
+        {
+          "code": "KIN 215",
+          "title": "Physical Education and Recreation for Persons with Disabilities",
+          "credits": "2",
+          "courseId": 19783,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54109"
+        },
+        {
+          "code": "KIN 240",
+          "title": "Cardio-respiratory Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 19787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54113"
+        },
+        {
+          "code": "KIN 241",
+          "title": "Muscular Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 19788,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54114"
+        },
+        {
+          "code": "KIN 305",
+          "title": "Elementary Physical Activity and Development",
+          "credits": "4",
+          "courseId": 19790,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54116"
+        },
+        {
+          "code": "KIN 306",
+          "title": "High School Physical Activity and Skill Acquisition",
+          "credits": "4",
+          "courseId": 19791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54117"
+        },
+        {
+          "code": "KIN 325",
+          "title": "Physiology of Physical Activity",
+          "credits": "4",
+          "courseId": 19794,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54120"
+        },
+        {
+          "code": "KIN 332",
+          "title": "Philosophy of Physical Education and Sport",
+          "credits": "4",
+          "courseId": 19796,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54122"
+        },
+        {
+          "code": "KIN 380",
+          "title": "Individual Competencies",
+          "credits": "1",
+          "courseId": 19798,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54124"
+        },
+        {
+          "code": "RECR 203",
+          "title": "Leadership in Recreation Programs",
+          "credits": "4",
+          "courseId": 20580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54319"
+        }
+      ],
+      "notes": [
+        {
+          "course": "KIN 380",
+          "placement": "after",
+          "text": "PER 120-185 (take four)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 17748,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53737"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 53",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

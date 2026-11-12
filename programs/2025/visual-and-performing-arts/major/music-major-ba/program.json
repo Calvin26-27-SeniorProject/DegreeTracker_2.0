@@ -1,0 +1,214 @@
+{
+  "id": "music-major-ba",
+  "name": "Music Major, BA",
+  "code": "MUSC.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 377,
+    "name": "Visual and Performing Arts"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13655",
+  "description": "For alternate programs, see the Music Major: Composition Emphasis, BA and the Music Major: Performance Emphasis, BA.",
+  "totalHours": "43",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MUSC 100",
+          "title": "Music Theory Fundamentals in Global Context",
+          "credits": "2",
+          "courseId": 8639,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56261"
+        },
+        {
+          "code": "MUSC 108",
+          "title": "Harmony and Voice Leading",
+          "credits": "4",
+          "courseId": 8643,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56265"
+        },
+        {
+          "code": "MUSC 111",
+          "title": "Keyboard Musicianship I",
+          "credits": "1",
+          "courseId": 9912,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56635"
+        },
+        {
+          "code": "MUSC 112",
+          "title": "Keyboard Musicianship II",
+          "credits": "1",
+          "courseId": 9913,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56636"
+        },
+        {
+          "code": "MUSC 207",
+          "title": "Chromatic Harmony and Form",
+          "credits": "4",
+          "courseId": 8656,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56278"
+        },
+        {
+          "code": "MUSC 208",
+          "title": "Advanced Techniques in Music",
+          "credits": "2",
+          "courseId": 8657,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56279"
+        },
+        {
+          "code": "MUSC 213",
+          "title": "Aural Skills I",
+          "credits": "1",
+          "courseId": 9914,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56637"
+        },
+        {
+          "code": "MUSC 214",
+          "title": "Aural Skills II",
+          "credits": "1",
+          "courseId": 8658,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56280"
+        },
+        {
+          "code": "MUSC 225",
+          "title": "Music Technology",
+          "credits": "1",
+          "courseId": 9915,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56638"
+        },
+        {
+          "code": "MUSC 237",
+          "title": "Conducting",
+          "credits": "4",
+          "courseId": 8661,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56283"
+        },
+        {
+          "code": "MUSC 260",
+          "title": "Private Lessons for Credit",
+          "credits": "1",
+          "courseId": 9907,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56630"
+        },
+        {
+          "code": "MUSC 301",
+          "title": "Western Music in Historical Context",
+          "credits": "4",
+          "courseId": 9916,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56639"
+        },
+        {
+          "code": "MUSC 302",
+          "title": "Music and Global Society",
+          "credits": "4",
+          "courseId": 9917,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56640"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MUSC 260",
+          "placement": "right",
+          "text": "(take 4 semesters, in principal area)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Ensembles",
+          "description": "(Take 4 semesters in principal area.) Instrumentalists (woodwinds, brass, percussion, strings): choose from MUSC 151, MUSC 161, MUSC 171 Vocalists: choose from MUSC 131, MUSC 141, MUSC 181, MUSC 182, MUSC 191 Pianists, organists, and guitarists: choose from MUSC 117, MUSC 118, MUSC 131, MUSC 141, MUSC 151, MUSC 161, MUSC 171, MUSC 181, MUSC 182, MUSC 191",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": "(At least 2 hours must be at the 300 level.)",
+          "courses": [
+            {
+              "code": "MUSC 106",
+              "title": "American Music",
+              "credits": "4",
+              "courseId": 8641,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56263"
+            },
+            {
+              "code": "MUSC 107",
+              "title": "World Music",
+              "credits": "4",
+              "courseId": 8642,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56264"
+            },
+            {
+              "code": "MUSC 203",
+              "title": "Popular Music",
+              "credits": "4",
+              "courseId": 8655,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56277"
+            },
+            {
+              "code": "MUSC 306",
+              "title": "Topics in Music History",
+              "credits": "2",
+              "courseId": 9918,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56641"
+            },
+            {
+              "code": "MUSC 312",
+              "title": "Tonal Counterpoint",
+              "credits": "2",
+              "courseId": 8663,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56285"
+            },
+            {
+              "code": "MUSC 316",
+              "title": "Arranging and Orchestration",
+              "credits": "4",
+              "courseId": 9919,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56642"
+            },
+            {
+              "code": "MUSC 337",
+              "title": "Advanced Conducting",
+              "credits": "2",
+              "courseId": 8664,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56286"
+            },
+            {
+              "code": "MUSC 340",
+              "title": "Songwriting Seminar",
+              "credits": "2",
+              "courseId": 8665,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56287"
+            },
+            {
+              "code": "MUSC 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 8666,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56288"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 43",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,3182 @@
+{
+  "catalogs": [
+    {
+      "year": "2025",
+      "catoid": "25",
+      "catalogYear": "2026-27",
+      "programs": [
+        {
+          "name": "Applied Leadership, BA",
+          "code": "BA.APPLDR",
+          "type": "Major",
+          "department": "Adult Degree Completion (Knollcrest Campus)",
+          "path": "2025/adult-degree-completion-knollcrest-campus/major/applied-leadership-ba/program.json"
+        },
+        {
+          "name": "Human Services, BA",
+          "code": "BA_HUMAN",
+          "type": "Major",
+          "department": "Adult Degree Completion (Knollcrest Campus)",
+          "path": "2025/adult-degree-completion-knollcrest-campus/major/human-services-ba/program.json"
+        },
+        {
+          "name": "Africana Studies Minor",
+          "code": "AFDST.MIN",
+          "type": "Minor",
+          "department": "Africana Studies",
+          "path": "2025/africana-studies/minor/africana-studies-minor/program.json"
+        },
+        {
+          "name": "Archaeology Minor",
+          "code": "ARCH.MIN",
+          "type": "Minor",
+          "department": "Archaeology",
+          "path": "2025/archaeology/minor/archaeology-minor/program.json"
+        },
+        {
+          "name": "Asian Studies, BA",
+          "code": "ASNST.MAJ",
+          "type": "Major",
+          "department": "Asian Studies",
+          "path": "2025/asian-studies/major/asian-studies-ba/program.json"
+        },
+        {
+          "name": "Asian Studies Minor",
+          "code": "ASNST.MIN",
+          "type": "Minor",
+          "department": "Asian Studies",
+          "path": "2025/asian-studies/minor/asian-studies-minor/program.json"
+        },
+        {
+          "name": "Astrophysics, Certificate",
+          "code": "CERT.ASTR",
+          "type": "Certificate: Undergraduate",
+          "department": "Astronomy",
+          "path": "2025/astronomy/certificate-undergraduate/astrophysics-certificate/program.json"
+        },
+        {
+          "name": "Biology Major, BA",
+          "code": "BIOL.BA.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2025/biology/major/biology-major-ba/program.json"
+        },
+        {
+          "name": "Biology Major, BS",
+          "code": "BIOL.BS.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2025/biology/major/biology-major-bs/program.json"
+        },
+        {
+          "name": "Biology Major: Neuroscience Concentration, BS",
+          "code": "BIOL.NEURO.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2025/biology/major/biology-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Environmental Health and Conservation Major: Ecology and Management Track, BS",
+          "code": "EHC.ECO.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2025/biology/major/environmental-health-and-conservation-major-ecology-and-management-track-bs/program.json"
+        },
+        {
+          "name": "Environmental Health and Conservation Major: One Health Track, BS",
+          "code": "EHC.ONEH.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2025/biology/major/environmental-health-and-conservation-major-one-health-track-bs/program.json"
+        },
+        {
+          "name": "Biology Education Minor",
+          "code": "MIN_BIOL_EDUC",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2025/biology/minor/biology-education-minor/program.json"
+        },
+        {
+          "name": "Biology Minor",
+          "code": "BIOL.MIN",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2025/biology/minor/biology-minor/program.json"
+        },
+        {
+          "name": "Integrative Biotechnology Minor",
+          "code": "BIOTC.MIN",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2025/biology/minor/integrative-biotechnology-minor/program.json"
+        },
+        {
+          "name": "Certificate Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/certificate-programs/program.json"
+        },
+        {
+          "name": "Graduate Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/graduate-programs/program.json"
+        },
+        {
+          "name": "Pre-professional: Law",
+          "code": "PRLAW",
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/pre-professional-law/program.json"
+        },
+        {
+          "name": "Pre-professional: Ministry",
+          "code": "PRSEM",
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/pre-professional-ministry/program.json"
+        },
+        {
+          "name": "Pre-professional Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/pre-professional-programs/program.json"
+        },
+        {
+          "name": "The Knight Scholars Program",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/the-knight-scholars-program/program.json"
+        },
+        {
+          "name": "The Rhetoric across the Curriculum Program",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2025/calvin-university/other/the-rhetoric-across-the-curriculum-program/program.json"
+        },
+        {
+          "name": "Biochemistry Major: ACS Certified, BS",
+          "code": "BIOCH.ACS.MAJ",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/biochemistry-major-acs-certified-bs/program.json"
+        },
+        {
+          "name": "Biochemistry Major, BA",
+          "code": "BIOCH.MAJ.BA",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/biochemistry-major-ba/program.json"
+        },
+        {
+          "name": "Biochemistry Major, BS",
+          "code": "BIOCH.MAJ.BS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/biochemistry-major-bs/program.json"
+        },
+        {
+          "name": "Biochemistry Major: Neuroscience Concentration, BS",
+          "code": "BIOCH.NEURO.MAJ",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/biochemistry-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major: ACS Certified, BS",
+          "code": "CHEM.MAJ.ACS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/chemistry-major-acs-certified-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major, BA",
+          "code": "CHEM.MAJ.BA",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/chemistry-major-ba/program.json"
+        },
+        {
+          "name": "Chemistry Major, BS",
+          "code": "CHEM.MAJ.BS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/chemistry-major-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major: Neuroscience Concentration, BS",
+          "code": "CHEM.MAJ.NEURO",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/major/chemistry-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Biochemistry Minor",
+          "code": "BIOCH.MIN",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/minor/biochemistry-minor/program.json"
+        },
+        {
+          "name": "Chemistry Education Minor",
+          "code": "MIN_CHEM_EDUC",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/minor/chemistry-education-minor/program.json"
+        },
+        {
+          "name": "Chemistry Minor",
+          "code": "CHEM.MIN",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2025/chemistry-and-biochemistry/minor/chemistry-minor/program.json"
+        },
+        {
+          "name": "Classical and Medieval Studies Minor",
+          "code": "MDVST.MIN",
+          "type": "Minor",
+          "department": "Classical and Medieval Studies",
+          "path": "2025/classical-and-medieval-studies/minor/classical-and-medieval-studies-minor/program.json"
+        },
+        {
+          "name": "Applied Film and Media Major",
+          "code": "APPFM.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/applied-film-and-media-major/program.json"
+        },
+        {
+          "name": "Digital Communication, BA",
+          "code": "CASCS.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/digital-communication-ba/program.json"
+        },
+        {
+          "name": "Film and Media Major: Production Concentration, BA",
+          "code": "CASMF.PROD.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/film-and-media-major-production-concentration-ba/program.json"
+        },
+        {
+          "name": "Film and Media Major: Studies Concentration, BA",
+          "code": "CASMF.STUDIES.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/film-and-media-major-studies-concentration-ba/program.json"
+        },
+        {
+          "name": "Sports Communication, BA",
+          "code": "MAJ_SPCOMM",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/sports-communication-ba/program.json"
+        },
+        {
+          "name": "Strategic Communication, BA",
+          "code": "CASSC.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2025/communication/major/strategic-communication-ba/program.json"
+        },
+        {
+          "name": "Media and Strategic Communication, MA",
+          "code": "MEDIA.MA",
+          "type": "Master's",
+          "department": "Communication",
+          "path": "2025/communication/masters/media-and-strategic-communication-ma/program.json"
+        },
+        {
+          "name": "Communication Minor",
+          "code": "CAS.MIN",
+          "type": "Minor",
+          "department": "Communication",
+          "path": "2025/communication/minor/communication-minor/program.json"
+        },
+        {
+          "name": "Film and Media Minor",
+          "code": "CASFM.MIN",
+          "type": "Minor",
+          "department": "Communication",
+          "path": "2025/communication/minor/film-and-media-minor/program.json"
+        },
+        {
+          "name": "Cybersecurity, Certificate",
+          "code": "CERT_CYBER",
+          "type": "Certificate: Undergraduate",
+          "department": "Computer Science",
+          "path": "2025/computer-science/certificate-undergraduate/cybersecurity-certificate/program.json"
+        },
+        {
+          "name": "Computer Science, BCS",
+          "code": "CPSC.BCS.MAJ",
+          "type": "Major",
+          "department": "Computer Science",
+          "path": "2025/computer-science/major/computer-science-bcs/program.json"
+        },
+        {
+          "name": "Computer Science Plus, BS",
+          "code": "CS.MAJ",
+          "type": "Major",
+          "department": "Computer Science",
+          "path": "2025/computer-science/major/computer-science-plus-bs/program.json"
+        },
+        {
+          "name": "Computer Science Minor",
+          "code": "CPSC.MIN",
+          "type": "Minor",
+          "department": "Computer Science",
+          "path": "2025/computer-science/minor/computer-science-minor/program.json"
+        },
+        {
+          "name": "Core Program",
+          "code": "CORE-GEN",
+          "type": null,
+          "department": "Core Program",
+          "path": "2025/core-program/other/core-program/program.json"
+        },
+        {
+          "name": "Data Science Major, BS",
+          "code": "DATA.MAJ",
+          "type": "Major",
+          "department": "Data Science",
+          "path": "2025/data-science/major/data-science-major-bs/program.json"
+        },
+        {
+          "name": "Data Analytics Minor",
+          "code": "ANLYT.MIN",
+          "type": "Minor",
+          "department": "Data Science",
+          "path": "2025/data-science/minor/data-analytics-minor/program.json"
+        },
+        {
+          "name": "Data Science Minor",
+          "code": "DATA.MIN",
+          "type": "Minor",
+          "department": "Data Science",
+          "path": "2025/data-science/minor/data-science-minor/program.json"
+        },
+        {
+          "name": "Economics Major, BA",
+          "code": "ECON.MAJ.BA",
+          "type": "Major",
+          "department": "Economics",
+          "path": "2025/economics/major/economics-major-ba/program.json"
+        },
+        {
+          "name": "Economics Major, BS",
+          "code": "ECON.MAJ",
+          "type": "Major",
+          "department": "Economics",
+          "path": "2025/economics/major/economics-major-bs/program.json"
+        },
+        {
+          "name": "Economics Minor",
+          "code": "ECON.MIN",
+          "type": "Minor",
+          "department": "Economics",
+          "path": "2025/economics/minor/economics-minor/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Arts and Music Concentration",
+          "code": "CERT.ART",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-arts-and-music-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Communication and Commerce Concentration",
+          "code": "CERT.COMMERCE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-communication-and-commerce-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Creation Care Concentration",
+          "code": "CERT.CREATE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-creation-care-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Education Concentration",
+          "code": "CERT-EDUC",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-education-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Health, Wellness, and Recreation Concentration",
+          "code": "CERT.HEALTH",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-health-wellness-and-recreation-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Interdisciplinary Concentration",
+          "code": "CERT.IDIS",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-interdisciplinary-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Ministry and Human Services Concentration",
+          "code": "CERT.MINISTRY",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-ministry-and-human-services-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate",
+          "code": "CERT.CPE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate/program.json"
+        },
+        {
+          "name": "Life and Career Studies, Certificate",
+          "code": "CERT_LIFE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2025/education/certificate-undergraduate/life-and-career-studies-certificate/program.json"
+        },
+        {
+          "name": "Education Major: Prekindergarten-Twelfth Grade (PK-12)",
+          "code": null,
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/education-major-prekindergarten-twelfth-grade-pk-12/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Birth-Kindergarten (B-K)",
+          "code": "BA_ELED_BK",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/elementary-education-major-birth-kindergarten-b-k/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Prekindergarten-Third Grade (PK-3)",
+          "code": "BA_ELED_PK3",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/elementary-education-major-prekindergarten-third-grade-pk-3/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Third-Sixth Grade (3-6)",
+          "code": "BA_ELED_36",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/elementary-education-major-third-sixth-grade-3-6/program.json"
+        },
+        {
+          "name": "Science Education 7-12 Major",
+          "code": "MAJ_SCIED_712",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/science-education-7-12-major/program.json"
+        },
+        {
+          "name": "Secondary Education Major, BA",
+          "code": "BA_SECED",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/secondary-education-major-ba/program.json"
+        },
+        {
+          "name": "Special Education K-12 Major: Cognitive Impairment, BA",
+          "code": "BA_SPED_K12",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/special-education-k-12-major-cognitive-impairment-ba/program.json"
+        },
+        {
+          "name": "Special Education K-12 Major: Cognitive Impairment",
+          "code": "SPED.MAJ",
+          "type": "Major",
+          "department": "Education",
+          "path": "2025/education/major/special-education-k-12-major-cognitive-impairment/program.json"
+        },
+        {
+          "name": "Education, MEd",
+          "code": "MED.MAJ",
+          "type": "Master's",
+          "department": "Education",
+          "path": "2025/education/masters/education-med/program.json"
+        },
+        {
+          "name": "Master of Arts in Teaching, MAT",
+          "code": "MAT_MAT",
+          "type": "Master's",
+          "department": "Education",
+          "path": "2025/education/masters/master-of-arts-in-teaching-mat/program.json"
+        },
+        {
+          "name": "Science Education 5-9 Minor",
+          "code": "MIN_SCIED_59",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2025/education/minor/science-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Special Education Studies Minor",
+          "code": "SPDST.MIN",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2025/education/minor/special-education-studies-minor/program.json"
+        },
+        {
+          "name": "Teaching English to Speakers of Other Languages (TESOL) Minor: Certification Track",
+          "code": "MIN_ESL_ED",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2025/education/minor/teaching-english-to-speakers-of-other-languages-tesol-minor-certification-track/program.json"
+        },
+        {
+          "name": "Teaching English to Speakers of Other Languages (TESOL) Minor",
+          "code": "ESL.MIN",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2025/education/minor/teaching-english-to-speakers-of-other-languages-tesol-minor/program.json"
+        },
+        {
+          "name": "Post-Bachelor Teacher Certification",
+          "code": "TC_POSTBA",
+          "type": null,
+          "department": "Education",
+          "path": "2025/education/other/post-bachelor-teacher-certification/program.json"
+        },
+        {
+          "name": "Sustainability Designation",
+          "code": "SPCL_SUSTN",
+          "type": "Designation",
+          "department": "Engineering",
+          "path": "2025/engineering/designation/sustainability-designation/program.json"
+        },
+        {
+          "name": "Engineering: Aerospace Engineering Concentration",
+          "code": "BSE.ENGR_AERO",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-aerospace-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Chemical Engineering Concentration",
+          "code": "ENGRH.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-chemical-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Civil and Environmental Engineering Concentration",
+          "code": "ENGRV.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-civil-and-environmental-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Electrical and Computer Engineering Concentration",
+          "code": "ENGRE.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-electrical-and-computer-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Energy, Environment, and Sustainability Engineering Concentration",
+          "code": "BSE_ENGR_SUSTN",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-energy-environment-and-sustainability-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Mechanical Engineering Concentration",
+          "code": "ENGRM.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-mechanical-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Mechatronics Engineering Concentration",
+          "code": "BSE_ENGR_MTRON",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2025/engineering/major/engineering-mechatronics-engineering-concentration/program.json"
+        },
+        {
+          "name": "Biomedical Engineering Minor",
+          "code": "BIOMD.MIN",
+          "type": "Minor",
+          "department": "Engineering",
+          "path": "2025/engineering/minor/biomedical-engineering-minor/program.json"
+        },
+        {
+          "name": "Engineering Minor",
+          "code": "ENGR.MIN",
+          "type": "Minor",
+          "department": "Engineering",
+          "path": "2025/engineering/minor/engineering-minor/program.json"
+        },
+        {
+          "name": "English Language Arts Education 7-12 Major",
+          "code": "MAJ_LA_712",
+          "type": "Major",
+          "department": "English",
+          "path": "2025/english/major/english-language-arts-education-7-12-major/program.json"
+        },
+        {
+          "name": "English Major: General Concentration, BA",
+          "code": "ENGL.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2025/english/major/english-major-general-concentration-ba/program.json"
+        },
+        {
+          "name": "English Major: Linguistics Concentration, BA",
+          "code": "LING.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2025/english/major/english-major-linguistics-concentration-ba/program.json"
+        },
+        {
+          "name": "English Major: Literature Concentration, BA",
+          "code": "LIT.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2025/english/major/english-major-literature-concentration-ba/program.json"
+        },
+        {
+          "name": "English Major: Writing Concentration, BA",
+          "code": "WRTNG.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2025/english/major/english-major-writing-concentration-ba/program.json"
+        },
+        {
+          "name": "English Language Arts Education 5-9 Minor",
+          "code": "MIN_LA_59",
+          "type": "Minor",
+          "department": "English",
+          "path": "2025/english/minor/english-language-arts-education-5-9-minor/program.json"
+        },
+        {
+          "name": "English Minor",
+          "code": "ENGL.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2025/english/minor/english-minor/program.json"
+        },
+        {
+          "name": "Linguistics Minor",
+          "code": "LING.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2025/english/minor/linguistics-minor/program.json"
+        },
+        {
+          "name": "Literature Minor",
+          "code": "LIT.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2025/english/minor/literature-minor/program.json"
+        },
+        {
+          "name": "Writing Minor",
+          "code": "WRTNG.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2025/english/minor/writing-minor/program.json"
+        },
+        {
+          "name": "Gender Studies Minor",
+          "code": "GENST.MIN",
+          "type": "Minor",
+          "department": "Gender Studies",
+          "path": "2025/gender-studies/minor/gender-studies-minor/program.json"
+        },
+        {
+          "name": "Geographic Information Science, Graduate Certificate",
+          "code": "CERT_GIS_GR",
+          "type": "Certificate: Graduate",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/certificate-graduate/geographic-information-science-graduate-certificate/program.json"
+        },
+        {
+          "name": "GIS Graduate Certificate for Local Government",
+          "code": "CERT_GRGIS",
+          "type": "Certificate: Graduate",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/certificate-graduate/gis-graduate-certificate-for-local-government/program.json"
+        },
+        {
+          "name": "Geographic Information Science, Certificate",
+          "code": "GIS.CERT",
+          "type": "Certificate: Undergraduate",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/certificate-undergraduate/geographic-information-science-certificate/program.json"
+        },
+        {
+          "name": "Earth and Environmental Science, BS: Environmental Science Concentration",
+          "code": "BS.EENSC_ENSC",
+          "type": "Major",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/major/earth-and-environmental-science-bs-environmental-science-concentration/program.json"
+        },
+        {
+          "name": "Earth and Environmental Science, BS: Geoscience Concentration",
+          "code": "BS.EENSC_GEOSCI",
+          "type": "Major",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/major/earth-and-environmental-science-bs-geoscience-concentration/program.json"
+        },
+        {
+          "name": "Environmental Sustainability and Geography, BA: Geography Concentration",
+          "code": "BA.ENSTGEO_GEOG",
+          "type": "Major",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/major/environmental-sustainability-and-geography-ba-geography-concentration/program.json"
+        },
+        {
+          "name": "Environmental Sustainability and Geography, BA: Sustainability Concentration",
+          "code": "BA.ENSTGEO_SUSTN",
+          "type": "Major",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/major/environmental-sustainability-and-geography-ba-sustainability-concentration/program.json"
+        },
+        {
+          "name": "Geographic Information Science, MS",
+          "code": "GIS.MS",
+          "type": "Master's",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/masters/geographic-information-science-ms/program.json"
+        },
+        {
+          "name": "Earth and Space Science Education Minor",
+          "code": "MIN_EARTH_EDUC",
+          "type": "Minor",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/minor/earth-and-space-science-education-minor/program.json"
+        },
+        {
+          "name": "Environmental Studies Minor",
+          "code": "ENST.MIN",
+          "type": "Minor",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/minor/environmental-studies-minor/program.json"
+        },
+        {
+          "name": "Geography Minor",
+          "code": "GEOG.MIN",
+          "type": "Minor",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/minor/geography-minor/program.json"
+        },
+        {
+          "name": "Geology Minor",
+          "code": "GEOL.MIN",
+          "type": "Minor",
+          "department": "Geology, Geography, and Environment",
+          "path": "2025/geology-geography-and-environment/minor/geology-minor/program.json"
+        },
+        {
+          "name": "History, BA",
+          "code": "HIST.MAJ",
+          "type": "Major",
+          "department": "Historical Studies",
+          "path": "2025/historical-studies/major/history-ba/program.json"
+        },
+        {
+          "name": "Social Studies Education 7-12 Major",
+          "code": "MAJ_SOST_712",
+          "type": "Major",
+          "department": "Historical Studies",
+          "path": "2025/historical-studies/major/social-studies-education-7-12-major/program.json"
+        },
+        {
+          "name": "History Minor",
+          "code": "HIST.MIN",
+          "type": "Minor",
+          "department": "Historical Studies",
+          "path": "2025/historical-studies/minor/history-minor/program.json"
+        },
+        {
+          "name": "Social Studies Education 5-9 Minor",
+          "code": "MIN_SOST_59",
+          "type": "Minor",
+          "department": "Historical Studies",
+          "path": "2025/historical-studies/minor/social-studies-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Honors Scholars Program",
+          "code": "HONORS",
+          "type": "Program",
+          "department": "Honors and Collegiate Scholars",
+          "path": "2025/honors-and-collegiate-scholars/program/honors-scholars-program/program.json"
+        },
+        {
+          "name": "Cardiac Rehabilitation, Graduate Certificate",
+          "code": "CERT_CARDIAC",
+          "type": "Certificate: Graduate",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/certificate-graduate/cardiac-rehabilitation-graduate-certificate/program.json"
+        },
+        {
+          "name": "Health and Physical Education PK-12 Major",
+          "code": "MAJ_HEPED_PK12",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/major/health-and-physical-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Exercise Science Emphasis, BS",
+          "code": "KIN.EXSC.MAJ.BS",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/major/kinesiology-major-exercise-science-emphasis-bs/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Pre-professional Emphasis, BS",
+          "code": "KIN.PRPRF.MAJ.BS",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/major/kinesiology-major-pre-professional-emphasis-bs/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Sport Management Emphasis, BA",
+          "code": "KIN.SPMG.MAJ",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/major/kinesiology-major-sport-management-emphasis-ba/program.json"
+        },
+        {
+          "name": "Exercise Science: Health and Exercise Rehabilitation Concentration, MS",
+          "code": "MS.EXSC.HLTH",
+          "type": "Master's",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/masters/exercise-science-health-and-exercise-rehabilitation-concentration-ms/program.json"
+        },
+        {
+          "name": "Exercise Science: Performance and Sport Science Concentration, MS",
+          "code": "MS.EXSC.PERFM",
+          "type": "Master's",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/masters/exercise-science-performance-and-sport-science-concentration-ms/program.json"
+        },
+        {
+          "name": "Kinesiology Minor",
+          "code": "KIN.MIN",
+          "type": "Minor",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/minor/kinesiology-minor/program.json"
+        },
+        {
+          "name": "Recreation Leadership Minor",
+          "code": "RECR.MIN",
+          "type": "Minor",
+          "department": "Kinesiology",
+          "path": "2025/kinesiology/minor/recreation-leadership-minor/program.json"
+        },
+        {
+          "name": "Actuarial Science, BA",
+          "code": "ACTRY.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/major/actuarial-science-ba/program.json"
+        },
+        {
+          "name": "Mathematics Education 7-12 Major",
+          "code": "MAJ_MATH_712",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/major/mathematics-education-7-12-major/program.json"
+        },
+        {
+          "name": "Mathematics Major, BA",
+          "code": "MATH.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/major/mathematics-major-ba/program.json"
+        },
+        {
+          "name": "Mathematics Major, BS",
+          "code": "MATH.MAJ.BS",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/major/mathematics-major-bs/program.json"
+        },
+        {
+          "name": "Statistics, BA",
+          "code": "STAT.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/major/statistics-ba/program.json"
+        },
+        {
+          "name": "Mathematics Education 5-9 Minor",
+          "code": "MIN_MATH_59",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/minor/mathematics-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Mathematics Minor",
+          "code": "MATH.MIN",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/minor/mathematics-minor/program.json"
+        },
+        {
+          "name": "Statistics Minor",
+          "code": "STAT.MIN",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2025/mathematics-and-statistics/minor/statistics-minor/program.json"
+        },
+        {
+          "name": "Ministry Leadership Minor",
+          "code": "MNLDR.MIN",
+          "type": "Minor",
+          "department": "Ministry Leadership",
+          "path": "2025/ministry-leadership/minor/ministry-leadership-minor/program.json"
+        },
+        {
+          "name": "Nursing, BSN",
+          "code": "NURS.MAJ",
+          "type": "Major",
+          "department": "Nursing",
+          "path": "2025/nursing/major/nursing-bsn/program.json"
+        },
+        {
+          "name": "Semester in Britain (STBR)",
+          "code": "STBR",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/semester-in-britain-stbr/program.json"
+        },
+        {
+          "name": "Semester in Hungary (STHU)",
+          "code": "STHU",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/semester-in-hungary-sthu/program.json"
+        },
+        {
+          "name": "Semester in Washington, DC (STDC)",
+          "code": "STDC",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/semester-in-washington-dc-stdc/program.json"
+        },
+        {
+          "name": "Spanish Studies in Honduras (SPHO)",
+          "code": "SPHO",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/spanish-studies-in-honduras-spho/program.json"
+        },
+        {
+          "name": "Study in France (STFR)",
+          "code": "STFR",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/study-in-france-stfr/program.json"
+        },
+        {
+          "name": "Study in Peru (STPE)",
+          "code": "STPE",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/study-in-peru-stpe/program.json"
+        },
+        {
+          "name": "Study in Spain (STSP)",
+          "code": "STSP.ADV",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2025/off-campus-programs/off-campus-programs/study-in-spain-stsp/program.json"
+        },
+        {
+          "name": "Philosophy Double Major",
+          "code": "PHIL.DBL.MAJ",
+          "type": "Double Major",
+          "department": "Philosophy",
+          "path": "2025/philosophy/double-major/philosophy-double-major/program.json"
+        },
+        {
+          "name": "Philosophy, BA",
+          "code": "PHIL.MAJ",
+          "type": "Major",
+          "department": "Philosophy",
+          "path": "2025/philosophy/major/philosophy-ba/program.json"
+        },
+        {
+          "name": "Medical Humanities Minor",
+          "code": "MIN_MEDHUM",
+          "type": "Minor",
+          "department": "Philosophy",
+          "path": "2025/philosophy/minor/medical-humanities-minor/program.json"
+        },
+        {
+          "name": "Philosophy Minor",
+          "code": "PHIL.MIN",
+          "type": "Minor",
+          "department": "Philosophy",
+          "path": "2025/philosophy/minor/philosophy-minor/program.json"
+        },
+        {
+          "name": "Physics Major, BA",
+          "code": "PHYS.MAJ",
+          "type": "Major",
+          "department": "Physics",
+          "path": "2025/physics/major/physics-major-ba/program.json"
+        },
+        {
+          "name": "Physics Major, BS",
+          "code": "PHYS.MAJ.BS",
+          "type": "Major",
+          "department": "Physics",
+          "path": "2025/physics/major/physics-major-bs/program.json"
+        },
+        {
+          "name": "Optics Minor",
+          "code": "OPTIC.MIN",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2025/physics/minor/optics-minor/program.json"
+        },
+        {
+          "name": "Physics Education Minor",
+          "code": "MIN_PHYS_EDUC",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2025/physics/minor/physics-education-minor/program.json"
+        },
+        {
+          "name": "Physics Minor",
+          "code": "PHYS.MIN",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2025/physics/minor/physics-minor/program.json"
+        },
+        {
+          "name": "Politics, Philosophy, and Economics, BA",
+          "code": "PPE.MAJ",
+          "type": "Major",
+          "department": "Politics, Philosophy, and Economics",
+          "path": "2025/politics-philosophy-and-economics/major/politics-philosophy-and-economics-ba/program.json"
+        },
+        {
+          "name": "International Relations, BA",
+          "code": "IR.MAJ",
+          "type": "Major",
+          "department": "Politics",
+          "path": "2025/politics/major/international-relations-ba/program.json"
+        },
+        {
+          "name": "Political Science, BA",
+          "code": "POLS.MAJ",
+          "type": "Major",
+          "department": "Politics",
+          "path": "2025/politics/major/political-science-ba/program.json"
+        },
+        {
+          "name": "International Relations Minor",
+          "code": "IR.MIN",
+          "type": "Minor",
+          "department": "Politics",
+          "path": "2025/politics/minor/international-relations-minor/program.json"
+        },
+        {
+          "name": "Political Science Minor",
+          "code": "POLS.MIN",
+          "type": "Minor",
+          "department": "Politics",
+          "path": "2025/politics/minor/political-science-minor/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership, Certificate",
+          "code": "CERT.ML.MAJ",
+          "type": "Certificate: Undergraduate",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2025/prison-education-programs-handlon-campus/certificate-undergraduate/faith-and-community-leadership-certificate/program.json"
+        },
+        {
+          "name": "Liberal Arts and Sciences, Certificate",
+          "code": "CERT_LIBART",
+          "type": "Certificate: Undergraduate",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2025/prison-education-programs-handlon-campus/certificate-undergraduate/liberal-arts-and-sciences-certificate/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership Major, AA",
+          "code": "AA.ML.MAJ",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2025/prison-education-programs-handlon-campus/major/faith-and-community-leadership-major-aa/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership Major, BA",
+          "code": "BA.ML.MAJ",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2025/prison-education-programs-handlon-campus/major/faith-and-community-leadership-major-ba/program.json"
+        },
+        {
+          "name": "Human Services Major",
+          "code": "MAJ_HUMAN",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2025/prison-education-programs-handlon-campus/major/human-services-major/program.json"
+        },
+        {
+          "name": "Psychology Major, BA",
+          "code": "PSYC.MAJ",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2025/psychology/major/psychology-major-ba/program.json"
+        },
+        {
+          "name": "Psychology Major, BS",
+          "code": "PSYC.MAJ.BS",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2025/psychology/major/psychology-major-bs/program.json"
+        },
+        {
+          "name": "Psychology Major: Neuroscience Concentration, BS",
+          "code": "PSYC.MAJ.NEURO",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2025/psychology/major/psychology-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Psychology Minor",
+          "code": "PSYC.MIN",
+          "type": "Minor",
+          "department": "Psychology",
+          "path": "2025/psychology/minor/psychology-minor/program.json"
+        },
+        {
+          "name": "Religion, BA",
+          "code": "REL.MAJ",
+          "type": "Major",
+          "department": "Religion",
+          "path": "2025/religion/major/religion-ba/program.json"
+        },
+        {
+          "name": "Religion Minor",
+          "code": "REL.MIN",
+          "type": "Minor",
+          "department": "Religion",
+          "path": "2025/religion/minor/religion-minor/program.json"
+        },
+        {
+          "name": "Global Business, Certificate",
+          "code": "CERT.GLBL",
+          "type": "Certificate: Undergraduate",
+          "department": "School of Business",
+          "path": "2025/school-of-business/certificate-undergraduate/global-business-certificate/program.json"
+        },
+        {
+          "name": "Accounting, BSA",
+          "code": "ACCT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/accounting-bsa/program.json"
+        },
+        {
+          "name": "Business Analytics, BS",
+          "code": "ANLYT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/business-analytics-bs/program.json"
+        },
+        {
+          "name": "Entrepreneurship, BA",
+          "code": "ENSHP.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/entrepreneurship-ba/program.json"
+        },
+        {
+          "name": "Finance, BS",
+          "code": "FIN.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/finance-bs/program.json"
+        },
+        {
+          "name": "Financial Planning, BS",
+          "code": "FINP.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/financial-planning-bs/program.json"
+        },
+        {
+          "name": "Human Resource Management, BA",
+          "code": "HRM.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/human-resource-management-ba/program.json"
+        },
+        {
+          "name": "Marketing: Analytics and Research Concentration, BA",
+          "code": "MKTG.ANLYT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/marketing-analytics-and-research-concentration-ba/program.json"
+        },
+        {
+          "name": "Marketing: Marketing Management Concentration, BA",
+          "code": "MKTG.MGMT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/marketing-marketing-management-concentration-ba/program.json"
+        },
+        {
+          "name": "Marketing: Professional Selling Concentration, BA",
+          "code": "MKTG.SELL.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/marketing-professional-selling-concentration-ba/program.json"
+        },
+        {
+          "name": "Operations and Supply Chain Management, BS",
+          "code": "BS.OPSCM",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2025/school-of-business/major/operations-and-supply-chain-management-bs/program.json"
+        },
+        {
+          "name": "Accounting, MAcc",
+          "code": "MACC.ACCT",
+          "type": "Master's",
+          "department": "School of Business",
+          "path": "2025/school-of-business/masters/accounting-macc/program.json"
+        },
+        {
+          "name": "Business Administration, MBA",
+          "code": "MBA.BUSAD",
+          "type": "Master's",
+          "department": "School of Business",
+          "path": "2025/school-of-business/masters/business-administration-mba/program.json"
+        },
+        {
+          "name": "Accounting Minor",
+          "code": "ACCT.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2025/school-of-business/minor/accounting-minor/program.json"
+        },
+        {
+          "name": "Business Minor",
+          "code": "BUS.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2025/school-of-business/minor/business-minor/program.json"
+        },
+        {
+          "name": "Entrepreneurship Minor",
+          "code": "ENSHP.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2025/school-of-business/minor/entrepreneurship-minor/program.json"
+        },
+        {
+          "name": "Information Systems Minor",
+          "code": "INSYS.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2025/school-of-business/minor/information-systems-minor/program.json"
+        },
+        {
+          "name": "Operations and Supply Chain Management Minor",
+          "code": "SCM.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2025/school-of-business/minor/operations-and-supply-chain-management-minor/program.json"
+        },
+        {
+          "name": "Occupational Therapy",
+          "code": "PROT",
+          "type": "Major",
+          "department": "School of Health",
+          "path": "2025/school-of-health/major/occupational-therapy/program.json"
+        },
+        {
+          "name": "Health Science",
+          "code": null,
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/health-science/program.json"
+        },
+        {
+          "name": "Pre-professional: Medicine, Dentistry, and Veterinary",
+          "code": "PRMED",
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/pre-professional-medicine-dentistry-and-veterinary/program.json"
+        },
+        {
+          "name": "Pre-professional: Optometry",
+          "code": "PROPT",
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/pre-professional-optometry/program.json"
+        },
+        {
+          "name": "Pre-professional: Pharmacy",
+          "code": "PRPHA",
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/pre-professional-pharmacy/program.json"
+        },
+        {
+          "name": "Pre-professional: Physical Therapy",
+          "code": "PRPHT",
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/pre-professional-physical-therapy/program.json"
+        },
+        {
+          "name": "Pre-professional: Physician Assistant",
+          "code": "PRPA",
+          "type": null,
+          "department": "School of Health",
+          "path": "2025/school-of-health/other/pre-professional-physician-assistant/program.json"
+        },
+        {
+          "name": "Criminology, BA",
+          "code": "CRIM.MAJ",
+          "type": "Major",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/major/criminology-ba/program.json"
+        },
+        {
+          "name": "Social Work Major, BSW",
+          "code": "SOWK.MAJ",
+          "type": "Major",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/major/social-work-major-bsw/program.json"
+        },
+        {
+          "name": "Social Work, MSW",
+          "code": "MSW.SOWK",
+          "type": "Master's",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/masters/social-work-msw/program.json"
+        },
+        {
+          "name": "Criminology Minor",
+          "code": "CRIM.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/minor/criminology-minor/program.json"
+        },
+        {
+          "name": "Social Work Minor",
+          "code": "SOWK.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/minor/social-work-minor/program.json"
+        },
+        {
+          "name": "Sociology Minor",
+          "code": "SOC.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2025/sociology-and-social-work/minor/sociology-minor/program.json"
+        },
+        {
+          "name": "Speech and Hearing Foundations, Certificate",
+          "code": "CERT.SPFDN",
+          "type": "Certificate: Undergraduate",
+          "department": "Speech Pathology and Audiology",
+          "path": "2025/speech-pathology-and-audiology/certificate-undergraduate/speech-and-hearing-foundations-certificate/program.json"
+        },
+        {
+          "name": "Speech Pathology and Audiology, BA-MA (5 year)",
+          "code": "SPAUD.MAJ.5YR",
+          "type": "Dual Degree",
+          "department": "Speech Pathology and Audiology",
+          "path": "2025/speech-pathology-and-audiology/dual-degree/speech-pathology-and-audiology-ba-ma-5-year/program.json"
+        },
+        {
+          "name": "Speech Pathology and Audiology, BA (4 year)",
+          "code": "SPAUD.MAJ.4YR",
+          "type": "Major",
+          "department": "Speech Pathology and Audiology",
+          "path": "2025/speech-pathology-and-audiology/major/speech-pathology-and-audiology-ba-4-year/program.json"
+        },
+        {
+          "name": "Speech-Language Pathology, MA",
+          "code": "SPATH.MAJ",
+          "type": "Master's",
+          "department": "Speech Pathology and Audiology",
+          "path": "2025/speech-pathology-and-audiology/masters/speech-language-pathology-ma/program.json"
+        },
+        {
+          "name": "Urban Studies Minor",
+          "code": "URBST.MIN",
+          "type": "Minor",
+          "department": "Urban Studies",
+          "path": "2025/urban-studies/minor/urban-studies-minor/program.json"
+        },
+        {
+          "name": "Art, BFA",
+          "code": "BFA.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/art-bfa/program.json"
+        },
+        {
+          "name": "Art Education PK-12 Major",
+          "code": "MAJ_ART_PK12",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/art-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Graphic Design Major, BFA",
+          "code": "GRDSN.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/graphic-design-major-bfa/program.json"
+        },
+        {
+          "name": "Music Education PK-12, BME",
+          "code": "BME_MUSC_PK12",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/music-education-pk-12-bme/program.json"
+        },
+        {
+          "name": "Music Major, BA",
+          "code": "MUSC.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/music-major-ba/program.json"
+        },
+        {
+          "name": "Music Major: Composition Emphasis, BA",
+          "code": "MUSC.COMP.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/music-major-composition-emphasis-ba/program.json"
+        },
+        {
+          "name": "Music Major: Performance Emphasis, BA",
+          "code": "MUSC.PERF.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/music-major-performance-emphasis-ba/program.json"
+        },
+        {
+          "name": "Studio Art, BA",
+          "code": "ART.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/major/studio-art-ba/program.json"
+        },
+        {
+          "name": "Graphic Design Minor",
+          "code": "GRDSN.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/minor/graphic-design-minor/program.json"
+        },
+        {
+          "name": "Music Minor",
+          "code": "MUSC.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/minor/music-minor/program.json"
+        },
+        {
+          "name": "Studio Art Minor",
+          "code": "ART.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/minor/studio-art-minor/program.json"
+        },
+        {
+          "name": "Theatre Minor",
+          "code": "MIN_CASTH",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2025/visual-and-performing-arts/minor/theatre-minor/program.json"
+        },
+        {
+          "name": "Spanish Language Proficiency, Certificate",
+          "code": "CERT_WL",
+          "type": "Certificate: Undergraduate",
+          "department": "World Languages",
+          "path": "2025/world-languages/certificate-undergraduate/spanish-language-proficiency-certificate/program.json"
+        },
+        {
+          "name": "Spanish, BA",
+          "code": "SPAN.MAJ",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2025/world-languages/major/spanish-ba/program.json"
+        },
+        {
+          "name": "Spanish Education PK-12 Major",
+          "code": "MAJ_SPAN_PK12",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2025/world-languages/major/spanish-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Dutch Studies Minor",
+          "code": "NETH.MAJ",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2025/world-languages/minor/dutch-studies-minor/program.json"
+        },
+        {
+          "name": "Spanish Minor",
+          "code": "SPAN.MIN",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2025/world-languages/minor/spanish-minor/program.json"
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "catoid": "24",
+      "catalogYear": "2025-26",
+      "programs": [
+        {
+          "name": "Applied Leadership, BA",
+          "code": "BA_APPLDR",
+          "type": "Major",
+          "department": "Adult Degree Completion (Knollcrest Campus)",
+          "path": "2024/adult-degree-completion-knollcrest-campus/major/applied-leadership-ba/program.json"
+        },
+        {
+          "name": "Human Services, BA",
+          "code": "BA_HUMAN",
+          "type": "Major",
+          "department": "Adult Degree Completion (Knollcrest Campus)",
+          "path": "2024/adult-degree-completion-knollcrest-campus/major/human-services-ba/program.json"
+        },
+        {
+          "name": "Africana Studies Minor",
+          "code": "AFDST.MIN",
+          "type": "Minor",
+          "department": "Africana Studies",
+          "path": "2024/africana-studies/minor/africana-studies-minor/program.json"
+        },
+        {
+          "name": "Archaeology Minor",
+          "code": "ARCH.MIN",
+          "type": "Minor",
+          "department": "Archaeology",
+          "path": "2024/archaeology/minor/archaeology-minor/program.json"
+        },
+        {
+          "name": "Asian Studies Major",
+          "code": "ASNST.MAJ",
+          "type": "Major",
+          "department": "Asian Studies",
+          "path": "2024/asian-studies/major/asian-studies-major/program.json"
+        },
+        {
+          "name": "Asian Studies Minor",
+          "code": "ASNST.MIN",
+          "type": "Minor",
+          "department": "Asian Studies",
+          "path": "2024/asian-studies/minor/asian-studies-minor/program.json"
+        },
+        {
+          "name": "Astrophysics, Certificate",
+          "code": "CERT.ASTR",
+          "type": "Certificate: Undergraduate",
+          "department": "Astronomy",
+          "path": "2024/astronomy/certificate-undergraduate/astrophysics-certificate/program.json"
+        },
+        {
+          "name": "Biology Major, BA",
+          "code": "BIOL.BA.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2024/biology/major/biology-major-ba/program.json"
+        },
+        {
+          "name": "Biology Major, BS",
+          "code": "BIOL.BS.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2024/biology/major/biology-major-bs/program.json"
+        },
+        {
+          "name": "Biology Major: Neuroscience Concentration, BS",
+          "code": "BIOL.NEURO.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2024/biology/major/biology-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Environmental Health and Conservation Major: Ecology and Management Track, BS",
+          "code": "EHC.ECO.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2024/biology/major/environmental-health-and-conservation-major-ecology-and-management-track-bs/program.json"
+        },
+        {
+          "name": "Environmental Health and Conservation Major: One Health Track, BS",
+          "code": "EHC.ONEH.MAJ",
+          "type": "Major",
+          "department": "Biology",
+          "path": "2024/biology/major/environmental-health-and-conservation-major-one-health-track-bs/program.json"
+        },
+        {
+          "name": "Biology Education Minor",
+          "code": "MIN_BIOL_EDUC",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2024/biology/minor/biology-education-minor/program.json"
+        },
+        {
+          "name": "Biology Minor",
+          "code": "BIOL.MIN",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2024/biology/minor/biology-minor/program.json"
+        },
+        {
+          "name": "Integrative Biotechnology Minor",
+          "code": "BIOTC.MIN",
+          "type": "Minor",
+          "department": "Biology",
+          "path": "2024/biology/minor/integrative-biotechnology-minor/program.json"
+        },
+        {
+          "name": "Certificate Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/certificate-programs/program.json"
+        },
+        {
+          "name": "Graduate Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/graduate-programs/program.json"
+        },
+        {
+          "name": "Pre-professional: Law",
+          "code": "PRLAW",
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/pre-professional-law/program.json"
+        },
+        {
+          "name": "Pre-professional: Ministry",
+          "code": "PRSEM",
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/pre-professional-ministry/program.json"
+        },
+        {
+          "name": "Pre-professional Programs",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/pre-professional-programs/program.json"
+        },
+        {
+          "name": "The Knight Scholars Program",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/the-knight-scholars-program/program.json"
+        },
+        {
+          "name": "The Rhetoric across the Curriculum Program",
+          "code": null,
+          "type": null,
+          "department": "Calvin University",
+          "path": "2024/calvin-university/other/the-rhetoric-across-the-curriculum-program/program.json"
+        },
+        {
+          "name": "Biochemistry Major: ACS Certified, BS",
+          "code": "BIOCH.ACS.MAJ",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/biochemistry-major-acs-certified-bs/program.json"
+        },
+        {
+          "name": "Biochemistry Major, BA",
+          "code": "BIOCH.MAJ.BA",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/biochemistry-major-ba/program.json"
+        },
+        {
+          "name": "Biochemistry Major, BS",
+          "code": "BIOCH.MAJ.BS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/biochemistry-major-bs/program.json"
+        },
+        {
+          "name": "Biochemistry Major: Neuroscience Concentration, BS",
+          "code": "BIOCH.NEURO.MAJ",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/biochemistry-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major: ACS Certified, BS",
+          "code": "CHEM.MAJ.ACS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/chemistry-major-acs-certified-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major, BA",
+          "code": "CHEM.MAJ.BA",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/chemistry-major-ba/program.json"
+        },
+        {
+          "name": "Chemistry Major, BS",
+          "code": "CHEM.MAJ.BS",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/chemistry-major-bs/program.json"
+        },
+        {
+          "name": "Chemistry Major: Neuroscience Concentration",
+          "code": "CHEM.MAJ.NEURO",
+          "type": "Major",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/major/chemistry-major-neuroscience-concentration/program.json"
+        },
+        {
+          "name": "Biochemistry Minor",
+          "code": "BIOCH.MIN",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/minor/biochemistry-minor/program.json"
+        },
+        {
+          "name": "Chemistry Education Minor",
+          "code": "MIN_CHEM_EDUC",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/minor/chemistry-education-minor/program.json"
+        },
+        {
+          "name": "Chemistry Minor",
+          "code": "CHEM.MIN",
+          "type": "Minor",
+          "department": "Chemistry and Biochemistry",
+          "path": "2024/chemistry-and-biochemistry/minor/chemistry-minor/program.json"
+        },
+        {
+          "name": "Classical and Medieval Studies Minor",
+          "code": "MDVST.MIN",
+          "type": "Minor",
+          "department": "Classical and Medieval Studies",
+          "path": "2024/classical-and-medieval-studies/minor/classical-and-medieval-studies-minor/program.json"
+        },
+        {
+          "name": "Applied Film and Media Major",
+          "code": "APPFM.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/applied-film-and-media-major/program.json"
+        },
+        {
+          "name": "Digital Communication",
+          "code": "CASCS.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/digital-communication/program.json"
+        },
+        {
+          "name": "Film and Media Major: Production Concentration",
+          "code": "CASMF.PROD.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/film-and-media-major-production-concentration/program.json"
+        },
+        {
+          "name": "Film and Media Major: Studies Concentration",
+          "code": "CASMF.STUDIES.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/film-and-media-major-studies-concentration/program.json"
+        },
+        {
+          "name": "Health Communication Major",
+          "code": "HCOMM.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/health-communication-major/program.json"
+        },
+        {
+          "name": "Sports Communication Major",
+          "code": "MAJ_SPCOMM",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/sports-communication-major/program.json"
+        },
+        {
+          "name": "Strategic Communication Major",
+          "code": "CASSC.MAJ",
+          "type": "Major",
+          "department": "Communication",
+          "path": "2024/communication/major/strategic-communication-major/program.json"
+        },
+        {
+          "name": "Media and Strategic Communication, MA",
+          "code": "MEDIA.MA",
+          "type": "Master's",
+          "department": "Communication",
+          "path": "2024/communication/masters/media-and-strategic-communication-ma/program.json"
+        },
+        {
+          "name": "Communication Minor",
+          "code": "CAS.MIN",
+          "type": "Minor",
+          "department": "Communication",
+          "path": "2024/communication/minor/communication-minor/program.json"
+        },
+        {
+          "name": "Film and Media Minor",
+          "code": "CASFM.MIN",
+          "type": "Minor",
+          "department": "Communication",
+          "path": "2024/communication/minor/film-and-media-minor/program.json"
+        },
+        {
+          "name": "Cybersecurity, Certificate",
+          "code": null,
+          "type": "Certificate: Undergraduate",
+          "department": "Computer Science",
+          "path": "2024/computer-science/certificate-undergraduate/cybersecurity-certificate/program.json"
+        },
+        {
+          "name": "Computer Science, BCS",
+          "code": "CPSC.BCS.MAJ",
+          "type": "Major",
+          "department": "Computer Science",
+          "path": "2024/computer-science/major/computer-science-bcs/program.json"
+        },
+        {
+          "name": "Computer Science Plus, BS",
+          "code": "CS.MAJ",
+          "type": "Major",
+          "department": "Computer Science",
+          "path": "2024/computer-science/major/computer-science-plus-bs/program.json"
+        },
+        {
+          "name": "Computer Science Minor",
+          "code": "CPSC.MIN",
+          "type": "Minor",
+          "department": "Computer Science",
+          "path": "2024/computer-science/minor/computer-science-minor/program.json"
+        },
+        {
+          "name": "Core Program",
+          "code": "CORE-GEN",
+          "type": null,
+          "department": "Core Program",
+          "path": "2024/core-program/other/core-program/program.json"
+        },
+        {
+          "name": "Data Science Major, BS",
+          "code": "DATA.MAJ",
+          "type": "Major",
+          "department": "Data Science",
+          "path": "2024/data-science/major/data-science-major-bs/program.json"
+        },
+        {
+          "name": "Data Analytics Minor",
+          "code": "ANLYT.MIN",
+          "type": "Minor",
+          "department": "Data Science",
+          "path": "2024/data-science/minor/data-analytics-minor/program.json"
+        },
+        {
+          "name": "Data Science Minor",
+          "code": "DATA.MIN",
+          "type": "Minor",
+          "department": "Data Science",
+          "path": "2024/data-science/minor/data-science-minor/program.json"
+        },
+        {
+          "name": "Economics Major, BA",
+          "code": "ECON.MAJ.BA",
+          "type": "Major",
+          "department": "Economics",
+          "path": "2024/economics/major/economics-major-ba/program.json"
+        },
+        {
+          "name": "Economics Major, BS",
+          "code": "ECON.MAJ",
+          "type": "Major",
+          "department": "Economics",
+          "path": "2024/economics/major/economics-major-bs/program.json"
+        },
+        {
+          "name": "Economics Minor",
+          "code": "ECON.MIN",
+          "type": "Minor",
+          "department": "Economics",
+          "path": "2024/economics/minor/economics-minor/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Arts and Music Concentration",
+          "code": "CERT.ART",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-arts-and-music-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Communication and Commerce Concentration",
+          "code": "CERT.COMMERCE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-communication-and-commerce-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Creation Care Concentration",
+          "code": "CERT.CREATE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-creation-care-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Education Concentration",
+          "code": "CERT-EDUC",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-education-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Health, Wellness, and Recreation Concentration",
+          "code": "CERT.HEALTH",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-health-wellness-and-recreation-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Interdisciplinary Concentration",
+          "code": "CERT.IDIS",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-interdisciplinary-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate: Ministry and Human Services Concentration",
+          "code": "CERT.MINISTRY",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate-ministry-and-human-services-concentration/program.json"
+        },
+        {
+          "name": "Comprehensive Postsecondary Education, Certificate",
+          "code": "CERT.CPE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/comprehensive-postsecondary-education-certificate/program.json"
+        },
+        {
+          "name": "Life and Career Studies, Certificate",
+          "code": "CERT_LIFE",
+          "type": "Certificate: Undergraduate",
+          "department": "Education",
+          "path": "2024/education/certificate-undergraduate/life-and-career-studies-certificate/program.json"
+        },
+        {
+          "name": "Education Major: Prekindergarten-Twelfth Grade (PK-12)",
+          "code": null,
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/education-major-prekindergarten-twelfth-grade-pk-12/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Birth-Kindergarten (B-K)",
+          "code": "BA_ELED_BK",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/elementary-education-major-birth-kindergarten-b-k/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Prekindergarten-Third Grade (PK-3)",
+          "code": "BA_ELED_PK3",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/elementary-education-major-prekindergarten-third-grade-pk-3/program.json"
+        },
+        {
+          "name": "Elementary Education Major: Third-Sixth Grade (3-6)",
+          "code": "BA_ELED_36",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/elementary-education-major-third-sixth-grade-3-6/program.json"
+        },
+        {
+          "name": "Secondary Education Major, BA",
+          "code": "BA_SECED",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/secondary-education-major-ba/program.json"
+        },
+        {
+          "name": "Special Education K-12 Major: Cognitive Impairment, BA",
+          "code": "BA_SPED_K12",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/special-education-k-12-major-cognitive-impairment-ba/program.json"
+        },
+        {
+          "name": "Special Education K-12 Major: Cognitive Impairment",
+          "code": "SPED.MAJ",
+          "type": "Major",
+          "department": "Education",
+          "path": "2024/education/major/special-education-k-12-major-cognitive-impairment/program.json"
+        },
+        {
+          "name": "Education, MEd",
+          "code": "MED.MAJ",
+          "type": "Master's",
+          "department": "Education",
+          "path": "2024/education/masters/education-med/program.json"
+        },
+        {
+          "name": "Master of Arts in Teaching, MAT",
+          "code": "MAT_MAT",
+          "type": "Master's",
+          "department": "Education",
+          "path": "2024/education/masters/master-of-arts-in-teaching-mat/program.json"
+        },
+        {
+          "name": "Special Education Studies Minor",
+          "code": "SPDST.MIN",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2024/education/minor/special-education-studies-minor/program.json"
+        },
+        {
+          "name": "Teaching English to Speakers of Other Languages (TESOL) Minor: Certification Track",
+          "code": "MIN_ESL_ED",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2024/education/minor/teaching-english-to-speakers-of-other-languages-tesol-minor-certification-track/program.json"
+        },
+        {
+          "name": "Teaching English to Speakers of Other Languages (TESOL) Minor",
+          "code": "ESL.MIN",
+          "type": "Minor",
+          "department": "Education",
+          "path": "2024/education/minor/teaching-english-to-speakers-of-other-languages-tesol-minor/program.json"
+        },
+        {
+          "name": "Post-Bachelor Teacher Certification",
+          "code": "TC_POSTBA",
+          "type": null,
+          "department": "Education",
+          "path": "2024/education/other/post-bachelor-teacher-certification/program.json"
+        },
+        {
+          "name": "Sustainability Designation",
+          "code": "SPCL_SUSTN",
+          "type": "Designation",
+          "department": "Engineering",
+          "path": "2024/engineering/designation/sustainability-designation/program.json"
+        },
+        {
+          "name": "Engineering: Aerospace Engineering Concentration",
+          "code": "BSE_ENGR_AERO",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-aerospace-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Chemical Engineering Concentration",
+          "code": "ENGRH.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-chemical-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Civil and Environmental Engineering Concentration",
+          "code": "ENGRV.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-civil-and-environmental-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Electrical and Computer Engineering Concentration",
+          "code": "ENGRE.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-electrical-and-computer-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Energy, Environment, and Sustainability Engineering Concentration",
+          "code": "BSE_ENGR_SUSTN",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-energy-environment-and-sustainability-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Mechanical Engineering Concentration",
+          "code": "ENGRM.MAJ",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-mechanical-engineering-concentration/program.json"
+        },
+        {
+          "name": "Engineering: Mechatronics Engineering Concentration",
+          "code": "BSE_ENGR_MTRON",
+          "type": "Major",
+          "department": "Engineering",
+          "path": "2024/engineering/major/engineering-mechatronics-engineering-concentration/program.json"
+        },
+        {
+          "name": "Biomedical Engineering Minor",
+          "code": "BIOMD.MIN",
+          "type": "Minor",
+          "department": "Engineering",
+          "path": "2024/engineering/minor/biomedical-engineering-minor/program.json"
+        },
+        {
+          "name": "Engineering Minor",
+          "code": "ENGR.MIN",
+          "type": "Minor",
+          "department": "Engineering",
+          "path": "2024/engineering/minor/engineering-minor/program.json"
+        },
+        {
+          "name": "English Language Arts Education 7-12 Major",
+          "code": "MAJ_LA_712",
+          "type": "Major",
+          "department": "English",
+          "path": "2024/english/major/english-language-arts-education-7-12-major/program.json"
+        },
+        {
+          "name": "English Major: General Concentration",
+          "code": "ENGL.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2024/english/major/english-major-general-concentration/program.json"
+        },
+        {
+          "name": "English Major: Linguistics Concentration",
+          "code": "LING.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2024/english/major/english-major-linguistics-concentration/program.json"
+        },
+        {
+          "name": "English Major: Literature Concentration",
+          "code": "LIT.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2024/english/major/english-major-literature-concentration/program.json"
+        },
+        {
+          "name": "English Major: Writing Concentration",
+          "code": "WRTNG.MAJ",
+          "type": "Major",
+          "department": "English",
+          "path": "2024/english/major/english-major-writing-concentration/program.json"
+        },
+        {
+          "name": "English Language Arts Education 5-9 Minor",
+          "code": "MIN_LA_59",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/english-language-arts-education-5-9-minor/program.json"
+        },
+        {
+          "name": "English Minor",
+          "code": "ENGL.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/english-minor/program.json"
+        },
+        {
+          "name": "Journalism Minor",
+          "code": "JOUR.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/journalism-minor/program.json"
+        },
+        {
+          "name": "Linguistics Minor",
+          "code": "LING.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/linguistics-minor/program.json"
+        },
+        {
+          "name": "Literature Minor",
+          "code": "LIT.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/literature-minor/program.json"
+        },
+        {
+          "name": "Writing Minor",
+          "code": "WRTNG.MIN",
+          "type": "Minor",
+          "department": "English",
+          "path": "2024/english/minor/writing-minor/program.json"
+        },
+        {
+          "name": "Environmental Science Major: Natural Resources Track, BS",
+          "code": "ENSC.NLRES.MAJ",
+          "type": "Major",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/major/environmental-science-major-natural-resources-track-bs/program.json"
+        },
+        {
+          "name": "Environmental Science Major: Naturalist Track, BS",
+          "code": "ENSC.NRLST.MAJ",
+          "type": "Major",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/major/environmental-science-major-naturalist-track-bs/program.json"
+        },
+        {
+          "name": "Environmental Studies Major: Economics Concentration",
+          "code": "ENST.ECON.MAJ",
+          "type": "Major",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/major/environmental-studies-major-economics-concentration/program.json"
+        },
+        {
+          "name": "Environmental Studies Major: Geography Concentration",
+          "code": "ENST.GEOG.MAJ",
+          "type": "Major",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/major/environmental-studies-major-geography-concentration/program.json"
+        },
+        {
+          "name": "Environmental Studies Major: Politics Concentration",
+          "code": "ENST.POLS.MAJ",
+          "type": "Major",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/major/environmental-studies-major-politics-concentration/program.json"
+        },
+        {
+          "name": "Environmental Studies Minor",
+          "code": "ENST.MIN",
+          "type": "Minor",
+          "department": "Environmental Science, Environmental Studies",
+          "path": "2024/environmental-science-environmental-studies/minor/environmental-studies-minor/program.json"
+        },
+        {
+          "name": "Gender Studies Minor",
+          "code": "GENST.MIN",
+          "type": "Minor",
+          "department": "Gender Studies",
+          "path": "2024/gender-studies/minor/gender-studies-minor/program.json"
+        },
+        {
+          "name": "Geographic Information Science (GIS), Graduate Certificate",
+          "code": "CERT_GIS_GR",
+          "type": "Certificate: Graduate",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/certificate-graduate/geographic-information-science-gis-graduate-certificate/program.json"
+        },
+        {
+          "name": "GIS Graduate Certificate for Local Government",
+          "code": "CERT_GRGIS",
+          "type": "Certificate: Graduate",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/certificate-graduate/gis-graduate-certificate-for-local-government/program.json"
+        },
+        {
+          "name": "Geographic Information Science, Certificate",
+          "code": "GIS.CERT",
+          "type": "Certificate: Undergraduate",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/certificate-undergraduate/geographic-information-science-certificate/program.json"
+        },
+        {
+          "name": "Geography Major",
+          "code": "GEOG.MAJ",
+          "type": "Major",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/major/geography-major/program.json"
+        },
+        {
+          "name": "Geology, BA",
+          "code": "GEOL.MAJ",
+          "type": "Major",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/major/geology-ba/program.json"
+        },
+        {
+          "name": "Geology, BS",
+          "code": "GEOL.BS.MAJ",
+          "type": "Major",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/major/geology-bs/program.json"
+        },
+        {
+          "name": "Geographic Information Science, MS",
+          "code": "GIS.MS",
+          "type": "Master's",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/masters/geographic-information-science-ms/program.json"
+        },
+        {
+          "name": "Earth and Space Science Education Minor",
+          "code": "MIN_EARTH_EDUC",
+          "type": "Minor",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/minor/earth-and-space-science-education-minor/program.json"
+        },
+        {
+          "name": "Geography Minor",
+          "code": "GEOG.MIN",
+          "type": "Minor",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/minor/geography-minor/program.json"
+        },
+        {
+          "name": "Geology Minor",
+          "code": "GEOL.MIN",
+          "type": "Minor",
+          "department": "Geology and Geography",
+          "path": "2024/geology-and-geography/minor/geology-minor/program.json"
+        },
+        {
+          "name": "History Major",
+          "code": "HIST.MAJ",
+          "type": "Major",
+          "department": "Historical Studies",
+          "path": "2024/historical-studies/major/history-major/program.json"
+        },
+        {
+          "name": "Social Studies Education 7-12 Major",
+          "code": "MAJ_SOST_712",
+          "type": "Major",
+          "department": "Historical Studies",
+          "path": "2024/historical-studies/major/social-studies-education-7-12-major/program.json"
+        },
+        {
+          "name": "History Minor",
+          "code": "HIST.MIN",
+          "type": "Minor",
+          "department": "Historical Studies",
+          "path": "2024/historical-studies/minor/history-minor/program.json"
+        },
+        {
+          "name": "Social Studies Education 5-9 Minor",
+          "code": "MIN_SOST_59",
+          "type": "Minor",
+          "department": "Historical Studies",
+          "path": "2024/historical-studies/minor/social-studies-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Honors Scholars Program",
+          "code": "HONORS",
+          "type": "Program",
+          "department": "Honors and Collegiate Scholars",
+          "path": "2024/honors-and-collegiate-scholars/program/honors-scholars-program/program.json"
+        },
+        {
+          "name": "Health and Physical Education PK-12 Major",
+          "code": "MAJ_HEPED_PK12",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/major/health-and-physical-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Exercise Science Emphasis, BS",
+          "code": "KIN.EXSC.MAJ.BS",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/major/kinesiology-major-exercise-science-emphasis-bs/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Pre-professional Emphasis, BS",
+          "code": "KIN.PRPRF.MAJ.BS",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/major/kinesiology-major-pre-professional-emphasis-bs/program.json"
+        },
+        {
+          "name": "Kinesiology Major: Sport Management Emphasis",
+          "code": "KIN.SPMG.MAJ",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/major/kinesiology-major-sport-management-emphasis/program.json"
+        },
+        {
+          "name": "Therapeutic Recreation Major, BSTR",
+          "code": "RECR.THRPY.MAJ",
+          "type": "Major",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/major/therapeutic-recreation-major-bstr/program.json"
+        },
+        {
+          "name": "Exercise Science: Health and Exercise Rehabilitation Concentration, MS",
+          "code": "MS.EXSC.HLTH",
+          "type": "Master's",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/masters/exercise-science-health-and-exercise-rehabilitation-concentration-ms/program.json"
+        },
+        {
+          "name": "Exercise Science: Performance and Sport Science Concentration, MS",
+          "code": "MS.EXSC.PERFM",
+          "type": "Master's",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/masters/exercise-science-performance-and-sport-science-concentration-ms/program.json"
+        },
+        {
+          "name": "Kinesiology Minor",
+          "code": "KIN.MIN",
+          "type": "Minor",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/minor/kinesiology-minor/program.json"
+        },
+        {
+          "name": "Recreation Leadership Minor",
+          "code": "RECR.MIN",
+          "type": "Minor",
+          "department": "Kinesiology",
+          "path": "2024/kinesiology/minor/recreation-leadership-minor/program.json"
+        },
+        {
+          "name": "Actuarial Science Major, BA",
+          "code": "ACTRY.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/major/actuarial-science-major-ba/program.json"
+        },
+        {
+          "name": "Mathematics Education 7-12 Major",
+          "code": "MAJ_MATH_712",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/major/mathematics-education-7-12-major/program.json"
+        },
+        {
+          "name": "Mathematics Major, BA",
+          "code": "MATH.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/major/mathematics-major-ba/program.json"
+        },
+        {
+          "name": "Mathematics Major, BS",
+          "code": "MATH.MAJ.BS",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/major/mathematics-major-bs/program.json"
+        },
+        {
+          "name": "Statistics Major, BA",
+          "code": "STAT.MAJ",
+          "type": "Major",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/major/statistics-major-ba/program.json"
+        },
+        {
+          "name": "Mathematics Education 5-9 Minor",
+          "code": "MIN_MATH_59",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/minor/mathematics-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Mathematics Minor",
+          "code": "MATH.MIN",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/minor/mathematics-minor/program.json"
+        },
+        {
+          "name": "Statistics Minor",
+          "code": "STAT.MIN",
+          "type": "Minor",
+          "department": "Mathematics and Statistics",
+          "path": "2024/mathematics-and-statistics/minor/statistics-minor/program.json"
+        },
+        {
+          "name": "Ministry Leadership Minor",
+          "code": "MNLDR.MIN",
+          "type": "Minor",
+          "department": "Ministry Leadership",
+          "path": "2024/ministry-leadership/minor/ministry-leadership-minor/program.json"
+        },
+        {
+          "name": "Nursing, BSN",
+          "code": "NURS.MAJ",
+          "type": "Major",
+          "department": "Nursing",
+          "path": "2024/nursing/major/nursing-bsn/program.json"
+        },
+        {
+          "name": "Semester in Britain (STBR)",
+          "code": "STBR",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/semester-in-britain-stbr/program.json"
+        },
+        {
+          "name": "Semester in Hungary (STHU)",
+          "code": "STHU",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/semester-in-hungary-sthu/program.json"
+        },
+        {
+          "name": "Semester in Washington, DC (STDC)",
+          "code": "STDC",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/semester-in-washington-dc-stdc/program.json"
+        },
+        {
+          "name": "Spanish Studies in Honduras (SPHO)",
+          "code": "SPHO",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/spanish-studies-in-honduras-spho/program.json"
+        },
+        {
+          "name": "Study in France (STFR)",
+          "code": "STFR",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/study-in-france-stfr/program.json"
+        },
+        {
+          "name": "Study in Peru (STPE)",
+          "code": "STPE",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/study-in-peru-stpe/program.json"
+        },
+        {
+          "name": "Study in Spain (STSP)",
+          "code": "STSP.ADV",
+          "type": "Off-Campus Programs",
+          "department": "Off-Campus Programs",
+          "path": "2024/off-campus-programs/off-campus-programs/study-in-spain-stsp/program.json"
+        },
+        {
+          "name": "Philosophy Double Major",
+          "code": "PHIL.DBL.MAJ",
+          "type": "Double Major",
+          "department": "Philosophy",
+          "path": "2024/philosophy/double-major/philosophy-double-major/program.json"
+        },
+        {
+          "name": "Philosophy Major",
+          "code": "PHIL.MAJ",
+          "type": "Major",
+          "department": "Philosophy",
+          "path": "2024/philosophy/major/philosophy-major/program.json"
+        },
+        {
+          "name": "Philosophy Minor",
+          "code": "PHIL.MIN",
+          "type": "Minor",
+          "department": "Philosophy",
+          "path": "2024/philosophy/minor/philosophy-minor/program.json"
+        },
+        {
+          "name": "Physics Major, BA",
+          "code": "PHYS.MAJ",
+          "type": "Major",
+          "department": "Physics",
+          "path": "2024/physics/major/physics-major-ba/program.json"
+        },
+        {
+          "name": "Physics Major, BS",
+          "code": "PHYS.MAJ.BS",
+          "type": "Major",
+          "department": "Physics",
+          "path": "2024/physics/major/physics-major-bs/program.json"
+        },
+        {
+          "name": "Optics Minor",
+          "code": "OPTIC.MIN",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2024/physics/minor/optics-minor/program.json"
+        },
+        {
+          "name": "Physics Education Minor",
+          "code": "MIN_PHYS_EDUC",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2024/physics/minor/physics-education-minor/program.json"
+        },
+        {
+          "name": "Physics Minor",
+          "code": "PHYS.MIN",
+          "type": "Minor",
+          "department": "Physics",
+          "path": "2024/physics/minor/physics-minor/program.json"
+        },
+        {
+          "name": "Politics, Philosophy, and Economics Major",
+          "code": "PPE.MAJ",
+          "type": "Major",
+          "department": "Politics, Philosophy, and Economics",
+          "path": "2024/politics-philosophy-and-economics/major/politics-philosophy-and-economics-major/program.json"
+        },
+        {
+          "name": "International Relations Major",
+          "code": "IR.MAJ",
+          "type": "Major",
+          "department": "Politics",
+          "path": "2024/politics/major/international-relations-major/program.json"
+        },
+        {
+          "name": "Political Science Major",
+          "code": "POLS.MAJ",
+          "type": "Major",
+          "department": "Politics",
+          "path": "2024/politics/major/political-science-major/program.json"
+        },
+        {
+          "name": "International Relations Minor",
+          "code": "IR.MIN",
+          "type": "Minor",
+          "department": "Politics",
+          "path": "2024/politics/minor/international-relations-minor/program.json"
+        },
+        {
+          "name": "Political Science Minor",
+          "code": "POLS.MIN",
+          "type": "Minor",
+          "department": "Politics",
+          "path": "2024/politics/minor/political-science-minor/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership, Certificate",
+          "code": "CERT.ML.MAJ",
+          "type": "Certificate: Undergraduate",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2024/prison-education-programs-handlon-campus/certificate-undergraduate/faith-and-community-leadership-certificate/program.json"
+        },
+        {
+          "name": "Liberal Arts and Sciences, Certificate",
+          "code": "CERT_LIBART",
+          "type": "Certificate: Undergraduate",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2024/prison-education-programs-handlon-campus/certificate-undergraduate/liberal-arts-and-sciences-certificate/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership Major, AA",
+          "code": "AA.ML.MAJ",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2024/prison-education-programs-handlon-campus/major/faith-and-community-leadership-major-aa/program.json"
+        },
+        {
+          "name": "Faith and Community Leadership Major, BA",
+          "code": "BA.ML.MAJ",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2024/prison-education-programs-handlon-campus/major/faith-and-community-leadership-major-ba/program.json"
+        },
+        {
+          "name": "Human Services Major, BA",
+          "code": "MAJ_HUMAN",
+          "type": "Major",
+          "department": "Prison Education Programs (Handlon Campus)",
+          "path": "2024/prison-education-programs-handlon-campus/major/human-services-major-ba/program.json"
+        },
+        {
+          "name": "Psychology Major, BA",
+          "code": "PSYC.MAJ",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2024/psychology/major/psychology-major-ba/program.json"
+        },
+        {
+          "name": "Psychology Major, BS",
+          "code": "PSYC.MAJ.BS",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2024/psychology/major/psychology-major-bs/program.json"
+        },
+        {
+          "name": "Psychology Major: Neuroscience Concentration, BS",
+          "code": "PSYC.MAJ.NEURO",
+          "type": "Major",
+          "department": "Psychology",
+          "path": "2024/psychology/major/psychology-major-neuroscience-concentration-bs/program.json"
+        },
+        {
+          "name": "Psychology Minor",
+          "code": "PSYC.MIN",
+          "type": "Minor",
+          "department": "Psychology",
+          "path": "2024/psychology/minor/psychology-minor/program.json"
+        },
+        {
+          "name": "Public Health Major",
+          "code": "PUBH.MAJ",
+          "type": "Major",
+          "department": "Public Health",
+          "path": "2024/public-health/major/public-health-major/program.json"
+        },
+        {
+          "name": "Public Health Minor",
+          "code": "PUBH.MIN",
+          "type": "Minor",
+          "department": "Public Health",
+          "path": "2024/public-health/minor/public-health-minor/program.json"
+        },
+        {
+          "name": "Religion Major",
+          "code": "REL.MAJ",
+          "type": "Major",
+          "department": "Religion",
+          "path": "2024/religion/major/religion-major/program.json"
+        },
+        {
+          "name": "Religion Minor",
+          "code": "REL.MIN",
+          "type": "Minor",
+          "department": "Religion",
+          "path": "2024/religion/minor/religion-minor/program.json"
+        },
+        {
+          "name": "Global Business, Certificate",
+          "code": "CERT.GLBL",
+          "type": "Certificate: Undergraduate",
+          "department": "School of Business",
+          "path": "2024/school-of-business/certificate-undergraduate/global-business-certificate/program.json"
+        },
+        {
+          "name": "Accounting, BSA",
+          "code": "ACCT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/accounting-bsa/program.json"
+        },
+        {
+          "name": "Business Analytics, BS",
+          "code": "ANLYT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/business-analytics-bs/program.json"
+        },
+        {
+          "name": "Entrepreneurship, BA",
+          "code": "ENSHP.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/entrepreneurship-ba/program.json"
+        },
+        {
+          "name": "Finance, BS",
+          "code": "FIN.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/finance-bs/program.json"
+        },
+        {
+          "name": "Financial Planning, BS",
+          "code": "FINP.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/financial-planning-bs/program.json"
+        },
+        {
+          "name": "Human Resource Management, BA",
+          "code": "HRM.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/human-resource-management-ba/program.json"
+        },
+        {
+          "name": "Marketing: Analytics and Research Concentration, BA",
+          "code": "MKTG.ANLYT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/marketing-analytics-and-research-concentration-ba/program.json"
+        },
+        {
+          "name": "Marketing: Marketing Management Concentration, BA",
+          "code": "MKTG.MGMT.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/marketing-marketing-management-concentration-ba/program.json"
+        },
+        {
+          "name": "Marketing: Professional Selling Concentration, BA",
+          "code": "MKTG.SELL.MAJ",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/marketing-professional-selling-concentration-ba/program.json"
+        },
+        {
+          "name": "Operations and Supply Chain Management, BS",
+          "code": "BS.OPSCM",
+          "type": "Major",
+          "department": "School of Business",
+          "path": "2024/school-of-business/major/operations-and-supply-chain-management-bs/program.json"
+        },
+        {
+          "name": "Accounting, MAcc",
+          "code": "MACC.ACCT",
+          "type": "Master's",
+          "department": "School of Business",
+          "path": "2024/school-of-business/masters/accounting-macc/program.json"
+        },
+        {
+          "name": "Business Administration, MBA",
+          "code": "MBA.BUSAD",
+          "type": "Master's",
+          "department": "School of Business",
+          "path": "2024/school-of-business/masters/business-administration-mba/program.json"
+        },
+        {
+          "name": "Accounting Minor",
+          "code": "ACCT.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2024/school-of-business/minor/accounting-minor/program.json"
+        },
+        {
+          "name": "Business Minor",
+          "code": "BUS.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2024/school-of-business/minor/business-minor/program.json"
+        },
+        {
+          "name": "Entrepreneurship Minor",
+          "code": "ENSHP.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2024/school-of-business/minor/entrepreneurship-minor/program.json"
+        },
+        {
+          "name": "Information Systems Minor",
+          "code": "INSYS.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2024/school-of-business/minor/information-systems-minor/program.json"
+        },
+        {
+          "name": "Operations and Supply Chain Management Minor",
+          "code": "SCM.MIN",
+          "type": "Minor",
+          "department": "School of Business",
+          "path": "2024/school-of-business/minor/operations-and-supply-chain-management-minor/program.json"
+        },
+        {
+          "name": "Occupational Therapy",
+          "code": "PROT",
+          "type": "Major",
+          "department": "School of Health",
+          "path": "2024/school-of-health/major/occupational-therapy/program.json"
+        },
+        {
+          "name": "Health Science",
+          "code": null,
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/health-science/program.json"
+        },
+        {
+          "name": "Pre-professional: Medicine, Dentistry, and Veterinary",
+          "code": "PRMED",
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/pre-professional-medicine-dentistry-and-veterinary/program.json"
+        },
+        {
+          "name": "Pre-professional: Optometry",
+          "code": "PROPT",
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/pre-professional-optometry/program.json"
+        },
+        {
+          "name": "Pre-professional: Pharmacy",
+          "code": "PRPHA",
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/pre-professional-pharmacy/program.json"
+        },
+        {
+          "name": "Pre-professional: Physical Therapy",
+          "code": "PRPHT",
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/pre-professional-physical-therapy/program.json"
+        },
+        {
+          "name": "Pre-professional: Physician Assistant",
+          "code": "PRPA",
+          "type": null,
+          "department": "School of Health",
+          "path": "2024/school-of-health/other/pre-professional-physician-assistant/program.json"
+        },
+        {
+          "name": "Science Education 7-12 Major",
+          "code": "MAJ_SCIED_712",
+          "type": "Major",
+          "department": "Science Education Studies",
+          "path": "2024/science-education-studies/major/science-education-7-12-major/program.json"
+        },
+        {
+          "name": "Science Education 5-9 Minor",
+          "code": "MIN_SCIED_59",
+          "type": "Minor",
+          "department": "Science Education Studies",
+          "path": "2024/science-education-studies/minor/science-education-5-9-minor/program.json"
+        },
+        {
+          "name": "Criminology Major",
+          "code": "CRIM.MAJ",
+          "type": "Major",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/major/criminology-major/program.json"
+        },
+        {
+          "name": "Social Work Major, BSW",
+          "code": "SOWK.MAJ",
+          "type": "Major",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/major/social-work-major-bsw/program.json"
+        },
+        {
+          "name": "Sociology Major",
+          "code": "SOC.MAJ",
+          "type": "Major",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/major/sociology-major/program.json"
+        },
+        {
+          "name": "Social Work, MSW",
+          "code": "MSW_SOWK",
+          "type": "Master's",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/masters/social-work-msw/program.json"
+        },
+        {
+          "name": "Criminology Minor",
+          "code": "CRIM.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/minor/criminology-minor/program.json"
+        },
+        {
+          "name": "Social Work Minor",
+          "code": "SOWK.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/minor/social-work-minor/program.json"
+        },
+        {
+          "name": "Sociology Minor",
+          "code": "SOC.MIN",
+          "type": "Minor",
+          "department": "Sociology and Social Work",
+          "path": "2024/sociology-and-social-work/minor/sociology-minor/program.json"
+        },
+        {
+          "name": "Speech and Hearing Foundations, Certificate",
+          "code": "CERT.SPFDN",
+          "type": "Certificate: Undergraduate",
+          "department": "Speech Pathology and Audiology",
+          "path": "2024/speech-pathology-and-audiology/certificate-undergraduate/speech-and-hearing-foundations-certificate/program.json"
+        },
+        {
+          "name": "Speech Pathology and Audiology Major, BA-MA (5 year)",
+          "code": "SPAUD.MAJ.5YR",
+          "type": "Dual Degree",
+          "department": "Speech Pathology and Audiology",
+          "path": "2024/speech-pathology-and-audiology/dual-degree/speech-pathology-and-audiology-major-ba-ma-5-year/program.json"
+        },
+        {
+          "name": "Speech Pathology and Audiology Major, BA (4 year)",
+          "code": "SPAUD.MAJ.4YR",
+          "type": "Major",
+          "department": "Speech Pathology and Audiology",
+          "path": "2024/speech-pathology-and-audiology/major/speech-pathology-and-audiology-major-ba-4-year/program.json"
+        },
+        {
+          "name": "Speech-Language Pathology, MA",
+          "code": "SPATH.MAJ",
+          "type": "Master's",
+          "department": "Speech Pathology and Audiology",
+          "path": "2024/speech-pathology-and-audiology/masters/speech-language-pathology-ma/program.json"
+        },
+        {
+          "name": "Urban Studies Minor",
+          "code": "URBST.MIN",
+          "type": "Minor",
+          "department": "Urban Studies",
+          "path": "2024/urban-studies/minor/urban-studies-minor/program.json"
+        },
+        {
+          "name": "Art, BFA",
+          "code": "BFA.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/art-bfa/program.json"
+        },
+        {
+          "name": "Art Education PK-12 Major",
+          "code": "MAJ_ART_PK12",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/art-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Graphic Design Major, BFA",
+          "code": "GRDSN.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/graphic-design-major-bfa/program.json"
+        },
+        {
+          "name": "Music Education PK-12, BME",
+          "code": "BME_MUSC_PK12",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/music-education-pk-12-bme/program.json"
+        },
+        {
+          "name": "Music Major, BA",
+          "code": "MUSC.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/music-major-ba/program.json"
+        },
+        {
+          "name": "Music Major: Composition Emphasis, BA",
+          "code": "MUSC.COMP.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/music-major-composition-emphasis-ba/program.json"
+        },
+        {
+          "name": "Music Major: Performance Emphasis, BA",
+          "code": "MUSC.PERF.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/music-major-performance-emphasis-ba/program.json"
+        },
+        {
+          "name": "Studio Art Major, BA",
+          "code": "ART.MAJ",
+          "type": "Major",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/major/studio-art-major-ba/program.json"
+        },
+        {
+          "name": "Graphic Design Minor",
+          "code": "GRDSN.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/minor/graphic-design-minor/program.json"
+        },
+        {
+          "name": "Music Minor",
+          "code": "MUSC.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/minor/music-minor/program.json"
+        },
+        {
+          "name": "Studio Art Minor",
+          "code": "ART.MIN",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/minor/studio-art-minor/program.json"
+        },
+        {
+          "name": "Theatre Minor",
+          "code": "MIN_CASTH",
+          "type": "Minor",
+          "department": "Visual and Performing Arts",
+          "path": "2024/visual-and-performing-arts/minor/theatre-minor/program.json"
+        },
+        {
+          "name": "World Languages Proficiency, Certificate",
+          "code": "CERT_WL",
+          "type": "Certificate: Undergraduate",
+          "department": "World Languages",
+          "path": "2024/world-languages/certificate-undergraduate/world-languages-proficiency-certificate/program.json"
+        },
+        {
+          "name": "French Education PK-12 Major",
+          "code": "MAJ_FREN_PK12",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2024/world-languages/major/french-education-pk-12-major/program.json"
+        },
+        {
+          "name": "French Major",
+          "code": "FREN.MAJ",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2024/world-languages/major/french-major/program.json"
+        },
+        {
+          "name": "Spanish Education PK-12 Major",
+          "code": "MAJ_SPAN_PK12",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2024/world-languages/major/spanish-education-pk-12-major/program.json"
+        },
+        {
+          "name": "Spanish Major",
+          "code": "SPAN.MAJ",
+          "type": "Major",
+          "department": "World Languages",
+          "path": "2024/world-languages/major/spanish-major/program.json"
+        },
+        {
+          "name": "Dutch Studies Minor",
+          "code": "NETH.MAJ",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2024/world-languages/minor/dutch-studies-minor/program.json"
+        },
+        {
+          "name": "French Minor",
+          "code": "FREN.MIN",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2024/world-languages/minor/french-minor/program.json"
+        },
+        {
+          "name": "German Studies Minor",
+          "code": "GRMST.MIN",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2024/world-languages/minor/german-studies-minor/program.json"
+        },
+        {
+          "name": "Spanish Minor",
+          "code": "SPAN.MIN",
+          "type": "Minor",
+          "department": "World Languages",
+          "path": "2024/world-languages/minor/spanish-minor/program.json"
+        }
+      ]
+    }
+  ]
+}

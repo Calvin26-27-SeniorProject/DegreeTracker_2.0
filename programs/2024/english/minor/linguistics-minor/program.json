@@ -1,0 +1,73 @@
+{
+  "id": "linguistics-minor",
+  "name": "Linguistics Minor",
+  "code": "LING.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13165",
+  "description": "The English department offers coursework in linguistics, literature, and writing—the art, craft, and science of language. Students in the linguistics minor focus specifically on understanding how language works—on sound, words, and sentence structure; and on the ways language shapes and is shaped by culture.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 18741,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53929"
+        },
+        {
+          "code": "ENGL 275",
+          "title": "English Syntax",
+          "credits": "4",
+          "courseId": 18745,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53933"
+        },
+        {
+          "code": "ENGL 371",
+          "title": "History of the English Language",
+          "credits": "4",
+          "courseId": 18742,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53930"
+        },
+        {
+          "code": "ENGL 372",
+          "title": "Sociolinguistics and Issues in Language Education",
+          "credits": "4",
+          "courseId": 18743,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53931"
+        },
+        {
+          "code": "SPAUD 216",
+          "title": "Phonetics",
+          "credits": "3",
+          "courseId": 20977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54416"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

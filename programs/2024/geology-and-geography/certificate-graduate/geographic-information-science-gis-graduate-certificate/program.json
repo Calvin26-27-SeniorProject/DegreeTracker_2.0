@@ -1,0 +1,59 @@
+{
+  "id": "geographic-information-science-gis-graduate-certificate",
+  "name": "Geographic Information Science (GIS), Graduate Certificate",
+  "code": "CERT_GIS_GR",
+  "type": "Certificate: Graduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 771,
+    "name": "Geology and Geography"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13324",
+  "description": "The Geographic Information Science graduate certificate is designed to be completed in 2 to 3 semesters. The program is suited for students who wish to gain foundational knowledge of Geographic Information Systems and Science (GIS/GISc) at the graduate level.",
+  "totalHours": "12",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GEO 560",
+          "title": "Geographic Information Systems and Cartography",
+          "credits": "4",
+          "courseId": 21552,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54596"
+        },
+        {
+          "code": "GEO 561",
+          "title": "Advanced Geographic Information Systems",
+          "credits": "4",
+          "courseId": 21553,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54597"
+        },
+        {
+          "code": "GEO 562",
+          "title": "Remote Sensing of Earth",
+          "credits": "4",
+          "courseId": 21554,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54598"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 12",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

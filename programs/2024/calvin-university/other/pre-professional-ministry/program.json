@@ -1,0 +1,20 @@
+{
+  "id": "pre-professional-ministry",
+  "name": "Pre-professional: Ministry",
+  "code": "PRSEM",
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 733,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13205",
+  "description": "For information on preparing for professional work in the ministry, see the page.",
+  "totalHours": null,
+  "requirements": []
+}

@@ -1,0 +1,96 @@
+{
+  "id": "optics-minor",
+  "name": "Optics Minor",
+  "code": "OPTIC.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 795,
+    "name": "Physics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13112",
+  "description": null,
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "Students pursuing a physics major and optics minor must follow college guidelines for overlap between a major and a minor. This is facilitated by the option in the physics major of substituting upper-level courses for introductory ones.",
+      "courses": [
+        {
+          "code": "PHYS 131",
+          "title": "Matter, Light, and Energy",
+          "credits": "1.5",
+          "courseId": 20204,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54243"
+        },
+        {
+          "code": "PHYS 235",
+          "title": "Introductory Physics: Electricity and Magnetism",
+          "credits": "3",
+          "courseId": 20211,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54250"
+        },
+        {
+          "code": "PHYS 246",
+          "title": "Waves, Optics, and Optical Technology",
+          "credits": "4",
+          "courseId": 20213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54252"
+        },
+        {
+          "code": "PHYS 345",
+          "title": "Electromagnetism",
+          "credits": "4",
+          "courseId": 20219,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54258"
+        },
+        {
+          "code": "PHYS 346",
+          "title": "Advanced Optics",
+          "credits": "2",
+          "courseId": 20220,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54259"
+        },
+        {
+          "code": "PHYS 349",
+          "title": "Advanced Electromagnetism and Optics Laboratory",
+          "credits": "2",
+          "courseId": 20222,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54261"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PHYS 131",
+          "placement": "after",
+          "text": "OR PHYS 133 - Introductory Physics: Mechanics and Gravity"
+        },
+        {
+          "course": "PHYS 349",
+          "placement": "after",
+          "text": "OR PHYS 379 - Advanced Quantum Physics Laboratory"
+        },
+        {
+          "course": "PHYS 345",
+          "placement": "after",
+          "text": "OR ENGR 302 - Engineering Electromagnetics"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: at least 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

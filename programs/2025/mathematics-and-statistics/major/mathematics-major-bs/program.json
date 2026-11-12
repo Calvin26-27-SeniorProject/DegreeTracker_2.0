@@ -1,0 +1,474 @@
+{
+  "id": "mathematics-major-bs",
+  "name": "Mathematics Major, BS",
+  "code": "MATH.MAJ.BS",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 364,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13752",
+  "description": "All proposed major programs must be designed in consultation with a departmental advisor and approved by the Department of Mathematics and Statistics. Major programs must consist of a coherent package of courses intended to serve the student's interests and career goals while meeting the minimum requirements below.",
+  "totalHours": "56-59",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MATH 161",
+          "title": "Calculus: Modeling and Computation",
+          "credits": "4",
+          "courseId": 12160,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+        },
+        {
+          "code": "MATH 162",
+          "title": "Differential and Integral Calculus",
+          "credits": "4",
+          "courseId": 12161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57856"
+        },
+        {
+          "code": "MATH 251",
+          "title": "Discrete Mathematics I",
+          "credits": "2",
+          "courseId": 9468,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56589"
+        },
+        {
+          "code": "MATH 255",
+          "title": "Introductory Linear Algebra",
+          "credits": "4",
+          "courseId": 9469,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56590"
+        },
+        {
+          "code": "MATH 271",
+          "title": "Multivariable Calculus",
+          "credits": "4",
+          "courseId": 8622,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56243"
+        },
+        {
+          "code": "MATH 351",
+          "title": "Abstract Algebra",
+          "credits": "4",
+          "courseId": 8629,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56251"
+        },
+        {
+          "code": "MATH 361",
+          "title": "Real Analysis I",
+          "credits": "4",
+          "courseId": 8632,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56254"
+        },
+        {
+          "code": "MATH 391",
+          "title": "Colloquium",
+          "credits": "0",
+          "courseId": 8637,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56259"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MATH 391",
+          "placement": "right",
+          "text": "(twice)"
+        },
+        {
+          "course": "MATH 361",
+          "placement": "after",
+          "text": "OR MATH 362 - Measure Theory"
+        },
+        {
+          "course": "MATH 161",
+          "placement": "after",
+          "text": "OR MATH 163 - Calculus: Modeling, Computation, Techniques of Integration"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "Statistics",
+          "courses": [
+            {
+              "code": "STAT 243",
+              "title": "Statistics",
+              "credits": "4",
+              "courseId": 9418,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56539"
+            },
+            {
+              "code": "STAT 341",
+              "title": "Computational Bayesian Statistics",
+              "credits": "4",
+              "courseId": 9420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56541"
+            },
+            {
+              "code": "STAT 343",
+              "title": "Probability and Statistics",
+              "credits": "4",
+              "courseId": 9421,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56542"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": "Applied Mathematics",
+          "courses": [
+            {
+              "code": "MATH 231",
+              "title": "Differential Equations with Linear Algebra",
+              "credits": "4",
+              "courseId": 8621,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56242"
+            },
+            {
+              "code": "MATH 331",
+              "title": "Nonlinear Dynamics and Chaos",
+              "credits": "4",
+              "courseId": 8626,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56248"
+            },
+            {
+              "code": "MATH 333",
+              "title": "Partial Differential Equations",
+              "credits": "4",
+              "courseId": 8627,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56249"
+            },
+            {
+              "code": "MATH 355",
+              "title": "Advanced Linear Algebra",
+              "credits": "4",
+              "courseId": 8630,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56252"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 14 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "MATH 301",
+              "title": "Foundations of Geometry",
+              "credits": "4",
+              "courseId": 8623,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56244"
+            },
+            {
+              "code": "MATH 312",
+              "title": "Logic, Computability, and Complexity",
+              "credits": "4",
+              "courseId": 8624,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56246"
+            },
+            {
+              "code": "MATH 331",
+              "title": "Nonlinear Dynamics and Chaos",
+              "credits": "4",
+              "courseId": 8626,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56248"
+            },
+            {
+              "code": "MATH 333",
+              "title": "Partial Differential Equations",
+              "credits": "4",
+              "courseId": 8627,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56249"
+            },
+            {
+              "code": "MATH 355",
+              "title": "Advanced Linear Algebra",
+              "credits": "4",
+              "courseId": 8630,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56252"
+            },
+            {
+              "code": "MATH 361",
+              "title": "Real Analysis I",
+              "credits": "4",
+              "courseId": 8632,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56254"
+            },
+            {
+              "code": "MATH 362",
+              "title": "Measure Theory",
+              "credits": "4",
+              "courseId": 8633,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56255"
+            },
+            {
+              "code": "MATH 365",
+              "title": "Complex Variables with Topics",
+              "credits": "4",
+              "courseId": 8634,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56256"
+            },
+            {
+              "code": "MATH 366",
+              "title": "Conformal Mapping",
+              "credits": "2",
+              "courseId": 11232,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56983"
+            },
+            {
+              "code": "MATH 367",
+              "title": "Transform Theory",
+              "credits": "2",
+              "courseId": 11233,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56984"
+            },
+            {
+              "code": "MATH 380",
+              "title": "Perspectives on Modern Mathematics",
+              "credits": "4",
+              "courseId": 8635,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56257"
+            },
+            {
+              "code": "MATH 385",
+              "title": "Topics in Mathematics",
+              "credits": "2-4",
+              "courseId": 10363,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56788"
+            },
+            {
+              "code": "MATH 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 8636,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56258"
+            },
+            {
+              "code": "MATH 395",
+              "title": "Senior Thesis in Mathematics",
+              "credits": "1-4",
+              "courseId": 8638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56260"
+            },
+            {
+              "code": "STAT 341",
+              "title": "Computational Bayesian Statistics",
+              "credits": "4",
+              "courseId": 9420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56541"
+            },
+            {
+              "code": "STAT 343",
+              "title": "Probability and Statistics",
+              "credits": "4",
+              "courseId": 9421,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56542"
+            },
+            {
+              "code": "STAT 344",
+              "title": "Mathematical Statistics",
+              "credits": "4",
+              "courseId": 9422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56543"
+            },
+            {
+              "code": "STAT 385",
+              "title": "Topics in Statistics",
+              "credits": "2-4",
+              "courseId": 10364,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56789"
+            },
+            {
+              "code": "STAT 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 9967,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56691"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Cognates",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 7949,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 7950,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55964"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ASTR 211",
+              "title": "Planetary and Stellar Astronomy",
+              "credits": "3",
+              "courseId": 7827,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55842"
+            },
+            {
+              "code": "ASTR 212",
+              "title": "Galactic Astronomy and Cosmology",
+              "credits": "3",
+              "courseId": 7828,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55843"
+            },
+            {
+              "code": "BIOL 200",
+              "title": "Research Design and Methodology",
+              "credits": "4",
+              "courseId": 7841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55856"
+            },
+            {
+              "code": "BIOL 321",
+              "title": "Genetics and Development",
+              "credits": "3",
+              "courseId": 7844,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55859"
+            },
+            {
+              "code": "CHEM 102",
+              "title": "General Chemistry II",
+              "credits": "3",
+              "courseId": 7917,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55931"
+            },
+            {
+              "code": "CHEM 103",
+              "title": "Accelerated General Chemistry",
+              "credits": "3",
+              "courseId": 7918,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55932"
+            },
+            {
+              "code": "CHEM 210",
+              "title": "Analytical Chemistry",
+              "credits": "3",
+              "courseId": 7920,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55934"
+            },
+            {
+              "code": "CHEM 230",
+              "title": "Essential Inorganic Chemistry",
+              "credits": "3",
+              "courseId": 7921,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55935"
+            },
+            {
+              "code": "CHEM 351",
+              "title": "Physical Chemistry",
+              "credits": "3",
+              "courseId": 7926,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55940"
+            },
+            {
+              "code": "CS 112",
+              "title": "Introduction to Data Structures",
+              "credits": "3",
+              "courseId": 7951,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55965"
+            },
+            {
+              "code": "ECON 325",
+              "title": "Intermediate Microeconomics",
+              "credits": "4",
+              "courseId": 7983,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55998"
+            },
+            {
+              "code": "ECON 343",
+              "title": "Applied Econometrics",
+              "credits": "4",
+              "courseId": 8190,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56006"
+            },
+            {
+              "code": "GEO 181",
+              "title": "First-Year Research in Earth Sciences: Dunes",
+              "credits": "3",
+              "courseId": 8392,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56109"
+            },
+            {
+              "code": "GEO 260",
+              "title": "GIS and Cartography",
+              "credits": "4",
+              "courseId": 8398,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56116"
+            },
+            {
+              "code": "PHYS 131",
+              "title": "Matter, Light, and Energy",
+              "credits": "1.5",
+              "courseId": 8810,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56332"
+            },
+            {
+              "code": "PHYS 133",
+              "title": "Introductory Physics: Mechanics and Gravity",
+              "credits": "3",
+              "courseId": 8811,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56333"
+            },
+            {
+              "code": "PSYC 256",
+              "title": "Fundamentals of Research and Practice",
+              "credits": "4",
+              "courseId": 8866,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56388"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 56-59",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

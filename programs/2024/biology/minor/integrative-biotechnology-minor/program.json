@@ -1,0 +1,224 @@
+{
+  "id": "integrative-biotechnology-minor",
+  "name": "Integrative Biotechnology Minor",
+  "code": "BIOTC.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 741,
+    "name": "Biology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13077",
+  "description": "The integrative biotechnology minor complements diverse majors, building beneficial skill sets for careers in bioinformatics, genetic counseling, pharmaceutical research, chemical engineering, forensic science, bioremediation, patent law, bioethics, and many other fields. Students considering this minor should contact the biotechnology advisor, D. Koetje. The college's course overlap policy states that students must have at least 14 unique 3+-credit courses between major and minor programs. Cognate courses do not factor into this total. Only students in the non-ACS chemistry or non-ACS biochemistry major are affected by this policy. If these students take CHEM 103, then to satisfy the overlap requirement they will need to take one additional chemistry course.",
+  "totalHours": "22-28",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 325",
+          "title": "Biotechnology",
+          "credits": "3",
+          "courseId": 17762,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53751"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 18230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 101",
+          "placement": "right",
+          "text": "AND CHEM 102 - General Chemistry II"
+        },
+        {
+          "course": "CHEM 101",
+          "placement": "after",
+          "text": "OR CHEM 103 - Accelerated General Chemistry"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One Biology Sequence",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Sequence A",
+              "description": null,
+              "courses": [
+                {
+                  "code": "BIOL 160",
+                  "title": "Ecological and Evolutionary Systems",
+                  "credits": "3",
+                  "courseId": 17751,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+                },
+                {
+                  "code": "BIOL 161",
+                  "title": "Cellular and Genetic Systems",
+                  "credits": "3",
+                  "courseId": 17752,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "BIOL 161",
+                  "placement": "right",
+                  "text": "(Phage section)"
+                },
+                {
+                  "course": "BIOL 160",
+                  "placement": "right",
+                  "text": "(Phage section)"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Sequence B",
+              "description": null,
+              "courses": [
+                {
+                  "code": "BIOL 141",
+                  "title": "Cell Biology and Genetics for the Health Sciences",
+                  "credits": "3",
+                  "courseId": 17750,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+                },
+                {
+                  "code": "BIOL 231",
+                  "title": "Introduction to Animal Physiology",
+                  "credits": "1.5",
+                  "courseId": 17756,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "BIOL 141",
+                  "placement": "after",
+                  "text": "OR BIOL 161 - Cellular and Genetic Systems"
+                },
+                {
+                  "course": "BIOL 231",
+                  "placement": "after",
+                  "text": "AND BIOL 232 - Introduction to Plant Physiology"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 104",
+              "title": "Applied Computing",
+              "credits": "1",
+              "courseId": 18262,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53852"
+            },
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BCHM 321",
+              "title": "Principles of Biochemistry",
+              "credits": "3",
+              "courseId": 22756,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55029"
+            },
+            {
+              "code": "BIOL 306",
+              "title": "Advanced Human Physiology and Pathophysiology",
+              "credits": "3",
+              "courseId": 22708,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54957"
+            },
+            {
+              "code": "BIOL 321",
+              "title": "Genetics and Development",
+              "credits": "3",
+              "courseId": 17760,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53749"
+            },
+            {
+              "code": "BIOL 331",
+              "title": "Comparative Animal and Human Physiology",
+              "credits": "3",
+              "courseId": 17763,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53752"
+            },
+            {
+              "code": "BIOL 332",
+              "title": "Plant Physiology",
+              "credits": "3",
+              "courseId": 17764,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53753"
+            },
+            {
+              "code": "BIOL 335",
+              "title": "Cell Physiology",
+              "credits": "3",
+              "courseId": 17766,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53755"
+            },
+            {
+              "code": "BIOL 336",
+              "title": "General Microbiology",
+              "credits": "3",
+              "courseId": 17767,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53756"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22-28",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

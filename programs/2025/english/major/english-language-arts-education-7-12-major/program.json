@@ -1,0 +1,207 @@
+{
+  "id": "english-language-arts-education-7-12-major",
+  "name": "English Language Arts Education 7-12 Major",
+  "code": "MAJ_LA_712",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 360,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13781",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "36",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 200",
+          "title": "Introduction to Global Literature",
+          "credits": "4",
+          "courseId": 10314,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56739"
+        },
+        {
+          "code": "ENGL 220",
+          "title": "Introduction to American Literature",
+          "credits": "4",
+          "courseId": 10318,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56743"
+        },
+        {
+          "code": "ENGL 275",
+          "title": "English Syntax",
+          "credits": "4",
+          "courseId": 8227,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56043"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 10327,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56752"
+        },
+        {
+          "code": "ENGL 350",
+          "title": "Teaching of Writing",
+          "credits": "4",
+          "courseId": 8219,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56035"
+        },
+        {
+          "code": "ENGL 352",
+          "title": "The Teaching of Adolescent Literature",
+          "credits": "4",
+          "courseId": 10324,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56749"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 200",
+          "placement": "after",
+          "text": "OR ENGL 300 - Advanced Studies in Global Literature"
+        },
+        {
+          "course": "ENGL 220",
+          "placement": "after",
+          "text": "OR ENGL 320 - Advanced Studies in American Literature"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 210",
+              "title": "Introduction to Early British Literature",
+              "credits": "4",
+              "courseId": 10316,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56741"
+            },
+            {
+              "code": "ENGL 215",
+              "title": "Introduction to Later British Literature",
+              "credits": "4",
+              "courseId": 10317,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56742"
+            },
+            {
+              "code": "ENGL 310",
+              "title": "Advanced Studies in Early British Literature",
+              "credits": "4",
+              "courseId": 10321,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56746"
+            },
+            {
+              "code": "ENGL 315",
+              "title": "Advanced Studies in Later British Literature",
+              "credits": "4",
+              "courseId": 10322,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56747"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 205",
+              "title": "Special Topics",
+              "credits": "2-4",
+              "courseId": 10315,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56740"
+            },
+            {
+              "code": "ENGL 235",
+              "title": "Major Text",
+              "credits": "2",
+              "courseId": 11672,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57023"
+            },
+            {
+              "code": "ENGL 250",
+              "title": "Literature of Faith",
+              "credits": "2, 4",
+              "courseId": 10610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56858"
+            },
+            {
+              "code": "ENGL 305",
+              "title": "Advanced Special Topics",
+              "credits": "2-4",
+              "courseId": 10320,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56745"
+            },
+            {
+              "code": "ENGL 330",
+              "title": "Advanced Studies in Genre",
+              "credits": "4",
+              "courseId": 10325,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56750"
+            },
+            {
+              "code": "ENGL 335",
+              "title": "Advanced Studies in a Major Author",
+              "credits": "4",
+              "courseId": 10326,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56751"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 270",
+              "title": "Introduction to Linguistics",
+              "credits": "4",
+              "courseId": 8223,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+            },
+            {
+              "code": "ENGL 371",
+              "title": "History of the English Language",
+              "credits": "4",
+              "courseId": 8224,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56040"
+            },
+            {
+              "code": "ENGL 372",
+              "title": "Sociolinguistics and Issues in Language Education",
+              "credits": "4",
+              "courseId": 8225,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56041"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 36",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

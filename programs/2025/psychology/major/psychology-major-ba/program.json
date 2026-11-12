@@ -1,0 +1,287 @@
+{
+  "id": "psychology-major-ba",
+  "name": "Psychology Major, BA",
+  "code": "PSYC.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 370,
+    "name": "Psychology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13615",
+  "description": "Students must maintain a 2.0 in psychology courses in order to graduate with a major or minor in psychology. Psychology majors who are also ministry minors are advised to take PSYC 201. Students should ordinarily take PSYC 255 during their sophomore year and PSYC 256 in the semester following completion of PSYC 255. Students may not take PSYC 255 and PSYC 256 simultaneously. When possible, students are encouraged to postpone taking courses numbered 330 or above until after the completion of PSYC 256. PSYC 399 is a course that may be taken when the student has completed a majority of the psychology courses required for the psychology major. Students intending to do doctoral work in psychology are strongly encouraged to take PSYC 356 during their junior or senior year. When selecting courses, students are encouraged to follow the recommended four-year plan for the general psychology major or the plan for majors with a neuroscience concentration. A four-year plan is available in the psychology office. The psychology department offers a bachelor of arts (BA) degree in psychology and a Bachelor of Science (BS) degree in psychology. The BS course of study has stronger quantitative and research components. It is recommended that students intent on PhD work in psychology complete the coursework for the BS degree.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "Complete at least 32 hours of psychology courses.",
+      "courses": [
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "PSYC 244",
+          "title": "Introduction to Biological Psychology",
+          "credits": "2",
+          "courseId": 11182,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56932"
+        },
+        {
+          "code": "PSYC 255",
+          "title": "Statistics and Research Design",
+          "credits": "4",
+          "courseId": 8865,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56387"
+        },
+        {
+          "code": "PSYC 256",
+          "title": "Fundamentals of Research and Practice",
+          "credits": "4",
+          "courseId": 8866,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56388"
+        },
+        {
+          "code": "PSYC 399",
+          "title": "Psychology and Religion",
+          "credits": "4",
+          "courseId": 8880,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56402"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 8861,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+            },
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 8867,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56389"
+            },
+            {
+              "code": "PSYC 334",
+              "title": "Cognitive Psychology",
+              "credits": "4",
+              "courseId": 8872,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56394"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": "(At least 2 hours must be at the 300 level.)",
+          "courses": [
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 8861,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+            },
+            {
+              "code": "PSYC 212",
+              "title": "Psychopathology",
+              "credits": "4",
+              "courseId": 8862,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56384"
+            },
+            {
+              "code": "PSYC 220",
+              "title": "Psychological Perspectives on Marriage and the Family",
+              "credits": "2",
+              "courseId": 8863,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56385"
+            },
+            {
+              "code": "PSYC 222",
+              "title": "Human Sexuality and Gender",
+              "credits": "2",
+              "courseId": 8864,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56386"
+            },
+            {
+              "code": "PSYC 270",
+              "title": "Children at Risk",
+              "credits": "4",
+              "courseId": 10365,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56790"
+            },
+            {
+              "code": "PSYC 305",
+              "title": "The Psychology of Work",
+              "credits": "4",
+              "courseId": 8877,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56399"
+            },
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 8867,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56389"
+            },
+            {
+              "code": "PSYC 311",
+              "title": "Theories of Personality",
+              "credits": "2",
+              "courseId": 8868,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56390"
+            },
+            {
+              "code": "PSYC 312",
+              "title": "Clinical and Counseling Assessment",
+              "credits": "2",
+              "courseId": 8869,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56391"
+            },
+            {
+              "code": "PSYC 314",
+              "title": "Theories of Counseling and Psychotherapy",
+              "credits": "2",
+              "courseId": 8870,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56392"
+            },
+            {
+              "code": "PSYC 322",
+              "title": "Perspectives in Psychology",
+              "credits": "2",
+              "courseId": 8871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56393"
+            },
+            {
+              "code": "PSYC 334",
+              "title": "Cognitive Psychology",
+              "credits": "4",
+              "courseId": 8872,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56394"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 8873,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56395"
+            },
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 8874,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56396"
+            },
+            {
+              "code": "PSYC 344",
+              "title": "Neuropsychology",
+              "credits": "2",
+              "courseId": 8875,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56397"
+            },
+            {
+              "code": "PSYC 356",
+              "title": "Experimental Psychology",
+              "credits": "4",
+              "courseId": 8876,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56398"
+            },
+            {
+              "code": "PSYC 380",
+              "title": "Internship in Psychology",
+              "credits": "4",
+              "courseId": 8878,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56400"
+            },
+            {
+              "code": "PSYC 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 8879,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56401"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": "(Note that BIOL 161 is required for BS degrees.)",
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 7832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+            },
+            {
+              "code": "BIOL 123",
+              "title": "Living Systems",
+              "credits": "4",
+              "courseId": 7833,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55848"
+            },
+            {
+              "code": "BIOL 141",
+              "title": "Cell Biology and Genetics for the Health Sciences",
+              "credits": "3",
+              "courseId": 7834,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+            },
+            {
+              "code": "BIOL 160",
+              "title": "Ecological and Evolutionary Systems",
+              "credits": "3",
+              "courseId": 7835,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55850"
+            },
+            {
+              "code": "BIOL 161",
+              "title": "Cellular and Genetic Systems",
+              "credits": "3",
+              "courseId": 7836,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55851"
+            },
+            {
+              "code": "BIOL 205",
+              "title": "Human Anatomy",
+              "credits": "3",
+              "courseId": 7837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: At Least 36",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

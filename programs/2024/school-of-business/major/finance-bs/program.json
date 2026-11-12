@@ -1,0 +1,185 @@
+{
+  "id": "finance-bs",
+  "name": "Finance, BS",
+  "code": "FIN.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13213",
+  "description": "Finance is the study of how companies obtain funds needed for future growth and how people invest funds for future consumption. It includes business finance and personal finance. Finance deals with the concepts of time, cash flows, and risk, and how they are interrelated. It also deals with how resources are spent and budgeted. Finance is about the methods and the prices at which financial resources are exchanged, and about how this exchange impacts the decisions companies and individuals make. Overlap Policy This program may not be combined with the business minor. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "68",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 17515,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53689"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 17702,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53690"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 17786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53775"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 17787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53776"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 17798,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53787"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 17791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53780"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 22879,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55779"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 17794,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53783"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "ACCT 306",
+          "title": "Income Tax",
+          "credits": "4",
+          "courseId": 17706,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53694"
+        },
+        {
+          "code": "BUS 350",
+          "title": "Business Law",
+          "credits": "4",
+          "courseId": 17783,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53772"
+        },
+        {
+          "code": "BUS 394",
+          "title": "Business Capstone",
+          "credits": "4",
+          "courseId": 17799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53788"
+        },
+        {
+          "code": "FIN 302",
+          "title": "Investments",
+          "credits": "4",
+          "courseId": 17792,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53781"
+        },
+        {
+          "code": "FIN 310",
+          "title": "Special Topics in Finance",
+          "credits": "4",
+          "courseId": 17793,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53782"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 22275,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 18292,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 18293,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53883"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 18294,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53884"
+        },
+        {
+          "code": "ECON 331",
+          "title": "Money and Financial Markets",
+          "credits": "4",
+          "courseId": 18703,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53891"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ECON 331",
+          "placement": "after",
+          "text": "OR ECON 338 - International Trade and Finance"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 68",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

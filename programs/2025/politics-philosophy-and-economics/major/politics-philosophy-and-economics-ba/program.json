@@ -1,0 +1,354 @@
+{
+  "id": "politics-philosophy-and-economics-ba",
+  "name": "Politics, Philosophy, and Economics, BA",
+  "code": "PPE.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 376,
+    "name": "Politics, Philosophy, and Economics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13746",
+  "description": "The politics, philosophy, and economics major provides a coherent and flexible interdisciplinary course of study, bridging gaps between economics and political science as social sciences and philosophy as one of the humanities. It is designed for students whose interests do not fit neatly into any one of the three disciplines, helping them to bring philosophical insights to bear on empirical social science research and use social science methods to measure philosophical claims about foundational concepts, such as equality and justice. The program works with these three disciplines within the framework of faith, emphasizing Christian calling and vocation and a demonstrated commitment to civil and informed public discourse and policy. The program provides structure within this flexibility through foundational and intermediate courses in each of the disciplines, a capstone course that integrates all three PPE disciplines and Christian faith, and common cocurricular experiences throughout the program. Overlap Policy This program may not be combined with the Economics Major, BS, Economics Major, BA, economics minor, political science major, or political science minor.",
+  "totalHours": "52",
+  "requirements": [
+    {
+      "name": "Common Foundations",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Foundational Reasoning",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "PHIL 171",
+                  "title": "Introduction to Logic",
+                  "credits": "2",
+                  "courseId": 8796,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56318"
+                },
+                {
+                  "code": "COMM 311",
+                  "title": "Argumentation and Advocacy",
+                  "credits": "4",
+                  "courseId": 7907,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+                },
+                {
+                  "code": "ECON 243",
+                  "title": "Introductory Econometrics",
+                  "credits": "4",
+                  "courseId": 11724,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57075"
+                },
+                {
+                  "code": "STAT 243",
+                  "title": "Statistics",
+                  "credits": "4",
+                  "courseId": 9418,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56539"
+                },
+                {
+                  "code": "POLS 253",
+                  "title": "Introductory Econometrics",
+                  "credits": "4",
+                  "courseId": 10369,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56794"
+                },
+                {
+                  "code": "POLS 255",
+                  "title": "Qualitative Social Research Methods",
+                  "credits": "4",
+                  "courseId": 10370,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56795"
+                },
+                {
+                  "code": "SOC 265",
+                  "title": "Ethnography and Qualitative Research Methods",
+                  "credits": "2",
+                  "courseId": 9473,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56594"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Gateway",
+          "description": null,
+          "courses": [
+            {
+              "code": "POLS 110",
+              "title": "Foundations of Political Community",
+              "credits": "2",
+              "courseId": 8835,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56357"
+            }
+          ],
+          "notes": [
+            {
+              "course": "POLS 110",
+              "placement": "after",
+              "text": "OR PPE 110 - Foundations of Politics, Philosophy, and Economics"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Politics",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take 6 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "POLS 202",
+                  "title": "Democracy in America: State and Federal Government",
+                  "credits": "2",
+                  "courseId": 8836,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56358"
+                },
+                {
+                  "code": "POLS 204",
+                  "title": "Democracy in America: State and Local Government",
+                  "credits": "2",
+                  "courseId": 11195,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56946"
+                },
+                {
+                  "code": "POLS 214",
+                  "title": "Governments and Globalization",
+                  "credits": "4",
+                  "courseId": 8840,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56362"
+                },
+                {
+                  "code": "POLS 217",
+                  "title": "International Cooperation and Conflict",
+                  "credits": "4",
+                  "courseId": 8837,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56359"
+                },
+                {
+                  "code": "POLS 219",
+                  "title": "Institutions and Politics of US Foreign Policy",
+                  "credits": "2",
+                  "courseId": 11202,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56953"
+                },
+                {
+                  "code": "POLS 234",
+                  "title": "The President and Congress",
+                  "credits": "4",
+                  "courseId": 8841,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56363"
+                },
+                {
+                  "code": "POLS 237",
+                  "title": "Political Parties and Interest Groups",
+                  "credits": "4",
+                  "courseId": 8842,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56364"
+                },
+                {
+                  "code": "POLS 238",
+                  "title": "Campaigns and Elections",
+                  "credits": "2",
+                  "courseId": 8851,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56373"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Philosophy",
+          "description": null,
+          "courses": [
+            {
+              "code": "PHIL 153",
+              "title": "Fundamental Questions in Philosophy",
+              "credits": "4",
+              "courseId": 8795,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56317"
+            },
+            {
+              "code": "PHIL 207",
+              "title": "Justice and the Common Good: Studies in Political Philosophy",
+              "credits": "4",
+              "courseId": 8799,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56321"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Economics",
+          "description": null,
+          "courses": [
+            {
+              "code": "ECON 191",
+              "title": "Introduction to Economics",
+              "credits": "2",
+              "courseId": 7977,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+            },
+            {
+              "code": "ECON 221",
+              "title": "Principles of Microeconomics",
+              "credits": "2",
+              "courseId": 7978,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+            },
+            {
+              "code": "ECON 222",
+              "title": "Principles of Macroeconomics",
+              "credits": "2",
+              "courseId": 7979,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Intermediate Courses",
+      "description": "(Take 4 hours from each PPE discipline, to total 12 hours.)",
+      "courses": [
+        {
+          "code": "ECON 232",
+          "title": "Environmental Economics",
+          "credits": "2",
+          "courseId": 7980,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55995"
+        },
+        {
+          "code": "ECON 233",
+          "title": "Economics of Energy and Sustainability",
+          "credits": "4",
+          "courseId": 9485,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56606"
+        },
+        {
+          "code": "ECON 237",
+          "title": "Regional Economies of the World",
+          "credits": "2",
+          "courseId": 7981,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55996"
+        },
+        {
+          "code": "ECON 241",
+          "title": "Health Economics and Health Policy",
+          "credits": "2",
+          "courseId": 7982,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55997"
+        },
+        {
+          "code": "ECON 230",
+          "title": "Urban Development Economics",
+          "credits": "2",
+          "courseId": 7985,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56000"
+        },
+        {
+          "code": "ECON 339",
+          "title": "Government Finance and Public Policy",
+          "credits": "4",
+          "courseId": 8189,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56005"
+        },
+        {
+          "code": "PHIL 205",
+          "title": "Ethics",
+          "credits": "4",
+          "courseId": 8798,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56320"
+        },
+        {
+          "code": "POLS 212",
+          "title": "Institutions and Politics of US Public Policy",
+          "credits": "2",
+          "courseId": 8839,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56361"
+        },
+        {
+          "code": "POLS 222",
+          "title": "Contemporary Issues in US Public Policy",
+          "credits": "2",
+          "courseId": 11203,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56954"
+        },
+        {
+          "code": "POLS 226",
+          "title": "Contemporary Issues in US Urban Politics",
+          "credits": "2",
+          "courseId": 11205,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56956"
+        },
+        {
+          "code": "POLS 229",
+          "title": "Contemporary Issues in US Foreign Policy",
+          "credits": "2",
+          "courseId": 11207,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56958"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Specialized Courses",
+      "description": "Take 12 hours of additional PPE coursework, including 300-level (non-internship) coursework from at least two PPE disciplines. Students will work with their PPE advisor to develop a rationale and course plan for the courses they will take to complete the program. Students who come to Calvin with Common Foundations courses already fulfilled in any of the Politics, Philosophy, or Economics subcategories must take at least one of their Specialized Courses in the corresponding discipline at Calvin.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Capstone",
+      "description": null,
+      "courses": [
+        {
+          "code": "PPE 395",
+          "title": "Politics, Markets, and Morality",
+          "credits": "4",
+          "courseId": 10590,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56837"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 52",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

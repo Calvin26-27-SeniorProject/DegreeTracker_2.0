@@ -1,0 +1,185 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate",
+  "name": "Comprehensive Postsecondary Education, Certificate",
+  "code": "CERT.CPE",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13252",
+  "description": "Life and Career Studies (LCS) at Calvin University engages college students with intellectual or developmental disability in comprehensive transition education. By engaging students through person-centered planning, students have the opportunity to explore various career paths, select courses supportive of career goals, and experience supports designed to enhance life skills competencies. The Comprehensive Postsecondary Education Certificate requires completion of the program requirements, LCS core, and of one of seven concentrations: Arts and Music; Communication and Commerce; Creation Care; Education; Health, Wellness, and Recreation; Interdisciplinary; and Ministry and Human Services. The LCS program serves students with intellectual and developmental disability who desire to expand their independence, learning, and community membership through postsecondary education.",
+  "totalHours": "92",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "RFLA 163",
+          "title": "First-Year Seminar",
+          "credits": "2",
+          "courseId": 22254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54741"
+        },
+        {
+          "code": "RFLA 164",
+          "title": "Senior Seminar",
+          "credits": "2",
+          "courseId": 22255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54742"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Life Skills",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 101",
+              "title": "Financial Literacy and Consumer Spending",
+              "credits": "4",
+              "courseId": 22250,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54737"
+            },
+            {
+              "code": "RFLA 102",
+              "title": "Money Management and Budget Building",
+              "credits": "4",
+              "courseId": 22251,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54738"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Relationships",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 111",
+              "title": "Peer Relationships and Communication",
+              "credits": "4",
+              "courseId": 22252,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54739"
+            },
+            {
+              "code": "RFLA 112",
+              "title": "Social Thinking and Digital Life",
+              "credits": "4",
+              "courseId": 22253,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54740"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Employment",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 121",
+              "title": "Personal Management and Success in the Workplace",
+              "credits": "4",
+              "courseId": 22044,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54731"
+            },
+            {
+              "code": "RFLA 122",
+              "title": "Career and Life Management",
+              "credits": "4",
+              "courseId": 22045,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54732"
+            },
+            {
+              "code": "RFLA 380",
+              "title": "Internship",
+              "credits": "1-2",
+              "courseId": 22046,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54733"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Independent Living",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 131",
+              "title": "Moving Out on Your Own",
+              "credits": "4",
+              "courseId": 22048,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54735"
+            },
+            {
+              "code": "RFLA 132",
+              "title": "Health, Sexuality, and Wellness",
+              "credits": "4",
+              "courseId": 22051,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54736"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Genius Hour",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 153",
+              "title": "Research Design and Presentation",
+              "credits": "2",
+              "courseId": 22047,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54734"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Optional Electives",
+          "description": null,
+          "courses": [
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Core Requirements",
+      "description": "A minimum of 24 hours of core course work is required. Community and Commitments - 2 hours CORE 100 Foundations of Christianity I - 4 hours REL 121 or REL 131 Competencies and Skills - at least 5 hours ENGL 101 or World Languages 101 course - 4 hours at least 1 hour from PER 1XX courses Knowledge and Understanding at least 6 hours from any of the 6 Knowledge and Understanding categories Engaged Citizenship Commitments - may overlap with other requirements One from each of the following: Diversity and Difference Environmental Sustainability Global Regions and Cultures",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 92",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

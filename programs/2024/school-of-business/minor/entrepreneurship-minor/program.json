@@ -1,0 +1,103 @@
+{
+  "id": "entrepreneurship-minor",
+  "name": "Entrepreneurship Minor",
+  "code": "ENSHP.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13208",
+  "description": "Entrepreneurial skills are key to innovation and growth in society, whether in a startup business, a nonprofit, or a Fortune 500 company. In this minor, students foster an entrepreneurial mindset through both in-classroom and out-in-the-world learning. Simultaneously, they will also grow in their understanding of how God can use organizations to affect positive change in the world. By deepening their understanding of others and developing skills to understand and frame problems and develop testable solutions, students will graduate with insights and abilities that are valuable for life-long learning and service. Overlap Policy No more than two minors from the School of Business may be obtained.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENTR 201",
+          "title": "Introduction to Entrepreneurship",
+          "credits": "2",
+          "courseId": 22702,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54951"
+        },
+        {
+          "code": "ENTR 202",
+          "title": "Design Thinking",
+          "credits": "4",
+          "courseId": 22707,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54956"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENTR 210",
+              "title": "Entrepreneurship Practicum I",
+              "credits": "2",
+              "courseId": 22703,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54952"
+            },
+            {
+              "code": "ENTR 211",
+              "title": "Entrepreneurship Practicum II",
+              "credits": "2",
+              "courseId": 22705,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54954"
+            },
+            {
+              "code": "ENTR 301",
+              "title": "Social Entrepreneurship",
+              "credits": "4",
+              "courseId": 21482,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54525"
+            },
+            {
+              "code": "ENTR 302",
+              "title": "The Startup",
+              "credits": "4",
+              "courseId": 21480,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54523"
+            },
+            {
+              "code": "ENTR 303",
+              "title": "Small Business",
+              "credits": "4",
+              "courseId": 21481,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54524"
+            },
+            {
+              "code": "ENTR 304",
+              "title": "Entrepreneurship Finance",
+              "credits": "4",
+              "courseId": 22706,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54955"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

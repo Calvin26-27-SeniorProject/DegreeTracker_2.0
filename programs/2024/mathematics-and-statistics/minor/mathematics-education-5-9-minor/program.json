@@ -1,0 +1,103 @@
+{
+  "id": "mathematics-education-5-9-minor",
+  "name": "Mathematics Education 5-9 Minor",
+  "code": "MIN_MATH_59",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 782,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13271",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MATH 171",
+          "title": "Calculus I",
+          "credits": "4",
+          "courseId": 19809,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+        },
+        {
+          "code": "MATH 221",
+          "title": "The Real Number System and Methods for Elementary School Teachers",
+          "credits": "4",
+          "courseId": 19812,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54138"
+        },
+        {
+          "code": "MATH 251",
+          "title": "Discrete Mathematics I",
+          "credits": "2",
+          "courseId": 21061,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54504"
+        },
+        {
+          "code": "MATH 301",
+          "title": "Foundations of Geometry",
+          "credits": "4",
+          "courseId": 19816,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54142"
+        },
+        {
+          "code": "MATH 327",
+          "title": "Mathematics Content and Teaching Methods for Middle Grades",
+          "credits": "2",
+          "courseId": 21522,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54566"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

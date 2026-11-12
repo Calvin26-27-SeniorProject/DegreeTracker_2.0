@@ -1,0 +1,127 @@
+{
+  "id": "pre-professional-physician-assistant",
+  "name": "Pre-professional: Physician Assistant",
+  "code": "PRPA",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 829,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13207",
+  "description": "Students who would like to practice medicine under the supervision of a licensed physician should consider becoming a physician assistant (PA). A physician assistant can record medical histories, perform physical examinations, make diagnoses, counsel patients, order and administer laboratory tests, assist in surgery, set fractures, and prescribe drugs. Each graduate program determines its prerequisite courses, and students should consult with the School of Health advising office (pre-health@calvin.edu) for advice about preparatory courses and hours of direct patient care required by particular clinical training programs. Some PA programs require the prerequisite courses to have been completed at the time of application to their program. Students can major in any discipline as long as they complete the prerequisite courses for the graduate program to which they intend to apply. Students may be required to take either the GRE (Graduate Record Exam) or the PACAT (PA College Admission Test). The timing of these tests will depend on coursework and/or when the student plans to apply to PA programs.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Common Prerequisites",
+      "description": "Requirements for admission to physician assistant programs vary, but common prerequisites include the following:",
+      "courses": [
+        {
+          "code": "BCHM 321",
+          "title": "Principles of Biochemistry",
+          "credits": "3",
+          "courseId": 22756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55029"
+        },
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 17750,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 17753,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 17754,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+        },
+        {
+          "code": "BIOL 207",
+          "title": "Medical Microbiology",
+          "credits": "3",
+          "courseId": 17755,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53744"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 18230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+        },
+        {
+          "code": "CHEM 102",
+          "title": "General Chemistry II",
+          "credits": "3",
+          "courseId": 18231,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53821"
+        },
+        {
+          "code": "CHEM 240",
+          "title": "Survey of Organic Chemistry",
+          "credits": "3",
+          "courseId": 18236,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 240",
+          "placement": "after",
+          "text": "OR BOTH CHEM 241 - Organic Chemistry I AND CHEM 242 - Organic Chemistry II"
+        },
+        {
+          "course": "BIOL 205",
+          "placement": "after",
+          "text": "OR BIOL 323 - Comparative Vertebrate Anatomy"
+        },
+        {
+          "course": "BIOL 206",
+          "placement": "after",
+          "text": "OR BIOL 331 - Comparative Animal and Human Physiology (some programs specify a 300-level or higher course)"
+        },
+        {
+          "course": "BIOL 207",
+          "placement": "after",
+          "text": "OR BIOL 336 - General Microbiology"
+        },
+        {
+          "course": "STAT 143",
+          "placement": "after",
+          "text": "OR STAT 145 - Biostatistics OR PSYC 255 - Statistics and Research Design"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

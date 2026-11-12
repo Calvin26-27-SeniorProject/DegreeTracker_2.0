@@ -1,0 +1,191 @@
+{
+  "id": "french-major",
+  "name": "French Major",
+  "code": "FREN.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13173",
+  "description": null,
+  "totalHours": "32",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "FREN 301",
+          "title": "Advanced French I: Sustainability in France",
+          "credits": "4",
+          "courseId": 18799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53987"
+        },
+        {
+          "code": "FREN 302",
+          "title": "Advanced French II: Discovering the Arts",
+          "credits": "4",
+          "courseId": 18800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53988"
+        },
+        {
+          "code": "FREN 351",
+          "title": "French Culture I",
+          "credits": "4",
+          "courseId": 18801,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53989"
+        }
+      ],
+      "notes": [
+        {
+          "course": "FREN 351",
+          "placement": "after",
+          "text": "OR FREN 352 - French Culture II"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "The Francophone World",
+          "courses": [
+            {
+              "code": "FREN 361",
+              "title": "The Francophone World: Quebec",
+              "credits": "4",
+              "courseId": 19200,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53990"
+            },
+            {
+              "code": "FREN 362",
+              "title": "The Francophone World: West Africa and the Caribbean",
+              "credits": "4",
+              "courseId": 19203,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53991"
+            },
+            {
+              "code": "FREN 363",
+              "title": "The Francophone World: North Africa",
+              "credits": "4",
+              "courseId": 19204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53992"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 16 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "FREN 202",
+              "title": "Intermediate French II",
+              "credits": "4",
+              "courseId": 18798,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53986"
+            },
+            {
+              "code": "FREN 320",
+              "title": "May Study Abroad",
+              "credits": "2, 4",
+              "courseId": 22306,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54794"
+            },
+            {
+              "code": "FREN 351",
+              "title": "French Culture I",
+              "credits": "4",
+              "courseId": 18801,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53989"
+            },
+            {
+              "code": "FREN 352",
+              "title": "French Culture II",
+              "credits": "4",
+              "courseId": 19208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53996"
+            },
+            {
+              "code": "FREN 361",
+              "title": "The Francophone World: Quebec",
+              "credits": "4",
+              "courseId": 19200,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53990"
+            },
+            {
+              "code": "FREN 362",
+              "title": "The Francophone World: West Africa and the Caribbean",
+              "credits": "4",
+              "courseId": 19203,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53991"
+            },
+            {
+              "code": "FREN 363",
+              "title": "The Francophone World: North Africa",
+              "credits": "4",
+              "courseId": 19204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53992"
+            },
+            {
+              "code": "FREN 373",
+              "title": "French for International Business",
+              "credits": "4",
+              "courseId": 19205,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53993"
+            },
+            {
+              "code": "FREN 375",
+              "title": "French Cinema",
+              "credits": "4",
+              "courseId": 19206,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53994"
+            },
+            {
+              "code": "FREN 381",
+              "title": "Special Topics",
+              "credits": "2, 4",
+              "courseId": 19207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53995"
+            },
+            {
+              "code": "STFR 330",
+              "title": "Contemporary France",
+              "credits": "4",
+              "courseId": 21020,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54460"
+            }
+          ],
+          "notes": [
+            {
+              "course": "STFR 330",
+              "placement": "before",
+              "text": "STFR 315 - Advanced Lanugage Study in France I STFR 316 - Advanced Lanugage Study in France II"
+            },
+            {
+              "course": "STFR 330",
+              "placement": "after",
+              "text": "STFR 381 - Special Topics"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 32",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

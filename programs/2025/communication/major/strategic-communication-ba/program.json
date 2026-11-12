@@ -1,0 +1,161 @@
+{
+  "id": "strategic-communication-ba",
+  "name": "Strategic Communication, BA",
+  "code": "CASSC.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13775",
+  "description": "The Department of Communication offers the strategic communication major, a program rooted in the liberal arts that helps students build the necessary faculties to be highly effective communicators in their professions and in public life. Strategic communication courses teach students to understand their listeners, articulate ideas clearly, argue logically, listen carefully, communicate ethically, unify groups of people under a common goal, and analyze and evaluate how communication works in specific contexts. Moreover, students learn to use the gift of communication as a means of glorifying God, advocating for what is true and just, and bridging divisions between people. Strategic communication alumni choose careers in public relations, advertising, social media, content creation, law, ministry, education, journalism, and politics. Overlap Policy This program may not be combined with the sports communication major.",
+  "totalHours": "34-36",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7884,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55899"
+        },
+        {
+          "code": "COMM 200",
+          "title": "Advanced Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7891,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55905"
+        },
+        {
+          "code": "COMM 305",
+          "title": "Persuasion and Propaganda",
+          "credits": "4",
+          "courseId": 7906,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55920"
+        },
+        {
+          "code": "COMM 311",
+          "title": "Argumentation and Advocacy",
+          "credits": "4",
+          "courseId": 7907,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+        },
+        {
+          "code": "COMM 398",
+          "title": "Communication, Technology, and Society",
+          "credits": "4",
+          "courseId": 10581,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56828"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 141",
+              "title": "Visual Rhetoric",
+              "credits": "2",
+              "courseId": 7887,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55901"
+            },
+            {
+              "code": "COMM 180",
+              "title": "Communicating with Digital Media",
+              "credits": "2",
+              "courseId": 7889,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55903"
+            },
+            {
+              "code": "COMM 190",
+              "title": "Media Production I",
+              "credits": "4",
+              "courseId": 7890,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 201",
+              "title": "New Media",
+              "credits": "4",
+              "courseId": 7892,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+            },
+            {
+              "code": "COMM 285",
+              "title": "Public Relations and Communication Practice",
+              "credits": "4",
+              "courseId": 7904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55918"
+            },
+            {
+              "code": "COMM 286",
+              "title": "Advertising and Communication Strategies",
+              "credits": "4",
+              "courseId": 9904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56626"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 263",
+              "title": "Communication and Conflict Resolution",
+              "credits": "2",
+              "courseId": 7901,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55915"
+            },
+            {
+              "code": "COMM 265",
+              "title": "Leadership Communication for Organizations",
+              "credits": "2",
+              "courseId": 7902,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55916"
+            },
+            {
+              "code": "COMM 362",
+              "title": "Small Group and Organizational Communication",
+              "credits": "4",
+              "courseId": 7911,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55925"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34-36",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

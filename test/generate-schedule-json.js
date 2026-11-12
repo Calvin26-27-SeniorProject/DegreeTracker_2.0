@@ -1,7 +1,7 @@
 /**
  * schedule/CourseSchedule-<term>.json (Workday course-search exports) →
  * schedule/sections.json: hours for every core course and every course in the
- * program files (catalog/programs/), and the listed sections of the terms
+ * program files (programs/), and the listed sections of the terms
  * SCHEDULE_INFO marks as shown.
  *
  * Usage:
@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildScheduleJson, coreCourseTitles, programCourseTitles, SCHEDULE_INFO } from './schedule-json.js';
+import { readCheckedPrograms } from './program-files.js';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 
@@ -34,9 +35,7 @@ export function loadScheduleInputs() {
     .filter(Boolean)
     .sort((a, b) => Number(b[1]) - Number(a[1]))
     .map(([file]) => JSON.parse(readFileSync(join(catalogDir, file), 'utf-8')));
-  const programDir = join(catalogDir, 'programs');
-  const programs = readdirSync(programDir).filter(f => f.endsWith('.json'))
-    .map(f => JSON.parse(readFileSync(join(programDir, f), 'utf-8')));
+  const programs = readCheckedPrograms();
   // Core titles win: the app shows the core's catalog wording.
   return { raw, titles: { ...programCourseTitles(programs), ...coreCourseTitles(catalogs) } };
 }

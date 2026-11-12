@@ -1,0 +1,80 @@
+{
+  "id": "speech-and-hearing-foundations-certificate",
+  "name": "Speech and Hearing Foundations, Certificate",
+  "code": "CERT.SPFDN",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 374,
+    "name": "Speech Pathology and Audiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13757",
+  "description": "The Certificate in Speech and Hearing Foundations provides postbaccalaureate students from other disciplines the necessary prerequisite course work in speech-language pathology and audiology to apply to graduate programs in speech-language pathology. The certificate consists of six courses. Students planning to apply to a master's program in speech-language pathology are also required to complete one course each in biology, physics or chemistry, statistics, and social sciences. Note that students enrolled in this certificate may repeat each course only twice (for a total of three attempts per course). Although grades from all attempts appear on the student transcript, only the most recent grade contributes to the cumulative GPA.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite lab.)",
+      "courses": [
+        {
+          "code": "SPAUD 210",
+          "title": "Anatomy and Physiology of the Speech, Hearing, and Language Mechanisms",
+          "credits": "3",
+          "courseId": 9182,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56504"
+        },
+        {
+          "code": "SPAUD 216",
+          "title": "Phonetics",
+          "credits": "3",
+          "courseId": 9183,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56505"
+        },
+        {
+          "code": "SPAUD 212",
+          "title": "Speech and Hearing Science",
+          "credits": "4",
+          "courseId": 11181,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56931"
+        },
+        {
+          "code": "SPAUD 311",
+          "title": "Child Language Development",
+          "credits": "4",
+          "courseId": 9184,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56506"
+        },
+        {
+          "code": "SPAUD 344",
+          "title": "Audiology: Testing and Diagnosis",
+          "credits": "4",
+          "courseId": 9385,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56508"
+        },
+        {
+          "code": "SPAUD 371",
+          "title": "Foundations of Clinical Practice",
+          "credits": "4",
+          "courseId": 12126,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57176"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

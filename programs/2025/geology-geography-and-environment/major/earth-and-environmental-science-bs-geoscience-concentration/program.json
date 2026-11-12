@@ -1,0 +1,360 @@
+{
+  "id": "earth-and-environmental-science-bs-geoscience-concentration",
+  "name": "Earth and Environmental Science, BS: Geoscience Concentration",
+  "code": "BS.EENSC_GEOSCI",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 362,
+    "name": "Geology, Geography, and Environment"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13692",
+  "description": "The earth and environmental science major serves as a foundation for a variety of scientific careers and has two concentrations: environmental science and geoscience. The geosciences are the scientific study of Earth, covering its history, composition, structure, and the processes that make it a dynamic planet. The geosciences are essential to locating, wisely using, and protecting Earth's natural resources. The geoscience concentration prepares students for a variety of professional careers such as mineral exploration, oil and gas exploration, water resources management, and environmental consulting as well as providing a solid foundation for graduate-level education and research in the earth sciences.",
+  "totalHours": "66-69",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Many courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "GEO 151",
+          "title": "Introduction to Geology",
+          "credits": "3",
+          "courseId": 8410,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56128"
+        },
+        {
+          "code": "GEO 152",
+          "title": "Earth History",
+          "credits": "3",
+          "courseId": 8411,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56129"
+        },
+        {
+          "code": "GEO 252",
+          "title": "Geomorphology",
+          "credits": "3",
+          "courseId": 8397,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56115"
+        },
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 8398,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56116"
+        },
+        {
+          "code": "GEO 387",
+          "title": "Vocation in the Geosciences",
+          "credits": "1",
+          "courseId": 8423,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56141"
+        },
+        {
+          "code": "GEO 395",
+          "title": "Senior Seminar in Geology, Geography, and Environment",
+          "credits": "4",
+          "courseId": 8409,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56127"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 151",
+          "placement": "after",
+          "text": "OR GEO 120 - Earth Systems"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "(Students are encouraged to fulfill this requirement by taking a summer geology field camp through another institution.)",
+          "courses": [
+            {
+              "code": "BIOL 200",
+              "title": "Research Design and Methodology",
+              "credits": "4",
+              "courseId": 7841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55856"
+            },
+            {
+              "code": "GEO 181L",
+              "title": "FYRES Lab",
+              "credits": "2",
+              "courseId": 10661,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56910"
+            },
+            {
+              "code": "GEO 280",
+              "title": "Field Study",
+              "credits": "1-4",
+              "courseId": 11681,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57032"
+            },
+            {
+              "code": "GEO 341",
+              "title": "Geology Field Methods",
+              "credits": "1, 2, or 4",
+              "courseId": 8422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56140"
+            }
+          ],
+          "notes": [
+            {
+              "course": "GEO 181L",
+              "placement": "right",
+              "text": "(taken with GEO 181 - First-Year Research in Earth Sciences: Dunes )"
+            },
+            {
+              "course": "GEO 341",
+              "placement": "after",
+              "text": "any other advisor-approved field course"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Concentration Requirements",
+          "description": null,
+          "courses": [
+            {
+              "code": "GEO 215",
+              "title": "Mineralogy",
+              "credits": "3",
+              "courseId": 8414,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56132"
+            },
+            {
+              "code": "GEO 316",
+              "title": "Igneous and Metamorphic Petrology",
+              "credits": "3",
+              "courseId": 8419,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56137"
+            },
+            {
+              "code": "GEO 317",
+              "title": "Sedimentation and Stratigraphy",
+              "credits": "3",
+              "courseId": 8420,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56138"
+            },
+            {
+              "code": "GEO 325",
+              "title": "Hydrogeology",
+              "credits": "3",
+              "courseId": 8421,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56139"
+            }
+          ],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take 12 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "GEO 181",
+                  "title": "First-Year Research in Earth Sciences: Dunes",
+                  "credits": "3",
+                  "courseId": 8392,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56109"
+                },
+                {
+                  "code": "GEO 212",
+                  "title": "Structural Geology and Tectonics",
+                  "credits": "3",
+                  "courseId": 8413,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56131"
+                },
+                {
+                  "code": "GEO 250",
+                  "title": "Meteorology",
+                  "credits": "3",
+                  "courseId": 8396,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56114"
+                },
+                {
+                  "code": "GEO 251",
+                  "title": "Oceanography",
+                  "credits": "3",
+                  "courseId": 8415,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56133"
+                },
+                {
+                  "code": "GEO 280",
+                  "title": "Field Study",
+                  "credits": "1-4",
+                  "courseId": 11681,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57032"
+                },
+                {
+                  "code": "GEO 302",
+                  "title": "Environmental Law",
+                  "credits": "2",
+                  "courseId": 8274,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56090"
+                },
+                {
+                  "code": "GEO 304",
+                  "title": "Geochemistry",
+                  "credits": "4",
+                  "courseId": 8416,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56134"
+                },
+                {
+                  "code": "GEO 312",
+                  "title": "Special Topics in Environmental Geology",
+                  "credits": "2, 4",
+                  "courseId": 8417,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56135"
+                },
+                {
+                  "code": "GEO 322",
+                  "title": "Coastal Geomorphology",
+                  "credits": "2",
+                  "courseId": 8402,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56120"
+                },
+                {
+                  "code": "GEO 323",
+                  "title": "Coastal Geomorphology Methods",
+                  "credits": "2",
+                  "courseId": 11168,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56918"
+                },
+                {
+                  "code": "GEO 341",
+                  "title": "Geology Field Methods",
+                  "credits": "1, 2, or 4",
+                  "courseId": 8422,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56140"
+                },
+                {
+                  "code": "GEO 361",
+                  "title": "Advanced GIS",
+                  "credits": "4",
+                  "courseId": 8405,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56123"
+                },
+                {
+                  "code": "GEO 362",
+                  "title": "Remote Sensing of Earth",
+                  "credits": "4",
+                  "courseId": 8406,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56124"
+                },
+                {
+                  "code": "GEO 385",
+                  "title": "Internship in Geology, Geography, and Environment",
+                  "credits": "1, 2, 4",
+                  "courseId": 8407,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56125"
+                },
+                {
+                  "code": "PHYS 133",
+                  "title": "Introductory Physics: Mechanics and Gravity",
+                  "credits": "3",
+                  "courseId": 8811,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56333"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 7916,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 101",
+              "placement": "right",
+              "text": "AND CHEM 102 - General Chemistry II"
+            },
+            {
+              "course": "CHEM 101",
+              "placement": "after",
+              "text": "OR CHEM 103 - Accelerated General Chemistry"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "MATH 132",
+                  "title": "Calculus for Management, Life, and Social Sciences",
+                  "credits": "4",
+                  "courseId": 8617,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56236"
+                },
+                {
+                  "code": "MATH 161",
+                  "title": "Calculus: Modeling and Computation",
+                  "credits": "4",
+                  "courseId": 12160,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+                },
+                {
+                  "code": "MATH 163",
+                  "title": "Calculus: Modeling, Computation, Techniques of Integration",
+                  "credits": "4",
+                  "courseId": 12162,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57858"
+                },
+                {
+                  "code": "STAT 143",
+                  "title": "Introduction to Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 9415,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+                },
+                {
+                  "code": "STAT 145",
+                  "title": "Biostatistics",
+                  "credits": "4",
+                  "courseId": 9416,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56537"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "MATH 161",
+                  "placement": "right",
+                  "text": "AND MATH 162 - Differential and Integral Calculus"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 66-69",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

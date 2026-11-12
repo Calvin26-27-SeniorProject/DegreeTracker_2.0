@@ -1,0 +1,157 @@
+{
+  "id": "applied-film-and-media-major",
+  "name": "Applied Film and Media Major",
+  "code": "APPFM.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13735",
+  "description": "The applied film and media major features a streamlined offering of film and media courses intended for students who wish to combine media production with another area of study. Students interested in pursuing the applied film and media major are required to complete an additional major or minor in another department or academic discipline. Overlap Policy This program may not be combined with the digital communication, film and media major: production concentration, film and media major: studies concentration, or film and media minor programs.",
+  "totalHours": "37",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(COMM 145 also fulfills a Core requirement.)",
+      "courses": [
+        {
+          "code": "COMM 145",
+          "title": "Introduction to Film and Media",
+          "credits": "4",
+          "courseId": 7888,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55902"
+        },
+        {
+          "code": "COMM 190",
+          "title": "Media Production I",
+          "credits": "4",
+          "courseId": 7890,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+        },
+        {
+          "code": "COMM 222",
+          "title": "Calvin Media Company",
+          "credits": "1",
+          "courseId": 7894,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55908"
+        },
+        {
+          "code": "COMM 249",
+          "title": "Audio Storytelling",
+          "credits": "2",
+          "courseId": 7897,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55911"
+        },
+        {
+          "code": "COMM 254",
+          "title": "Screen Storytelling: Theory and Criticism",
+          "credits": "2",
+          "courseId": 7899,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55913"
+        },
+        {
+          "code": "COMM 290",
+          "title": "Media Production II",
+          "credits": "4",
+          "courseId": 7905,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55919"
+        },
+        {
+          "code": "COMM 346",
+          "title": "Internship in Communication",
+          "credits": "2",
+          "courseId": 7909,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55923"
+        },
+        {
+          "code": "COMM 351",
+          "title": "Media Production III",
+          "credits": "4",
+          "courseId": 7910,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55924"
+        },
+        {
+          "code": "COMM 381",
+          "title": "Topics in Film and Media History",
+          "credits": "4",
+          "courseId": 7903,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55917"
+        },
+        {
+          "code": "COMM 399",
+          "title": "Advanced Communication Study",
+          "credits": "4",
+          "courseId": 7914,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55928"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 222",
+          "placement": "right",
+          "text": "(1 semester hour)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 248",
+              "title": "Screenwriting",
+              "credits": "4",
+              "courseId": 7896,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55910"
+            },
+            {
+              "code": "COMM 250",
+              "title": "Multi-Camera Production",
+              "credits": "4",
+              "courseId": 7898,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55912"
+            },
+            {
+              "code": "COMM 251",
+              "title": "Live and Studio Audio Production",
+              "credits": "2",
+              "courseId": 11222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56973"
+            },
+            {
+              "code": "COMM 255",
+              "title": "Documentary Film and Television",
+              "credits": "4",
+              "courseId": 7900,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55914"
+            }
+          ],
+          "notes": [
+            {
+              "course": "COMM 255",
+              "placement": "after",
+              "text": "additional COMM 222 or COMM 322 (may be repeated for a combined maximum of 4 hours) an approved elective"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 37",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "id": "faith-and-community-leadership-major-ba",
+  "name": "Faith and Community Leadership Major, BA",
+  "code": "BA.ML.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 816,
+    "name": "Prison Education Programs (Handlon Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13209",
+  "description": "The courses in this major are taught only at the Handlon campus. This course of study equips graduates for leadership roles in their spheres of influence. Graduates will utilize the skills and knowledge to become peer mentors, lead faith formation activities, provide academic tutoring, promote just community development, and advance social service agency effectiveness.",
+  "totalHours": "124",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ML 101",
+          "title": "Old Testament Survey",
+          "credits": "4",
+          "courseId": 21485,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54529"
+        },
+        {
+          "code": "ML 102",
+          "title": "New Testament Survey",
+          "credits": "4",
+          "courseId": 21486,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54530"
+        },
+        {
+          "code": "ML 121",
+          "title": "Christian Formation",
+          "credits": "4",
+          "courseId": 21487,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54531"
+        },
+        {
+          "code": "ML 122",
+          "title": "Practice of Discipleship",
+          "credits": "4",
+          "courseId": 21488,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54532"
+        },
+        {
+          "code": "ML 221",
+          "title": "Foundations for Pastoral Care",
+          "credits": "4",
+          "courseId": 21489,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54533"
+        },
+        {
+          "code": "ML 321",
+          "title": "Forming Worshiping Communities",
+          "credits": "4",
+          "courseId": 21490,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54534"
+        },
+        {
+          "code": "ML 322",
+          "title": "Pastoral Disciplines for Counseling",
+          "credits": "4",
+          "courseId": 21491,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54535"
+        },
+        {
+          "code": "ML 323",
+          "title": "Leadership in Ministry",
+          "credits": "4",
+          "courseId": 21492,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54536"
+        },
+        {
+          "code": "MIN 251",
+          "title": "Theological Reflections on Ministry Practices",
+          "credits": "2",
+          "courseId": 18255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53845"
+        },
+        {
+          "code": "REL 332",
+          "title": "Theological Ethics",
+          "credits": "4",
+          "courseId": 20619,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54358"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "(Take one 200-level systematic theology course.)",
+          "courses": [
+            {
+              "code": "REL 230",
+              "title": "Revelation and Knowledge of God",
+              "credits": "4",
+              "courseId": 20602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54341"
+            },
+            {
+              "code": "REL 231",
+              "title": "The Triune God",
+              "credits": "4",
+              "courseId": 20603,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54342"
+            },
+            {
+              "code": "REL 232",
+              "title": "Creation and Humanity",
+              "credits": "4",
+              "courseId": 20604,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54343"
+            },
+            {
+              "code": "REL 233",
+              "title": "Christ and Reconciliation",
+              "credits": "4",
+              "courseId": 20605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54344"
+            },
+            {
+              "code": "REL 234",
+              "title": "Holy Spirit and Church",
+              "credits": "2",
+              "courseId": 20606,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54345"
+            },
+            {
+              "code": "REL 235",
+              "title": "The Christian Hope",
+              "credits": "2",
+              "courseId": 20607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54346"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Core Requirements",
+      "description": "FOUNDATIONS Community and Commitments: 2 hours CORE 100 Foundations of Christianity I: 4 hours REL 121 or REL 131 Foundations of Christianity II - at least 2 hours Course listings for this category may be found here. COMPETENCIES AND SKILLS Foundational Writing: ENGL 101 OR ENGL 100 and ENGL 102 Health and Movement: 1 hour PER 1XX World Languages I: 3 hours IDIS 101 KNOWLEDGE AND UNDERSTANDING Complete coursework totaling at least 18 semester hours from at least five of the six Knowledge and Understanding categories, including at least 2 semester hours from each of the following categories: Arts, Oral Rhetoric, Visual Rhetoric; Humanities; Social and Behavioral Sciences. Course listings for each category may be found here. World Languages II: 0-4 hours Arts, Oral Rhetoric, Visual Rhetoric: 2-6 hours Humanities: 2-6 hours Mathematical Sciences: 0-4 hours Natural Sciences: 0-6 hours Social and Behavioral Sciences: 2-6 hours CROSS-DISCIPLINARY INTEGRATION Engaged Citizenship Commitments Complete at least one tagged course in all three areas. These courses may also satisfy other core requirements. The full list of approved courses may be found here. Diversity and Difference Environmental Sustainability Global Regions and Cultures Contemporary Challenges and Enduring Questions: 4 hours Course listings for each category may be found here.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 124",
+      "description": "(including core and electives)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "spanish-language-proficiency-certificate",
+  "name": "Spanish Language Proficiency, Certificate",
+  "code": "CERT_WL",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 379,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13819",
+  "description": "The Spanish Language Proficiency Certificate allows students to develop their proficiency in Spanish through two intermediate- to advanced-level courses, taken beyond the World Languages I and II Core requirements, and an optional short-term off-campus experience offered through the Department of World Languages.",
+  "totalHours": "10-12",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SPAN 202",
+              "title": "Intermediate Spanish II",
+              "credits": "4",
+              "courseId": 9172,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56494"
+            },
+            {
+              "code": "SPAN 301",
+              "title": "Advanced Grammar, Composition, and Conversation I",
+              "credits": "4",
+              "courseId": 9173,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56495"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SPAN 202",
+              "placement": "after",
+              "text": "AND SPAN 301 - Advanced Grammar, Composition, and Conversation I"
+            },
+            {
+              "course": "SPAN 301",
+              "placement": "after",
+              "text": "AND SPAN 302 - Advanced Grammar, Composition, and Conversation II"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SPAN 307",
+              "title": "Engaging Hispanic Culture in Place",
+              "credits": "2, 4",
+              "courseId": 10569,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56816"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SPAN 307",
+              "placement": "after",
+              "text": "another Spanish-language study-abroad course (with permission of the chair of the Department of World Languages)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 10-12",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

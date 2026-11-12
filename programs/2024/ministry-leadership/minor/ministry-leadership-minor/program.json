@@ -1,0 +1,672 @@
+{
+  "id": "ministry-leadership-minor",
+  "name": "Ministry Leadership Minor",
+  "code": "MNLDR.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 755,
+    "name": "Ministry Leadership"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13129",
+  "description": "The Ministry Leadership Minor invites students to grasp a biblical vision for the church in society, to learn to understand church life more deeply, and to discern how their gifts can contribute to vital chruch life. All students in the minor benefit from a common foundation in ministry leadership (CMS 121), an interdisciplinary study of congregational life (CMS 372), courses that explore both their area of emphasis and other ministry areas, liberal arts cognate courses that will provide essential supplemental perspectives on their area of emphasis, and an internship course with placement in their area of interest (CMS 381).",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MIN 121",
+          "title": "Introduction to Ministry",
+          "credits": "2",
+          "courseId": 22770,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55043"
+        },
+        {
+          "code": "MIN 381",
+          "title": "Ministry Studies Internship",
+          "credits": "4",
+          "courseId": 18259,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53849"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MIN 381",
+          "placement": "after",
+          "text": "OR MIN 378 - A Christian Calling: Proclaiming Jubilee as a Christian Leader"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take Two from the Following",
+          "description": "(These courses also satisfy the Christian Foundations II Core requirement.)",
+          "courses": [
+            {
+              "code": "REL 211",
+              "title": "From Creation to Promised Land",
+              "credits": "2",
+              "courseId": 20594,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54333"
+            },
+            {
+              "code": "REL 212",
+              "title": "From Conquest to Exile",
+              "credits": "2",
+              "courseId": 20595,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54334"
+            },
+            {
+              "code": "REL 213",
+              "title": "Psalms and Wisdom Literature",
+              "credits": "4",
+              "courseId": 20596,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54335"
+            },
+            {
+              "code": "REL 214",
+              "title": "Prophets",
+              "credits": "4",
+              "courseId": 20597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54336"
+            },
+            {
+              "code": "REL 221",
+              "title": "Jesus in the Gospels and Acts",
+              "credits": "2",
+              "courseId": 20598,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54337"
+            },
+            {
+              "code": "REL 222",
+              "title": "The Gospel and Letters of John",
+              "credits": "2",
+              "courseId": 20599,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54338"
+            },
+            {
+              "code": "REL 223",
+              "title": "Paul's Letters",
+              "credits": "4",
+              "courseId": 20600,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54339"
+            },
+            {
+              "code": "REL 224",
+              "title": "Revelation and General Letters",
+              "credits": "4",
+              "courseId": 20601,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54340"
+            },
+            {
+              "code": "REL 230",
+              "title": "Revelation and Knowledge of God",
+              "credits": "4",
+              "courseId": 20602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54341"
+            },
+            {
+              "code": "REL 231",
+              "title": "The Triune God",
+              "credits": "4",
+              "courseId": 20603,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54342"
+            },
+            {
+              "code": "REL 232",
+              "title": "Creation and Humanity",
+              "credits": "4",
+              "courseId": 20604,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54343"
+            },
+            {
+              "code": "REL 233",
+              "title": "Christ and Reconciliation",
+              "credits": "4",
+              "courseId": 20605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54344"
+            },
+            {
+              "code": "REL 234",
+              "title": "Holy Spirit and Church",
+              "credits": "2",
+              "courseId": 20606,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54345"
+            },
+            {
+              "code": "REL 235",
+              "title": "The Christian Hope",
+              "credits": "2",
+              "courseId": 20607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54346"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            },
+            {
+              "code": "REL 243",
+              "title": "Theology: From the Early Church through the Middle Ages",
+              "credits": "4",
+              "courseId": 20609,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54348"
+            },
+            {
+              "code": "REL 244",
+              "title": "Theology: From the Reformation to the Present",
+              "credits": "2",
+              "courseId": 20610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54349"
+            },
+            {
+              "code": "REL 251",
+              "title": "Christianity and Religious Plurality",
+              "credits": "4",
+              "courseId": 20611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54350"
+            },
+            {
+              "code": "REL 261",
+              "title": "Christianity and Culture",
+              "credits": "4",
+              "courseId": 20614,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54353"
+            },
+            {
+              "code": "REL 262",
+              "title": "Social Justice from the Prophets to Jesus",
+              "credits": "4",
+              "courseId": 21500,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54544"
+            },
+            {
+              "code": "REL 263",
+              "title": "Theology, Beauty, and the Arts",
+              "credits": "4",
+              "courseId": 21501,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54545"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "MIN 251",
+              "title": "Theological Reflections on Ministry Practices",
+              "credits": "2",
+              "courseId": 18255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53845"
+            },
+            {
+              "code": "MIN 252",
+              "title": "Introduction to Missions",
+              "credits": "2",
+              "courseId": 20612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54351"
+            },
+            {
+              "code": "MIN 372",
+              "title": "Congregations and the Common Good",
+              "credits": "4",
+              "courseId": 22778,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55051"
+            },
+            {
+              "code": "MIN 374",
+              "title": "Youth and Family Ministry",
+              "credits": "2",
+              "courseId": 18256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53846"
+            },
+            {
+              "code": "MIN 375",
+              "title": "Ministry, Leadership, and Community Development",
+              "credits": "2",
+              "courseId": 18257,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53847"
+            },
+            {
+              "code": "MIN 378",
+              "title": "A Christian Calling: Proclaiming Jubilee as a Christian Leader",
+              "credits": "2",
+              "courseId": 18258,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53848"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Additional Electives as Necessary",
+          "description": "Take additional courses to reach a minimum of 18 hours for the program, drawn from the lists above or from the following:",
+          "courses": [
+            {
+              "code": "EDUC 309",
+              "title": "Teaching Religion to Children and Adolescents",
+              "credits": "2",
+              "courseId": 18716,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53904"
+            },
+            {
+              "code": "HIST 264",
+              "title": "The Reformation in Historical Context (1500-1700)",
+              "credits": "4",
+              "courseId": 19270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54059"
+            },
+            {
+              "code": "MUSC 131",
+              "title": "Campus Choir",
+              "credits": "1",
+              "courseId": 19840,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54166"
+            },
+            {
+              "code": "MUSC 141",
+              "title": "Capella",
+              "credits": "1",
+              "courseId": 19841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54167"
+            },
+            {
+              "code": "MUSC 182",
+              "title": "Gospel Choir",
+              "credits": "1",
+              "courseId": 19846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54172"
+            },
+            {
+              "code": "MUSC 221",
+              "title": "Piano Accompanying in Worship",
+              "credits": "1",
+              "courseId": 19853,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54179"
+            },
+            {
+              "code": "MUSC 236",
+              "title": "Music in Worship",
+              "credits": "2",
+              "courseId": 19854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54180"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            },
+            {
+              "code": "REL 251",
+              "title": "Christianity and Religious Plurality",
+              "credits": "4",
+              "courseId": 20611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54350"
+            },
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 20613,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54352"
+            },
+            {
+              "code": "REL 352",
+              "title": "Judaism",
+              "credits": "2",
+              "courseId": 20622,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54361"
+            },
+            {
+              "code": "REL 353",
+              "title": "Islam",
+              "credits": "2",
+              "courseId": 20623,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54362"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 20624,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54363"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 20625,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54364"
+            },
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 20640,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            },
+            {
+              "code": "SOC 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 20637,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 20643,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54382"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Optional Emphases",
+      "description": "If interested, students may choose electives to focus on one of the following areas. (N.B.: Areas of emphasis do not appear on a student's transcript.)",
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Community Development",
+          "description": null,
+          "courses": [
+            {
+              "code": "MIN 375",
+              "title": "Ministry, Leadership, and Community Development",
+              "credits": "2",
+              "courseId": 18257,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53847"
+            },
+            {
+              "code": "REL 261",
+              "title": "Christianity and Culture",
+              "credits": "4",
+              "courseId": 20614,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54353"
+            },
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 20640,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Congregational Studies",
+          "description": null,
+          "courses": [
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 20640,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 20643,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54382"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Missions",
+          "description": null,
+          "courses": [
+            {
+              "code": "MIN 252",
+              "title": "Introduction to Missions",
+              "credits": "2",
+              "courseId": 20612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54351"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 20643,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54382"
+            },
+            {
+              "code": "REL 251",
+              "title": "Christianity and Religious Plurality",
+              "credits": "4",
+              "courseId": 20611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54350"
+            },
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 20613,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54352"
+            },
+            {
+              "code": "REL 352",
+              "title": "Judaism",
+              "credits": "2",
+              "courseId": 20622,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54361"
+            },
+            {
+              "code": "REL 353",
+              "title": "Islam",
+              "credits": "2",
+              "courseId": 20623,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54362"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 20624,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54363"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 20625,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54364"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Music in Worship",
+          "description": null,
+          "courses": [
+            {
+              "code": "MUSC 131",
+              "title": "Campus Choir",
+              "credits": "1",
+              "courseId": 19840,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54166"
+            },
+            {
+              "code": "MUSC 141",
+              "title": "Capella",
+              "credits": "1",
+              "courseId": 19841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54167"
+            },
+            {
+              "code": "MUSC 182",
+              "title": "Gospel Choir",
+              "credits": "1",
+              "courseId": 19846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54172"
+            },
+            {
+              "code": "MUSC 221",
+              "title": "Piano Accompanying in Worship",
+              "credits": "1",
+              "courseId": 19853,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54179"
+            },
+            {
+              "code": "MUSC 236",
+              "title": "Music in Worship",
+              "credits": "2",
+              "courseId": 19854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54180"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Pastoral Ministry",
+          "description": null,
+          "courses": [
+            {
+              "code": "MIN 251",
+              "title": "Theological Reflections on Ministry Practices",
+              "credits": "2",
+              "courseId": 18255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53845"
+            },
+            {
+              "code": "MIN 378",
+              "title": "A Christian Calling: Proclaiming Jubilee as a Christian Leader",
+              "credits": "2",
+              "courseId": 18258,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53848"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            },
+            {
+              "code": "SOC 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 20637,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Worship",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 264",
+              "title": "The Reformation in Historical Context (1500-1700)",
+              "credits": "4",
+              "courseId": 19270,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54059"
+            },
+            {
+              "code": "MUSC 236",
+              "title": "Music in Worship",
+              "credits": "2",
+              "courseId": 19854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54180"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Youth Ministry",
+          "description": null,
+          "courses": [
+            {
+              "code": "MIN 374",
+              "title": "Youth and Family Ministry",
+              "credits": "2",
+              "courseId": 18256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53846"
+            },
+            {
+              "code": "EDUC 309",
+              "title": "Teaching Religion to Children and Adolescents",
+              "credits": "2",
+              "courseId": 18716,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53904"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 20255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

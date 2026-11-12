@@ -48,6 +48,53 @@ function builder(doc) {
   };
 }
 
+// Sections the saved course schedule lists for a course, as a collapsed list
+// under the course's row (shared by the Core and Major/Minor pages). Closed,
+// CPI, and Handlon sections are left out; whether a section is full isn't shown.
+// ctx: { schedule, openLists, onListToggle }; key identifies the list's open state.
+function offeredSectionsList(h, { schedule, openLists = new Map(), onListToggle }, key, code) {
+  const shownTerms = (schedule?._meta.terms || []).filter(t => t.shown);
+  const offered = schedule?.offerings[code];
+  const terms = shownTerms.filter(t => offered?.[t.term]);
+  if (terms.length === 0) return null;
+  const count = list => list.filter(s => !s.lab).length || list.length;
+  const label = terms.map(t => {
+    const n = count(offered[t.term]);
+    return `${t.label}: ${n} section${n === 1 ? '' : 's'}`;
+  }).join(' · ');
+  const sectionList = (listCode, sections) => h('ul', { class: 'section-list' }, sections.map(s => h('li', { class: 'section' },
+    h('strong', {}, `${listCode}-${s.section}`),
+    ' ', [s.meets || (s.delivery === 'Online' ? null : 'Time TBA'), s.instructors,
+      s.delivery, s.offCampus ? 'Off campus' : null, s.hours != null ? `${s.hours} hrs` : null].filter(Boolean).join(' · '),
+    s.period ? h('span', { class: 'section-period' }, s.period) : null,
+    s.title ? h('span', { class: 'section-title' }, s.title) : null)));
+  return h('details', { class: 'offered', open: openLists.get(key) || null,
+    ontoggle: e => onListToggle?.(key, e.target.open) },
+    h('summary', {}, label),
+    terms.map(t => {
+      const list = offered[t.term];
+      const lectures = list.filter(s => !s.lab);
+      const labs = list.filter(s => s.lab);
+      return h('div', { class: 'offered-term' },
+        h('p', { class: 'offered-term-name' }, t.label + (labs.length && lectures.length ? ' (take one lecture section and one lab section; the letters needn’t match)' : '')),
+        lectures.length ? sectionList(code, lectures) : null,
+        labs.length ? [h('p', { class: 'offered-kind' }, 'Lab'), sectionList(code + 'L', labs)] : null);
+    }));
+}
+
+// The chevron that collapses a requirement card to its header. The open state
+// is kept under `key` so a re-render keeps it.
+function collapseButton(h, name, expanded, key, onListToggle) {
+  return h('button', { type: 'button', class: 'req-collapse', 'aria-expanded': String(expanded),
+    'aria-label': `Show or hide ${name}`, title: 'Show or hide details',
+    onclick: e => {
+      const card = e.currentTarget.closest('.req');
+      const nowExpanded = card.classList.toggle('is-collapsed') === false;
+      e.currentTarget.setAttribute('aria-expanded', String(nowExpanded));
+      onListToggle?.(key, nowExpanded);
+    } });
+}
+
 function statusInfo(r) {
   if (!r) return null;
   if (r.isExempt) return { cls: 'done', text: 'Exempt' };
@@ -226,36 +273,7 @@ export function renderApp(root, state) {
   // Sections listed for the shown terms (closed, CPI, and Handlon sections left out;
   // whether a section is full isn't shown).
   function offeredSections(cat, code) {
-    const offered = schedule?.offerings[code];
-    const terms = shownTerms.filter(t => offered?.[t.term]);
-    if (terms.length === 0) return null;
-    const key = `sections:${cat.slug}:${code}`;
-    const count = list => list.filter(s => !s.lab).length || list.length;
-    const label = terms.map(t => {
-      const n = count(offered[t.term]);
-      return `${t.label}: ${n} section${n === 1 ? '' : 's'}`;
-    }).join(' · ');
-    return h('details', { class: 'offered', open: openLists.get(key) || null,
-      ontoggle: e => state.onListToggle?.(key, e.target.open) },
-      h('summary', {}, label),
-      terms.map(t => {
-        const list = offered[t.term];
-        const lectures = list.filter(s => !s.lab);
-        const labs = list.filter(s => s.lab);
-        return h('div', { class: 'offered-term' },
-          h('p', { class: 'offered-term-name' }, t.label + (labs.length && lectures.length ? ' (take one lecture section and one lab section; the letters needn’t match)' : '')),
-          lectures.length ? sectionList(code, lectures) : null,
-          labs.length ? [h('p', { class: 'offered-kind' }, 'Lab'), sectionList(code + 'L', labs)] : null);
-      }));
-  }
-
-  function sectionList(code, sections) {
-    return h('ul', { class: 'section-list' }, sections.map(s => h('li', { class: 'section' },
-      h('strong', {}, `${code}-${s.section}`),
-      ' ', [s.meets || (s.delivery === 'Online' ? null : 'Time TBA'), s.instructors,
-        s.delivery, s.offCampus ? 'Off campus' : null, s.hours != null ? `${s.hours} hrs` : null].filter(Boolean).join(' · '),
-      s.period ? h('span', { class: 'section-period' }, s.period) : null,
-      s.title ? h('span', { class: 'section-title' }, s.title) : null)));
+    return offeredSectionsList(h, { schedule, openLists, onListToggle: state.onListToggle }, `sections:${cat.slug}:${code}`, code);
   }
 
   function courseList(cat, r) {
@@ -341,12 +359,6 @@ export function renderApp(root, state) {
     // The whole card collapses to its header (CSS hides the rest; the DOM stays the same).
     const cardKey = 'card:' + cat.slug;
     const expanded = openLists.has(cardKey) ? openLists.get(cardKey) : true;
-    function toggleCard(e) {
-      const card = e.currentTarget.closest('.req');
-      const nowExpanded = card.classList.toggle('is-collapsed') === false;
-      e.currentTarget.setAttribute('aria-expanded', String(nowExpanded));
-      state.onListToggle?.(cardKey, nowExpanded);
-    }
 
     return h('article', { class: 'req' + (cat.type === 'tag' ? ' is-tag' : '') + (status ? ' status-' + status.cls : '')
       + (expanded ? '' : ' is-collapsed'), id: cat.slug, dataset: { coreIndex: cat.coreIndex } },
@@ -355,8 +367,7 @@ export function renderApp(root, state) {
         cat.type === 'tag' ? h('span', { class: 'tag-label' }, 'Overlaps other requirements') : null,
         status ? h('span', { class: 'status-pill status-' + status.cls }, status.text) : null,
         withPlan ? h('span', { class: 'status-pill status-plan' }, 'With plan: ' + withPlan.text) : null,
-        h('button', { type: 'button', class: 'req-collapse', 'aria-expanded': String(expanded),
-          'aria-label': `Show or hide ${cat.name}`, title: 'Show or hide details', onclick: toggleCard })),
+        collapseButton(h, cat.name, expanded, cardKey, state.onListToggle)),
       wording(cat.instructions),
       notes.map(n => h('p', { class: 'req-note' }, n)),
       hoursLine(cat, r),
@@ -763,10 +774,12 @@ export function renderDashboard(root, state) {
 // exactly as Workday lists it, under a summary box like the core's.
 // state: { groups, hasInput, kind: 'major' | 'minor', checks, schedule }
 const WORKDAY_STATUS_CLS = { Satisfied: 'done', 'In Progress': 'min', 'Not Satisfied': 'todo' };
-const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'], check: ['optional', 'Check Workday'] };
+const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'] };
 export function renderPrograms(root, state) {
   const h = builder(root.ownerDocument);
-  const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null } = state;
+  const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null,
+    openLists = new Map(), onListToggle, catalogCourses = new Map() } = state;
+  const listState = { schedule, openLists, onListToggle };
   const noun = kind === 'minor' ? 'minor' : 'major';
   if (!groups.length) {
     root.replaceChildren(h('p', { class: 'programs-empty' }, hasInput
@@ -778,20 +791,47 @@ export function renderPrograms(root, state) {
     'Workday’s listings are shown as Workday lists them: this tool doesn’t check them, and Workday is the official record. Core requirements are on the Calvin Core tab; GPA requirements aren’t shown here.');
   const slug = (g, i) => `${kind}-${groups.indexOf(g)}-req-${i}`;
 
+  // Everything below is built from the same pieces as the Core page: a
+  // .req-section per heading, a .req card per requirement, and a .course-list
+  // of .course rows, where a course the student took is a green row with a chip.
+  const connector = text => h('li', { class: 'course-connector', dataset: { kind: 'connector' } }, text);
+  const hoursText = hours => (hours != null ? ` · ${fmtHours(hours)} hrs` : '');
+  const cardState = key => (openLists.has(key) ? openLists.get(key) : true);
+
+  // A Workday item: "CS 108 - Introduction to Computing (In Progress)", or other
+  // text such as an exemption.
+  const WORKDAY_ITEM_RE = /^([A-Z]{2,5} \d{3}[A-Z]?) - (.+?)( \(In Progress\))?$/;
+  function workdayItem(item) {
+    const m = WORKDAY_ITEM_RE.exec(item.text);
+    const flags = [];
+    if (m) {
+      flags.push(m[3]
+        ? h('span', { class: 'chip chip-progress' }, `In progress${hoursText(item.hours)}`)
+        : h('span', { class: 'chip chip-taken' }, `Taken${hoursText(item.hours)}`));
+    } else if (item.hours != null) {
+      flags.push(h('span', { class: 'chip chip-hours' }, `${fmtHours(item.hours)} hrs`));
+    }
+    if (item.period) flags.push(h('span', { class: 'chip chip-hours' }, item.period));
+    return h('li', { class: 'course is-active' },
+      m ? [h('span', { class: 'course-code' }, m[1]), h('span', { class: 'course-title' }, m[2])]
+        : h('span', { class: 'course-title' }, item.text),
+      flags.length ? h('span', { class: 'course-flags' }, flags) : null);
+  }
+
   // Workday's requirements for a program, verbatim.
-  function workdayList(g) {
-    return h('ol', { class: 'program-reqs' }, g.requirements.map((r, i) => {
+  function workdayCards(g) {
+    return g.requirements.map((r, i) => {
       const cls = WORKDAY_STATUS_CLS[r.status] || 'optional';
-      return h('li', { class: 'program-req status-' + cls, id: slug(g, i) },
-        h('div', { class: 'program-req-head' },
-          h('span', { class: 'program-req-name' }, r.name),
-          r.status ? h('span', { class: 'status-pill status-' + cls }, r.status) : null),
-        r.remaining && r.status !== 'Satisfied' ? h('p', { class: 'program-req-remaining' }, 'Remaining: ' + r.remaining) : null,
-        r.items.length ? h('ul', { class: 'program-items' }, r.items.map(item => h('li', {},
-          h('span', {}, item.text),
-          item.period || item.hours != null ? h('span', { class: 'program-item-meta' },
-            [item.period, item.hours != null ? `${fmtHours(item.hours)} hrs` : null].filter(Boolean).join(' · ')) : null))) : null);
-    }));
+      const key = 'card:' + slug(g, i);
+      const expanded = cardState(key);
+      return h('article', { class: 'req status-' + cls + (expanded ? '' : ' is-collapsed'), id: slug(g, i) },
+        h('header', { class: 'req-header' },
+          h('h3', { class: 'req-name' }, r.name),
+          r.status ? h('span', { class: 'status-pill status-' + cls }, r.status) : null,
+          collapseButton(h, r.name, expanded, key, onListToggle)),
+        r.remaining && r.status !== 'Satisfied' ? h('p', { class: 'req-note' }, 'Remaining: ' + r.remaining) : null,
+        r.items.length ? h('ul', { class: 'course-list' }, r.items.map(workdayItem)) : null);
+    });
   }
 
   function workdayOnly(g) {
@@ -805,88 +845,144 @@ export function renderPrograms(root, state) {
         return h('li', {}, h('a', { href: '#' + slug(g, i), class: 'summary-chip status-' + cls },
           h('span', { class: 'chip-name' }, r.name), h('span', { class: 'chip-value' }, r.status || '')));
       }))),
-    h('section', { class: 'program' },
-      h('header', { class: 'program-header' }, h('h3', {}, g.name || 'From your Academic Progress')),
-      workdayList(g))];
+    h('section', { class: 'req-section' },
+      h('h2', { class: 'req-section-title' }, g.name || 'From your Academic Progress'),
+      workdayCards(g))];
   }
 
-  // Terms the saved course schedule lists sections for.
-  const shownTerms = (schedule?._meta.terms || []).filter(t => t.shown);
-  const offeredIn = code => shownTerms.filter(t => schedule.offerings[code]?.[t.term]).map(t => t.label);
+  // The chip for a course on the student's record, worded like the Core page.
+  function takenChip(m) {
+    return m.status === 'done'
+      ? h('span', { class: 'chip chip-taken' }, `Taken${m.grade ? ` · ${m.grade}` : ''}${hoursText(m.hours)}`)
+      : h('span', { class: 'chip chip-progress' }, `In progress${hoursText(m.hours)}`);
+  }
 
-  const takenLabel = m => (m.status === 'done' ? 'Taken' : 'In progress');
-  const takenCls = m => (m ? (m.status === 'done' ? ' is-taken' : ' is-progress') : '');
-
-  // A course option's row, then its corequisite lab's own row (its title and
-  // hours from the student's record when it's there).
-  function courseOption(program, code, credits, matched) {
+  // One course option's row. A lab (lectureCode set) is its own row under its
+  // lecture, with its title and hours from the student's record when it's there.
+  function programCourse(program, courses, itemId, code, credits, matched, lectureCode = null) {
+    const info = courses.get(code);
     const m = matched.find(x => x.code === code);
-    const offered = m ? [] : offeredIn(code);
-    const rows = [h('li', { class: 'program-option' + takenCls(m) },
-      h('span', { class: 'program-option-code' }, code),
-      h('span', { class: 'program-option-title' }, program.titles?.[code] || ''),
-      h('span', { class: 'program-item-meta' }, [credits != null ? `${credits} hrs` : null,
-        m ? takenLabel(m) : offered.length ? `Offered ${offered.join(', ')}` : null].filter(Boolean).join(' · ')))];
-    const lab = program.labs?.[code];
-    if (lab) {
-      const lm = matched.find(x => x.code === lab);
-      rows.push(h('li', { class: 'program-option is-lab' + (lm ? takenCls(lm) : m ? ' is-missing' : '') },
-        h('span', { class: 'program-option-code' }, lab),
-        h('span', { class: 'program-option-title' }, lm?.title || `Lab for ${code}`),
-        h('span', { class: 'program-item-meta' }, [lm?.hours != null ? `${fmtHours(lm.hours)} hrs` : null,
-          lm ? takenLabel(lm) : m ? 'Not on your record' : null].filter(Boolean).join(' · '))));
+    const isLab = lectureCode != null;
+    const missing = isLab && !m && matched.some(x => x.code === lectureCode);
+    const flags = [];
+    if (m) flags.push(takenChip(m));
+    else if (missing) flags.push(h('span', { class: 'chip chip-excluded' }, 'Not on your record'));
+    else if (credits != null) flags.push(h('span', { class: 'chip chip-hours', title: 'Hours the catalog lists' }, `${credits} hrs`));
+    const title = m?.title || program.titles?.[code] || info?.title || (isLab ? `Lab for ${lectureCode}` : '');
+    return h('li', { class: 'course' + (m ? ' is-active' : '') + (missing ? ' is-excluded' : '') + (isLab ? ' is-lab' : ''),
+      dataset: { kind: 'course', code } },
+      info?.url
+        ? h('a', { class: 'course-code', href: info.url, target: '_blank', rel: 'noopener', title: 'Course description in the official catalog' }, code)
+        : h('span', { class: 'course-code' }, code),
+      h('span', { class: 'course-title' }, title),
+      flags.length ? h('span', { class: 'course-flags' }, flags) : null,
+      m || missing ? null : offeredSectionsList(h, listState, `sections:${itemId}:${code}`, code));
+  }
+
+  // The rows of a requirement: its options (joined by Or/And where the catalog
+  // lists alternatives) or a group's courses, each lecture followed by its lab.
+  // A repeatable seminar lists each semester you took it, oldest first, then
+  // the course itself again until the semesters are all there.
+  function optionRows(program, courses, item, itemId) {
+    const credits = code => (item.kind === 'group' ? item.courses.find(c => c.code === code)?.credits : item.credits);
+    const rowsFor = (code, matched = item.matched) => [
+      programCourse(program, courses, itemId, code, credits(code), matched),
+      ...(program.labs?.[code] ? [programCourse(program, courses, itemId, program.labs[code], null, matched, code)] : []),
+    ];
+    if (item.kind === 'group') return item.courses.flatMap(c => rowsFor(c.code));
+    if (item.occurrences) {
+      const semesterRow = term => {
+        const info = courses.get(term.code);
+        return h('li', { class: 'course is-active', dataset: { kind: 'course', code: term.code } },
+          info?.url
+            ? h('a', { class: 'course-code', href: info.url, target: '_blank', rel: 'noopener', title: 'Course description in the official catalog' }, term.code)
+            : h('span', { class: 'course-code' }, term.code),
+          h('span', { class: 'course-title' }, term.title || program.titles?.[term.code] || info?.title || ''),
+          h('span', { class: 'course-flags' }, takenChip(term),
+            term.period ? h('span', { class: 'chip chip-hours' }, term.period) : null));
+      };
+      return [...item.occurrences.terms.map(semesterRow),
+        ...(item.status === 'done' ? [] : item.options.flat().flatMap(code => rowsFor(code, [])))];
     }
-    return rows;
+    const seen = new Set();
+    return item.options.flatMap((option, i) => {
+      const codes = option.filter(code => !seen.has(code));
+      codes.forEach(code => seen.add(code));
+      return codes.length ? [i ? connector('Or') : null, ...codes.flatMap((code, j) => [j ? connector('And') : null, ...rowsFor(code)])] : [];
+    });
+  }
+
+  // What the status pill and summary chip say: hours for a group, "2 of 3
+  // semesters" for a seminar still short, otherwise Complete / In progress / Not yet.
+  function pillText(item) {
+    if (item.kind === 'group') return `${fmtHours(item.hours)} of ${item.minHours} hrs`;
+    if (item.occurrences && item.status !== 'done' && item.status !== 'todo') {
+      return `${item.occurrences.completed} of ${item.occurrences.required} semesters`;
+    }
+    return CHECK_STATUS[item.status][1];
+  }
+
+  function checkedCard(program, courses, item, itemId) {
+    const cls = CHECK_STATUS[item.status][0];
+    const codes = item.kind === 'group' ? item.courses.map(c => c.code) : [...new Set(item.options.flat())];
+    const single = item.kind !== 'group' && codes.length === 1;
+    const cardKey = 'card:' + itemId;
+    const expanded = cardState(cardKey);
+    // Like the Core page, a list opens until the requirement is met; it also
+    // stays open when it holds courses you took, so they show in green.
+    const open = openLists.has(itemId) ? openLists.get(itemId) : item.status !== 'done' || item.matched.length > 0;
+    const rows = optionRows(program, courses, item, itemId);
+    const counted = item.matched.filter(m => !m.lab);
+    return h('article', { class: 'req status-' + cls + (expanded ? '' : ' is-collapsed'), id: itemId },
+      h('header', { class: 'req-header' },
+        h('h3', { class: 'req-name' }, item.label),
+        h('span', { class: 'status-pill status-' + cls }, pillText(item)),
+        collapseButton(h, item.label, expanded, cardKey, onListToggle)),
+      item.kind === 'group' && item.inProgressHours ? h('p', { class: 'req-hours' }, `${fmtHours(item.inProgressHours)} more hrs in progress.`) : null,
+      item.occurrences?.inProgress ? h('p', { class: 'req-hours' },
+        `${item.occurrences.inProgress} more semester${item.occurrences.inProgress === 1 ? '' : 's'} in progress.`) : null,
+      item.note ? h('p', { class: 'req-note' }, item.note) : null,
+      item.missingLabs.length ? h('p', { class: 'req-note is-mismatch' },
+        `${item.missingLabs.join(', ')} ${item.missingLabs.length === 1 ? 'isn’t' : 'aren’t'} on your record. The catalog lists ${item.missingLabs.length === 1 ? 'it' : 'them'} as a corequisite, so the course counts only with it.`) : null,
+      !single && !open && counted.length ? h('p', { class: 'req-taken' }, 'Counted: ', counted.map((m, i) => [i ? ', ' : '', m.code])) : null,
+      single
+        ? h('ul', { class: 'course-list' }, rows)
+        : h('details', { class: 'course-options', open: open || null, ontoggle: e => onListToggle?.(itemId, e.target.open) },
+          h('summary', {}, `Course options (${codes.length})`),
+          h('ol', { class: 'course-list' }, rows)));
   }
 
   function checked(g, { program, result }) {
     const year = catalogLabel({ catalogYear: program.catalogYear });
     const itemId = item => `${kind}-${program.id}-${item.id}`;
+    const courses = catalogCourses.get(`${program.id}-${program.catoid}`) || new Map();
     const summaryBox = h('section', { class: 'summary', 'aria-label': `${program.programName} summary` },
       h('h2', {}, `${result.done} of ${result.total} requirements met`),
       h('p', { class: 'summary-sub' }, `${program.programName}: by this tool’s reading of the `,
         h('a', { href: program.sourceUrl, target: '_blank', rel: 'noopener' }, `${year} catalog`),
-        `${result.inProgress ? `; ${result.inProgress} more in progress or to check` : ''}. Workday may differ.`),
+        `${result.inProgress ? `; ${result.inProgress} more in progress` : ''}. Workday may differ.`),
       h('ul', { class: 'summary-chips' }, result.items.map(item => {
-        const [cls, text] = CHECK_STATUS[item.status];
+        const cls = CHECK_STATUS[item.status][0];
         return h('li', {}, h('a', { href: '#' + itemId(item), class: 'summary-chip status-' + cls },
           h('span', { class: 'chip-name' }, item.label),
-          h('span', { class: 'chip-value' }, item.kind === 'group' ? `${fmtHours(item.hours)} of ${item.minHours} hrs` : text)));
+          h('span', { class: 'chip-value' }, pillText(item))));
       })));
-    const sections = [...new Set(result.items.map(i => i.section))];
-    const body = h('section', { class: 'program' },
-      h('header', { class: 'program-header' }, h('h3', {}, program.programName)),
-      sections.map(section => [
-        h('h4', { class: 'program-section' }, section),
-        h('ol', { class: 'program-reqs' }, result.items.filter(i => i.section === section).map(item => {
-          const [cls, text] = CHECK_STATUS[item.status];
-          const credits = code => item.kind === 'group' ? item.courses.find(c => c.code === code)?.credits : item.credits;
-          const codes = item.kind === 'group' ? item.courses.map(c => c.code) : [...new Set(item.options.flat())];
-          return h('li', { class: 'program-req status-' + cls, id: itemId(item) },
-            h('div', { class: 'program-req-head' },
-              h('span', { class: 'program-req-name' }, item.label),
-              h('span', { class: 'status-pill status-' + cls }, item.kind === 'group' ? `${fmtHours(item.hours)} of ${item.minHours} hrs` : text)),
-            item.kind === 'group' && item.inProgressHours ? h('p', { class: 'program-req-remaining' }, `${fmtHours(item.inProgressHours)} more hrs in progress.`) : null,
-            item.missingLabs.length ? h('p', { class: 'program-req-warn' },
-              `${item.missingLabs.join(', ')} ${item.missingLabs.length === 1 ? 'isn’t' : 'aren’t'} on your record. The catalog lists ${item.missingLabs.length === 1 ? 'it' : 'them'} as a corequisite, so the course counts only with it.`) : null,
-            item.note ? h('p', { class: 'program-req-remaining' }, item.note) : null,
-            codes.length > 1 || item.kind === 'group'
-              ? h('details', { class: 'program-options', open: (item.status !== 'done' && codes.length <= 6) || null },
-                  h('summary', {}, item.kind === 'group' ? `Course options (${codes.length})` : 'Options'),
-                  h('ul', {}, codes.map(code => courseOption(program, code, credits(code), item.matched))))
-              : h('ul', { class: 'program-single' }, courseOption(program, codes[0], credits(codes[0]), item.matched)));
-        }))]),
-      program.notes?.length || program.manualRequirements?.length
-        ? h('div', { class: 'program-unchecked' },
-            h('h4', { class: 'program-section' }, 'Not checked here'),
-            h('ul', {}, [...(program.notes || []).map(n => h('li', {}, n)),
-              ...(program.manualRequirements || []).map(m => h('li', {}, h('strong', {}, m.label + ': '), m.note))]))
-        : null,
-      h('details', { class: 'program-workday' },
-        h('summary', {}, 'Workday’s listing for this program'),
-        workdayList(g)));
-    return [summaryBox, body];
+    const sections = [...new Set(result.items.map(i => i.section))].map(section =>
+      h('section', { class: 'req-section' },
+        h('h2', { class: 'req-section-title' }, section),
+        result.items.filter(i => i.section === section).map(item => checkedCard(program, courses, item, itemId(item)))));
+    const unchecked = program.notes?.length || program.manualRequirements?.length
+      ? h('section', { class: 'callout program-unchecked' },
+        h('h2', {}, 'Not checked here'),
+        h('ul', {}, [...(program.notes || []).map(n => h('li', {}, n)),
+          ...(program.manualRequirements || []).map(m => h('li', {}, h('strong', {}, m.label + ': '), m.note))]))
+      : null;
+    const workday = h('details', { class: 'course-options program-workday' },
+      h('summary', {}, 'Workday’s listing for this program'),
+      workdayCards(g));
+    return [summaryBox, ...sections, unchecked, workday];
   }
 
-  root.replaceChildren(...groups.flatMap(g => checks.has(g.name) ? checked(g, checks.get(g.name)) : workdayOnly(g)), workdayNote);
+  root.replaceChildren(...groups.flatMap(g => checks.has(g.name) ? checked(g, checks.get(g.name)) : workdayOnly(g)).filter(Boolean),
+    workdayNote);
 }

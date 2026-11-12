@@ -1,0 +1,284 @@
+{
+  "id": "physics-major-ba",
+  "name": "Physics Major, BA",
+  "code": "PHYS.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 368,
+    "name": "Physics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13631",
+  "description": null,
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHYS 130",
+          "title": "What Is the Universe? Astronomy Ancient to Modern",
+          "credits": "1.5",
+          "courseId": 11196,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56947"
+        },
+        {
+          "code": "PHYS 131",
+          "title": "Matter, Light, and Energy",
+          "credits": "1.5",
+          "courseId": 8810,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56332"
+        },
+        {
+          "code": "PHYS 133",
+          "title": "Introductory Physics: Mechanics and Gravity",
+          "credits": "3",
+          "courseId": 8811,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56333"
+        },
+        {
+          "code": "PHYS 195",
+          "title": "Physics and Astronomy Student Seminar",
+          "credits": "0",
+          "courseId": 8812,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56334"
+        },
+        {
+          "code": "PHYS 235",
+          "title": "Introductory Physics: Electricity and Magnetism",
+          "credits": "3",
+          "courseId": 8817,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56339"
+        },
+        {
+          "code": "PHYS 237",
+          "title": "Einstein's Theory of Relativity",
+          "credits": "1",
+          "courseId": 8818,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56340"
+        },
+        {
+          "code": "PHYS 246",
+          "title": "Waves, Optics, and Optical Technology",
+          "credits": "4",
+          "courseId": 8819,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56341"
+        },
+        {
+          "code": "PHYS 295",
+          "title": "Seminar in Physics, Technology and Society",
+          "credits": "0",
+          "courseId": 8820,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56342"
+        },
+        {
+          "code": "PHYS 306",
+          "title": "Introduction to Quantum Physics",
+          "credits": "4",
+          "courseId": 8822,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56344"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PHYS 195",
+          "placement": "right",
+          "text": "(take two semesters)"
+        },
+        {
+          "course": "PHYS 295",
+          "placement": "right",
+          "text": "(take two semesters)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take Two from the Following",
+          "description": "Advanced Theory Courses",
+          "courses": [
+            {
+              "code": "PHYS 335",
+              "title": "Classical Mechanics and Orbital Dynamics",
+              "credits": "4",
+              "courseId": 8823,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56345"
+            },
+            {
+              "code": "PHYS 345",
+              "title": "Electromagnetism",
+              "credits": "4",
+              "courseId": 8825,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56347"
+            },
+            {
+              "code": "PHYS 346",
+              "title": "Advanced Optics",
+              "credits": "2",
+              "courseId": 8826,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56348"
+            },
+            {
+              "code": "PHYS 365",
+              "title": "Thermodynamics and Statistical Mechanics",
+              "credits": "4",
+              "courseId": 8829,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56351"
+            },
+            {
+              "code": "PHYS 375",
+              "title": "Quantum Mechanics",
+              "credits": "4",
+              "courseId": 8830,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56352"
+            },
+            {
+              "code": "PHYS 376",
+              "title": "Quantum Mechanics",
+              "credits": "2",
+              "courseId": 8831,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56353"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take Two from the Following",
+          "description": "Advanced Laboratory Courses",
+          "courses": [
+            {
+              "code": "ASTR 384",
+              "title": "Modern Observational Astronomy",
+              "credits": "1",
+              "courseId": 7829,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55844"
+            },
+            {
+              "code": "ENGR 204",
+              "title": "Circuits Analysis and Electronics",
+              "credits": "3",
+              "courseId": 8235,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56051"
+            },
+            {
+              "code": "PHYS 339",
+              "title": "Advanced Classical Mechanics Laboratory",
+              "credits": "2",
+              "courseId": 8824,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56346"
+            },
+            {
+              "code": "PHYS 349",
+              "title": "Advanced Electromagnetism and Optics Laboratory",
+              "credits": "2",
+              "courseId": 8828,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56350"
+            },
+            {
+              "code": "PHYS 379",
+              "title": "Advanced Quantum Physics Laboratory",
+              "credits": "2",
+              "courseId": 8832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56354"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Additional Courses as Necessary",
+          "description": "departmentally approved electives to bring the total (not including cognates, below) to 32 hours",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": "(​In addition, MATH 231 - Differential Equations with Linear Algebra is recommended.)",
+          "courses": [
+            {
+              "code": "MATH 161",
+              "title": "Calculus: Modeling and Computation",
+              "credits": "4",
+              "courseId": 12160,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+            },
+            {
+              "code": "MATH 162",
+              "title": "Differential and Integral Calculus",
+              "credits": "4",
+              "courseId": 12161,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57856"
+            },
+            {
+              "code": "MATH 271",
+              "title": "Multivariable Calculus",
+              "credits": "4",
+              "courseId": 8622,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56243"
+            }
+          ],
+          "notes": [
+            {
+              "course": "MATH 161",
+              "placement": "after",
+              "text": "OR MATH 163 - Calculus: Modeling, Computation, Techniques of Integration"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CS 104",
+                  "title": "Applied Computing",
+                  "credits": "1",
+                  "courseId": 7948,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55962"
+                },
+                {
+                  "code": "CS 106",
+                  "title": "Introduction to Scientific Computation and Modeling",
+                  "credits": "3",
+                  "courseId": 7949,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+                },
+                {
+                  "code": "CS 108",
+                  "title": "Introduction to Computing",
+                  "credits": "3",
+                  "courseId": 7950,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55964"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "CS 106",
+                  "placement": "right",
+                  "text": "(recommended)"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 46",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

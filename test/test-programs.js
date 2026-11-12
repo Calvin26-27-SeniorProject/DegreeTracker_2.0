@@ -139,11 +139,28 @@ describe('renderPrograms (Major and Minor pages)', () => {
   it('lists each requirement with Workday’s status, remaining, and the courses applied', () => {
     const root = newRoot();
     renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
-    assert.equal(root.querySelector('.program h3').textContent, 'Entrepreneurship Minor');
-    const entr = [...root.querySelectorAll('.program-req')].find(li => /^12 hours from ENTR/.test(li.querySelector('.program-req-name').textContent));
+    assert.equal(root.querySelector('.req-section-title').textContent, 'Entrepreneurship Minor');
+    const entr = [...root.querySelectorAll('.req')].find(li => /^12 hours from ENTR/.test(li.querySelector('.req-name').textContent));
     assert.equal(entr.querySelector('.status-pill').textContent, 'In Progress');
-    assert.equal(norm(entr.querySelector('.program-req-remaining').textContent), 'Remaining: Minimum 4 Hour(s)');
-    assert.equal(entr.querySelectorAll('.program-items li').length, 3);
+    assert.equal(norm(entr.querySelector('.req-note').textContent), 'Remaining: Minimum 4 Hour(s)');
+    assert.equal(entr.querySelectorAll('.course-list li.course').length, 3);
+  });
+
+  it('draws Workday’s listing with the Core page’s cards and rows', () => {
+    const root = newRoot();
+    renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
+    const card = [...root.querySelectorAll('.req')].find(li => /^ENTR 201/.test(li.querySelector('.req-name').textContent));
+    assert.ok(card.classList.contains('status-done'));
+    assert.ok(card.querySelector('.req-header .status-pill.status-done'));
+    assert.ok(card.querySelector('.req-collapse'));
+    const row = card.querySelector('.course-list li.course.is-active');
+    assert.equal(row.querySelector('.course-code').textContent, 'ENTR 201');
+    assert.equal(row.querySelector('.course-title').textContent, 'Introduction to Entrepreneurship');
+    assert.deepEqual([...row.querySelectorAll('.course-flags .chip')].map(c => [c.className, c.textContent]),
+      [['chip chip-taken', 'Taken · 2 hrs'], ['chip chip-hours', '2025 Fall']]);
+    const progress = [...root.querySelectorAll('.req')].find(li => /^ENTR 202/.test(li.querySelector('.req-name').textContent));
+    assert.equal(progress.querySelector('.chip-progress').textContent, 'In progress · 4 hrs');
+    assert.equal(root.querySelector('.program, .program-req, .program-option'), null);
   });
 
   it('shows no grades', () => {

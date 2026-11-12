@@ -1,0 +1,351 @@
+{
+  "id": "art-education-pk-12-major",
+  "name": "Art Education PK-12 Major",
+  "code": "MAJ_ART_PK12",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 821,
+    "name": "Visual and Performing Arts"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13282",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "42",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ART 153",
+          "title": "Visual Culture",
+          "credits": "2",
+          "courseId": 17710,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53699"
+        },
+        {
+          "code": "ARTE 315",
+          "title": "Elementary Art Education",
+          "credits": "2",
+          "courseId": 17711,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53700"
+        },
+        {
+          "code": "ARTE 316",
+          "title": "Secondary Art Education",
+          "credits": "2",
+          "courseId": 17712,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53701"
+        },
+        {
+          "code": "ARTE 399",
+          "title": "Exhibition",
+          "credits": "0",
+          "courseId": 17713,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53702"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take Four from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTS 250",
+              "title": "Introduction to Drawing",
+              "credits": "4",
+              "courseId": 17715,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53704"
+            },
+            {
+              "code": "ARTS 251",
+              "title": "Introduction to Painting",
+              "credits": "4",
+              "courseId": 17716,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53705"
+            },
+            {
+              "code": "ARTS 252",
+              "title": "Introduction to Printmaking",
+              "credits": "4",
+              "courseId": 17717,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53706"
+            },
+            {
+              "code": "ARTS 254",
+              "title": "Introduction to Graphic Design",
+              "credits": "4",
+              "courseId": 21560,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54604"
+            },
+            {
+              "code": "ARTS 256",
+              "title": "Introduction to Photography",
+              "credits": "4",
+              "courseId": 17719,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53708"
+            },
+            {
+              "code": "ARTS 257",
+              "title": "Introduction to Sculpture",
+              "credits": "4",
+              "courseId": 17720,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53709"
+            },
+            {
+              "code": "ARTS 258",
+              "title": "Introduction to Ceramics",
+              "credits": "4",
+              "courseId": 17721,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53710"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTS 255",
+              "title": "Graphic Design 1: Process",
+              "credits": "4",
+              "courseId": 17718,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53707"
+            },
+            {
+              "code": "ARTS 300",
+              "title": "Intermediate Drawing",
+              "credits": "4",
+              "courseId": 17722,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53711"
+            },
+            {
+              "code": "ARTS 301",
+              "title": "Intermediate Painting",
+              "credits": "4",
+              "courseId": 17723,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53712"
+            },
+            {
+              "code": "ARTS 305",
+              "title": "Graphic Design 2: Structures",
+              "credits": "4",
+              "courseId": 17724,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53713"
+            },
+            {
+              "code": "ARTS 306",
+              "title": "Analogue Photography",
+              "credits": "4",
+              "courseId": 17725,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53714"
+            },
+            {
+              "code": "ARTS 307",
+              "title": "Intermediate Sculpture",
+              "credits": "4",
+              "courseId": 17726,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53715"
+            },
+            {
+              "code": "ARTS 308",
+              "title": "Intermediate Ceramics",
+              "credits": "4",
+              "courseId": 17727,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53716"
+            },
+            {
+              "code": "ARTS 316",
+              "title": "Digital Photography",
+              "credits": "4",
+              "courseId": 17728,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53717"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTS 350",
+              "title": "Advanced Drawing",
+              "credits": "4",
+              "courseId": 17729,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53718"
+            },
+            {
+              "code": "ARTS 351",
+              "title": "Advanced Painting",
+              "credits": "4",
+              "courseId": 17730,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53719"
+            },
+            {
+              "code": "ARTS 355",
+              "title": "Graphic Design 3: Systems",
+              "credits": "4",
+              "courseId": 17731,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53720"
+            },
+            {
+              "code": "ARTS 356",
+              "title": "Advanced Photography",
+              "credits": "4",
+              "courseId": 17732,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53721"
+            },
+            {
+              "code": "ARTS 357",
+              "title": "Advanced Sculpture",
+              "credits": "4",
+              "courseId": 17733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53722"
+            },
+            {
+              "code": "ARTS 358",
+              "title": "Advanced Ceramics",
+              "credits": "4",
+              "courseId": 17734,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53723"
+            },
+            {
+              "code": "ARTS 365",
+              "title": "Graphic Design 4: Portfolio",
+              "credits": "4",
+              "courseId": 21561,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54605"
+            },
+            {
+              "code": "ARTS 375",
+              "title": "Graphic Design 5: Thesis / Special Topics",
+              "credits": "4",
+              "courseId": 21562,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54606"
+            },
+            {
+              "code": "ARTS 380",
+              "title": "Internship in Graphic Design",
+              "credits": "2, 4",
+              "courseId": 17735,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53724"
+            },
+            {
+              "code": "ARTS 385",
+              "title": "Internship in Visual Studies",
+              "credits": "4",
+              "courseId": 17736,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53725"
+            },
+            {
+              "code": "ARTS 390",
+              "title": "Independent Study in Studio Art",
+              "credits": "4",
+              "courseId": 17737,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53726"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTH 121",
+              "title": "Late Medieval Art, 1250-1400",
+              "credits": "2",
+              "courseId": 22278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54765"
+            },
+            {
+              "code": "ARTH 131",
+              "title": "Renaissance and Baroque Europe, 1400-1700",
+              "credits": "2",
+              "courseId": 22279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54766"
+            },
+            {
+              "code": "ARTH 133",
+              "title": "18th- and 19th-Century European Art",
+              "credits": "2",
+              "courseId": 22589,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54885"
+            },
+            {
+              "code": "ARTH 141",
+              "title": "Modern Art, 1900-1960",
+              "credits": "2",
+              "courseId": 22280,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54767"
+            },
+            {
+              "code": "ARTH 151",
+              "title": "Contemporary Art, 1960-2020",
+              "credits": "2",
+              "courseId": 22281,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54768"
+            },
+            {
+              "code": "ARTH 221",
+              "title": "History of Design",
+              "credits": "2",
+              "courseId": 22282,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54769"
+            },
+            {
+              "code": "ARTH 241",
+              "title": "Chinese Art History",
+              "credits": "2",
+              "courseId": 17714,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53703"
+            },
+            {
+              "code": "ARTH 243",
+              "title": "Japanese Art History",
+              "credits": "2",
+              "courseId": 22590,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54886"
+            },
+            {
+              "code": "ARTH 320",
+              "title": "Classical Architecture from Antiquity to Now",
+              "credits": "4",
+              "courseId": 22284,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54771"
+            },
+            {
+              "code": "ARTH 330",
+              "title": "Art and Fashion",
+              "credits": "4",
+              "courseId": 22283,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54770"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 42",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

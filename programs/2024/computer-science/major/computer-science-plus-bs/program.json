@@ -1,0 +1,368 @@
+{
+  "id": "computer-science-plus-bs",
+  "name": "Computer Science Plus, BS",
+  "code": "CS.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 754,
+    "name": "Computer Science"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13212",
+  "description": "The computer science plus is intended for the student whose primary interest is in computer science but who wishes to apply computation to other academic areas (e.g., business, mathematics, language, or philosophy). It is a full bachelor of science (BS) degree in computer science that shares most of its courses with the BCS degree, but it also provides flexibility by requiring fewer courses.",
+  "totalHours": "63-66",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "A minimum grade of C (2.0) is needed in CS 212, CS 214, CS 232, or CS 262 for admission to this concentration. CS Plus majors are strongly encouraged to pursue an internship or a senior project that combines their interests in CS and their domain area.",
+      "courses": [
+        {
+          "code": "CS 108",
+          "title": "Introduction to Computing",
+          "credits": "3",
+          "courseId": 18264,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+        },
+        {
+          "code": "CS 112",
+          "title": "Introduction to Data Structures",
+          "credits": "3",
+          "courseId": 18265,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+        },
+        {
+          "code": "CS 195",
+          "title": "Introductory Computing Seminar",
+          "credits": "0",
+          "courseId": 18266,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53856"
+        },
+        {
+          "code": "CS 212",
+          "title": "Data Structures and Algorithms",
+          "credits": "4",
+          "courseId": 18267,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+        },
+        {
+          "code": "CS 214",
+          "title": "Programming Language Concepts",
+          "credits": "4",
+          "courseId": 18268,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53858"
+        },
+        {
+          "code": "CS 232",
+          "title": "Operating Systems and Networking",
+          "credits": "4",
+          "courseId": 18269,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53859"
+        },
+        {
+          "code": "CS 262",
+          "title": "Software Engineering",
+          "credits": "4",
+          "courseId": 18270,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53860"
+        },
+        {
+          "code": "CS 295",
+          "title": "Computing Seminar",
+          "credits": "0",
+          "courseId": 18271,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53861"
+        },
+        {
+          "code": "CS 384",
+          "title": "Perspectives on Computing",
+          "credits": "4",
+          "courseId": 18280,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53870"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CS 108",
+          "placement": "right",
+          "text": "(preferred)"
+        },
+        {
+          "course": "CS 108",
+          "placement": "after",
+          "text": "OR CS 106 - Introduction to Scientific Computation and Modeling"
+        },
+        {
+          "course": "CS 195",
+          "placement": "right",
+          "text": "(take 3 semesters)"
+        },
+        {
+          "course": "CS 295",
+          "placement": "right",
+          "text": "(take 3 semesters)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 383",
+              "title": "External Practicum",
+              "credits": "1",
+              "courseId": 21950,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54618"
+            },
+            {
+              "code": "CS 396",
+              "title": "Senior Project in Computing",
+              "credits": "2",
+              "courseId": 18282,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53872"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CS 396",
+              "placement": "after",
+              "text": "AND CS 398 - Senior Project in Computing II"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": "Students may count multiple sections of CS 300 as different advanced electives in their computer science programs, if those sections address different topics.",
+          "courses": [
+            {
+              "code": "CS 300",
+              "title": "Special Topics in Computer Science",
+              "credits": "2, 4",
+              "courseId": 18272,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53862"
+            },
+            {
+              "code": "CS 312",
+              "title": "Logic, Computability, and Complexity",
+              "credits": "4",
+              "courseId": 18273,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53863"
+            },
+            {
+              "code": "CS 320",
+              "title": "Advanced Computer Architecture",
+              "credits": "2",
+              "courseId": 18274,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53864"
+            },
+            {
+              "code": "CS 326",
+              "title": "Embedded Systems and the Internet of Things",
+              "credits": "4",
+              "courseId": 21551,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54595"
+            },
+            {
+              "code": "CS 332",
+              "title": "Advanced Computer Networks",
+              "credits": "2",
+              "courseId": 18275,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53865"
+            },
+            {
+              "code": "CS 336",
+              "title": "Web Development",
+              "credits": "4",
+              "courseId": 21048,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54491"
+            },
+            {
+              "code": "CS 338",
+              "title": "System Administration: Infrastructure",
+              "credits": "2",
+              "courseId": 21049,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54492"
+            },
+            {
+              "code": "CS 339",
+              "title": "System Administration: Cloud Services",
+              "credits": "2",
+              "courseId": 22582,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54878"
+            },
+            {
+              "code": "CS 354",
+              "title": "Database Management Systems",
+              "credits": "2",
+              "courseId": 18276,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53866"
+            },
+            {
+              "code": "CS 375",
+              "title": "Artificial Intelligence",
+              "credits": "2",
+              "courseId": 22597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54894"
+            },
+            {
+              "code": "CS 376",
+              "title": "Machine Learning",
+              "credits": "2",
+              "courseId": 22583,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54879"
+            },
+            {
+              "code": "CS 372",
+              "title": "Computer Graphics",
+              "credits": "2",
+              "courseId": 18277,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53867"
+            },
+            {
+              "code": "CS 364",
+              "title": "Computer Security",
+              "credits": "4",
+              "courseId": 18278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53868"
+            },
+            {
+              "code": "CS 374",
+              "title": "High Performance Computing",
+              "credits": "2",
+              "courseId": 18279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53869"
+            },
+            {
+              "code": "ENGR 304",
+              "title": "Fundamentals of Digital Systems",
+              "credits": "3",
+              "courseId": 18758,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53946"
+            },
+            {
+              "code": "ENGR 325",
+              "title": "Computer Architecture and Digital Systems Design",
+              "credits": "3",
+              "courseId": 18773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53961"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGR 220",
+              "title": "Introduction to Computer Architecture",
+              "credits": "3",
+              "courseId": 18755,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53943"
+            },
+            {
+              "code": "MATH 171",
+              "title": "Calculus I",
+              "credits": "4",
+              "courseId": 19809,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+            },
+            {
+              "code": "MATH 251",
+              "title": "Discrete Mathematics I",
+              "credits": "2",
+              "courseId": 21061,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54504"
+            },
+            {
+              "code": "MATH 252",
+              "title": "Discrete Mathematics II",
+              "credits": "2",
+              "courseId": 21063,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54506"
+            }
+          ],
+          "notes": [
+            {
+              "course": "MATH 171",
+              "placement": "right",
+              "text": "(preferred)"
+            },
+            {
+              "course": "MATH 171",
+              "placement": "after",
+              "text": "OR MATH 132 - Calculus for Management, Life, and Social Sciences"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "STAT 143",
+                  "title": "Introduction to Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21008,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+                },
+                {
+                  "code": "STAT 145",
+                  "title": "Biostatistics",
+                  "credits": "4",
+                  "courseId": 21009,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+                },
+                {
+                  "code": "STAT 243",
+                  "title": "Statistics",
+                  "credits": "4",
+                  "courseId": 21011,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+                },
+                {
+                  "code": "PSYC 255",
+                  "title": "Statistics and Research Design",
+                  "credits": "4",
+                  "courseId": 20259,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "STAT 243",
+                  "placement": "right",
+                  "text": "(preferred)"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Plus Domain Study",
+          "description": "an additional 12 hours of study from the same department (or forming a cohesive body of study, with departmental approval), at least 2 of which must be at the 300 level",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 63-66",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

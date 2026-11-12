@@ -1,0 +1,276 @@
+{
+  "id": "nursing-bsn",
+  "name": "Nursing, BSN",
+  "code": "NURS.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science in Nursing"
+  ],
+  "department": {
+    "id": 366,
+    "name": "Nursing"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13698",
+  "description": "The formal requirements for a Calvin University BSN include successful completion of 120 semester hours, completion of the designated program of study and the designated Core, and a minimum grade point average of 2.0 both overall and in the program of concentration. Pre-nursing Curriculum Prior to beginning the BSN program, students must complete nine courses, obtaining a combined minimum GPA of 2.8 (in addition to an overall minimum GPA of 2.8). Students must earn a minimum grade of a C in each course, including any corequisite labs. A course may be repeated only once, a course may be withdrawn from only once, and no more than two courses may be repeated. Courses taken at another institution and transferred must have a grade of at least a B.",
+  "totalHours": "60",
+  "requirements": [
+    {
+      "name": "Pre-nursing Curriculum",
+      "description": "(34 semester hours. Some courses fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 7834,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 7837,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 7838,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55853"
+        },
+        {
+          "code": "BIOL 207",
+          "title": "Medical Microbiology",
+          "credits": "3",
+          "courseId": 7839,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55854"
+        },
+        {
+          "code": "CHEM 160",
+          "title": "Chemistry for the Health Sciences",
+          "credits": "3",
+          "courseId": 7919,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55933"
+        },
+        {
+          "code": "HE 254",
+          "title": "Nutrition",
+          "credits": "2",
+          "courseId": 8431,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56149"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 108",
+          "title": "Fundamentals of Patient Care",
+          "credits": "2",
+          "courseId": 11758,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57109"
+        },
+        {
+          "code": "NURS 201",
+          "title": "Theory: Introduction to Professional Nursing",
+          "credits": "2",
+          "courseId": 11759,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57110"
+        },
+        {
+          "code": "NURS 205",
+          "title": "Nursing Lab",
+          "credits": "1",
+          "courseId": 11760,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57111"
+        },
+        {
+          "code": "NURS 301",
+          "title": "Theory: Developing Professional Nursing Practice",
+          "credits": "4",
+          "courseId": 11761,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57112"
+        },
+        {
+          "code": "NURS 302",
+          "title": "Practicum: Community-Based Nursing",
+          "credits": "2",
+          "courseId": 11762,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57113"
+        },
+        {
+          "code": "NURS 303",
+          "title": "Theory: Mental Health Nursing",
+          "credits": "4",
+          "courseId": 12063,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57114"
+        },
+        {
+          "code": "NURS 304",
+          "title": "Practicum: Mental Health Nursing",
+          "credits": "2",
+          "courseId": 12066,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57115"
+        },
+        {
+          "code": "NURS 305",
+          "title": "Lab, Sim, and Clinical Reasoning Sem: Comm & Mental Health",
+          "credits": "2",
+          "courseId": 12067,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57116"
+        },
+        {
+          "code": "NURS 321",
+          "title": "Theory: Nursing Care of Pregnant Women and Newborns",
+          "credits": "4",
+          "courseId": 12068,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57117"
+        },
+        {
+          "code": "NURS 322",
+          "title": "Practicum: Nursing Care of Pregnant Women and Newborns",
+          "credits": "2",
+          "courseId": 12069,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57118"
+        },
+        {
+          "code": "NURS 323",
+          "title": "Theory: Nursing Care of Children",
+          "credits": "4",
+          "courseId": 12070,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57119"
+        },
+        {
+          "code": "NURS 324",
+          "title": "Practicum: Nursing Care of Children",
+          "credits": "2",
+          "courseId": 12071,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57120"
+        },
+        {
+          "code": "NURS 325",
+          "title": "Lab, Sim, and Clinical Reasoning Sem: Care of PWI & Children",
+          "credits": "2",
+          "courseId": 12081,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57130"
+        },
+        {
+          "code": "NURS 351",
+          "title": "Theory: Nursing Care of Adults",
+          "credits": "4",
+          "courseId": 12072,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57121"
+        },
+        {
+          "code": "NURS 352",
+          "title": "Practicum: Nursing Care of Adults",
+          "credits": "4",
+          "courseId": 12074,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57123"
+        },
+        {
+          "code": "NURS 353",
+          "title": "Theory: Nursing Care of Complex Adults",
+          "credits": "4",
+          "courseId": 12073,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57122"
+        },
+        {
+          "code": "NURS 355",
+          "title": "Lab, Sim, and Clinical Reasoning Sem: Adults",
+          "credits": "2",
+          "courseId": 12075,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57124"
+        },
+        {
+          "code": "NURS 371",
+          "title": "Theory: Public Health Nursing",
+          "credits": "2",
+          "courseId": 12076,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57125"
+        },
+        {
+          "code": "NURS 372",
+          "title": "Practicum: Public Health Nursing",
+          "credits": "2",
+          "courseId": 12077,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57126"
+        },
+        {
+          "code": "NURS 373",
+          "title": "Theory: Leadership and Management in Nursing",
+          "credits": "2",
+          "courseId": 12078,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57127"
+        },
+        {
+          "code": "NURS 374",
+          "title": "Practicum: Leadership and Management in Nursing",
+          "credits": "2",
+          "courseId": 12079,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57128"
+        },
+        {
+          "code": "NURS 375",
+          "title": "Sim and Clinical Reasoning Sem: Individuals and Populations",
+          "credits": "2",
+          "courseId": 12080,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57129"
+        },
+        {
+          "code": "NURS 380",
+          "title": "Critical Reflections on Health",
+          "credits": "4",
+          "courseId": 8667,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56289"
+        }
+      ],
+      "notes": [
+        {
+          "course": "IDIS 108",
+          "placement": "right",
+          "text": "*"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 60",
+      "description": "* Waived for students who have patient-care experience, reducing the program size to 59 semester hours.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

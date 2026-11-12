@@ -1,0 +1,198 @@
+{
+  "id": "speech-language-pathology-ma",
+  "name": "Speech-Language Pathology, MA",
+  "code": "SPATH.MAJ",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Arts"
+  ],
+  "department": {
+    "id": 813,
+    "name": "Speech Pathology and Audiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13083",
+  "description": "The MA in speech-language pathology is an entry-level degree to practice as a speech-language pathologist. The MA in speech-language pathology program offers two different modalities: the residential (on-campus) mode and the distance education mode. Students enrolled in either one or the other should register for the classes offered for their modality, either on-campus for the residential modality or online for the distance education modality. Residential modality students will not be allowed to take a class online without permission from the program director. Students who have registered for a course in the other modality will be automatically un-enrolled from the course at such time that their enrollment is discovered, which may delay completion of the course, loss of tuition, and a delay in clinical placements or even graduation. Residential modality students are expected to attend classes in person as scheduled. Students in the residential mode are expected to complete the program in two years. The distance-education mode allows students to complete the program in a two-year or three-year track. The three-year track is strongly recommended for most students due to their non-academic time commitments.",
+  "totalHours": "72-76",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SPAUD 502",
+          "title": "Counseling in Speech-Language Pathology",
+          "credits": "2",
+          "courseId": 22881,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55781"
+        },
+        {
+          "code": "SPAUD 503",
+          "title": "Child Language Disorders I: Infants, Toddlers, and Preschool Children",
+          "credits": "4",
+          "courseId": 20984,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54423"
+        },
+        {
+          "code": "SPAUD 504",
+          "title": "Language Disorders II: School-Age Children",
+          "credits": "4",
+          "courseId": 20985,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54424"
+        },
+        {
+          "code": "SPAUD 505",
+          "title": "Research Methods in Speech-Language Pathology",
+          "credits": "4",
+          "courseId": 20986,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54425"
+        },
+        {
+          "code": "SPAUD 506",
+          "title": "Aphasia",
+          "credits": "4",
+          "courseId": 20987,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54426"
+        },
+        {
+          "code": "SPAUD 508",
+          "title": "Speech Sound Disorders",
+          "credits": "4",
+          "courseId": 20988,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54427"
+        },
+        {
+          "code": "SPAUD 510",
+          "title": "Fluency Disorders",
+          "credits": "2",
+          "courseId": 20989,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54428"
+        },
+        {
+          "code": "SPAUD 512",
+          "title": "Augmentative and Alternative Communication",
+          "credits": "2",
+          "courseId": 20990,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54429"
+        },
+        {
+          "code": "SPAUD 514",
+          "title": "Autism Spectrum Disorder",
+          "credits": "2",
+          "courseId": 21549,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54593"
+        },
+        {
+          "code": "SPAUD 515",
+          "title": "Seminar in Speech-Language Pathology",
+          "credits": "2",
+          "courseId": 20991,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54430"
+        },
+        {
+          "code": "SPAUD 519",
+          "title": "Aural Rehabilitation",
+          "credits": "4",
+          "courseId": 22882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55782"
+        },
+        {
+          "code": "SPAUD 520",
+          "title": "Motor Speech Disorders",
+          "credits": "4",
+          "courseId": 20992,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54431"
+        },
+        {
+          "code": "SPAUD 521",
+          "title": "Voice and Voice Disorders",
+          "credits": "4",
+          "courseId": 20993,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54432"
+        },
+        {
+          "code": "SPAUD 522",
+          "title": "Cognitive Communication Disorders",
+          "credits": "4",
+          "courseId": 20994,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54433"
+        },
+        {
+          "code": "SPAUD 523",
+          "title": "Dysphagia",
+          "credits": "4",
+          "courseId": 20995,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54434"
+        },
+        {
+          "code": "SPAUD 524",
+          "title": "Cleft and Craniofacial Disorders",
+          "credits": "2",
+          "courseId": 20996,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54435"
+        },
+        {
+          "code": "SPAUD 530",
+          "title": "Clinical Practicum: Clinic 1",
+          "credits": "2",
+          "courseId": 20997,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54436"
+        },
+        {
+          "code": "SPAUD 531",
+          "title": "Clinical Practicum: Clinic 2",
+          "credits": "2",
+          "courseId": 20998,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54437"
+        },
+        {
+          "code": "SPAUD 532",
+          "title": "Clinical Practicum: Clinic 3",
+          "credits": "4",
+          "courseId": 20999,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54438"
+        },
+        {
+          "code": "SPAUD 540",
+          "title": "Clinical Practicum: Externship 1",
+          "credits": "6",
+          "courseId": 21000,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54439"
+        },
+        {
+          "code": "SPAUD 541",
+          "title": "Clinical Practicum: Externship 2",
+          "credits": "6",
+          "courseId": 21001,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54440"
+        },
+        {
+          "code": "SPAUD 595",
+          "title": "Thesis",
+          "credits": "1",
+          "courseId": 21002,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54442"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SPAUD 595",
+          "placement": "right",
+          "text": "(optional)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 72-76",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

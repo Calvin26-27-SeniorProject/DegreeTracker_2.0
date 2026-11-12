@@ -1,0 +1,130 @@
+{
+  "id": "recreation-leadership-minor",
+  "name": "Recreation Leadership Minor",
+  "code": "RECR.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 773,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13156",
+  "description": "All students interested in developing their abilities to lead, facilitate, program, instruct, and manage risk are encouraged to complete a minor in recreation leadership Studies during their time at Calvin University. Students selecting the recreation leadership minor will experience the Calvin campus as a learning lab. Along with on-campus courses, students travel well beyond the traditional classroom setting, exploring the rich and powerful experiential context of national and global field courses, community based internships, adventure programming, and/or wilderness-based learning contexts. Recreation leadership minors will develop proficiency in a highly transferable leader skill sets; group facilitation, instruction, programming, risk management, development of teams, management of group dynamics, conflict management and resolution, and development of individual self-efficacy. The recreation leadership minor exists to empower Calvin students to Develop a philosophy of leadership based in virtue ethics and distinct Christian perspectives; understand the transformative impact of good leadership in the lives of individuals and groups; create a servant leadership disposition centered in stewardship, empathy, and individual development; cultivate a signature style of leading that capitalizes on assets and strengths and develops liabilities; be a part of collaborative leadership projects that bring curriculum to life, through real-world projects; build and test leader-craft through leader roles in outcomes-based opportunities and programs; and build leadership efficacy; competence and confidence, though complex skill acquisition.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 346",
+          "title": "Field Internship",
+          "credits": "3",
+          "courseId": 19797,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54123"
+        },
+        {
+          "code": "RECR 203",
+          "title": "Leadership in Recreation Programs",
+          "credits": "4",
+          "courseId": 20580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54319"
+        },
+        {
+          "code": "RECR 305",
+          "title": "Program Planning and Development",
+          "credits": "4",
+          "courseId": 20582,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54321"
+        },
+        {
+          "code": "RECR 312",
+          "title": "Special Topics in Recreation and Leisure Studies",
+          "credits": "2",
+          "courseId": 20584,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54323"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 5 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENST 302",
+              "title": "Environmental Law",
+              "credits": "2",
+              "courseId": 18792,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+            },
+            {
+              "code": "KIN 241",
+              "title": "Muscular Fitness Assessment, Prescription, and Leadership",
+              "credits": "2",
+              "courseId": 19788,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54114"
+            },
+            {
+              "code": "PER 112",
+              "title": "Special Topics in Personal Fitness",
+              "credits": "1",
+              "courseId": 19870,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54209"
+            },
+            {
+              "code": "PER 138",
+              "title": "Backpacking I",
+              "credits": "1",
+              "courseId": 21477,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54520"
+            },
+            {
+              "code": "PER 142",
+              "title": "Rock Climbing II",
+              "credits": "1",
+              "courseId": 20177,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54216"
+            },
+            {
+              "code": "PER 143",
+              "title": "Paddling",
+              "credits": "1",
+              "courseId": 20178,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54217"
+            },
+            {
+              "code": "RECR 310",
+              "title": "Theory and Philosophy of Therapeutic Recreation",
+              "credits": "4",
+              "courseId": 20583,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54322"
+            }
+          ],
+          "notes": [
+            {
+              "course": "RECR 310",
+              "placement": "after",
+              "text": "up to two additional approved field courses (may include PER 140, which may be taken twice)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

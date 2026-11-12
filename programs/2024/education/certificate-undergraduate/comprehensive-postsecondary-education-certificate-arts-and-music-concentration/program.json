@@ -1,0 +1,425 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-arts-and-music-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Arts and Music Concentration",
+  "code": "CERT.ART",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13254",
+  "description": "Students pursuing an Arts and Music concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements and Ready for Life core requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ART 153",
+          "title": "Visual Culture",
+          "credits": "2",
+          "courseId": 17710,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53699"
+        },
+        {
+          "code": "MUSC 103",
+          "title": "Understanding and Enjoying Music",
+          "credits": "2",
+          "courseId": 19834,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54160"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ARTH 121",
+              "title": "Late Medieval Art, 1250-1400",
+              "credits": "2",
+              "courseId": 22278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54765"
+            },
+            {
+              "code": "ARTH 131",
+              "title": "Renaissance and Baroque Europe, 1400-1700",
+              "credits": "2",
+              "courseId": 22279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54766"
+            },
+            {
+              "code": "ARTH 141",
+              "title": "Modern Art, 1900-1960",
+              "credits": "2",
+              "courseId": 22280,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54767"
+            },
+            {
+              "code": "ARTH 221",
+              "title": "History of Design",
+              "credits": "2",
+              "courseId": 22282,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54769"
+            },
+            {
+              "code": "ARTS 250",
+              "title": "Introduction to Drawing",
+              "credits": "4",
+              "courseId": 17715,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53704"
+            },
+            {
+              "code": "ARTS 251",
+              "title": "Introduction to Painting",
+              "credits": "4",
+              "courseId": 17716,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53705"
+            },
+            {
+              "code": "ARTS 254",
+              "title": "Introduction to Graphic Design",
+              "credits": "4",
+              "courseId": 21560,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54604"
+            },
+            {
+              "code": "ARTS 255",
+              "title": "Graphic Design 1: Process",
+              "credits": "4",
+              "courseId": 17718,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53707"
+            },
+            {
+              "code": "ARTS 256",
+              "title": "Introduction to Photography",
+              "credits": "4",
+              "courseId": 17719,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53708"
+            },
+            {
+              "code": "ARTS 257",
+              "title": "Introduction to Sculpture",
+              "credits": "4",
+              "courseId": 17720,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53709"
+            },
+            {
+              "code": "ARTS 258",
+              "title": "Introduction to Ceramics",
+              "credits": "4",
+              "courseId": 17721,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53710"
+            },
+            {
+              "code": "ARTS 300",
+              "title": "Intermediate Drawing",
+              "credits": "4",
+              "courseId": 17722,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53711"
+            },
+            {
+              "code": "ARTS 301",
+              "title": "Intermediate Painting",
+              "credits": "4",
+              "courseId": 17723,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53712"
+            },
+            {
+              "code": "ARTS 305",
+              "title": "Graphic Design 2: Structures",
+              "credits": "4",
+              "courseId": 17724,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53713"
+            },
+            {
+              "code": "ARTS 306",
+              "title": "Analogue Photography",
+              "credits": "4",
+              "courseId": 17725,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53714"
+            },
+            {
+              "code": "ARTS 307",
+              "title": "Intermediate Sculpture",
+              "credits": "4",
+              "courseId": 17726,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53715"
+            },
+            {
+              "code": "ARTS 308",
+              "title": "Intermediate Ceramics",
+              "credits": "4",
+              "courseId": 17727,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53716"
+            },
+            {
+              "code": "ARTS 316",
+              "title": "Digital Photography",
+              "credits": "4",
+              "courseId": 17728,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53717"
+            },
+            {
+              "code": "ARTS 350",
+              "title": "Advanced Drawing",
+              "credits": "4",
+              "courseId": 17729,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53718"
+            },
+            {
+              "code": "ARTS 351",
+              "title": "Advanced Painting",
+              "credits": "4",
+              "courseId": 17730,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53719"
+            },
+            {
+              "code": "ARTS 355",
+              "title": "Graphic Design 3: Systems",
+              "credits": "4",
+              "courseId": 17731,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53720"
+            },
+            {
+              "code": "ARTS 356",
+              "title": "Advanced Photography",
+              "credits": "4",
+              "courseId": 17732,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53721"
+            },
+            {
+              "code": "ARTS 357",
+              "title": "Advanced Sculpture",
+              "credits": "4",
+              "courseId": 17733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53722"
+            },
+            {
+              "code": "ARTS 358",
+              "title": "Advanced Ceramics",
+              "credits": "4",
+              "courseId": 17734,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53723"
+            },
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 21484,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54528"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 17709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 22871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55771"
+            },
+            {
+              "code": "COMM 141",
+              "title": "Visual Rhetoric",
+              "credits": "2",
+              "courseId": 18201,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53791"
+            },
+            {
+              "code": "COMM 145",
+              "title": "Introduction to Film and Media",
+              "credits": "4",
+              "courseId": 18202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53792"
+            },
+            {
+              "code": "CS 100",
+              "title": "Creating Interactive Web Media",
+              "credits": "4",
+              "courseId": 18261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53851"
+            },
+            {
+              "code": "EDUC 103",
+              "title": "Introduction to Education",
+              "credits": "2",
+              "courseId": 18711,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53899"
+            },
+            {
+              "code": "EDUC 210",
+              "title": "Music and Art in the Elementary Classroom",
+              "credits": "2",
+              "courseId": 18712,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53900"
+            },
+            {
+              "code": "ENGL 200",
+              "title": "Introduction to Global Literature",
+              "credits": "4",
+              "courseId": 21987,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54674"
+            },
+            {
+              "code": "ENGL 220",
+              "title": "Introduction to American Literature",
+              "credits": "4",
+              "courseId": 21991,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54678"
+            },
+            {
+              "code": "ENGL 260",
+              "title": "The Craft of Writing",
+              "credits": "4",
+              "courseId": 18731,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53919"
+            },
+            {
+              "code": "ENGL 325",
+              "title": "Advanced Studies in Children's and Adolescent Literature",
+              "credits": "4",
+              "courseId": 21997,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54684"
+            },
+            {
+              "code": "ENGL 360",
+              "title": "Creative Writing: Nonfiction",
+              "credits": "4",
+              "courseId": 18738,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53926"
+            },
+            {
+              "code": "MUSC 100",
+              "title": "Music Theory Fundamentals in Global Context",
+              "credits": "2",
+              "courseId": 19833,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54159"
+            },
+            {
+              "code": "MUSC 106",
+              "title": "American Music",
+              "credits": "4",
+              "courseId": 19835,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54161"
+            },
+            {
+              "code": "MUSC 107",
+              "title": "World Music",
+              "credits": "4",
+              "courseId": 19836,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54162"
+            },
+            {
+              "code": "MUSC 108",
+              "title": "Harmony and Voice Leading",
+              "credits": "4",
+              "courseId": 19837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54163"
+            },
+            {
+              "code": "MUSC 131",
+              "title": "Campus Choir",
+              "credits": "1",
+              "courseId": 19840,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54166"
+            },
+            {
+              "code": "MUSC 182",
+              "title": "Gospel Choir",
+              "credits": "1",
+              "courseId": 19846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54172"
+            },
+            {
+              "code": "MUSC 203",
+              "title": "Popular Music",
+              "credits": "4",
+              "courseId": 19849,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54175"
+            },
+            {
+              "code": "MUSC 207",
+              "title": "Chromatic Harmony and Form",
+              "credits": "4",
+              "courseId": 19850,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54176"
+            },
+            {
+              "code": "MUSC 208",
+              "title": "Advanced Techniques in Music",
+              "credits": "2",
+              "courseId": 19851,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54177"
+            },
+            {
+              "code": "MUSC 236",
+              "title": "Music in Worship",
+              "credits": "2",
+              "courseId": 19854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54180"
+            },
+            {
+              "code": "MUSC 302",
+              "title": "Music and Global Society",
+              "credits": "4",
+              "courseId": 21512,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54556"
+            },
+            {
+              "code": "PER 140",
+              "title": "Special Topics: Lifetime and Leisure",
+              "credits": "1",
+              "courseId": 21494,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54538"
+            },
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            },
+            {
+              "code": "THTR 120",
+              "title": "Calvin Theatre Company",
+              "credits": "2",
+              "courseId": 18101,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53790"
+            },
+            {
+              "code": "THTR 203",
+              "title": "Introduction to Performance Studies",
+              "credits": "4",
+              "courseId": 18207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53797"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

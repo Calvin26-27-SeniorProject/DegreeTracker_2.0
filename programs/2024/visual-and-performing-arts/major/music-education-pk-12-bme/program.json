@@ -1,0 +1,335 @@
+{
+  "id": "music-education-pk-12-bme",
+  "name": "Music Education PK-12, BME",
+  "code": "BME_MUSC_PK12",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Music Education"
+  ],
+  "department": {
+    "id": 821,
+    "name": "Visual and Performing Arts"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13318",
+  "description": "This program prepares students to teach music in PK-12 school settings. Students take courses in music theory and musicianship, music technology, music literature and history, and music education. Students gain confidence as musicians by taking lessons in their principal area of performance, participating in a wide range of ensemble experiences, and presenting a recital. Music Education majors develop teaching skills in dedicated classes and in guided teaching experiences, including a full semester student teaching assignment. Throughout the program, students learn how Christian faith commitments and practices impact teaching and learning in the general music classroom as they also develop skills to build and lead instrumental and choral programs. For admission to the BME program, students must present an entrance audition and take a music theory test. (The music theory test is waived for students with transfer credit or a minimum score of 4 on the AP Music Theory exam.)",
+  "totalHours": "100",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Music and Music Education Courses",
+          "description": null,
+          "courses": [
+            {
+              "code": "MUSC 108",
+              "title": "Harmony and Voice Leading",
+              "credits": "4",
+              "courseId": 19837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54163"
+            },
+            {
+              "code": "MUSC 111",
+              "title": "Keyboard Musicianship I",
+              "credits": "1",
+              "courseId": 21507,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54551"
+            },
+            {
+              "code": "MUSC 112",
+              "title": "Keyboard Musicianship II",
+              "credits": "1",
+              "courseId": 21508,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54552"
+            },
+            {
+              "code": "MUSC 207",
+              "title": "Chromatic Harmony and Form",
+              "credits": "4",
+              "courseId": 19850,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54176"
+            },
+            {
+              "code": "MUSC 208",
+              "title": "Advanced Techniques in Music",
+              "credits": "2",
+              "courseId": 19851,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54177"
+            },
+            {
+              "code": "MUSC 213",
+              "title": "Aural Skills I",
+              "credits": "1",
+              "courseId": 21509,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54553"
+            },
+            {
+              "code": "MUSC 214",
+              "title": "Aural Skills II",
+              "credits": "1",
+              "courseId": 19852,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54178"
+            },
+            {
+              "code": "MUSC 225",
+              "title": "Music Technology",
+              "credits": "1",
+              "courseId": 21510,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54554"
+            },
+            {
+              "code": "MUSC 237",
+              "title": "Conducting",
+              "credits": "4",
+              "courseId": 19855,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54181"
+            },
+            {
+              "code": "MUSC 239",
+              "title": "Teaching General Music",
+              "credits": "2",
+              "courseId": 22758,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55031"
+            },
+            {
+              "code": "MUSC 260",
+              "title": "Private Lessons for Credit",
+              "credits": "1",
+              "courseId": 21502,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54546"
+            },
+            {
+              "code": "MUSC 270",
+              "title": "Half Recital",
+              "credits": "1",
+              "courseId": 21505,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54549"
+            },
+            {
+              "code": "MUSC 295",
+              "title": "String Methods",
+              "credits": "1",
+              "courseId": 22759,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55032"
+            },
+            {
+              "code": "MUSC 296",
+              "title": "Brass Methods",
+              "credits": "1",
+              "courseId": 22760,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55033"
+            },
+            {
+              "code": "MUSC 297",
+              "title": "Percussion Methods",
+              "credits": "1",
+              "courseId": 22761,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55034"
+            },
+            {
+              "code": "MUSC 298",
+              "title": "Woodwind Methods",
+              "credits": "1",
+              "courseId": 22762,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55035"
+            },
+            {
+              "code": "MUSC 301",
+              "title": "Western Music in Historical Context",
+              "credits": "4",
+              "courseId": 21511,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54555"
+            },
+            {
+              "code": "MUSC 302",
+              "title": "Music and Global Society",
+              "credits": "4",
+              "courseId": 21512,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54556"
+            },
+            {
+              "code": "MUSC 337",
+              "title": "Advanced Conducting",
+              "credits": "2",
+              "courseId": 19858,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54184"
+            },
+            {
+              "code": "MUSC 339",
+              "title": "Curriculum and Instruction in Music Education",
+              "credits": "2",
+              "courseId": 22763,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55036"
+            },
+            {
+              "code": "MUSC 341",
+              "title": "Vocal and Choral Techniques",
+              "credits": "2",
+              "courseId": 22764,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55037"
+            },
+            {
+              "code": "MUSC 351",
+              "title": "Teaching Choral Music",
+              "credits": "2",
+              "courseId": 22765,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55038"
+            },
+            {
+              "code": "MUSC 352",
+              "title": "Teaching Instrumental Music",
+              "credits": "2",
+              "courseId": 22766,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55039"
+            }
+          ],
+          "notes": [
+            {
+              "course": "MUSC 260",
+              "placement": "right",
+              "text": "(take seven semesters, in principal area)"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Music Ensemble Courses",
+          "description": "(Take seven semesters, depending on principal area.) Instrumentalists (woodwinds, brass, percussion, strings): choose from MUSC 151, MUSC 161, MUSC 171 Vocalists: choose from MUSC 131, MUSC 141, MUSC 191 Pianists, organists, and guitarists: choose from MUSC 131, MUSC 141, MUSC 151, MUSC 161, MUSC 171, MUSC 181, MUSC 191",
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take 2 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "MUSC 117",
+                  "title": "Jazz Band",
+                  "credits": "1",
+                  "courseId": 19838,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54164"
+                },
+                {
+                  "code": "MUSC 118",
+                  "title": "Collaborative Musicianship",
+                  "credits": "1",
+                  "courseId": 19839,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54165"
+                },
+                {
+                  "code": "MUSC 152",
+                  "title": "Marching Band",
+                  "credits": "1",
+                  "courseId": 22767,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55040"
+                },
+                {
+                  "code": "MUSC 182",
+                  "title": "Gospel Choir",
+                  "credits": "1",
+                  "courseId": 19846,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54172"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Professional Education Courses",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 103",
+              "title": "Introduction to Education",
+              "credits": "2",
+              "courseId": 18711,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53899"
+            },
+            {
+              "code": "EDUC 240",
+              "title": "The Social Context of Education",
+              "credits": "4",
+              "courseId": 22606,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54903"
+            },
+            {
+              "code": "EDUC 241",
+              "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+              "credits": "4",
+              "courseId": 22308,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+            },
+            {
+              "code": "EDUC 243",
+              "title": "Teaching and Learning Lab",
+              "credits": "2",
+              "courseId": 22607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54904"
+            },
+            {
+              "code": "EDUC 249",
+              "title": "The Christian Teacher",
+              "credits": "2",
+              "courseId": 22616,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54913"
+            },
+            {
+              "code": "EDUC 307",
+              "title": "Curriculum, Instruction, and Content Area Literacy",
+              "credits": "4",
+              "courseId": 18715,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53903"
+            },
+            {
+              "code": "EDUC 308",
+              "title": "Internship I",
+              "credits": "4",
+              "courseId": 22609,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54906"
+            },
+            {
+              "code": "EDUC 346",
+              "title": "Internship II: Student Teaching",
+              "credits": "12",
+              "courseId": 18724,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53912"
+            },
+            {
+              "code": "EDUC 359",
+              "title": "Student Teaching Seminar",
+              "credits": "4",
+              "courseId": 22614,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54911"
+            },
+            {
+              "code": "EDUC 399",
+              "title": "Philosophy of Education",
+              "credits": "2",
+              "courseId": 18727,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53915"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 100",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

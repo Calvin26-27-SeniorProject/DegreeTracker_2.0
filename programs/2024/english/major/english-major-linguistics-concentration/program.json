@@ -1,0 +1,129 @@
+{
+  "id": "english-major-linguistics-concentration",
+  "name": "English Major: Linguistics Concentration",
+  "code": "LING.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13164",
+  "description": "All English majors share a common foundation of coursework in linguistics, literature, and writing that effectively anchor learning in the integrated art, craft, and science of language. Students develop skills with which to engage story, practice interpretation, and experience the cultural and historical diversity of language and literature. Students choosing a linguistics concentration focus specifically on understanding how language works—from sounds to words to sentences—and on the ways language shapes and is shaped by culture; they have the opportunity to specialize in world languages, English as a second language, computer science, or speech pathology.",
+  "totalHours": "46",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 18731,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53919"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 18741,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53929"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 22000,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54687"
+        },
+        {
+          "code": "ENGL 380",
+          "title": "Internship",
+          "credits": "4",
+          "courseId": 18746,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53934"
+        },
+        {
+          "code": "ENGL 395",
+          "title": "Senior Seminar",
+          "credits": "4",
+          "courseId": 18748,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53936"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "OR ENGL 390 - Independent Study OR HNRS 399 - Honors Thesis"
+        }
+      ],
+      "children": [
+        {
+          "name": "Linguistics Concentration",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 275",
+              "title": "English Syntax",
+              "credits": "4",
+              "courseId": 18745,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53933"
+            },
+            {
+              "code": "ENGL 371",
+              "title": "History of the English Language",
+              "credits": "4",
+              "courseId": 18742,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53930"
+            },
+            {
+              "code": "ENGL 372",
+              "title": "Sociolinguistics and Issues in Language Education",
+              "credits": "4",
+              "courseId": 18743,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53931"
+            },
+            {
+              "code": "ENGL 373",
+              "title": "Stylistics and Discourse Analysis",
+              "credits": "4",
+              "courseId": 18744,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53932"
+            },
+            {
+              "code": "SPAUD 216",
+              "title": "Phonetics",
+              "credits": "3",
+              "courseId": 20977,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54416"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SPAUD 216",
+              "placement": "after",
+              "text": "an additional 6 hours of advisor-approved electives from world languages, TESOL, computer science, SPAUD, or English"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 46",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

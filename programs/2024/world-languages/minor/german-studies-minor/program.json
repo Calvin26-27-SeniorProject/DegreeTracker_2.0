@@ -1,0 +1,96 @@
+{
+  "id": "german-studies-minor",
+  "name": "German Studies Minor",
+  "code": "GRMST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13179",
+  "description": "Students majoring in engineering may count ENGR 387 - International Engineering Internship toward a German minor when that internship takes place in a German-speaking region or country.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GERM 301",
+          "title": "Advanced German Language and Culture",
+          "credits": "4",
+          "courseId": 19247,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54035"
+        },
+        {
+          "code": "GERM 302",
+          "title": "German Cultures and Intercultural Studies",
+          "credits": "4",
+          "courseId": 19248,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54036"
+        },
+        {
+          "code": "GERM 303",
+          "title": "Topics in German Literature",
+          "credits": "4",
+          "courseId": 19249,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54037"
+        },
+        {
+          "code": "GERM 320",
+          "title": "German Studies Abroad",
+          "credits": "4",
+          "courseId": 22259,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54746"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "GERM 202",
+              "title": "Intermediate German II",
+              "credits": "4",
+              "courseId": 19246,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54034"
+            },
+            {
+              "code": "GERM 310",
+              "title": "Advanced German Culture II",
+              "credits": "4",
+              "courseId": 22598,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54895"
+            },
+            {
+              "code": "GERM 381",
+              "title": "Special Topics",
+              "credits": "1-4",
+              "courseId": 19250,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54038"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

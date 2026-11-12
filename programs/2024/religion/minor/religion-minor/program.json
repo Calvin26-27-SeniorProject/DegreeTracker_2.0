@@ -1,0 +1,320 @@
+{
+  "id": "religion-minor",
+  "name": "Religion Minor",
+  "code": "REL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 804,
+    "name": "Religion"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13094",
+  "description": "The religion minor is for students who seek to develop a biblical and theological perspective for work in other disciplines and for Christian service.",
+  "totalHours": "22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "REL 121",
+          "title": "Biblical Literature and Theology",
+          "credits": "4",
+          "courseId": 20592,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54331"
+        }
+      ],
+      "notes": [
+        {
+          "course": "REL 121",
+          "placement": "after",
+          "text": "OR REL 131 - Christian Theology"
+        },
+        {
+          "course": "REL 121",
+          "placement": "after",
+          "text": "in addition to the courses below, 2 hours of electives (excluding REL 121 and REL 131)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "Biblical Studies",
+          "courses": [
+            {
+              "code": "REL 211",
+              "title": "From Creation to Promised Land",
+              "credits": "2",
+              "courseId": 20594,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54333"
+            },
+            {
+              "code": "REL 212",
+              "title": "From Conquest to Exile",
+              "credits": "2",
+              "courseId": 20595,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54334"
+            },
+            {
+              "code": "REL 213",
+              "title": "Psalms and Wisdom Literature",
+              "credits": "4",
+              "courseId": 20596,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54335"
+            },
+            {
+              "code": "REL 214",
+              "title": "Prophets",
+              "credits": "4",
+              "courseId": 20597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54336"
+            },
+            {
+              "code": "REL 221",
+              "title": "Jesus in the Gospels and Acts",
+              "credits": "2",
+              "courseId": 20598,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54337"
+            },
+            {
+              "code": "REL 222",
+              "title": "The Gospel and Letters of John",
+              "credits": "2",
+              "courseId": 20599,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54338"
+            },
+            {
+              "code": "REL 223",
+              "title": "Paul's Letters",
+              "credits": "4",
+              "courseId": 20600,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54339"
+            },
+            {
+              "code": "REL 224",
+              "title": "Revelation and General Letters",
+              "credits": "4",
+              "courseId": 20601,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54340"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "Theological Studies",
+          "courses": [
+            {
+              "code": "REL 230",
+              "title": "Revelation and Knowledge of God",
+              "credits": "4",
+              "courseId": 20602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54341"
+            },
+            {
+              "code": "REL 231",
+              "title": "The Triune God",
+              "credits": "4",
+              "courseId": 20603,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54342"
+            },
+            {
+              "code": "REL 232",
+              "title": "Creation and Humanity",
+              "credits": "4",
+              "courseId": 20604,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54343"
+            },
+            {
+              "code": "REL 233",
+              "title": "Christ and Reconciliation",
+              "credits": "4",
+              "courseId": 20605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54344"
+            },
+            {
+              "code": "REL 234",
+              "title": "Holy Spirit and Church",
+              "credits": "2",
+              "courseId": 20606,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54345"
+            },
+            {
+              "code": "REL 235",
+              "title": "The Christian Hope",
+              "credits": "2",
+              "courseId": 20607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54346"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            },
+            {
+              "code": "REL 243",
+              "title": "Theology: From the Early Church through the Middle Ages",
+              "credits": "4",
+              "courseId": 20609,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54348"
+            },
+            {
+              "code": "REL 244",
+              "title": "Theology: From the Reformation to the Present",
+              "credits": "2",
+              "courseId": 20610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54349"
+            },
+            {
+              "code": "REL 251",
+              "title": "Christianity and Religious Plurality",
+              "credits": "4",
+              "courseId": 20611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54350"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "Religion and Contemporary Culture, and Religious Studies",
+          "courses": [
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 20613,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54352"
+            },
+            {
+              "code": "REL 261",
+              "title": "Christianity and Culture",
+              "credits": "4",
+              "courseId": 20614,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54353"
+            },
+            {
+              "code": "REL 262",
+              "title": "Social Justice from the Prophets to Jesus",
+              "credits": "4",
+              "courseId": 21500,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54544"
+            },
+            {
+              "code": "REL 263",
+              "title": "Theology, Beauty, and the Arts",
+              "credits": "4",
+              "courseId": 21501,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54545"
+            },
+            {
+              "code": "REL 352",
+              "title": "Judaism",
+              "credits": "2",
+              "courseId": 20622,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54361"
+            },
+            {
+              "code": "REL 353",
+              "title": "Islam",
+              "credits": "2",
+              "courseId": 20623,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54362"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 20624,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54363"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 20625,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54364"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "REL 309",
+              "title": "Studies in Biblical Theology",
+              "credits": "4",
+              "courseId": 20615,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54354"
+            },
+            {
+              "code": "REL 311",
+              "title": "History and Archaeology of Ancient Israel",
+              "credits": "2",
+              "courseId": 20616,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54355"
+            },
+            {
+              "code": "REL 321",
+              "title": "Judaism in the Time of Jesus",
+              "credits": "4",
+              "courseId": 20617,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54356"
+            },
+            {
+              "code": "REL 323",
+              "title": "Studies in Christian Origins",
+              "credits": "4",
+              "courseId": 20618,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54357"
+            },
+            {
+              "code": "REL 332",
+              "title": "Theological Ethics",
+              "credits": "4",
+              "courseId": 20619,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54358"
+            },
+            {
+              "code": "REL 341",
+              "title": "Studies in Early and Medieval Theology: Medieval Scholastic Theology",
+              "credits": "4",
+              "courseId": 20620,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54359"
+            },
+            {
+              "code": "REL 345",
+              "title": "Studies in Contemporary Theology",
+              "credits": "4",
+              "courseId": 20621,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54360"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

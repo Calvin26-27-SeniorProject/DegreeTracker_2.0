@@ -1,0 +1,192 @@
+{
+  "id": "health-communication-major",
+  "name": "Health Communication Major",
+  "code": "HCOMM.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 737,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13219",
+  "description": "The Department of Communication, in cooperation with health sciences, offers a health communication major that emphasizes the study and practice of communication. Building on the health sciences foundation courses, health communication majors learn how to communicate effectively in health organizations, both public and private. Health communication specialists are in high demand, and this career field is fast-growing. Overlap Policy This program may not be combined with the strategic communication major program.",
+  "totalHours": "54",
+  "requirements": [
+    {
+      "name": "Health Science Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 17750,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 17753,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 17754,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+        },
+        {
+          "code": "CHEM 160",
+          "title": "Chemistry for the Health Sciences",
+          "credits": "3",
+          "courseId": 18233,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53823"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 20255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            },
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 20259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 20639,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Communication Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 141",
+          "title": "Visual Rhetoric",
+          "credits": "2",
+          "courseId": 18201,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53791"
+        },
+        {
+          "code": "COMM 201",
+          "title": "New Media",
+          "credits": "4",
+          "courseId": 18206,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53796"
+        },
+        {
+          "code": "COMM 305",
+          "title": "Persuasion and Propaganda",
+          "credits": "4",
+          "courseId": 18220,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53810"
+        },
+        {
+          "code": "COMM 346",
+          "title": "Internship in Communication",
+          "credits": "2",
+          "courseId": 18223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53813"
+        },
+        {
+          "code": "COMM 361",
+          "title": "Health Communication Theory and Practice",
+          "credits": "4",
+          "courseId": 21499,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54543"
+        },
+        {
+          "code": "COMM 362",
+          "title": "Small Group and Organizational Communication",
+          "credits": "4",
+          "courseId": 18225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53815"
+        },
+        {
+          "code": "COMM 398",
+          "title": "Communication, Technology, and Society",
+          "credits": "4",
+          "courseId": 22276,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54763"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 201",
+          "placement": "after",
+          "text": "OR COMM 285 - Public Relations and Communication Practice"
+        },
+        {
+          "course": "COMM 305",
+          "placement": "after",
+          "text": "OR COMM 311 - Argumentation and Advocacy"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 54",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

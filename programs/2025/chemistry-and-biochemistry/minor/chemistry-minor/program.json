@@ -1,0 +1,188 @@
+{
+  "id": "chemistry-minor",
+  "name": "Chemistry Minor",
+  "code": "CHEM.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 353,
+    "name": "Chemistry and Biochemistry"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13616",
+  "description": null,
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Students who are well prepared for college chemistry are encouraged to take CHEM 103.)",
+      "courses": [
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 7916,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 101",
+          "placement": "right",
+          "text": "AND CHEM 102 - General Chemistry II"
+        },
+        {
+          "course": "CHEM 101",
+          "placement": "after",
+          "text": "OR CHEM 103 - Accelerated General Chemistry"
+        }
+      ],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 20 hours in the program.)",
+          "courses": [
+            {
+              "code": "BCHM 321",
+              "title": "Principles of Biochemistry",
+              "credits": "3",
+              "courseId": 11709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57060"
+            },
+            {
+              "code": "BCHM 322",
+              "title": "Metabolism and Metabolic Disease",
+              "credits": "1.5",
+              "courseId": 11707,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57058"
+            },
+            {
+              "code": "BCHM 323",
+              "title": "Venom",
+              "credits": "1.5",
+              "courseId": 11705,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57056"
+            },
+            {
+              "code": "BCHM 324",
+              "title": "Proteins Gone Awry",
+              "credits": "1.5",
+              "courseId": 11703,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57054"
+            },
+            {
+              "code": "CHEM 210",
+              "title": "Analytical Chemistry",
+              "credits": "3",
+              "courseId": 7920,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55934"
+            },
+            {
+              "code": "CHEM 230",
+              "title": "Essential Inorganic Chemistry",
+              "credits": "3",
+              "courseId": 7921,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55935"
+            },
+            {
+              "code": "CHEM 240",
+              "title": "Survey of Organic Chemistry",
+              "credits": "3",
+              "courseId": 7922,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55936"
+            },
+            {
+              "code": "CHEM 241",
+              "title": "Organic Chemistry I",
+              "credits": "3",
+              "courseId": 7923,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55937"
+            },
+            {
+              "code": "CHEM 242",
+              "title": "Organic Chemistry II",
+              "credits": "3",
+              "courseId": 7924,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55938"
+            },
+            {
+              "code": "CHEM 311",
+              "title": "Forensics and Toxicology",
+              "credits": "1.5",
+              "courseId": 11701,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57052"
+            },
+            {
+              "code": "CHEM 341",
+              "title": "Evolving Complexity",
+              "credits": "1.5",
+              "courseId": 11699,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57050"
+            },
+            {
+              "code": "CHEM 351",
+              "title": "Physical Chemistry",
+              "credits": "3",
+              "courseId": 7926,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55940"
+            },
+            {
+              "code": "CHEM 353",
+              "title": "The Quantum World",
+              "credits": "1.5",
+              "courseId": 11697,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57048"
+            },
+            {
+              "code": "CHEM 371",
+              "title": "Chemistry and Sustainability: Life Cycle of an Electric Car",
+              "credits": "1.5",
+              "courseId": 11695,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57046"
+            },
+            {
+              "code": "CHEM 372",
+              "title": "Molecules in the Spotlight: Nanoparticles",
+              "credits": "1.5",
+              "courseId": 11693,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57044"
+            },
+            {
+              "code": "CHEM 373",
+              "title": "Elements in Transition",
+              "credits": "1.5",
+              "courseId": 11691,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57042"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 241",
+              "placement": "right",
+              "text": "*"
+            },
+            {
+              "course": "CHEM 351",
+              "placement": "right",
+              "text": "**"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": "* Students who enroll in CHEM 241 must also enroll in CHEM 242. ** Has mathematics and physics courses as prerequisites.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

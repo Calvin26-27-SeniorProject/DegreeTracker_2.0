@@ -1,0 +1,517 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-ministry-and-human-services-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Ministry and Human Services Concentration",
+  "code": "CERT.MINISTRY",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13260",
+  "description": "Students pursuing a Ministry and Human Services concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements and Ready for Life core requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOWK 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 20651,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54390"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 18221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53811"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 21484,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54528"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 17709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 22871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55771"
+            },
+            {
+              "code": "MIN 251",
+              "title": "Theological Reflections on Ministry Practices",
+              "credits": "2",
+              "courseId": 18255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53845"
+            },
+            {
+              "code": "MIN 252",
+              "title": "Introduction to Missions",
+              "credits": "2",
+              "courseId": 20612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54351"
+            },
+            {
+              "code": "MIN 374",
+              "title": "Youth and Family Ministry",
+              "credits": "2",
+              "courseId": 18256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53846"
+            },
+            {
+              "code": "MIN 375",
+              "title": "Ministry, Leadership, and Community Development",
+              "credits": "2",
+              "courseId": 18257,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53847"
+            },
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 18221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53811"
+            },
+            {
+              "code": "EDUC 241",
+              "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+              "credits": "4",
+              "courseId": 22308,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+            },
+            {
+              "code": "EDUC 249",
+              "title": "The Christian Teacher",
+              "credits": "2",
+              "courseId": 22616,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54913"
+            },
+            {
+              "code": "EDUC 331",
+              "title": "Introduction to Cognitive Impairment: Birth through School Age",
+              "credits": "2",
+              "courseId": 22611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54908"
+            },
+            {
+              "code": "EDUC 332",
+              "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+              "credits": "2",
+              "courseId": 22612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54909"
+            },
+            {
+              "code": "EDUC 339",
+              "title": "Family Engagement, Relationships, and Collaboration",
+              "credits": "4",
+              "courseId": 18722,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53910"
+            },
+            {
+              "code": "GEO 101",
+              "title": "People, Place, and Community",
+              "credits": "4",
+              "courseId": 19213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54001"
+            },
+            {
+              "code": "IDIS 192",
+              "title": "Crossing Cultures",
+              "credits": "1",
+              "courseId": 19291,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54080"
+            },
+            {
+              "code": "MUSC 182",
+              "title": "Gospel Choir",
+              "credits": "1",
+              "courseId": 19846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54172"
+            },
+            {
+              "code": "MUSC 236",
+              "title": "Music in Worship",
+              "credits": "2",
+              "courseId": 19854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54180"
+            },
+            {
+              "code": "PHIL 137",
+              "title": "Disability, Community, and Advocacy",
+              "credits": "2",
+              "courseId": 22294,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54781"
+            },
+            {
+              "code": "PHIL 153",
+              "title": "Fundamental Questions in Philosophy",
+              "credits": "4",
+              "courseId": 20189,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+            },
+            {
+              "code": "PHIL 207",
+              "title": "Justice and the Common Good: Studies in Political Philosophy",
+              "credits": "4",
+              "courseId": 20193,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54232"
+            },
+            {
+              "code": "PHIL 211",
+              "title": "Philosophy of Gender",
+              "credits": "4",
+              "courseId": 20194,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54233"
+            },
+            {
+              "code": "PSYC 151",
+              "title": "Introductory Psychology: Perspectives on the Self",
+              "credits": "4",
+              "courseId": 20254,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 20255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+            },
+            {
+              "code": "PSYC 212",
+              "title": "Psychopathology",
+              "credits": "4",
+              "courseId": 20256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+            },
+            {
+              "code": "PSYC 220",
+              "title": "Psychological Perspectives on Marriage and the Family",
+              "credits": "2",
+              "courseId": 20257,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54296"
+            },
+            {
+              "code": "PSYC 222",
+              "title": "Human Sexuality and Gender",
+              "credits": "2",
+              "courseId": 20258,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54297"
+            },
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 20261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54300"
+            },
+            {
+              "code": "REL 211",
+              "title": "From Creation to Promised Land",
+              "credits": "2",
+              "courseId": 20594,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54333"
+            },
+            {
+              "code": "REL 212",
+              "title": "From Conquest to Exile",
+              "credits": "2",
+              "courseId": 20595,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54334"
+            },
+            {
+              "code": "REL 213",
+              "title": "Psalms and Wisdom Literature",
+              "credits": "4",
+              "courseId": 20596,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54335"
+            },
+            {
+              "code": "REL 214",
+              "title": "Prophets",
+              "credits": "4",
+              "courseId": 20597,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54336"
+            },
+            {
+              "code": "REL 221",
+              "title": "Jesus in the Gospels and Acts",
+              "credits": "2",
+              "courseId": 20598,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54337"
+            },
+            {
+              "code": "REL 222",
+              "title": "The Gospel and Letters of John",
+              "credits": "2",
+              "courseId": 20599,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54338"
+            },
+            {
+              "code": "REL 223",
+              "title": "Paul's Letters",
+              "credits": "4",
+              "courseId": 20600,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54339"
+            },
+            {
+              "code": "REL 224",
+              "title": "Revelation and General Letters",
+              "credits": "4",
+              "courseId": 20601,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54340"
+            },
+            {
+              "code": "REL 230",
+              "title": "Revelation and Knowledge of God",
+              "credits": "4",
+              "courseId": 20602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54341"
+            },
+            {
+              "code": "REL 231",
+              "title": "The Triune God",
+              "credits": "4",
+              "courseId": 20603,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54342"
+            },
+            {
+              "code": "REL 232",
+              "title": "Creation and Humanity",
+              "credits": "4",
+              "courseId": 20604,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54343"
+            },
+            {
+              "code": "REL 233",
+              "title": "Christ and Reconciliation",
+              "credits": "4",
+              "courseId": 20605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54344"
+            },
+            {
+              "code": "REL 234",
+              "title": "Holy Spirit and Church",
+              "credits": "2",
+              "courseId": 20606,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54345"
+            },
+            {
+              "code": "REL 235",
+              "title": "The Christian Hope",
+              "credits": "2",
+              "courseId": 20607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54346"
+            },
+            {
+              "code": "REL 237",
+              "title": "Christian Worship",
+              "credits": "2",
+              "courseId": 20608,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54347"
+            },
+            {
+              "code": "REL 243",
+              "title": "Theology: From the Early Church through the Middle Ages",
+              "credits": "4",
+              "courseId": 20609,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54348"
+            },
+            {
+              "code": "REL 244",
+              "title": "Theology: From the Reformation to the Present",
+              "credits": "2",
+              "courseId": 20610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54349"
+            },
+            {
+              "code": "REL 251",
+              "title": "Christianity and Religious Plurality",
+              "credits": "4",
+              "courseId": 20611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54350"
+            },
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 20613,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54352"
+            },
+            {
+              "code": "REL 261",
+              "title": "Christianity and Culture",
+              "credits": "4",
+              "courseId": 20614,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54353"
+            },
+            {
+              "code": "REL 262",
+              "title": "Social Justice from the Prophets to Jesus",
+              "credits": "4",
+              "courseId": 21500,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54544"
+            },
+            {
+              "code": "REL 321",
+              "title": "Judaism in the Time of Jesus",
+              "credits": "4",
+              "courseId": 20617,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54356"
+            },
+            {
+              "code": "REL 345",
+              "title": "Studies in Contemporary Theology",
+              "credits": "4",
+              "courseId": 20621,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54360"
+            },
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            },
+            {
+              "code": "SOC 130",
+              "title": "Introduction to Cultural Anthropology",
+              "credits": "4",
+              "courseId": 20635,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54374"
+            },
+            {
+              "code": "SOC 151",
+              "title": "Sociological Principles and Perspectives",
+              "credits": "2",
+              "courseId": 20634,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+            },
+            {
+              "code": "SOC 201",
+              "title": "Families",
+              "credits": "2",
+              "courseId": 20641,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54380"
+            },
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 20640,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+            },
+            {
+              "code": "SOC 203",
+              "title": "Sociology of Deviance",
+              "credits": "2",
+              "courseId": 20642,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54381"
+            },
+            {
+              "code": "SOC 301",
+              "title": "Gender and Sexuality in the United States",
+              "credits": "4",
+              "courseId": 21064,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54507"
+            },
+            {
+              "code": "SOC 302",
+              "title": "Sociology of Sport",
+              "credits": "2",
+              "courseId": 20644,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54383"
+            },
+            {
+              "code": "SOC 303",
+              "title": "Criminology",
+              "credits": "4",
+              "courseId": 20636,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54375"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 20643,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54382"
+            },
+            {
+              "code": "SOWK 240",
+              "title": "Introduction to Social Work and Social Welfare",
+              "credits": "2",
+              "courseId": 20650,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54389"
+            },
+            {
+              "code": "SOWK 260",
+              "title": "Global Issues and Perspectives",
+              "credits": "2",
+              "courseId": 20653,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54392"
+            },
+            {
+              "code": "SOWK 350",
+              "title": "Human Behavior and the Social Environment",
+              "credits": "4",
+              "courseId": 20655,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54394"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

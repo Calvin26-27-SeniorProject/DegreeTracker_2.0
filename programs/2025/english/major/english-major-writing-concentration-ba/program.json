@@ -1,0 +1,195 @@
+{
+  "id": "english-major-writing-concentration-ba",
+  "name": "English Major: Writing Concentration, BA",
+  "code": "WRTNG.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 360,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13676",
+  "description": "All English majors share a common foundation of coursework in linguistics, literature, and writing that effectively anchor learning in the integrated art, craft, and science of language. Students develop skills with which to engage story, practice interpretation, and experience the cultural and historical diversity of language and literature. Students in the writing concentration choose additional courses focusing on specific genres (e.g., fiction or journalism), audiences (e.g., children or adolescent readers), and purposes (e.g., journalism or business writing). Students who pursue English as an additional major may waive ENGL 395, 2 semester hours of electives, and the experiential requirement (ENGL 380, ENGL 390, or HNRS 399). Overlap Policy University policy does not allow students to pursue a major in more than one English concentration.",
+  "totalHours": "44",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 8213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56029"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 8223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 10327,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56752"
+        },
+        {
+          "code": "ENGL 380",
+          "title": "Internship",
+          "credits": "2",
+          "courseId": 8228,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56044"
+        },
+        {
+          "code": "ENGL 395",
+          "title": "Senior Seminar",
+          "credits": "4",
+          "courseId": 8230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56046"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "OR ENGL 390 - Independent Study OR HNRS 399 - Honors Thesis"
+        }
+      ],
+      "children": [
+        {
+          "name": "Writing Concentration",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take 8 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ENGL 360",
+                  "title": "Creative Writing: Nonfiction",
+                  "credits": "4",
+                  "courseId": 8220,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56036"
+                },
+                {
+                  "code": "ENGL 361",
+                  "title": "Creative Writing: Poetry",
+                  "credits": "4",
+                  "courseId": 10331,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56756"
+                },
+                {
+                  "code": "ENGL 362",
+                  "title": "Creative Writing: Fiction",
+                  "credits": "4",
+                  "courseId": 8221,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56037"
+                },
+                {
+                  "code": "ENGL 364",
+                  "title": "Special Topics in Creative Writing",
+                  "credits": "2",
+                  "courseId": 10329,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56754"
+                },
+                {
+                  "code": "ENGL 367",
+                  "title": "Creative Writing Intensive",
+                  "credits": "1",
+                  "courseId": 11687,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57038"
+                },
+                {
+                  "code": "ENGL 368",
+                  "title": "Writing for Children and Young Adults",
+                  "credits": "4",
+                  "courseId": 10330,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56755"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take 8 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "COMM 240",
+                  "title": "Journalism",
+                  "credits": "4",
+                  "courseId": 8216,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56032"
+                },
+                {
+                  "code": "ENGL 241",
+                  "title": "Business Writing",
+                  "credits": "4",
+                  "courseId": 8215,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56031"
+                },
+                {
+                  "code": "ENGL 340",
+                  "title": "Academic and Professional Writing",
+                  "credits": "4",
+                  "courseId": 8214,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56030"
+                },
+                {
+                  "code": "ENGL 341",
+                  "title": "Feature Journalism",
+                  "credits": "4",
+                  "courseId": 8217,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56033"
+                },
+                {
+                  "code": "ENGL 342",
+                  "title": "Writing in Digital Environments",
+                  "credits": "4",
+                  "courseId": 8222,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56038"
+                },
+                {
+                  "code": "ENGL 344",
+                  "title": "Special Topics in Advanced Professional Writing",
+                  "credits": "4",
+                  "courseId": 10328,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56753"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "An Additional 10 Hours of Electives",
+              "description": "At least 8 hours must be in literature courses, of which at least 4 hours must be at the 300 level.",
+              "courses": [],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 44",
+      "description": "(If pursuing English as an additional major: 36 semester hours.)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

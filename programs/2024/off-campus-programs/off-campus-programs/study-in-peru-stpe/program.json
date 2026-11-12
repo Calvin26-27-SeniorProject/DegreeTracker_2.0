@@ -1,0 +1,81 @@
+{
+  "id": "study-in-peru-stpe",
+  "name": "Study in Peru (STPE)",
+  "code": "STPE",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 739,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13123",
+  "description": "The Semester in Peru takes place in Peru every other fall semester (even years) in partnership with the Universidad Católica San Pablo. Students live with Peruvian families in Arequipa, Peru. The emphasis of this semester program is Spanish language and Peruvian culture. Students enroll in both Calvin and San Pablo courses. The academic components of the program include the following:",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "STPE 315",
+          "title": "Engaging Peruvian Culture",
+          "credits": "4",
+          "courseId": 21026,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54469"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STPE 315",
+          "placement": "after",
+          "text": "a direct-enroll course, required for students who completed SPAN 302 prior to study abroad"
+        }
+      ],
+      "children": [
+        {
+          "name": "Additional Courses",
+          "description": null,
+          "courses": [
+            {
+              "code": "STPE 302",
+              "title": "Advanced Grammar, Conversation, and Composition",
+              "credits": "4",
+              "courseId": 21475,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54518"
+            },
+            {
+              "code": "STPE 308",
+              "title": "Introduction to the Hispanic World I",
+              "credits": "4",
+              "courseId": 21072,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54515"
+            },
+            {
+              "code": "STPE 309",
+              "title": "Introduction to the Hispanic World II",
+              "credits": "4",
+              "courseId": 21372,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54516"
+            },
+            {
+              "code": "STPE 390",
+              "title": "Direct Enroll at the Universidad Católica San Pablo",
+              "credits": "3",
+              "courseId": 21027,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54470"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

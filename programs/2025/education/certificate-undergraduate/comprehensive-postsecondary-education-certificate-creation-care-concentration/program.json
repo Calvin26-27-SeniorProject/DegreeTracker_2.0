@@ -1,0 +1,445 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-creation-care-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Creation Care Concentration",
+  "code": "CERT.CREATE",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13768",
+  "description": "Students pursuing a creation care concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7884,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55899"
+        },
+        {
+          "code": "GEO 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 8273,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56089"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 101",
+          "placement": "after",
+          "text": "OR SOC 231 - Intercultural Communication"
+        }
+      ],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 9890,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56612"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 7793,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55808"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 12125,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57175"
+            },
+            {
+              "code": "ASTR 110",
+              "title": "Planets, Stars, and Galaxies",
+              "credits": "4",
+              "courseId": 7824,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55839"
+            },
+            {
+              "code": "ASTR 111",
+              "title": "The Solar System",
+              "credits": "3",
+              "courseId": 7825,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55840"
+            },
+            {
+              "code": "ASTR 112",
+              "title": "Stars, Galaxies, and the Universe",
+              "credits": "3",
+              "courseId": 7826,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55841"
+            },
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 7832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+            },
+            {
+              "code": "BIOL 123",
+              "title": "Living Systems",
+              "credits": "4",
+              "courseId": 7833,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55848"
+            },
+            {
+              "code": "BIOL 160",
+              "title": "Ecological and Evolutionary Systems",
+              "credits": "3",
+              "courseId": 7835,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55850"
+            },
+            {
+              "code": "BIOL 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 7843,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55858"
+            },
+            {
+              "code": "BIOL 332",
+              "title": "Plant Physiology",
+              "credits": "3",
+              "courseId": 7848,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55863"
+            },
+            {
+              "code": "BIOL 338",
+              "title": "Animal Behavior",
+              "credits": "3",
+              "courseId": 7852,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55867"
+            },
+            {
+              "code": "BIOL 344",
+              "title": "Wildlife Biology and Conservation",
+              "credits": "3",
+              "courseId": 7854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55869"
+            },
+            {
+              "code": "BIOL 345",
+              "title": "Ecosystem Ecology and Management",
+              "credits": "3",
+              "courseId": 7855,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55870"
+            },
+            {
+              "code": "BIOL 346",
+              "title": "Plant Taxonomy",
+              "credits": "3",
+              "courseId": 7856,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55871"
+            },
+            {
+              "code": "BIOL 364",
+              "title": "Global Health, Environment, and Sustainability",
+              "credits": "4",
+              "courseId": 7858,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55873"
+            },
+            {
+              "code": "CHEM 100",
+              "title": "The Molecular World",
+              "credits": "4",
+              "courseId": 7915,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55929"
+            },
+            {
+              "code": "GEO 101",
+              "title": "People, Place, and Community",
+              "credits": "4",
+              "courseId": 8394,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56111"
+            },
+            {
+              "code": "GEO 110",
+              "title": "World Regional Geography",
+              "credits": "4",
+              "courseId": 8390,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56107"
+            },
+            {
+              "code": "GEO 120",
+              "title": "Earth Systems",
+              "credits": "3",
+              "courseId": 8391,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56108"
+            },
+            {
+              "code": "GEO 151",
+              "title": "Introduction to Geology",
+              "credits": "3",
+              "courseId": 8410,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56128"
+            },
+            {
+              "code": "GEO 152",
+              "title": "Earth History",
+              "credits": "3",
+              "courseId": 8411,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56129"
+            },
+            {
+              "code": "GEO 215",
+              "title": "Mineralogy",
+              "credits": "3",
+              "courseId": 8414,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56132"
+            },
+            {
+              "code": "GEO 250",
+              "title": "Meteorology",
+              "credits": "3",
+              "courseId": 8396,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56114"
+            },
+            {
+              "code": "GEO 251",
+              "title": "Oceanography",
+              "credits": "3",
+              "courseId": 8415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56133"
+            },
+            {
+              "code": "GEO 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 8418,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56136"
+            },
+            {
+              "code": "GEO 341",
+              "title": "Geology Field Methods",
+              "credits": "1, 2, or 4",
+              "courseId": 8422,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56140"
+            },
+            {
+              "code": "GEO 385",
+              "title": "Internship in Geology, Geography, and Environment",
+              "credits": "1, 2, 4",
+              "courseId": 8407,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56125"
+            },
+            {
+              "code": "IDIS 184",
+              "title": "Introduction to Sustainability Challenges",
+              "credits": "2",
+              "courseId": 8233,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56049"
+            },
+            {
+              "code": "GEO 302",
+              "title": "Environmental Law",
+              "credits": "2",
+              "courseId": 8274,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56090"
+            },
+            {
+              "code": "HIST 153",
+              "title": "Explorations in World History",
+              "credits": "2",
+              "courseId": 9459,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56580"
+            },
+            {
+              "code": "HIST 229",
+              "title": "Seminar in United States History",
+              "credits": "4",
+              "courseId": 8437,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56156"
+            },
+            {
+              "code": "HIST 242",
+              "title": "Africa and the World",
+              "credits": "4",
+              "courseId": 8439,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56158"
+            },
+            {
+              "code": "HIST 251",
+              "title": "Early America",
+              "credits": "4",
+              "courseId": 8441,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56160"
+            },
+            {
+              "code": "HIST 252",
+              "title": "America from Republic to Empire",
+              "credits": "4",
+              "courseId": 8442,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56161"
+            },
+            {
+              "code": "HIST 253",
+              "title": "Recent America",
+              "credits": "4",
+              "courseId": 8443,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56162"
+            },
+            {
+              "code": "HIST 255",
+              "title": "African-American History",
+              "credits": "4",
+              "courseId": 8444,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56163"
+            },
+            {
+              "code": "HIST 256",
+              "title": "Women and Gender in US History",
+              "credits": "4",
+              "courseId": 9889,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56611"
+            },
+            {
+              "code": "HIST 274",
+              "title": "Environmental History",
+              "credits": "4",
+              "courseId": 8453,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56172"
+            },
+            {
+              "code": "HIST 356",
+              "title": "American Social and Cultural History",
+              "credits": "4",
+              "courseId": 8459,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56178"
+            },
+            {
+              "code": "IDIS 240",
+              "title": "Introduction to Archaeology",
+              "credits": "4",
+              "courseId": 8476,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56195"
+            },
+            {
+              "code": "IDIS 310",
+              "title": "Science in Society",
+              "credits": "4",
+              "courseId": 8477,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56196"
+            },
+            {
+              "code": "PSYC 151",
+              "title": "Introductory Psychology: Perspectives on the Self",
+              "credits": "4",
+              "courseId": 8860,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+            },
+            {
+              "code": "SCES 210",
+              "title": "Science Content and Processes",
+              "credits": "4",
+              "courseId": 10592,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56839"
+            },
+            {
+              "code": "SOC 130",
+              "title": "Introduction to Cultural Anthropology",
+              "credits": "4",
+              "courseId": 9141,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56463"
+            },
+            {
+              "code": "PHIL 137",
+              "title": "Disability, Community, and Advocacy",
+              "credits": "2",
+              "courseId": 10599,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56846"
+            },
+            {
+              "code": "POLS 110",
+              "title": "Foundations of Political Community",
+              "credits": "2",
+              "courseId": 8835,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56357"
+            },
+            {
+              "code": "POLS 234",
+              "title": "The President and Congress",
+              "credits": "4",
+              "courseId": 8841,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56363"
+            },
+            {
+              "code": "POLS 237",
+              "title": "Political Parties and Interest Groups",
+              "credits": "4",
+              "courseId": 8842,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56364"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 8861,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 8873,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56395"
+            },
+            {
+              "code": "REL 232",
+              "title": "Creation and Humanity",
+              "credits": "4",
+              "courseId": 9111,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56432"
+            },
+            {
+              "code": "LIFE 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 10383,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56808"
+            },
+            {
+              "code": "SCES 110",
+              "title": "Science and a Changing World",
+              "credits": "4",
+              "courseId": 10591,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56838"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

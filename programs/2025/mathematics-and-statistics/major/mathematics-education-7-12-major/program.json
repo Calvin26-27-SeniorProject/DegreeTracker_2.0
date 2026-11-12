@@ -1,0 +1,130 @@
+{
+  "id": "mathematics-education-7-12-major",
+  "name": "Mathematics Education 7-12 Major",
+  "code": "MAJ_MATH_712",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 364,
+    "name": "Mathematics and Statistics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13783",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "34",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MATH 161",
+          "title": "Calculus: Modeling and Computation",
+          "credits": "4",
+          "courseId": 12160,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57855"
+        },
+        {
+          "code": "MATH 162",
+          "title": "Differential and Integral Calculus",
+          "credits": "4",
+          "courseId": 12161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57856"
+        },
+        {
+          "code": "MATH 251",
+          "title": "Discrete Mathematics I",
+          "credits": "2",
+          "courseId": 9468,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56589"
+        },
+        {
+          "code": "MATH 255",
+          "title": "Introductory Linear Algebra",
+          "credits": "4",
+          "courseId": 9469,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56590"
+        },
+        {
+          "code": "MATH 301",
+          "title": "Foundations of Geometry",
+          "credits": "4",
+          "courseId": 8623,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56244"
+        },
+        {
+          "code": "MATH 327",
+          "title": "Mathematics Content and Teaching Methods for Middle Grades",
+          "credits": "2",
+          "courseId": 9926,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56650"
+        },
+        {
+          "code": "MATH 351",
+          "title": "Abstract Algebra",
+          "credits": "4",
+          "courseId": 8629,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56251"
+        },
+        {
+          "code": "MATH 359",
+          "title": "Mathematics Content and Teaching Methods for High School",
+          "credits": "2",
+          "courseId": 8631,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56253"
+        },
+        {
+          "code": "STAT 243",
+          "title": "Statistics",
+          "credits": "4",
+          "courseId": 9418,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56539"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MATH 161",
+          "placement": "after",
+          "text": "OR MATH 163 - Calculus: Modeling, Computation, Techniques of Integration"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 7949,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55963"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 7950,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55964"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

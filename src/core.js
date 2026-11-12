@@ -155,7 +155,17 @@ function progressFromRecords(records) {
     byCode.set(c.code, later ? { ...c, requirements } : { ...kept, requirements });
   }
   const courses = Array.from(byCode.values());
-  return { courses, exemptions, overrides, workdayStatus };
+  // Every semester a course was taken, for requirements that count them
+  // ("CS 195 (3 semesters)"): one entry per course and period, in record order.
+  const courseAttempts = [];
+  const seenAttempts = new Set();
+  for (const c of raw) {
+    const key = `${c.code}\u0000${c.period || ''}`;
+    if (!c.code || seenAttempts.has(key)) continue;
+    seenAttempts.add(key);
+    courseAttempts.push(c);
+  }
+  return { courses, courseAttempts, exemptions, overrides, workdayStatus };
 }
 
 // Parses copy-paste from Workday Academic Progress page: one field per line.
@@ -609,8 +619,8 @@ export function programRequirements(input) {
 }
 
 // ========== PROGRAM CHECKS (majors, minors) ==========
-// Program files (catalog/programs/<id>-<catoid>.json) hold one program's
-// requirements from one catalog year, checked against that year's catalog page
+// Program files (programs/<year>/<department>/<type>/<program>/<id>-<catoid>.json)
+// hold one program's requirements from one catalog year, checked against that year's catalog page
 // (poid, checkedAt). A Workday program is checked when a file has its exact name
 // and the selected catalog year.
 export function findProgram(programs, name, catoid) {
@@ -619,15 +629,18 @@ export function findProgram(programs, name, catoid) {
 
 // A program's requirements checked against a student's courses (as parsed:
 // labs are their own entries, e.g. CS 108L). Each requirement is 'done',
-// 'progress' (everything there, something in progress), 'todo', or 'check'
-// (there, but this tool can't tell, e.g. "3 semesters" of a seminar). A
-// lecture that needs a lab (program.labs) counts only with its lab.
-// courseGroups ("Take 10 hours from") count hours, labs included. Minimum
-// grades and manualRequirements aren't checked.
+// 'progress' (everything there, something in progress), or 'todo'. A lecture
+// that needs a lab (program.labs) counts only with its lab. A repeatable
+// seminar ("CS 195 (3 semesters)", requiredOccurrences) counts each semester
+// on the record (courseAttempts, one per course and period): it is done at
+// that many completed semesters, in progress with fewer. Which semesters isn't
+// checked. courseGroups ("Take 10 hours from") count hours, labs included.
+// Minimum grades and manualRequirements aren't checked.
 // matched lists the student's courses that count, labs as their own entries
-// (lab: true), with the title and hours from the student's record.
-//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, lab? }], missingLabs, hours?, ... }], done, inProgress, total }
-export function checkProgram(program, courses) {
+// (lab: true), with the title, hours and grade from the student's record.
+//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?,
+//     occurrences?: { required, completed, inProgress, terms: [{ code, period, status, title, hours, grade }] }, ... }], done, inProgress, total }
+export function checkProgram(program, courses, courseAttempts = []) {
   const byCode = new Map();
   for (const c of courses) {
     if (!c.code || c.status === 'exemption' || isNonPassingGrade(c.grade)) continue;
@@ -651,8 +664,26 @@ export function checkProgram(program, courses) {
     const own = byCode.get(code);
     if (!own) return [];
     const lab = labOf(code);
-    const entry = (c, isLab) => ({ code: c.code, status: state(c.code), title: c.title || null, hours: c.hours ?? null, ...(isLab && { lab: true }) });
+    const entry = (c, isLab) => ({ code: c.code, status: state(c.code), title: c.title || null, hours: c.hours ?? null, grade: c.grade || null, ...(isLab && { lab: true }) });
     return [entry(own, false), ...(lab && byCode.has(lab) ? [entry(byCode.get(lab), true)] : [])];
+  };
+
+  // The semesters a repeatable seminar was taken in, oldest first: one entry
+  // per period (or per record when it has none).
+  const semesters = codes => {
+    const records = (courseAttempts.length ? courseAttempts : courses)
+      .filter(c => codes.includes(c.code) && c.status !== 'exemption' && !isNonPassingGrade(c.grade));
+    const seen = new Set();
+    const terms = [];
+    for (const c of records) {
+      const key = c.period || `${c.code}#${terms.length}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      terms.push({ code: c.code, period: c.period || null, status: c.status === 'in-progress' ? 'progress' : 'done',
+        title: c.title || null, hours: c.hours ?? null, grade: c.grade || null });
+    }
+    const rank = t => periodRank(t.period) ?? Infinity;
+    return terms.sort((a, b) => rank(a) - rank(b));
   };
 
   const items = [];
@@ -669,9 +700,16 @@ export function checkProgram(program, courses) {
     const matched = best.option.flatMap(records);
     const missingLabs = best.option.filter(code => withLab(code) === 'no-lab').map(labOf);
     let status = best.status === 'partial' ? 'todo' : best.status;
-    if (r.requiredOccurrences && status !== 'todo') status = 'check';
+    let occurrences = null;
+    if (r.requiredOccurrences) {
+      const terms = semesters(options.flat());
+      const completed = terms.filter(t => t.status === 'done').length;
+      const inProgress = terms.length - completed;
+      occurrences = { required: r.requiredOccurrences, completed, inProgress, terms };
+      status = completed >= r.requiredOccurrences ? 'done' : terms.length ? 'progress' : 'todo';
+    }
     items.push({ kind: 'requirement', id: r.id, section: r.section, label: r.label, credits: r.credits,
-      note: r.note || null, waivable: !!r.manualWhenMissing, options, status, matched, missingLabs });
+      note: r.note || null, waivable: !!r.manualWhenMissing, options, status, matched, missingLabs, occurrences });
   }
   for (const g of program.courseGroups || []) {
     let doneHours = 0;
@@ -695,7 +733,7 @@ export function checkProgram(program, courses) {
   return {
     items,
     done: items.filter(i => i.status === 'done').length,
-    inProgress: items.filter(i => i.status === 'progress' || i.status === 'check').length,
+    inProgress: items.filter(i => i.status === 'progress').length,
     total: items.length,
   };
 }

@@ -1,0 +1,193 @@
+{
+  "id": "elementary-education-major-birth-kindergarten-b-k",
+  "name": "Elementary Education Major: Birth-Kindergarten (B-K)",
+  "code": "BA_ELED_BK",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13285",
+  "description": "Students should consult with a School of Education advisor as early as possible for assistance in program selection and planning. The Education Program website describes specialized core requirements, criteria for admission to the education program, criteria for admission to student teaching, and requirements for teacher certification.",
+  "totalHours": "74",
+  "requirements": [
+    {
+      "name": "Professional Education Course Sequence",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 18711,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53899"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 22606,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54903"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 22308,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+        },
+        {
+          "code": "EDUC 243",
+          "title": "Teaching and Learning Lab",
+          "credits": "2",
+          "courseId": 22607,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54904"
+        },
+        {
+          "code": "EDUC 249",
+          "title": "The Christian Teacher",
+          "credits": "2",
+          "courseId": 22616,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54913"
+        },
+        {
+          "code": "EDUC 346",
+          "title": "Internship II: Student Teaching",
+          "credits": "12",
+          "courseId": 18724,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53912"
+        },
+        {
+          "code": "EDUC 359",
+          "title": "Student Teaching Seminar",
+          "credits": "4",
+          "courseId": 22614,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54911"
+        },
+        {
+          "code": "EDUC 399",
+          "title": "Philosophy of Education",
+          "credits": "2",
+          "courseId": 18727,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53915"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Birth-Kindergarten Course Sequence",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 115",
+          "title": "Literacy Instruction for Beginning Readers",
+          "credits": "4",
+          "courseId": 18718,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53906"
+        },
+        {
+          "code": "EDUC 210",
+          "title": "Music and Art in the Elementary Classroom",
+          "credits": "2",
+          "courseId": 18712,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53900"
+        },
+        {
+          "code": "EDUC 236",
+          "title": "Foundations of Early Childhood Education",
+          "credits": "4",
+          "courseId": 18713,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53901"
+        },
+        {
+          "code": "EDUC 238",
+          "title": "Developmentally Appropriate Practice with Young Children",
+          "credits": "2",
+          "courseId": 18714,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53902"
+        },
+        {
+          "code": "EDUC 250",
+          "title": "Social Studies Inquiry",
+          "credits": "4",
+          "courseId": 22608,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54905"
+        },
+        {
+          "code": "EDUC 310",
+          "title": "Assessment in Early Childhood and Special Education",
+          "credits": "2",
+          "courseId": 18717,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53905"
+        },
+        {
+          "code": "EDUC 337",
+          "title": "Infant, Toddler, and Preschool Curriculum",
+          "credits": "4",
+          "courseId": 18721,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53909"
+        },
+        {
+          "code": "EDUC 339",
+          "title": "Family Engagement, Relationships, and Collaboration",
+          "credits": "4",
+          "courseId": 18722,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53910"
+        },
+        {
+          "code": "KIN 223",
+          "title": "Educational Health, Movement, and Dance",
+          "credits": "2",
+          "courseId": 19786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54112"
+        },
+        {
+          "code": "MATH 221",
+          "title": "The Real Number System and Methods for Elementary School Teachers",
+          "credits": "4",
+          "courseId": 19812,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54138"
+        },
+        {
+          "code": "PSYC 270",
+          "title": "Children at Risk",
+          "credits": "4",
+          "courseId": 22038,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54725"
+        },
+        {
+          "code": "SCES 110",
+          "title": "Science and a Changing World",
+          "credits": "4",
+          "courseId": 22286,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54773"
+        },
+        {
+          "code": "SPAUD 311",
+          "title": "Child Language Development",
+          "credits": "4",
+          "courseId": 20978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54417"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 74",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "teaching-english-to-speakers-of-other-languages-tesol-minor",
+  "name": "Teaching English to Speakers of Other Languages (TESOL) Minor",
+  "code": "ESL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13682",
+  "description": "This minor prepares candidates to teach English Learners but does not lead to teacher certification. Students who are in the education program complete the certification-track TESOL minor.",
+  "totalHours": "22-24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 8223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+        },
+        {
+          "code": "ENGL 275",
+          "title": "English Syntax",
+          "credits": "4",
+          "courseId": 8227,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56043"
+        },
+        {
+          "code": "ENGL 372",
+          "title": "Sociolinguistics and Issues in Language Education",
+          "credits": "4",
+          "courseId": 8225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56041"
+        },
+        {
+          "code": "IDIS 301",
+          "title": "Foundations of TESOL and Bilingual Education",
+          "credits": "2",
+          "courseId": 8482,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56201"
+        },
+        {
+          "code": "IDIS 311",
+          "title": "Assessment for TESOL and Bilingual Education",
+          "credits": "2",
+          "courseId": 9924,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56648"
+        },
+        {
+          "code": "IDIS 356",
+          "title": "Elementary World Languages Pedagogy",
+          "credits": "2",
+          "courseId": 8483,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56202"
+        },
+        {
+          "code": "IDIS 358",
+          "title": "Practicum for TESOL/Bilingual Education",
+          "credits": "2",
+          "courseId": 9925,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56649"
+        }
+      ],
+      "notes": [
+        {
+          "course": "IDIS 356",
+          "placement": "after",
+          "text": "OR IDIS 357 - Secondary World Languages Pedagogy"
+        },
+        {
+          "course": "ENGL 270",
+          "placement": "after",
+          "text": "OR SPAN 341 - Spanish Phonology, Dialectology, and Sociolinguistics"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 22-24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

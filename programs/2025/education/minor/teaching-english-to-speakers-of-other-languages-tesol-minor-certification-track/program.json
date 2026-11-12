@@ -1,0 +1,117 @@
+{
+  "id": "teaching-english-to-speakers-of-other-languages-tesol-minor-certification-track",
+  "name": "Teaching English to Speakers of Other Languages (TESOL) Minor: Certification Track",
+  "code": "MIN_ESL_ED",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13681",
+  "description": "The TESOL minor prepares students to (1) promote educational equity and the academic achievement of learners whose home language is not English; (2) deliver instruction in how to speak, read, write, listen, and communicate in English; and (3) support learners in their acquisition of content knowledge and academic language while they learn English. Students in the Education program must combine the TESOL minor with at least one of the following programs: elementary education (PK-3 or 3-6), or any of the following 5-9, 7-12, or PK-12 programs: English language arts, French, mathematics, science, social studies, Spanish, or special education. Secondary candidates should consider the English language arts major or minor. Students must complete Calvin's world language core. The program leads to the PK-12 English as a Second Language endorsement on the Michigan teaching certificate. Students who are not in the education program should complete the TESOL non-certification minor. Students in the education program complete one of the following degree options for teacher certification: Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA Special Education K-12: Cognitive Impairment, BA",
+  "totalHours": "26",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "Note: (1) The TESOL minor combines well with the Language Arts (ELEM) or English (SEC) majors because of the allowance of a two-course overlap. (2) Students must complete Calvin's foreign language core.",
+      "courses": [
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        },
+        {
+          "code": "ENGL 372",
+          "title": "Sociolinguistics and Issues in Language Education",
+          "credits": "4",
+          "courseId": 8225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56041"
+        },
+        {
+          "code": "IDIS 301",
+          "title": "Foundations of TESOL and Bilingual Education",
+          "credits": "2",
+          "courseId": 8482,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56201"
+        },
+        {
+          "code": "IDIS 311",
+          "title": "Assessment for TESOL and Bilingual Education",
+          "credits": "2",
+          "courseId": 9924,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56648"
+        },
+        {
+          "code": "IDIS 356",
+          "title": "Elementary World Languages Pedagogy",
+          "credits": "2",
+          "courseId": 8483,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56202"
+        },
+        {
+          "code": "IDIS 357",
+          "title": "Secondary World Languages Pedagogy",
+          "credits": "4",
+          "courseId": 8484,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56203"
+        },
+        {
+          "code": "IDIS 358",
+          "title": "Practicum for TESOL/Bilingual Education",
+          "credits": "2",
+          "courseId": 9925,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56649"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 270",
+              "title": "Introduction to Linguistics",
+              "credits": "4",
+              "courseId": 8223,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+            },
+            {
+              "code": "ENGL 275",
+              "title": "English Syntax",
+              "credits": "4",
+              "courseId": 8227,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56043"
+            },
+            {
+              "code": "SPAN 341",
+              "title": "Spanish Phonology, Dialectology, and Sociolinguistics",
+              "credits": "4",
+              "courseId": 9178,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56500"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 26",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

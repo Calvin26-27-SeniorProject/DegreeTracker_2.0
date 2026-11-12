@@ -1,0 +1,259 @@
+{
+  "id": "kinesiology-major-sport-management-emphasis-ba",
+  "name": "Kinesiology Major: Sport Management Emphasis, BA",
+  "code": "KIN.SPMG.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 363,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13673",
+  "description": null,
+  "totalHours": "48",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 8587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56206"
+        },
+        {
+          "code": "KIN 214",
+          "title": "Applied Kinesiology",
+          "credits": "4",
+          "courseId": 8591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56210"
+        },
+        {
+          "code": "KIN 218",
+          "title": "Administration of Athletics",
+          "credits": "4",
+          "courseId": 8594,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56213"
+        },
+        {
+          "code": "KIN 243",
+          "title": "Psychology of Sport and Exercise",
+          "credits": "4",
+          "courseId": 8598,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56217"
+        },
+        {
+          "code": "KIN 302",
+          "title": "Sociology of Sport",
+          "credits": "2",
+          "courseId": 8601,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56220"
+        },
+        {
+          "code": "KIN 320",
+          "title": "Sports Marketing and Public Relations",
+          "credits": "4",
+          "courseId": 8602,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56221"
+        },
+        {
+          "code": "KIN 332",
+          "title": "Philosophy of Physical Education and Sport",
+          "credits": "4",
+          "courseId": 8605,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56224"
+        },
+        {
+          "code": "KIN 346",
+          "title": "Field Internship",
+          "credits": "3",
+          "courseId": 8606,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56225"
+        },
+        {
+          "code": "RECR 305",
+          "title": "Program Planning and Development",
+          "credits": "4",
+          "courseId": 9089,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56410"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 7832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+            },
+            {
+              "code": "COMM 287",
+              "title": "Strategic Sports Communication",
+              "credits": "4",
+              "courseId": 11725,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57076"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Corequisite Business Minor",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "BUS 100",
+          "title": "Business Foundations",
+          "credits": "2",
+          "courseId": 12128,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57178"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": "(Some courses may have additional prerequisites.)",
+          "courses": [
+            {
+              "code": "ACCT 204",
+              "title": "Financial Accounting",
+              "credits": "4",
+              "courseId": 7786,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+            },
+            {
+              "code": "BUS 205",
+              "title": "Project Management",
+              "credits": "4",
+              "courseId": 11235,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56986"
+            },
+            {
+              "code": "BUS 256",
+              "title": "Nonprofit Management and Leadership",
+              "credits": "4",
+              "courseId": 9453,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56574"
+            },
+            {
+              "code": "BUS 350",
+              "title": "Business Law",
+              "credits": "4",
+              "courseId": 7867,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55882"
+            },
+            {
+              "code": "BUS 357",
+              "title": "Business for Engineers",
+              "credits": "2",
+              "courseId": 7868,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55883"
+            },
+            {
+              "code": "ENTR 201",
+              "title": "Introduction to Entrepreneurship",
+              "credits": "2",
+              "courseId": 11255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57006"
+            },
+            {
+              "code": "ENTR 202",
+              "title": "Design Thinking",
+              "credits": "4",
+              "courseId": 11260,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57011"
+            },
+            {
+              "code": "FIN 201",
+              "title": "Personal Finance",
+              "credits": "4",
+              "courseId": 10309,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56734"
+            },
+            {
+              "code": "FIN 301",
+              "title": "Corporate Finance",
+              "credits": "4",
+              "courseId": 7875,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+            },
+            {
+              "code": "HRM 301",
+              "title": "Human Resource Management",
+              "credits": "4",
+              "courseId": 7873,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55888"
+            },
+            {
+              "code": "INFO 201",
+              "title": "Introduction to Management Information Systems",
+              "credits": "4",
+              "courseId": 12133,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+            },
+            {
+              "code": "MKTG 301",
+              "title": "Marketing",
+              "credits": "4",
+              "courseId": 7878,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+            },
+            {
+              "code": "SCM 201",
+              "title": "Introduction to Operations and Supply Chain Management",
+              "credits": "4",
+              "courseId": 10575,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56822"
+            }
+          ],
+          "notes": [
+            {
+              "course": "MKTG 301",
+              "placement": "right",
+              "text": "(recommended)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 48",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

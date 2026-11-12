@@ -1,0 +1,149 @@
+{
+  "id": "social-work-minor",
+  "name": "Social Work Minor",
+  "code": "SOWK.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 372,
+    "name": "Sociology and Social Work"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13607",
+  "description": null,
+  "totalHours": "18-20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "SOWK 240",
+          "title": "Introduction to Social Work and Social Welfare",
+          "credits": "2",
+          "courseId": 9156,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56478"
+        },
+        {
+          "code": "SOWK 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 9157,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56479"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PSYC 151",
+          "placement": "after",
+          "text": "OR SOC 151 - Sociological Principles and Perspectives"
+        },
+        {
+          "course": "SOWK 250",
+          "placement": "after",
+          "text": "OR SOWK 260 - Global Issues and Perspectives"
+        },
+        {
+          "course": "SOWK 250",
+          "placement": "after",
+          "text": "an additional 12 hours of social work courses, with at least two social work courses at the 300 level; one SOC elective may be included. (SOWK 240 is a prerequisite for all 300-level social work courses. All other prerequisites listed for social work major courses are waived for minor completion, although course sequencing following prerequisites is encouraged.)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Recommended Minor Tracks",
+          "description": "The recommended tracks for a social work minor are only suggestions. Students are not required to complete one of these tracks in order to complete a social work minor.",
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Track 1: Social Work Practice with Individuals, Groups, and Families",
+              "description": null,
+              "courses": [
+                {
+                  "code": "SOWK 350",
+                  "title": "Human Behavior and the Social Environment",
+                  "credits": "4",
+                  "courseId": 9161,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56483"
+                },
+                {
+                  "code": "SOWK 370",
+                  "title": "The Helping Interview",
+                  "credits": "4",
+                  "courseId": 9163,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56485"
+                },
+                {
+                  "code": "SOWK 371",
+                  "title": "Generalist Practice with Individuals",
+                  "credits": "2",
+                  "courseId": 9164,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56486"
+                },
+                {
+                  "code": "SOWK 373",
+                  "title": "Generalist Practice with Families and Groups",
+                  "credits": "2",
+                  "courseId": 9954,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56678"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Track 2: Social Work Practice with Communities and Organizations",
+              "description": null,
+              "courses": [
+                {
+                  "code": "SOWK 355",
+                  "title": "Social Research",
+                  "credits": "4",
+                  "courseId": 9160,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56482"
+                },
+                {
+                  "code": "SOWK 360",
+                  "title": "Social Welfare Policy and Advocacy",
+                  "credits": "4",
+                  "courseId": 9162,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56484"
+                },
+                {
+                  "code": "SOWK 375",
+                  "title": "Generalist Practice with Organizations and Communities",
+                  "credits": "4",
+                  "courseId": 9165,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56487"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18-20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

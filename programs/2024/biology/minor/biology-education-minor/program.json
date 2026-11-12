@@ -1,0 +1,79 @@
+{
+  "id": "biology-education-minor",
+  "name": "Biology Education Minor",
+  "code": "MIN_BIOL_EDUC",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 741,
+    "name": "Biology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13275",
+  "description": "For teacher certification, this minor must be combined with the Science Education 5-9 Minor or Science Education 7-12 Major.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 17752,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+        },
+        {
+          "code": "BIOL 231",
+          "title": "Introduction to Animal Physiology",
+          "credits": "1.5",
+          "courseId": 17756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+        },
+        {
+          "code": "BIOL 232",
+          "title": "Introduction to Plant Physiology",
+          "credits": "1.5",
+          "courseId": 22584,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54880"
+        },
+        {
+          "code": "SCES 314",
+          "title": "Integration Methods and Pedagogies for Secondary Science Teachers",
+          "credits": "2",
+          "courseId": 20628,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54367"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SCES 314",
+          "placement": "after",
+          "text": "an advisor-approved biology elective (BIOL 115 or BIOL 123 is recommended for grades 5-9; BIOL 364 is recommended for grades 7-12)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

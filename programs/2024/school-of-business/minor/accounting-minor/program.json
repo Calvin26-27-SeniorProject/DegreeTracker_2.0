@@ -1,0 +1,130 @@
+{
+  "id": "accounting-minor",
+  "name": "Accounting Minor",
+  "code": "ACCT.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13080",
+  "description": "Overlap Policy No more than two minors from the School of Business may be obtained.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 17515,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53689"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 17702,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53690"
+        },
+        {
+          "code": "ACCT 210",
+          "title": "Computerized Accounting",
+          "credits": "2",
+          "courseId": 21564,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54608"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 22275,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ACCT 301",
+              "title": "Intermediate Accounting I",
+              "credits": "4",
+              "courseId": 17703,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53691"
+            },
+            {
+              "code": "ACCT 302",
+              "title": "Intermediate Accounting II",
+              "credits": "4",
+              "courseId": 17704,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53692"
+            },
+            {
+              "code": "ACCT 305",
+              "title": "Cost Accounting",
+              "credits": "4",
+              "courseId": 17705,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53693"
+            },
+            {
+              "code": "ACCT 306",
+              "title": "Income Tax",
+              "credits": "4",
+              "courseId": 17706,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53694"
+            },
+            {
+              "code": "ACCT 315",
+              "title": "Accounting Information Systems",
+              "credits": "4",
+              "courseId": 17707,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53695"
+            },
+            {
+              "code": "ACCT 320",
+              "title": "Principles of Auditing",
+              "credits": "4",
+              "courseId": 22310,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54798"
+            },
+            {
+              "code": "BUS 391",
+              "title": "Business Internship",
+              "credits": "2",
+              "courseId": 17785,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53774"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BUS 391",
+              "placement": "right",
+              "text": "(in accounting)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

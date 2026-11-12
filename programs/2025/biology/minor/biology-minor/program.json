@@ -1,0 +1,268 @@
+{
+  "id": "biology-minor",
+  "name": "Biology Minor",
+  "code": "BIOL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 347,
+    "name": "Biology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13591",
+  "description": null,
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 7835,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55850"
+        },
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 7836,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55851"
+        },
+        {
+          "code": "BIOL 200",
+          "title": "Research Design and Methodology",
+          "credits": "4",
+          "courseId": 7841,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55856"
+        },
+        {
+          "code": "BIOL 231",
+          "title": "Introduction to Animal Physiology",
+          "credits": "1.5",
+          "courseId": 7840,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55855"
+        },
+        {
+          "code": "BIOL 295",
+          "title": "Biology Seminar",
+          "credits": "0",
+          "courseId": 7842,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55857"
+        }
+      ],
+      "notes": [
+        {
+          "course": "BIOL 231",
+          "placement": "right",
+          "text": "AND BIOL 232 - Introduction to Plant Physiology"
+        },
+        {
+          "course": "BIOL 231",
+          "placement": "after",
+          "text": "OR BIOL 206 - Human Physiology"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": "(Must include 1 hour of a 300-level laboratory component. No more than 2 hours of BCHM coursework may be counted.)",
+          "courses": [
+            {
+              "code": "BCHM 322",
+              "title": "Metabolism and Metabolic Disease",
+              "credits": "1.5",
+              "courseId": 11707,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57058"
+            },
+            {
+              "code": "BCHM 323",
+              "title": "Venom",
+              "credits": "1.5",
+              "courseId": 11705,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57056"
+            },
+            {
+              "code": "BCHM 324",
+              "title": "Proteins Gone Awry",
+              "credits": "1.5",
+              "courseId": 11703,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57054"
+            },
+            {
+              "code": "BIOL 305L",
+              "title": "Advanced Human Anatomy Lab",
+              "credits": "2",
+              "courseId": 11721,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57072"
+            },
+            {
+              "code": "BIOL 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 7843,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55858"
+            },
+            {
+              "code": "BIOL 321",
+              "title": "Genetics and Development",
+              "credits": "3",
+              "courseId": 7844,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55859"
+            },
+            {
+              "code": "BIOL 323",
+              "title": "Comparative Vertebrate Anatomy",
+              "credits": "3",
+              "courseId": 7845,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55860"
+            },
+            {
+              "code": "BIOL 325",
+              "title": "Biotechnology",
+              "credits": "3",
+              "courseId": 7846,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55861"
+            },
+            {
+              "code": "BIOL 331",
+              "title": "Comparative Animal and Human Physiology",
+              "credits": "3",
+              "courseId": 7847,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55862"
+            },
+            {
+              "code": "BIOL 332",
+              "title": "Plant Physiology",
+              "credits": "3",
+              "courseId": 7848,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55863"
+            },
+            {
+              "code": "BIOL 333",
+              "title": "Immunology and Hematology",
+              "credits": "3",
+              "courseId": 7849,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55864"
+            },
+            {
+              "code": "BIOL 334",
+              "title": "Neurobiology of Disease",
+              "credits": "3",
+              "courseId": 9901,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56623"
+            },
+            {
+              "code": "BIOL 335",
+              "title": "Cell Physiology",
+              "credits": "3",
+              "courseId": 7850,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55865"
+            },
+            {
+              "code": "BIOL 336",
+              "title": "General Microbiology",
+              "credits": "3",
+              "courseId": 7851,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55866"
+            },
+            {
+              "code": "BIOL 338",
+              "title": "Animal Behavior",
+              "credits": "3",
+              "courseId": 7852,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55867"
+            },
+            {
+              "code": "BIOL 341",
+              "title": "Entomology",
+              "credits": "3",
+              "courseId": 7853,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55868"
+            },
+            {
+              "code": "BIOL 344",
+              "title": "Wildlife Biology and Conservation",
+              "credits": "3",
+              "courseId": 7854,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55869"
+            },
+            {
+              "code": "BIOL 345",
+              "title": "Ecosystem Ecology and Management",
+              "credits": "3",
+              "courseId": 7855,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55870"
+            },
+            {
+              "code": "BIOL 346",
+              "title": "Plant Taxonomy",
+              "credits": "3",
+              "courseId": 7856,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55871"
+            },
+            {
+              "code": "BIOL 354",
+              "title": "Specific Advanced Topics",
+              "credits": "1-4",
+              "courseId": 7857,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55872"
+            },
+            {
+              "code": "BIOL 364",
+              "title": "Global Health, Environment, and Sustainability",
+              "credits": "4",
+              "courseId": 7858,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55873"
+            },
+            {
+              "code": "BIOL 372",
+              "title": "Dutch Sustainability: Is Orange the New Green?",
+              "credits": "2",
+              "courseId": 11664,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57015"
+            },
+            {
+              "code": "BIOL 385",
+              "title": "Internship in Biology",
+              "credits": "0-4",
+              "courseId": 7859,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55874"
+            },
+            {
+              "code": "BIOL 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 7860,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55875"
+            },
+            {
+              "code": "BIOL 399",
+              "title": "Undergraduate Research",
+              "credits": "1-4",
+              "courseId": 7863,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55878"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

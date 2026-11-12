@@ -1,0 +1,87 @@
+{
+  "id": "english-major-general-concentration",
+  "name": "English Major: General Concentration",
+  "code": "ENGL.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13244",
+  "description": "The English department offers an English major with four concentrations—linguistics, literature, writing, and general English studies—that effectively anchors student learning in the integrated art, craft, and science of language. The major provides students a richly faceted set of skills with which to engage story, practice interpretation, and experience the cultural and historical diversity of language and literature. It also provides excellent preparation for a multitude of vocations that require strong communication and analytical skills (writing, editing, library science, business, law, ministry, public relations, teaching, and more).",
+  "totalHours": "46",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 18731,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53919"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 18741,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53929"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 22000,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54687"
+        },
+        {
+          "code": "ENGL 380",
+          "title": "Internship",
+          "credits": "4",
+          "courseId": 18746,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53934"
+        },
+        {
+          "code": "ENGL 395",
+          "title": "Senior Seminar",
+          "credits": "4",
+          "courseId": 18748,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53936"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "OR ENGL 390 - Independent Study OR HNRS 399 - Honors Thesis"
+        }
+      ],
+      "children": [
+        {
+          "name": "General Concentration",
+          "description": "an additional 4 hours from ENGL 200-235, 250, 300-335 an additional 4 hours from linguistics: ENGL 275, 371-373 an additional 4 hours from writing: ENGL 240, 241, 340-344, 360-368 an additional 14 hours of ENGL courses, of which at least 8 must be at the 300 level",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 46",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

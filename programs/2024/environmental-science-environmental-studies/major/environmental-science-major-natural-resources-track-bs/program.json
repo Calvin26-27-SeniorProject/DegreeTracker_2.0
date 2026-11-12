@@ -1,0 +1,294 @@
+{
+  "id": "environmental-science-major-natural-resources-track-bs",
+  "name": "Environmental Science Major: Natural Resources Track, BS",
+  "code": "ENSC.NLRES.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 767,
+    "name": "Environmental Science, Environmental Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13222",
+  "description": "The environmental science major prepares students to be Christ's agents of renewal by working as stewards of God's good creation. Graduates of this program are prepared for entry-level jobs in a variety of environmental fields, including land and resource management and environmental consulting, and they are prepared for graduate study in applied, interdisciplinary science programs, such as natural resource management. Students take a set of common courses and choose either the natural resources track or the naturalist track.",
+  "totalHours": "64",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 18230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+        },
+        {
+          "code": "ENST 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 18791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+        },
+        {
+          "code": "ENST 285",
+          "title": "Environmental Practicum",
+          "credits": "2",
+          "courseId": 21517,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54561"
+        },
+        {
+          "code": "ENST 301",
+          "title": "American Environmentalism",
+          "credits": "2",
+          "courseId": 22591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54887"
+        },
+        {
+          "code": "ENST 302",
+          "title": "Environmental Law",
+          "credits": "2",
+          "courseId": 18792,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 19210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+        },
+        {
+          "code": "GEO 215",
+          "title": "Mineralogy",
+          "credits": "3",
+          "courseId": 19234,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54022"
+        },
+        {
+          "code": "GEO 252",
+          "title": "Geomorphology",
+          "credits": "3",
+          "courseId": 19217,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54005"
+        },
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 19218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+        },
+        {
+          "code": "GEO 317",
+          "title": "Sedimentation and Stratigraphy",
+          "credits": "3",
+          "courseId": 19240,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54028"
+        },
+        {
+          "code": "GEO 325",
+          "title": "Hydrogeology",
+          "credits": "3",
+          "courseId": 19241,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54029"
+        },
+        {
+          "code": "GEO 361",
+          "title": "Advanced GIS",
+          "credits": "4",
+          "courseId": 19225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54013"
+        },
+        {
+          "code": "GEO 395",
+          "title": "Senior Seminar in Geology, Geography, and Environment",
+          "credits": "4",
+          "courseId": 19229,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54017"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 120",
+          "placement": "after",
+          "text": "OR GEO 151 - Introduction to Geology OR GEO 153 - Great Lakes Geology"
+        },
+        {
+          "course": "CHEM 101",
+          "placement": "right",
+          "text": "AND CHEM 102 - General Chemistry II"
+        },
+        {
+          "course": "CHEM 101",
+          "placement": "after",
+          "text": "OR CHEM 103 - Accelerated General Chemistry"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 6 Hours from the Following",
+          "description": "(Students interested in professional work in hydrology are strongly encouraged to take summer Hydrogeology Field Courses available elsewhere and transfer the credit to Calvin as an elective.",
+          "courses": [
+            {
+              "code": "BIOL 345",
+              "title": "Ecosystem Ecology and Management",
+              "credits": "3",
+              "courseId": 17771,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53760"
+            },
+            {
+              "code": "CHEM 210",
+              "title": "Analytical Chemistry",
+              "credits": "3",
+              "courseId": 18234,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53824"
+            },
+            {
+              "code": "CHEM 240",
+              "title": "Survey of Organic Chemistry",
+              "credits": "3",
+              "courseId": 18236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+            },
+            {
+              "code": "ENST 385",
+              "title": "Internship in Environmental Studies",
+              "credits": "1, 2, 4",
+              "courseId": 18793,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53981"
+            },
+            {
+              "code": "GEO 181",
+              "title": "First-Year Research in Earth Sciences: Dunes",
+              "credits": "3",
+              "courseId": 19211,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53999"
+            },
+            {
+              "code": "GEO 251",
+              "title": "Oceanography",
+              "credits": "3",
+              "courseId": 19235,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54023"
+            },
+            {
+              "code": "GEO 304",
+              "title": "Geochemistry",
+              "credits": "4",
+              "courseId": 19236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54024"
+            },
+            {
+              "code": "GEO 312",
+              "title": "Special Topics in Environmental Geology",
+              "credits": "2, 4",
+              "courseId": 19237,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54025"
+            },
+            {
+              "code": "GEO 322",
+              "title": "Coastal Geomorphology",
+              "credits": "2",
+              "courseId": 19222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54010"
+            },
+            {
+              "code": "GEO 323",
+              "title": "Coastal Geomorphology Methods",
+              "credits": "2",
+              "courseId": 22565,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54861"
+            },
+            {
+              "code": "GEO 341",
+              "title": "Geology Field Methods",
+              "credits": "1, 2, or 4",
+              "courseId": 19242,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54030"
+            },
+            {
+              "code": "GEO 362",
+              "title": "Remote Sensing of Earth",
+              "credits": "4",
+              "courseId": 19226,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54014"
+            },
+            {
+              "code": "PHYS 221",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 20208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+            },
+            {
+              "code": "PHYS 222",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 20209,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54248"
+            }
+          ],
+          "notes": [
+            {
+              "course": "PHYS 222",
+              "placement": "after",
+              "text": "field courses at the Au Sable Institute"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "MATH 132",
+              "title": "Calculus for Management, Life, and Social Sciences",
+              "credits": "4",
+              "courseId": 19808,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54134"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 64",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

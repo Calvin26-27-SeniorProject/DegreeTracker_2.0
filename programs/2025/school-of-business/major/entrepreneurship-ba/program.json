@@ -1,0 +1,202 @@
+{
+  "id": "entrepreneurship-ba",
+  "name": "Entrepreneurship, BA",
+  "code": "ENSHP.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13805",
+  "description": "Entrepreneurial skills are key to innovation and growth in society, whether in a startup business, a nonprofit, or a Fortune 500 company. In this major, students foster an entrepreneurial mindset through both in-classroom and out-in-the-world learning. Simultaneously, they will also grow in their understanding of how God can use organizations to affect positive change in the world. By deepening their understanding of others and developing skills to understand and frame problems and develop testable solutions, students will graduate with insights and abilities that are valuable for life-long learning and service. Overlap Policy This program may not be combined with the business minor. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "62",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": "(Note that, unlike other majors offered by the School of Business, this program does not require FIN 301.)",
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 7871,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55886"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 7882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55897"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 12133,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 7878,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "BUS 394",
+          "title": "Business Capstone",
+          "credits": "4",
+          "courseId": 7883,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55898"
+        },
+        {
+          "code": "ENTR 201",
+          "title": "Introduction to Entrepreneurship",
+          "credits": "2",
+          "courseId": 11255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57006"
+        },
+        {
+          "code": "ENTR 202",
+          "title": "Design Thinking",
+          "credits": "4",
+          "courseId": 11260,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57011"
+        },
+        {
+          "code": "ENTR 304",
+          "title": "Entrepreneurship Finance",
+          "credits": "4",
+          "courseId": 11259,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57010"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENTR 210",
+              "title": "Entrepreneurship Practicum I",
+              "credits": "2",
+              "courseId": 11256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57007"
+            },
+            {
+              "code": "ENTR 211",
+              "title": "Entrepreneurship Practicum II",
+              "credits": "2",
+              "courseId": 11258,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57009"
+            },
+            {
+              "code": "ENTR 301",
+              "title": "Social Entrepreneurship",
+              "credits": "4",
+              "courseId": 9888,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56610"
+            },
+            {
+              "code": "ENTR 302",
+              "title": "The Startup",
+              "credits": "4",
+              "courseId": 9786,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56608"
+            },
+            {
+              "code": "ENTR 303",
+              "title": "Small Business",
+              "credits": "4",
+              "courseId": 9887,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56609"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 62",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

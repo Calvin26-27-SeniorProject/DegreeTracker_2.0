@@ -1,0 +1,186 @@
+{
+  "id": "accounting-bsa",
+  "name": "Accounting, BSA",
+  "code": "ACCT.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science in Accounting"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13594",
+  "description": "Accounting is the means by which organizations communicate financial information. As a result, accounting is often called the \"language of business.\" Students completing an accounting major have a variety of career options from which to choose. Studying accounting includes learning about financial accounting—the reporting of an organization's financial information—and managerial accounting—the use of that data to measure the entity's performance and inform decisions about its future. An accounting major learns how organizations' financial records are prepared and maintained. Accounting includes the study of accounting systems, auditing, financial reporting and analysis, and taxation. The bachelor of science in accounting (BSA) degree is designed to be completed in four years. Students will have the opportunity to complete off-campus internships in various accounting roles. Students may continue their studies at Calvin in the Master of Accounting (MAcc) program to complete the educational requirements of the Certified Public Accountant (CPA) licensure. Overlap Policy This program may not be combined with the business minor. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "72",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 7871,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55886"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 7882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55897"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 7875,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 12133,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 7878,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "ACCT 301",
+          "title": "Intermediate Accounting I",
+          "credits": "4",
+          "courseId": 7787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55802"
+        },
+        {
+          "code": "ACCT 302",
+          "title": "Intermediate Accounting II",
+          "credits": "4",
+          "courseId": 7788,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55803"
+        },
+        {
+          "code": "ACCT 305",
+          "title": "Cost Accounting",
+          "credits": "4",
+          "courseId": 7789,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55804"
+        },
+        {
+          "code": "ACCT 306",
+          "title": "Income Tax",
+          "credits": "4",
+          "courseId": 7790,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55805"
+        },
+        {
+          "code": "ACCT 315",
+          "title": "Accounting Information Systems",
+          "credits": "4",
+          "courseId": 7791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55806"
+        },
+        {
+          "code": "ACCT 320",
+          "title": "Principles of Auditing",
+          "credits": "4",
+          "courseId": 10615,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56863"
+        },
+        {
+          "code": "BUS 350",
+          "title": "Business Law",
+          "credits": "4",
+          "courseId": 7867,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55882"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 72",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

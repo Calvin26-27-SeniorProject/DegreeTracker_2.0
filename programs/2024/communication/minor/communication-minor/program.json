@@ -1,0 +1,75 @@
+{
+  "id": "communication-minor",
+  "name": "Communication Minor",
+  "code": "CAS.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 737,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13115",
+  "description": null,
+  "totalHours": "18-20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 180",
+          "title": "Communicating with Digital Media",
+          "credits": "2",
+          "courseId": 18203,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53793"
+        },
+        {
+          "code": "COMM 200",
+          "title": "Advanced Oral Rhetoric",
+          "credits": "4",
+          "courseId": 18205,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53795"
+        },
+        {
+          "code": "COMM 201",
+          "title": "New Media",
+          "credits": "4",
+          "courseId": 18206,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53796"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 180",
+          "placement": "after",
+          "text": "OR COMM 190 - Media Production I"
+        },
+        {
+          "course": "COMM 200",
+          "placement": "after",
+          "text": "OR COMM 311 - Argumentation and Advocacy"
+        },
+        {
+          "course": "COMM 201",
+          "placement": "after",
+          "text": "8 hours of COMM electives (including one 300-level course)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18-20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

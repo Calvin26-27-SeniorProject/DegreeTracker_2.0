@@ -1,0 +1,230 @@
+{
+  "id": "asian-studies-minor",
+  "name": "Asian Studies Minor",
+  "code": "ASNST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 351,
+    "name": "Asian Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13587",
+  "description": "The advisor for this minor is W. Lee (Religion).",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 245",
+              "title": "East Asia to 1800",
+              "credits": "4",
+              "courseId": 8440,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56159"
+            },
+            {
+              "code": "HIST 346",
+              "title": "Modern China",
+              "credits": "4",
+              "courseId": 8457,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56176"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "REL 255",
+              "title": "World Religions",
+              "credits": "4",
+              "courseId": 9120,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56441"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 9131,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56452"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 9132,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56453"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take at Least 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTH 241",
+              "title": "Chinese Art History",
+              "credits": "2",
+              "courseId": 7798,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55813"
+            },
+            {
+              "code": "ARTH 243",
+              "title": "Japanese Art History",
+              "credits": "2",
+              "courseId": 11192,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56943"
+            },
+            {
+              "code": "CHIN 101",
+              "title": "Elementary Chinese I",
+              "credits": "4",
+              "courseId": 7931,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55945"
+            },
+            {
+              "code": "CHIN 102",
+              "title": "Elementary Chinese II",
+              "credits": "4",
+              "courseId": 7932,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55946"
+            },
+            {
+              "code": "CHIN 201",
+              "title": "Intermediate Chinese I",
+              "credits": "4",
+              "courseId": 7933,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55947"
+            },
+            {
+              "code": "CHIN 202",
+              "title": "Intermediate Chinese II",
+              "credits": "4",
+              "courseId": 7934,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55948"
+            },
+            {
+              "code": "COMM 381",
+              "title": "Topics in Film and Media History",
+              "credits": "4",
+              "courseId": 7903,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55917"
+            },
+            {
+              "code": "ECON 237",
+              "title": "Regional Economies of the World",
+              "credits": "2",
+              "courseId": 7981,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55996"
+            },
+            {
+              "code": "HIST 245",
+              "title": "East Asia to 1800",
+              "credits": "4",
+              "courseId": 8440,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56159"
+            },
+            {
+              "code": "HIST 346",
+              "title": "Modern China",
+              "credits": "4",
+              "courseId": 8457,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56176"
+            },
+            {
+              "code": "IDIS 220",
+              "title": "Chinese Medicine and Culture",
+              "credits": "2, 4",
+              "courseId": 10565,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56812"
+            },
+            {
+              "code": "KOR 101",
+              "title": "Elementary Korean I",
+              "credits": "4",
+              "courseId": 8610,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56229"
+            },
+            {
+              "code": "KOR 102",
+              "title": "Elementary Korean II",
+              "credits": "4",
+              "courseId": 8611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56230"
+            },
+            {
+              "code": "KOR 201",
+              "title": "Intermediate Korean I",
+              "credits": "4",
+              "courseId": 8612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56231"
+            },
+            {
+              "code": "KOR 202",
+              "title": "Intermediate Korean II",
+              "credits": "4",
+              "courseId": 8613,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56232"
+            },
+            {
+              "code": "POLS 277",
+              "title": "Asian Politics",
+              "credits": "4",
+              "courseId": 9452,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56573"
+            },
+            {
+              "code": "REL 353",
+              "title": "Islam",
+              "credits": "2",
+              "courseId": 9130,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56451"
+            },
+            {
+              "code": "REL 355",
+              "title": "Buddhism",
+              "credits": "2",
+              "courseId": 9131,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56452"
+            },
+            {
+              "code": "REL 356",
+              "title": "Confucianism",
+              "credits": "2",
+              "courseId": 9132,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56453"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

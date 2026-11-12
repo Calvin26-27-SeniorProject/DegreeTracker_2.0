@@ -1,0 +1,73 @@
+{
+  "id": "earth-and-space-science-education-minor",
+  "name": "Earth and Space Science Education Minor",
+  "code": "MIN_EARTH_EDUC",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 771,
+    "name": "Geology and Geography"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13277",
+  "description": "For teacher certification, this minor must be combined with the Science Education 5-9 Minor or the Science Education 7-12 Major.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ASTR 110",
+          "title": "Planets, Stars, and Galaxies",
+          "credits": "4",
+          "courseId": 17740,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53729"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 19210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+        },
+        {
+          "code": "GEO 152",
+          "title": "Historical Geology",
+          "credits": "3",
+          "courseId": 19231,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54019"
+        },
+        {
+          "code": "GEO 251",
+          "title": "Oceanography",
+          "credits": "3",
+          "courseId": 19235,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54023"
+        },
+        {
+          "code": "SCES 314",
+          "title": "Integration Methods and Pedagogies for Secondary Science Teachers",
+          "credits": "2",
+          "courseId": 20628,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54367"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

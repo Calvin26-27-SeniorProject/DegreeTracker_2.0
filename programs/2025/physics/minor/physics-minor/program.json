@@ -1,0 +1,94 @@
+{
+  "id": "physics-minor",
+  "name": "Physics Minor",
+  "code": "PHYS.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 368,
+    "name": "Physics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13629",
+  "description": "Higher-level physics courses may be substituted with the approval of the department.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHYS 130",
+          "title": "What Is the Universe? Astronomy Ancient to Modern",
+          "credits": "1.5",
+          "courseId": 11196,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56947"
+        },
+        {
+          "code": "PHYS 131",
+          "title": "Matter, Light, and Energy",
+          "credits": "1.5",
+          "courseId": 8810,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56332"
+        },
+        {
+          "code": "PHYS 133",
+          "title": "Introductory Physics: Mechanics and Gravity",
+          "credits": "3",
+          "courseId": 8811,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56333"
+        },
+        {
+          "code": "PHYS 195",
+          "title": "Physics and Astronomy Student Seminar",
+          "credits": "0",
+          "courseId": 8812,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56334"
+        },
+        {
+          "code": "PHYS 235",
+          "title": "Introductory Physics: Electricity and Magnetism",
+          "credits": "3",
+          "courseId": 8817,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56339"
+        },
+        {
+          "code": "PHYS 237",
+          "title": "Einstein's Theory of Relativity",
+          "credits": "1",
+          "courseId": 8818,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56340"
+        },
+        {
+          "code": "PHYS 246",
+          "title": "Waves, Optics, and Optical Technology",
+          "credits": "4",
+          "courseId": 8819,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56341"
+        },
+        {
+          "code": "PHYS 306",
+          "title": "Introduction to Quantum Physics",
+          "credits": "4",
+          "courseId": 8822,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56344"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: at least 21",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

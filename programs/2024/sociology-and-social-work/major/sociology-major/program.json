@@ -1,0 +1,194 @@
+{
+  "id": "sociology-major",
+  "name": "Sociology Major",
+  "code": "SOC.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 809,
+    "name": "Sociology and Social Work"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13088",
+  "description": "For admission to the major program, a student must complete SOC 151 with a minimum grade of C (2.0). Students who spend a semester in Washington, DC, may apply some of that work to a departmental major or minor.",
+  "totalHours": "34",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        },
+        {
+          "code": "SOC 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 20637,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+        },
+        {
+          "code": "SOC 255",
+          "title": "Social Science Statistics",
+          "credits": "4",
+          "courseId": 20639,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+        },
+        {
+          "code": "SOC 351",
+          "title": "Sociological Theory",
+          "credits": "4",
+          "courseId": 20645,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54384"
+        },
+        {
+          "code": "SOC 355",
+          "title": "Social Research",
+          "credits": "4",
+          "courseId": 20646,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54385"
+        },
+        {
+          "code": "SOC 395",
+          "title": "Sociology Integrative Seminar",
+          "credits": "2",
+          "courseId": 20649,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54388"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 14 Hours from the Following",
+          "description": "(At least 8 hours must be at the 300 level.)",
+          "courses": [
+            {
+              "code": "PSYC 310",
+              "title": "Social Psychology",
+              "credits": "4",
+              "courseId": 20261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54300"
+            },
+            {
+              "code": "SOC 130",
+              "title": "Introduction to Cultural Anthropology",
+              "credits": "4",
+              "courseId": 20635,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54374"
+            },
+            {
+              "code": "SOC 201",
+              "title": "Families",
+              "credits": "2",
+              "courseId": 20641,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54380"
+            },
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 20640,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+            },
+            {
+              "code": "SOC 203",
+              "title": "Sociology of Deviance",
+              "credits": "2",
+              "courseId": 20642,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54381"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            },
+            {
+              "code": "SOC 265",
+              "title": "Ethnography and Qualitative Research Methods",
+              "credits": "2",
+              "courseId": 21066,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54509"
+            },
+            {
+              "code": "SOC 301",
+              "title": "Gender and Sexuality in the United States",
+              "credits": "4",
+              "courseId": 21064,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54507"
+            },
+            {
+              "code": "SOC 302",
+              "title": "Sociology of Sport",
+              "credits": "2",
+              "courseId": 20644,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54383"
+            },
+            {
+              "code": "SOC 303",
+              "title": "Criminology",
+              "credits": "4",
+              "courseId": 20636,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54375"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 20643,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54382"
+            },
+            {
+              "code": "SOC 305",
+              "title": "Special Topics",
+              "credits": "2-4",
+              "courseId": 21065,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54508"
+            },
+            {
+              "code": "SOC 333",
+              "title": "Corrections and Incarceration",
+              "credits": "4",
+              "courseId": 22035,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54722"
+            },
+            {
+              "code": "SOC 380",
+              "title": "Internship in Sociology",
+              "credits": "4",
+              "courseId": 20647,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54386"
+            },
+            {
+              "code": "SOC 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 20648,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54387"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

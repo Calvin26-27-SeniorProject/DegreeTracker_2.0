@@ -1,0 +1,22 @@
+{
+  "id": "pre-professional-optometry",
+  "name": "Pre-professional: Optometry",
+  "code": "PROPT",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 829,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13087",
+  "description": "Students wishing to become optometrists complete a BA or BS degree at Calvin before entering optometry school to complete four additional years of study culminating in the doctor of optometry (OD) degree. Any student interested in applying to optometry programs should consult R. Bebej (Biology). A student may select nearly any major and still meet entrance requirements for most optometry programs. However, the majority of applicants to optometry programs are science majors. Prerequisite courses vary among optometry programs, and students should consult with R. Bebej, the School of Health advising office (pre-health@calvin.edu), and the website for the Association of Schools and Colleges of Optometry (opted.org) to confirm admission requirements at different schools. We recommend that students take the following courses to prepare for most optometry programs: BIOL 141 or BIOL 161; BIOL 205 or BIOL 323; BIOL 206 or BIOL 231-BIOL 331; BIOL 207 or BIOL 336; CHEM 101-CHEM 102; CHEM 240 or CHEM 241-CHEM 242; PHYS 221-PHYS 222 or PHYS 133-PHYS 235; STAT 143 or STAT 145; MATH 132 or MATH 171; and PSYC 151. Some schools may also recommend a business or economics course. Pre-optometry students take the Optometry Admission Test once they have completed the recommended coursework and determined when they have the time to fully prepare for the test. They should meet with the pre-optometry and pre-health advisors to learn more about shadowing and observation hour requirements, clinical experience, and other activities that strengthen their application. Calvin offers an elective course that identifies many of these requirements: IDIS 106 - Introduction to Health Professions .",
+  "totalHours": null,
+  "requirements": []
+}

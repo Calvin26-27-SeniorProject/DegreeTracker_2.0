@@ -1,0 +1,172 @@
+{
+  "id": "social-work-major-bsw",
+  "name": "Social Work Major, BSW",
+  "code": "SOWK.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Social Work"
+  ],
+  "department": {
+    "id": 372,
+    "name": "Sociology and Social Work"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13606",
+  "description": "The Bachelor of Social Work degree is designed for students who want to prepare for a career of Christian service as a professional generalist social worker. The program is carried out in the context of the mission of Calvin, which is to offer a Christian education enriched by the insights of the Reformed heritage. Upon completion of the program, students are prepared for entry-level professional social work positions. The BSW program is accredited by the Council on Social Work Education. Students who wish to pursue a BSW will normally apply to the director of social work by April 1 of their sophomore year. Decisions about admission to the program are made by the social work program committee and are based on the following criteria: Students must have earned at least 35 semester hours of credit and have completed PSYC 151, SOC 151, and SOWK 240 Students must have a minimum grade point average of 2.5 and a minimum grade of C- in each of the courses just specified Students must have completed at least 30 hours of social work volunteer or paid service (from no more than two settings) and submit a letter of reference from an appropriate supervisor Students must submit a written personal statement, which includes information about their commitment to social work as a vocation and their relative strengths and areas for development as potential professional social workers. The BSW is composed of twelve courses and several social science cognate requirements. The social work major includes courses in social work theory, practice skills, policy analysis, and research, along with a field education experience in a human service agency. Once admitted to the BSW program, students must apply separately to field education at the beginning of their junior year. Student retention and degree completion require a minimum grade of C- in all 200-level social work courses and a C or above in all 300-level social work courses. The core requirements include the liberal arts offerings required of all students, with SOC 151, PSYC 151, BIOL 115, and SOC 255/SOWK 255 required as social work cognates. A more detailed description of the BSW program is given in the Social Work Handbook, which can be obtained at the department office or online.",
+  "totalHours": "60",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOWK 240",
+          "title": "Introduction to Social Work and Social Welfare",
+          "credits": "2",
+          "courseId": 9156,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56478"
+        },
+        {
+          "code": "SOWK 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 9157,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56479"
+        },
+        {
+          "code": "SOWK 255",
+          "title": "Social Science Statistics",
+          "credits": "4",
+          "courseId": 9158,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56480"
+        },
+        {
+          "code": "SOWK 260",
+          "title": "Global Issues and Perspectives",
+          "credits": "2",
+          "courseId": 9159,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56481"
+        },
+        {
+          "code": "SOWK 350",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "4",
+          "courseId": 9161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56483"
+        },
+        {
+          "code": "SOWK 355",
+          "title": "Social Research",
+          "credits": "4",
+          "courseId": 9160,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56482"
+        },
+        {
+          "code": "SOWK 360",
+          "title": "Social Welfare Policy and Advocacy",
+          "credits": "4",
+          "courseId": 9162,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56484"
+        },
+        {
+          "code": "SOWK 370",
+          "title": "The Helping Interview",
+          "credits": "4",
+          "courseId": 9163,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56485"
+        },
+        {
+          "code": "SOWK 371",
+          "title": "Generalist Practice with Individuals",
+          "credits": "2",
+          "courseId": 9164,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56486"
+        },
+        {
+          "code": "SOWK 373",
+          "title": "Generalist Practice with Families and Groups",
+          "credits": "2",
+          "courseId": 9954,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56678"
+        },
+        {
+          "code": "SOWK 375",
+          "title": "Generalist Practice with Organizations and Communities",
+          "credits": "4",
+          "courseId": 9165,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56487"
+        },
+        {
+          "code": "SOWK 380",
+          "title": "Social Work Field Education",
+          "credits": "6, 12",
+          "courseId": 9166,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56488"
+        },
+        {
+          "code": "SOWK 381",
+          "title": "Social Work Capstone",
+          "credits": "4",
+          "courseId": 9167,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56489"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SOWK 380",
+          "placement": "right",
+          "text": "(12 hours total)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": "(These courses may fulfill Core requirements.)",
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 7832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+            },
+            {
+              "code": "PSYC 151",
+              "title": "Introductory Psychology: Perspectives on the Self",
+              "credits": "4",
+              "courseId": 8860,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+            },
+            {
+              "code": "SOC 151",
+              "title": "Sociological Principles and Perspectives",
+              "credits": "2",
+              "courseId": 9140,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Social Work Field Education",
+          "description": "All social work students must complete a 400-hour field education placement during their senior year. Field education opportunities are completed in Western Michigan or through the Washington, DC, Semester program. For more information, contact the social work field education director. See the SOWK 380 course description for further details.",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 60",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

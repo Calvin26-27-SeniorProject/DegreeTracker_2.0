@@ -1,0 +1,135 @@
+{
+  "id": "media-and-strategic-communication-ma",
+  "name": "Media and Strategic Communication, MA",
+  "code": "MEDIA.MA",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13743",
+  "description": "Program Director: K. Groenendyk The MA in Media and Strategic Communication program provides a unique combination of strategic communication principles, ethics, and creative media production skills for students entering applied communications careers in an era of ever-increasing media convergence. Students can take the program full time in 12 months, or part-time over two to four years. Students may apply to the program after successfully completing a four-year degree at an accredited academic institution. A cumulative grade point average of at least 3.0 in the last two years of undergraduate education is required to be admitted to the program. An early-admission, accelerated pathway is available for students currently in one of the undergraduate programs below. Interested students should contact the program advisor for more information. Applied Film and Media Major Digital Communication, BA Film and Media Major: Production Concentration, BA Film and Media Major: Studies Concentration, BA Strategic Communication, BA",
+  "totalHours": "32-34",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 500",
+          "title": "Basics of Media Production",
+          "credits": "1",
+          "courseId": 9940,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56664"
+        },
+        {
+          "code": "COMM 501",
+          "title": "Media Production Studio",
+          "credits": "1",
+          "courseId": 11223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56974"
+        },
+        {
+          "code": "COMM 510",
+          "title": "Storytelling across Media Platforms",
+          "credits": "3",
+          "courseId": 9941,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56665"
+        },
+        {
+          "code": "COMM 511",
+          "title": "Audience Research and Analytics",
+          "credits": "4",
+          "courseId": 9942,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56666"
+        },
+        {
+          "code": "COMM 512",
+          "title": "Communication Ethics",
+          "credits": "2",
+          "courseId": 9943,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56667"
+        },
+        {
+          "code": "COMM 513",
+          "title": "Communication Law",
+          "credits": "2",
+          "courseId": 11224,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56975"
+        },
+        {
+          "code": "COMM 520",
+          "title": "Advanced Public Relations",
+          "credits": "3",
+          "courseId": 9944,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56668"
+        },
+        {
+          "code": "COMM 521",
+          "title": "Advanced Advertising",
+          "credits": "3",
+          "courseId": 9945,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56669"
+        },
+        {
+          "code": "COMM 522",
+          "title": "Multimedia Journalism",
+          "credits": "3",
+          "courseId": 9946,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56670"
+        },
+        {
+          "code": "COMM 539",
+          "title": "Master's Project Proposal",
+          "credits": "2",
+          "courseId": 10573,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56820"
+        },
+        {
+          "code": "COMM 540",
+          "title": "Master's Project",
+          "credits": "1, 3",
+          "courseId": 9948,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56672"
+        },
+        {
+          "code": "COMM 550",
+          "title": "Skylight Media Agency",
+          "credits": "3",
+          "courseId": 9947,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56671"
+        },
+        {
+          "code": "COMM 551",
+          "title": "Skylight Production Studio",
+          "credits": "2",
+          "courseId": 11225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56976"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 501",
+          "placement": "right",
+          "text": "(corequisite with COMM 510, COMM 520, COMM 521, and COMM 522)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 32-34",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

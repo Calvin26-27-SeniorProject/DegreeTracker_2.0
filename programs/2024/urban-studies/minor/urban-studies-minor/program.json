@@ -1,0 +1,282 @@
+{
+  "id": "urban-studies-minor",
+  "name": "Urban Studies Minor",
+  "code": "URBST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 811,
+    "name": "Urban Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13082",
+  "description": "An interdisciplinary minor, urban studies focuses on urban issues and locates them within a Christian worldview. The minor consists of a curriculum of at least 18 semester hours. The only required course is SOC 202 - Urban Sociology ; remaining coursework will be dependent on the student's interests and choice of track. The minor includes four separate tracks to more specifically serve students of various majors and interests.",
+  "totalHours": "18-20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOC 202",
+          "title": "Urban Sociology",
+          "credits": "4",
+          "courseId": 20640,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54379"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One 12-Hour Track",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "Track 1: Urban Social Development",
+              "description": null,
+              "courses": [
+                {
+                  "code": "SOC 250",
+                  "title": "Diversity and Inequality in the United States",
+                  "credits": "4",
+                  "courseId": 20637,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+                },
+                {
+                  "code": "PHIL 207",
+                  "title": "Justice and the Common Good: Studies in Political Philosophy",
+                  "credits": "4",
+                  "courseId": 20193,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54232"
+                },
+                {
+                  "code": "HIST 356",
+                  "title": "American Social and Cultural History",
+                  "credits": "4",
+                  "courseId": 19279,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54068"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Track 2: The Built Environment",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ENST 210",
+                  "title": "Human Impacts on the Environment",
+                  "credits": "4",
+                  "courseId": 18791,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+                },
+                {
+                  "code": "GEO 310",
+                  "title": "Urban Geography",
+                  "credits": "4",
+                  "courseId": 19221,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54009"
+                },
+                {
+                  "code": "GEO 351",
+                  "title": "City and Regional Planning",
+                  "credits": "2",
+                  "courseId": 19223,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54011"
+                },
+                {
+                  "code": "GEO 352",
+                  "title": "Sustainable Communities",
+                  "credits": "2",
+                  "courseId": 19224,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54012"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Track 3: Urban Policy",
+              "description": "Take 12 hours from the following:",
+              "courses": [
+                {
+                  "code": "ECON 230",
+                  "title": "Urban Development Economics",
+                  "credits": "2",
+                  "courseId": 18700,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53890"
+                },
+                {
+                  "code": "POLS 202",
+                  "title": "Democracy in America: State and Federal Government",
+                  "credits": "2",
+                  "courseId": 20230,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54269"
+                },
+                {
+                  "code": "POLS 204",
+                  "title": "Democracy in America: State and Local Government",
+                  "credits": "2",
+                  "courseId": 22593,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54889"
+                },
+                {
+                  "code": "POLS 226",
+                  "title": "Contemporary Issues in US Urban Politics",
+                  "credits": "2",
+                  "courseId": 22603,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54900"
+                },
+                {
+                  "code": "SOWK 360",
+                  "title": "Social Welfare Policy Analysis",
+                  "credits": "2",
+                  "courseId": 20656,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54395"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Track 4: Urban Education",
+              "description": null,
+              "courses": [
+                {
+                  "code": "EDUC 240",
+                  "title": "The Social Context of Education",
+                  "credits": "4",
+                  "courseId": 22606,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54903"
+                },
+                {
+                  "code": "EDUC 241",
+                  "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+                  "credits": "4",
+                  "courseId": 22308,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "EDUC 241",
+                  "placement": "after",
+                  "text": "an additional 4 hours of advisor-approved electives"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ECON 230",
+              "title": "Urban Development Economics",
+              "credits": "2",
+              "courseId": 18700,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53890"
+            },
+            {
+              "code": "ENST 210",
+              "title": "Human Impacts on the Environment",
+              "credits": "4",
+              "courseId": 18791,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+            },
+            {
+              "code": "GEO 310",
+              "title": "Urban Geography",
+              "credits": "4",
+              "courseId": 19221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54009"
+            },
+            {
+              "code": "GEO 351",
+              "title": "City and Regional Planning",
+              "credits": "2",
+              "courseId": 19223,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54011"
+            },
+            {
+              "code": "GEO 352",
+              "title": "Sustainable Communities",
+              "credits": "2",
+              "courseId": 19224,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54012"
+            },
+            {
+              "code": "HIST 356",
+              "title": "American Social and Cultural History",
+              "credits": "4",
+              "courseId": 19279,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54068"
+            },
+            {
+              "code": "PHIL 207",
+              "title": "Justice and the Common Good: Studies in Political Philosophy",
+              "credits": "4",
+              "courseId": 20193,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54232"
+            },
+            {
+              "code": "POLS 202",
+              "title": "Democracy in America: State and Federal Government",
+              "credits": "2",
+              "courseId": 20230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54269"
+            },
+            {
+              "code": "POLS 204",
+              "title": "Democracy in America: State and Local Government",
+              "credits": "2",
+              "courseId": 22593,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54889"
+            },
+            {
+              "code": "POLS 226",
+              "title": "Contemporary Issues in US Urban Politics",
+              "credits": "2",
+              "courseId": 22603,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54900"
+            },
+            {
+              "code": "SOC 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 20637,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+            },
+            {
+              "code": "SOWK 360",
+              "title": "Social Welfare Policy Analysis",
+              "credits": "2",
+              "courseId": 20656,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54395"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18-20",
+      "description": "Special topics courses and independent studies are allowed with the permission of the urban studies minor committee. Substitutions for specific classes may also be allowed with the permission of the committee. Students may also receive credit for internships and off-campus programs for up to 6 hours. To receive such credit, a student must receive prior approval from the urban studies minor committee.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}
