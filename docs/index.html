@@ -175,6 +175,18 @@
     .topbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .header-actions { display: flex; align-items: center; gap: 6px; }
     body[data-view="upload"] .header-actions { display: none; }
+
+    /* "Show grades": grades are hidden until it's on (body[data-grades="on"]). Every
+       grade the app shows is in a .grade element, or the courses table's .grade-col. */
+    body:not([data-grades="on"]) .grade, body:not([data-grades="on"]) .grade-col { display: none !important; }
+    .grades-toggle { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px 6px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); cursor: pointer; }
+    .grades-toggle:hover { border-color: var(--line-strong, #cbd5e1); color: var(--ink); }
+    .grades-toggle .switch { position: relative; width: 30px; height: 18px; border-radius: 999px; background: #cbd5e1; transition: background 0.15s; }
+    .grades-toggle .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 999px; background: #fff; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.25); transition: transform 0.15s; }
+    .grades-toggle[aria-pressed="true"] { color: var(--maroon); border-color: var(--maroon-line, #f0c9d3); }
+    .grades-toggle[aria-pressed="true"] .switch { background: var(--maroon); }
+    .grades-toggle[aria-pressed="true"] .switch::after { transform: translateX(12px); }
+    @media (prefers-reduced-motion: reduce) { .grades-toggle .switch, .grades-toggle .switch::after { transition: none; } }
     .icon-button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--maroon); cursor: pointer; }
     .icon-button:hover { background: var(--maroon-bg); border-color: var(--maroon-line, #f0c9d3); }
 
@@ -214,6 +226,17 @@
     .dash-source { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
     .dash-open { margin-top: 10px; font-size: 13px; }
     .programs-note { margin: 18px 2px 0; font-size: 13px; color: var(--muted); }
+
+    /* Major/Minor summary: satisfied | in progress | not satisfied, left to right. */
+    .status-columns { display: grid; gap: 14px; margin-top: 10px; }
+    @media (min-width: 760px) { .status-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; } }
+    .status-column { padding: 10px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+    .status-column-title { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--ink); }
+    .status-column.is-done .dot { color: #059669; }
+    .status-column.is-progress .dot { color: #0284c7; }
+    .status-column.is-todo .dot { color: #94a3b8; }
+    .status-column .summary-chips { grid-template-columns: minmax(0, 1fr); }
+    .status-column-empty { margin: 0; font-size: 13px; color: var(--muted); }
 
     /* A program checked against its catalog page (catalog/programs/): sections,
        each requirement's course options, missing labs, and what isn't checked. */
@@ -471,6 +494,9 @@
         </label>
         <span class="unofficial">Unofficial</span>
         <div class="header-actions">
+          <button type="button" class="grades-toggle" id="grades-toggle" aria-pressed="false" hidden>
+            <span class="switch" aria-hidden="true"></span>Show grades
+          </button>
           <button type="button" class="icon-button" id="back-button" aria-label="Upload a different file" title="Upload a different file">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 18v-6"/><path d="M9.5 14.5L12 12l2.5 2.5"/></svg>
           </button>

@@ -173,7 +173,7 @@ describe('the app shows Workday checks', () => {
   });
   it('a failing grade is listed as not counted', () => {
     const doc = render(run([makeCourse('REL 121', 4, { grade: 'W' })]));
-    assert.match(doc.querySelector('.callout-warn').textContent, /REL 121.*grade W/);
+    assert.match(doc.querySelector('.callout-warn').textContent, /REL 121.*isn’t counted toward any requirement: its grade \(W\) doesn’t earn credit/);
     assert.match(doc.querySelector('.transcript').textContent, /not counted \(grade W\)/);
   });
 });

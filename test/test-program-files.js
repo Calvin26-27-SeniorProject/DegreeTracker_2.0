@@ -189,6 +189,21 @@ describe('the Major tab and Overview with a checked program', () => {
     assert.equal(cells(lab), 'ENGR 220L | Lab for ENGR 220 | Not on your record');
   });
 
+  it('puts the summary’s requirements in three columns: satisfied, in progress, not satisfied', () => {
+    const root = newRoot();
+    const result = checkProgram(bcs, [course('CS 212'), course('CS 108', { hours: 3, status: 'in-progress' }),
+      course('CS 108L', { hours: 1, status: 'in-progress' }), course('CS 195', { hours: 0 })]);
+    renderPrograms(root, { groups: [groups[0]], hasInput: true, kind: 'major', checks: new Map([[groups[0].name, { program: bcs, result }]]) });
+    const columns = [...root.querySelectorAll('.status-column')].map(col => [
+      col.querySelector('.status-column-title').textContent,
+      [...col.querySelectorAll('.chip-name')].map(e => e.textContent),
+    ]);
+    assert.deepEqual(columns.map(([title]) => title), ['Satisfied (1)', 'In progress (2)', `Not satisfied (${result.total - 3})`]);
+    assert.deepEqual(columns[0][1], ['CS 212']);
+    assert.deepEqual(columns[1][1], ['CS 108 and CS 108L', 'CS 195 (3 semesters)']);
+    assert.ok(columns[2][1].includes('CS 112 and CS 112L'));
+  });
+
   it('lists a lab as its own row under its lecture, with its title and hours from the record', () => {
     const root = newRoot();
     renderPrograms(root, { groups: [groups[0]], hasInput: true, kind: 'major', checks });

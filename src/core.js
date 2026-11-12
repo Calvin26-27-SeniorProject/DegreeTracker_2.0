@@ -237,8 +237,9 @@ export function parseProgress(text) {
 // Also returns `programs`, for the Major & minor page: one per requirement table, in
 // order, named from the export's "Program of Study" summary (the tables follow it
 // in the same order; names stay null if the counts differ):
-//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours }] }] }]
-// Workday's wording, verbatim; no grades. Courses and workdayStatus don't depend on it.
+//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours, grade }] }] }]
+// Workday's wording, verbatim (the app shows grades only when its "Show grades"
+// toggle is on). Courses and workdayStatus don't depend on it.
 export function parseProgressRows(rows) {
   const records = [];
   let cols = null;
@@ -285,7 +286,7 @@ export function parseProgressRows(rows) {
     });
     const name = cleanRequirementName(get('requirement'));
     if (!table.has(name)) table.set(name, { name, status: get('status'), remaining: get('remaining') || null, items: [] });
-    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null });
+    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null, grade: get('grade') || null });
   }
   const named = summary.length === tables.length;
   const programs = tables.map((t, i) => ({ name: named ? summary[i].name : null,
@@ -625,8 +626,8 @@ export function findProgram(programs, name, catoid) {
 // courseGroups ("Take 10 hours from") count hours, labs included. Minimum
 // grades and manualRequirements aren't checked.
 // matched lists the student's courses that count, labs as their own entries
-// (lab: true), with the title and hours from the student's record.
-//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, lab? }], missingLabs, hours?, ... }], done, inProgress, total }
+// (lab: true), with the title, hours, and grade from the student's record.
+//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?, ... }], done, inProgress, total }
 export function checkProgram(program, courses) {
   const byCode = new Map();
   for (const c of courses) {
@@ -651,7 +652,7 @@ export function checkProgram(program, courses) {
     const own = byCode.get(code);
     if (!own) return [];
     const lab = labOf(code);
-    const entry = (c, isLab) => ({ code: c.code, status: state(c.code), title: c.title || null, hours: c.hours ?? null, ...(isLab && { lab: true }) });
+    const entry = (c, isLab) => ({ code: c.code, status: state(c.code), title: c.title || null, hours: c.hours ?? null, grade: c.grade || null, ...(isLab && { lab: true }) });
     return [entry(own, false), ...(lab && byCode.has(lab) ? [entry(byCode.get(lab), true)] : [])];
   };
 

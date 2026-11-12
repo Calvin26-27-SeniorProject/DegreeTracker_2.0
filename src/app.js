@@ -71,6 +71,13 @@ function setView(view) {
   if (view === 'results') highlightToc();
 }
 
+// "Show grades": off until the student turns it on. index.html hides every
+// .grade element unless body[data-grades="on"], so no re-render is needed.
+function setGradesShown(on) {
+  document.body.dataset.grades = on ? 'on' : 'off';
+  $('grades-toggle').setAttribute('aria-pressed', String(on));
+}
+
 // Page 2's tabs, in order. Each tab button (#tab-<name>) controls one panel;
 // index.html's CSS shows the panel for body[data-tab].
 const TABS = ['dashboard', 'core', 'major', 'minor'];
@@ -135,6 +142,8 @@ function update() {
   $('back-button').setAttribute('aria-label', backLabel);
   $('back-button').title = backLabel;
   $('clear-results').hidden = !analysis;
+  // Grades come with a read file or paste; browsing without courses has none.
+  $('grades-toggle').hidden = !analysis;
   return analysis;
 }
 
@@ -300,6 +309,7 @@ function init() {
   // Browsing without courses: the catalog's requirements, on the Calvin Core tab.
   $('browse-button').addEventListener('click', () => { setTab('core'); setView('results'); });
   $('back-button').addEventListener('click', () => setView('upload'));
+  $('grades-toggle').addEventListener('click', () => setGradesShown(document.body.dataset.grades !== 'on'));
   for (const t of TABS) $('tab-' + t).addEventListener('click', () => setTab(t));
   // The Overview cards' "See requirements" links open their tab.
   $('dashboard').addEventListener('click', e => {
@@ -368,6 +378,7 @@ function init() {
     state.openLists.clear();
     update();
     setTab('core');
+    setGradesShown(false);
     setView('upload');
   }
   $('clear-button').addEventListener('click', clearInput);

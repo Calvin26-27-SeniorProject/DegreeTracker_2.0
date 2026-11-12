@@ -27,17 +27,17 @@ describe('programs in the .xlsx export', () => {
       [['Computer Science, BCS', 2, 35], ['Entrepreneurship Minor', 2, 4]]);
   });
 
-  it('keeps Workday’s wording, status, remaining, and the courses applied, with no grades', () => {
+  it('keeps Workday’s wording, status, remaining, and the courses applied, with their grades', () => {
     const cs = sample().programs[0];
     const req = cs.requirements.find(r => r.name === '10 hours from: CS 300, 312, 320, 326, 332, 336, 338, 339, 354, 360, 361, 363, 372, 374, 375, 376; ENGR 304, 325 (minimum grade of C-)');
     assert.deepEqual([req.status, req.remaining, req.items], ['Not Satisfied', 'Minimum 10 Hour(s)', []]);
     const lab = cs.requirements.find(r => r.name === 'CS 108 and 108L (minimum grade of C-)');
     assert.deepEqual(lab.items, [
-      { text: 'CS 108 - Introduction to Computing (In Progress)', period: '2026 Fall', hours: 3 },
-      { text: 'CS 108L - Intro to Computing Lab (In Progress)', period: '2026 Fall', hours: 1 },
+      { text: 'CS 108 - Introduction to Computing (In Progress)', period: '2026 Fall', hours: 3, grade: null },
+      { text: 'CS 108L - Intro to Computing Lab (In Progress)', period: '2026 Fall', hours: 1, grade: null },
     ]);
     for (const p of sample().programs) for (const r of p.requirements) for (const i of r.items) {
-      assert.deepEqual(Object.keys(i), ['text', 'period', 'hours']);
+      assert.deepEqual(Object.keys(i), ['text', 'period', 'hours', 'grade']);
     }
   });
 
@@ -119,7 +119,31 @@ describe('progress counts', () => {
       renderApp(root, { catalog, analysis });
       const p = coreProgress(catalog, analysis);
       assert.equal(root.querySelector('.summary h2').textContent, `${p.done} of ${p.total} requirements met`);
+      // The three columns hold the same requirements (K&U as one): satisfied, in progress, not satisfied.
+      const counts = [...root.querySelectorAll('.summary .status-column')].map(c => c.querySelectorAll('.summary-chip').length);
+      assert.deepEqual(counts, [p.done, p.inProgress, p.total - p.done - p.inProgress]);
     }
+  });
+});
+
+describe('grades on the Calvin Core tab, behind “Show grades”', () => {
+  const analysis = analyze(catalog.categories,
+    [makeCourse('CORE 100', 2, { grade: 'B+' }), makeCourse('REL 121', 4, { grade: 'F' })], { extraCourses: KNOWN_COURSE_CATEGORIES });
+  const root = newRoot();
+  renderApp(root, { catalog, analysis });
+
+  it('puts a taken course’s grade in a .grade element', () => {
+    const chip = root.querySelector('[data-code="CORE 100"] .chip-taken');
+    assert.equal(chip.querySelector('.grade').textContent, ' · B+');
+    chip.querySelector('.grade').remove();
+    assert.equal(chip.textContent, 'Taken · 2 hrs');
+  });
+
+  it('marks the courses table’s Grade column, and reads well with the grade hidden', () => {
+    assert.ok([...root.querySelectorAll('th')].find(th => th.textContent === 'Grade').classList.contains('grade-col'));
+    const warning = [...root.querySelectorAll('li')].find(li => /^REL 121.*isn’t counted toward any requirement/.test(li.textContent));
+    warning.querySelector('.grade').remove();
+    assert.match(warning.textContent, /isn’t counted toward any requirement: its grade doesn’t earn credit\.$/);
   });
 });
 
@@ -146,10 +170,15 @@ describe('renderPrograms (Major and Minor pages)', () => {
     assert.equal(entr.querySelectorAll('.program-items li').length, 3);
   });
 
-  it('shows no grades', () => {
+  it('puts every grade in a .grade element, which the page hides until “Show grades” is on', () => {
+    const graded = [{ name: 'Physics Minor', satisfied: null, total: null, requirements: [
+      { name: 'PHYS 133', status: 'Satisfied', remaining: null, items: [{ text: 'PHYS 133 - Mechanics', period: '2025 Fall', hours: 3, grade: 'B+' }] },
+    ] }];
     const root = newRoot();
-    renderPrograms(root, { groups, hasInput: true, kind: 'major' });
-    assert.doesNotMatch(root.textContent, /Grade|\b[ABCDF][+-]?\s*\(\d\.\d+\)/);
+    renderPrograms(root, { groups: graded, hasInput: true, kind: 'minor' });
+    assert.deepEqual([...root.querySelectorAll('.grade')].map(e => e.textContent), [' · B+']);
+    for (const e of root.querySelectorAll('.grade')) e.remove();
+    assert.doesNotMatch(root.textContent, /B\+/);
   });
 
   it('says what to do when there’s nothing to show', () => {

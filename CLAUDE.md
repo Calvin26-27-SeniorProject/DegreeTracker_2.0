@@ -132,6 +132,7 @@ npm run generate-schedule       # re-generate schedule/sections.json from schedu
 
 ## Grades and repeats
 
+- "Show grades" (header, page 2, once courses are read): off by default and after Clear. Every grade the app shows is in a `.grade` element (or the courses table's `.grade-col`), hidden unless `body[data-grades="on"]`, so toggling needs no re-render; wording around a grade must read well without it. Program listings and `checkProgram` results carry `grade` for this. The developer test case and bug report keep their coarse A/D/F grades.
 - `NON_PASSING_GRADES` (catalog: F, I, W, N, NR) count toward nothing (`analysis.notCounted`, listed in the warning box and the course table). A completed incomplete is "I" + its grade (`IA-`) and counts as that grade (so `IF` doesn't). Transfer CR counts.
 - A repeated course's later attempt wins: by academic period in Academic Progress, else the later listing.
 
