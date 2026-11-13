@@ -57,6 +57,37 @@ function periodRank(period) {
   return +m[1] * 10 + TERM_ORDER[m[2].toLowerCase()];
 }
 
+// The period a student started in: the earliest period of a course on the
+// record, leaving out transfer credit and exemptions (which can predate
+// Calvin). records: courseAttempts or courses. null when none has a period.
+export function startPeriod(records) {
+  let best = null;
+  for (const c of records || []) {
+    if (c.status === 'transfer' || c.status === 'exemption') continue;
+    const rank = periodRank(c.period);
+    if (rank !== null && (best === null || rank < best.rank)) best = { rank, period: c.period };
+  }
+  return best?.period ?? null;
+}
+
+// The academic year (its fall's calendar year) a period belongs to: "2024 Fall"
+// and "2024 Summer" (before that fall) → 2024; "2025 Interim", "2025 Spring" → 2024.
+export function academicYearOf(period) {
+  const m = (period || '').match(/^(\d{4})\s+(\w+)$/);
+  if (!m || !(m[2].toLowerCase() in TERM_ORDER)) return null;
+  return TERM_ORDER[m[2].toLowerCase()] >= TERM_ORDER.summer ? +m[1] : +m[1] - 1;
+}
+
+// The catalog for a student who started in `period`: the one for that
+// academic year, or the newest one older than it; one who started before every
+// catalog here gets the oldest. metas: catalog _meta objects ({ catoid,
+// catalogYear: "2025-26" }), newest first. null without a usable period.
+export function catalogForStart(metas, period) {
+  const year = academicYearOf(period);
+  if (year === null || !metas.length) return null;
+  return metas.find(m => parseInt(m.catalogYear, 10) <= year) || metas[metas.length - 1];
+}
+
 // Category an exemption satisfies, from its name ("Language Exemption") or the
 // requirement Workday lists it under ("World Languages I Core" for a
 // "High School Exemption").
@@ -618,6 +649,91 @@ export function programRequirements(input) {
   return groups.map(g => ({ ...g, requirements: g.requirements.filter(shown) })).filter(g => g.requirements.length);
 }
 
+// ========== WORKDAY REQUIREMENT NAMES → COURSES ==========
+// The courses a Workday requirement's name lists, for a program this tool has
+// no file for (the Major and Minor pages show them as course rows). Notes in
+// parentheses are dropped; a bare number takes the subject before it ("MATH
+// 161 or 162", "CS 108 and 108L"). Returns null when the name lists no course,
+// else { kind, options, codes }:
+//   'single'    "PSYC 244": [['PSYC 244']]
+//   'all'       "CS 396 and 398": [['CS 396', 'CS 398']]
+//   'any'       "BIOL 123 or both BIOL 160 and 161": [['BIOL 123'], ['BIOL 160', 'BIOL 161']]
+//   'list'      "10 hours from: CS 300, 312; ENGR 304": one option per course
+//   'mentioned' anything else naming courses ("any CS 300-level course except
+//               CS 312"): one option per course, with no claim about how they
+//               combine.
+// An Or/And reading is given only when every word in the name is understood;
+// "and" binds tighter than "or" only where that can't be misread: after "both"
+// ("or both BIOL 160 and 161") or for a course and its lab ("CS 108 and 108L").
+export function workdayRequirementCourses(name) {
+  const text = (name || '').replace(/\([^()]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+  const tokens = [];
+  const re = /\b([A-Z]{2,5}) (\d{3}[A-Z]?)(?![\w-])|\b(\d{3}[A-Z]?)(?![\w-])|(\d+)|([A-Za-z]+)|(\S)/g;
+  let subject = null;
+  for (let m; (m = re.exec(text));) {
+    if (m[1]) { subject = m[1]; tokens.push({ code: `${m[1]} ${m[2]}` }); }
+    else if (m[3]) tokens.push(subject ? { code: `${subject} ${m[3]}` } : { other: m[3] });
+    else if (m[4]) tokens.push({ num: m[4] });
+    else if (m[5]) tokens.push({ word: m[5].toLowerCase() });
+    else tokens.push({ sep: m[6] });
+  }
+  // An Oxford comma ("A, B, or C") is the "or" after it.
+  for (let i = tokens.length - 2; i >= 0; i--) {
+    if (tokens[i].sep === ',' && ['and', 'or'].includes(tokens[i + 1].word)) tokens.splice(i, 1);
+  }
+  const codes = [...new Set(tokens.filter(t => t.code).map(t => t.code))];
+  if (!codes.length) return null;
+  const one = list => list.map(code => [code]);
+  const mentioned = { kind: 'mentioned', options: one(codes), codes };
+  const is = (t, ...words) => words.includes(t.word) || words.includes(t.sep);
+
+  // "10 hours from: A, B; C", "One of the following: A, B, or C".
+  const at = tokens.findIndex(t => is(t, 'from', ':'));
+  if (at >= 0 && !tokens.slice(0, at).some(t => t.code)) {
+    const prefixOk = tokens.slice(0, at).every(t => t.num || is(t, 'take', 'one', 'two', 'three', 'four', 'hours', 'hour', 'course', 'courses', 'of', 'the', 'following'));
+    const rest = tokens.slice(at + 1).filter(t => !is(t, ':', 'the', 'following'));
+    const restOk = rest.every(t => t.code || is(t, ',', ';', 'and', 'or'));
+    return prefixOk && restOk ? { kind: 'list', options: one(codes), codes } : mentioned;
+  }
+
+  // An expression of courses joined by "and", "or", "/", and commas.
+  if (!tokens.every(t => t.code || is(t, 'and', 'or', 'both', 'either', ',', '/', '&'))) return mentioned;
+  const has = (...w) => tokens.some(t => is(t, ...w));
+  const hasOr = has('or', '/');
+  const hasAnd = has('and', '&');
+  if (has(',') && hasOr && hasAnd) return mentioned;
+  // Commas join like the word they sit with: "A, B, or C"; "A, B and C".
+  const orSep = t => is(t, 'or', '/') || (is(t, ',') && hasOr);
+  const parts = [[]];
+  for (const t of tokens) {
+    if (orSep(t)) parts.push([]);
+    else parts.at(-1).push(t);
+  }
+  const options = [];
+  for (const [i, part] of parts.entries()) {
+    const words = part.filter(t => !t.code);
+    // Codes and joiners alternate, starting and ending with a code (after an
+    // opening "both" or, first of all, "either").
+    let body = part;
+    if (body[0] && is(body[0], 'either') && i === 0) body = body.slice(1);
+    const both = body[0] && is(body[0], 'both');
+    if (both) body = body.slice(1);
+    if (!body.length || !body[0].code || !body.at(-1).code) return mentioned;
+    for (let j = 1; j < body.length; j++) if (!body[j].code === !body[j - 1].code) return mentioned;
+    if (body.some(t => is(t, 'either', 'both'))) return mentioned;
+    const option = body.filter(t => t.code).map(t => t.code);
+    if (both && option.length !== 2) return mentioned;
+    if (words.length && parts.length > 1 && option.length > 1 && !both) {
+      // "and" inside an "or": only a course with its lab can't be misread.
+      const lab = option.length === 2 && option[1] === option[0] + 'L';
+      if (!lab) return mentioned;
+    }
+    options.push(option);
+  }
+  if (options.length === 1) return { kind: options[0].length === 1 ? 'single' : 'all', options, codes };
+  return { kind: 'any', options, codes };
+}
+
 // ========== PROGRAM CHECKS (majors, minors) ==========
 // Program files (programs/<year>/<department>/<type>/<program>/<id>-<catoid>.json)
 // hold one program's requirements from one catalog year, checked against that year's catalog page
@@ -625,6 +741,57 @@ export function programRequirements(input) {
 // and the selected catalog year.
 export function findProgram(programs, name, catoid) {
   return programs.find(p => p.programName === name && p.catoid === catoid) || null;
+}
+
+// A program as a student is checked against it. `base` is the file for the
+// catalog year they started in: its requirements, hours, and labels are theirs.
+// The course options shown are the newest catalog's for the same requirement
+// (same id, or the one an older requirement names as `currentId`), so a course
+// since renamed or dropped (BCS's CS 364, now CS 360, 361, 363) isn't offered.
+// A requirement the newest catalog doesn't have keeps its own options, less the
+// file's `retiredCourses` (courses the newest catalog no longer lists). Any
+// course any year lists for the requirement still counts, and checkProgram
+// shows it when it's on the record. years: every file of this program, newest
+// first (base among them).
+export function programForStudent(base, years) {
+  const newest = years[0] || base;
+  const reqs = p => p.requirements || [];
+  const groups = p => p.courseGroups || [];
+  const optionsOf = r => r.alternatives || r.codes.map(code => [code]);
+  const retired = new Set(base.retiredCourses || []);
+  const keyOf = option => option.join('+');
+  const uniqueOptions = list => {
+    const seen = new Set();
+    return list.filter(o => !seen.has(keyOf(o)) && seen.add(keyOf(o)));
+  };
+  // Every year's version of a requirement: the same id, or where an older
+  // file's requirement points with currentId.
+  const versions = (list, r) => years.flatMap(p => list(p).filter(x => x.id === r.id || x.id === r.currentId || x.currentId === r.id));
+  const current = (list, r) => list(newest).find(x => x.id === (r.currentId || r.id));
+  const merge = key => Object.assign({}, ...[...years].reverse().map(p => p[key] || {}));
+  return {
+    ...base,
+    labs: merge('labs'),
+    titles: merge('titles'),
+    // Newest first, for course titles and catalog links.
+    catoids: [...new Set(years.map(p => p.catoid))],
+    optionsCatalogYear: newest.catalogYear,
+    requirements: reqs(base).map(r => {
+      const now = current(reqs, r);
+      let shown = now ? optionsOf(now) : optionsOf(r).filter(o => !o.some(code => retired.has(code)));
+      if (!shown.length) shown = optionsOf(r);
+      const all = uniqueOptions([...shown, ...optionsOf(r), ...versions(reqs, r).flatMap(optionsOf)]);
+      return { ...r, alternatives: all, shownOptions: shown };
+    }),
+    courseGroups: groups(base).map(g => {
+      const now = current(groups, g);
+      const shownCodes = (now || g).courses.map(c => c.code).filter(code => now || !retired.has(code));
+      const seen = new Set();
+      const courses = [...(now?.courses || []), ...g.courses, ...versions(groups, g).flatMap(v => v.courses)]
+        .filter(c => !seen.has(c.code) && seen.add(c.code));
+      return { ...g, courses, shownCodes };
+    }),
+  };
 }
 
 // A program's requirements checked against a student's courses (as parsed:
@@ -636,6 +803,10 @@ export function findProgram(programs, name, catoid) {
 // that many completed semesters, in progress with fewer. Which semesters isn't
 // checked. courseGroups ("Take 10 hours from") count hours, labs included.
 // Minimum grades and manualRequirements aren't checked.
+// Every option counts (r.alternatives / g.courses, from every catalog year with
+// programForStudent); options lists the ones shown: r.shownOptions (default
+// all) and any other the student has a course in. retired lists the codes
+// shown only because they're on the record (not among the shown options).
 // matched lists the student's courses that count, labs as their own entries
 // (lab: true), with the title, hours and grade from the student's record.
 //   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?,
@@ -708,8 +879,14 @@ export function checkProgram(program, courses, courseAttempts = []) {
       occurrences = { required: r.requiredOccurrences, completed, inProgress, terms };
       status = completed >= r.requiredOccurrences ? 'done' : terms.length ? 'progress' : 'todo';
     }
+    const shown = r.shownOptions || options;
+    const shownKeys = new Set(shown.map(o => o.join('+')));
+    const shownCodes = new Set(shown.flat());
+    const onRecord = o => o.some(code => state(code) || (r.requiredOccurrences && courseAttempts.some(c => c.code === code)));
+    const listed = [...shown, ...options.filter(o => !shownKeys.has(o.join('+')) && onRecord(o))];
+    const retired = [...new Set(listed.flat().filter(code => !shownCodes.has(code)))];
     items.push({ kind: 'requirement', id: r.id, section: r.section, label: r.label, credits: r.credits,
-      note: r.note || null, waivable: !!r.manualWhenMissing, options, status, matched, missingLabs, occurrences });
+      note: r.note || null, waivable: !!r.manualWhenMissing, options: listed, status, matched, missingLabs, occurrences, retired });
   }
   for (const g of program.courseGroups || []) {
     let doneHours = 0;
@@ -727,8 +904,11 @@ export function checkProgram(program, courses, courseAttempts = []) {
       matched.push(...records(code));
     }
     const status = doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
+    const shownCodes = new Set(g.shownCodes || g.courses.map(c => c.code));
+    const listed = g.courses.filter(c => shownCodes.has(c.code) || state(c.code));
     items.push({ kind: 'group', id: g.id, section: g.section, label: g.label, note: g.note || null,
-      minHours: g.minHours, hours: doneHours, inProgressHours: progressHours, courses: g.courses, status, matched, missingLabs });
+      minHours: g.minHours, hours: doneHours, inProgressHours: progressHours, courses: listed, status, matched, missingLabs,
+      retired: listed.map(c => c.code).filter(code => !shownCodes.has(code)) });
   }
   return {
     items,

@@ -3,7 +3,7 @@
 // into jsdom. Catalog text (names, instructions, course titles) is shown
 // verbatim; test/test-app-fidelity.js compares it against the saved catalog HTML.
 
-import { classifyInstructions, doubleCountConfirmed, KU_NAMES } from './core.js';
+import { classifyInstructions, doubleCountConfirmed, KU_NAMES, workdayRequirementCourses, isNonPassingGrade } from './core.js';
 import { coarseGrade } from './test-case.js';
 
 const CATALOG_ORIGIN = 'https://catalog.calvin.edu';
@@ -84,15 +84,40 @@ function offeredSectionsList(h, { schedule, openLists = new Map(), onListToggle 
 
 // The chevron that collapses a requirement card to its header. The open state
 // is kept under `key` so a re-render keeps it.
+// The button carries its key (data-collapse-key) so a copy of it can be wired
+// again (the Overview copies the Major and Minor summaries).
+const COLLAPSIBLE = '.req, .overview-block, .summary-status-group';
 function collapseButton(h, name, expanded, key, onListToggle) {
   return h('button', { type: 'button', class: 'req-collapse', 'aria-expanded': String(expanded),
-    'aria-label': `Show or hide ${name}`, title: 'Show or hide details',
+    'aria-label': `Show or hide ${name}`, title: 'Show or hide details', dataset: { collapseKey: key },
     onclick: e => {
-      const card = e.currentTarget.closest('.req');
+      const card = e.currentTarget.closest(COLLAPSIBLE);
       const nowExpanded = card.classList.toggle('is-collapsed') === false;
       e.currentTarget.setAttribute('aria-expanded', String(nowExpanded));
       onListToggle?.(key, nowExpanded);
     } });
+}
+
+// A Major or Minor summary's chips in three sections stacked top to bottom:
+// Not satisfied, In progress, Satisfied (what's left to take first), each with
+// its count and a chevron that folds it. A section with no chips is left out.
+// Satisfied starts folded, the others open, unless openLists says otherwise
+// (key "summary:<keyPrefix>:<status>").
+// chips: [{ status: 'done' | 'min' | 'todo', node }], node an <a class="summary-chip">.
+const SUMMARY_STATUS = [['todo', 'Not satisfied'], ['min', 'In progress'], ['done', 'Satisfied']];
+export const summaryOpenByDefault = status => status !== 'done';
+function statusSections(h, chips, keyPrefix, openLists, onListToggle) {
+  return h('div', { class: 'summary-status' }, SUMMARY_STATUS.map(([status, label]) => {
+    const mine = chips.filter(c => c.status === status);
+    if (!mine.length) return null;
+    const key = `summary:${keyPrefix}:${status}`;
+    const expanded = openLists.has(key) ? openLists.get(key) : summaryOpenByDefault(status);
+    return h('section', { class: `summary-status-group status-${status}` + (expanded ? '' : ' is-collapsed'), dataset: { status } },
+      h('header', { class: 'summary-status-header' },
+        h('h3', {}, label, h('span', { class: 'summary-status-count' }, ` (${mine.length})`)),
+        collapseButton(h, label, expanded, key, onListToggle)),
+      h('ul', { class: 'summary-chips' }, mine.map(c => h('li', {}, c.node))));
+  }));
 }
 
 function statusInfo(r) {
@@ -291,7 +316,9 @@ export function renderApp(root, state) {
               `${fmtHours(info.hoursEarned)} of max ${info.cap} hrs`) : null));
         }
       }
-      if (c.connectorBefore) {
+      // "Or" and "One from" are shown; courses taken together ("And") just sit
+      // side by side, as on the Major and Minor pages.
+      if (c.connectorBefore && c.connectorBefore !== 'And') {
         items.push(h('li', { class: 'course-connector', dataset: { kind: 'connector' } }, c.connectorBefore));
       }
       items.push(courseRow(cat, c, annByCode.get(c.code)));
@@ -721,12 +748,20 @@ function donut(doc, p, label) {
   return svg;
 }
 
-// Dashboard: progress donuts for everything, the core, and each major and minor.
-// state: { catalog, analysis, groups }
+// Dashboard: progress donuts for everything, the core, and each major and minor,
+// then below them each one's summary block from its own page (the tiles with
+// one chip per requirement), in a collapsible panel headed by its name.
+// state: { catalog, analysis, groups, checks, blocks, openLists, onListToggle, tabOf }
+// tabOf(g): the tab a program's "See requirements" opens (default 'major' / 'minor').
+// blocks: [{ id, kind: 'core' | 'major' | 'minor', title, node }] where node is
+// that page's rendered summary section; it's copied, not moved. A panel is
+// open unless openLists says otherwise (key "overview:<id>").
+const BLOCK_KIND_LABEL = { core: 'Core', major: 'Major', minor: 'Minor' };
 export function renderDashboard(root, state) {
   const doc = root.ownerDocument;
   const h = builder(doc);
-  const { catalog, analysis, groups = [], checks = new Map() } = state;
+  const { catalog, analysis, groups = [], checks = new Map(), blocks = [], openLists = new Map(), onListToggle,
+    tabOf = g => (isMinor(g) ? 'minor' : 'major') } = state;
   if (!analysis) {
     root.replaceChildren(h('p', { class: 'programs-empty' }, 'Upload your Academic Progress export to see your progress.'));
     return;
@@ -748,6 +783,34 @@ export function renderDashboard(root, state) {
     tab ? h('button', { type: 'button', class: 'link-button dash-open', dataset: { openTab: tab } }, 'See requirements →') : null);
   const majors = programs.filter(({ g }) => !isMinor(g));
   const minors = programs.filter(({ g }) => isMinor(g));
+  // A copied summary's section folds lose their handlers in the copy: wire them
+  // again, kept apart from the page's (key "overview:<id>:<the page's key>").
+  const copyOf = (id, node) => {
+    const copy = doc.importNode(node, true);
+    for (const button of copy.querySelectorAll('.summary-status-group .req-collapse')) {
+      const key = `overview:${id}:${button.dataset.collapseKey}`;
+      const expanded = openLists.has(key) ? openLists.get(key) : summaryOpenByDefault(button.closest('.summary-status-group').dataset.status);
+      button.closest('.summary-status-group').classList.toggle('is-collapsed', !expanded);
+      button.setAttribute('aria-expanded', String(expanded));
+      button.dataset.collapseKey = key;
+      button.addEventListener('click', e => {
+        const nowExpanded = e.currentTarget.closest(COLLAPSIBLE).classList.toggle('is-collapsed') === false;
+        e.currentTarget.setAttribute('aria-expanded', String(nowExpanded));
+        onListToggle?.(key, nowExpanded);
+      });
+    }
+    return copy;
+  };
+  const panel = ({ id, kind, title, node }) => {
+    const key = `overview:${id}`;
+    const expanded = openLists.has(key) ? openLists.get(key) : true;
+    return h('section', { class: 'overview-block' + (expanded ? '' : ' is-collapsed'), dataset: { kind } },
+      h('header', { class: 'overview-block-header' },
+        h('h3', {}, title),
+        h('span', { class: 'overview-block-kind' }, BLOCK_KIND_LABEL[kind]),
+        collapseButton(h, title, expanded, key, onListToggle)),
+      h('div', { class: 'overview-block-body' }, copyOf(id, node)));
+  };
   root.replaceChildren(
     h('section', { class: 'programs-intro' },
       h('h2', {}, 'Your progress'),
@@ -761,10 +824,33 @@ export function renderDashboard(root, state) {
         ? 'Calvin Core and checked programs by this tool’s reading; the rest by Workday’s status.'
         : 'Calvin Core by this tool’s reading; major and minor by Workday’s status.', null, ' is-overall'),
       card('Calvin Core', core, 'By this tool’s reading of the catalog. Workday may differ.', 'core'),
-      ...(majors.length ? majors.map(({ g, p, source }) => card(g.name || 'Major and other requirements', p, source, 'major'))
+      ...(majors.length ? majors.map(({ g, p, source }) => card(g.name || 'Major and other requirements', p, source, tabOf(g)))
         : [h('section', { class: 'dash-card is-empty' }, h('h3', {}, 'Major'), h('p', { class: 'dash-source' }, 'Workday doesn’t list a major in this record.'))]),
-      ...(minors.length ? minors.map(({ g, p, source }) => card(g.name, p, source, 'minor'))
-        : [h('section', { class: 'dash-card is-empty' }, h('h3', {}, 'Minor'), h('p', { class: 'dash-source' }, 'Workday doesn’t list a minor in this record.'))])));
+      ...(minors.length ? minors.map(({ g, p, source }) => card(g.name, p, source, tabOf(g)))
+        : [h('section', { class: 'dash-card is-empty' }, h('h3', {}, 'Minor'), h('p', { class: 'dash-source' }, 'Workday doesn’t list a minor in this record.'))])),
+    blocks.length ? h('div', { class: 'overview-blocks' }, blocks.map(panel)) : null);
+}
+
+// The Major and Minor tabs for a record: one tab per program Workday lists,
+// "Major" / "Minor" when there's one, "Major 1", "Major 2", ... when there are
+// more, and none of a kind the record doesn't list. Without a record (browsing
+// the catalog) there's one empty Major and one empty Minor tab.
+// Returns [{ id, kind, label, title, groups }], majors first; id is the tab's
+// name (body[data-tab]) and its panel's element id.
+export function programTabs(groups, hasInput) {
+  const tabs = [];
+  for (const kind of ['major', 'minor']) {
+    const label = kind === 'major' ? 'Major' : 'Minor';
+    const mine = groups.filter(g => isMinor(g) === (kind === 'minor'));
+    if (!mine.length) {
+      if (!hasInput) tabs.push({ id: kind, kind, label, title: label, groups: [] });
+      continue;
+    }
+    mine.forEach((g, i) => tabs.push(mine.length === 1
+      ? { id: kind, kind, label, title: g.name || label, groups: [g] }
+      : { id: `${kind}-${i + 1}`, kind, label: `${label} ${i + 1}`, title: g.name || `${label} ${i + 1}`, groups: [g] }));
+  }
+  return tabs;
 }
 
 // Major or Minor page, one block per program Workday lists. A program with a
@@ -772,13 +858,17 @@ export function renderDashboard(root, state) {
 // from findProgram/checkProgram in core.js) shows this tool's check of it, with
 // Workday's listing below for comparison. Others show Workday's listing only,
 // exactly as Workday lists it, under a summary box like the core's.
-// state: { groups, hasInput, kind: 'major' | 'minor', checks, schedule }
+// state: { groups, hasInput, kind: 'major' | 'minor', checks, schedule, idPrefix }
+// idPrefix (default kind) starts every element id, so two tabs' pages don't clash.
 const WORKDAY_STATUS_CLS = { Satisfied: 'done', 'In Progress': 'min', 'Not Satisfied': 'todo' };
 const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'] };
 export function renderPrograms(root, state) {
   const h = builder(root.ownerDocument);
   const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null,
-    openLists = new Map(), onListToggle, catalogCourses = new Map() } = state;
+    openLists = new Map(), onListToggle, catalogCourses = new Map(), idPrefix = kind,
+    courseIndex = new Map(), records = [] } = state;
+  // The student's courses that count, by code (no exemptions or failing grades).
+  const recordByCode = new Map(records.filter(c => c.code && c.status !== 'exemption' && !isNonPassingGrade(c.grade)).map(c => [c.code, c]));
   const listState = { schedule, openLists, onListToggle };
   const noun = kind === 'minor' ? 'minor' : 'major';
   if (!groups.length) {
@@ -789,7 +879,7 @@ export function renderPrograms(root, state) {
   }
   const workdayNote = h('p', { class: 'programs-note' },
     'Workday’s listings are shown as Workday lists them: this tool doesn’t check them, and Workday is the official record. Core requirements are on the Calvin Core tab; GPA requirements aren’t shown here.');
-  const slug = (g, i) => `${kind}-${groups.indexOf(g)}-req-${i}`;
+  const slug = (g, i) => `${idPrefix}-${groups.indexOf(g)}-req-${i}`;
 
   // Everything below is built from the same pieces as the Core page: a
   // .req-section per heading, a .req card per requirement, and a .course-list
@@ -818,33 +908,84 @@ export function renderPrograms(root, state) {
       flags.length ? h('span', { class: 'course-flags' }, flags) : null);
   }
 
-  // Workday's requirements for a program, verbatim.
+  // A course in a Workday requirement, as the checked rows show it: from the
+  // student's record when it's there (with the grade), else as Workday applied it.
+  const workdayCode = item => WORKDAY_ITEM_RE.exec(item.text)?.[1] ?? null;
+  function workdayMatched(codes, r) {
+    return codes.flatMap(code => {
+      const rec = recordByCode.get(code);
+      const item = r.items.find(it => workdayCode(it) === code);
+      const period = item?.period || rec?.period || null;
+      if (rec) return [{ code, status: rec.status === 'in-progress' ? 'progress' : 'done', title: rec.title || null, hours: rec.hours ?? null, grade: rec.grade || null, period }];
+      if (!item) return [];
+      const m = WORKDAY_ITEM_RE.exec(item.text);
+      return [{ code, status: m[3] ? 'progress' : 'done', title: m[2], hours: item.hours ?? null, grade: null, period }];
+    });
+  }
+
+  // The rows of a Workday requirement whose name lists courses
+  // (workdayRequirementCourses): one per course, like a checked program's (title,
+  // catalog hours and link, offered sections; green when on the record or
+  // applied by Workday), with Or between the ways to meet it and the courses of
+  // one way side by side, as on the Core page. A list ("10 hours
+  // from") or a name read only for its courses has no joiners. Whatever else
+  // Workday applied follows.
+  const NO_PROGRAM = { titles: {}, labs: {} };
+  function workdayCourses(r, parsed, id) {
+    const matched = workdayMatched(parsed.codes, r);
+    // A lab next to its lecture ("CS 108 and 108L") is drawn as the checked
+    // programs draw one: indented under it, "Not on your record" when only the
+    // lecture is.
+    const lectureOf = code => { const l = /^(.+ \d{3})L$/.exec(code)?.[1]; return l && parsed.codes.includes(l) ? l : null; };
+    const row = code => programCourse(NO_PROGRAM, new Map(), id, code, courseIndex.get(code)?.credits ?? null, matched, lectureOf(code));
+    const rows = parsed.kind === 'list' || parsed.kind === 'mentioned'
+      ? parsed.codes.map(row)
+      : parsed.options.flatMap((option, k) => [k ? connector('Or') : null, ...option.map(row)]);
+    const extra = r.items.filter(it => !parsed.codes.includes(workdayCode(it)));
+    const extraRows = extra.length ? [connector('Also applied in Workday'), ...extra.map(workdayItem)] : [];
+    const note = parsed.kind === 'mentioned'
+      ? h('p', { class: 'req-note' }, 'The courses this requirement names; see Workday for how they combine.') : null;
+    if (parsed.kind === 'single' || parsed.kind === 'all') return [note, h('ul', { class: 'course-list' }, rows, extraRows)];
+    const open = openLists.has(id) ? openLists.get(id) : r.status !== 'Satisfied' || matched.length > 0;
+    return [note, h('details', { class: 'course-options', open: open || null, ontoggle: e => onListToggle?.(id, e.target.open) },
+      h('summary', {}, `Course options (${parsed.codes.length})`),
+      h('ol', { class: 'course-list' }, rows, extraRows))];
+  }
+
+  // Workday's requirements for a program: name, status, and what remains as
+  // Workday lists them, with the courses the name lists (workdayCourses), or
+  // Workday's applied items when it lists none.
   function workdayCards(g) {
     return g.requirements.map((r, i) => {
       const cls = WORKDAY_STATUS_CLS[r.status] || 'optional';
-      const key = 'card:' + slug(g, i);
+      const id = slug(g, i);
+      const key = 'card:' + id;
       const expanded = cardState(key);
-      return h('article', { class: 'req status-' + cls + (expanded ? '' : ' is-collapsed'), id: slug(g, i) },
+      const parsed = workdayRequirementCourses(r.name);
+      return h('article', { class: 'req status-' + cls + (expanded ? '' : ' is-collapsed'), id },
         h('header', { class: 'req-header' },
           h('h3', { class: 'req-name' }, r.name),
           r.status ? h('span', { class: 'status-pill status-' + cls }, r.status) : null,
           collapseButton(h, r.name, expanded, key, onListToggle)),
         r.remaining && r.status !== 'Satisfied' ? h('p', { class: 'req-note' }, 'Remaining: ' + r.remaining) : null,
-        r.items.length ? h('ul', { class: 'course-list' }, r.items.map(workdayItem)) : null);
+        parsed ? workdayCourses(r, parsed, id)
+          : r.items.length ? h('ul', { class: 'course-list' }, r.items.map(workdayItem)) : null);
     });
   }
 
   function workdayOnly(g) {
     const p = programProgress(g);
-    return [h('section', { class: 'summary', 'aria-label': `${g.name || 'Requirements'} summary` },
+    return [h('section', { class: 'summary', 'aria-label': `${g.name || 'Requirements'} summary`, dataset: { program: g.name || 'Major and other requirements' } },
       h('h2', {}, `${p.done} of ${p.total} requirements satisfied`),
       h('p', { class: 'summary-sub' }, `${g.name || 'From your Academic Progress'}: by Workday’s status${p.inProgress ? `; ${p.inProgress} in progress` : ''}.`
         + (g.total != null && g.satisfied != null ? ` (Workday’s own count, with any core and GPA requirements in this program: ${fmtHours(g.satisfied)} of ${fmtHours(g.total)}.)` : '')),
-      h('ul', { class: 'summary-chips' }, g.requirements.map((r, i) => {
+      statusSections(h, g.requirements.map((r, i) => {
         const cls = WORKDAY_STATUS_CLS[r.status] || 'optional';
-        return h('li', {}, h('a', { href: '#' + slug(g, i), class: 'summary-chip status-' + cls },
-          h('span', { class: 'chip-name' }, r.name), h('span', { class: 'chip-value' }, r.status || '')));
-      }))),
+        // A status Workday doesn't name as Satisfied or In Progress is still to do.
+        return { status: cls === 'optional' ? 'todo' : cls,
+          node: h('a', { href: '#' + slug(g, i), class: 'summary-chip status-' + cls },
+            h('span', { class: 'chip-name' }, r.name), h('span', { class: 'chip-value' }, r.status || '')) };
+      }), `${idPrefix}-${groups.indexOf(g)}`, openLists, onListToggle)),
     h('section', { class: 'req-section' },
       h('h2', { class: 'req-section-title' }, g.name || 'From your Academic Progress'),
       workdayCards(g))];
@@ -859,15 +1000,17 @@ export function renderPrograms(root, state) {
 
   // One course option's row. A lab (lectureCode set) is its own row under its
   // lecture, with its title and hours from the student's record when it's there.
-  function programCourse(program, courses, itemId, code, credits, matched, lectureCode = null) {
-    const info = courses.get(code);
+  // retired: an earlier catalog's option, listed because it's on the record.
+  function programCourse(program, courses, itemId, code, credits, matched, lectureCode = null, retired = false) {
+    const info = courses.get(code) || courseIndex.get(code);
     const m = matched.find(x => x.code === code);
     const isLab = lectureCode != null;
     const missing = isLab && !m && matched.some(x => x.code === lectureCode);
     const flags = [];
-    if (m) flags.push(takenChip(m));
+    if (m) flags.push(takenChip(m), m.period ? h('span', { class: 'chip chip-hours' }, m.period) : null);
     else if (missing) flags.push(h('span', { class: 'chip chip-excluded' }, 'Not on your record'));
     else if (credits != null) flags.push(h('span', { class: 'chip chip-hours', title: 'Hours the catalog lists' }, `${credits} hrs`));
+    if (retired) flags.push(h('span', { class: 'chip chip-hours', title: `Not an option in the ${catalogLabel({ catalogYear: program.optionsCatalogYear })} catalog. It counts because an earlier catalog lists it here.` }, 'Earlier catalog'));
     const title = m?.title || program.titles?.[code] || info?.title || (isLab ? `Lab for ${lectureCode}` : '');
     return h('li', { class: 'course' + (m ? ' is-active' : '') + (missing ? ' is-excluded' : '') + (isLab ? ' is-lab' : ''),
       dataset: { kind: 'course', code } },
@@ -879,20 +1022,21 @@ export function renderPrograms(root, state) {
       m || missing ? null : offeredSectionsList(h, listState, `sections:${itemId}:${code}`, code));
   }
 
-  // The rows of a requirement: its options (joined by Or/And where the catalog
-  // lists alternatives) or a group's courses, each lecture followed by its lab.
+  // The rows of a requirement: its options (Or between alternatives; the courses
+  // of one alternative sit together with no joiner, as on the Core page) or a group's courses, each lecture followed by its lab.
   // A repeatable seminar lists each semester you took it, oldest first, then
   // the course itself again until the semesters are all there.
   function optionRows(program, courses, item, itemId) {
     const credits = code => (item.kind === 'group' ? item.courses.find(c => c.code === code)?.credits : item.credits);
+    const retired = new Set(item.retired || []);
     const rowsFor = (code, matched = item.matched) => [
-      programCourse(program, courses, itemId, code, credits(code), matched),
+      programCourse(program, courses, itemId, code, credits(code), matched, null, retired.has(code)),
       ...(program.labs?.[code] ? [programCourse(program, courses, itemId, program.labs[code], null, matched, code)] : []),
     ];
     if (item.kind === 'group') return item.courses.flatMap(c => rowsFor(c.code));
     if (item.occurrences) {
       const semesterRow = term => {
-        const info = courses.get(term.code);
+        const info = courses.get(term.code) || courseIndex.get(term.code);
         return h('li', { class: 'course is-active', dataset: { kind: 'course', code: term.code } },
           info?.url
             ? h('a', { class: 'course-code', href: info.url, target: '_blank', rel: 'noopener', title: 'Course description in the official catalog' }, term.code)
@@ -908,7 +1052,7 @@ export function renderPrograms(root, state) {
     return item.options.flatMap((option, i) => {
       const codes = option.filter(code => !seen.has(code));
       codes.forEach(code => seen.add(code));
-      return codes.length ? [i ? connector('Or') : null, ...codes.flatMap((code, j) => [j ? connector('And') : null, ...rowsFor(code)])] : [];
+      return codes.length ? [i ? connector('Or') : null, ...codes.flatMap(code => rowsFor(code))] : [];
     });
   }
 
@@ -954,19 +1098,25 @@ export function renderPrograms(root, state) {
 
   function checked(g, { program, result }) {
     const year = catalogLabel({ catalogYear: program.catalogYear });
-    const itemId = item => `${kind}-${program.id}-${item.id}`;
-    const courses = catalogCourses.get(`${program.id}-${program.catoid}`) || new Map();
-    const summaryBox = h('section', { class: 'summary', 'aria-label': `${program.programName} summary` },
+    const itemId = item => `${idPrefix}-${program.id}-${item.id}`;
+    // Titles and links: the newest catalog's first, then older ones' for courses it dropped.
+    const courses = new Map();
+    for (const catoid of [...(program.catoids || [program.catoid])].reverse()) {
+      for (const [code, info] of catalogCourses.get(`${program.id}-${catoid}`) || []) courses.set(code, info);
+    }
+    const summaryBox = h('section', { class: 'summary', 'aria-label': `${program.programName} summary`, dataset: { program: program.programName } },
       h('h2', {}, `${result.done} of ${result.total} requirements met`),
       h('p', { class: 'summary-sub' }, `${program.programName}: by this tool’s reading of the `,
         h('a', { href: program.sourceUrl, target: '_blank', rel: 'noopener' }, `${year} catalog`),
+        program.optionsCatalogYear && program.optionsCatalogYear !== program.catalogYear
+          ? `, with course options from the ${catalogLabel({ catalogYear: program.optionsCatalogYear })} catalog` : '',
         `${result.inProgress ? `; ${result.inProgress} more in progress` : ''}. Workday may differ.`),
-      h('ul', { class: 'summary-chips' }, result.items.map(item => {
+      statusSections(h, result.items.map(item => {
         const cls = CHECK_STATUS[item.status][0];
-        return h('li', {}, h('a', { href: '#' + itemId(item), class: 'summary-chip status-' + cls },
+        return { status: cls, node: h('a', { href: '#' + itemId(item), class: 'summary-chip status-' + cls },
           h('span', { class: 'chip-name' }, item.label),
-          h('span', { class: 'chip-value' }, pillText(item))));
-      })));
+          h('span', { class: 'chip-value' }, pillText(item))) };
+      }), `${idPrefix}-${program.id}`, openLists, onListToggle));
     const sections = [...new Set(result.items.map(i => i.section))].map(section =>
       h('section', { class: 'req-section' },
         h('h2', { class: 'req-section-title' }, section),

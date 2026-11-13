@@ -2,10 +2,10 @@
 // pasted Workday text and chosen .xlsx exports are parsed here and never sent
 // anywhere.
 
-import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, checkProgram, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
+import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, programForStudent, checkProgram, startPeriod, academicYearOf, catalogForStart, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
-import { renderApp, renderPrograms, renderDashboard, isMinor, catalogLabel } from './app-render.js';
+import { renderApp, renderPrograms, renderDashboard, programTabs, catalogLabel } from './app-render.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
@@ -22,7 +22,8 @@ import nursing25Catalog from '../programs/2025/nursing/major/nursing-bsn/program
 import bcs24Catalog from '../programs/2024/computer-science/major/computer-science-bcs/program.json';
 import csPlus24Catalog from '../programs/2024/computer-science/major/computer-science-plus-bs/program.json';
 import nursing24Catalog from '../programs/2024/nursing/major/nursing-bsn/program.json';
-import { courseIndex } from './program-courses.js';
+import { courseIndex, catalogCourseIndex } from './program-courses.js';
+import courseIndexJson from '../programs/course-index.json';
 
 // Program files (majors, minors) checked against the catalog; see findProgram.
 // Every checked program has a file for each catalog year the app offers, so its
@@ -33,6 +34,10 @@ const CATALOG_COURSES = new Map([
   [bcs25, bcs25Catalog], [csPlus25, csPlus25Catalog], [nursing25, nursing25Catalog],
   [bcs24, bcs24Catalog], [csPlus24, csPlus24Catalog], [nursing24, nursing24Catalog],
 ].map(([program, catalogProgram]) => [`${program.id}-${program.catoid}`, courseIndex(catalogProgram)]));
+
+// Titles, hours, and catalog links for every course a program page lists, for
+// programs without a checked file.
+const COURSE_INDEX = catalogCourseIndex(courseIndexJson);
 
 // Newest first.
 const CATALOGS = [catalog25, catalog24];
@@ -56,6 +61,16 @@ const state = {
   // Workday program name → { program, result }: this tool's check of each
   // program with a program file for the selected catalog year.
   programChecks: new Map(),
+  // The student's courses as read, for the Major and Minor pages' course rows.
+  records: [],
+  // The input (file, or pasted text) the catalog year was last chosen for, and
+  // the period that student started in (startPeriod), for the status line.
+  yearChosenFor: null,
+  startPeriod: null,
+  // The catalog chosen for that period (catoid), and why when it isn't that
+  // year's (none here is that old, or that new).
+  chosenCatoid: null,
+  chosenNote: '',
 };
 
 const $ = id => document.getElementById(id);
@@ -89,16 +104,55 @@ function setView(view) {
 }
 
 // Page 2's tabs, in order. Each tab button (#tab-<name>) controls one panel;
-// index.html's CSS shows the panel for body[data-tab].
-const TABS = ['dashboard', 'core', 'major', 'minor'];
+// index.html's CSS shows the panel for body[data-tab]. Overview and Calvin Core
+// are always there; the Major and Minor tabs follow the record (programTabs) and
+// are rebuilt by syncProgramTabs, each one's panel being #<name>.
+const FIXED_TABS = ['dashboard', 'core'];
+let TABS = [...FIXED_TABS];
 function setTab(tab) {
+  // A tab that's gone (another record has fewer programs): back to Overview.
+  if (!TABS.includes(tab)) tab = 'dashboard';
   document.body.dataset.tab = tab;
   for (const t of TABS) {
     const on = t === tab;
     $('tab-' + t).setAttribute('aria-selected', String(on));
     $('tab-' + t).tabIndex = on ? 0 : -1;
+    if (!FIXED_TABS.includes(t)) $(t).hidden = !on;
   }
   if (tab === 'core') highlightToc();
+}
+
+// One tab button and one panel per Major / Minor tab, after Calvin Core's.
+function syncProgramTabs(tabs) {
+  if (TABS.slice(FIXED_TABS.length).join(' ') !== tabs.map(t => t.id).join(' ')) {
+    for (const t of TABS.slice(FIXED_TABS.length)) { $('tab-' + t)?.remove(); $(t)?.remove(); }
+    const tablist = document.querySelector('.view-tabs');
+    let panelAfter = $('results');
+    for (const t of tabs) {
+      const button = document.createElement('button');
+      Object.assign(button, { type: 'button', id: 'tab-' + t.id, className: 'view-tab', tabIndex: -1 });
+      button.setAttribute('role', 'tab');
+      button.setAttribute('aria-selected', 'false');
+      button.setAttribute('aria-controls', t.id);
+      button.dataset.tab = t.id;
+      button.addEventListener('click', () => setTab(t.id));
+      tablist.append(button);
+      const panel = document.createElement('section');
+      Object.assign(panel, { id: t.id, className: 'tab-panel programs', hidden: true });
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', 'tab-' + t.id);
+      panelAfter.after(panel);
+      panelAfter = panel;
+    }
+    TABS = [...FIXED_TABS, ...tabs.map(t => t.id)];
+    setTab(document.body.dataset.tab);
+  }
+  // "Major 1" etc. say which program on hover.
+  for (const t of tabs) {
+    const button = $('tab-' + t.id);
+    button.textContent = t.label;
+    if (t.title !== t.label) button.title = t.title; else button.removeAttribute('title');
+  }
 }
 
 function parseInput(text) {
@@ -127,7 +181,34 @@ const SOURCE_LABELS = {
   'progress-xlsx': 'Academic Progress export',
 };
 
+// The current input, parsed: the read .xlsx file or the pasted text; null when
+// there's neither.
+function currentInput() {
+  const text = state.text.trim();
+  return state.file ?? (text ? parseInput(text) : null);
+}
+
+// A new record selects the catalog of the year its student started in (the
+// earliest period of a course taken here; transfer credit doesn't count). The
+// year can still be changed by hand until another record is read.
+function chooseYearFor(input) {
+  const key = state.file ?? state.text.trim();
+  if (!input || input.error || !key || key === state.yearChosenFor) return;
+  state.yearChosenFor = key;
+  state.startPeriod = startPeriod(input.courseAttempts?.length ? input.courseAttempts : input.courses);
+  const meta = catalogForStart(CATALOGS.map(c => c._meta), state.startPeriod);
+  state.chosenCatoid = meta?.catoid ?? null;
+  const gap = meta ? academicYearOf(state.startPeriod) - parseInt(meta.catalogYear, 10) : 0;
+  state.chosenNote = gap < 0 ? ', the oldest one here' : gap > 0 ? ', the newest one here' : '';
+  if (!meta || meta.catoid === state.catoid) return;
+  state.catoid = meta.catoid;
+  state.openLists.clear();
+  $('catalog-select').value = meta.catoid;
+}
+
 function update() {
+  const input = currentInput();
+  chooseYearFor(input);
   const catalog = CATALOGS.find(c => c._meta.catoid === state.catoid);
   const meta = catalog._meta;
   document.querySelectorAll('[data-catalog-year]').forEach(el => { el.textContent = catalogLabel(meta); });
@@ -137,7 +218,7 @@ function update() {
   let analysis = null;
   let projection = null;
   try {
-    ({ analysis, projection } = analyzeInput(catalog));
+    ({ analysis, projection } = analyzeInput(catalog, input));
   } catch (err) {
     // Never fail silently: whatever the input, say what went wrong.
     console.error('[Degree Tracker]', err);
@@ -159,17 +240,21 @@ function update() {
 // Returns { analysis, projection }: the analysis (null when there's nothing to
 // show), and when courses are planned, the same counting them as in progress
 // (hours from the course schedule).
-function analyzeInput(catalog) {
+function analyzeInput(catalog, input) {
   let analysis = null;
   let projection = null;
-  const text = state.text.trim();
-  const input = state.file ?? (text ? parseInput(text) : null);
   state.format = input && !input.error ? input.format : null;
   state.programs = input && !input.error ? programRequirements(input) : null;
   state.programChecks = new Map();
+  state.records = input && !input.error ? input.courses || [] : [];
   for (const g of state.programs || []) {
-    const program = g.name && findProgram(PROGRAMS, g.name, catalog._meta.catoid);
-    if (program) state.programChecks.set(g.name, { program, result: checkProgram(program, input.courses, input.courseAttempts || []) });
+    // Requirements from the selected year's file; course options from the
+    // newest year's; courses any year lists count (programForStudent).
+    const base = g.name && findProgram(PROGRAMS, g.name, catalog._meta.catoid);
+    if (!base) continue;
+    const years = CATALOGS.map(c => findProgram(PROGRAMS, g.name, c._meta.catoid)).filter(Boolean);
+    const program = programForStudent(base, years);
+    state.programChecks.set(g.name, { program, result: checkProgram(program, input.courses, input.courseAttempts || []) });
   }
   if (input?.error) {
     setStatus(`Couldn’t read ${input.name}: ${input.error}. Choose the .xlsx file Workday exports from Academic Progress.`, 'error');
@@ -193,6 +278,9 @@ function analyzeInput(catalog) {
       const mismatches = analysis.workdayChecks.filter(c => c.kind === 'mismatch').length;
       setStatus(`Read ${n} course${n === 1 ? '' : 's'} from ${SOURCE_LABELS[format]}`
         + (state.file ? ` (${state.file.name}).` : '.')
+        + (state.chosenCatoid === catalog._meta.catoid
+          ? ` You started in ${state.startPeriod}, so requirements are from the ${catalogLabel(catalog._meta)} catalog`
+            + state.chosenNote + '.' : '')
         + (format === 'transcript' ? ' Academic History isn’t fully supported; use Academic Progress if you can.' : '')
         + (mismatches ? ` Workday disagrees on ${mismatches} requirement${mismatches === 1 ? '' : 's'} (see the Calvin Core tab).` : '')
         + (analysis.warnings.length ? ` ${analysis.warnings.length} need checking (see the Calvin Core tab).` : ''),
@@ -219,11 +307,31 @@ function renderResults(catalog, analysis, projection) {
   const hasInput = state.programs !== null;
   const checks = state.programChecks;
   const programState = { hasInput, checks, schedule, openLists: state.openLists,
-    onListToggle: (key, open) => state.openLists.set(key, open), catalogCourses: CATALOG_COURSES };
-  renderDashboard($('dashboard'), { catalog, analysis, groups, checks });
-  renderPrograms($('major'), { ...programState, groups: groups.filter(g => !isMinor(g)), kind: 'major' });
-  renderPrograms($('minor'), { ...programState, groups: groups.filter(isMinor), kind: 'minor' });
+    onListToggle: (key, open) => state.openLists.set(key, open), catalogCourses: CATALOG_COURSES,
+    courseIndex: COURSE_INDEX, records: state.records };
+  const tabs = programTabs(groups, hasInput);
+  syncProgramTabs(tabs);
+  for (const t of tabs) renderPrograms($(t.id), { ...programState, groups: t.groups, kind: t.kind, idPrefix: t.id });
+  // The Overview shows each page's summary tiles, so it's drawn after them.
+  const tabOf = new Map(tabs.flatMap(t => t.groups.map(g => [g, t.id])));
+  renderDashboard($('dashboard'), { catalog, analysis, groups, checks, blocks: overviewBlocks(tabs),
+    openLists: state.openLists, onListToggle: (key, open) => state.openLists.set(key, open), tabOf: g => tabOf.get(g) });
   highlightToc();
+}
+
+// The summary block of the Core page and of each Major and Minor page, in that
+// order, for the Overview to list under its donuts.
+function overviewBlocks(tabs) {
+  const blocks = [];
+  const core = $('results').querySelector(':scope > .summary');
+  if (core) blocks.push({ id: 'core', kind: 'core', title: 'Calvin Core', node: core });
+  for (const t of tabs) {
+    for (const node of $(t.id).querySelectorAll(':scope > .summary')) {
+      const title = node.dataset.program || t.title;
+      blocks.push({ id: `${t.kind}:${title}`, kind: t.kind, title, node });
+    }
+  }
+  return blocks;
 }
 
 // After a file or paste reads: the Overview tab on page 2.
@@ -319,11 +427,20 @@ function init() {
   // Browsing without courses: the catalog's requirements, on the Calvin Core tab.
   $('browse-button').addEventListener('click', () => { setTab('core'); setView('results'); });
   $('back-button').addEventListener('click', () => setView('upload'));
-  for (const t of TABS) $('tab-' + t).addEventListener('click', () => setTab(t));
-  // The Overview cards' "See requirements" links open their tab.
+  for (const t of FIXED_TABS) $('tab-' + t).addEventListener('click', () => setTab(t));
+  // The Overview cards' "See requirements" links open their tab; a tile in its
+  // blocks opens the tab it came from, at that requirement.
   $('dashboard').addEventListener('click', e => {
     const tab = e.target.closest('[data-open-tab]')?.dataset.openTab;
-    if (tab) { setTab(tab); window.scrollTo(0, 0); }
+    if (tab) { setTab(tab); window.scrollTo(0, 0); return; }
+    const link = e.target.closest('.overview-block a[href^="#"]');
+    const target = link && document.getElementById(link.getAttribute('href').slice(1));
+    const panel = target?.closest('#results, .tab-panel.programs');
+    const owner = panel && (panel.id === 'results' ? 'core' : panel.id);
+    if (!owner) return;
+    e.preventDefault();
+    setTab(owner);
+    target.scrollIntoView();
   });
   // Arrow keys move between tabs (WAI-ARIA tabs pattern).
   document.querySelector('.view-tabs').addEventListener('keydown', e => {
@@ -385,6 +502,9 @@ function init() {
     fileInput.value = '';
     state.plannedCourses.clear();
     state.openLists.clear();
+    state.yearChosenFor = null;
+    state.startPeriod = null;
+    state.chosenCatoid = null;
     update();
     setTab('core');
     setView('upload');

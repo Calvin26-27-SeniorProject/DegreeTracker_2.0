@@ -8,6 +8,7 @@
   "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13127",
   "checkedAt": "2026-11-11",
   "totalHours": 72,
+  "retiredCourses": ["MATH 171", "MATH 172"],
   "notes": [
     "All departmental courses for the BCS must be completed with a grade of C- or higher. (Not checked here.)"
   ],
@@ -69,7 +70,7 @@
     { "id": "cs-398", "section": "Program Requirements", "label": "CS 398", "codes": ["CS 398"], "credits": 2 },
     { "id": "comm-101", "section": "Cognates", "label": "COMM 101", "codes": ["COMM 101"], "credits": 4 },
     { "id": "engr-220", "section": "Cognates", "label": "ENGR 220 and ENGR 220L", "codes": ["ENGR 220"], "credits": 3 },
-    { "id": "math-171", "section": "Cognates", "label": "MATH 171", "codes": ["MATH 171"], "credits": 4 },
+    { "id": "math-171", "section": "Cognates", "label": "MATH 171", "codes": ["MATH 171"], "credits": 4, "currentId": "math-calculus" },
     { "id": "math-251", "section": "Cognates", "label": "MATH 251", "codes": ["MATH 251"], "credits": 2 },
     { "id": "math-252", "section": "Cognates", "label": "MATH 252", "codes": ["MATH 252"], "credits": 2 },
     { "id": "stat", "section": "Cognates", "label": "STAT 243 or STAT 343", "codes": ["STAT 243", "STAT 343"], "credits": 4 }

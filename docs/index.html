@@ -186,7 +186,9 @@
     .view-tab[aria-selected="true"] { background: var(--maroon); color: #fff; }
     /* Only the selected tab's panel shows; Contents belongs to Calvin Core. */
     body:not([data-tab="core"]) #results, body:not([data-tab="core"]) #toc, body:not([data-tab="core"]) .toc-toggle { display: none !important; }
-    body:not([data-tab="dashboard"]) #dashboard, body:not([data-tab="major"]) #major, body:not([data-tab="minor"]) #minor { display: none; }
+    body:not([data-tab="dashboard"]) #dashboard { display: none; }
+    /* The Major / Minor panels are made by app.js, which hides all but the selected one. */
+    .tab-panel.programs[hidden] { display: none; }
     @media (min-width: 1200px) { body:not([data-tab="core"]) .layout { grid-template-columns: minmax(0, 1fr); } }
 
     /* Overview: a progress donut per area. Fills: satisfied (emerald), in progress (sky),
@@ -215,6 +217,21 @@
     .dash-open { margin-top: 10px; font-size: 13px; }
     .programs-note { margin: 18px 2px 0; font-size: 13px; color: var(--muted); }
 
+    /* Overview: each page's summary tiles under the donuts, one collapsible panel per
+       core, major, and minor. The header is a light bar with a maroon dot and the name. */
+    .overview-blocks { display: grid; gap: 20px; margin-top: 28px; }
+    .overview-block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .overview-block-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 20px; background: #f8fafc; border-bottom: 1px solid var(--line); }
+    .overview-block-header h3 { display: flex; align-items: center; gap: 10px; flex: 1 1 auto; margin: 0; font-size: 16px; }
+    .overview-block-header h3::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 999px; background: var(--maroon); }
+    .overview-block-kind { flex: none; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .overview-block-header .req-collapse { position: static; flex: none; }
+    .overview-block.is-collapsed .overview-block-header { border-bottom-color: transparent; }
+    .overview-block.is-collapsed .overview-block-body { display: none; }
+    .overview-block-body { padding: 0 20px 20px; }
+    .overview-block-body .summary { margin: 0; padding: 14px 0 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+    .overview-block-body .summary h2 { font-size: 18px; margin: 0 0 8px; }
+
     /* Major & minor use the Core page's pieces (.req-section, .req cards, .course-list
        rows, chips); only what is specific to them is here. A corequisite lab is its own
        row, indented under its lecture. */
@@ -228,12 +245,25 @@
     .programs-empty { margin: 16px 2px; color: var(--muted); }
 
     #results { padding-bottom: 48px; }
-    #results h2, #major h2, #minor h2 { font-size: 18px; margin: 0 0 8px; }
+    #results h2, .tab-panel.programs h2 { font-size: 18px; margin: 0 0 8px; }
 
     .summary, .callout, .transcript { margin-top: 20px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .summary h2 { margin-bottom: 0 !important; }
     .summary-sub { margin: 2px 0 8px; color: var(--muted); font-size: 13px; }
     .summary-group h3 { margin: 16px 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    /* Major and Minor summaries: Satisfied, In progress, Not satisfied, stacked, each folding. */
+    .summary-status { display: grid; gap: 10px; margin-top: 12px; }
+    .summary-status-group { padding: 8px 10px 10px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+    .summary-status-header { display: flex; align-items: center; gap: 8px; }
+    .summary-status-header h3 { flex: 1 1 auto; margin: 0; font-size: 14px; }
+    .summary-status-header h3::before { content: ""; display: inline-block; width: 8px; height: 8px; margin: 0 8px 1px 0; border-radius: 999px; background: var(--todo-line); }
+    .summary-status-group.status-done .summary-status-header h3::before { background: var(--done); }
+    .summary-status-group.status-min .summary-status-header h3::before { background: var(--min); }
+    .summary-status-count { font-weight: 400; color: var(--muted); }
+    .summary-status-header .req-collapse { position: static; flex: none; }
+    .summary-status-group > .summary-chips { margin-top: 8px; }
+    .summary-status-group.is-collapsed > .summary-chips { display: none; }
+    .summary-status-group.is-collapsed .req-collapse::before { transform: rotate(-45deg); }
     .summary-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
     .summary-chip { display: flex; flex-direction: column; gap: 2px; padding: 9px 12px; border-radius: 10px; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-left-width: 4px; height: 100%; transition: border-color 0.15s, box-shadow 0.15s; }
     .summary-chip:hover { color: var(--ink); box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08); }
@@ -291,7 +321,7 @@
     .req-collapse { position: absolute; top: 13px; right: 12px; width: 30px; height: 30px; padding: 0; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
     .req-collapse:hover { background: var(--surface-2); color: var(--ink); }
     .req-collapse::before { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 0.15s; }
-    .req.is-collapsed .req-collapse::before { transform: rotate(-45deg); }
+    .req.is-collapsed .req-collapse::before, .overview-block.is-collapsed .req-collapse::before { transform: rotate(-45deg); }
     @media (prefers-reduced-motion: reduce) { .req-collapse::before { transition: none; } }
     .status-pill { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
     .status-pill.status-done { color: var(--done); background: var(--done-bg); border-color: var(--done-line); }
@@ -538,14 +568,11 @@
     <div class="view-tabs" role="tablist" aria-label="Requirements">
       <button type="button" role="tab" class="view-tab" id="tab-dashboard" data-tab="dashboard" aria-selected="false" aria-controls="dashboard" tabindex="-1">Overview</button>
       <button type="button" role="tab" class="view-tab" id="tab-core" data-tab="core" aria-selected="true" aria-controls="results">Calvin Core</button>
-      <button type="button" role="tab" class="view-tab" id="tab-major" data-tab="major" aria-selected="false" aria-controls="major" tabindex="-1">Major</button>
-      <button type="button" role="tab" class="view-tab" id="tab-minor" data-tab="minor" aria-selected="false" aria-controls="minor" tabindex="-1">Minor</button>
+      <!-- Major and Minor tabs: one per program in the record, added by app.js. -->
     </div>
 
     <section id="dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-dashboard"></section>
     <main id="results" role="tabpanel" aria-labelledby="tab-core"></main>
-    <section id="major" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-major"></section>
-    <section id="minor" class="tab-panel programs" role="tabpanel" aria-labelledby="tab-minor"></section>
    </div>
     <nav id="toc" class="toc" aria-label="Contents"></nav>
   </div>
