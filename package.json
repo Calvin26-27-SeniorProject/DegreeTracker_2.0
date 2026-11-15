@@ -13,7 +13,8 @@
     "generate-schedule": "node test/generate-schedule-json.js",
     "generate-programs": "node test/generate-programs-json.js",
     "test-report": "node test/build-test-report.js",
-    "generate-course-index": "node test/generate-course-index.js"
+    "generate-course-index": "node test/generate-course-index.js",
+    "generate-whatif-programs": "node test/generate-whatif-programs.js"
   },
   "devDependencies": {
     "esbuild": "^0.24.0",

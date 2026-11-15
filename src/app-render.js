@@ -98,13 +98,32 @@ function collapseButton(h, name, expanded, key, onListToggle) {
     } });
 }
 
+// Clicking anywhere on a panel's header (Overview, What if) or a summary
+// section's header folds it, as its chevron does; buttons, links, and fields
+// inside keep their own clicks. Set up once per root; a click is handled once
+// even when roots are nested (What if draws program pages inside its panels).
+const FOLD_ROOTS = new WeakSet();
+const FOLDED_EVENTS = new WeakSet();
+function foldOnHeaderClick(root) {
+  if (FOLD_ROOTS.has(root)) return;
+  FOLD_ROOTS.add(root);
+  root.addEventListener('click', e => {
+    if (FOLDED_EVENTS.has(e) || e.target.closest('button, a, input, summary, select')) return;
+    const header = e.target.closest('.overview-block-header, .summary-status-header');
+    if (!header || !root.contains(header)) return;
+    FOLDED_EVENTS.add(e);
+    header.querySelector(':scope > .req-collapse')?.click();
+  });
+}
+
 // A Major or Minor summary's chips in three sections stacked top to bottom:
 // Not satisfied, In progress, Satisfied (what's left to take first), each with
 // its count and a chevron that folds it. A section with no chips is left out.
 // Satisfied starts folded, the others open, unless openLists says otherwise
 // (key "summary:<keyPrefix>:<status>").
 // chips: [{ status: 'done' | 'min' | 'todo', node }], node an <a class="summary-chip">.
-const SUMMARY_STATUS = [['todo', 'Not satisfied'], ['min', 'In progress'], ['done', 'Satisfied']];
+// A What if estimate adds blocks it can't read: 'optional', "Check the catalog".
+const SUMMARY_STATUS = [['todo', 'Not satisfied'], ['min', 'In progress'], ['done', 'Satisfied'], ['optional', 'Check the catalog']];
 export const summaryOpenByDefault = status => status !== 'done';
 function statusSections(h, chips, keyPrefix, openLists, onListToggle) {
   return h('div', { class: 'summary-status' }, SUMMARY_STATUS.map(([status, label]) => {
@@ -762,6 +781,7 @@ export function renderDashboard(root, state) {
   const h = builder(doc);
   const { catalog, analysis, groups = [], checks = new Map(), blocks = [], openLists = new Map(), onListToggle,
     tabOf = g => (isMinor(g) ? 'minor' : 'major') } = state;
+  foldOnHeaderClick(root);
   if (!analysis) {
     root.replaceChildren(h('p', { class: 'programs-empty' }, 'Upload your Academic Progress export to see your progress.'));
     return;
@@ -861,16 +881,17 @@ export function programTabs(groups, hasInput) {
 // state: { groups, hasInput, kind: 'major' | 'minor', checks, schedule, idPrefix }
 // idPrefix (default kind) starts every element id, so two tabs' pages don't clash.
 const WORKDAY_STATUS_CLS = { Satisfied: 'done', 'In Progress': 'min', 'Not Satisfied': 'todo' };
-const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'] };
+const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'], unknown: ['optional', 'See catalog'] };
 export function renderPrograms(root, state) {
   const h = builder(root.ownerDocument);
   const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null,
     openLists = new Map(), onListToggle, catalogCourses = new Map(), idPrefix = kind,
-    courseIndex = new Map(), records = [] } = state;
+    courseIndex = new Map(), records = [], whatIf = false } = state;
   // The student's courses that count, by code (no exemptions or failing grades).
   const recordByCode = new Map(records.filter(c => c.code && c.status !== 'exemption' && !isNonPassingGrade(c.grade)).map(c => [c.code, c]));
   const listState = { schedule, openLists, onListToggle };
   const noun = kind === 'minor' ? 'minor' : 'major';
+  foldOnHeaderClick(root);
   if (!groups.length) {
     root.replaceChildren(h('p', { class: 'programs-empty' }, hasInput
       ? `Your Academic Progress doesn’t list a ${noun}.`
@@ -1003,6 +1024,7 @@ export function renderPrograms(root, state) {
   // retired: an earlier catalog's option, listed because it's on the record.
   function programCourse(program, courses, itemId, code, credits, matched, lectureCode = null, retired = false) {
     const info = courses.get(code) || courseIndex.get(code);
+    credits ??= courseIndex.get(code)?.credits ?? null;
     const m = matched.find(x => x.code === code);
     const isLab = lectureCode != null;
     const missing = isLab && !m && matched.some(x => x.code === lectureCode);
@@ -1027,13 +1049,14 @@ export function renderPrograms(root, state) {
   // A repeatable seminar lists each semester you took it, oldest first, then
   // the course itself again until the semesters are all there.
   function optionRows(program, courses, item, itemId) {
-    const credits = code => (item.kind === 'group' ? item.courses.find(c => c.code === code)?.credits : item.credits);
+    const listed = item.kind === 'group' || item.kind === 'list';
+    const credits = code => (listed ? item.courses.find(c => c.code === code)?.credits : item.credits);
     const retired = new Set(item.retired || []);
     const rowsFor = (code, matched = item.matched) => [
       programCourse(program, courses, itemId, code, credits(code), matched, null, retired.has(code)),
       ...(program.labs?.[code] ? [programCourse(program, courses, itemId, program.labs[code], null, matched, code)] : []),
     ];
-    if (item.kind === 'group') return item.courses.flatMap(c => rowsFor(c.code));
+    if (listed) return item.courses.flatMap(c => rowsFor(c.code));
     if (item.occurrences) {
       const semesterRow = term => {
         const info = courses.get(term.code) || courseIndex.get(term.code);
@@ -1059,6 +1082,8 @@ export function renderPrograms(root, state) {
   // What the status pill and summary chip say: hours for a group, "2 of 3
   // semesters" for a seminar still short, otherwise Complete / In progress / Not yet.
   function pillText(item) {
+    if (item.status === 'unknown') return CHECK_STATUS.unknown[1];
+    if (item.kind === 'group' && item.minCount) return `${item.count} of ${item.minCount} courses`;
     if (item.kind === 'group') return `${fmtHours(item.hours)} of ${item.minHours} hrs`;
     if (item.occurrences && item.status !== 'done' && item.status !== 'todo') {
       return `${item.occurrences.completed} of ${item.occurrences.required} semesters`;
@@ -1068,8 +1093,9 @@ export function renderPrograms(root, state) {
 
   function checkedCard(program, courses, item, itemId) {
     const cls = CHECK_STATUS[item.status][0];
-    const codes = item.kind === 'group' ? item.courses.map(c => c.code) : [...new Set(item.options.flat())];
-    const single = item.kind !== 'group' && codes.length === 1;
+    const listed = item.kind === 'group' || item.kind === 'list';
+    const codes = listed ? item.courses.map(c => c.code) : [...new Set(item.options.flat())];
+    const single = !listed && codes.length === 1;
     const cardKey = 'card:' + itemId;
     const expanded = cardState(cardKey);
     // Like the Core page, a list opens until the requirement is met; it also
@@ -1082,7 +1108,7 @@ export function renderPrograms(root, state) {
         h('h3', { class: 'req-name' }, item.label),
         h('span', { class: 'status-pill status-' + cls }, pillText(item)),
         collapseButton(h, item.label, expanded, cardKey, onListToggle)),
-      item.kind === 'group' && item.inProgressHours ? h('p', { class: 'req-hours' }, `${fmtHours(item.inProgressHours)} more hrs in progress.`) : null,
+      item.kind === 'group' && item.minHours && item.inProgressHours ? h('p', { class: 'req-hours' }, `${fmtHours(item.inProgressHours)} more hrs in progress.`) : null,
       item.occurrences?.inProgress ? h('p', { class: 'req-hours' },
         `${item.occurrences.inProgress} more semester${item.occurrences.inProgress === 1 ? '' : 's'} in progress.`) : null,
       item.note ? h('p', { class: 'req-note' }, item.note) : null,
@@ -1105,12 +1131,18 @@ export function renderPrograms(root, state) {
       for (const [code, info] of catalogCourses.get(`${program.id}-${catoid}`) || []) courses.set(code, info);
     }
     const summaryBox = h('section', { class: 'summary', 'aria-label': `${program.programName} summary`, dataset: { program: program.programName } },
-      h('h2', {}, `${result.done} of ${result.total} requirements met`),
-      h('p', { class: 'summary-sub' }, `${program.programName}: by this tool’s reading of the `,
-        h('a', { href: program.sourceUrl, target: '_blank', rel: 'noopener' }, `${year} catalog`),
-        program.optionsCatalogYear && program.optionsCatalogYear !== program.catalogYear
-          ? `, with course options from the ${catalogLabel({ catalogYear: program.optionsCatalogYear })} catalog` : '',
-        `${result.inProgress ? `; ${result.inProgress} more in progress` : ''}. Workday may differ.`),
+      h('h2', {}, result.total ? `${result.done} of ${result.total} requirements met`
+        : 'Nothing on this program’s catalog page that this tool can check'),
+      program.estimate
+        ? h('p', { class: 'summary-sub' }, `${program.programName}: an estimate from its `,
+          program.sourceUrl ? h('a', { href: program.sourceUrl, target: '_blank', rel: 'noopener' }, `${year} catalog page`) : `${year} catalog page`,
+          `${result.inProgress ? `; ${result.inProgress} more in progress` : ''}.`
+          + (result.unchecked ? ` ${result.unchecked} ${result.unchecked === 1 ? 'block isn’t' : 'blocks aren’t'} checked here (Check the catalog).` : ''))
+        : h('p', { class: 'summary-sub' }, `${program.programName}: by this tool’s reading of the `,
+          h('a', { href: program.sourceUrl, target: '_blank', rel: 'noopener' }, `${year} catalog`),
+          program.optionsCatalogYear && program.optionsCatalogYear !== program.catalogYear
+            ? `, with course options from the ${catalogLabel({ catalogYear: program.optionsCatalogYear })} catalog` : '',
+          `${result.inProgress ? `; ${result.inProgress} more in progress` : ''}. Workday may differ.`),
       statusSections(h, result.items.map(item => {
         const cls = CHECK_STATUS[item.status][0];
         return { status: cls, node: h('a', { href: '#' + itemId(item), class: 'summary-chip status-' + cls },
@@ -1130,9 +1162,156 @@ export function renderPrograms(root, state) {
     const workday = h('details', { class: 'course-options program-workday' },
       h('summary', {}, 'Workday’s listing for this program'),
       workdayCards(g));
-    return [summaryBox, ...sections, unchecked, workday];
+    return [summaryBox, ...sections, unchecked, whatIf ? null : workday];
   }
 
-  root.replaceChildren(...groups.flatMap(g => checks.has(g.name) ? checked(g, checks.get(g.name)) : workdayOnly(g)).filter(Boolean),
-    workdayNote);
+  // In What if, a program shows its summary; the requirement cards below it
+  // fold into Details, closed until opened (key "details:<idPrefix>").
+  const details = nodes => {
+    const key = `details:${idPrefix}`;
+    const open = openLists.has(key) ? openLists.get(key) : false;
+    const cards = nodes.flatMap(n => [...(n.querySelectorAll?.('.req') || [])]).length;
+    return h('details', { class: 'course-options whatif-details', open: open || null, ontoggle: e => onListToggle?.(key, e.target.open) },
+      h('summary', {}, `Details (${cards} requirement${cards === 1 ? '' : 's'})`), nodes);
+  };
+  const page = g => {
+    const [summary, ...rest] = (checks.has(g.name) ? checked(g, checks.get(g.name)) : workdayOnly(g)).filter(Boolean);
+    return whatIf && rest.length ? [summary, details(rest)] : [summary, ...rest];
+  };
+  root.replaceChildren(...groups.flatMap(page), whatIf ? null : workdayNote);
+}
+
+// The What if tab: your programs as a scenario you can change. Each current
+// major and minor can be removed (and put back), and any major or minor in the
+// catalog added. Above the programs, how many requirements you meet now and in
+// the scenario, and how many of your courses count toward them; below, each
+// program in the scenario drawn like its own tab (renderPrograms, whatIf).
+// state: {
+//   hasInput, catalogLabel (the catalog the added programs come from),
+//   programs: [{ key, name, kind: 'major' | 'minor', source: 'current' | 'added',
+//     removed, group, check?: { program, result } }],
+//   options: [{ name, type }] (what can be added),
+//   onRemove(key), onRestore(key), onAdd(name) → an error message or null,
+//   and renderPrograms' own: schedule, openLists, onListToggle, catalogCourses, courseIndex, records
+// }
+export function renderWhatIf(root, state) {
+  const doc = root.ownerDocument;
+  const h = builder(doc);
+  const { hasInput, programs = [], options = [], catalogLabel: yearLabel = '', onRemove, onRestore, onAdd,
+    openLists = new Map(), onListToggle } = state;
+  if (!hasInput) {
+    root.replaceChildren(h('p', { class: 'programs-empty' }, 'Upload your Academic Progress export to try a what-if.'));
+    return;
+  }
+  foldOnHeaderClick(root);
+  // A summary chip opens the Details (and panel) its requirement is folded in,
+  // then goes to it. Set up once per root.
+  if (!root.dataset.chipLinks) {
+    root.dataset.chipLinks = '1';
+    root.addEventListener('click', e => {
+      const a = e.target.closest('a.summary-chip[href^="#"]');
+      const target = a && root.ownerDocument.getElementById(a.getAttribute('href').slice(1));
+      if (!target || !root.contains(target)) return;
+      e.preventDefault();
+      for (let el = target.parentElement; el && el !== root; el = el.parentElement) {
+        if (el.tagName === 'DETAILS' && !el.open) el.open = true;
+        if (el.classList.contains('is-collapsed')) el.querySelector(':scope > header .req-collapse')?.click();
+      }
+      target.scrollIntoView?.();
+    });
+  }
+  const progressOf = x => (x.check ? x.check.result : programProgress(x.group));
+  // Course codes of yours that count toward a program (labs aside).
+  const countedCodes = x => new Set(x.check
+    ? x.check.result.items.flatMap(i => i.matched).filter(m => !m.lab).map(m => m.code)
+    : x.group.requirements.flatMap(r => r.items.map(it => /^([A-Z]{2,5} \d{3}[A-Z]?) - /.exec(it.text)?.[1]).filter(Boolean)));
+  const tally = list => {
+    const ps = list.map(progressOf);
+    const codes = new Set(list.flatMap(x => [...countedCodes(x)]));
+    return { done: ps.reduce((n, p) => n + p.done, 0), total: ps.reduce((n, p) => n + p.total, 0), courses: codes.size };
+  };
+  const current = programs.filter(x => x.source === 'current');
+  const scenario = programs.filter(x => !x.removed);
+  const now = tally(current);
+  const then = tally(scenario);
+  const label = x => x.name || (x.kind === 'minor' ? 'Minor' : 'Major and other requirements');
+
+  // 1. The scenario: one chip per program.
+  const chip = x => {
+    const name = label(x);
+    if (x.removed) {
+      return h('li', { class: 'whatif-chip is-removed' }, h('span', { class: 'whatif-chip-name' }, name),
+        h('span', { class: 'whatif-chip-kind' }, 'Removed'),
+        h('button', { type: 'button', class: 'whatif-chip-button is-undo', 'aria-label': `Put back ${name}`, title: 'Put back', onclick: () => onRestore?.(x.key) }, '↺ Undo'));
+    }
+    return h('li', { class: 'whatif-chip' + (x.source === 'added' ? ' is-added' : '') },
+      x.source === 'added' ? h('span', { class: 'whatif-chip-mark', 'aria-hidden': 'true' }, '+') : null,
+      h('span', { class: 'whatif-chip-name' }, name),
+      h('span', { class: 'whatif-chip-kind' }, x.kind === 'minor' ? 'Minor' : 'Major'),
+      h('button', { type: 'button', class: 'whatif-chip-button is-remove', 'aria-label': `Remove ${name}`, title: 'Remove', onclick: () => onRemove?.(x.key) }, '×'));
+  };
+  const listId = 'whatif-options';
+  const input = h('input', { type: 'text', id: 'whatif-add-input', class: 'whatif-input', list: listId, placeholder: 'Psychology Major, BS', autocomplete: 'off' });
+  const error = h('p', { class: 'whatif-error', role: 'alert' });
+  const add = () => {
+    const message = onAdd?.(input.value.trim());
+    if (message) { error.textContent = message; input.focus(); }
+  };
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); add(); } });
+  input.addEventListener('input', () => { error.textContent = ''; });
+  const bar = h('section', { class: 'whatif-bar', 'aria-label': 'Your scenario' },
+    h('h2', {}, 'Your scenario'),
+    h('p', { class: 'summary-sub' }, 'Starts from the programs on your record. Remove one, or add any major or minor'
+      + (yearLabel ? ` from the ${yearLabel} catalog` : '') + ', to see where your courses would leave you.'),
+    h('ul', { class: 'whatif-chips' }, programs.map(chip)),
+    h('label', { class: 'whatif-add-label', for: 'whatif-add-input' }, 'Add a major or minor'),
+    h('div', { class: 'whatif-add' },
+      input,
+      h('datalist', { id: listId }, options.map(o => h('option', { value: o.name }, o.type))),
+      h('button', { type: 'button', class: 'button button-primary whatif-add-button', onclick: add }, '+ Add')),
+    error);
+
+  // 2. Now and in the scenario.
+  const metric = (name, value, sub) => h('div', { class: 'whatif-metric' },
+    h('p', { class: 'whatif-metric-label' }, name), h('p', { class: 'whatif-metric-value' }, value),
+    sub ? h('p', { class: 'whatif-metric-sub' }, sub) : null);
+  const metrics = h('section', { class: 'whatif-metrics', 'aria-label': 'Now and in this scenario' },
+    metric('Requirements met now', `${now.done} of ${now.total}`, `${current.length} program${current.length === 1 ? '' : 's'}`),
+    metric('In this scenario', `${then.done} of ${then.total}`, `${scenario.length} program${scenario.length === 1 ? '' : 's'}`),
+    metric('Your courses that count', `${then.courses}`, then.courses === now.courses ? 'Same as now' : `${now.courses} now`));
+
+  // 3. Each program in the scenario, like its own tab, in a panel that folds.
+  const panel = (x, i) => {
+    const name = label(x);
+    const key = `whatif:${x.key}`;
+    const expanded = openLists.has(key) ? openLists.get(key) : true;
+    const p = progressOf(x);
+    const ring = donut(doc, p, name);
+    ring.setAttribute('width', 48);
+    ring.setAttribute('height', 48);
+    const badge = x.check?.program.estimate ? ['estimate', 'Estimate'] : x.check ? ['checked', 'Checked']
+      : x.source === 'added' ? ['estimate', 'Not found'] : ['workday', 'By Workday'];
+    const body = h('div', { class: 'whatif-program-body' });
+    renderPrograms(body, { ...state, groups: [x.group], hasInput: true, kind: x.kind, idPrefix: `whatif-${i}`,
+      checks: x.check ? new Map([[x.group.name, x.check]]) : new Map(), whatIf: true });
+    return h('section', { class: 'overview-block whatif-program' + (expanded ? '' : ' is-collapsed'), dataset: { kind: x.kind, source: x.source } },
+      h('header', { class: 'overview-block-header' },
+        ring,
+        h('h3', {}, name),
+        h('span', { class: 'whatif-badge is-' + badge[0] }, badge[1]),
+        h('span', { class: 'overview-block-kind' }, x.kind === 'minor' ? 'Minor' : 'Major'),
+        collapseButton(h, name, expanded, key, onListToggle)),
+      h('div', { class: 'overview-block-body' }, body));
+  };
+  root.replaceChildren(
+    h('section', { class: 'programs-intro' },
+      h('h2', {}, 'What if'),
+      h('p', {}, 'Try changing your majors and minors. Programs this tool checks by hand are marked Checked; '
+        + 'any other is an estimate read from its catalog page, which checks only what the page states plainly and lists the rest under Check the catalog. '
+        + 'For the official answer, run a What-if analysis in Workday.')),
+    bar,
+    metrics,
+    scenario.length
+      ? h('div', { class: 'overview-blocks whatif-programs' }, scenario.map(panel))
+      : h('p', { class: 'programs-empty' }, 'Add a major or minor to see where you stand.'));
 }

@@ -186,7 +186,7 @@
     .view-tab[aria-selected="true"] { background: var(--maroon); color: #fff; }
     /* Only the selected tab's panel shows; Contents belongs to Calvin Core. */
     body:not([data-tab="core"]) #results, body:not([data-tab="core"]) #toc, body:not([data-tab="core"]) .toc-toggle { display: none !important; }
-    body:not([data-tab="dashboard"]) #dashboard { display: none; }
+    body:not([data-tab="dashboard"]) #dashboard, body:not([data-tab="whatif"]) #whatif { display: none; }
     /* The Major / Minor panels are made by app.js, which hides all but the selected one. */
     .tab-panel.programs[hidden] { display: none; }
     @media (min-width: 1200px) { body:not([data-tab="core"]) .layout { grid-template-columns: minmax(0, 1fr); } }
@@ -232,6 +232,47 @@
     .overview-block-body .summary { margin: 0; padding: 14px 0 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
     .overview-block-body .summary h2 { font-size: 18px; margin: 0 0 8px; }
 
+    /* What if: the scenario bar (a chip per program, an add box), three metrics, then
+       each program in an Overview-style panel with a small donut and a badge. */
+    .whatif-bar { margin-top: 20px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .whatif-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; }
+    .whatif-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 5px 4px 16px; font-size: 15px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1.5px solid var(--todo-line); border-radius: 999px; }
+    .whatif-chip.is-added { background: var(--done-bg); border-color: var(--done); color: var(--done); }
+    .whatif-chip.is-removed { background: var(--surface-2); border-style: dashed; }
+    .whatif-chip.is-removed .whatif-chip-name { text-decoration: line-through; color: var(--muted); font-weight: 500; }
+    .whatif-chip-mark { font-weight: 800; }
+    .whatif-chip-kind { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .whatif-chip-button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 30px; height: 30px; padding: 0 8px; font: inherit; font-size: 14px; font-weight: 700; line-height: 1; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; cursor: pointer; }
+    .whatif-chip-button.is-remove { font-size: 18px; padding: 0; width: 30px; }
+    .whatif-chip-button.is-remove:hover { color: var(--warn); background: var(--warn-bg); border-color: var(--warn-line); }
+    .whatif-chip-button.is-undo { color: var(--maroon); border-color: var(--maroon-line, #f0c9d3); background: var(--maroon-bg); }
+    .whatif-chip-button.is-undo:hover { color: #fff; background: var(--maroon); border-color: var(--maroon); }
+    .whatif-chip-button:focus-visible { outline: 2px solid var(--maroon); outline-offset: 2px; }
+    .whatif-add-label { display: block; margin-top: 18px; font-size: 13px; font-weight: 700; color: var(--ink); }
+    .whatif-add { display: flex; gap: 8px; margin-top: 6px; max-width: 560px; }
+    .whatif-input { flex: 1 1 auto; min-width: 0; height: 42px; padding: 0 14px; font: inherit; font-size: 15px; border: 1.5px solid var(--todo-line); border-radius: 10px; }
+    .whatif-add-button { height: 42px; padding: 0 18px; font-size: 15px; }
+    .overview-block-header { cursor: pointer; }
+    .summary-status-header { cursor: pointer; }
+    .whatif-details { margin-top: 16px; }
+    .whatif-details > summary { font-size: 15px; font-weight: 700; color: var(--maroon); }
+    .whatif-input:focus { outline: 2px solid var(--maroon); outline-offset: 1px; }
+    .whatif-error { margin: 6px 0 0; font-size: 13px; color: var(--warn); }
+    .whatif-error:empty { display: none; }
+    .whatif-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 16px; }
+    .whatif-metric { padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+    .whatif-metric p { margin: 0; }
+    .whatif-metric-label { font-size: 13px; color: var(--muted); }
+    .whatif-metric-value { font-size: 26px; font-weight: 800; }
+    .whatif-metric-sub { font-size: 13px; color: var(--muted); }
+    .whatif-program .overview-block-header .donut { flex: none; }
+    .whatif-program .overview-block-header h3::before { display: none; }
+    .whatif-badge { flex: none; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; border: 1px solid transparent; }
+    .whatif-badge.is-checked { color: var(--done); background: var(--done-bg); border-color: var(--done-line); }
+    .whatif-badge.is-estimate { color: var(--gold-ink); background: var(--gold-bg); border-color: #f5d77a; }
+    .whatif-badge.is-workday { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
+    .summary-status-group.status-optional .summary-status-header h3::before { background: var(--gold); }
+
     /* Major & minor use the Core page's pieces (.req-section, .req cards, .course-list
        rows, chips); only what is specific to them is here. A corequisite lab is its own
        row, indented under its lecture. */
@@ -245,7 +286,7 @@
     .programs-empty { margin: 16px 2px; color: var(--muted); }
 
     #results { padding-bottom: 48px; }
-    #results h2, .tab-panel.programs h2 { font-size: 18px; margin: 0 0 8px; }
+    #results h2, .tab-panel.programs h2, #whatif h2 { font-size: 18px; margin: 0 0 8px; }
 
     .summary, .callout, .transcript { margin-top: 20px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
     .summary h2 { margin-bottom: 0 !important; }
@@ -569,10 +610,12 @@
       <button type="button" role="tab" class="view-tab" id="tab-dashboard" data-tab="dashboard" aria-selected="false" aria-controls="dashboard" tabindex="-1">Overview</button>
       <button type="button" role="tab" class="view-tab" id="tab-core" data-tab="core" aria-selected="true" aria-controls="results">Calvin Core</button>
       <!-- Major and Minor tabs: one per program in the record, added by app.js. -->
+      <button type="button" role="tab" class="view-tab" id="tab-whatif" data-tab="whatif" aria-selected="false" aria-controls="whatif" tabindex="-1">What if</button>
     </div>
 
     <section id="dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-dashboard"></section>
     <main id="results" role="tabpanel" aria-labelledby="tab-core"></main>
+    <section id="whatif" class="tab-panel whatif" role="tabpanel" aria-labelledby="tab-whatif"></section>
    </div>
     <nav id="toc" class="toc" aria-label="Contents"></nav>
   </div>

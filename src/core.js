@@ -794,6 +794,73 @@ export function programForStudent(base, years) {
   };
 }
 
+// A program for the What if tab when no checked file covers it: an estimate
+// read from its catalog page (programs/whatif-programs.json, one entry with
+// blocks [heading, depth, codes, section]). Only what the headings say plainly
+// is checked:
+//   - a course listed directly under a section ("Program Requirements") is
+//     required, each its own requirement;
+//   - "Take One / Two / Three / Four from the Following", "(Take) at Least One
+//     from the Following": that many of the courses;
+//   - "Take (at Least) N Hours from the Following": N hours of them.
+// Anything else ("Cognates", "Electives", one of several concentrations,
+// tracks, or emphases to choose from, a block nested inside another, ...) is listed with its courses but not checked
+// (`unchecked`; checkProgram gives it status 'unknown' and leaves it out of the
+// counts). The catalog's own page can still say more (an "or" inside a list is
+// lost when it's generated), so the result is labeled an estimate.
+const PICK_WORDS = { one: 1, two: 2, three: 3, four: 4 };
+const PICK_HEADING_RE = /^(?:Take )?(?:at Least )?(One|Two|Three|Four) (?:from|of) the Following$/i;
+const HOURS_HEADING_RE = /^(?:Take )?(?:at Least )?(\d+) Hours? from the Following$/i;
+// Concentrations, tracks, emphases, and sequences are a choice only when the
+// page offers two or more (the Urban Studies Minor's Tracks 1-3); a program
+// that is one concentration ("English Major: Linguistics Concentration, BA")
+// requires its own. A combined program or a prior degree isn't read.
+const OPTION_RE = /\b(Concentration|Emphasis|Track|Sequence [A-Z])\b/i;
+const NOT_READ_RE = /\b(Combined|Completion of)\b/i;
+export function programFromCatalog(entry, { catoid, catalogYear }) {
+  const requirements = [];
+  const courseGroups = [];
+  const unchecked = [];
+  const options = new Set(entry.blocks.flatMap(([heading, depth, , section]) => [section, depth > 0 ? heading : null]).filter(x => x && OPTION_RE.test(x)));
+  const isChoice = text => NOT_READ_RE.test(text) || (options.size > 1 && options.has(text));
+  entry.blocks.forEach(([heading, depth, codes, section], b) => {
+    const id = `b${b}`;
+    const where = section || 'Program Requirements';
+    const courses = codes.map(code => ({ code }));
+    // A block inside another block (a "Take One" under "Chemistry" under
+    // "Cognates") may be one of several the student picks from: not checked.
+    if (depth > 1 || isChoice(where) || isChoice(heading)) {
+      unchecked.push({ id, section: where, label: heading || where, courses });
+      return;
+    }
+    // Listed directly under a section, or under the program's one concentration: required.
+    if (depth === 0 || (depth === 1 && options.size === 1 && options.has(heading))) {
+      codes.forEach((code, i) => requirements.push({ id: `${id}-${i}`, section: depth ? heading : where, label: code, codes: [code], credits: null }));
+      return;
+    }
+    const pick = PICK_HEADING_RE.exec(heading);
+    if (pick) {
+      const n = PICK_WORDS[pick[1].toLowerCase()];
+      if (n === 1) requirements.push({ id, section: where, label: heading, codes, credits: null });
+      else courseGroups.push({ id, section: where, label: heading, minCount: n, courses });
+      return;
+    }
+    const hours = HOURS_HEADING_RE.exec(heading);
+    if (hours) {
+      courseGroups.push({ id, section: where, label: heading, minHours: +hours[1], courses });
+      return;
+    }
+    unchecked.push({ id, section: where, label: heading || where, courses });
+  });
+  return {
+    id: 'whatif-' + (entry.poid || entry.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')),
+    name: entry.name, programName: entry.name, catoid, catalogYear,
+    poid: entry.poid, sourceUrl: entry.poid ? `https://catalog.calvin.edu/preview_program.php?catoid=${catoid}&poid=${entry.poid}` : null,
+    totalHours: entry.totalHours, estimate: true, labs: {}, titles: {},
+    requirements, courseGroups, unchecked,
+  };
+}
+
 // A program's requirements checked against a student's courses (as parsed:
 // labs are their own entries, e.g. CS 108L). Each requirement is 'done',
 // 'progress' (everything there, something in progress), or 'todo'. A lecture
@@ -903,18 +970,32 @@ export function checkProgram(program, courses, courseAttempts = []) {
       if (s === 'no-lab') missingLabs.push(lab);
       matched.push(...records(code));
     }
-    const status = doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
+    // "Take Two from the Following" (minCount) counts courses; others count hours.
+    const doneCount = g.courses.filter(({ code }) => withLab(code) === 'done').length;
+    const anyCount = g.courses.filter(({ code }) => withLab(code)).length;
+    const status = g.minCount
+      ? (doneCount >= g.minCount ? 'done' : anyCount >= g.minCount ? 'progress' : 'todo')
+      : doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
     const shownCodes = new Set(g.shownCodes || g.courses.map(c => c.code));
     const listed = g.courses.filter(c => shownCodes.has(c.code) || state(c.code));
     items.push({ kind: 'group', id: g.id, section: g.section, label: g.label, note: g.note || null,
-      minHours: g.minHours, hours: doneHours, inProgressHours: progressHours, courses: listed, status, matched, missingLabs,
+      minHours: g.minHours ?? null, minCount: g.minCount ?? null, count: doneCount,
+      hours: doneHours, inProgressHours: progressHours, courses: listed, status, matched, missingLabs,
       retired: listed.map(c => c.code).filter(code => !shownCodes.has(code)) });
   }
+  // Blocks an estimate can't read (programFromCatalog): their courses, and
+  // which you have, but no status; not counted.
+  for (const u of program.unchecked || []) {
+    items.push({ kind: 'list', id: u.id, section: u.section, label: u.label, note: null, courses: u.courses,
+      status: 'unknown', matched: u.courses.flatMap(({ code }) => records(code)), missingLabs: [], retired: [] });
+  }
+  const counted = items.filter(i => i.status !== 'unknown');
   return {
     items,
-    done: items.filter(i => i.status === 'done').length,
-    inProgress: items.filter(i => i.status === 'progress').length,
-    total: items.length,
+    done: counted.filter(i => i.status === 'done').length,
+    inProgress: counted.filter(i => i.status === 'progress').length,
+    total: counted.length,
+    unchecked: items.length - counted.length,
   };
 }
 

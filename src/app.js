@@ -2,10 +2,10 @@
 // pasted Workday text and chosen .xlsx exports are parsed here and never sent
 // anywhere.
 
-import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, programForStudent, checkProgram, startPeriod, academicYearOf, catalogForStart, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
+import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, programForStudent, programFromCatalog, checkProgram, startPeriod, academicYearOf, catalogForStart, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
-import { renderApp, renderPrograms, renderDashboard, programTabs, catalogLabel } from './app-render.js';
+import { renderApp, renderPrograms, renderDashboard, renderWhatIf, programTabs, catalogLabel, isMinor } from './app-render.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
@@ -24,6 +24,7 @@ import csPlus24Catalog from '../programs/2024/computer-science/major/computer-sc
 import nursing24Catalog from '../programs/2024/nursing/major/nursing-bsn/program.json';
 import { courseIndex, catalogCourseIndex } from './program-courses.js';
 import courseIndexJson from '../programs/course-index.json';
+import whatIfJson from '../programs/whatif-programs.json';
 
 // Program files (majors, minors) checked against the catalog; see findProgram.
 // Every checked program has a file for each catalog year the app offers, so its
@@ -61,8 +62,13 @@ const state = {
   // Workday program name → { program, result }: this tool's check of each
   // program with a program file for the selected catalog year.
   programChecks: new Map(),
-  // The student's courses as read, for the Major and Minor pages' course rows.
+  // The student's courses as read, for the Major and Minor pages' course rows,
+  // and every semester of each (for seminars counted by semester).
   records: [],
+  attempts: [],
+  // The What if tab's scenario: current programs taken out (by key) and
+  // programs added (by name). A new record starts a new scenario.
+  whatIf: { removed: new Set(), added: [] },
   // The input (file, or pasted text) the catalog year was last chosen for, and
   // the period that student started in (startPeriod), for the status line.
   yearChosenFor: null,
@@ -105,10 +111,13 @@ function setView(view) {
 
 // Page 2's tabs, in order. Each tab button (#tab-<name>) controls one panel;
 // index.html's CSS shows the panel for body[data-tab]. Overview and Calvin Core
-// are always there; the Major and Minor tabs follow the record (programTabs) and
-// are rebuilt by syncProgramTabs, each one's panel being #<name>.
+// come first and What if last, always; between them the Major and Minor tabs
+// follow the record (programTabs) and are rebuilt by syncProgramTabs, each one's
+// panel being #<name>.
 const FIXED_TABS = ['dashboard', 'core'];
-let TABS = [...FIXED_TABS];
+const END_TABS = ['whatif'];
+let TABS = [...FIXED_TABS, ...END_TABS];
+const programTabIds = () => TABS.filter(t => !FIXED_TABS.includes(t) && !END_TABS.includes(t));
 function setTab(tab) {
   // A tab that's gone (another record has fewer programs): back to Overview.
   if (!TABS.includes(tab)) tab = 'dashboard';
@@ -117,15 +126,15 @@ function setTab(tab) {
     const on = t === tab;
     $('tab-' + t).setAttribute('aria-selected', String(on));
     $('tab-' + t).tabIndex = on ? 0 : -1;
-    if (!FIXED_TABS.includes(t)) $(t).hidden = !on;
+    if (!FIXED_TABS.includes(t) && !END_TABS.includes(t)) $(t).hidden = !on;
   }
   if (tab === 'core') highlightToc();
 }
 
 // One tab button and one panel per Major / Minor tab, after Calvin Core's.
 function syncProgramTabs(tabs) {
-  if (TABS.slice(FIXED_TABS.length).join(' ') !== tabs.map(t => t.id).join(' ')) {
-    for (const t of TABS.slice(FIXED_TABS.length)) { $('tab-' + t)?.remove(); $(t)?.remove(); }
+  if (programTabIds().join(' ') !== tabs.map(t => t.id).join(' ')) {
+    for (const t of programTabIds()) { $('tab-' + t)?.remove(); $(t)?.remove(); }
     const tablist = document.querySelector('.view-tabs');
     let panelAfter = $('results');
     for (const t of tabs) {
@@ -136,7 +145,7 @@ function syncProgramTabs(tabs) {
       button.setAttribute('aria-controls', t.id);
       button.dataset.tab = t.id;
       button.addEventListener('click', () => setTab(t.id));
-      tablist.append(button);
+      tablist.insertBefore(button, $('tab-' + END_TABS[0]));
       const panel = document.createElement('section');
       Object.assign(panel, { id: t.id, className: 'tab-panel programs', hidden: true });
       panel.setAttribute('role', 'tabpanel');
@@ -144,7 +153,7 @@ function syncProgramTabs(tabs) {
       panelAfter.after(panel);
       panelAfter = panel;
     }
-    TABS = [...FIXED_TABS, ...tabs.map(t => t.id)];
+    TABS = [...FIXED_TABS, ...tabs.map(t => t.id), ...END_TABS];
     setTab(document.body.dataset.tab);
   }
   // "Major 1" etc. say which program on hover.
@@ -195,6 +204,7 @@ function chooseYearFor(input) {
   const key = state.file ?? state.text.trim();
   if (!input || input.error || !key || key === state.yearChosenFor) return;
   state.yearChosenFor = key;
+  state.whatIf = { removed: new Set(), added: [] };
   state.startPeriod = startPeriod(input.courseAttempts?.length ? input.courseAttempts : input.courses);
   const meta = catalogForStart(CATALOGS.map(c => c._meta), state.startPeriod);
   state.chosenCatoid = meta?.catoid ?? null;
@@ -247,6 +257,7 @@ function analyzeInput(catalog, input) {
   state.programs = input && !input.error ? programRequirements(input) : null;
   state.programChecks = new Map();
   state.records = input && !input.error ? input.courses || [] : [];
+  state.attempts = input && !input.error ? input.courseAttempts || [] : [];
   for (const g of state.programs || []) {
     // Requirements from the selected year's file; course options from the
     // newest year's; courses any year lists count (programForStudent).
@@ -316,7 +327,79 @@ function renderResults(catalog, analysis, projection) {
   const tabOf = new Map(tabs.flatMap(t => t.groups.map(g => [g, t.id])));
   renderDashboard($('dashboard'), { catalog, analysis, groups, checks, blocks: overviewBlocks(tabs),
     openLists: state.openLists, onListToggle: (key, open) => state.openLists.set(key, open), tabOf: g => tabOf.get(g) });
+  state.lastCatalog = catalog;
+  renderWhatIfTab();
   highlightToc();
+}
+
+// The majors and minors the What if tab can add, from the selected catalog
+// year (programs/whatif-programs.json), and the check of one: the checked
+// file's, as on its own tab, when there is one, else an estimate from its
+// catalog page (programFromCatalog).
+function whatIfCatalog() {
+  return whatIfJson.catalogs[state.catoid] || Object.values(whatIfJson.catalogs)[0] || { programs: [] };
+}
+// A program's catalog entry: the selected year's, else (it was renamed, e.g.
+// "History Major" in 2025–26 is "History, BA" in 2026–27) the newest year
+// that has one by that name. { catoid, catalogYear, entry } or null.
+function whatIfEntry(name) {
+  const order = [state.catoid, ...CATALOGS.map(c => c._meta.catoid).filter(c => c !== state.catoid)];
+  for (const catoid of order) {
+    const cat = whatIfJson.catalogs[catoid];
+    const entry = cat?.programs.find(p => p.name === name);
+    if (entry) return { catoid, catalogYear: cat.catalogYear, entry };
+  }
+  return null;
+}
+function whatIfCheck(name) {
+  const base = findProgram(PROGRAMS, name, state.catoid);
+  if (base) {
+    const years = CATALOGS.map(c => findProgram(PROGRAMS, name, c._meta.catoid)).filter(Boolean);
+    const program = programForStudent(base, years);
+    return { program, result: checkProgram(program, state.records, state.attempts) };
+  }
+  const found = whatIfEntry(name);
+  if (!found) return null;
+  const program = programFromCatalog(found.entry, found);
+  return { program, result: checkProgram(program, state.records, state.attempts) };
+}
+
+function renderWhatIfTab() {
+  const groups = state.programs || [];
+  const { removed, added } = state.whatIf;
+  const cat = whatIfCatalog();
+  const typeOf = name => whatIfEntry(name)?.entry.type;
+  const current = groups.map((g, i) => ({ key: `current:${i}`, name: g.name, kind: isMinor(g) ? 'minor' : 'major',
+    source: 'current', removed: removed.has(`current:${i}`), group: g, check: state.programChecks.get(g.name) || null }));
+  const extra = added.map(name => ({ key: `added:${name}`, name, kind: typeOf(name) === 'Minor' || /\bMinor\b/.test(name) ? 'minor' : 'major',
+    source: 'added', removed: false, group: { name, requirements: [] }, check: whatIfCheck(name) }));
+  const inScenario = new Set([...current.filter(x => !x.removed), ...extra].map(x => x.name));
+  renderWhatIf($('whatif'), {
+    hasInput: state.programs !== null,
+    catalogLabel: cat.catalogYear ? catalogLabel({ catalogYear: cat.catalogYear }) : '',
+    programs: [...current, ...extra],
+    options: cat.programs.filter(p => !inScenario.has(p.name)).map(p => ({ name: p.name, type: p.type })),
+    schedule, openLists: state.openLists, onListToggle: (key, open) => state.openLists.set(key, open),
+    catalogCourses: CATALOG_COURSES, courseIndex: COURSE_INDEX, records: state.records,
+    onRemove: key => {
+      if (key.startsWith('added:')) state.whatIf.added = added.filter(n => `added:${n}` !== key);
+      else removed.add(key);
+      renderWhatIfTab();
+    },
+    onRestore: key => { removed.delete(key); renderWhatIfTab(); },
+    onAdd: name => {
+      if (!name) return 'Type a major or minor first.';
+      const match = cat.programs.find(p => p.name.toLowerCase() === name.toLowerCase());
+      if (!match) return `No major or minor named “${name}” in this catalog. Pick one from the list.`;
+      if (inScenario.has(match.name)) return `${match.name} is already in your scenario.`;
+      const removedCurrent = current.find(x => x.removed && x.name === match.name);
+      if (removedCurrent) removed.delete(removedCurrent.key);
+      else state.whatIf.added = [...added, match.name];
+      renderWhatIfTab();
+      $('whatif').querySelector('.whatif-input')?.focus();
+      return null;
+    },
+  });
 }
 
 // The summary block of the Core page and of each Major and Minor page, in that
@@ -427,7 +510,7 @@ function init() {
   // Browsing without courses: the catalog's requirements, on the Calvin Core tab.
   $('browse-button').addEventListener('click', () => { setTab('core'); setView('results'); });
   $('back-button').addEventListener('click', () => setView('upload'));
-  for (const t of FIXED_TABS) $('tab-' + t).addEventListener('click', () => setTab(t));
+  for (const t of [...FIXED_TABS, ...END_TABS]) $('tab-' + t).addEventListener('click', () => setTab(t));
   // The Overview cards' "See requirements" links open their tab; a tile in its
   // blocks opens the tab it came from, at that requirement.
   $('dashboard').addEventListener('click', e => {
@@ -505,6 +588,7 @@ function init() {
     state.yearChosenFor = null;
     state.startPeriod = null;
     state.chosenCatoid = null;
+    state.whatIf = { removed: new Set(), added: [] };
     update();
     setTab('core');
     setView('upload');
