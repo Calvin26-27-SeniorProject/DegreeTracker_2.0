@@ -263,9 +263,9 @@ describe('a checked program looks the same in every catalog year', () => {
       const rows = [...card.querySelectorAll('.course-list > li.course')];
       assert.deepEqual(rows.map(li => [li.classList.contains('is-active'), li.querySelector('.course-code').textContent,
         [...li.querySelectorAll('.chip')].map(c => c.textContent).join(' | ')]), [
-        [true, 'CS 195', 'Taken · CR · 0 hrs | 2025 Fall'],
-        [true, 'CS 195', 'Taken · CR · 0 hrs | 2026 Spring'],
-        [true, 'CS 195', 'In progress · 0 hrs | 2026 Fall'],
+        [true, 'CS 195', 'Taken · CR · 0 hrs'],
+        [true, 'CS 195', 'Taken · CR · 0 hrs'],
+        [true, 'CS 195', 'In progress · 0 hrs'],
         [false, 'CS 195', '0 hrs'],
       ], key);
     }

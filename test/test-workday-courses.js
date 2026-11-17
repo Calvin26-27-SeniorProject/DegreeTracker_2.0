@@ -132,7 +132,7 @@ describe('Workday cards with course rows', () => {
     const c = card(draw(g(['BIOL 123 or both BIOL 160 and 161', 'Not Satisfied']), records), 'BIOL 123 or both BIOL 160 and 161');
     assert.deepEqual(rows(c), [['BIOL 123', false], 'Or', ['BIOL 160', true], ['BIOL 161', false]]);
     const taken = c.querySelector('li.course.is-active');
-    assert.deepEqual([...taken.querySelectorAll('.chip')].map(x => x.textContent), ['Taken · A- · 4 hrs', '2025 Fall']);
+    assert.deepEqual([...taken.querySelectorAll('.chip')].map(x => x.textContent), ['Taken · A- · 4 hrs'], 'no term chip');
   });
 
   it('a lab next to its lecture is its own row under it, “Not on your record” when only the lecture is', () => {

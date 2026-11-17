@@ -5,6 +5,7 @@
 
 import { classifyInstructions, doubleCountConfirmed, KU_NAMES, workdayRequirementCourses, isNonPassingGrade } from './core.js';
 import { coarseGrade } from './test-case.js';
+import { programCourseUses, mergeUses } from './course-uses.js';
 
 const CATALOG_ORIGIN = 'https://catalog.calvin.edu';
 
@@ -86,6 +87,51 @@ function offeredSectionsList(h, { schedule, openLists = new Map(), onListToggle 
 // is kept under `key` so a re-render keeps it.
 // The button carries its key (data-collapse-key) so a copy of it can be wired
 // again (the Overview copies the Major and Minor summaries).
+// "Also listed for": the other requirements a course is listed under
+// (courseUses from course-uses.js: code → [{ area, program, label, href }]),
+// as chips after the course: the core ones first, up to USE_CHIPS_SHOWN of them,
+// then "+N" (a click or tap, not hover, so it works on phones) opening the rest,
+// majors' and minors' included, each a link to that requirement's card on its
+// own tab. It doesn't filter by what's met, so nothing hides by mistake.
+// usesFor: a course's uses, leaving out the requirement the row is in
+// (selfHref), the core ones (skipCore: the Core page gives its own), and a
+// program's own (skipProgram: Workday's listing under its checked page).
+// A planned course's chip on a program page: hours from the course schedule,
+// else the catalog's credits.
+function plannedChipText(schedule, code, credits) {
+  const hrs = schedule?.hours[code];
+  if (hrs) return hrs.min === hrs.max ? `Planned · ${fmtHours(hrs.min)} hrs` : `Planned · ${fmtRange(hrs)} hrs, counting ${fmtHours(hrs.min)}`;
+  return credits != null ? `Planned · ${credits} hrs` : 'Planned · hours unknown';
+}
+
+const USE_CHIPS_SHOWN = 2;
+const USE_KIND = { core: 'Core', major: 'Major', minor: 'Minor' };
+function usesFor(uses, code, selfHref, { skipCore = false, skipProgram = null } = {}) {
+  const list = (uses?.get(code) || []).filter(u => u.href !== selfHref && !(skipCore && u.area === 'core')
+    && !(skipProgram && u.program === skipProgram));
+  return [...list.filter(u => u.area === 'core'), ...list.filter(u => u.area !== 'core')];
+}
+function alsoChips(h, list) {
+  if (!list.length) return null;
+  const shown = list.filter(u => u.area === 'core').slice(0, USE_CHIPS_SHOWN);
+  const rest = list.filter(u => !shown.includes(u));
+  const tip = u => `${u.area === 'core' ? 'Core' : u.program}: ${u.label}`;
+  const areas = new Set(rest.map(u => u.area));
+  const more = rest.length
+    ? h('details', { class: 'use-more' },
+      h('summary', { title: 'Also listed for: ' + rest.map(tip).join('; ') },
+        `+${rest.length}` + (areas.size === 1 && !areas.has('core') ? ' ' + USE_KIND[[...areas][0]] : '')),
+      h('ul', { class: 'use-more-list' }, rest.map(u => h('li', {},
+        h('span', { class: 'use-kind is-' + u.area }, u.area === 'core' ? 'Core' : u.program),
+        h('a', { href: u.href, class: 'use-link', title: tip(u) }, u.label)))))
+    : null;
+  return h('span', { class: 'also-chips', title: shown.length ? 'Also listed for' : null },
+    h('span', { class: 'also-mark', 'aria-hidden': 'true' }, '\u21c9'),
+    h('span', { class: 'visually-hidden' }, 'Also listed for '),
+    shown.map(u => h('a', { href: u.href, class: 'use-link use-chip is-core', title: tip(u) }, u.label)),
+    more);
+}
+
 const COLLAPSIBLE = '.req, .overview-block, .summary-status-group';
 function collapseButton(h, name, expanded, key, onListToggle) {
   return h('button', { type: 'button', class: 'req-collapse', 'aria-expanded': String(expanded),
@@ -224,7 +270,7 @@ export function bugReport(analysis, check, context = {}) {
 export function renderApp(root, state) {
   const doc = root.ownerDocument;
   const h = builder(doc);
-  const { catalog, catalogs = [catalog], analysis, openLists = new Map(), source, testCase, schedule, projection } = state;
+  const { catalog, catalogs = [catalog], analysis, openLists = new Map(), source, testCase, schedule, projection, courseUses } = state;
   const shownTerms = (schedule?._meta.terms || []).filter(t => t.shown);
   const projectedByIndex = new Map((projection?.results || []).map(r => [r.coreIndex, r]));
   const mismatchesFor = name => (analysis?.workdayChecks || []).filter(c => c.kind === 'mismatch' && c.requirement === name);
@@ -288,9 +334,10 @@ export function renderApp(root, state) {
       flags.unshift(h('span', { class: 'chip chip-hours', title: `Hours in the ${termLabel(hrs.term)} schedule` }, `${fmtRange(hrs)} hrs`));
     }
     const others = a ? a.otherCategories || [] : (listedUnder.get(c.code) || []).filter(n => n !== cat.name);
-    if (others.length) {
-      flags.push(h('span', { class: 'also' }, '\u21c9 Also listed for ', categoryLinks(others)));
-    }
+    const also = alsoChips(h, [
+      ...others.map(n => ({ area: 'core', program: 'Core', label: n, href: slugByName.has(n) ? '#' + slugByName.get(n) : null })).filter(u => u.href),
+      ...usesFor(courseUses, c.code, '#' + cat.slug, { skipCore: true })]);
+    if (also) flags.unshift(also);
     const active = a && (a.isTaken || a.isInProgress);
     const planBtn = a && !active && typeof state.onTogglePlanned === 'function'
       ? h('button', { type: 'button', class: 'plan-toggle' + (a.isPlanned ? ' is-on' : ''),
@@ -886,7 +933,9 @@ export function renderPrograms(root, state) {
   const h = builder(root.ownerDocument);
   const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null,
     openLists = new Map(), onListToggle, catalogCourses = new Map(), idPrefix = kind,
-    courseIndex = new Map(), records = [], whatIf = false } = state;
+    courseIndex = new Map(), records = [], whatIf = false, courseUses = null,
+    planned = new Set(), onTogglePlanned = null } = state;
+  const canPlan = typeof onTogglePlanned === 'function';
   // The student's courses that count, by code (no exemptions or failing grades).
   const recordByCode = new Map(records.filter(c => c.code && c.status !== 'exemption' && !isNonPassingGrade(c.grade)).map(c => [c.code, c]));
   const listState = { schedule, openLists, onListToggle };
@@ -922,7 +971,6 @@ export function renderPrograms(root, state) {
     } else if (item.hours != null) {
       flags.push(h('span', { class: 'chip chip-hours' }, `${fmtHours(item.hours)} hrs`));
     }
-    if (item.period) flags.push(h('span', { class: 'chip chip-hours' }, item.period));
     return h('li', { class: 'course is-active' },
       m ? [h('span', { class: 'course-code' }, m[1]), h('span', { class: 'course-title' }, m[2])]
         : h('span', { class: 'course-title' }, item.text),
@@ -952,13 +1000,14 @@ export function renderPrograms(root, state) {
   // from") or a name read only for its courses has no joiners. Whatever else
   // Workday applied follows.
   const NO_PROGRAM = { titles: {}, labs: {} };
-  function workdayCourses(r, parsed, id) {
+  function workdayCourses(r, parsed, id, g) {
     const matched = workdayMatched(parsed.codes, r);
     // A lab next to its lecture ("CS 108 and 108L") is drawn as the checked
     // programs draw one: indented under it, "Not on your record" when only the
     // lecture is.
     const lectureOf = code => { const l = /^(.+ \d{3})L$/.exec(code)?.[1]; return l && parsed.codes.includes(l) ? l : null; };
-    const row = code => programCourse(NO_PROGRAM, new Map(), id, code, courseIndex.get(code)?.credits ?? null, matched, lectureOf(code));
+    const own = checks.has(g?.name) ? { ...NO_PROGRAM, usesSkip: checks.get(g.name).program.programName } : NO_PROGRAM;
+    const row = code => programCourse(own, new Map(), id, code, courseIndex.get(code)?.credits ?? null, matched, lectureOf(code));
     const rows = parsed.kind === 'list' || parsed.kind === 'mentioned'
       ? parsed.codes.map(row)
       : parsed.options.flatMap((option, k) => [k ? connector('Or') : null, ...option.map(row)]);
@@ -989,7 +1038,7 @@ export function renderPrograms(root, state) {
           r.status ? h('span', { class: 'status-pill status-' + cls }, r.status) : null,
           collapseButton(h, r.name, expanded, key, onListToggle)),
         r.remaining && r.status !== 'Satisfied' ? h('p', { class: 'req-note' }, 'Remaining: ' + r.remaining) : null,
-        parsed ? workdayCourses(r, parsed, id)
+        parsed ? workdayCourses(r, parsed, id, g)
           : r.items.length ? h('ul', { class: 'course-list' }, r.items.map(workdayItem)) : null);
     });
   }
@@ -1028,19 +1077,31 @@ export function renderPrograms(root, state) {
     const m = matched.find(x => x.code === code);
     const isLab = lectureCode != null;
     const missing = isLab && !m && matched.some(x => x.code === lectureCode);
+    // As on the Core page, left to right: what else it's listed for, then the
+    // course's state (taken, planned, or its hours), then + Plan.
+    const plannable = canPlan && !m && !missing && !isLab;
+    const isPlanned = plannable && planned.has(code);
     const flags = [];
-    if (m) flags.push(takenChip(m), m.period ? h('span', { class: 'chip chip-hours' }, m.period) : null);
+    const also = alsoChips(h, usesFor(courseUses, code, '#' + itemId, { skipProgram: program.usesSkip }));
+    if (also) flags.push(also);
+    if (m) flags.push(takenChip(m));
     else if (missing) flags.push(h('span', { class: 'chip chip-excluded' }, 'Not on your record'));
+    else if (isPlanned) flags.push(h('span', { class: 'chip chip-planned' }, plannedChipText(schedule, code, credits)));
     else if (credits != null) flags.push(h('span', { class: 'chip chip-hours', title: 'Hours the catalog lists' }, `${credits} hrs`));
     if (retired) flags.push(h('span', { class: 'chip chip-hours', title: `Not an option in the ${catalogLabel({ catalogYear: program.optionsCatalogYear })} catalog. It counts because an earlier catalog lists it here.` }, 'Earlier catalog'));
     const title = m?.title || program.titles?.[code] || info?.title || (isLab ? `Lab for ${lectureCode}` : '');
-    return h('li', { class: 'course' + (m ? ' is-active' : '') + (missing ? ' is-excluded' : '') + (isLab ? ' is-lab' : ''),
+    const planBtn = plannable
+      ? h('button', { type: 'button', class: 'plan-toggle' + (isPlanned ? ' is-on' : ''), 'aria-pressed': isPlanned ? 'true' : 'false',
+          onclick: () => onTogglePlanned(code) }, isPlanned ? 'Planned ✓' : '+ Plan')
+      : null;
+    return h('li', { class: 'course' + (m ? ' is-active' : '') + (missing ? ' is-excluded' : '') + (isLab ? ' is-lab' : '') + (isPlanned ? ' is-planned' : ''),
       dataset: { kind: 'course', code } },
       info?.url
         ? h('a', { class: 'course-code', href: info.url, target: '_blank', rel: 'noopener', title: 'Course description in the official catalog' }, code)
         : h('span', { class: 'course-code' }, code),
       h('span', { class: 'course-title' }, title),
       flags.length ? h('span', { class: 'course-flags' }, flags) : null,
+      planBtn,
       m || missing ? null : offeredSectionsList(h, listState, `sections:${itemId}:${code}`, code));
   }
 
@@ -1065,8 +1126,7 @@ export function renderPrograms(root, state) {
             ? h('a', { class: 'course-code', href: info.url, target: '_blank', rel: 'noopener', title: 'Course description in the official catalog' }, term.code)
             : h('span', { class: 'course-code' }, term.code),
           h('span', { class: 'course-title' }, term.title || program.titles?.[term.code] || info?.title || ''),
-          h('span', { class: 'course-flags' }, takenChip(term),
-            term.period ? h('span', { class: 'chip chip-hours' }, term.period) : null));
+          h('span', { class: 'course-flags' }, takenChip(term)));
       };
       return [...item.occurrences.terms.map(semesterRow),
         ...(item.status === 'done' ? [] : item.options.flat().flatMap(code => rowsFor(code, [])))];
@@ -1091,8 +1151,11 @@ export function renderPrograms(root, state) {
     return CHECK_STATUS[item.status][1];
   }
 
-  function checkedCard(program, courses, item, itemId) {
+  function checkedCard(program, courses, item, itemId, withPlanResult) {
     const cls = CHECK_STATUS[item.status][0];
+    // Counting planned courses as in progress, when that changes the status.
+    const p = withPlanResult?.items.find(i => i.id === item.id);
+    const withPlan = p && p.status !== 'unknown' && pillText(p) !== pillText(item) ? pillText(p) : null;
     const listed = item.kind === 'group' || item.kind === 'list';
     const codes = listed ? item.courses.map(c => c.code) : [...new Set(item.options.flat())];
     const single = !listed && codes.length === 1;
@@ -1107,6 +1170,7 @@ export function renderPrograms(root, state) {
       h('header', { class: 'req-header' },
         h('h3', { class: 'req-name' }, item.label),
         h('span', { class: 'status-pill status-' + cls }, pillText(item)),
+        withPlan ? h('span', { class: 'status-pill status-plan' }, 'With plan: ' + withPlan) : null,
         collapseButton(h, item.label, expanded, cardKey, onListToggle)),
       item.kind === 'group' && item.minHours && item.inProgressHours ? h('p', { class: 'req-hours' }, `${fmtHours(item.inProgressHours)} more hrs in progress.`) : null,
       item.occurrences?.inProgress ? h('p', { class: 'req-hours' },
@@ -1122,7 +1186,7 @@ export function renderPrograms(root, state) {
           h('ol', { class: 'course-list' }, rows)));
   }
 
-  function checked(g, { program, result }) {
+  function checked(g, { program, result, withPlan }) {
     const year = catalogLabel({ catalogYear: program.catalogYear });
     const itemId = item => `${idPrefix}-${program.id}-${item.id}`;
     // Titles and links: the newest catalog's first, then older ones' for courses it dropped.
@@ -1152,7 +1216,7 @@ export function renderPrograms(root, state) {
     const sections = [...new Set(result.items.map(i => i.section))].map(section =>
       h('section', { class: 'req-section' },
         h('h2', { class: 'req-section-title' }, section),
-        result.items.filter(i => i.section === section).map(item => checkedCard(program, courses, item, itemId(item)))));
+        result.items.filter(i => i.section === section).map(item => checkedCard(program, courses, item, itemId(item), withPlan))));
     const unchecked = program.notes?.length || program.manualRequirements?.length
       ? h('section', { class: 'callout program-unchecked' },
         h('h2', {}, 'Not checked here'),
@@ -1232,6 +1296,10 @@ export function renderWhatIf(root, state) {
   };
   const current = programs.filter(x => x.source === 'current');
   const scenario = programs.filter(x => !x.removed);
+  // A course row says what else it's listed for: the core, and the scenario's
+  // programs (not the record's, which may have been removed here).
+  const courseUses = mergeUses(state.coreUses, programCourseUses(scenario.map((x, i) =>
+    ({ idPrefix: `whatif-${i}`, kind: x.kind, group: x.group, check: x.check }))));
   const now = tally(current);
   const then = tally(scenario);
   const label = x => x.name || (x.kind === 'minor' ? 'Minor' : 'Major and other requirements');
@@ -1293,7 +1361,7 @@ export function renderWhatIf(root, state) {
       : x.source === 'added' ? ['estimate', 'Not found'] : ['workday', 'By Workday'];
     const body = h('div', { class: 'whatif-program-body' });
     renderPrograms(body, { ...state, groups: [x.group], hasInput: true, kind: x.kind, idPrefix: `whatif-${i}`,
-      checks: x.check ? new Map([[x.group.name, x.check]]) : new Map(), whatIf: true });
+      checks: x.check ? new Map([[x.group.name, x.check]]) : new Map(), whatIf: true, courseUses });
     return h('section', { class: 'overview-block whatif-program' + (expanded ? '' : ' is-collapsed'), dataset: { kind: x.kind, source: x.source } },
       h('header', { class: 'overview-block-header' },
         ring,

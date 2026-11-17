@@ -415,6 +415,26 @@
     .chip-muted { color: var(--muted); background: var(--surface-2); font-weight: 500; }
     .also { font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; color: var(--overlap); background: var(--overlap-bg); }
     .also a { color: inherit; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .also-chips { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+    .also-mark { color: var(--overlap); font-weight: 700; }
+    /* The core chips and "+N" are one chip style, wherever the row is (a
+       Course options list's summary styles must not reach "+N"). */
+    .use-chip, .course-flags .use-more > summary { display: inline-block; vertical-align: middle; font-size: 12px; font-weight: 600; line-height: 1.5; padding: 1px 8px; border: 0; border-radius: 999px; color: var(--overlap); background: var(--overlap-bg); text-decoration: none; width: auto; }
+    .use-chip { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .use-chip:hover, .course-flags .use-more > summary:hover { text-decoration: underline; }
+    .use-more { display: inline-block; position: relative; font-size: 12px; }
+    .use-more > summary { list-style: none; cursor: pointer; white-space: nowrap; }
+    .use-more > summary::-webkit-details-marker { display: none; }
+    .course-flags .use-more[open] > summary { color: #fff; background: var(--overlap); }
+    /* Fixed, placed by app.js (placeUseList), so a card or panel that clips
+       its corners (overflow: hidden) can't cut it off. */
+    .use-more-list { position: fixed; top: 0; left: 0; z-index: 60; min-width: 300px; max-width: min(440px, 85vw); margin: 0; padding: 8px 10px; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+    .use-more-list li { padding: 4px 0; font-size: 13px; line-height: 1.4; }
+    .use-more-list a { color: var(--ink); }
+    .use-kind { display: inline-block; vertical-align: baseline; margin-right: 6px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; font-weight: 700; padding: 0 6px; border-radius: 999px; }
+    .use-kind.is-core { color: var(--overlap); background: var(--overlap-bg); }
+    .use-kind.is-major, .use-kind.is-minor { color: var(--maroon); background: var(--maroon-bg); }
     .plan-toggle { margin-left: auto; font: inherit; font-size: 12px; font-weight: 600; padding: 1px 10px; border-radius: 999px; border: 1px solid var(--maroon); color: var(--maroon); background: var(--surface); cursor: pointer; }
     .plan-toggle:hover { background: var(--maroon-bg); }
     .plan-toggle.is-on { background: var(--maroon); color: #fff; }

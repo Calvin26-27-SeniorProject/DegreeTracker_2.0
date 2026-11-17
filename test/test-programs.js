@@ -159,7 +159,7 @@ describe('renderPrograms (Major and Minor pages)', () => {
     assert.equal(row.querySelector('.course-code').textContent, 'ENTR 201');
     assert.equal(row.querySelector('.course-title').textContent, 'Introduction to Entrepreneurship');
     assert.deepEqual([...row.querySelectorAll('.course-flags .chip')].map(c => [c.className, c.textContent]),
-      [['chip chip-taken', 'Taken · 2 hrs'], ['chip chip-hours', '2025 Fall']]);
+      [['chip chip-taken', 'Taken · 2 hrs']], 'no term chip');
     const progress = [...root.querySelectorAll('.req')].find(li => /^ENTR 202/.test(li.querySelector('.req-name').textContent));
     assert.equal(progress.querySelector('.chip-progress').textContent, 'In progress · 4 hrs');
     assert.equal(root.querySelector('.program, .program-req, .program-option'), null);

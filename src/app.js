@@ -7,6 +7,7 @@ import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
 import { renderApp, renderPrograms, renderDashboard, renderWhatIf, programTabs, catalogLabel, isMinor } from './app-render.js';
 import { buildTestCase, formatTestCase } from './test-case.js';
+import { coreCourseUses, programCourseUses, mergeUses } from './course-uses.js';
 import catalog25 from '../catalog/catalog-categories-25.json';
 import catalog24 from '../catalog/catalog-categories-24.json';
 import schedule from '../schedule/sections.json';
@@ -279,6 +280,8 @@ function analyzeInput(catalog, input) {
       const options = { overrides, workdayStatus, extraCourses: KNOWN_COURSE_CATEGORIES };
       analysis = analyze(catalog.categories, courses, { ...options, plannedCourses: Array.from(state.plannedCourses) });
       state.plannedCourses = new Set(analysis.plannedCourses);
+      // Each checked program again with the plan, for its cards' "With plan".
+      for (const c of state.programChecks.values()) c.withPlan = withPlan(c.program);
       if (analysis.plannedCourses.length) {
         projection = analyze(catalog.categories,
           [...courses, ...plannedEntries(analysis.plannedCourses, code => schedule.hours[code])], options);
@@ -304,23 +307,25 @@ function analyzeInput(catalog, input) {
 }
 
 function renderResults(catalog, analysis, projection) {
-  renderApp($('results'), {
-    catalog, catalogs: CATALOGS, analysis, projection, schedule, openLists: state.openLists, tocRoot: $('toc'),
-    format: state.format, source: state.format && SOURCE_LABELS[state.format], testCase: state.testCase,
-    onTogglePlanned: code => {
-      if (state.plannedCourses.has(code)) state.plannedCourses.delete(code);
-      else state.plannedCourses.add(code);
-      update();
-    },
-    onListToggle: (slug, open) => state.openLists.set(slug, open),
-  });
   const groups = state.programs || [];
   const hasInput = state.programs !== null;
   const checks = state.programChecks;
+  const tabs = programTabs(groups, hasInput);
+  // What else each course is listed for (each course row says): the core
+  // requirements, and each major's and minor's, linking to its tab.
+  state.coreUses = coreCourseUses(catalog, KNOWN_COURSE_CATEGORIES);
+  const courseUses = mergeUses(state.coreUses, programCourseUses(tabs.flatMap(t => t.groups.map((g, i) =>
+    ({ idPrefix: t.id, kind: t.kind, group: g, groupIndex: i, check: checks.get(g.name) })))));
+  renderApp($('results'), {
+    catalog, catalogs: CATALOGS, analysis, projection, schedule, openLists: state.openLists, tocRoot: $('toc'), courseUses,
+    format: state.format, source: state.format && SOURCE_LABELS[state.format], testCase: state.testCase,
+    onTogglePlanned: togglePlanned,
+    onListToggle: (slug, open) => state.openLists.set(slug, open),
+  });
   const programState = { hasInput, checks, schedule, openLists: state.openLists,
     onListToggle: (key, open) => state.openLists.set(key, open), catalogCourses: CATALOG_COURSES,
-    courseIndex: COURSE_INDEX, records: state.records };
-  const tabs = programTabs(groups, hasInput);
+    courseIndex: COURSE_INDEX, records: state.records, courseUses,
+    planned: state.plannedCourses, onTogglePlanned: hasInput ? togglePlanned : null };
   syncProgramTabs(tabs);
   for (const t of tabs) renderPrograms($(t.id), { ...programState, groups: t.groups, kind: t.kind, idPrefix: t.id });
   // The Overview shows each page's summary tiles, so it's drawn after them.
@@ -353,15 +358,57 @@ function whatIfEntry(name) {
 }
 function whatIfCheck(name) {
   const base = findProgram(PROGRAMS, name, state.catoid);
+  let program = null;
   if (base) {
     const years = CATALOGS.map(c => findProgram(PROGRAMS, name, c._meta.catoid)).filter(Boolean);
-    const program = programForStudent(base, years);
-    return { program, result: checkProgram(program, state.records, state.attempts) };
+    program = programForStudent(base, years);
+  } else {
+    const found = whatIfEntry(name);
+    if (!found) return null;
+    program = programFromCatalog(found.entry, found);
   }
-  const found = whatIfEntry(name);
-  if (!found) return null;
-  const program = programFromCatalog(found.entry, found);
-  return { program, result: checkProgram(program, state.records, state.attempts) };
+  return { program, result: checkProgram(program, state.records, state.attempts), withPlan: withPlan(program) };
+}
+
+// A program checked with the planned courses counted as in progress (hours
+// from the course schedule, else the catalog's credits), or null with no plan.
+// A planned lecture's lab comes with it (a lecture counts only with its lab).
+// The actual check never includes them.
+function withPlan(program) {
+  const codes = [...state.plannedCourses];
+  if (!codes.length || !state.records.length) return null;
+  const hoursOf = code => {
+    if (schedule.hours[code]) return schedule.hours[code];
+    const credits = parseFloat(COURSE_INDEX.get(code)?.credits);
+    return Number.isFinite(credits) ? { min: credits, max: credits } : undefined;
+  };
+  // A planned lecture brings its corequisite lab, as registering for it would.
+  const withLabs = [...new Set(codes.flatMap(c => [c, program.labs?.[c]].filter(Boolean)))]
+    .filter(c => !state.records.some(r => r.code === c));
+  return checkProgram(program, [...state.records, ...plannedEntries(withLabs, hoursOf)], state.attempts);
+}
+
+// Places an open "+N" list (position: fixed) under its chip, right edges
+// lined up, kept inside the window; above the chip when there's no room below.
+function placeUseList(d) {
+  const list = d.querySelector('.use-more-list');
+  if (!list) return;
+  const chip = d.querySelector('summary').getBoundingClientRect();
+  const { width, height } = list.getBoundingClientRect();
+  const gap = 4;
+  const margin = 8;
+  const left = Math.min(Math.max(margin, chip.right - width), window.innerWidth - width - margin);
+  const below = chip.bottom + gap;
+  const top = below + height <= window.innerHeight - margin || chip.top - gap - height < margin ? below : chip.top - gap - height;
+  list.style.left = `${Math.max(margin, left)}px`;
+  list.style.top = `${top}px`;
+}
+
+// + Plan / Planned ✓ on any course row, Core or a program's: one plan for the whole page.
+function togglePlanned(code) {
+  if (state.plannedCourses.has(code)) state.plannedCourses.delete(code);
+  else state.plannedCourses.add(code);
+  update();
 }
 
 function renderWhatIfTab() {
@@ -380,7 +427,8 @@ function renderWhatIfTab() {
     programs: [...current, ...extra],
     options: cat.programs.filter(p => !inScenario.has(p.name)).map(p => ({ name: p.name, type: p.type })),
     schedule, openLists: state.openLists, onListToggle: (key, open) => state.openLists.set(key, open),
-    catalogCourses: CATALOG_COURSES, courseIndex: COURSE_INDEX, records: state.records,
+    catalogCourses: CATALOG_COURSES, courseIndex: COURSE_INDEX, records: state.records, coreUses: state.coreUses,
+    planned: state.plannedCourses, onTogglePlanned: togglePlanned,
     onRemove: key => {
       if (key.startsWith('added:')) state.whatIf.added = added.filter(n => `added:${n}` !== key);
       else removed.add(key);
@@ -523,6 +571,58 @@ function init() {
     if (!owner) return;
     e.preventDefault();
     setTab(owner);
+    target.scrollIntoView();
+  });
+  // An "Also listed for" link goes to that requirement on its own tab,
+  // opening whatever it's folded in.
+  // "+N" opens its list on hover (a mouse) or on a click or tap, floating above
+  // whatever section it's in. Only one is open at a time.
+  const canHover = window.matchMedia?.('(hover: hover)').matches;
+  let closeTimer = null;
+  const openUses = d => {
+    clearTimeout(closeTimer);
+    for (const o of document.querySelectorAll('details.use-more[open]')) if (o !== d) o.open = false;
+    if (!d.open) d.open = true;
+    placeUseList(d);
+  };
+  document.addEventListener('toggle', e => {
+    if (e.target.matches?.('details.use-more') && e.target.open) openUses(e.target);
+  }, true);
+  if (canHover) {
+    document.addEventListener('mouseover', e => {
+      const d = e.target.closest?.('details.use-more');
+      if (d) openUses(d);
+    });
+    document.addEventListener('mouseout', e => {
+      const d = e.target.closest?.('details.use-more');
+      if (!d || d.contains(e.relatedTarget)) return;
+      // A moment to cross the gap between the chip and its list.
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => { d.open = false; }, 200);
+    });
+  }
+  // The list is placed for where the chip is; scrolling or resizing closes it.
+  const closeAllUses = () => { for (const d of document.querySelectorAll('details.use-more[open]')) d.open = false; };
+  window.addEventListener('scroll', closeAllUses, { passive: true });
+  window.addEventListener('resize', closeAllUses);
+  document.addEventListener('click', e => {
+    // With a mouse, hovering already opened it: a click on the chip keeps it open.
+    const chip = canHover && e.target.closest('details.use-more > summary');
+    if (chip) { e.preventDefault(); openUses(chip.parentElement); return; }
+    // An open "+N" list closes on a click outside it or on one of its links.
+    for (const d of document.querySelectorAll('details.use-more[open]')) {
+      if (!d.contains(e.target) || e.target.closest('.use-more-list a')) d.open = false;
+    }
+    const link = e.target.closest('a.use-link[href^="#"]');
+    const target = link && document.getElementById(link.getAttribute('href').slice(1));
+    const panel = target?.closest('#results, .tab-panel.programs, #whatif');
+    if (!panel) return;
+    e.preventDefault();
+    setTab(panel.id === 'results' ? 'core' : panel.id);
+    for (let el = target; el && el !== panel; el = el.parentElement) {
+      if (el.tagName === 'DETAILS' && !el.open) el.open = true;
+      if (el.classList.contains('is-collapsed')) el.querySelector(':scope > header .req-collapse')?.click();
+    }
     target.scrollIntoView();
   });
   // Arrow keys move between tabs (WAI-ARIA tabs pattern).
