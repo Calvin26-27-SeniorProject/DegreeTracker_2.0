@@ -268,6 +268,7 @@ export function bugReport(analysis, check, context = {}) {
 export function renderApp(root, state) {
   const doc = root.ownerDocument;
   const h = builder(doc);
+  const gradeText = text => h('span', { class: 'grade' }, text);
   const { catalog, catalogs = [catalog], analysis, openLists = new Map(), source, testCase, schedule, projection, courseUses } = state;
   const shownTerms = (schedule?._meta.terms || []).filter(t => t.shown);
   const projectedByIndex = new Map((projection?.results || []).map(r => [r.coreIndex, r]));
@@ -322,8 +323,8 @@ export function renderApp(root, state) {
       else if (a.isInProgress) { rowCls += ' is-active'; flags.push(h('span', { class: 'chip chip-progress' }, `In progress · ${fmtHours(a.hours)} hrs`)); }
       else if (a.isTaken) {
         rowCls += ' is-active';
-        flags.push(h('span', { class: 'chip chip-taken' },
-          (a.isTransfer ? 'Transfer' : 'Taken') + (a.grade && !a.isTransfer ? ` · ${a.grade}` : '') + ` · ${fmtHours(a.hours)} hrs`));
+        flags.push(h('span', { class: 'chip chip-taken' }, a.isTransfer ? 'Transfer' : 'Taken',
+          a.grade && !a.isTransfer ? gradeText(` · ${a.grade}`) : null, ` · ${fmtHours(a.hours)} hrs`));
       } else if (a.isPlanned) { rowCls += ' is-planned'; flags.push(h('span', { class: 'chip chip-planned' }, plannedLabel(c.code))); }
       else if (a.isMaxedDiscipline) { rowCls += ' is-maxed'; flags.push(h('span', { class: 'chip chip-muted' }, 'Discipline max reached')); }
     }
@@ -500,24 +501,44 @@ export function renderApp(root, state) {
         + (pku && !ku?.met ? `, K&U ${fmtHours(pku.totalHours)} of ${pku.requiredHours} hrs in ${pku.categoriesUsed} of ${pku.requiredCategories} categories` : '') + '.');
     }
 
+    // Same columns as coreProgress counts: done, else in progress when an
+    // in-progress course counts toward it, else not satisfied.
+    const column = (isMet, inProgress) => (isMet ? 'done' : inProgress ? 'min' : 'todo');
+    const chipLink = (cat, r) => {
+      const s = statusInfo(r) || { cls: 'muted', text: '' };
+      const isKU = KU_NAMES.includes(cat.name);
+      return h('a', { href: '#' + cat.slug, class: 'summary-chip status-' + s.cls },
+        h('span', { class: 'chip-name' }, cat.name), h('span', { class: 'chip-value' }, isKU ? kuChipLabel(r) : s.text),
+        isKU && r.roomHours != null ? h('span', { class: 'chip-room' + (r.roomHours > 0 ? ' has-room' : '') },
+          r.roomHours > 0 ? `Room for ${fmtHours(r.roomHours)} more` : 'Full') : null);
+    };
+    const kuGroup = groups.find(g => g.items.length && KU_NAMES.includes(g.items[0].cat.name));
+    const chips = [];
+    for (const g of groups) {
+      for (const { cat, r } of g.items) {
+        if (KU_NAMES.includes(cat.name)) continue;
+        chips.push({ status: column(isDone(r), r.inProgressCount > 0), node: chipLink(cat, r) });
+      }
+      if (g === kuGroup && ku) {
+        const inProgress = g.items.some(({ r }) => r.inProgressCount > 0);
+        chips.push({ status: column(ku.met, inProgress), node:
+          h('a', { href: '#' + g.section.slug, class: 'summary-chip status-' + (ku.met ? 'done' : inProgress ? 'min' : 'todo') },
+            h('span', { class: 'chip-name' }, g.section.section),
+            h('span', { class: 'chip-value' }, `${fmtHours(ku.totalHours)} of ${ku.requiredHours} hrs, ${ku.categoriesUsed} of ${ku.requiredCategories} categories`)) });
+      }
+    }
+
     return h('section', { class: 'summary', 'aria-label': 'Summary' },
       h('h2', {}, `${done} of ${total} requirements met`),
       h('p', { class: 'summary-sub' }, 'By this tool’s reading of the catalog. Workday may differ.'),
       planLine,
-      groups.filter(g => g.items.length).map(g => h('div', { class: 'summary-group' },
-        h('h3', {}, g.section.section),
-        KU_NAMES.includes(g.items[0].cat.name) && ku ? kuMeter(ku) : null,
-        KU_NAMES.includes(g.items[0].cat.name) && ku?.workdaySatisfied ? workdaySatisfiedNote(ku.workdaySatisfied) : null,
-        h('ul', { class: 'summary-chips' }, g.items.map(({ cat, r }) => {
-          const s = statusInfo(r) || { cls: 'muted', text: '' };
-          const isKU = KU_NAMES.includes(cat.name);
-          const label = isKU ? kuChipLabel(r) : s.text;
-          return h('li', {}, h('a', { href: '#' + cat.slug, class: 'summary-chip status-' + s.cls },
-            h('span', { class: 'chip-name' }, cat.name), h('span', { class: 'chip-value' }, label),
-            isKU && r.roomHours != null ? h('span', { class: 'chip-room' + (r.roomHours > 0 ? ' has-room' : '') },
-              r.roomHours > 0 ? `Room for ${fmtHours(r.roomHours)} more` : 'Full') : null));
-        })),
-        KU_NAMES.includes(g.items[0].cat.name) && ku ? kuOpportunities(ku, g.items.map(i => i.r)) : null)));
+      statusSections(h, chips, 'core', openLists, state.onListToggle),
+      kuGroup && ku ? h('div', { class: 'summary-group' },
+        h('h3', {}, kuGroup.section.section),
+        kuMeter(ku),
+        ku.workdaySatisfied ? workdaySatisfiedNote(ku.workdaySatisfied) : null,
+        h('ul', { class: 'summary-chips' }, kuGroup.items.map(({ cat, r }) => h('li', {}, chipLink(cat, r)))),
+        kuOpportunities(ku, kuGroup.items.map(i => i.r))) : null);
   }
 
   function workdaySatisfiedNote(ws) {
@@ -579,7 +600,7 @@ export function renderApp(root, state) {
     }
     for (const c of analysis.notCounted || []) {
       items.push(h('li', {}, h('strong', {}, c.code), c.title ? ' ' + c.title : '',
-        ` has grade ${c.grade}, so it isn’t counted toward any requirement.`));
+        ' isn’t counted toward any requirement: its grade', gradeText(` (${c.grade})`), ' doesn’t earn credit.'));
     }
     for (const r of analysis.results) {
       for (const a of r.courseAnnotations || []) {
@@ -659,16 +680,16 @@ export function renderApp(root, state) {
     return h('section', { class: 'transcript' },
       h('h2', {}, `Your courses (${transcript.length})`),
       h('div', { class: 'table-wrap' }, h('table', {},
-        h('thead', {}, h('tr', {}, ['Course', 'Title', 'Grade', 'Hrs', 'Counts toward'].map(t => h('th', {}, t)))),
+        h('thead', {}, h('tr', {}, ['Course', 'Title', 'Grade', 'Hrs', 'Counts toward'].map(t => h('th', { class: t === 'Grade' ? 'grade-col' : null }, t)))),
         h('tbody', {}, transcript.map(c => {
           const names = where.get(c.code) || [];
           const notCounted = analysis.notCounted?.includes(c);
           return h('tr', {},
             h('td', {}, h('strong', {}, c.code || '—'), statusText[c.status] ? h('span', { class: 'cell-status' }, statusText[c.status]) : null),
             h('td', {}, c.title),
-            h('td', {}, c.grade || '—'),
+            h('td', { class: 'grade-col' }, c.grade || '—'),
             h('td', {}, fmtHours(c.hours)),
-            h('td', {}, notCounted ? h('span', { class: 'muted' }, `not counted (grade ${c.grade})`)
+            h('td', {}, notCounted ? h('span', { class: 'muted' }, 'not counted', gradeText(` (grade ${c.grade})`))
               : names.length ? categoryLinks(names) : h('span', { class: 'muted' }, 'none')));
         })))));
   }
@@ -929,6 +950,7 @@ const WORKDAY_STATUS_CLS = { Satisfied: 'done', 'In Progress': 'min', 'Not Satis
 const CHECK_STATUS = { done: ['done', 'Complete'], progress: ['min', 'In progress'], todo: ['todo', 'Not yet'], unknown: ['optional', 'See catalog'] };
 export function renderPrograms(root, state) {
   const h = builder(root.ownerDocument);
+  const gradeText = text => h('span', { class: 'grade' }, text);
   const { groups = [], hasInput, kind = 'major', checks = new Map(), schedule = null,
     openLists = new Map(), onListToggle, catalogCourses = new Map(), idPrefix = kind,
     courseIndex = new Map(), records = [], whatIf = false, courseUses = null,
@@ -965,7 +987,7 @@ export function renderPrograms(root, state) {
     if (m) {
       flags.push(m[3]
         ? h('span', { class: 'chip chip-progress' }, `In progress${hoursText(item.hours)}`)
-        : h('span', { class: 'chip chip-taken' }, `Taken${hoursText(item.hours)}`));
+        : h('span', { class: 'chip chip-taken' }, 'Taken', item.grade ? gradeText(` · ${item.grade}`) : null, hoursText(item.hours)));
     } else if (item.hours != null) {
       flags.push(h('span', { class: 'chip chip-hours' }, `${fmtHours(item.hours)} hrs`));
     }
@@ -986,7 +1008,7 @@ export function renderPrograms(root, state) {
       if (rec) return [{ code, status: rec.status === 'in-progress' ? 'progress' : 'done', title: rec.title || null, hours: rec.hours ?? null, grade: rec.grade || null, period }];
       if (!item) return [];
       const m = WORKDAY_ITEM_RE.exec(item.text);
-      return [{ code, status: m[3] ? 'progress' : 'done', title: m[2], hours: item.hours ?? null, grade: null, period }];
+      return [{ code, status: m[3] ? 'progress' : 'done', title: m[2], hours: item.hours ?? null, grade: item.grade || null, period }];
     });
   }
 
@@ -1062,7 +1084,7 @@ export function renderPrograms(root, state) {
   // The chip for a course on the student's record, worded like the Core page.
   function takenChip(m) {
     return m.status === 'done'
-      ? h('span', { class: 'chip chip-taken' }, `Taken${m.grade ? ` · ${m.grade}` : ''}${hoursText(m.hours)}`)
+      ? h('span', { class: 'chip chip-taken' }, 'Taken', m.grade ? gradeText(` · ${m.grade}`) : null, hoursText(m.hours))
       : h('span', { class: 'chip chip-progress' }, `In progress${hoursText(m.hours)}`);
   }
 

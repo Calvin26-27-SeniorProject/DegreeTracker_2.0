@@ -242,8 +242,9 @@ export function parseProgress(text) {
 // Also returns `programs`, for the Major & minor page: one per requirement table, in
 // order, named from the export's "Program of Study" summary (the tables follow it
 // in the same order; names stay null if the counts differ):
-//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours }] }] }]
-// Workday's wording, verbatim; no grades. Courses and workdayStatus don't depend on it.
+//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours, grade }] }] }]
+// Workday's wording, verbatim (the app shows grades only when its "Show grades"
+// toggle is on). Courses and workdayStatus don't depend on it.
 // A status cell starts with one of Workday's statuses (allowing a suffix).
 const TABLE_STATUS_RE = /^(Satisfied|Not Satisfied|In Progress)\b/i;
 export function parseProgressRows(rows) {
@@ -292,7 +293,7 @@ export function parseProgressRows(rows) {
     });
     const name = cleanRequirementName(get('requirement'));
     if (!table.has(name)) table.set(name, { name, status: get('status'), remaining: get('remaining') || null, items: [] });
-    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null });
+    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null, grade: get('grade') || null });
   }
   const named = summary.length === tables.length;
   const programs = tables.map((t, i) => ({ name: named ? summary[i].name : null,
