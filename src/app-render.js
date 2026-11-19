@@ -145,7 +145,7 @@ function collapseButton(h, name, expanded, key, onListToggle) {
 }
 
 // Clicking anywhere on a panel's header (Overview, What if) or a summary
-// section's header folds it, as its chevron does; buttons, links, and fields
+// column's header folds it, as its chevron does; buttons, links, and fields
 // inside keep their own clicks. Set up once per root; a click is handled once
 // even when roots are nested (What if draws program pages inside its panels).
 const FOLD_ROOTS = new WeakSet();
@@ -162,26 +162,24 @@ function foldOnHeaderClick(root) {
   });
 }
 
-// A Major or Minor summary's chips in three sections stacked top to bottom:
-// Not satisfied, In progress, Satisfied (what's left to take first), each with
-// its count and a chevron that folds it. A section with no chips is left out.
-// Satisfied starts folded, the others open, unless openLists says otherwise
-// (key "summary:<keyPrefix>:<status>").
-// chips: [{ status: 'done' | 'min' | 'todo', node }], node an <a class="summary-chip">.
-// A What if estimate adds blocks it can't read: 'optional', "Check the catalog".
-const SUMMARY_STATUS = [['todo', 'Not satisfied'], ['min', 'In progress'], ['done', 'Satisfied'], ['optional', 'Check the catalog']];
-export const summaryOpenByDefault = status => status !== 'done';
-function statusSections(h, chips, keyPrefix, openLists, onListToggle) {
-  return h('div', { class: 'summary-status' }, SUMMARY_STATUS.map(([status, label]) => {
+// A Major or Minor summary's chips in side-by-side columns, Satisfied, In
+// progress, Not satisfied, each headed by its count and always in that place
+// ("None" when empty), plus What if's Check the catalog when it has any.
+// Each folds to its header (chevron or a click on the header); all start open
+// (openLists key "summary:<keyPrefix>:<status>"). Narrow windows stack them.
+const SUMMARY_STATUS = [['done', 'Satisfied'], ['min', 'In progress'], ['todo', 'Not satisfied'], ['optional', 'Check the catalog']];
+export const summaryOpenByDefault = () => true;
+function statusSections(h, chips, keyPrefix, openLists = new Map(), onListToggle) {
+  const shown = SUMMARY_STATUS.filter(([status]) => status !== 'optional' || chips.some(c => c.status === status));
+  return h('div', { class: `summary-status cols-${shown.length}` }, shown.map(([status, label]) => {
     const mine = chips.filter(c => c.status === status);
-    if (!mine.length) return null;
     const key = `summary:${keyPrefix}:${status}`;
-    const expanded = openLists.has(key) ? openLists.get(key) : summaryOpenByDefault(status);
+    const expanded = !mine.length || (openLists.has(key) ? openLists.get(key) : summaryOpenByDefault(status));
     return h('section', { class: `summary-status-group status-${status}` + (expanded ? '' : ' is-collapsed'), dataset: { status } },
       h('header', { class: 'summary-status-header' },
         h('h3', {}, label, h('span', { class: 'summary-status-count' }, ` (${mine.length})`)),
-        collapseButton(h, label, expanded, key, onListToggle)),
-      h('ul', { class: 'summary-chips' }, mine.map(c => h('li', {}, c.node))));
+        mine.length ? collapseButton(h, label, expanded, key, onListToggle) : null),
+      mine.length ? h('ul', { class: 'summary-chips' }, mine.map(c => h('li', {}, c.node))) : h('p', { class: 'summary-empty' }, 'None'));
   }));
 }
 
@@ -850,7 +848,7 @@ export function renderDashboard(root, state) {
     tab ? h('button', { type: 'button', class: 'link-button dash-open', dataset: { openTab: tab } }, 'See requirements →') : null);
   const majors = programs.filter(({ g }) => !isMinor(g));
   const minors = programs.filter(({ g }) => isMinor(g));
-  // A copied summary's section folds lose their handlers in the copy: wire them
+  // A copied summary's column folds lose their handlers in the copy: wire them
   // again, kept apart from the page's (key "overview:<id>:<the page's key>").
   const copyOf = (id, node) => {
     const copy = doc.importNode(node, true);

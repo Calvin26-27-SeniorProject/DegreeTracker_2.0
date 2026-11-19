@@ -22,7 +22,9 @@ import { join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { JSDOM } from 'jsdom';
 import { KNOWN_COURSE_CATEGORIES } from '../src/catalog-courses.js';
-import { parseTranscript, parseProgress, detectInputFormat, parseCoreProgram, analyze, KU_NAMES } from '../src/core.js';
+import { parseTranscript, parseProgress, detectInputFormat } from '../src/parse.js';
+import { parseCoreProgram } from '../src/catalog-parse.js';
+import { analyze, KU_NAMES } from '../src/core.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const FIXTURES = join(__dirname, 'fixtures');

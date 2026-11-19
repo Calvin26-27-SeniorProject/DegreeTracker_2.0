@@ -1,5 +1,6 @@
-import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, parseCoreProgram, analyze,
-  hasCoreRequirements, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
+import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat } from './parse.js';
+import { parseCoreProgram } from './catalog-parse.js';
+import { analyze, hasCoreRequirements, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
 import { readXlsxRows } from './xlsx.js';
 import { clearRenderedState, render } from './render.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';

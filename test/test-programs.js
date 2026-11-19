@@ -10,7 +10,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { JSDOM } from 'jsdom';
 import { readXlsxRows } from '../src/xlsx.js';
-import { parseProgressRows, parseProgress, programRequirements, analyze } from '../src/core.js';
+import { parseProgressRows, parseProgress } from '../src/parse.js';
+import { programRequirements, analyze } from '../src/core.js';
 import { renderApp, renderPrograms, renderDashboard, programTabs, coreProgress, programProgress, isMinor } from '../src/app-render.js';
 import { KNOWN_COURSE_CATEGORIES } from '../src/catalog-courses.js';
 import { makeCourse } from './helpers.js';
@@ -21,6 +22,21 @@ const sample = () => parseProgressRows(readXlsxRows(
 const norm = s => (s || '').replace(/\s+/g, ' ').trim();
 
 describe('programs in the .xlsx export', () => {
+  it('ends a requirement table at the lines under it that aren’t requirements (GPA, dates)', () => {
+    const { programs, courses } = parseProgressRows([
+      ['Requirement', 'Status', 'Remaining', 'Registrations Used', 'Academic Period', 'Hours', 'Grade'],
+      ['PSYC 151', 'Satisfied', '', 'PSYC 151 - Introductory Psychology', '2025 Fall', '4', 'A'],
+      ['PSYC 244', 'In Progress', '', 'PSYC 244 - Lifespan Development (In Progress)', '2026 Fall', '4', ''],
+      ['PSYC 399', 'Not Satisfied', '1 course', '', '', '', ''],
+      ['4', 'Program of Study GPA', '', '', '', '', ''],
+      ['Requirements Effective', '46104.0', '', '', '', '', ''],
+      ['Last Evaluated', '11/12/2026 10:36:00.000 AM GMT-05:00 Eastern Time (New York)', '', '', '', '', ''],
+    ]);
+    assert.deepEqual(programs[0].requirements.map(r => [r.name, r.status]),
+      [['PSYC 151', 'Satisfied'], ['PSYC 244', 'In Progress'], ['PSYC 399', 'Not Satisfied']]);
+    assert.deepEqual(courses.map(c => c.code), ['PSYC 151', 'PSYC 244']);
+  });
+
   it('names each requirement table from the Program of Study summary, in order', () => {
     const { programs } = sample();
     assert.deepEqual(programs.map(p => [p.name, p.satisfied, p.total]),
@@ -366,12 +382,10 @@ describe('Major and Minor summaries: Not satisfied, In progress, Satisfied', () 
   const sectionsOf = summary => [...summary.querySelectorAll('.summary-status > .summary-status-group')];
   const headerText = sec => norm(sec.querySelector('.summary-status-header h3').textContent);
 
-  it('stacks the chips in sections in that order, each with its count, one chip per requirement', () => {
+  it('puts the chips in columns, Satisfied, In progress, Not satisfied, each with its count, one chip per requirement', () => {
     const summary = majorPage().querySelector(':scope > .summary');
     const sections = sectionsOf(summary);
-    const order = ['todo', 'min', 'done'];
-    assert.deepEqual(sections.map(s => s.dataset.status), order.filter(st => sections.some(s => s.dataset.status === st)));
-    assert.ok(sections.length >= 2);
+    assert.deepEqual(sections.map(s => s.dataset.status), ['done', 'min', 'todo'], 'always the three, in place');
     const cs = groups.find(g => !isMinor(g));
     const counts = { done: 0, min: 0, todo: 0 };
     for (const r of cs.requirements) counts[{ Satisfied: 'done', 'In Progress': 'min' }[r.status] || 'todo']++;
@@ -381,37 +395,39 @@ describe('Major and Minor summaries: Not satisfied, In progress, Satisfied', () 
       assert.equal(sec.querySelectorAll('.summary-chip').length, counts[sec.dataset.status]);
     }
     assert.equal(summary.querySelectorAll('.summary-chip').length, cs.requirements.length);
+    for (const sec of sections.filter(s => !counts[s.dataset.status])) assert.equal(sec.querySelector('.summary-empty').textContent, 'None');
   });
 
-  it('folds Satisfied and opens the others by default', () => {
+  it('opens every column by default, each with a fold; an empty column has nothing to fold', () => {
     const root = newRoot();
     renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
     const sections = sectionsOf(root.querySelector(':scope > .summary'));
-    assert.ok(sections.some(s => s.dataset.status === 'done'), 'the sample minor has a satisfied requirement');
-    assert.deepEqual(sections.map(s => [s.dataset.status, s.classList.contains('is-collapsed')]),
-      sections.map(s => [s.dataset.status, s.dataset.status === 'done']));
     const done = sections.find(s => s.dataset.status === 'done');
-    assert.equal(done.querySelector('.req-collapse').getAttribute('aria-expanded'), 'false');
-    done.querySelector('.req-collapse').click();
-    assert.ok(!done.classList.contains('is-collapsed'));
+    assert.ok(done.querySelector('.summary-chip'), 'the sample minor has a satisfied requirement');
+    for (const sec of sections) {
+      assert.ok(!sec.classList.contains('is-collapsed'), sec.dataset.status);
+      assert.equal(!!sec.querySelector('.req-collapse'), !!sec.querySelector('.summary-chip'), sec.dataset.status);
+    }
+    assert.equal(root.querySelector('.summary-more'), null, 'no “Show more”');
+    done.querySelector('.summary-status-header h3').click();
+    assert.ok(done.classList.contains('is-collapsed'), 'its header folds it too');
   });
 
-  it('its arrow folds and unfolds a section, and the fold is kept', () => {
+  it('its arrow folds and unfolds a column, and the fold is kept', () => {
     const toggled = [];
     const sections = sectionsOf(majorPage({ onListToggle: (k, open) => toggled.push([k, open]) }).querySelector(':scope > .summary'));
-    assert.equal(sections[0].dataset.status, 'todo');
-    assert.ok(!sections[0].classList.contains('is-collapsed'));
-    const button = sections[0].querySelector('.summary-status-header > .req-collapse');
+    const todo = sections.find(s => s.dataset.status === 'todo');
+    assert.ok(!todo.classList.contains('is-collapsed'));
+    const button = todo.querySelector('.summary-status-header > .req-collapse');
     button.click();
-    assert.ok(sections[0].classList.contains('is-collapsed'));
+    assert.ok(todo.classList.contains('is-collapsed'));
     assert.equal(button.getAttribute('aria-expanded'), 'false');
-    assert.ok(!sections[1].classList.contains('is-collapsed'));
-    assert.deepEqual(toggled, [[`summary:major-0:${sections[0].dataset.status}`, false]]);
+    assert.deepEqual(toggled, [['summary:major-0:todo', false]]);
     const again = sectionsOf(majorPage({ openLists: new Map(toggled) }).querySelector(':scope > .summary'));
-    assert.ok(again[0].classList.contains('is-collapsed'));
+    assert.ok(again.find(s => s.dataset.status === 'todo').classList.contains('is-collapsed'));
   });
 
-  it('the Overview’s copy folds on its own, without touching the page', () => {
+  it('the Overview shows the same columns, folding on their own without touching the page', () => {
     const page = majorPage();
     const summary = page.querySelector(':scope > .summary');
     const catalog = JSON.parse(fs.readFileSync(new URL('../catalog/catalog-categories-25.json', import.meta.url), 'utf-8'));
@@ -421,10 +437,11 @@ describe('Major and Minor summaries: Not satisfied, In progress, Satisfied', () 
     renderDashboard(root, { catalog, analysis, groups, onListToggle: (k, open) => toggled.push([k, open]),
       blocks: [{ id: 'major:CS', kind: 'major', title: 'CS', node: summary }] });
     const copy = sectionsOf(root.querySelector('.overview-block-body .summary'));
-    assert.deepEqual(copy.map(s => s.classList.contains('is-collapsed')), copy.map(s => s.dataset.status === 'done'));
-    copy[0].querySelector('.req-collapse').click();
-    assert.ok(copy[0].classList.contains('is-collapsed'));
-    assert.ok(!sectionsOf(summary)[0].classList.contains('is-collapsed'));
-    assert.deepEqual(toggled, [[`overview:major:CS:summary:major-0:${copy[0].dataset.status}`, false]]);
+    assert.deepEqual(copy.map(headerText), sectionsOf(summary).map(headerText));
+    const todo = copy.find(s => s.dataset.status === 'todo');
+    todo.querySelector('.req-collapse').click();
+    assert.ok(todo.classList.contains('is-collapsed'));
+    assert.ok(!sectionsOf(summary).find(s => s.dataset.status === 'todo').classList.contains('is-collapsed'));
+    assert.deepEqual(toggled, [['overview:major:CS:summary:major-0:todo', false]]);
   });
 });

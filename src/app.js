@@ -2,7 +2,8 @@
 // pasted Workday text and chosen .xlsx exports are parsed here and never sent
 // anywhere.
 
-import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat, analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, programForStudent, programFromCatalog, checkProgram, startPeriod, academicYearOf, catalogForStart, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
+import { parseTranscript, parseProgress, parseProgressRows, detectInputFormat } from './parse.js';
+import { analyze, plannedEntries, hasCoreRequirements, programRequirements, findProgram, programForStudent, programFromCatalog, checkProgram, startPeriod, academicYearOf, catalogForStart, ONE_TABLE_EXPORT_MESSAGE } from './core.js';
 import { readXlsxRows } from './xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from './catalog-courses.js';
 import { renderApp, renderPrograms, renderDashboard, renderWhatIf, programTabs, catalogLabel, isMinor } from './app-render.js';

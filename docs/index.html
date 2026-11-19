@@ -136,14 +136,24 @@
     .steps-card { padding: 22px; }
     .steps-card h2 { margin: 0; font-size: 17px; }
     .steps-sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
-    .steps { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
-    .step { display: flex; gap: 12px; padding: 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); font-size: 13px; color: var(--muted); }
-    .step-num { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--surface-2); color: var(--muted); font: 700 12px/1 ui-monospace, Menlo, Consolas, monospace; }
-    .step:first-child .step-num { background: var(--maroon); color: #fff; }
+    /* Numbered timeline: filled number circles joined by a line down the left. */
+    .steps { list-style: none; margin: 18px 0 0; padding: 0; }
+    .step { position: relative; display: flex; gap: 14px; padding: 0 0 22px; font-size: 13px; color: var(--muted); }
+    .step:last-child { padding-bottom: 0; }
+    .step:not(:last-child)::before { content: ""; position: absolute; left: 15px; top: 38px; bottom: 6px; width: 2px; border-radius: 2px; background: var(--line); }
+    .step-num { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 999px; background: var(--maroon); color: #fff; font-size: 15px; font-weight: 700; line-height: 1; }
+    .step-body { min-width: 0; padding-top: 5px; }
     .step p { margin: 0; }
-    .step-title { color: var(--ink); font-size: 14px; font-weight: 700; margin-bottom: 2px !important; }
+    .step-title { color: var(--ink); font-size: 15px; font-weight: 700; margin-bottom: 6px !important; }
+    .step-path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 6px !important; }
+    .path-chip { font-size: 13px; font-weight: 600; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
+    .path-sep { color: var(--muted); font-size: 14px; }
+    .export-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .this-one { color: var(--maroon); font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .step-warn { display: flex; align-items: flex-start; gap: 6px; margin-top: 8px !important; }
+    .step-warn svg { flex: none; margin-top: 2px; color: var(--warn); }
     /* Screenshot of Workday's export buttons; the ring pulses over Excel (the left one). */
-    .workday-buttons { position: relative; display: inline-block; margin-top: 8px; line-height: 0; padding: 2px 6px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+    .workday-buttons { position: relative; display: inline-block; line-height: 0; padding: 2px 6px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
     .workday-buttons img { display: block; }
     .export-ring {
       position: absolute; left: 35px; top: 50%; width: 36px; height: 36px;
@@ -253,7 +263,6 @@
     .whatif-input { flex: 1 1 auto; min-width: 0; height: 42px; padding: 0 14px; font: inherit; font-size: 15px; border: 1.5px solid var(--todo-line); border-radius: 10px; }
     .whatif-add-button { height: 42px; padding: 0 18px; font-size: 15px; }
     .overview-block-header { cursor: pointer; }
-    .summary-status-header { cursor: pointer; }
     .whatif-details { margin-top: 16px; }
     .whatif-details > summary { font-size: 15px; font-weight: 700; color: var(--maroon); }
     .whatif-input:focus { outline: 2px solid var(--maroon); outline-offset: 1px; }
@@ -271,7 +280,6 @@
     .whatif-badge.is-checked { color: var(--done); background: var(--done-bg); border-color: var(--done-line); }
     .whatif-badge.is-estimate { color: var(--gold-ink); background: var(--gold-bg); border-color: #f5d77a; }
     .whatif-badge.is-workday { color: var(--min); background: var(--min-bg); border-color: var(--min-line); }
-    .summary-status-group.status-optional .summary-status-header h3::before { background: var(--gold); }
 
     /* Major & minor use the Core page's pieces (.req-section, .req cards, .course-list
        rows, chips); only what is specific to them is here. A corequisite lab is its own
@@ -293,16 +301,17 @@
     .summary-sub { margin: 2px 0 8px; color: var(--muted); font-size: 13px; }
     .summary-group h3 { margin: 16px 0 6px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
     /* Major and Minor summaries: Satisfied, In progress, Not satisfied, stacked, each folding. */
-    .summary-status { display: grid; gap: 10px; margin-top: 12px; }
-    .summary-status-group { padding: 8px 10px 10px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+    .summary-status { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 12px; margin-top: 12px; }
+    .summary-status.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    @media (max-width: 720px) { .summary-status, .summary-status.cols-4 { grid-template-columns: 1fr; } }
+    .summary-empty { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+    .summary-status-group { padding: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
     .summary-status-header { display: flex; align-items: center; gap: 8px; }
     .summary-status-header h3 { flex: 1 1 auto; margin: 0; font-size: 14px; }
-    .summary-status-header h3::before { content: ""; display: inline-block; width: 8px; height: 8px; margin: 0 8px 1px 0; border-radius: 999px; background: var(--todo-line); }
-    .summary-status-group.status-done .summary-status-header h3::before { background: var(--done); }
-    .summary-status-group.status-min .summary-status-header h3::before { background: var(--min); }
     .summary-status-count { font-weight: 400; color: var(--muted); }
+    .summary-status-group > .summary-chips { margin-top: 10px; grid-template-columns: 1fr; }
+    .summary-status-header { cursor: pointer; }
     .summary-status-header .req-collapse { position: static; flex: none; }
-    .summary-status-group > .summary-chips { margin-top: 8px; }
     .summary-status-group.is-collapsed > .summary-chips { display: none; }
     .summary-status-group.is-collapsed .req-collapse::before { transform: rotate(-45deg); }
     .summary-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
@@ -575,7 +584,7 @@
         <details class="paste-route" id="paste-route">
           <summary>Or copy and paste from Workday instead</summary>
           <ol>
-            <li>In Workday, open Academic Record, then Academic Progress.</li>
+            <li>In Workday, open Student Center, then Academic Progress.</li>
             <li>If a table has several pages, set it to show all rows.</li>
             <li>Select all (Ctrl/⌘-A), copy, and paste below.</li>
           </ol>
@@ -599,20 +608,25 @@
     <aside class="upload-side">
       <section class="steps-card" aria-labelledby="steps-heading">
         <h2 id="steps-heading">How to export from Workday</h2>
-        <p class="steps-sub">Academic Progress, as an Excel file</p>
+        <p class="steps-sub">Academic Progress as an Excel file, in three steps</p>
         <ol class="steps">
-          <li class="step"><span class="step-num">01</span>
-            <div><p class="step-title">Open Academic Progress</p>
-              <p>In Workday, open Academic Record, then Academic Progress. Advisors: use “View Academic Progress for Student” first.</p></div></li>
-          <li class="step"><span class="step-num">02</span>
-            <div><p class="step-title">Click the Excel button</p>
-              <p>At the very top right, next to PDF (not the ones above each table).</p>
-              <span class="workday-buttons" role="img" aria-label="Workday’s buttons: Excel (circled), PDF, bookmark">
-                <img src="./workday-export-buttons.png" width="132" height="50" alt="">
-                <span class="export-ring" aria-hidden="true"></span>
-              </span></div></li>
-          <li class="step"><span class="step-num">03</span>
-            <div><p class="step-title">Drop the file here</p>
+          <li class="step"><span class="step-num" aria-hidden="true">1</span>
+            <div class="step-body"><p class="step-title">Open Academic Progress</p>
+              <p class="step-path"><span class="path-chip">Student Center</span><span class="path-sep" aria-hidden="true">›</span><span class="path-chip">Academic Progress</span></p>
+              <p>Advisors: use “View Academic Progress for Student” first.</p></div></li>
+          <li class="step"><span class="step-num" aria-hidden="true">2</span>
+            <div class="step-body"><p class="step-title">Click the Excel button at the very top right</p>
+              <div class="export-pick">
+                <span class="workday-buttons" role="img" aria-label="Workday’s buttons: Excel (circled), PDF, bookmark">
+                  <img src="./workday-export-buttons.png" width="132" height="50" alt="">
+                  <span class="export-ring" aria-hidden="true"></span>
+                </span>
+                <span class="this-one" aria-hidden="true">← This one</span>
+              </div>
+              <p class="step-warn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></svg>
+                <span>Next to PDF. Not the Excel buttons above each table.</span></p></div></li>
+          <li class="step"><span class="step-num" aria-hidden="true">3</span>
+            <div class="step-body"><p class="step-title">Drop the file here</p>
               <p>Or use Choose file. Your requirements open on the next page.</p></div></li>
         </ol>
       </section>

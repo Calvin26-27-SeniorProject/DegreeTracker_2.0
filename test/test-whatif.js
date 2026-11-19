@@ -9,7 +9,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { JSDOM } from 'jsdom';
 import { readXlsxRows } from '../src/xlsx.js';
-import { parseProgressRows, programRequirements, programFromCatalog, checkProgram, findProgram, programForStudent } from '../src/core.js';
+import { parseProgressRows } from '../src/parse.js';
+import { programRequirements, programFromCatalog, checkProgram, findProgram, programForStudent } from '../src/core.js';
 import { renderWhatIf, isMinor } from '../src/app-render.js';
 import { buildWhatIfPrograms, WHATIF_PATH } from './whatif-programs.js';
 import { readCheckedPrograms } from './program-files.js';
@@ -202,9 +203,9 @@ describe('renderWhatIf', () => {
     panel.querySelector('.overview-block-header').click();
     assert.ok(!panel.classList.contains('is-collapsed'));
     assert.deepEqual(toggled, [['whatif:current:0', false], ['whatif:current:0', true]]);
-    const section = panel.querySelector('.summary-status-group');
-    section.querySelector('.summary-status-header h3').click();
-    assert.ok(section.classList.contains('is-collapsed'), 'a summary section folds from its header too');
+    const column = [...panel.querySelectorAll('.summary-status-group')].find(s => s.querySelector('.req-collapse') && !s.classList.contains('is-collapsed'));
+    column.querySelector('.summary-status-header h3').click();
+    assert.ok(column.classList.contains('is-collapsed'), 'a summary column folds from its header too');
   });
 
   it('keeps the requirement cards in a Details fold, closed at first; a chip opens it and goes there', () => {

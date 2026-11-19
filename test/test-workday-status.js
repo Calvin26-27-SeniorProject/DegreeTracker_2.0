@@ -13,7 +13,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { JSDOM } from 'jsdom';
-import { parseProgress, parseProgressRows, parseTranscript } from '../src/core.js';
+import { parseProgress, parseProgressRows, parseTranscript } from '../src/parse.js';
 import { analyze } from './recorder.js';
 import { readXlsxRows } from '../src/xlsx.js';
 import { KNOWN_COURSE_CATEGORIES } from '../src/catalog-courses.js';
