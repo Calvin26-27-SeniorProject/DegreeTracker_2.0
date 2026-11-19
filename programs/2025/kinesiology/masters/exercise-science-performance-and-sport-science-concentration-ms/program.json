@@ -1,0 +1,123 @@
+{
+  "id": "exercise-science-performance-and-sport-science-concentration-ms",
+  "name": "Exercise Science: Performance and Sport Science Concentration, MS",
+  "code": "MS.EXSC.PERFM",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Science"
+  ],
+  "department": {
+    "id": 363,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13758",
+  "description": "Program Director: K. Berends The online Master of Science in Exercise Science offers concentrations in performance and sport science and health and exercise rehabilitation. The program may be completed on a part-time or full-time basis; the minimum amount of time for completion is 12 months. All students complete seven foundational courses involving essential exercise science knowledge and skills in research and health. Students will complete three additional courses in their chosen concentration that target specific skills in either performance and sport science or health and exercise rehabilitation. Although both concentrations may be completed, students receive only one MS credential. Students who choose the performance and sport science concentration will become specialists in performance, strength, and conditioning of more elite athletes and special training regimens for the purpose of performance. Whether the client be an individual athlete, a team, or a small group of individuals with similar goals, the student will be well educated in advanced sport science protocols. Application requirements include a bachelor's degree with a minimum cumulative GPA of 3.0, two reference letters, and a personal statement. More information is available on the department's website.",
+  "totalHours": "30",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 500",
+          "title": "Research Methods and Statistics in Exercise Science",
+          "credits": "4",
+          "courseId": 10337,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56762"
+        },
+        {
+          "code": "KIN 505",
+          "title": "Facilities and Event Management",
+          "credits": "2",
+          "courseId": 10340,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56765"
+        },
+        {
+          "code": "KIN 513",
+          "title": "Functional Movement and Motor Learning",
+          "credits": "4",
+          "courseId": 10338,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56763"
+        },
+        {
+          "code": "KIN 520",
+          "title": "Marketing and Promotion in Sport and Exercise",
+          "credits": "2",
+          "courseId": 10341,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56766"
+        },
+        {
+          "code": "KIN 546",
+          "title": "Externship in Exercise Science",
+          "credits": "4",
+          "courseId": 10334,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56759"
+        },
+        {
+          "code": "KIN 554",
+          "title": "Fitness and Sports Nutrition",
+          "credits": "2",
+          "courseId": 10335,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56760"
+        },
+        {
+          "code": "KIN 590",
+          "title": "Capstone in Exercise Science",
+          "credits": "4",
+          "courseId": 10336,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56761"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Concentration Requirements",
+          "description": null,
+          "courses": [
+            {
+              "code": "KIN 528",
+              "title": "Advanced Sport and Tactical Performance",
+              "credits": "4",
+              "courseId": 10339,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56764"
+            },
+            {
+              "code": "KIN 530",
+              "title": "Injury Prevention and Return to Play",
+              "credits": "2",
+              "courseId": 10343,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56768"
+            },
+            {
+              "code": "KIN 543",
+              "title": "Sport Psychology",
+              "credits": "2",
+              "courseId": 10333,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56758"
+            }
+          ],
+          "notes": [
+            {
+              "course": "KIN 543",
+              "placement": "after",
+              "text": "OR KIN 243 - Psychology of Sport and Exercise if already taken"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 30",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "engineering-minor",
+  "name": "Engineering Minor",
+  "code": "ENGR.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 763,
+    "name": "Engineering"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13155",
+  "description": "The engineering minor consists of at least 22 semester hours of engineering courses. It must include at least two 300-level engineering courses, one of which must be a design course from the following list (arranged by concentration and track): Students pursuing the minor must obtain permission from the engineering department chair prior to taking 300-level engineering courses.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Chemical",
+          "description": "Take One from the Following",
+          "courses": [
+            {
+              "code": "ENGR 331",
+              "title": "Kinetics/Reactor Design",
+              "credits": "4",
+              "courseId": 18778,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53966"
+            },
+            {
+              "code": "ENGR 335",
+              "title": "Mass Transfer and Staging Operations",
+              "credits": "4",
+              "courseId": 18782,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53970"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Civil and Environmental",
+          "description": "Take One from the Following",
+          "courses": [
+            {
+              "code": "ENGR 308",
+              "title": "Environmental Engineering Design",
+              "credits": "4",
+              "courseId": 18762,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53950"
+            },
+            {
+              "code": "ENGR 321",
+              "title": "Hydraulic Engineering Design",
+              "credits": "4",
+              "courseId": 18770,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53958"
+            },
+            {
+              "code": "ENGR 327",
+              "title": "Structural Design",
+              "credits": "4",
+              "courseId": 18775,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53963"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electrical and Computer",
+          "description": "Take One from the Following",
+          "courses": [
+            {
+              "code": "ENGR 325",
+              "title": "Computer Architecture and Digital Systems Design",
+              "credits": "3",
+              "courseId": 18773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53961"
+            },
+            {
+              "code": "ENGR 332",
+              "title": "Analog Circuits and Systems Design",
+              "credits": "3",
+              "courseId": 18779,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53967"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Mechanical",
+          "description": "Take One from the Following",
+          "courses": [
+            {
+              "code": "ENGR 322",
+              "title": "Machine Design with Finite Element Analysis",
+              "credits": "4",
+              "courseId": 18771,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53959"
+            },
+            {
+              "code": "ENGR 333",
+              "title": "Thermal Systems Design",
+              "credits": "4",
+              "courseId": 18780,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53968"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

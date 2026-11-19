@@ -1,0 +1,20 @@
+{
+  "id": "the-rhetoric-across-the-curriculum-program",
+  "name": "The Rhetoric across the Curriculum Program",
+  "code": null,
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 341,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13701",
+  "description": "The Rhetoric across the Curriculum (RAC) program fosters student engagement with writing, speaking, and information literacy in the disciplines. Students enter the program by taking foundational courses in written, oral, and visual rhetoric. They continue with courses that emphasize critical rhetorical practices in their discipline, earning a Rhetoric in Disciplines tag in the Core curriculum. Transfer Students: Students who transfer into a major program should work with their major advisor to determine what they must do to satisfy RAC requirements. Minimum Grade in ENGL 101 or 102: As the first step in developing competence in written rhetoric, a minimum grade of C is required of all students receiving credit for ENGL 101 or ENGL 102.",
+  "totalHours": null,
+  "requirements": []
+}

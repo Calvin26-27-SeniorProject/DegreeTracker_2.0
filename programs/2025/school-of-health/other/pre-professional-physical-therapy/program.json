@@ -1,0 +1,194 @@
+{
+  "id": "pre-professional-physical-therapy",
+  "name": "Pre-professional: Physical Therapy",
+  "code": "PRPHT",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 381,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13605",
+  "description": "Students wishing to enter the field of physical therapy must complete a doctoral degree in physical therapy (DPT). Students at Calvin can prepare to complete this degree by completing the prerequisite courses for their programs of interest in conjunction with a degree program in any discipline. Students then attend graduate school. Admission to graduate programs in physical therapy is very competitive. The prerequisite courses depend on the graduate school to which students wish to apply; therefore, students should obtain a list of requirements for each of the graduate schools in which they are interested. Below is a sample list of prerequisite classes for non-biology majors. Many students take the courses listed below as part of the Kinesiology Major: Pre-professional Emphasis, BS. Students are encouraged to consult with the School of Health advising office (pre-health@calvin.edu) before they register for classes. Students must also work or volunteer with patients under the supervision of a licensed physical therapist. Fifty to one hundred hours of shadowing is required for application to most DPT programs. Students should meet with the pre-health advisors to learn more about shadowing and other activities that strengthen their application. Calvin offers an elective course that identifies many of these requirements: IDIS 106 - Introduction to Health Professions .",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "First Year Fall Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 7836,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55851"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 7916,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 101",
+          "placement": "after",
+          "text": "Core courses"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "First Year Spring Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "CHEM 102",
+          "title": "General Chemistry II",
+          "credits": "3",
+          "courseId": 7917,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55931"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 102",
+          "placement": "after",
+          "text": "Core or major concentration courses"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Second Year Fall Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 7837,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PSYC 151",
+          "placement": "after",
+          "text": "Core or major concentration courses"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Second Year Spring Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 7838,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55853"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PSYC 201",
+          "placement": "after",
+          "text": "Core or major concentration courses"
+        },
+        {
+          "course": "STAT 143",
+          "placement": "after",
+          "text": "OR PSYC 255 - Statistics and Research Design"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Third Year Fall Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHYS 221",
+          "title": "General Physics",
+          "credits": "3",
+          "courseId": 8814,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56336"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PHYS 221",
+          "placement": "after",
+          "text": "Core or major concentration courses"
+        },
+        {
+          "course": "PHYS 221",
+          "placement": "after",
+          "text": "Calculus"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Third Year Spring Semester",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHYS 222",
+          "title": "General Physics",
+          "credits": "3",
+          "courseId": 8815,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56337"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SOC 151",
+          "placement": "after",
+          "text": "Core or major concentration courses"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

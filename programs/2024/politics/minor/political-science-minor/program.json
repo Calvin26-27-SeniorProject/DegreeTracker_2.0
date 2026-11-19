@@ -1,0 +1,189 @@
+{
+  "id": "political-science-minor",
+  "name": "Political Science Minor",
+  "code": "POLS.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 799,
+    "name": "Politics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13107",
+  "description": "The political science minor helps equip students to study the complexities of justice and power while developing knowledge and skills applicable to many fields, including government, law, business, and the nonprofit sector. Overlap Policy This program may not be combined with the international relations major, international relations minor, or politics, philosophy, and economics major programs.",
+  "totalHours": "22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "POLS 110",
+          "title": "Foundations of Political Community",
+          "credits": "2",
+          "courseId": 20229,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54268"
+        },
+        {
+          "code": "POLS 151",
+          "title": "Foundations of Social Research",
+          "credits": "2",
+          "courseId": 20238,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54277"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "Political Theory",
+          "courses": [
+            {
+              "code": "POLS 240",
+              "title": "Freedom, Justice, and Political Authority",
+              "credits": "4",
+              "courseId": 20237,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54276"
+            },
+            {
+              "code": "POLS 242",
+              "title": "Philosophy, Politics, and Law",
+              "credits": "4",
+              "courseId": 22041,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54728"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "American Politics",
+          "courses": [
+            {
+              "code": "POLS 202",
+              "title": "Democracy in America: State and Federal Government",
+              "credits": "2",
+              "courseId": 20230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54269"
+            },
+            {
+              "code": "POLS 204",
+              "title": "Democracy in America: State and Local Government",
+              "credits": "2",
+              "courseId": 22593,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54889"
+            },
+            {
+              "code": "POLS 234",
+              "title": "The President and Congress",
+              "credits": "4",
+              "courseId": 20235,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54274"
+            },
+            {
+              "code": "POLS 237",
+              "title": "Political Parties and Interest Groups",
+              "credits": "4",
+              "courseId": 20236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54275"
+            },
+            {
+              "code": "POLS 238",
+              "title": "Campaigns and Elections",
+              "credits": "2",
+              "courseId": 20245,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54284"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "International and Comparative Politics",
+          "courses": [
+            {
+              "code": "POLS 214",
+              "title": "Governments and Globalization",
+              "credits": "4",
+              "courseId": 20234,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54273"
+            },
+            {
+              "code": "POLS 217",
+              "title": "International Cooperation and Conflict",
+              "credits": "4",
+              "courseId": 20231,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54270"
+            },
+            {
+              "code": "POLS 219",
+              "title": "Institutions and Politics of US Foreign Policy",
+              "credits": "2",
+              "courseId": 22600,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54897"
+            },
+            {
+              "code": "POLS 224",
+              "title": "Contemporary Issues in Comparative Politics",
+              "credits": "2",
+              "courseId": 22602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54899"
+            },
+            {
+              "code": "POLS 227",
+              "title": "Contemporary Issues in International Politics",
+              "credits": "2",
+              "courseId": 22604,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54901"
+            },
+            {
+              "code": "POLS 229",
+              "title": "Contemporary Issues in US Foreign Policy",
+              "credits": "2",
+              "courseId": 22605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54902"
+            },
+            {
+              "code": "POLS 277",
+              "title": "Asian Politics",
+              "credits": "4",
+              "courseId": 21045,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54488"
+            },
+            {
+              "code": "POLS 279",
+              "title": "African Politics",
+              "credits": "4",
+              "courseId": 20239,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54278"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electives",
+          "description": "Take 6 additional hours of politics coursework, which must include at least 4 hours of 300-level (non-internship) coursework and may include 2 hours of internship credit.",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

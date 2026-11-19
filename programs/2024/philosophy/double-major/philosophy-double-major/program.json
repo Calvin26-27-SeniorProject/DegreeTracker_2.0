@@ -1,0 +1,242 @@
+{
+  "id": "philosophy-double-major",
+  "name": "Philosophy Double Major",
+  "code": "PHIL.DBL.MAJ",
+  "type": "Double Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 792,
+    "name": "Philosophy"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13119",
+  "description": null,
+  "totalHours": "28",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 20189,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+        },
+        {
+          "code": "PHIL 171",
+          "title": "Introduction to Logic",
+          "credits": "2",
+          "courseId": 20190,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54229"
+        },
+        {
+          "code": "PHIL 205",
+          "title": "Ethics",
+          "credits": "4",
+          "courseId": 20192,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54231"
+        },
+        {
+          "code": "PHIL 251",
+          "title": "Legacies of Thought: Ancient Philosophy and Medieval Christianity",
+          "credits": "4",
+          "courseId": 20196,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54235"
+        },
+        {
+          "code": "PHIL 252",
+          "title": "The Christian Foundations of Modernity",
+          "credits": "4",
+          "courseId": 20197,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54236"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PHIL 252",
+          "placement": "after",
+          "text": "4 hours at either the 200 or the 300 level, if not already taken below"
+        }
+      ],
+      "children": [
+        {
+          "name": "At Least 2 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PHIL 202",
+              "title": "Philosophy, Politics, and Law",
+              "credits": "4",
+              "courseId": 20191,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54230"
+            },
+            {
+              "code": "PHIL 207",
+              "title": "Justice and the Common Good: Studies in Political Philosophy",
+              "credits": "4",
+              "courseId": 20193,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54232"
+            },
+            {
+              "code": "PHIL 211",
+              "title": "Philosophy of Gender",
+              "credits": "4",
+              "courseId": 20194,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54233"
+            },
+            {
+              "code": "PHIL 212",
+              "title": "Ethical Dimensions of Health Care",
+              "credits": "4",
+              "courseId": 20195,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54234"
+            },
+            {
+              "code": "PHIL 218",
+              "title": "AI and You: Sex, Care, and War in an Age of Intelligent Bots",
+              "credits": "2",
+              "courseId": 22725,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54979"
+            },
+            {
+              "code": "PHIL 223",
+              "title": "Peaceable Kingdom",
+              "credits": "4",
+              "courseId": 22291,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54778"
+            },
+            {
+              "code": "PHIL 224",
+              "title": "Glittering Vices: The Capital Vices and Christian Character",
+              "credits": "2",
+              "courseId": 22727,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54981"
+            },
+            {
+              "code": "PHIL 225",
+              "title": "Public Philosophy",
+              "credits": "4",
+              "courseId": 22293,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54780"
+            },
+            {
+              "code": "PHIL 233",
+              "title": "Philosophical Transformation",
+              "credits": "4",
+              "courseId": 22292,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54779"
+            },
+            {
+              "code": "PHIL 234",
+              "title": "Augustine's Confessions: A Map of the Heart",
+              "credits": "2",
+              "courseId": 22726,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54980"
+            },
+            {
+              "code": "PHIL 235",
+              "title": "I Long, Therefore I Am",
+              "credits": "2",
+              "courseId": 22290,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54777"
+            },
+            {
+              "code": "PHIL 293",
+              "title": "God, Freedom, and Evil",
+              "credits": "4",
+              "courseId": 21986,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54673"
+            }
+          ],
+          "notes": [
+            {
+              "course": "PHIL 202",
+              "placement": "after",
+              "text": "OR POLS 242 - Philosophy, Politics, and Law"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "At Least 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PHIL 313",
+              "title": "Emotions and Motivation",
+              "credits": "4",
+              "courseId": 22289,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54776"
+            },
+            {
+              "code": "PHIL 318",
+              "title": "Minds, Brains, and Persons",
+              "credits": "4",
+              "courseId": 20198,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54237"
+            },
+            {
+              "code": "PHIL 322",
+              "title": "The Virtue Tradition: Historical Schools and Figures",
+              "credits": "4",
+              "courseId": 20199,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54238"
+            },
+            {
+              "code": "PHIL 340",
+              "title": "Contemporary Continental Philosophy",
+              "credits": "4",
+              "courseId": 20200,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54239"
+            },
+            {
+              "code": "PHIL 365",
+              "title": "Ethical Theory",
+              "credits": "4",
+              "courseId": 20201,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54240"
+            },
+            {
+              "code": "PHIL 374",
+              "title": "Pragmatism: Knowledge as Practice",
+              "credits": "4",
+              "courseId": 22295,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54782"
+            },
+            {
+              "code": "PHIL 390",
+              "title": "A Readings and Research",
+              "credits": "1-4",
+              "courseId": 20202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54241"
+            },
+            {
+              "code": "PHIL 395",
+              "title": "Philosophy Topics: Problems in Philosophy",
+              "credits": "2, 4",
+              "courseId": 20203,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54242"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 28",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

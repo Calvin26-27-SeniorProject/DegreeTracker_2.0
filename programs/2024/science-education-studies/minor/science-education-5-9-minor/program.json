@@ -1,0 +1,205 @@
+{
+  "id": "science-education-5-9-minor",
+  "name": "Science Education 5-9 Minor",
+  "code": "MIN_SCIED_59",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 806,
+    "name": "Science Education Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13273",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "20-24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 123",
+              "title": "Living Systems",
+              "credits": "4",
+              "courseId": 17749,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53738"
+            },
+            {
+              "code": "BIOL 160",
+              "title": "Ecological and Evolutionary Systems",
+              "credits": "3",
+              "courseId": 17751,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BIOL 160",
+              "placement": "after",
+              "text": "AND BIOL 161 - Cellular and Genetic Systems"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CHEM 100",
+              "title": "The Molecular World",
+              "credits": "4",
+              "courseId": 18229,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53819"
+            },
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 18230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 101",
+              "placement": "after",
+              "text": "AND CHEM 102 - General Chemistry II"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "GEO 120",
+              "title": "Earth Systems",
+              "credits": "3",
+              "courseId": 19210,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+            },
+            {
+              "code": "SCES 110",
+              "title": "Science and a Changing World",
+              "credits": "4",
+              "courseId": 22286,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54773"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SCES 110",
+              "placement": "after",
+              "text": "AND SCES 210 - Science Content and Processes"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PHYS 212",
+              "title": "Inquiry-Based Physics",
+              "credits": "4",
+              "courseId": 20207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54246"
+            },
+            {
+              "code": "PHYS 221",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 20208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+            }
+          ],
+          "notes": [
+            {
+              "course": "PHYS 221",
+              "placement": "after",
+              "text": "AND PHYS 222 - General Physics"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SCES 210",
+              "title": "Science Content and Processes",
+              "credits": "4",
+              "courseId": 22287,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54774"
+            },
+            {
+              "code": "SCES 211",
+              "title": "Science and Engineering Practices",
+              "credits": "2",
+              "courseId": 22618,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54915"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SCES 210",
+              "placement": "right",
+              "text": "(for 5-9 science only)"
+            },
+            {
+              "course": "SCES 211",
+              "placement": "right",
+              "text": "(if completing both 5-9 and 7-12 science)"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SCES 310",
+              "title": "Teaching Science in Elementary and Middle Grades: Internship I",
+              "credits": "4",
+              "courseId": 22288,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54775"
+            },
+            {
+              "code": "SCES 311",
+              "title": "Teaching Science in Middle School",
+              "credits": "2",
+              "courseId": 22617,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54914"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 20-24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

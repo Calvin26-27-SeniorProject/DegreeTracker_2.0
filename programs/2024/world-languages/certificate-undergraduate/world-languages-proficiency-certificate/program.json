@@ -1,0 +1,184 @@
+{
+  "id": "world-languages-proficiency-certificate",
+  "name": "World Languages Proficiency, Certificate",
+  "code": "CERT_WL",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13319",
+  "description": "The certificate in world languages proficiency allows students to develop their proficiency in a single language other than English through two intermediate- to advanced-level courses, taken beyond the World Languages I and II Core requirements, and a short-term off-campus experience offered through the World Languages Department.",
+  "totalHours": "10-12",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(All courses must be taken in the same language.)",
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CHIN 201",
+              "title": "Intermediate Chinese I",
+              "credits": "4",
+              "courseId": 18247,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53837"
+            },
+            {
+              "code": "CHIN 202",
+              "title": "Intermediate Chinese II",
+              "credits": "4",
+              "courseId": 18248,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53838"
+            },
+            {
+              "code": "DUTC 201",
+              "title": "Intermediate Dutch I",
+              "credits": "4",
+              "courseId": 18287,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53877"
+            },
+            {
+              "code": "DUTC 202",
+              "title": "Intermediate Dutch II",
+              "credits": "2",
+              "courseId": 18288,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53878"
+            },
+            {
+              "code": "FREN 202",
+              "title": "Intermediate French II",
+              "credits": "4",
+              "courseId": 18798,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53986"
+            },
+            {
+              "code": "FREN 301",
+              "title": "Advanced French I: Sustainability in France",
+              "credits": "4",
+              "courseId": 18799,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53987"
+            },
+            {
+              "code": "GERM 202",
+              "title": "Intermediate German II",
+              "credits": "4",
+              "courseId": 19246,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54034"
+            },
+            {
+              "code": "GERM 301",
+              "title": "Advanced German Language and Culture",
+              "credits": "4",
+              "courseId": 19247,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54035"
+            },
+            {
+              "code": "KOR 201",
+              "title": "Intermediate Korean I",
+              "credits": "4",
+              "courseId": 19803,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54129"
+            },
+            {
+              "code": "KOR 202",
+              "title": "Intermediate Korean II",
+              "credits": "4",
+              "courseId": 19804,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54130"
+            },
+            {
+              "code": "SPAN 202",
+              "title": "Intermediate Spanish II",
+              "credits": "4",
+              "courseId": 20666,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54405"
+            },
+            {
+              "code": "SPAN 301",
+              "title": "Advanced Grammar, Composition and Conversation I",
+              "credits": "4",
+              "courseId": 20667,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54406"
+            },
+            {
+              "code": "SPAN 302",
+              "title": "Advanced Grammar, Composition and Conversation II",
+              "credits": "4",
+              "courseId": 20668,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54407"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "IDIS 372",
+              "title": "Dutch Sustainability: Is Orange the New Green?",
+              "credits": "2",
+              "courseId": 22733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55006"
+            },
+            {
+              "code": "FREN 320",
+              "title": "May Study Abroad",
+              "credits": "2, 4",
+              "courseId": 22306,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54794"
+            },
+            {
+              "code": "GERM 320",
+              "title": "German Studies Abroad",
+              "credits": "4",
+              "courseId": 22259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54746"
+            },
+            {
+              "code": "SPAN 307",
+              "title": "Engaging Hispanic Culture in Place",
+              "credits": "2, 4",
+              "courseId": 22264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54751"
+            }
+          ],
+          "notes": [
+            {
+              "course": "IDIS 372",
+              "placement": "left",
+              "text": "BIOL 372 /"
+            },
+            {
+              "course": "SPAN 307",
+              "placement": "after",
+              "text": "another study-abroad course (with permission of the chair of the Department of World Languages)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 10-12",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

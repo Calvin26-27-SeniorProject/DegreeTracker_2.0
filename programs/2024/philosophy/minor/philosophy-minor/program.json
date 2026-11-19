@@ -1,0 +1,72 @@
+{
+  "id": "philosophy-minor",
+  "name": "Philosophy Minor",
+  "code": "PHIL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 792,
+    "name": "Philosophy"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13118",
+  "description": null,
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 20189,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+        },
+        {
+          "code": "PHIL 171",
+          "title": "Introduction to Logic",
+          "credits": "2",
+          "courseId": 20190,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54229"
+        },
+        {
+          "code": "PHIL 251",
+          "title": "Legacies of Thought: Ancient Philosophy and Medieval Christianity",
+          "credits": "4",
+          "courseId": 20196,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54235"
+        },
+        {
+          "code": "PHIL 252",
+          "title": "The Christian Foundations of Modernity",
+          "credits": "4",
+          "courseId": 20197,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54236"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PHIL 252",
+          "placement": "after",
+          "text": "at least 4 additional hours at either the 200 or the 300 level"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

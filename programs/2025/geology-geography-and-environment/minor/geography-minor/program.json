@@ -1,0 +1,58 @@
+{
+  "id": "geography-minor",
+  "name": "Geography Minor",
+  "code": "GEOG.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 362,
+    "name": "Geology, Geography, and Environment"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13697",
+  "description": null,
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "GEO 101",
+          "title": "People, Place, and Community",
+          "credits": "4",
+          "courseId": 8394,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56111"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 8391,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56108"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 120",
+          "placement": "after",
+          "text": "departmentally approved electives to bring the total to at least 18 hours, including one elective at the 300 level."
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

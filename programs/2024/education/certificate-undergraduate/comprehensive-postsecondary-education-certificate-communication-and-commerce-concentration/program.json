@@ -1,0 +1,327 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-communication-and-commerce-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Communication and Commerce Concentration",
+  "code": "CERT.COMMERCE",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13255",
+  "description": "Students pursuing a Communication and Commerce concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements and Ready for Life core requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 180",
+          "title": "Communicating with Digital Media",
+          "credits": "2",
+          "courseId": 18203,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53793"
+        },
+        {
+          "code": "SOC 231",
+          "title": "Intercultural Communication",
+          "credits": "4",
+          "courseId": 20638,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ARTS 255",
+              "title": "Graphic Design 1: Process",
+              "credits": "4",
+              "courseId": 17718,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53707"
+            },
+            {
+              "code": "ARTS 305",
+              "title": "Graphic Design 2: Structures",
+              "credits": "4",
+              "courseId": 17724,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53713"
+            },
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 21484,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54528"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 17709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 22871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55771"
+            },
+            {
+              "code": "BUS 201",
+              "title": "Management and Organizational Behavior",
+              "credits": "4",
+              "courseId": 17786,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53775"
+            },
+            {
+              "code": "COMM 101",
+              "title": "Oral Rhetoric",
+              "credits": "4",
+              "courseId": 17800,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53789"
+            },
+            {
+              "code": "COMM 141",
+              "title": "Visual Rhetoric",
+              "credits": "2",
+              "courseId": 18201,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53791"
+            },
+            {
+              "code": "COMM 145",
+              "title": "Introduction to Film and Media",
+              "credits": "4",
+              "courseId": 18202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53792"
+            },
+            {
+              "code": "COMM 190",
+              "title": "Media Production I",
+              "credits": "4",
+              "courseId": 18204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53794"
+            },
+            {
+              "code": "COMM 200",
+              "title": "Advanced Oral Rhetoric",
+              "credits": "4",
+              "courseId": 18205,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53795"
+            },
+            {
+              "code": "COMM 201",
+              "title": "New Media",
+              "credits": "4",
+              "courseId": 18206,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53796"
+            },
+            {
+              "code": "COMM 222",
+              "title": "Calvin Media Company",
+              "credits": "1",
+              "courseId": 18208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53798"
+            },
+            {
+              "code": "COMM 248",
+              "title": "Screenwriting",
+              "credits": "4",
+              "courseId": 18210,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53800"
+            },
+            {
+              "code": "COMM 254",
+              "title": "Screen Storytelling: Theory and Criticism",
+              "credits": "2",
+              "courseId": 18213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53803"
+            },
+            {
+              "code": "COMM 255",
+              "title": "Documentary Film and Television",
+              "credits": "4",
+              "courseId": 18214,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53804"
+            },
+            {
+              "code": "COMM 263",
+              "title": "Communication and Conflict Resolution",
+              "credits": "2",
+              "courseId": 18215,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53805"
+            },
+            {
+              "code": "COMM 265",
+              "title": "Leadership Communication for Organizations",
+              "credits": "2",
+              "courseId": 18216,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53806"
+            },
+            {
+              "code": "COMM 290",
+              "title": "Media Production II",
+              "credits": "4",
+              "courseId": 18219,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53809"
+            },
+            {
+              "code": "COMM 305",
+              "title": "Persuasion and Propaganda",
+              "credits": "4",
+              "courseId": 18220,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53810"
+            },
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 18221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53811"
+            },
+            {
+              "code": "COMM 330",
+              "title": "Media and Society",
+              "credits": "4",
+              "courseId": 18209,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53799"
+            },
+            {
+              "code": "CS 100",
+              "title": "Creating Interactive Web Media",
+              "credits": "4",
+              "courseId": 18261,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53851"
+            },
+            {
+              "code": "ECON 191",
+              "title": "Introduction to Economics",
+              "credits": "2",
+              "courseId": 18292,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+            },
+            {
+              "code": "ECON 232",
+              "title": "Environmental Economics",
+              "credits": "2",
+              "courseId": 18295,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+            },
+            {
+              "code": "ECON 233",
+              "title": "Economics of Energy and Sustainability",
+              "credits": "4",
+              "courseId": 21478,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54521"
+            },
+            {
+              "code": "EDUC 243",
+              "title": "Teaching and Learning Lab",
+              "credits": "2",
+              "courseId": 22607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54904"
+            },
+            {
+              "code": "ENGL 101",
+              "title": "Written Rhetoric",
+              "credits": "4",
+              "courseId": 18729,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53917"
+            },
+            {
+              "code": "ENGL 241",
+              "title": "Business Writing",
+              "credits": "4",
+              "courseId": 18733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53921"
+            },
+            {
+              "code": "ENTR 302",
+              "title": "The Startup",
+              "credits": "4",
+              "courseId": 21480,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54523"
+            },
+            {
+              "code": "ENTR 303",
+              "title": "Small Business",
+              "credits": "4",
+              "courseId": 21481,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54524"
+            },
+            {
+              "code": "FIN 201",
+              "title": "Personal Finance",
+              "credits": "4",
+              "courseId": 21982,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54669"
+            },
+            {
+              "code": "HE 254",
+              "title": "Nutrition",
+              "credits": "2",
+              "courseId": 19251,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54039"
+            },
+            {
+              "code": "HIST 259",
+              "title": "American Economic and Business History",
+              "credits": "4",
+              "courseId": 19266,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54055"
+            },
+            {
+              "code": "PHIL 137",
+              "title": "Disability, Community, and Advocacy",
+              "credits": "2",
+              "courseId": 22294,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54781"
+            },
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            },
+            {
+              "code": "THTR 120",
+              "title": "Calvin Theatre Company",
+              "credits": "2",
+              "courseId": 18101,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53790"
+            },
+            {
+              "code": "THTR 203",
+              "title": "Introduction to Performance Studies",
+              "credits": "4",
+              "courseId": 18207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53797"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "pre-professional-law",
+  "name": "Pre-professional: Law",
+  "code": "PRLAW",
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 733,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13203",
+  "description": "Law Although law school applicants must have a college degree, there is no prescribed program or major specifically designed for students planning to enter law school. Like most colleges, Calvin does not offer a pre-law major, but rather a pre-law specialization within a student's chosen disciplinary major. Prospective law school applicants should complete the requirements for a bachelor of arts degree in their chosen major as prescribed in the core curriculum, taking advantage of the opportunities provided therein to acquire skills, knowledge, and insights useful for the practice of law. The pre-law advisor, M. Hessler (Politics and Economics) and J. Westra (Politics and Economics), can help students to plan programs and select courses that provide good preparation for law school. The pre-law advisor also can help to guide students through the processes of identifying law as a calling, preparing for the Law School Admission Test (LSAT), and applying to law schools. Pre-law students should declare their interest in the pre-law specialization during academic advising and should plan to attend the pre-law information sessions that are held at the beginning of each fall semester. Pre-law students normally take the LSAT In the spring of their junior year and should apply for admission to law school during the fall of their senior year.",
+  "totalHours": null,
+  "requirements": []
+}

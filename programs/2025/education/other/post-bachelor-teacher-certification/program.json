@@ -1,0 +1,139 @@
+{
+  "id": "post-bachelor-teacher-certification",
+  "name": "Post-Bachelor Teacher Certification",
+  "code": "TC_POSTBA",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13801",
+  "description": "This program is designed for students who have graduated with a bachelor's degree from an accredited institution without having obtained a teaching certificate. To be eligible for this program, students must have a bachelor's degree GPA of 2.75 or above and one recommendation. Previously completed courses with grades of C- or higher may be used to meet program requirements. Contact the teacher certification coordinator for admission. In addition to the requirements below, students must complete at least one of the following grade band programs: Elementary Education Major: Birth-Kindergarten (B-K) Elementary Education Major: Prekindergarten-Third Grade (PK-3) Elementary Education Major: Third-Sixth Grade (3-6) Fifth-Ninth Grade (5-9): English language arts, mathematics, science, or social studies Seventh-Twelfth Grade (7-12): English language arts, mathematics, science, or social studies Prekindergarten-Twelfth Grade (PK-12): art, French, health and physical education, music special education, Spanish, or teaching English to speakers of other languages (TESOL)",
+  "totalHours": "36-41",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 8193,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56009"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 11208,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56959"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        },
+        {
+          "code": "EDUC 243",
+          "title": "Teaching and Learning Lab",
+          "credits": "2",
+          "courseId": 11209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56960"
+        },
+        {
+          "code": "EDUC 249",
+          "title": "The Christian Teacher",
+          "credits": "2",
+          "courseId": 11218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56969"
+        },
+        {
+          "code": "EDUC 343",
+          "title": "Early Childhood Education: Preschool Field Experience",
+          "credits": "4, 12",
+          "courseId": 8205,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56021"
+        },
+        {
+          "code": "EDUC 359",
+          "title": "Student Teaching Seminar",
+          "credits": "4",
+          "courseId": 11216,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56967"
+        },
+        {
+          "code": "EDUC 399",
+          "title": "Philosophy of Education",
+          "credits": "2",
+          "courseId": 8209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56025"
+        }
+      ],
+      "notes": [
+        {
+          "course": "EDUC 241",
+          "placement": "after",
+          "text": "OR EDUC 554 - Pathways to Inclusion: Re-examining Beliefs about Learners"
+        },
+        {
+          "course": "EDUC 343",
+          "placement": "after",
+          "text": "OR EDUC 346 - Internship II: Student Teaching"
+        },
+        {
+          "course": "EDUC 399",
+          "placement": "after",
+          "text": "OR EDUC 510 - Framing Questions, Global Forces, Constraining Structures"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One of the Following",
+          "description": "(EDUC 307 and EDUC 308 must be taken by students in the 5-9, 7-12, and PK-12 grade bands.)",
+          "courses": [
+            {
+              "code": "EDUC 115",
+              "title": "Literacy Instruction for Beginning Readers",
+              "credits": "4",
+              "courseId": 8200,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56016"
+            },
+            {
+              "code": "EDUC 307",
+              "title": "Curriculum, Instruction, and Content Area Literacy",
+              "credits": "4",
+              "courseId": 8197,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56013"
+            }
+          ],
+          "notes": [
+            {
+              "course": "EDUC 307",
+              "placement": "after",
+              "text": "AND EDUC 308 - Internship I"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 36-41",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

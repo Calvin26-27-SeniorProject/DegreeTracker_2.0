@@ -1,0 +1,215 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-education-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Education Concentration",
+  "code": "CERT-EDUC",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13257",
+  "description": "Students pursuing an Education concentration must also complete the Comprehensive Postsecondary Education, Certificate program requirements and Ready for Life core requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 18711,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53899"
+        },
+        {
+          "code": "EDUC 238",
+          "title": "Developmentally Appropriate Practice with Young Children",
+          "credits": "2",
+          "courseId": 18714,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53902"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 22606,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54903"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 22308,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54796"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 21484,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54528"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 17709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 22871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55771"
+            },
+            {
+              "code": "EDUC 210",
+              "title": "Music and Art in the Elementary Classroom",
+              "credits": "2",
+              "courseId": 18712,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53900"
+            },
+            {
+              "code": "EDUC 236",
+              "title": "Foundations of Early Childhood Education",
+              "credits": "4",
+              "courseId": 18713,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53901"
+            },
+            {
+              "code": "EDUC 243",
+              "title": "Teaching and Learning Lab",
+              "credits": "2",
+              "courseId": 22607,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54904"
+            },
+            {
+              "code": "EDUC 249",
+              "title": "The Christian Teacher",
+              "credits": "2",
+              "courseId": 22616,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54913"
+            },
+            {
+              "code": "EDUC 330",
+              "title": "Curriculum and Instruction: Cognitive Impairment",
+              "credits": "4",
+              "courseId": 18720,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53908"
+            },
+            {
+              "code": "EDUC 331",
+              "title": "Introduction to Cognitive Impairment: Birth through School Age",
+              "credits": "2",
+              "courseId": 22611,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54908"
+            },
+            {
+              "code": "EDUC 332",
+              "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+              "credits": "2",
+              "courseId": 22612,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54909"
+            },
+            {
+              "code": "EDUC 339",
+              "title": "Family Engagement, Relationships, and Collaboration",
+              "credits": "4",
+              "courseId": 18722,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53910"
+            },
+            {
+              "code": "ENGL 325",
+              "title": "Advanced Studies in Children's and Adolescent Literature",
+              "credits": "4",
+              "courseId": 21997,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54684"
+            },
+            {
+              "code": "KIN 223",
+              "title": "Educational Health, Movement, and Dance",
+              "credits": "2",
+              "courseId": 19786,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54112"
+            },
+            {
+              "code": "MATH 221",
+              "title": "The Real Number System and Methods for Elementary School Teachers",
+              "credits": "4",
+              "courseId": 19812,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54138"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 20255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+            },
+            {
+              "code": "PSYC 270",
+              "title": "Children at Risk",
+              "credits": "4",
+              "courseId": 22038,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54725"
+            },
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            },
+            {
+              "code": "SCES 110",
+              "title": "Science and a Changing World",
+              "credits": "4",
+              "courseId": 22286,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54773"
+            },
+            {
+              "code": "SCES 210",
+              "title": "Science Content and Processes",
+              "credits": "4",
+              "courseId": 22287,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54774"
+            },
+            {
+              "code": "SPAUD 311",
+              "title": "Child Language Development",
+              "credits": "4",
+              "courseId": 20978,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54417"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

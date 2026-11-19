@@ -1,0 +1,112 @@
+{
+  "id": "africana-studies-minor",
+  "name": "Africana Studies Minor",
+  "code": "AFDST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 349,
+    "name": "Africana Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13579",
+  "description": "An interdisciplinary minor, Africana studies is an integrative program intended to deepen students' understanding of a region of the world, and of widely dispersed cultural traditions, that are of increasing significance to global economics, health policy, international development, and Christian theology. A broad choice of courses is offered, making it possible to adapt the minor to a variety of major programs in the humanities, social sciences, and fine arts. The minor program encompasses study both of Africa and its peoples and of the dispersal of Africans to Europe and the Americas through forced migration and voluntary immigration. E. Washington (Historical Studies) is the advisor for this program.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 391",
+          "title": "Seminar in Africana Studies",
+          "credits": "3",
+          "courseId": 8480,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56199"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 16 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ENGL 300",
+              "title": "Advanced Studies in Global Literature",
+              "credits": "4",
+              "courseId": 8218,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56034"
+            },
+            {
+              "code": "HIST 242",
+              "title": "Africa and the World",
+              "credits": "4",
+              "courseId": 8439,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56158"
+            },
+            {
+              "code": "HIST 255",
+              "title": "African-American History",
+              "credits": "4",
+              "courseId": 8444,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56163"
+            },
+            {
+              "code": "POLS 279",
+              "title": "African Politics",
+              "credits": "4",
+              "courseId": 8845,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56367"
+            },
+            {
+              "code": "SOC 304",
+              "title": "Religion, Society, and Culture",
+              "credits": "4",
+              "courseId": 9149,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56471"
+            },
+            {
+              "code": "SPAN 370",
+              "title": "Advanced Topics",
+              "credits": "4",
+              "courseId": 11201,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56952"
+            }
+          ],
+          "notes": [
+            {
+              "course": "ENGL 300",
+              "placement": "right",
+              "text": "(when appropriate)"
+            },
+            {
+              "course": "SPAN 370",
+              "placement": "after",
+              "text": "another elective, chosen in consultation with the program director"
+            },
+            {
+              "course": "SPAN 370",
+              "placement": "right",
+              "text": "(when appropriate)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": "Other courses, including off-campus courses, may be counted toward the requirements with the approval of a program advisor.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,1403 @@
+{
+  "id": "engineering-electrical-and-computer-engineering-concentration",
+  "name": "Engineering: Electrical and Computer Engineering Concentration",
+  "code": "ENGRE.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science in Engineering"
+  ],
+  "department": {
+    "id": 763,
+    "name": "Engineering"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13150",
+  "description": "The electrical and computer engineering concentration option within the engineering program focuses on providing depth in the areas of digital and analog systems analysis and design, as well as computing technology. Students completing this option may pursue careers in a variety of industries that require electronic hardware and computer software expertise.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "General Engineering Courses (26 semester hours)",
+      "courses": [
+        {
+          "code": "ENGR 101",
+          "title": "Introduction to Engineering Design",
+          "credits": "3",
+          "courseId": 18749,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53937"
+        },
+        {
+          "code": "ENGR 202",
+          "title": "Statics and Dynamics",
+          "credits": "4",
+          "courseId": 18752,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53940"
+        },
+        {
+          "code": "ENGR 204",
+          "title": "Circuits Analysis and Electronics",
+          "credits": "3",
+          "courseId": 18753,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53941"
+        },
+        {
+          "code": "ENGR 205",
+          "title": "Principles of Materials Science",
+          "credits": "4",
+          "courseId": 21479,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54522"
+        },
+        {
+          "code": "ENGR 209",
+          "title": "Introduction to Conservation Laws and Fluid Mechanics",
+          "credits": "4",
+          "courseId": 18754,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53942"
+        },
+        {
+          "code": "ENGR 294",
+          "title": "Engineering Seminar",
+          "credits": "0",
+          "courseId": 20249,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54288"
+        },
+        {
+          "code": "ENGR 295",
+          "title": "Internship Workshop",
+          "credits": "0",
+          "courseId": 20250,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54289"
+        },
+        {
+          "code": "ENGR 339",
+          "title": "Senior Design Project",
+          "credits": "2",
+          "courseId": 18785,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53973"
+        },
+        {
+          "code": "ENGR 340",
+          "title": "Senior Design Project",
+          "credits": "4",
+          "courseId": 18786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53974"
+        },
+        {
+          "code": "ENGR 394",
+          "title": "Engineering Seminar",
+          "credits": "0",
+          "courseId": 20253,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54292"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": "(38 semester hours minimum. Some courses may fulfill Core requirements.)",
+          "courses": [
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 18230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+            },
+            {
+              "code": "IDIS 102",
+              "title": "Oral Rhetoric for Engineers",
+              "credits": "2",
+              "courseId": 19288,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54077"
+            },
+            {
+              "code": "MATH 171",
+              "title": "Calculus I",
+              "credits": "4",
+              "courseId": 19809,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+            },
+            {
+              "code": "MATH 172",
+              "title": "Calculus II",
+              "credits": "4",
+              "courseId": 19810,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54136"
+            },
+            {
+              "code": "MATH 231",
+              "title": "Differential Equations with Linear Algebra",
+              "credits": "4",
+              "courseId": 19814,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54140"
+            },
+            {
+              "code": "MATH 271",
+              "title": "Multivariable Calculus",
+              "credits": "4",
+              "courseId": 19815,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54141"
+            },
+            {
+              "code": "PHYS 133",
+              "title": "Introductory Physics: Mechanics and Gravity",
+              "credits": "3",
+              "courseId": 20205,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54244"
+            },
+            {
+              "code": "PHYS 235",
+              "title": "Introductory Physics: Electricity and Magnetism",
+              "credits": "3",
+              "courseId": 20211,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54250"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 101",
+              "placement": "after",
+              "text": "OR CHEM 103 - Accelerated General Chemistry"
+            },
+            {
+              "course": "IDIS 102",
+              "placement": "after",
+              "text": "OR COMM 101 - Oral Rhetoric"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "BUS 357",
+                  "title": "Business for Engineers",
+                  "credits": "2",
+                  "courseId": 17784,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53773"
+                },
+                {
+                  "code": "BUS 100",
+                  "title": "Business Foundations",
+                  "credits": "2",
+                  "courseId": 22874,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55774"
+                },
+                {
+                  "code": "SCM 310",
+                  "title": "Global Supply Chain Practicum I",
+                  "credits": "2",
+                  "courseId": 22272,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54759"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "BUS 100",
+                  "placement": "right",
+                  "text": "AND ACCT 203 - Managerial Accounting"
+                },
+                {
+                  "course": "SCM 310",
+                  "placement": "right",
+                  "text": "AND SCM 311 - Global Supply Chain Practicum II"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CS 104",
+                  "title": "Applied Computing",
+                  "credits": "1",
+                  "courseId": 18262,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53852"
+                },
+                {
+                  "code": "CS 106",
+                  "title": "Introduction to Scientific Computation and Modeling",
+                  "credits": "3",
+                  "courseId": 18263,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+                },
+                {
+                  "code": "CS 108",
+                  "title": "Introduction to Computing",
+                  "credits": "3",
+                  "courseId": 18264,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ECON 191",
+                  "title": "Introduction to Economics",
+                  "credits": "2",
+                  "courseId": 18292,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+                },
+                {
+                  "code": "ECON 221",
+                  "title": "Principles of Microeconomics",
+                  "credits": "2",
+                  "courseId": 18293,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53883"
+                },
+                {
+                  "code": "ECON 222",
+                  "title": "Principles of Macroeconomics",
+                  "credits": "2",
+                  "courseId": 18294,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53884"
+                },
+                {
+                  "code": "ECON 232",
+                  "title": "Environmental Economics",
+                  "credits": "2",
+                  "courseId": 18295,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+                },
+                {
+                  "code": "ECON 233",
+                  "title": "Economics of Energy and Sustainability",
+                  "credits": "4",
+                  "courseId": 21478,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54521"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take One from the Following",
+              "description": "(STAT 341, STAT 343, and STAT 344 may also count as advanced mathematics electives.)",
+              "courses": [
+                {
+                  "code": "STAT 241",
+                  "title": "Engineering Statistics",
+                  "credits": "2",
+                  "courseId": 21010,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54450"
+                },
+                {
+                  "code": "STAT 143",
+                  "title": "Introduction to Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21008,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+                },
+                {
+                  "code": "STAT 145",
+                  "title": "Biostatistics",
+                  "credits": "4",
+                  "courseId": 21009,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+                },
+                {
+                  "code": "STAT 243",
+                  "title": "Statistics",
+                  "credits": "4",
+                  "courseId": 21011,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+                },
+                {
+                  "code": "STAT 341",
+                  "title": "Computational Bayesian Statistics",
+                  "credits": "4",
+                  "courseId": 21013,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54453"
+                },
+                {
+                  "code": "STAT 343",
+                  "title": "Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21014,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54454"
+                },
+                {
+                  "code": "STAT 344",
+                  "title": "Mathematical Statistics",
+                  "credits": "4",
+                  "courseId": 21015,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54455"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electrical and Computer Engineering Concentration Requirements",
+      "description": "(40 semester hours minimum)",
+      "courses": [
+        {
+          "code": "CS 112",
+          "title": "Introduction to Data Structures",
+          "credits": "3",
+          "courseId": 18265,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+        },
+        {
+          "code": "ENGR 302",
+          "title": "Engineering Electromagnetics",
+          "credits": "4",
+          "courseId": 18756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53944"
+        },
+        {
+          "code": "ENGR 304",
+          "title": "Fundamentals of Digital Systems",
+          "credits": "3",
+          "courseId": 18758,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53946"
+        },
+        {
+          "code": "ENGR 307",
+          "title": "Electrical Signals and Systems",
+          "credits": "4",
+          "courseId": 18761,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53949"
+        },
+        {
+          "code": "ENGR 311",
+          "title": "Electronic Devices and Circuits",
+          "credits": "3",
+          "courseId": 18763,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53951"
+        },
+        {
+          "code": "ENGR 325",
+          "title": "Computer Architecture and Digital Systems Design",
+          "credits": "3",
+          "courseId": 18773,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53961"
+        },
+        {
+          "code": "ENGR 332",
+          "title": "Analog Circuits and Systems Design",
+          "credits": "3",
+          "courseId": 18779,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53967"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take at Least 12 Hours of Upper-Level Technical Electives",
+          "description": null,
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "At Least 2 Hours of Advanced Mathematics or Basic Science Electives",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ASTR 201",
+                  "title": "Astrophysical Black Holes",
+                  "credits": "3",
+                  "courseId": 22277,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54764"
+                },
+                {
+                  "code": "ASTR 211",
+                  "title": "Planetary and Stellar Astronomy",
+                  "credits": "3",
+                  "courseId": 17743,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53732"
+                },
+                {
+                  "code": "ASTR 212",
+                  "title": "Galactic Astronomy and Cosmology",
+                  "credits": "3",
+                  "courseId": 17744,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53733"
+                },
+                {
+                  "code": "BIOL 141",
+                  "title": "Cell Biology and Genetics for the Health Sciences",
+                  "credits": "3",
+                  "courseId": 17750,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+                },
+                {
+                  "code": "BIOL 160",
+                  "title": "Ecological and Evolutionary Systems",
+                  "credits": "3",
+                  "courseId": 17751,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+                },
+                {
+                  "code": "BIOL 161",
+                  "title": "Cellular and Genetic Systems",
+                  "credits": "3",
+                  "courseId": 17752,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+                },
+                {
+                  "code": "BIOL 205",
+                  "title": "Human Anatomy",
+                  "credits": "3",
+                  "courseId": 17753,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+                },
+                {
+                  "code": "BIOL 206",
+                  "title": "Human Physiology",
+                  "credits": "3",
+                  "courseId": 17754,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+                },
+                {
+                  "code": "BIOL 207",
+                  "title": "Medical Microbiology",
+                  "credits": "3",
+                  "courseId": 17755,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53744"
+                },
+                {
+                  "code": "BIOL 231",
+                  "title": "Introduction to Animal Physiology",
+                  "credits": "1.5",
+                  "courseId": 17756,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+                },
+                {
+                  "code": "BIOL 232",
+                  "title": "Introduction to Plant Physiology",
+                  "credits": "1.5",
+                  "courseId": 22584,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54880"
+                },
+                {
+                  "code": "BIOL 364",
+                  "title": "Global Health, Environment, and Sustainability",
+                  "credits": "4",
+                  "courseId": 17774,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53763"
+                },
+                {
+                  "code": "BIOL 372",
+                  "title": "Dutch Sustainability: Is Orange the New Green?",
+                  "credits": "2",
+                  "courseId": 22711,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54960"
+                },
+                {
+                  "code": "BIOL 396",
+                  "title": "Perspectives in Medicine",
+                  "credits": "4",
+                  "courseId": 17778,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53767"
+                },
+                {
+                  "code": "CHEM 102",
+                  "title": "General Chemistry II",
+                  "credits": "3",
+                  "courseId": 18231,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53821"
+                },
+                {
+                  "code": "CHEM 210",
+                  "title": "Analytical Chemistry",
+                  "credits": "3",
+                  "courseId": 18234,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53824"
+                },
+                {
+                  "code": "CHEM 230",
+                  "title": "Essential Inorganic Chemistry",
+                  "credits": "3",
+                  "courseId": 18235,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53825"
+                },
+                {
+                  "code": "CHEM 240",
+                  "title": "Survey of Organic Chemistry",
+                  "credits": "3",
+                  "courseId": 18236,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+                },
+                {
+                  "code": "CHEM 241",
+                  "title": "Organic Chemistry I",
+                  "credits": "3",
+                  "courseId": 18237,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53827"
+                },
+                {
+                  "code": "GEO 120",
+                  "title": "Earth Systems",
+                  "credits": "3",
+                  "courseId": 19210,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+                },
+                {
+                  "code": "GEO 151",
+                  "title": "Introduction to Geology",
+                  "credits": "3",
+                  "courseId": 19230,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54018"
+                },
+                {
+                  "code": "GEO 152",
+                  "title": "Historical Geology",
+                  "credits": "3",
+                  "courseId": 19231,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54019"
+                },
+                {
+                  "code": "GEO 215",
+                  "title": "Mineralogy",
+                  "credits": "3",
+                  "courseId": 19234,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54022"
+                },
+                {
+                  "code": "GEO 252",
+                  "title": "Geomorphology",
+                  "credits": "3",
+                  "courseId": 19217,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54005"
+                },
+                {
+                  "code": "GEO 325",
+                  "title": "Hydrogeology",
+                  "credits": "3",
+                  "courseId": 19241,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54029"
+                },
+                {
+                  "code": "KIN 212",
+                  "title": "Anatomical Kinesiology",
+                  "credits": "4",
+                  "courseId": 19780,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54106"
+                },
+                {
+                  "code": "KIN 213",
+                  "title": "Biomechanics and Motor Learning",
+                  "credits": "4",
+                  "courseId": 19781,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54107"
+                },
+                {
+                  "code": "MATH 305",
+                  "title": "The Geometry and Topology of Manifolds",
+                  "credits": "4",
+                  "courseId": 19817,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54143"
+                },
+                {
+                  "code": "MATH 312",
+                  "title": "Logic, Computability, and Complexity",
+                  "credits": "4",
+                  "courseId": 19818,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54144"
+                },
+                {
+                  "code": "MATH 331",
+                  "title": "Nonlinear Dynamics and Chaos",
+                  "credits": "4",
+                  "courseId": 19820,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54146"
+                },
+                {
+                  "code": "MATH 333",
+                  "title": "Partial Differential Equations",
+                  "credits": "4",
+                  "courseId": 19821,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54147"
+                },
+                {
+                  "code": "MATH 335",
+                  "title": "Numerical Analysis",
+                  "credits": "4",
+                  "courseId": 19822,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54148"
+                },
+                {
+                  "code": "MATH 355",
+                  "title": "Advanced Linear Algebra",
+                  "credits": "4",
+                  "courseId": 19824,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54150"
+                },
+                {
+                  "code": "MATH 361",
+                  "title": "Real Analysis I",
+                  "credits": "4",
+                  "courseId": 19826,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54152"
+                },
+                {
+                  "code": "MATH 362",
+                  "title": "Real Analysis: Lebesgue Integral",
+                  "credits": "4",
+                  "courseId": 19827,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54153"
+                },
+                {
+                  "code": "MATH 365",
+                  "title": "Complex Variables with Topics",
+                  "credits": "4",
+                  "courseId": 19828,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54154"
+                },
+                {
+                  "code": "MATH 385",
+                  "title": "Topics in Mathematics",
+                  "credits": "2-4",
+                  "courseId": 22036,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54723"
+                },
+                {
+                  "code": "PHYS 130",
+                  "title": "Particles, Nuclei, and Astronomy",
+                  "credits": "1.5",
+                  "courseId": 22594,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54890"
+                },
+                {
+                  "code": "PHYS 131",
+                  "title": "Matter, Light, and Energy",
+                  "credits": "1.5",
+                  "courseId": 20204,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54243"
+                },
+                {
+                  "code": "PHYS 246",
+                  "title": "Waves, Optics, and Optical Technology",
+                  "credits": "4",
+                  "courseId": 20213,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54252"
+                },
+                {
+                  "code": "PHYS 306",
+                  "title": "Introduction to Quantum Physics",
+                  "credits": "4",
+                  "courseId": 20216,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54255"
+                },
+                {
+                  "code": "PHYS 335",
+                  "title": "Classical Mechanics and Orbital Dynamics",
+                  "credits": "4",
+                  "courseId": 20217,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54256"
+                },
+                {
+                  "code": "PHYS 345",
+                  "title": "Electromagnetism",
+                  "credits": "4",
+                  "courseId": 20219,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54258"
+                },
+                {
+                  "code": "PHYS 346",
+                  "title": "Advanced Optics",
+                  "credits": "2",
+                  "courseId": 20220,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54259"
+                },
+                {
+                  "code": "PHYS 365",
+                  "title": "Thermodynamics and Statistical Mechanics",
+                  "credits": "4",
+                  "courseId": 20223,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54262"
+                },
+                {
+                  "code": "PHYS 375",
+                  "title": "Quantum Mechanics",
+                  "credits": "4",
+                  "courseId": 20224,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54263"
+                },
+                {
+                  "code": "STAT 341",
+                  "title": "Computational Bayesian Statistics",
+                  "credits": "4",
+                  "courseId": 21013,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54453"
+                },
+                {
+                  "code": "STAT 343",
+                  "title": "Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21014,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54454"
+                },
+                {
+                  "code": "STAT 344",
+                  "title": "Mathematical Statistics",
+                  "credits": "4",
+                  "courseId": 21015,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54455"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "At Least 6 Hours of Engineering Electives",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ENGR 250",
+                  "title": "Introduction to Biomedical Engineering",
+                  "credits": "2",
+                  "courseId": 21535,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54579"
+                },
+                {
+                  "code": "ENGR 303",
+                  "title": "Chemical Engineering Principles and Thermodynamics",
+                  "credits": "3",
+                  "courseId": 18757,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53945"
+                },
+                {
+                  "code": "ENGR 305",
+                  "title": "Mechanics of Materials",
+                  "credits": "4",
+                  "courseId": 18759,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53947"
+                },
+                {
+                  "code": "ENGR 306",
+                  "title": "Principles of Environmental Engineering",
+                  "credits": "4",
+                  "courseId": 18760,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53948"
+                },
+                {
+                  "code": "ENGR 314",
+                  "title": "Vibration Analysis",
+                  "credits": "4",
+                  "courseId": 18765,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53953"
+                },
+                {
+                  "code": "ENGR 315",
+                  "title": "Control Systems",
+                  "credits": "3",
+                  "courseId": 18766,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53954"
+                },
+                {
+                  "code": "ENGR 318",
+                  "title": "Soil Mechanics and Foundation Design",
+                  "credits": "4",
+                  "courseId": 18767,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53955"
+                },
+                {
+                  "code": "ENGR 319",
+                  "title": "Introduction to Thermal Sciences",
+                  "credits": "4",
+                  "courseId": 18768,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53956"
+                },
+                {
+                  "code": "ENGR 320",
+                  "title": "Hydraulic Engineering",
+                  "credits": "4",
+                  "courseId": 18769,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53957"
+                },
+                {
+                  "code": "ENGR 324",
+                  "title": "Materials and Processes in Manufacturing",
+                  "credits": "4",
+                  "courseId": 18772,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53960"
+                },
+                {
+                  "code": "ENGR 326",
+                  "title": "Structural Analysis",
+                  "credits": "4",
+                  "courseId": 18774,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53962"
+                },
+                {
+                  "code": "ENGR 334",
+                  "title": "Dynamics of Machinery and Instrumentation",
+                  "credits": "3",
+                  "courseId": 18781,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53969"
+                },
+                {
+                  "code": "ENGR 338",
+                  "title": "Introduction to Traffic Engineering and Highway Design",
+                  "credits": "4",
+                  "courseId": 18784,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53972"
+                },
+                {
+                  "code": "ENGR 342",
+                  "title": "Process Dynamics, Modeling, and Control",
+                  "credits": "3",
+                  "courseId": 18787,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53975"
+                },
+                {
+                  "code": "ENGR 350",
+                  "title": "Special Topics in Engineering",
+                  "credits": "2-4",
+                  "courseId": 22032,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54719"
+                },
+                {
+                  "code": "ENGR 354",
+                  "title": "Sustainability Engineering",
+                  "credits": "4",
+                  "courseId": 18789,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53977"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take the Remaining Hours from Advanced Mathematics, Basic Science, Technical, or Engineering Electives",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ASTR 201",
+                  "title": "Astrophysical Black Holes",
+                  "credits": "3",
+                  "courseId": 22277,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54764"
+                },
+                {
+                  "code": "ASTR 211",
+                  "title": "Planetary and Stellar Astronomy",
+                  "credits": "3",
+                  "courseId": 17743,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53732"
+                },
+                {
+                  "code": "ASTR 212",
+                  "title": "Galactic Astronomy and Cosmology",
+                  "credits": "3",
+                  "courseId": 17744,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53733"
+                },
+                {
+                  "code": "BIOL 141",
+                  "title": "Cell Biology and Genetics for the Health Sciences",
+                  "credits": "3",
+                  "courseId": 17750,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+                },
+                {
+                  "code": "BIOL 160",
+                  "title": "Ecological and Evolutionary Systems",
+                  "credits": "3",
+                  "courseId": 17751,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+                },
+                {
+                  "code": "BIOL 161",
+                  "title": "Cellular and Genetic Systems",
+                  "credits": "3",
+                  "courseId": 17752,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+                },
+                {
+                  "code": "BIOL 205",
+                  "title": "Human Anatomy",
+                  "credits": "3",
+                  "courseId": 17753,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+                },
+                {
+                  "code": "BIOL 206",
+                  "title": "Human Physiology",
+                  "credits": "3",
+                  "courseId": 17754,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+                },
+                {
+                  "code": "BIOL 207",
+                  "title": "Medical Microbiology",
+                  "credits": "3",
+                  "courseId": 17755,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53744"
+                },
+                {
+                  "code": "BIOL 231",
+                  "title": "Introduction to Animal Physiology",
+                  "credits": "1.5",
+                  "courseId": 17756,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+                },
+                {
+                  "code": "BIOL 232",
+                  "title": "Introduction to Plant Physiology",
+                  "credits": "1.5",
+                  "courseId": 22584,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54880"
+                },
+                {
+                  "code": "BIOL 364",
+                  "title": "Global Health, Environment, and Sustainability",
+                  "credits": "4",
+                  "courseId": 17774,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53763"
+                },
+                {
+                  "code": "BIOL 372",
+                  "title": "Dutch Sustainability: Is Orange the New Green?",
+                  "credits": "2",
+                  "courseId": 22711,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54960"
+                },
+                {
+                  "code": "BIOL 396",
+                  "title": "Perspectives in Medicine",
+                  "credits": "4",
+                  "courseId": 17778,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53767"
+                },
+                {
+                  "code": "CHEM 102",
+                  "title": "General Chemistry II",
+                  "credits": "3",
+                  "courseId": 18231,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53821"
+                },
+                {
+                  "code": "CHEM 210",
+                  "title": "Analytical Chemistry",
+                  "credits": "3",
+                  "courseId": 18234,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53824"
+                },
+                {
+                  "code": "CHEM 230",
+                  "title": "Essential Inorganic Chemistry",
+                  "credits": "3",
+                  "courseId": 18235,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53825"
+                },
+                {
+                  "code": "CHEM 240",
+                  "title": "Survey of Organic Chemistry",
+                  "credits": "3",
+                  "courseId": 18236,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+                },
+                {
+                  "code": "CHEM 241",
+                  "title": "Organic Chemistry I",
+                  "credits": "3",
+                  "courseId": 18237,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53827"
+                },
+                {
+                  "code": "CS 212",
+                  "title": "Data Structures and Algorithms",
+                  "credits": "4",
+                  "courseId": 18267,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+                },
+                {
+                  "code": "CS 214",
+                  "title": "Programming Language Concepts",
+                  "credits": "4",
+                  "courseId": 18268,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53858"
+                },
+                {
+                  "code": "CS 232",
+                  "title": "Operating Systems and Networking",
+                  "credits": "4",
+                  "courseId": 18269,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53859"
+                },
+                {
+                  "code": "CS 300",
+                  "title": "Special Topics in Computer Science",
+                  "credits": "2, 4",
+                  "courseId": 18272,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53862"
+                },
+                {
+                  "code": "CS 326",
+                  "title": "Embedded Systems and the Internet of Things",
+                  "credits": "4",
+                  "courseId": 21551,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54595"
+                },
+                {
+                  "code": "ENGR 250",
+                  "title": "Introduction to Biomedical Engineering",
+                  "credits": "2",
+                  "courseId": 21535,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54579"
+                },
+                {
+                  "code": "ENGR 303",
+                  "title": "Chemical Engineering Principles and Thermodynamics",
+                  "credits": "3",
+                  "courseId": 18757,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53945"
+                },
+                {
+                  "code": "ENGR 305",
+                  "title": "Mechanics of Materials",
+                  "credits": "4",
+                  "courseId": 18759,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53947"
+                },
+                {
+                  "code": "ENGR 306",
+                  "title": "Principles of Environmental Engineering",
+                  "credits": "4",
+                  "courseId": 18760,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53948"
+                },
+                {
+                  "code": "ENGR 314",
+                  "title": "Vibration Analysis",
+                  "credits": "4",
+                  "courseId": 18765,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53953"
+                },
+                {
+                  "code": "ENGR 315",
+                  "title": "Control Systems",
+                  "credits": "3",
+                  "courseId": 18766,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53954"
+                },
+                {
+                  "code": "ENGR 318",
+                  "title": "Soil Mechanics and Foundation Design",
+                  "credits": "4",
+                  "courseId": 18767,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53955"
+                },
+                {
+                  "code": "ENGR 319",
+                  "title": "Introduction to Thermal Sciences",
+                  "credits": "4",
+                  "courseId": 18768,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53956"
+                },
+                {
+                  "code": "ENGR 320",
+                  "title": "Hydraulic Engineering",
+                  "credits": "4",
+                  "courseId": 18769,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53957"
+                },
+                {
+                  "code": "ENGR 324",
+                  "title": "Materials and Processes in Manufacturing",
+                  "credits": "4",
+                  "courseId": 18772,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53960"
+                },
+                {
+                  "code": "ENGR 326",
+                  "title": "Structural Analysis",
+                  "credits": "4",
+                  "courseId": 18774,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53962"
+                },
+                {
+                  "code": "ENGR 334",
+                  "title": "Dynamics of Machinery and Instrumentation",
+                  "credits": "3",
+                  "courseId": 18781,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53969"
+                },
+                {
+                  "code": "ENGR 338",
+                  "title": "Introduction to Traffic Engineering and Highway Design",
+                  "credits": "4",
+                  "courseId": 18784,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53972"
+                },
+                {
+                  "code": "ENGR 342",
+                  "title": "Process Dynamics, Modeling, and Control",
+                  "credits": "3",
+                  "courseId": 18787,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53975"
+                },
+                {
+                  "code": "ENGR 350",
+                  "title": "Special Topics in Engineering",
+                  "credits": "2-4",
+                  "courseId": 22032,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54719"
+                },
+                {
+                  "code": "ENGR 354",
+                  "title": "Sustainability Engineering",
+                  "credits": "4",
+                  "courseId": 18789,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53977"
+                },
+                {
+                  "code": "GEO 120",
+                  "title": "Earth Systems",
+                  "credits": "3",
+                  "courseId": 19210,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+                },
+                {
+                  "code": "GEO 151",
+                  "title": "Introduction to Geology",
+                  "credits": "3",
+                  "courseId": 19230,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54018"
+                },
+                {
+                  "code": "GEO 152",
+                  "title": "Historical Geology",
+                  "credits": "3",
+                  "courseId": 19231,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54019"
+                },
+                {
+                  "code": "GEO 215",
+                  "title": "Mineralogy",
+                  "credits": "3",
+                  "courseId": 19234,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54022"
+                },
+                {
+                  "code": "GEO 252",
+                  "title": "Geomorphology",
+                  "credits": "3",
+                  "courseId": 19217,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54005"
+                },
+                {
+                  "code": "GEO 260",
+                  "title": "GIS and Cartography",
+                  "credits": "4",
+                  "courseId": 19218,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+                },
+                {
+                  "code": "GEO 325",
+                  "title": "Hydrogeology",
+                  "credits": "3",
+                  "courseId": 19241,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54029"
+                },
+                {
+                  "code": "KIN 212",
+                  "title": "Anatomical Kinesiology",
+                  "credits": "4",
+                  "courseId": 19780,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54106"
+                },
+                {
+                  "code": "KIN 213",
+                  "title": "Biomechanics and Motor Learning",
+                  "credits": "4",
+                  "courseId": 19781,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54107"
+                },
+                {
+                  "code": "MATH 305",
+                  "title": "The Geometry and Topology of Manifolds",
+                  "credits": "4",
+                  "courseId": 19817,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54143"
+                },
+                {
+                  "code": "MATH 312",
+                  "title": "Logic, Computability, and Complexity",
+                  "credits": "4",
+                  "courseId": 19818,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54144"
+                },
+                {
+                  "code": "MATH 331",
+                  "title": "Nonlinear Dynamics and Chaos",
+                  "credits": "4",
+                  "courseId": 19820,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54146"
+                },
+                {
+                  "code": "MATH 333",
+                  "title": "Partial Differential Equations",
+                  "credits": "4",
+                  "courseId": 19821,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54147"
+                },
+                {
+                  "code": "MATH 335",
+                  "title": "Numerical Analysis",
+                  "credits": "4",
+                  "courseId": 19822,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54148"
+                },
+                {
+                  "code": "MATH 355",
+                  "title": "Advanced Linear Algebra",
+                  "credits": "4",
+                  "courseId": 19824,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54150"
+                },
+                {
+                  "code": "MATH 361",
+                  "title": "Real Analysis I",
+                  "credits": "4",
+                  "courseId": 19826,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54152"
+                },
+                {
+                  "code": "MATH 362",
+                  "title": "Real Analysis: Lebesgue Integral",
+                  "credits": "4",
+                  "courseId": 19827,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54153"
+                },
+                {
+                  "code": "MATH 365",
+                  "title": "Complex Variables with Topics",
+                  "credits": "4",
+                  "courseId": 19828,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54154"
+                },
+                {
+                  "code": "MATH 385",
+                  "title": "Topics in Mathematics",
+                  "credits": "2-4",
+                  "courseId": 22036,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54723"
+                },
+                {
+                  "code": "PHYS 131",
+                  "title": "Matter, Light, and Energy",
+                  "credits": "1.5",
+                  "courseId": 20204,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54243"
+                },
+                {
+                  "code": "PHYS 246",
+                  "title": "Waves, Optics, and Optical Technology",
+                  "credits": "4",
+                  "courseId": 20213,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54252"
+                },
+                {
+                  "code": "PHYS 306",
+                  "title": "Introduction to Quantum Physics",
+                  "credits": "4",
+                  "courseId": 20216,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54255"
+                },
+                {
+                  "code": "PHYS 130",
+                  "title": "Particles, Nuclei, and Astronomy",
+                  "credits": "1.5",
+                  "courseId": 22594,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54890"
+                },
+                {
+                  "code": "PHYS 335",
+                  "title": "Classical Mechanics and Orbital Dynamics",
+                  "credits": "4",
+                  "courseId": 20217,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54256"
+                },
+                {
+                  "code": "PHYS 345",
+                  "title": "Electromagnetism",
+                  "credits": "4",
+                  "courseId": 20219,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54258"
+                },
+                {
+                  "code": "PHYS 346",
+                  "title": "Advanced Optics",
+                  "credits": "2",
+                  "courseId": 20220,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54259"
+                },
+                {
+                  "code": "PHYS 365",
+                  "title": "Thermodynamics and Statistical Mechanics",
+                  "credits": "4",
+                  "courseId": 20223,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54262"
+                },
+                {
+                  "code": "PHYS 375",
+                  "title": "Quantum Mechanics",
+                  "credits": "4",
+                  "courseId": 20224,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54263"
+                },
+                {
+                  "code": "STAT 341",
+                  "title": "Computational Bayesian Statistics",
+                  "credits": "4",
+                  "courseId": 21013,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54453"
+                },
+                {
+                  "code": "STAT 343",
+                  "title": "Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21014,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54454"
+                },
+                {
+                  "code": "STAT 344",
+                  "title": "Mathematical Statistics",
+                  "credits": "4",
+                  "courseId": 21015,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54455"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 130",
+      "description": "(includes at least 26 hours of nonoverlapping Core requirements)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

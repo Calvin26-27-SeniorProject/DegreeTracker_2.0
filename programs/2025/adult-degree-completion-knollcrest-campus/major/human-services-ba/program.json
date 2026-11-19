@@ -1,0 +1,202 @@
+{
+  "id": "human-services-ba",
+  "name": "Human Services, BA",
+  "code": "BA_HUMAN",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 388,
+    "name": "Adult Degree Completion (Knollcrest Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13825",
+  "description": "In collaboration with the School of Humanities, Arts, and Social Sciences, the School of Graduate and Continuing Studies offers a BA in human services. Grounded in a Christian perspective, this interdisciplinary major combines theory and skills to prepare students for serving in their communities with cultural humility, interpersonal skills, and strong ethical conduct. Students examine societal tensions and causes of injustice while learning about human behavior, with a focus on facilitating positive change. In addition to the requirements of the major, students also must satisfy the requirements of the degree-completion Core curriculum.",
+  "totalHours": "32-38",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GCS 300",
+          "title": "Career Exploration",
+          "credits": "2",
+          "courseId": 11228,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56979"
+        },
+        {
+          "code": "GCS 391",
+          "title": "Leading through Change",
+          "credits": "4",
+          "courseId": 12093,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57143"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        },
+        {
+          "code": "SOWK 220",
+          "title": "Introduction to Human Services",
+          "credits": "4",
+          "courseId": 12090,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57140"
+        },
+        {
+          "code": "SOWK 350",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "4",
+          "courseId": 9161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56483"
+        },
+        {
+          "code": "SOWK 370",
+          "title": "The Helping Interview",
+          "credits": "4",
+          "courseId": 9163,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56485"
+        },
+        {
+          "code": "SOWK 370L",
+          "title": "Interviewing Lab",
+          "credits": "0",
+          "courseId": 10656,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56905"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GCS 300",
+          "placement": "after",
+          "text": "OR GCS 380 - Internship for Continuing Studies"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "POLS 209",
+              "title": "Public and Nonprofit Administration",
+              "credits": "4",
+              "courseId": 8838,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56360"
+            },
+            {
+              "code": "SOC 202",
+              "title": "Urban Sociology",
+              "credits": "4",
+              "courseId": 9146,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56468"
+            },
+            {
+              "code": "SOC 303",
+              "title": "Criminology",
+              "credits": "4",
+              "courseId": 9142,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56464"
+            },
+            {
+              "code": "SOWK 365",
+              "title": "Social Problems and Policy",
+              "credits": "4",
+              "courseId": 12091,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57141"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 9144,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56466"
+            },
+            {
+              "code": "SOC 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 9143,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56465"
+            },
+            {
+              "code": "SOWK 260",
+              "title": "Global Issues and Perspectives",
+              "credits": "2",
+              "courseId": 9159,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56481"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take Two from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "SOWK 371",
+              "title": "Generalist Practice with Individuals",
+              "credits": "2",
+              "courseId": 9164,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56486"
+            },
+            {
+              "code": "SOWK 373",
+              "title": "Generalist Practice with Families and Groups",
+              "credits": "2",
+              "courseId": 9954,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56678"
+            },
+            {
+              "code": "SOWK 374",
+              "title": "Practice with Organizations and Communities",
+              "credits": "2",
+              "courseId": 12092,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57142"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Core Requirements",
+      "description": "FOUNDATIONS Community and Commitments: 2 hours CORE 100 Foundations of Christianity I: 4 hours REL 121 or REL 131 Foundations of Christianity II - at least 2 hours Course listings for this category may be found here. COMPETENCIES AND SKILLS Foundational Writing: ENGL 101 OR ENGL 100 and ENGL 102 Health and Movement: 1 hour Course listings for this category may be found here. World Languages I: 3 hours High school exemption from World Languages I is possible. To obtain a high school exemption, a student must complete three sequential years in the same language with a B or better for each semester. IDIS 101 KNOWLEDGE AND UNDERSTANDING Complete coursework totaling at least 18 semester hours from at least five of the six Knowledge and Understanding categories, including at least 2 semester hours from each of the following categories: Arts, Oral Rhetoric, Visual Rhetoric; Humanities; Social and Behavioral Sciences. Course listings for each category may be found here. World Languages II: 0-4 hours Arts, Oral Rhetoric, Visual Rhetoric: 2-6 hours Humanities: 2-6 hours Mathematical Sciences: 0-4 hours Natural Sciences: 0-6 hours Social and Behavioral Sciences: 2-6 hours CROSS-DISCIPLINARY INTEGRATION Engaged Citizenship Commitments Complete at least one tagged course in all four areas. These courses may also satisfy other core requirements. The full list of approved courses may be found here. Diversity and Difference Environmental Sustainability Global Regions and Cultures Rhetoric in the Disciplines Contemporary Challenges and Enduring Questions: 4 hours GCS 391 (Grand Rapids Campus) or ML 326 (Handlon Campus)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 32-38",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

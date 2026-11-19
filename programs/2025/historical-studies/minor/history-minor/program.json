@@ -1,0 +1,347 @@
+{
+  "id": "history-minor",
+  "name": "History Minor",
+  "code": "HIST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 378,
+    "name": "Historical Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13689",
+  "description": null,
+  "totalHours": "18-20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "HIST 151",
+          "title": "History of the West and the World I",
+          "credits": "4",
+          "courseId": 8434,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56153"
+        },
+        {
+          "code": "HIST 294",
+          "title": "Research Methods of History",
+          "credits": "4",
+          "courseId": 8455,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56174"
+        }
+      ],
+      "notes": [
+        {
+          "course": "HIST 151",
+          "placement": "after",
+          "text": "OR HIST 152 - History of the West and the World II"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Take 10 Hours from the Following",
+      "description": "Electives must include one course each from two of the geographic areas below. Additionally, at least one elective must be a 300-level, 4-hour course.",
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "General",
+          "description": null,
+          "courses": [
+            {
+              "code": "IDIS 240",
+              "title": "Introduction to Archaeology",
+              "credits": "4",
+              "courseId": 8476,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56195"
+            },
+            {
+              "code": "HIST 293",
+              "title": "Public History",
+              "credits": "4",
+              "courseId": 8454,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56173"
+            },
+            {
+              "code": "IDIS 340",
+              "title": "Field Work in Archaeology",
+              "credits": "4",
+              "courseId": 8478,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56197"
+            },
+            {
+              "code": "HIST 393",
+              "title": "History Internship",
+              "credits": "1-4",
+              "courseId": 8466,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56185"
+            },
+            {
+              "code": "IDIS 210",
+              "title": "Introduction to the Digital Humanities",
+              "credits": "2",
+              "courseId": 9923,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56647"
+            }
+          ],
+          "notes": [
+            {
+              "course": "IDIS 240",
+              "placement": "left",
+              "text": "HIST 280 /"
+            },
+            {
+              "course": "IDIS 340",
+              "placement": "left",
+              "text": "HIST 380 /"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "North American History",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 229",
+              "title": "Seminar in United States History",
+              "credits": "4",
+              "courseId": 8437,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56156"
+            },
+            {
+              "code": "HIST 251",
+              "title": "Early America",
+              "credits": "4",
+              "courseId": 8441,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56160"
+            },
+            {
+              "code": "HIST 252",
+              "title": "America from Republic to Empire",
+              "credits": "4",
+              "courseId": 8442,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56161"
+            },
+            {
+              "code": "HIST 253",
+              "title": "Recent America",
+              "credits": "4",
+              "courseId": 8443,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56162"
+            },
+            {
+              "code": "HIST 255",
+              "title": "African-American History",
+              "credits": "4",
+              "courseId": 8444,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56163"
+            },
+            {
+              "code": "HIST 256",
+              "title": "Women and Gender in US History",
+              "credits": "4",
+              "courseId": 9889,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56611"
+            },
+            {
+              "code": "HIST 258",
+              "title": "US Military History",
+              "credits": "4",
+              "courseId": 8445,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56164"
+            },
+            {
+              "code": "HIST 259",
+              "title": "American Economic and Business History",
+              "credits": "4",
+              "courseId": 8446,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56165"
+            },
+            {
+              "code": "HIST 353",
+              "title": "Studies in US Religious and Intellectual History",
+              "credits": "4",
+              "courseId": 8458,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56177"
+            },
+            {
+              "code": "HIST 356",
+              "title": "American Social and Cultural History",
+              "credits": "4",
+              "courseId": 8459,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56178"
+            },
+            {
+              "code": "HIST 358",
+              "title": "Mythologies of the Frontier West",
+              "credits": "4",
+              "courseId": 8460,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56179"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "European History",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 225",
+              "title": "England",
+              "credits": "4",
+              "courseId": 8436,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56155"
+            },
+            {
+              "code": "HIST 261",
+              "title": "Ancient Mediterranean",
+              "credits": "4",
+              "courseId": 8447,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56166"
+            },
+            {
+              "code": "HIST 262",
+              "title": "Early Medieval Worlds, 300-1000",
+              "credits": "4",
+              "courseId": 8448,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56167"
+            },
+            {
+              "code": "HIST 263",
+              "title": "Medieval and Renaissance Europe, 1000-1500",
+              "credits": "4",
+              "courseId": 8449,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56168"
+            },
+            {
+              "code": "HIST 264",
+              "title": "The Reformation in Historical Context (1500-1700)",
+              "credits": "4",
+              "courseId": 8450,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56169"
+            },
+            {
+              "code": "HIST 267",
+              "title": "Modern Europe",
+              "credits": "4",
+              "courseId": 8451,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56170"
+            },
+            {
+              "code": "HIST 362",
+              "title": "Studies in Ancient and Medieval Europe",
+              "credits": "4",
+              "courseId": 8461,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56180"
+            },
+            {
+              "code": "HIST 364",
+              "title": "Studies in Early Modern and Modern Europe",
+              "credits": "4",
+              "courseId": 8462,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56181"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "World Regions and Global Histories",
+          "description": null,
+          "courses": [
+            {
+              "code": "HIST 153",
+              "title": "Explorations in World History",
+              "credits": "2",
+              "courseId": 9459,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56580"
+            },
+            {
+              "code": "HIST 203",
+              "title": "Reacting to the Past: History Role-Playing Game",
+              "credits": "2",
+              "courseId": 12145,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57195"
+            },
+            {
+              "code": "HIST 233",
+              "title": "Modern Middle East",
+              "credits": "4",
+              "courseId": 8438,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56157"
+            },
+            {
+              "code": "HIST 242",
+              "title": "Africa and the World",
+              "credits": "4",
+              "courseId": 8439,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56158"
+            },
+            {
+              "code": "HIST 245",
+              "title": "East Asia to 1800",
+              "credits": "4",
+              "courseId": 8440,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56159"
+            },
+            {
+              "code": "HIST 271",
+              "title": "War and Society",
+              "credits": "4",
+              "courseId": 8452,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56171"
+            },
+            {
+              "code": "HIST 274",
+              "title": "Environmental History",
+              "credits": "4",
+              "courseId": 8453,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56172"
+            },
+            {
+              "code": "HIST 331",
+              "title": "Studies in Middle Eastern History",
+              "credits": "4",
+              "courseId": 8456,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56175"
+            },
+            {
+              "code": "HIST 346",
+              "title": "Modern China",
+              "credits": "4",
+              "courseId": 8457,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56176"
+            },
+            {
+              "code": "HIST 372",
+              "title": "Studies of Modern Empires",
+              "credits": "4",
+              "courseId": 8463,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56182"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18-20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

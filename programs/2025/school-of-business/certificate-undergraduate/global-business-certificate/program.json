@@ -1,0 +1,22 @@
+{
+  "id": "global-business-certificate",
+  "name": "Global Business, Certificate",
+  "code": "CERT.GLBL",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13774",
+  "description": "Students earn a global business certificate if they complete the following requirements: A major in an undergraduate business program. Four courses totaling twelve or more credit hours from the categories below. A summative essay with guided prompts and a published rubric. Review and approval of the above from the global business certificate coordinator. The required four courses totaling 12 or more semester hours will be selected by the student from the following three categories and provided to the global business certificate coordinator for approval: CATEGORY 1: Off-Campus Course in Business or closely related area. Students must take one course in category 1 and could take up to two courses in this category. CATEGORY 2: Social Science Course with an international, cross-cultural, or global focus. Students must take one course in category 2 and could take up to two courses in this category. These may be Core courses tagged for Global Regions and Cultures or other approved social science courses including approved social science courses during a Calvin off-campus semester program. A list of pre-approved courses is available from the global business certificate coordinator. CATEGORY 3: Humanities Course with an international, cross-cultural, or global focus. Students do not need to take a category 3 course but may take up to two courses in this category. These may be Core courses tagged for Global Regions and Cultures or other approved humanities courses including approved humanities courses during a Calvin off-campus semester program. A list of pre-approved courses is available from the global business certificate coordinator. For additional details, please contact the School of Business global business certificate coordinator.",
+  "totalHours": null,
+  "requirements": []
+}

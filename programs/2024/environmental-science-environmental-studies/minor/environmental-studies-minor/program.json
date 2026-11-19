@@ -1,0 +1,79 @@
+{
+  "id": "environmental-studies-minor",
+  "name": "Environmental Studies Minor",
+  "code": "ENST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 767,
+    "name": "Environmental Science, Environmental Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13172",
+  "description": null,
+  "totalHours": "22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENST 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 18791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+        },
+        {
+          "code": "ENST 301",
+          "title": "American Environmentalism",
+          "credits": "2",
+          "courseId": 22591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54887"
+        },
+        {
+          "code": "ENST 302",
+          "title": "Environmental Law",
+          "credits": "2",
+          "courseId": 18792,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+        },
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 19218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+        },
+        {
+          "code": "GEO 395",
+          "title": "Senior Seminar in Geology, Geography, and Environment",
+          "credits": "4",
+          "courseId": 19229,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54017"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 395",
+          "placement": "after",
+          "text": "an additional 6 hours of electives, with the approval of the program director"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

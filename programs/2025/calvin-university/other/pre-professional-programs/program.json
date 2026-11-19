@@ -1,0 +1,20 @@
+{
+  "id": "pre-professional-programs",
+  "name": "Pre-professional Programs",
+  "code": null,
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 341,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13703",
+  "description": "The programs in this section prepare students for admission to professional and graduate schools. These courses are taken while students are meeting requirements for a bachelor of arts or bachelor of science degree in a separately designated major. Pre-professional: Law Pre-professional: Medicine, Dentistry, and Veterinary Pre-professional: Ministry Occupational Therapy Pre-professional: Optometry Pre-professional: Pharmacy Pre-professional: Physical Therapy Pre-professional: Physician Assistant",
+  "totalHours": null,
+  "requirements": []
+}

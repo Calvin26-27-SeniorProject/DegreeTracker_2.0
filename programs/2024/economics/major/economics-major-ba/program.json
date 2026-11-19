@@ -1,0 +1,181 @@
+{
+  "id": "economics-major-ba",
+  "name": "Economics Major, BA",
+  "code": "ECON.MAJ.BA",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 759,
+    "name": "Economics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13320",
+  "description": "The bachelor of arts (BA) in economics helps students to develop a clear and logical way of thinking about real-world issues such as unemployment, inflation, taxes, healthcare, poverty, inequality, pollution, crime, and international trade. Students in the program learn to synthesize large amounts of information and to think logically while gaining high-demand skills in problem-solving and communication. They also learn to identify the costs and the benefits of a decision with scarce resources. Students in the program graduate with skills to complement successful careers in a wide range of fields, including finance, consulting, banking, accounting, law, nonprofits, politics, diplomacy, government and public policy. The BA in economics is a broad and flexible program of study. It works particularly well for students who pursue multiple majors or minors, who start the economics major later in their undergraduate careers, or who wish to study economics using an analytical but not heavily quantitative approach. Overlap Policy This program may not be combined with the politics, philosophy, and economics major program.",
+  "totalHours": "32",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 18292,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 18293,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53883"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 18294,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53884"
+        },
+        {
+          "code": "ECON 243",
+          "title": "Introductory Econometrics",
+          "credits": "4",
+          "courseId": 22771,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55044"
+        },
+        {
+          "code": "ECON 325",
+          "title": "Intermediate Microeconomics",
+          "credits": "4",
+          "courseId": 18298,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53888"
+        },
+        {
+          "code": "ECON 326",
+          "title": "Intermediate Macroeconomics",
+          "credits": "4",
+          "courseId": 18299,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53889"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": "Economic Applications​​​​​​​",
+          "courses": [
+            {
+              "code": "ECON 232",
+              "title": "Environmental Economics",
+              "credits": "2",
+              "courseId": 18295,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+            },
+            {
+              "code": "ECON 233",
+              "title": "Economics of Energy and Sustainability",
+              "credits": "4",
+              "courseId": 21478,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54521"
+            },
+            {
+              "code": "ECON 237",
+              "title": "Regional Economies of the World",
+              "credits": "2",
+              "courseId": 18296,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53886"
+            },
+            {
+              "code": "ECON 241",
+              "title": "Health Economics and Health Policy",
+              "credits": "2",
+              "courseId": 18297,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53887"
+            },
+            {
+              "code": "ECON 230",
+              "title": "Urban Development Economics",
+              "credits": "2",
+              "courseId": 18700,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53890"
+            },
+            {
+              "code": "ECON 331",
+              "title": "Money and Financial Markets",
+              "credits": "4",
+              "courseId": 18703,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53891"
+            },
+            {
+              "code": "ECON 335",
+              "title": "Human Resource Economics",
+              "credits": "4",
+              "courseId": 18704,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53892"
+            },
+            {
+              "code": "ECON 337",
+              "title": "World Poverty and Economic Development",
+              "credits": "4",
+              "courseId": 18705,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53893"
+            },
+            {
+              "code": "ECON 338",
+              "title": "International Trade and Finance",
+              "credits": "4",
+              "courseId": 18706,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53894"
+            },
+            {
+              "code": "ECON 339",
+              "title": "Government Finance and Public Policy",
+              "credits": "4",
+              "courseId": 18707,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53895"
+            },
+            {
+              "code": "ECON 345",
+              "title": "Advanced Topics in Economics",
+              "credits": "2-4",
+              "courseId": 18709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53897"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Cognate",
+          "description": null,
+          "courses": [
+            {
+              "code": "DATA 102",
+              "title": "Foundations of Data Science and Analytics",
+              "credits": "2",
+              "courseId": 22275,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 32",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

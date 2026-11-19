@@ -1,0 +1,356 @@
+{
+  "id": "sustainability-designation",
+  "name": "Sustainability Designation",
+  "code": "SPCL_SUSTN",
+  "type": "Designation",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 763,
+    "name": "Engineering"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13316",
+  "description": "Students in any major earn the sustainability designation by completing the requirements below. Contact the instructors of IDIS 184 and IDIS 384 for details about the sustainability designation.",
+  "totalHours": "11",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 184",
+          "title": "Introduction to Sustainability Challenges",
+          "credits": "2",
+          "courseId": 18751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53939"
+        },
+        {
+          "code": "IDIS 384",
+          "title": "Sustainability Experience",
+          "credits": "1",
+          "courseId": 22729,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54983"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": "Environmental Sustainability–Tagged Core Courses (Take no more than 4 hours from any one school.)",
+          "courses": [],
+          "notes": [],
+          "children": [
+            {
+              "name": "School of Business",
+              "description": null,
+              "courses": [
+                {
+                  "code": "SCM 201",
+                  "title": "Introduction to Operations and Supply Chain Management",
+                  "credits": "4",
+                  "courseId": 22270,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54757"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "School of Health",
+              "description": null,
+              "courses": [
+                {
+                  "code": "PUBH 385",
+                  "title": "The Impact of Clean Water: Honduras and Navajo Nation",
+                  "credits": "4",
+                  "courseId": 22261,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54748"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "School of Humanities, Arts, and Social Sciences",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ECON 232",
+                  "title": "Environmental Economics",
+                  "credits": "2",
+                  "courseId": 18295,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+                },
+                {
+                  "code": "ECON 233",
+                  "title": "Economics of Energy and Sustainability",
+                  "credits": "4",
+                  "courseId": 21478,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54521"
+                },
+                {
+                  "code": "ENGL 305",
+                  "title": "Advanced Special Topics",
+                  "credits": "2-4",
+                  "courseId": 21993,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54680"
+                },
+                {
+                  "code": "FREN 301",
+                  "title": "Advanced French I: Sustainability in France",
+                  "credits": "4",
+                  "courseId": 18799,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53987"
+                },
+                {
+                  "code": "HIST 274",
+                  "title": "Environmental History",
+                  "credits": "4",
+                  "courseId": 19273,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54062"
+                },
+                {
+                  "code": "HIST 280",
+                  "title": "Introduction to Archaeology",
+                  "credits": "4",
+                  "courseId": 21984,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54671"
+                },
+                {
+                  "code": "IDIS 212",
+                  "title": "Global Health",
+                  "credits": "4",
+                  "courseId": 19295,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54084"
+                },
+                {
+                  "code": "IDIS 240",
+                  "title": "Introduction to Archaeology",
+                  "credits": "4",
+                  "courseId": 19296,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54085"
+                },
+                {
+                  "code": "PHIL 153",
+                  "title": "Fundamental Questions in Philosophy",
+                  "credits": "4",
+                  "courseId": 20189,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+                },
+                {
+                  "code": "PHIL 223",
+                  "title": "Peaceable Kingdom",
+                  "credits": "4",
+                  "courseId": 22291,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54778"
+                },
+                {
+                  "code": "STFR 330",
+                  "title": "Contemporary France",
+                  "credits": "4",
+                  "courseId": 21020,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54460"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "ENGL 305",
+                  "placement": "right",
+                  "text": "(tagged sections only)"
+                },
+                {
+                  "course": "PHIL 153",
+                  "placement": "right",
+                  "text": "(tagged sections only)"
+                }
+              ],
+              "children": []
+            },
+            {
+              "name": "School of Science, Technology, Engineering, and Mathematics",
+              "description": null,
+              "courses": [
+                {
+                  "code": "BIOL 123",
+                  "title": "Living Systems",
+                  "credits": "4",
+                  "courseId": 17749,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53738"
+                },
+                {
+                  "code": "BIOL 160",
+                  "title": "Ecological and Evolutionary Systems",
+                  "credits": "3",
+                  "courseId": 17751,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+                },
+                {
+                  "code": "BIOL 345",
+                  "title": "Ecosystem Ecology and Management",
+                  "credits": "3",
+                  "courseId": 17771,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53760"
+                },
+                {
+                  "code": "BIOL 346",
+                  "title": "Plant Taxonomy",
+                  "credits": "3",
+                  "courseId": 17772,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53761"
+                },
+                {
+                  "code": "BIOL 364",
+                  "title": "Global Health, Environment, and Sustainability",
+                  "credits": "4",
+                  "courseId": 17774,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53763"
+                },
+                {
+                  "code": "BIOL 371",
+                  "title": "Tropical Ecosystems: Conservation and Development in Belize",
+                  "credits": "2",
+                  "courseId": 22735,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55008"
+                },
+                {
+                  "code": "BIOL 372",
+                  "title": "Dutch Sustainability: Is Orange the New Green?",
+                  "credits": "2",
+                  "courseId": 22711,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54960"
+                },
+                {
+                  "code": "CHEM 171",
+                  "title": "Chemistry, Policy, and the Future of Our Planet",
+                  "credits": "2",
+                  "courseId": 22717,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54971"
+                },
+                {
+                  "code": "CHEM 172",
+                  "title": "Water, Water, Water",
+                  "credits": "2",
+                  "courseId": 22777,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55050"
+                },
+                {
+                  "code": "ENGR 303L",
+                  "title": "Chemical Engineering Principles and Thermodynamics Lab",
+                  "credits": "1",
+                  "courseId": 22331,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54819"
+                },
+                {
+                  "code": "ENGR 306",
+                  "title": "Principles of Environmental Engineering",
+                  "credits": "4",
+                  "courseId": 18760,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53948"
+                },
+                {
+                  "code": "ENST 210",
+                  "title": "Human Impacts on the Environment",
+                  "credits": "4",
+                  "courseId": 18791,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+                },
+                {
+                  "code": "ENST 302",
+                  "title": "Environmental Law",
+                  "credits": "2",
+                  "courseId": 18792,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+                },
+                {
+                  "code": "GEO 120",
+                  "title": "Earth Systems",
+                  "credits": "3",
+                  "courseId": 19210,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+                },
+                {
+                  "code": "GEO 151",
+                  "title": "Introduction to Geology",
+                  "credits": "3",
+                  "courseId": 19230,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54018"
+                },
+                {
+                  "code": "GEO 153",
+                  "title": "Great Lakes Geology",
+                  "credits": "4",
+                  "courseId": 19232,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54020"
+                },
+                {
+                  "code": "GEO 181",
+                  "title": "First-Year Research in Earth Sciences: Dunes",
+                  "credits": "3",
+                  "courseId": 19211,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53999"
+                },
+                {
+                  "code": "GEO 250",
+                  "title": "Meteorology",
+                  "credits": "3",
+                  "courseId": 19216,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54004"
+                },
+                {
+                  "code": "GEO 251",
+                  "title": "Oceanography",
+                  "credits": "3",
+                  "courseId": 19235,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54023"
+                },
+                {
+                  "code": "GEO 352",
+                  "title": "Sustainable Communities",
+                  "credits": "2",
+                  "courseId": 19224,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54012"
+                },
+                {
+                  "code": "PHYS 131",
+                  "title": "Matter, Light, and Energy",
+                  "credits": "1.5",
+                  "courseId": 20204,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54243"
+                },
+                {
+                  "code": "SCES 110",
+                  "title": "Science and a Changing World",
+                  "credits": "4",
+                  "courseId": 22286,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54773"
+                },
+                {
+                  "code": "STCR 225",
+                  "title": "Community in a Costa Rican Watershed",
+                  "credits": "4",
+                  "courseId": 22828,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55101"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 11",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

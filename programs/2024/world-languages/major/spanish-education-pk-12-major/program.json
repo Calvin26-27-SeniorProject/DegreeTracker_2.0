@@ -1,0 +1,100 @@
+{
+  "id": "spanish-education-pk-12-major",
+  "name": "Spanish Education PK-12 Major",
+  "code": "MAJ_SPAN_PK12",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13284",
+  "description": "A minimum grade of C (2.0) in SPAN 301 is required as a prerequisite for any concentration in Spanish. Note: Given the range of study-abroad options, early advising is strongly encouraged. Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SPAN 301",
+          "title": "Advanced Grammar, Composition and Conversation I",
+          "credits": "4",
+          "courseId": 20667,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54406"
+        },
+        {
+          "code": "SPAN 302",
+          "title": "Advanced Grammar, Composition and Conversation II",
+          "credits": "4",
+          "courseId": 20668,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54407"
+        },
+        {
+          "code": "SPAN 308",
+          "title": "Introduction to the Hispanic World I",
+          "credits": "4",
+          "courseId": 20669,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54408"
+        },
+        {
+          "code": "SPAN 309",
+          "title": "Introduction to the Hispanic World II",
+          "credits": "4",
+          "courseId": 20670,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54409"
+        },
+        {
+          "code": "SPAN 341",
+          "title": "Spanish Phonology, Dialectology, and Sociolinguistics",
+          "credits": "4",
+          "courseId": 20672,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54411"
+        },
+        {
+          "code": "SPAN 370",
+          "title": "Advanced Topics",
+          "credits": "4",
+          "courseId": 22599,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54896"
+        },
+        {
+          "code": "IDIS 356",
+          "title": "Elementary World Languages Pedagogy",
+          "credits": "2",
+          "courseId": 19774,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54092"
+        },
+        {
+          "code": "IDIS 357",
+          "title": "Secondary World Languages Pedagogy",
+          "credits": "4",
+          "courseId": 19775,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54093"
+        }
+      ],
+      "notes": [
+        {
+          "course": "IDIS 357",
+          "placement": "after",
+          "text": "an advisor-approved Spanish semester abroad at least one advanced course taken on campus after the semester abroad (usually SPAN 370)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: at least 33",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

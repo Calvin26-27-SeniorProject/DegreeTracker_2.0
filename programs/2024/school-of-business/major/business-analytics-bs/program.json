@@ -1,0 +1,211 @@
+{
+  "id": "business-analytics-bs",
+  "name": "Business Analytics, BS",
+  "code": "ANLYT.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13295",
+  "description": "The BS in business analytics prepares graduates to structure business problems in ways that can be solved by data-science, information-technology, or machine learning applications; and to plan, organize, and lead organizational change projects that deliver such solutions. These \"business analysts\" work with data scientists and computer scientists, and therefore require knowledge and skills in organizational information ecosystems, algorithmic logic, database queries, predictive analytics, and the translation of business rules into software code. However, they also bring complementary business acumen, people management, and organizational change skills, including process design, collaborative project management, and negotiation, as well as an understanding of the business imperatives driving technological adoption. Business analysts often begin their careers coordinating development projects, whether for the in-house information technology departments of large organizations, for software application development companies, or for systems integration and market intelligence consultancies. Further, analysts act as the communication bridge between the business and technology communities with strong presentation and leadership skills. Students attracted to business, who also have abilities in systems thinking and data-driven inquiry, would be good candidates for this program. Students who are attracted to technology and have abilities in collaborative business problem-solving would also be good candidates for this program. Overlap Policy This program may not be combined with the business minor or information systems minor programs. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "76",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 17515,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53689"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 17702,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53690"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 17786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53775"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 17787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53776"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 17798,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53787"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 17791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53780"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 22879,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55779"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 17794,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53783"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BUS 205",
+          "title": "Project Management",
+          "credits": "4",
+          "courseId": 22633,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54930"
+        },
+        {
+          "code": "BUS 352",
+          "title": "Negotiation Skills and Theory",
+          "credits": "2",
+          "courseId": 22269,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54756"
+        },
+        {
+          "code": "INFO 301",
+          "title": "Business Enterprise Systems",
+          "credits": "4",
+          "courseId": 22634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54932"
+        },
+        {
+          "code": "INFO 302",
+          "title": "Business Analytics Management",
+          "credits": "4",
+          "courseId": 22635,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54933"
+        },
+        {
+          "code": "INFO 390",
+          "title": "Business Analytics Project",
+          "credits": "2",
+          "courseId": 22642,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54940"
+        },
+        {
+          "code": "COMM 362",
+          "title": "Small Group and Organizational Communication",
+          "credits": "4",
+          "courseId": 18225,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53815"
+        },
+        {
+          "code": "CS 106",
+          "title": "Introduction to Scientific Computation and Modeling",
+          "credits": "3",
+          "courseId": 18263,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 22275,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+        },
+        {
+          "code": "DATA 202",
+          "title": "Predictive Analytics",
+          "credits": "4",
+          "courseId": 18284,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53874"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 18292,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53882"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 18293,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53883"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 18294,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53884"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        },
+        {
+          "code": "STAT 245",
+          "title": "Applied Data Analysis",
+          "credits": "4",
+          "courseId": 21012,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54452"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 362",
+          "placement": "after",
+          "text": "OR ENGL 241 - Business Writing"
+        },
+        {
+          "course": "CS 106",
+          "placement": "after",
+          "text": "OR CS 108 - Introduction to Computing"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 76",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

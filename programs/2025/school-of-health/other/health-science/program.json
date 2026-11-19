@@ -1,0 +1,117 @@
+{
+  "id": "health-science",
+  "name": "Health Science",
+  "code": null,
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 381,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13779",
+  "description": "Healthcare delivery is a dynamic and complex endeavor that relies on graduates who are eager to impart meaningful change in the world around them. Students pursuing health science majors may matriculate as nurses, community educators, healthcare communicators, or within any of dozens of other roles within healthcare. While the possibilities are diverse, the importance of understanding and being able to work with other practitioners within this system has become a key competency for graduates. Students pursuing a major in the health sciences will complete eight foundational courses in chemistry, biology, psychology, sociology, and/or statistics before completing additional coursework in their chosen field of study. In this way, the health science foundational courses will serve as a gateway to a range of fields within the health sciences, allowing students to move easily between health science majors, as they discern their vocational calling. Upon completion of the health science foundational courses, students will continue to major in nursing, kinesiology (exercise science) or pre-occupational therapy. Students will be advised by faculty in these departments and will need to meet the specifications for graduation, beyond the health-science foundational courses, outlined by each program.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 7834,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 7837,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 7838,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55853"
+        },
+        {
+          "code": "CHEM 160",
+          "title": "Chemistry for the Health Sciences",
+          "credits": "3",
+          "courseId": 7919,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55933"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 8865,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56387"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 9145,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56467"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 9415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 9416,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56537"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

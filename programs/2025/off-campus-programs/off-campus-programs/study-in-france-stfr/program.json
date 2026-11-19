@@ -1,0 +1,49 @@
+{
+  "id": "study-in-france-stfr",
+  "name": "Study in France (STFR)",
+  "code": "STFR",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 346,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13640",
+  "description": "The Study in France program takes place every other fall semester (even years) in Grenoble, a mid-sized city located in a valley of the French Alps. Students direct-enroll at the Centre universitaire d'études françaises (CUEF), a French language and culture institute that is part of the Université Grenoble Alpes. Students live with French host families in Grenoble. Students take one course with the Calvin program director and the equivalent of three French language and culture courses at the CUEF. Students participate in group activities as well as excursions to locations such as Paris, Lyon, and Marseille. When students successfully complete their courses at the CUEF, they will receive transfer credit for STFR 315, STFR 316, and STFR 381. The CUEF will also issue a formal certificate of their French level according to the Common European Framework of Reference for Languages (CEFRL) and the A1 to C2 scale. While the program focuses on advanced-level students preparing a French major or minor, beginner and intermediate students may also apply to the program. According to their level and performance at the CUEF, these students may obtain Core, elective, and potentially major or minor credit in French (16 semester hours total). For details, contact the program advisor for fall 2024, Professor Jolene Vos-Camy. Academic components of the program include the following:",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Programs Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "STFR 330",
+          "title": "Contemporary France",
+          "credits": "4",
+          "courseId": 9427,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56548"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STFR 330",
+          "placement": "before",
+          "text": "STFR 315 - Advanced Language Study in France I STFR 316 - Advanced Language Study in France II"
+        },
+        {
+          "course": "STFR 330",
+          "placement": "after",
+          "text": "STFR 381 - Special Topics"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

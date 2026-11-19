@@ -127,7 +127,7 @@ export function coreCourseTitles(catalogs) {
   return titles;
 }
 
-// Every course code in the program files (catalog/programs/*.json), with its
+// Every course code in the program files (programs/**/<id>-<catoid>.json), with its
 // title, so majors' and minors' courses get hours and sections too.
 export function programCourseTitles(programs) {
   const titles = {};

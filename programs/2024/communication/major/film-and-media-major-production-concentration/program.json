@@ -1,0 +1,169 @@
+{
+  "id": "film-and-media-major-production-concentration",
+  "name": "Film and Media Major: Production Concentration",
+  "code": "CASMF.PROD.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 737,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13113",
+  "description": "The film and media major focuses on screen storytelling, providing students with opportunities to study digital media and how it communicates in film, television, and new media platforms, advertising, and other digital media arts. The film and media major provides an integrated liberal arts foundation emphasizing the intersections of faith, culture, and film and media as art, communication, an institution, and commercial product. Overlap Policy This program may not be combined with the applied film and media major, digital communication, film and media major: studies concentration, or film and media minor programs.",
+  "totalHours": "47",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 145",
+          "title": "Introduction to Film and Media",
+          "credits": "4",
+          "courseId": 18202,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53792"
+        },
+        {
+          "code": "COMM 190",
+          "title": "Media Production I",
+          "credits": "4",
+          "courseId": 18204,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53794"
+        },
+        {
+          "code": "COMM 248",
+          "title": "Screenwriting",
+          "credits": "4",
+          "courseId": 18210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53800"
+        },
+        {
+          "code": "COMM 249",
+          "title": "Audio Storytelling",
+          "credits": "2",
+          "courseId": 18211,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53801"
+        },
+        {
+          "code": "COMM 254",
+          "title": "Screen Storytelling: Theory and Criticism",
+          "credits": "2",
+          "courseId": 18213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53803"
+        },
+        {
+          "code": "COMM 290",
+          "title": "Media Production II",
+          "credits": "4",
+          "courseId": 18219,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53809"
+        },
+        {
+          "code": "COMM 346",
+          "title": "Internship in Communication",
+          "credits": "2",
+          "courseId": 18223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53813"
+        },
+        {
+          "code": "COMM 351",
+          "title": "Media Production III",
+          "credits": "4",
+          "courseId": 18224,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53814"
+        },
+        {
+          "code": "COMM 381",
+          "title": "Topics in Film and Media History",
+          "credits": "4",
+          "courseId": 18217,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53807"
+        },
+        {
+          "code": "COMM 399",
+          "title": "Advanced Communication Study",
+          "credits": "4",
+          "courseId": 18228,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53818"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 399",
+          "placement": "after",
+          "text": "3 hours from COMM 222, COMM 322, or COMM 358"
+        },
+        {
+          "course": "COMM 248",
+          "placement": "after",
+          "text": "OR COMM 255 - Documentary Film and Television"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 250",
+              "title": "Multi-Camera Production",
+              "credits": "4",
+              "courseId": 18212,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53802"
+            },
+            {
+              "code": "COMM 251",
+              "title": "Live and Studio Audio Production",
+              "credits": "2",
+              "courseId": 22620,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54917"
+            },
+            {
+              "code": "COMM 316",
+              "title": "Directing for the Screen",
+              "credits": "4",
+              "courseId": 18222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53812"
+            },
+            {
+              "code": "COMM 351",
+              "title": "Media Production III",
+              "credits": "4",
+              "courseId": 18224,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53814"
+            },
+            {
+              "code": "COMM 358",
+              "title": "Advanced Project in Media Production",
+              "credits": "2",
+              "courseId": 21516,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54560"
+            }
+          ],
+          "notes": [
+            {
+              "course": "COMM 358",
+              "placement": "after",
+              "text": "approved elective(s)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 47",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

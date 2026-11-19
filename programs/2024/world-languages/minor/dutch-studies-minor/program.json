@@ -1,0 +1,109 @@
+{
+  "id": "dutch-studies-minor",
+  "name": "Dutch Studies Minor",
+  "code": "NETH.MAJ",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13135",
+  "description": "Recognizing the richness of Dutch language, culture, and heritage, Calvin University has designed a Dutch Studies minor to fit well with many different majors at Calvin. In this program students learn how such a small country came to have such an over-sized impact on global trade, the arts, science, and democratic social norms. In addition to gaining some proficiency in the Dutch language and culture, students will gain insights from Dutch perspectives on religious freedom and tolerance that may surprise them. They explore how the Dutch became renown globally for their collective entrepreneurial spirit in the face of persistent environmental challenges from flood protection to urban design to food production, and how these are now inspiring circular economies and nature-based solutions in the Netherlands. Finally, students have an opportunity to experience all of this for themselves in a 3-week summer course in the Netherlands led by an interdisciplinary team of Calvin faculty. Students interested in this program need to contact the chair of the Department of World Languages.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "DUTC 101",
+          "title": "Elementary Dutch I",
+          "credits": "4",
+          "courseId": 18285,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53875"
+        },
+        {
+          "code": "DUTC 102",
+          "title": "Elementary Dutch II",
+          "credits": "4",
+          "courseId": 18286,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53876"
+        },
+        {
+          "code": "DUTC 201",
+          "title": "Intermediate Dutch I",
+          "credits": "4",
+          "courseId": 18287,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53877"
+        },
+        {
+          "code": "DUTC 202",
+          "title": "Intermediate Dutch II",
+          "credits": "2",
+          "courseId": 18288,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53878"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "(BIOL 354, HIST 153, and HNRS 280 qualify only when the topic focuses on Netherlandic studies. Permission of the program director is required.)",
+          "courses": [
+            {
+              "code": "BIOL 354",
+              "title": "Specific Advanced Topics",
+              "credits": "1-4",
+              "courseId": 17773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53762"
+            },
+            {
+              "code": "IDIS 372",
+              "title": "Dutch Sustainability: Is Orange the New Green?",
+              "credits": "2",
+              "courseId": 22733,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55006"
+            },
+            {
+              "code": "HIST 153",
+              "title": "Explorations in World History",
+              "credits": "2",
+              "courseId": 21052,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54495"
+            },
+            {
+              "code": "HNRS 280",
+              "title": "Honors Colloquium",
+              "credits": "1, 2, 4",
+              "courseId": 21525,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54569"
+            }
+          ],
+          "notes": [
+            {
+              "course": "IDIS 372",
+              "placement": "left",
+              "text": "BIOL 372 /"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

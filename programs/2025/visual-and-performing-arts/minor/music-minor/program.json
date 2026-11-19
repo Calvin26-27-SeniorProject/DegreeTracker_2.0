@@ -1,0 +1,175 @@
+{
+  "id": "music-minor",
+  "name": "Music Minor",
+  "code": "MUSC.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 377,
+    "name": "Visual and Performing Arts"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13734",
+  "description": null,
+  "totalHours": "22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MUSC 100",
+          "title": "Music Theory Fundamentals in Global Context",
+          "credits": "2",
+          "courseId": 8639,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56261"
+        },
+        {
+          "code": "MUSC 108",
+          "title": "Harmony and Voice Leading",
+          "credits": "4",
+          "courseId": 8643,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56265"
+        },
+        {
+          "code": "MUSC 111",
+          "title": "Keyboard Musicianship I",
+          "credits": "1",
+          "courseId": 9912,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56635"
+        },
+        {
+          "code": "MUSC 112",
+          "title": "Keyboard Musicianship II",
+          "credits": "1",
+          "courseId": 9913,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56636"
+        },
+        {
+          "code": "MUSC 260",
+          "title": "Private Lessons for Credit",
+          "credits": "1",
+          "courseId": 9907,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56630"
+        },
+        {
+          "code": "MUSC 301",
+          "title": "Western Music in Historical Context",
+          "credits": "4",
+          "courseId": 9916,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56639"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MUSC 301",
+          "placement": "after",
+          "text": "OR MUSC 302 - Music and Global Society"
+        },
+        {
+          "course": "MUSC 301",
+          "placement": "after",
+          "text": "an additional 4 hours of music lecture, studio, or ensemble courses (not including private lessons)"
+        },
+        {
+          "course": "MUSC 260",
+          "placement": "right",
+          "text": "(take 3 semesters)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Ensembles",
+          "description": "(Take 3 semesters from the courses below.)",
+          "courses": [
+            {
+              "code": "MUSC 117",
+              "title": "Jazz Band",
+              "credits": "1",
+              "courseId": 8644,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56266"
+            },
+            {
+              "code": "MUSC 118",
+              "title": "Collaborative Musicianship",
+              "credits": "1",
+              "courseId": 8645,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56267"
+            },
+            {
+              "code": "MUSC 131",
+              "title": "Campus Choir",
+              "credits": "1",
+              "courseId": 8646,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56268"
+            },
+            {
+              "code": "MUSC 141",
+              "title": "Capella",
+              "credits": "1",
+              "courseId": 8647,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56269"
+            },
+            {
+              "code": "MUSC 151",
+              "title": "Symphonic Band",
+              "credits": "1",
+              "courseId": 8648,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56270"
+            },
+            {
+              "code": "MUSC 161",
+              "title": "Wind Ensemble",
+              "credits": "1",
+              "courseId": 8649,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56271"
+            },
+            {
+              "code": "MUSC 171",
+              "title": "Orchestra",
+              "credits": "1",
+              "courseId": 8650,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56272"
+            },
+            {
+              "code": "MUSC 181",
+              "title": "Oratorio Chorus",
+              "credits": "1",
+              "courseId": 8651,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56273"
+            },
+            {
+              "code": "MUSC 182",
+              "title": "Gospel Choir",
+              "credits": "1",
+              "courseId": 8652,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56274"
+            },
+            {
+              "code": "MUSC 191",
+              "title": "Women's Chorale",
+              "credits": "1",
+              "courseId": 8653,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56275"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

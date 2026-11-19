@@ -1,0 +1,51 @@
+{
+  "id": "writing-minor",
+  "name": "Writing Minor",
+  "code": "WRTNG.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 360,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13677",
+  "description": "The English department offers coursework in linguistics, literature, and writing—the art, craft, and science of language. Students in the writing minor focus primarily on the craft of writing and the ways language is used effectively to communicate within the contexts of multiple purposes, audiences, and discourse communities.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 8213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56029"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 260",
+          "placement": "after",
+          "text": "an additional 16 hours of English writing courses (ENGL 240, 241, 340-344, 360-368), of which at least 8 hours must be at the 300 level"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

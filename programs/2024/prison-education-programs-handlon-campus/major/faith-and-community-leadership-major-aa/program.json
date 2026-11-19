@@ -1,0 +1,177 @@
+{
+  "id": "faith-and-community-leadership-major-aa",
+  "name": "Faith and Community Leadership Major, AA",
+  "code": "AA.ML.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Associate of Arts"
+  ],
+  "department": {
+    "id": 816,
+    "name": "Prison Education Programs (Handlon Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13210",
+  "description": "The courses in this major are taught only at the Handlon campus. This course of study equips graduates for leadership roles in their spheres of influence. Graduates will utilize the skills and knowledge to become peer mentors, lead faith formation activities, provide academic tutoring, promote just community development, and advance social service agency effectiveness.",
+  "totalHours": "60",
+  "requirements": [
+    {
+      "name": "Liberal Arts and Sciences Certificate",
+      "description": "(Complete the courses required for the Liberal Arts and Sciences certificate.)",
+      "courses": [
+        {
+          "code": "ASC 111",
+          "title": "Academic Transitions",
+          "credits": "2",
+          "courseId": 17709,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+        },
+        {
+          "code": "BIOL 123",
+          "title": "Living Systems",
+          "credits": "4",
+          "courseId": 17749,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53738"
+        },
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 17800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53789"
+        },
+        {
+          "code": "CORE 100",
+          "title": "Community and Commitments",
+          "credits": "2",
+          "courseId": 22262,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54749"
+        },
+        {
+          "code": "ENGL 100",
+          "title": "Enhanced Written Rhetoric I",
+          "credits": "2",
+          "courseId": 18728,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53916"
+        },
+        {
+          "code": "ENGL 102",
+          "title": "Enhanced Written Rhetoric II",
+          "credits": "4",
+          "courseId": 18730,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53918"
+        },
+        {
+          "code": "MATH 100",
+          "title": "Mathematics in the Contemporary World",
+          "credits": "4",
+          "courseId": 19807,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54133"
+        },
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 20189,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        }
+      ],
+      "notes": [
+        {
+          "course": "BIOL 123",
+          "placement": "after",
+          "text": "OR GEO 120 - Earth Systems"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Faith and Community Leadership Certificate",
+      "description": "(Complete the courses required for the Faith and Community Leadership certificate.)",
+      "courses": [
+        {
+          "code": "MIN 251",
+          "title": "Theological Reflections on Ministry Practices",
+          "credits": "2",
+          "courseId": 18255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53845"
+        },
+        {
+          "code": "HIST 255",
+          "title": "African-American History",
+          "credits": "4",
+          "courseId": 19264,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54053"
+        },
+        {
+          "code": "MGMT 342",
+          "title": "Servant Leadership and Transformation",
+          "credits": "4",
+          "courseId": 22625,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54922"
+        },
+        {
+          "code": "ML 101",
+          "title": "Old Testament Survey",
+          "credits": "4",
+          "courseId": 21485,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54529"
+        },
+        {
+          "code": "ML 102",
+          "title": "New Testament Survey",
+          "credits": "4",
+          "courseId": 21486,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54530"
+        },
+        {
+          "code": "REL 131",
+          "title": "Christian Theology",
+          "credits": "4",
+          "courseId": 20593,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54332"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        },
+        {
+          "code": "SOC 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 20637,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SOC 250",
+          "placement": "after",
+          "text": "OR SOWK 250 - Diversity and Inequality in the United States"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 60",
+      "description": "(includes required courses and electives)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

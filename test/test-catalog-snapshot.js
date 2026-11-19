@@ -26,7 +26,10 @@ describe('catalog snapshot', () => {
   }
 
   it('src/catalog-courses.js is the union of the committed catalogs', () => {
+    // Line endings aside: a Windows checkout (core.autocrlf) has CRLF where the
+    // repository and the generator have LF.
+    const lf = text => text.replace(/\r\n/g, '\n');
     const committed = readFileSync(join(ROOT, 'src', 'catalog-courses.js'), 'utf-8');
-    assert.equal(committed, buildUnion(catoids.map(readJson)));
+    assert.equal(lf(committed), lf(buildUnion(catoids.map(readJson))));
   });
 });

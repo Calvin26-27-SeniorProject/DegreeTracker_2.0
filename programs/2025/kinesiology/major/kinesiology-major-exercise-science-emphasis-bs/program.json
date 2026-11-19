@@ -1,0 +1,214 @@
+{
+  "id": "kinesiology-major-exercise-science-emphasis-bs",
+  "name": "Kinesiology Major: Exercise Science Emphasis, BS",
+  "code": "KIN.EXSC.MAJ.BS",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 363,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13750",
+  "description": "All kinesiology students in exercise science and pre-professional tracks must be certified in CPR prior to taking KIN 328.",
+  "totalHours": "74",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "HE 203",
+          "title": "Individual Emergency and Incident Response",
+          "credits": "2",
+          "courseId": 11734,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57085"
+        },
+        {
+          "code": "HE 254",
+          "title": "Nutrition",
+          "credits": "2",
+          "courseId": 8431,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56149"
+        },
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 8587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56206"
+        },
+        {
+          "code": "KIN 212",
+          "title": "Anatomical Kinesiology",
+          "credits": "4",
+          "courseId": 8589,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56208"
+        },
+        {
+          "code": "KIN 213",
+          "title": "Biomechanics and Motor Learning",
+          "credits": "4",
+          "courseId": 8590,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56209"
+        },
+        {
+          "code": "KIN 240",
+          "title": "Cardio-respiratory Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 8596,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56215"
+        },
+        {
+          "code": "KIN 241",
+          "title": "Muscular Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 8597,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56216"
+        },
+        {
+          "code": "KIN 325",
+          "title": "Physiology of Physical Activity",
+          "credits": "4",
+          "courseId": 8603,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56222"
+        },
+        {
+          "code": "KIN 328",
+          "title": "Clinical Physiology of Physical Activity",
+          "credits": "4",
+          "courseId": 8604,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56223"
+        },
+        {
+          "code": "KIN 332",
+          "title": "Philosophy of Physical Education and Sport",
+          "credits": "4",
+          "courseId": 8605,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56224"
+        },
+        {
+          "code": "KIN 346",
+          "title": "Field Internship",
+          "credits": "3",
+          "courseId": 8606,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56225"
+        },
+        {
+          "code": "PER 107",
+          "title": "Strength and Conditioning",
+          "credits": "1",
+          "courseId": 8674,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56296"
+        },
+        {
+          "code": "RECR 305",
+          "title": "Program Planning and Development",
+          "credits": "4",
+          "courseId": 9089,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56410"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 141",
+              "title": "Cell Biology and Genetics for the Health Sciences",
+              "credits": "3",
+              "courseId": 7834,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+            },
+            {
+              "code": "BIOL 205",
+              "title": "Human Anatomy",
+              "credits": "3",
+              "courseId": 7837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+            },
+            {
+              "code": "BIOL 206",
+              "title": "Human Physiology",
+              "credits": "3",
+              "courseId": 7838,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55853"
+            },
+            {
+              "code": "CHEM 160",
+              "title": "Chemistry for the Health Sciences",
+              "credits": "3",
+              "courseId": 7919,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55933"
+            },
+            {
+              "code": "COMM 101",
+              "title": "Oral Rhetoric",
+              "credits": "4",
+              "courseId": 7884,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55899"
+            },
+            {
+              "code": "PHYS 223",
+              "title": "Physics for the Health Sciences",
+              "credits": "3",
+              "courseId": 8816,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56338"
+            },
+            {
+              "code": "PSYC 151",
+              "title": "Introductory Psychology: Perspectives on the Self",
+              "credits": "4",
+              "courseId": 8860,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 8861,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+            },
+            {
+              "code": "SOC 151",
+              "title": "Sociological Principles and Perspectives",
+              "credits": "2",
+              "courseId": 9140,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 9415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+            }
+          ],
+          "notes": [
+            {
+              "course": "STAT 143",
+              "placement": "after",
+              "text": "OR STAT 145 - Biostatistics"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 74",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

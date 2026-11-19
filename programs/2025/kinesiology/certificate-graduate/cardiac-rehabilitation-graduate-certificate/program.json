@@ -1,0 +1,59 @@
+{
+  "id": "cardiac-rehabilitation-graduate-certificate",
+  "name": "Cardiac Rehabilitation, Graduate Certificate",
+  "code": "CERT_CARDIAC",
+  "type": "Certificate: Graduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 363,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13834",
+  "description": "The cardiac rehabilitation certificate is comprised of three graduate courses designed to provide the knowledge and understanding needed to pursue clinical hours in cardiac rehabilitation. Students will learn the guidelines for cardiac rehabilitation programs, obtain skills in ECG interpretation, and understand the exercise testing and prescription guidelines for clinical populations.",
+  "totalHours": "8",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 515",
+          "title": "Principles of Cardiac Rehabilitation",
+          "credits": "2",
+          "courseId": 10332,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56757"
+        },
+        {
+          "code": "KIN 545",
+          "title": "Clinical Exercise Physiology",
+          "credits": "4",
+          "courseId": 10342,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56767"
+        },
+        {
+          "code": "KIN 560",
+          "title": "Electrocardiography in Exercise Science",
+          "credits": "2",
+          "courseId": 10614,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56862"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 8",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

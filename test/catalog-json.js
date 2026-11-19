@@ -5,7 +5,7 @@
  */
 
 import { JSDOM } from 'jsdom';
-import { parseCoreProgram } from '../src/core.js';
+import { parseCoreProgram } from '../src/catalog-parse.js';
 
 // Update savedAt when re-saving a catalog page from the browser.
 export const CATALOG_INFO = {

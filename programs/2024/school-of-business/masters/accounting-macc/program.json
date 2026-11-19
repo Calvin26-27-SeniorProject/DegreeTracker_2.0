@@ -1,0 +1,114 @@
+{
+  "id": "accounting-macc",
+  "name": "Accounting, MAcc",
+  "code": "MACC.ACCT",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Accounting"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13191",
+  "description": "Program Director: A. Van Putten The master of accounting (MAcc) degree is designed to be completed in nine months or less, with flexible start dates of summer, fall, or spring. Students may also complete the program part-time. The program is well suited for students wanting to sharpen and broaden their knowledge of accounting topics and tools used in the accounting profession. It is also a good fit for those wanting to begin or advance their career in accounting in the public or private sector. Students may apply to the MAcc program following successful completion of ACCT 301 or its equivalent. A cumulative grade point of average of at least a 3.0 is required to be admitted into this program.",
+  "totalHours": "32",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 320",
+          "title": "Principles of Auditing",
+          "credits": "4",
+          "courseId": 22310,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54798"
+        },
+        {
+          "code": "ACCT 410",
+          "title": "Advanced Accounting",
+          "credits": "4",
+          "courseId": 21056,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54499"
+        },
+        {
+          "code": "ACCT 445",
+          "title": "Business Analytics",
+          "credits": "4",
+          "courseId": 21068,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54511"
+        },
+        {
+          "code": "ACCT 501",
+          "title": "Forensic Accounting and Fraud Examination",
+          "credits": "3",
+          "courseId": 21985,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54672"
+        },
+        {
+          "code": "ACCT 508",
+          "title": "Taxation",
+          "credits": "4",
+          "courseId": 21055,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54498"
+        },
+        {
+          "code": "ACCT 512",
+          "title": "Not-for-Profit Accounting",
+          "credits": "2",
+          "courseId": 21057,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54500"
+        },
+        {
+          "code": "ACCT 514",
+          "title": "Government Accounting and Reporting",
+          "credits": "2",
+          "courseId": 22730,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54984"
+        },
+        {
+          "code": "ACCT 521",
+          "title": "Advanced Auditing",
+          "credits": "3",
+          "courseId": 21067,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54510"
+        },
+        {
+          "code": "ACCT 562",
+          "title": "Ethics in Accounting",
+          "credits": "2",
+          "courseId": 21069,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54512"
+        },
+        {
+          "code": "INFO 301",
+          "title": "Business Enterprise Systems",
+          "credits": "4",
+          "courseId": 22634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54932"
+        }
+      ],
+      "notes": [
+        {
+          "course": "INFO 301",
+          "placement": "after",
+          "text": "OR completion of a concentration (or equivalent) in data analytics, information technology, or a related field"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 32",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

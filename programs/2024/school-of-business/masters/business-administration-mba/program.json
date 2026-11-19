@@ -1,0 +1,227 @@
+{
+  "id": "business-administration-mba",
+  "name": "Business Administration, MBA",
+  "code": "MBA.BUSAD",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Business Administration"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13248",
+  "description": "Program director: L. Van Drunen The Calvin MBA develops faithful leaders and innovators while also providing business essentials and allowing electives from many different disciplines. In most courses students learn experientially by engaging with real companies and professionals. The MBA program is mostly taught asynchronous and online, which allows students flexibility to pursue the MBA as their life allows. Learning in community is a hallmark of the Calvin MBA, which is supported with student cohorts, some synchronous sessions in each course, and two 1-week summer residencies on Calvin's campus. The MBA program comprises fifteen courses totaling 36 semester hours, which can be completed in as little as sixteen full-time months or in twenty-three part-time months. The heart of the MBA program is a set of leadership and innovation courses totaling 15 hours taken over thirteen months with a cohort of fellow MBA students. In addition to those courses, MBA students take up to 12 hours of business essentials courses. Some or all of the business essentials courses may be waived upon admission if a student has completed similar undergraduate courses with at least a B within the past five years. If more than two such courses are waived, additional electives must be taken so that MBA courses total at least 30 hours. Finally, students must take 7 to 9 hours of electives. Working with an advisor, students may optionally organize electives to focus in areas such as marketing, finance, and applied communication. Prior to taking any courses required for the Calvin MBA, students must be admitted to Calvin's MBA graduate program or another Calvin graduate program.",
+  "totalHours": "36",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "MGMT 531",
+          "title": "Marketing Concepts",
+          "credits": "3",
+          "courseId": 22017,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54704"
+        },
+        {
+          "code": "MGMT 533",
+          "title": "Accounting",
+          "credits": "3",
+          "courseId": 22018,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54705"
+        },
+        {
+          "code": "MGMT 535",
+          "title": "Operations and Supply Chain",
+          "credits": "3",
+          "courseId": 22019,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54706"
+        },
+        {
+          "code": "MGMT 537",
+          "title": "Corporate Finance",
+          "credits": "3",
+          "courseId": 22020,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54707"
+        },
+        {
+          "code": "MGMT 542",
+          "title": "Leadership: Service, Influence, and Transformation I",
+          "credits": "1.5",
+          "courseId": 22021,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54708"
+        },
+        {
+          "code": "MGMT 543",
+          "title": "Leadership: Service, Influence, and Transformation II",
+          "credits": "1.5",
+          "courseId": 22785,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55058"
+        },
+        {
+          "code": "MGMT 544",
+          "title": "Team and Organizational Leadership",
+          "credits": "3",
+          "courseId": 22022,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54709"
+        },
+        {
+          "code": "MGMT 548",
+          "title": "Ethical Leadership",
+          "credits": "2",
+          "courseId": 22024,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54711"
+        },
+        {
+          "code": "MGMT 552",
+          "title": "Innovation and Organizations I",
+          "credits": "1",
+          "courseId": 22786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55059"
+        },
+        {
+          "code": "MGMT 553",
+          "title": "Innovation and Organizations II",
+          "credits": "1",
+          "courseId": 22787,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55060"
+        },
+        {
+          "code": "MGMT 554",
+          "title": "Innovation Topics",
+          "credits": "1",
+          "courseId": 22788,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55061"
+        },
+        {
+          "code": "MGMT 555",
+          "title": "Innovation and Strategy",
+          "credits": "3",
+          "courseId": 22025,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54712"
+        }
+      ],
+      "notes": [
+        {
+          "course": "MGMT 554",
+          "placement": "right",
+          "text": "(taken twice)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 9 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "MKTG 601",
+              "title": "Marketing Strategy",
+              "credits": "3",
+              "courseId": 22789,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55062"
+            },
+            {
+              "code": "MKTG 602",
+              "title": "Digital Marketing",
+              "credits": "3",
+              "courseId": 22860,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55760"
+            },
+            {
+              "code": "MKTG 603",
+              "title": "Consumer Behavior",
+              "credits": "3",
+              "courseId": 22859,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55759"
+            },
+            {
+              "code": "FIN 601",
+              "title": "Operational Corporate Finance",
+              "credits": "3",
+              "courseId": 22790,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55063"
+            },
+            {
+              "code": "FIN 602",
+              "title": "Sources and Cost of Financial Capital",
+              "credits": "3",
+              "courseId": 22861,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55761"
+            },
+            {
+              "code": "FIN 603",
+              "title": "Strategic Corporate Finance",
+              "credits": "3",
+              "courseId": 22862,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55762"
+            },
+            {
+              "code": "NOPM 607",
+              "title": "Nonprofit Boards and Community Leadership",
+              "credits": "3",
+              "courseId": 22029,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54716"
+            },
+            {
+              "code": "NOPM 608",
+              "title": "Nonprofit Financial Management",
+              "credits": "3",
+              "courseId": 22031,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54718"
+            },
+            {
+              "code": "NOPM 609",
+              "title": "Designing an Effective Nonprofit Organization",
+              "credits": "3",
+              "courseId": 22030,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54717"
+            },
+            {
+              "code": "INFO 601",
+              "title": "Data Wrangling",
+              "credits": "3",
+              "courseId": 22026,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54713"
+            },
+            {
+              "code": "INFO 602",
+              "title": "Predictive Analytics",
+              "credits": "3",
+              "courseId": 22027,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54714"
+            },
+            {
+              "code": "INFO 603",
+              "title": "Data Visualization",
+              "credits": "3",
+              "courseId": 22028,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54715"
+            }
+          ],
+          "notes": [
+            {
+              "course": "INFO 603",
+              "placement": "after",
+              "text": "other approved graduate courses"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 36",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

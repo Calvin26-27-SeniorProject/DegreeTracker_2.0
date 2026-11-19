@@ -1,0 +1,87 @@
+{
+  "id": "geographic-information-science-ms",
+  "name": "Geographic Information Science, MS",
+  "code": "GIS.MS",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Science"
+  ],
+  "department": {
+    "id": 771,
+    "name": "Geology and Geography"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13231",
+  "description": "The master of science degree in geographic information science is designed to be completed in 3 to 5 semesters. The program is suited for students who wish to gain expertise in geographic information systems and science (GIS/GISc) for a wide range of professional applications. The program is a good fit for those who want to begin or advance their career in GIS in the public or private sector. Students may apply to the program having successfully completed a four-year degree at an accredited academic institution. A cumulative grade point average of at least 3.0 in the last two years of undergraduate education is required to be admitted to the program.",
+  "totalHours": "30",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "GEO 560",
+          "title": "Geographic Information Systems and Cartography",
+          "credits": "4",
+          "courseId": 21552,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54596"
+        },
+        {
+          "code": "GEO 561",
+          "title": "Advanced Geographic Information Systems",
+          "credits": "4",
+          "courseId": 21553,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54597"
+        },
+        {
+          "code": "GEO 562",
+          "title": "Remote Sensing of Earth",
+          "credits": "4",
+          "courseId": 21554,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54598"
+        },
+        {
+          "code": "GEO 563",
+          "title": "Spatial Demographics",
+          "credits": "4",
+          "courseId": 21555,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54599"
+        },
+        {
+          "code": "GEO 564",
+          "title": "Applied Spatial Statistics",
+          "credits": "4",
+          "courseId": 21556,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54600"
+        },
+        {
+          "code": "GEO 565",
+          "title": "Business Location Intelligence",
+          "credits": "5",
+          "courseId": 21557,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54601"
+        },
+        {
+          "code": "GEO 566",
+          "title": "Geospatial Programming and Data Management",
+          "credits": "5",
+          "courseId": 21558,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54602"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 30",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

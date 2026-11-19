@@ -1,0 +1,22 @@
+{
+  "id": "education-major-prekindergarten-twelfth-grade-pk-12",
+  "name": "Education Major: Prekindergarten-Twelfth Grade (PK-12)",
+  "code": null,
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13800",
+  "description": "Preschool-12 certification is available in art, French, health and physical education, music, Spanish, and teaching English to speakers of other languages (TESOL). Special education is offered as a K-12 major. One of the following BA programs must also be completed: Secondary Education Major, BA Elementary Education Major: Birth-Kindergarten (B-K) Elementary Education Major: Prekindergarten-Third Grade (PK-3) Elementary Education Major: Third-Sixth Grade (3-6) Music Education PK-12, BME Special Education K-12 Major: Cognitive Impairment, BA (certification in special education only) Options should be discussed with an education advisor.",
+  "totalHours": null,
+  "requirements": []
+}

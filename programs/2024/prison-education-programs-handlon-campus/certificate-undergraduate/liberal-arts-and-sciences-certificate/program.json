@@ -1,0 +1,107 @@
+{
+  "id": "liberal-arts-and-sciences-certificate",
+  "name": "Liberal Arts and Sciences, Certificate",
+  "code": "CERT_LIBART",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 816,
+    "name": "Prison Education Programs (Handlon Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13291",
+  "description": null,
+  "totalHours": "30",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ASC 111",
+          "title": "Academic Transitions",
+          "credits": "2",
+          "courseId": 17709,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+        },
+        {
+          "code": "BIOL 123",
+          "title": "Living Systems",
+          "credits": "4",
+          "courseId": 17749,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53738"
+        },
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 17800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53789"
+        },
+        {
+          "code": "CORE 100",
+          "title": "Community and Commitments",
+          "credits": "2",
+          "courseId": 22262,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54749"
+        },
+        {
+          "code": "ENGL 100",
+          "title": "Enhanced Written Rhetoric I",
+          "credits": "2",
+          "courseId": 18728,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53916"
+        },
+        {
+          "code": "ENGL 102",
+          "title": "Enhanced Written Rhetoric II",
+          "credits": "4",
+          "courseId": 18730,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53918"
+        },
+        {
+          "code": "MATH 100",
+          "title": "Mathematics in the Contemporary World",
+          "credits": "4",
+          "courseId": 19807,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54133"
+        },
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 20189,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54228"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        }
+      ],
+      "notes": [
+        {
+          "course": "BIOL 123",
+          "placement": "after",
+          "text": "OR GEO 120 - Earth Systems"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 30",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

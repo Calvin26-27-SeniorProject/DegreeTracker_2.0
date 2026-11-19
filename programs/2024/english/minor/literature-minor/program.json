@@ -1,0 +1,51 @@
+{
+  "id": "literature-minor",
+  "name": "Literature Minor",
+  "code": "LIT.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13161",
+  "description": "The English department offers coursework in linguistics, literature, and writing—the art, craft, and science of language. Students minoring in literature focus primarily on story, poetry, and/or drama—on the ways language shapes and reflects human experience.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 22000,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54687"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 290",
+          "placement": "after",
+          "text": "sixteen hours of English literature courses (ENGL 200-235, 300-335), of which at least eight hours must be 300 level"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

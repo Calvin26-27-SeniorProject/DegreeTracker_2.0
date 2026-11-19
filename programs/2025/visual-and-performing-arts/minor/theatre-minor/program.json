@@ -1,0 +1,165 @@
+{
+  "id": "theatre-minor",
+  "name": "Theatre Minor",
+  "code": "MIN_CASTH",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 377,
+    "name": "Visual and Performing Arts"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13822",
+  "description": "Thoughtfully designed to complement any major area of study, the theatre minor offers a blend of theatre foundation courses and tailored electives.",
+  "totalHours": "22",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "THTR 323",
+          "title": "Acting",
+          "credits": "4",
+          "courseId": 11729,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57080"
+        },
+        {
+          "code": "THTR 120",
+          "title": "Calvin Theatre Company",
+          "credits": "2",
+          "courseId": 7886,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55900"
+        },
+        {
+          "code": "THTR 203",
+          "title": "Introduction to Performance Studies",
+          "credits": "4",
+          "courseId": 7893,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55907"
+        }
+      ],
+      "notes": [
+        {
+          "course": "THTR 120",
+          "placement": "right",
+          "text": "(take twice)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ARTH 330",
+              "title": "Art and Fashion",
+              "credits": "4",
+              "courseId": 10588,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56835"
+            },
+            {
+              "code": "COMM 145",
+              "title": "Introduction to Film and Media",
+              "credits": "4",
+              "courseId": 7888,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55902"
+            },
+            {
+              "code": "COMM 180",
+              "title": "Communicating with Digital Media",
+              "credits": "2",
+              "courseId": 7889,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55903"
+            },
+            {
+              "code": "COMM 248",
+              "title": "Screenwriting",
+              "credits": "4",
+              "courseId": 7896,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55910"
+            },
+            {
+              "code": "COMM 249",
+              "title": "Audio Storytelling",
+              "credits": "2",
+              "courseId": 7897,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55911"
+            },
+            {
+              "code": "COMM 251",
+              "title": "Live and Studio Audio Production",
+              "credits": "2",
+              "courseId": 11222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56973"
+            },
+            {
+              "code": "COMM 254",
+              "title": "Screen Storytelling: Theory and Criticism",
+              "credits": "2",
+              "courseId": 7899,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55913"
+            },
+            {
+              "code": "COMM 316",
+              "title": "Directing for the Screen",
+              "credits": "4",
+              "courseId": 7908,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55922"
+            },
+            {
+              "code": "COMM 381",
+              "title": "Topics in Film and Media History",
+              "credits": "4",
+              "courseId": 7903,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55917"
+            },
+            {
+              "code": "ENGL 230",
+              "title": "Introduction to Genre",
+              "credits": "4",
+              "courseId": 10319,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56744"
+            },
+            {
+              "code": "ENGL 330",
+              "title": "Advanced Studies in Genre",
+              "credits": "4",
+              "courseId": 10325,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56750"
+            },
+            {
+              "code": "ENGL 335",
+              "title": "Advanced Studies in a Major Author",
+              "credits": "4",
+              "courseId": 10326,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56751"
+            },
+            {
+              "code": "THTR 390",
+              "title": "Independent Study",
+              "credits": "1-4",
+              "courseId": 12124,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57174"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

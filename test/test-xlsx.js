@@ -10,7 +10,8 @@ import fs from 'node:fs';
 import { zipSync, strToU8 } from 'fflate';
 import { JSDOM } from 'jsdom';
 import { readXlsxRows } from '../src/xlsx.js';
-import { parseProgressRows, workdayRequirementCategory, hasCoreRequirements } from '../src/core.js';
+import { parseProgressRows } from '../src/parse.js';
+import { workdayRequirementCategory, hasCoreRequirements } from '../src/core.js';
 import { analyze } from './recorder.js';
 import { KNOWN_COURSE_CATEGORIES } from '../src/catalog-courses.js';
 import { loadCategories, getResult } from './helpers.js';
@@ -123,6 +124,21 @@ describe('parseProgressRows', () => {
       [['PHYS 221', 'transfer', 4, 'CR'], ['HIST CORE', 'completed', 1.5, 'B+']]);
     assert.ok(courses[1].isPlaceholder);
     assert.deepEqual([...overrides], ['Knowledge and Understanding - minimum 26 hours']);
+  });
+
+  it('keeps every semester a repeated course was taken in, apart from the one course entry', () => {
+    const rows = [
+      HEADER,
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar', '2025 Fall', '0', 'CR'],
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar', '2026 Spring', '0', 'CR'],
+      ['CS 195 (3 semesters)', 'In Progress', '', 'CS 195 - Introductory Computing Seminar (In Progress)', '2026 Fall', '0', ''],
+      ['CS 212', 'Satisfied', '', 'CS 212 - Data Structures and Algorithms', '2026 Fall', '4', 'A'],
+    ];
+    const { courses, courseAttempts } = parseProgressRows(rows);
+    assert.equal(courses.filter(c => c.code === 'CS 195').length, 1);
+    assert.deepEqual(courseAttempts.filter(c => c.code === 'CS 195').map(c => [c.period, c.status]),
+      [['2025 Fall', 'completed'], ['2026 Spring', 'completed'], ['2026 Fall', 'in-progress']]);
+    assert.equal(courseAttempts.length, 4);
   });
 
   it('ignores rows outside requirement tables', () => {

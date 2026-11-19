@@ -1,4 +1,5 @@
-import { slugify, KU_NAMES } from './core.js';
+import { slugify } from './catalog-parse.js';
+import { KU_NAMES } from './core.js';
 import { bugReport } from './app-render.js';
 import { annotatorStyles, tocStyles } from './render-styles.js';
 

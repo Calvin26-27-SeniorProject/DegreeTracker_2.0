@@ -1,0 +1,77 @@
+{
+  "id": "journalism-minor",
+  "name": "Journalism Minor",
+  "code": "JOUR.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 765,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13166",
+  "description": null,
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 330",
+          "title": "Media and Society",
+          "credits": "4",
+          "courseId": 18209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53799"
+        },
+        {
+          "code": "ENGL 240",
+          "title": "Introduction to Journalism",
+          "credits": "4",
+          "courseId": 18734,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53922"
+        },
+        {
+          "code": "ENGL 341",
+          "title": "Feature Journalism",
+          "credits": "4",
+          "courseId": 18735,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53923"
+        },
+        {
+          "code": "ENGL 380",
+          "title": "Internship",
+          "credits": "4",
+          "courseId": 18746,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53934"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "OR COMM 346 - Internship in Communication"
+        },
+        {
+          "course": "ENGL 380",
+          "placement": "after",
+          "text": "advisor-approved electives to reach 20 hours, chosen in consultation with the program advisor (e.g., ENGL 344 - Special Topics in Advanced Professional Writing )"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

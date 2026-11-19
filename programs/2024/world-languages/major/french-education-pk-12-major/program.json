@@ -1,0 +1,87 @@
+{
+  "id": "french-education-pk-12-major",
+  "name": "French Education PK-12 Major",
+  "code": "MAJ_FREN_PK12",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 825,
+    "name": "World Languages"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13283",
+  "description": "Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "34",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "FREN 301",
+          "title": "Advanced French I: Sustainability in France",
+          "credits": "4",
+          "courseId": 18799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53987"
+        },
+        {
+          "code": "FREN 302",
+          "title": "Advanced French II: Discovering the Arts",
+          "credits": "4",
+          "courseId": 18800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53988"
+        },
+        {
+          "code": "FREN 351",
+          "title": "French Culture I",
+          "credits": "4",
+          "courseId": 18801,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53989"
+        },
+        {
+          "code": "IDIS 356",
+          "title": "Elementary World Languages Pedagogy",
+          "credits": "2",
+          "courseId": 19774,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54092"
+        },
+        {
+          "code": "IDIS 357",
+          "title": "Secondary World Languages Pedagogy",
+          "credits": "4",
+          "courseId": 19775,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54093"
+        }
+      ],
+      "notes": [
+        {
+          "course": "FREN 351",
+          "placement": "after",
+          "text": "OR FREN 352 - French Culture II"
+        }
+      ],
+      "children": [
+        {
+          "name": "Semester in France",
+          "description": "STFR 315 - Advanced Language Study in France I STFR 316 - Advanced Language Study in France II STFR 330 - Contemporary France STFR 381 - Special Topics",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 34",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

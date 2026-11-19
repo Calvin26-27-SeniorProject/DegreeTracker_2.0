@@ -173,6 +173,20 @@ describe('app summary', () => {
   });
 });
 
+describe('joiners between courses', () => {
+  it('shows “Or” but no “And”: courses taken together sit side by side', () => {
+    const catalog = structuredClone(CATALOGS.find(c => c._meta.catoid === '25'));
+    const fw = catalog.categories.find(c => c.name === 'Foundational Writing');
+    const engl102 = fw.courses.find(c => c.code === 'ENGL 102');
+    engl102.connectorBefore = 'And';
+    const card = render(catalog, null).querySelector('#' + fw.slug);
+    const items = [...card.querySelectorAll('.course-list > li')].map(li => li.dataset.kind === 'connector' ? li.textContent : li.dataset.code || li.querySelector('.course-code')?.textContent);
+    assert.ok(items.includes('Or'));
+    assert.ok(!items.includes('And'));
+    assert.equal(items.filter(i => i !== 'Or').length, fw.courses.length);
+  });
+});
+
 describe('app page', () => {
   const html = readFileSync(join(ROOT, 'docs', 'index.html'), 'utf-8');
 

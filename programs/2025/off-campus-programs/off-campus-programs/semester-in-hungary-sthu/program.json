@@ -1,0 +1,87 @@
+{
+  "id": "semester-in-hungary-sthu",
+  "name": "Semester in Hungary (STHU)",
+  "code": "STHU",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 346,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13639",
+  "description": "The Semester in Hungary takes place in Budapest, Hungary, every fall semester. Students live in the dorms of Karoli Gaspar Reformed University and take up to two direct-enrolled classes in English at either Karoli Gaspar University or Corvinus University. In addition, students take several classes from the Calvin director as well as Hungarian instructors hired directly by Calvin University. The academic components of the program include the following:",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "STHU 100",
+          "title": "Introduction to the Hungarian Language",
+          "credits": "1",
+          "courseId": 9428,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56549"
+        },
+        {
+          "code": "STHU 210",
+          "title": "Studies in Central European Culture",
+          "credits": "4",
+          "courseId": 9429,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56550"
+        },
+        {
+          "code": "STHU 250",
+          "title": "Disciplinary course offered by the program director",
+          "credits": "4",
+          "courseId": 9432,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56553"
+        },
+        {
+          "code": "STHU 310",
+          "title": "Hungary Semester Practicum",
+          "credits": "1-4",
+          "courseId": 9431,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56552"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STHU 310",
+          "placement": "after",
+          "text": "one direct-enroll course at Karoli Gaspar University (3 semester hours)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Students Can Take One Additional Class from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "STHU 235",
+              "title": "Italian Renaissance Art",
+              "credits": "4",
+              "courseId": 9430,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56551"
+            }
+          ],
+          "notes": [
+            {
+              "course": "STHU 235",
+              "placement": "after",
+              "text": "a second class from Karoli Gaspar University or a class at Corvinus University (3 semester hours)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

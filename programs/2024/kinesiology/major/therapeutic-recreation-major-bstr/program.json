@@ -1,0 +1,168 @@
+{
+  "id": "therapeutic-recreation-major-bstr",
+  "name": "Therapeutic Recreation Major, BSTR",
+  "code": "RECR.THRPY.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Batchelor of Science in Therapeutic Recreation"
+  ],
+  "department": {
+    "id": 773,
+    "name": "Kinesiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13157",
+  "description": null,
+  "totalHours": "49",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 19778,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54104"
+        },
+        {
+          "code": "RECR 205",
+          "title": "Therapeutic Recreation and Diagnostic Groups",
+          "credits": "4",
+          "courseId": 20581,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54320"
+        },
+        {
+          "code": "RECR 310",
+          "title": "Theory and Philosophy of Therapeutic Recreation",
+          "credits": "4",
+          "courseId": 20583,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54322"
+        },
+        {
+          "code": "RECR 314",
+          "title": "Programming Principles of Therapeutic Recreation",
+          "credits": "4",
+          "courseId": 20585,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54324"
+        },
+        {
+          "code": "RECR 324",
+          "title": "Therapeutic Recreation Clinical Practice",
+          "credits": "4",
+          "courseId": 20586,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54325"
+        },
+        {
+          "code": "RECR 326",
+          "title": "Intervention Techniques in Therapeutic Recreation",
+          "credits": "4",
+          "courseId": 20587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54326"
+        },
+        {
+          "code": "RECR 345",
+          "title": "Field Seminar in Therapeutic Recreation",
+          "credits": "4",
+          "courseId": 20588,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54327"
+        },
+        {
+          "code": "RECR 346",
+          "title": "Field Internship in Recreation/Therapeutic Recreation",
+          "credits": "2, 12",
+          "courseId": 20589,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54328"
+        },
+        {
+          "code": "RECR 380",
+          "title": "Individual Competencies",
+          "credits": "1",
+          "courseId": 20590,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54329"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": "(16 semester hours)",
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 17748,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53737"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 20255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+            },
+            {
+              "code": "PSYC 212",
+              "title": "Psychopathology",
+              "credits": "4",
+              "courseId": 20256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+            },
+            {
+              "code": "SOWK 370",
+              "title": "The Helping Interview",
+              "credits": "4",
+              "courseId": 20657,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54396"
+            }
+          ],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "STAT 143",
+                  "title": "Introduction to Probability and Statistics",
+                  "credits": "4",
+                  "courseId": 21008,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+                },
+                {
+                  "code": "PSYC 255",
+                  "title": "Statistics and Research Design",
+                  "credits": "4",
+                  "courseId": 20259,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+                },
+                {
+                  "code": "SOC 255",
+                  "title": "Social Science Statistics",
+                  "credits": "4",
+                  "courseId": 20639,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 49",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

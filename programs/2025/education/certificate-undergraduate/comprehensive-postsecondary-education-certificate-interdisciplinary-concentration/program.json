@@ -1,0 +1,1463 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-interdisciplinary-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Interdisciplinary Concentration",
+  "code": "CERT.IDIS",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13771",
+  "description": "Students pursuing an interdisciplinary concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Take 24 hours from the courses below. Courses must be taken from at least four different departments.)",
+      "courses": [
+        {
+          "code": "ART 153",
+          "title": "Visual Culture",
+          "credits": "2",
+          "courseId": 7794,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55809"
+        },
+        {
+          "code": "ARTH 121",
+          "title": "Late Medieval Art, 1250-1400",
+          "credits": "2",
+          "courseId": 10583,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56830"
+        },
+        {
+          "code": "ARTH 131",
+          "title": "Renaissance and Baroque Europe, 1400-1700",
+          "credits": "2",
+          "courseId": 10584,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56831"
+        },
+        {
+          "code": "ARTH 141",
+          "title": "Modern Art, 1900-1960",
+          "credits": "2",
+          "courseId": 10585,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56832"
+        },
+        {
+          "code": "ARTH 221",
+          "title": "History of Design",
+          "credits": "2",
+          "courseId": 10587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56834"
+        },
+        {
+          "code": "ARTS 250",
+          "title": "Introduction to Drawing",
+          "credits": "4",
+          "courseId": 7799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55814"
+        },
+        {
+          "code": "ARTS 251",
+          "title": "Introduction to Painting",
+          "credits": "4",
+          "courseId": 7800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55815"
+        },
+        {
+          "code": "ARTS 254",
+          "title": "Introduction to Graphic Design",
+          "credits": "4",
+          "courseId": 9964,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56688"
+        },
+        {
+          "code": "ARTS 255",
+          "title": "Graphic Design 1: Process",
+          "credits": "4",
+          "courseId": 7802,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55817"
+        },
+        {
+          "code": "ARTS 256",
+          "title": "Introduction to Photography",
+          "credits": "4",
+          "courseId": 7803,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55818"
+        },
+        {
+          "code": "ARTS 257",
+          "title": "Introduction to Sculpture",
+          "credits": "4",
+          "courseId": 7804,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55819"
+        },
+        {
+          "code": "ARTS 258",
+          "title": "Introduction to Ceramics",
+          "credits": "4",
+          "courseId": 7805,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55820"
+        },
+        {
+          "code": "ARTS 300",
+          "title": "Intermediate Drawing",
+          "credits": "4",
+          "courseId": 7806,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55821"
+        },
+        {
+          "code": "ARTS 301",
+          "title": "Intermediate Painting",
+          "credits": "4",
+          "courseId": 7807,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55822"
+        },
+        {
+          "code": "ARTS 305",
+          "title": "Graphic Design 2: Structures",
+          "credits": "4",
+          "courseId": 7808,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55823"
+        },
+        {
+          "code": "ARTS 306",
+          "title": "Analogue Photography",
+          "credits": "4",
+          "courseId": 7809,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55824"
+        },
+        {
+          "code": "ARTS 307",
+          "title": "Intermediate Sculpture",
+          "credits": "4",
+          "courseId": 7810,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55825"
+        },
+        {
+          "code": "ARTS 308",
+          "title": "Intermediate Ceramics",
+          "credits": "4",
+          "courseId": 7811,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55826"
+        },
+        {
+          "code": "ARTS 316",
+          "title": "Digital Photography",
+          "credits": "4",
+          "courseId": 7812,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55827"
+        },
+        {
+          "code": "ARTS 350",
+          "title": "Advanced Drawing",
+          "credits": "4",
+          "courseId": 7813,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55828"
+        },
+        {
+          "code": "ARTS 351",
+          "title": "Advanced Painting",
+          "credits": "4",
+          "courseId": 7814,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55829"
+        },
+        {
+          "code": "ARTS 355",
+          "title": "Graphic Design 3: Systems",
+          "credits": "4",
+          "courseId": 7815,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55830"
+        },
+        {
+          "code": "ARTS 356",
+          "title": "Advanced Photography",
+          "credits": "4",
+          "courseId": 7816,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55831"
+        },
+        {
+          "code": "ARTS 357",
+          "title": "Advanced Sculpture",
+          "credits": "4",
+          "courseId": 7817,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55832"
+        },
+        {
+          "code": "ARTS 358",
+          "title": "Advanced Ceramics",
+          "credits": "4",
+          "courseId": 7818,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55833"
+        },
+        {
+          "code": "ASC 110",
+          "title": "Learning Practices: Special Topics",
+          "credits": "1",
+          "courseId": 9890,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56612"
+        },
+        {
+          "code": "ASC 111",
+          "title": "Academic Transitions",
+          "credits": "2",
+          "courseId": 7793,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55808"
+        },
+        {
+          "code": "ASC 112",
+          "title": "Strategies for Academic Success",
+          "credits": "4",
+          "courseId": 12125,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57175"
+        },
+        {
+          "code": "ASTR 110",
+          "title": "Planets, Stars, and Galaxies",
+          "credits": "4",
+          "courseId": 7824,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55839"
+        },
+        {
+          "code": "ASTR 111",
+          "title": "The Solar System",
+          "credits": "3",
+          "courseId": 7825,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55840"
+        },
+        {
+          "code": "ASTR 112",
+          "title": "Stars, Galaxies, and the Universe",
+          "credits": "3",
+          "courseId": 7826,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55841"
+        },
+        {
+          "code": "BIOL 115",
+          "title": "Essentials of Human Anatomy and Physiology",
+          "credits": "4",
+          "courseId": 7832,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+        },
+        {
+          "code": "BIOL 123",
+          "title": "Living Systems",
+          "credits": "4",
+          "courseId": 7833,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55848"
+        },
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 7835,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55850"
+        },
+        {
+          "code": "BIOL 313",
+          "title": "Paleontology",
+          "credits": "3",
+          "courseId": 7843,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55858"
+        },
+        {
+          "code": "BIOL 332",
+          "title": "Plant Physiology",
+          "credits": "3",
+          "courseId": 7848,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55863"
+        },
+        {
+          "code": "BIOL 338",
+          "title": "Animal Behavior",
+          "credits": "3",
+          "courseId": 7852,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55867"
+        },
+        {
+          "code": "BIOL 344",
+          "title": "Wildlife Biology and Conservation",
+          "credits": "3",
+          "courseId": 7854,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55869"
+        },
+        {
+          "code": "BIOL 345",
+          "title": "Ecosystem Ecology and Management",
+          "credits": "3",
+          "courseId": 7855,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55870"
+        },
+        {
+          "code": "BIOL 346",
+          "title": "Plant Taxonomy",
+          "credits": "3",
+          "courseId": 7856,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55871"
+        },
+        {
+          "code": "BIOL 364",
+          "title": "Global Health, Environment, and Sustainability",
+          "credits": "4",
+          "courseId": 7858,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55873"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "CHEM 100",
+          "title": "The Molecular World",
+          "credits": "4",
+          "courseId": 7915,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55929"
+        },
+        {
+          "code": "MIN 251",
+          "title": "Theological Reflections on Ministry Practices",
+          "credits": "2",
+          "courseId": 7941,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55955"
+        },
+        {
+          "code": "MIN 252",
+          "title": "Introduction to Missions",
+          "credits": "2",
+          "courseId": 9119,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56440"
+        },
+        {
+          "code": "MIN 374",
+          "title": "Youth and Family Ministry",
+          "credits": "2",
+          "courseId": 7942,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55956"
+        },
+        {
+          "code": "MIN 375",
+          "title": "Ministry, Leadership, and Community Development",
+          "credits": "2",
+          "courseId": 7943,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55957"
+        },
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7884,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55899"
+        },
+        {
+          "code": "COMM 141",
+          "title": "Visual Rhetoric",
+          "credits": "2",
+          "courseId": 7887,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55901"
+        },
+        {
+          "code": "COMM 145",
+          "title": "Introduction to Film and Media",
+          "credits": "4",
+          "courseId": 7888,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55902"
+        },
+        {
+          "code": "COMM 180",
+          "title": "Communicating with Digital Media",
+          "credits": "2",
+          "courseId": 7889,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55903"
+        },
+        {
+          "code": "COMM 190",
+          "title": "Media Production I",
+          "credits": "4",
+          "courseId": 7890,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+        },
+        {
+          "code": "COMM 200",
+          "title": "Advanced Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7891,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55905"
+        },
+        {
+          "code": "COMM 201",
+          "title": "New Media",
+          "credits": "4",
+          "courseId": 7892,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+        },
+        {
+          "code": "COMM 222",
+          "title": "Calvin Media Company",
+          "credits": "1",
+          "courseId": 7894,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55908"
+        },
+        {
+          "code": "COMM 248",
+          "title": "Screenwriting",
+          "credits": "4",
+          "courseId": 7896,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55910"
+        },
+        {
+          "code": "COMM 254",
+          "title": "Screen Storytelling: Theory and Criticism",
+          "credits": "2",
+          "courseId": 7899,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55913"
+        },
+        {
+          "code": "COMM 255",
+          "title": "Documentary Film and Television",
+          "credits": "4",
+          "courseId": 7900,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55914"
+        },
+        {
+          "code": "COMM 263",
+          "title": "Communication and Conflict Resolution",
+          "credits": "2",
+          "courseId": 7901,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55915"
+        },
+        {
+          "code": "COMM 265",
+          "title": "Leadership Communication for Organizations",
+          "credits": "2",
+          "courseId": 7902,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55916"
+        },
+        {
+          "code": "COMM 290",
+          "title": "Media Production II",
+          "credits": "4",
+          "courseId": 7905,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55919"
+        },
+        {
+          "code": "COMM 305",
+          "title": "Persuasion and Propaganda",
+          "credits": "4",
+          "courseId": 7906,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55920"
+        },
+        {
+          "code": "COMM 311",
+          "title": "Argumentation and Advocacy",
+          "credits": "4",
+          "courseId": 7907,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+        },
+        {
+          "code": "COMM 330",
+          "title": "Media and Society",
+          "credits": "4",
+          "courseId": 7895,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55909"
+        },
+        {
+          "code": "CS 100",
+          "title": "Creating Interactive Web Media",
+          "credits": "4",
+          "courseId": 7947,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55961"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 232",
+          "title": "Environmental Economics",
+          "credits": "2",
+          "courseId": 7980,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55995"
+        },
+        {
+          "code": "ECON 233",
+          "title": "Economics of Energy and Sustainability",
+          "credits": "4",
+          "courseId": 9485,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56606"
+        },
+        {
+          "code": "ECON 241",
+          "title": "Health Economics and Health Policy",
+          "credits": "2",
+          "courseId": 7982,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55997"
+        },
+        {
+          "code": "EDUC 103",
+          "title": "Introduction to Education",
+          "credits": "2",
+          "courseId": 8193,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56009"
+        },
+        {
+          "code": "EDUC 210",
+          "title": "Music and Art in the Elementary Classroom",
+          "credits": "2",
+          "courseId": 8194,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56010"
+        },
+        {
+          "code": "EDUC 236",
+          "title": "Foundations of Early Childhood Education",
+          "credits": "4",
+          "courseId": 8195,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56011"
+        },
+        {
+          "code": "EDUC 238",
+          "title": "Developmentally Appropriate Practice with Young Children",
+          "credits": "2",
+          "courseId": 8196,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56012"
+        },
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 11208,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56959"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        },
+        {
+          "code": "EDUC 243",
+          "title": "Teaching and Learning Lab",
+          "credits": "2",
+          "courseId": 11209,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56960"
+        },
+        {
+          "code": "EDUC 249",
+          "title": "The Christian Teacher",
+          "credits": "2",
+          "courseId": 11218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56969"
+        },
+        {
+          "code": "EDUC 330",
+          "title": "Curriculum and Instruction: Cognitive Impairment",
+          "credits": "4",
+          "courseId": 8202,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56018"
+        },
+        {
+          "code": "EDUC 331",
+          "title": "Introduction to Cognitive Impairment: Birth through School Age",
+          "credits": "2",
+          "courseId": 11213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56964"
+        },
+        {
+          "code": "EDUC 332",
+          "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+          "credits": "2",
+          "courseId": 11214,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56965"
+        },
+        {
+          "code": "EDUC 339",
+          "title": "Family Engagement, Relationships, and Collaboration",
+          "credits": "4",
+          "courseId": 8204,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56020"
+        },
+        {
+          "code": "ENGL 100",
+          "title": "Enhanced Written Rhetoric I",
+          "credits": "2",
+          "courseId": 8210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56026"
+        },
+        {
+          "code": "ENGL 101",
+          "title": "Written Rhetoric",
+          "credits": "4",
+          "courseId": 8211,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56027"
+        },
+        {
+          "code": "ENGL 200",
+          "title": "Introduction to Global Literature",
+          "credits": "4",
+          "courseId": 10314,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56739"
+        },
+        {
+          "code": "ENGL 220",
+          "title": "Introduction to American Literature",
+          "credits": "4",
+          "courseId": 10318,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56743"
+        },
+        {
+          "code": "ENGL 241",
+          "title": "Business Writing",
+          "credits": "4",
+          "courseId": 8215,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56031"
+        },
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 8213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56029"
+        },
+        {
+          "code": "ENGL 352",
+          "title": "The Teaching of Adolescent Literature",
+          "credits": "4",
+          "courseId": 10324,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56749"
+        },
+        {
+          "code": "ENGL 360",
+          "title": "Creative Writing: Nonfiction",
+          "credits": "4",
+          "courseId": 8220,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56036"
+        },
+        {
+          "code": "IDIS 184",
+          "title": "Introduction to Sustainability Challenges",
+          "credits": "2",
+          "courseId": 8233,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56049"
+        },
+        {
+          "code": "GEO 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 8273,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56089"
+        },
+        {
+          "code": "GEO 302",
+          "title": "Environmental Law",
+          "credits": "2",
+          "courseId": 8274,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56090"
+        },
+        {
+          "code": "FIN 201",
+          "title": "Personal Finance",
+          "credits": "4",
+          "courseId": 10309,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56734"
+        },
+        {
+          "code": "GEO 101",
+          "title": "People, Place, and Community",
+          "credits": "4",
+          "courseId": 8394,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56111"
+        },
+        {
+          "code": "GEO 110",
+          "title": "World Regional Geography",
+          "credits": "4",
+          "courseId": 8390,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56107"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 8391,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56108"
+        },
+        {
+          "code": "GEO 151",
+          "title": "Introduction to Geology",
+          "credits": "3",
+          "courseId": 8410,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56128"
+        },
+        {
+          "code": "GEO 152",
+          "title": "Earth History",
+          "credits": "3",
+          "courseId": 8411,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56129"
+        },
+        {
+          "code": "GEO 215",
+          "title": "Mineralogy",
+          "credits": "3",
+          "courseId": 8414,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56132"
+        },
+        {
+          "code": "GEO 250",
+          "title": "Meteorology",
+          "credits": "3",
+          "courseId": 8396,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56114"
+        },
+        {
+          "code": "GEO 251",
+          "title": "Oceanography",
+          "credits": "3",
+          "courseId": 8415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56133"
+        },
+        {
+          "code": "GEO 313",
+          "title": "Paleontology",
+          "credits": "3",
+          "courseId": 8418,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56136"
+        },
+        {
+          "code": "GEO 341",
+          "title": "Geology Field Methods",
+          "credits": "1, 2, or 4",
+          "courseId": 8422,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56140"
+        },
+        {
+          "code": "GEO 385",
+          "title": "Internship in Geology, Geography, and Environment",
+          "credits": "1, 2, 4",
+          "courseId": 8407,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56125"
+        },
+        {
+          "code": "HE 254",
+          "title": "Nutrition",
+          "credits": "2",
+          "courseId": 8431,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56149"
+        },
+        {
+          "code": "HE 266",
+          "title": "Basic Health Concepts",
+          "credits": "4",
+          "courseId": 8432,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56151"
+        },
+        {
+          "code": "HIST 153",
+          "title": "Explorations in World History",
+          "credits": "2",
+          "courseId": 9459,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56580"
+        },
+        {
+          "code": "HIST 229",
+          "title": "Seminar in United States History",
+          "credits": "4",
+          "courseId": 8437,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56156"
+        },
+        {
+          "code": "HIST 242",
+          "title": "Africa and the World",
+          "credits": "4",
+          "courseId": 8439,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56158"
+        },
+        {
+          "code": "HIST 251",
+          "title": "Early America",
+          "credits": "4",
+          "courseId": 8441,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56160"
+        },
+        {
+          "code": "HIST 252",
+          "title": "America from Republic to Empire",
+          "credits": "4",
+          "courseId": 8442,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56161"
+        },
+        {
+          "code": "HIST 253",
+          "title": "Recent America",
+          "credits": "4",
+          "courseId": 8443,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56162"
+        },
+        {
+          "code": "HIST 255",
+          "title": "African-American History",
+          "credits": "4",
+          "courseId": 8444,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56163"
+        },
+        {
+          "code": "HIST 256",
+          "title": "Women and Gender in US History",
+          "credits": "4",
+          "courseId": 9889,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56611"
+        },
+        {
+          "code": "HIST 259",
+          "title": "American Economic and Business History",
+          "credits": "4",
+          "courseId": 8446,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56165"
+        },
+        {
+          "code": "HIST 274",
+          "title": "Environmental History",
+          "credits": "4",
+          "courseId": 8453,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56172"
+        },
+        {
+          "code": "HIST 356",
+          "title": "American Social and Cultural History",
+          "credits": "4",
+          "courseId": 8459,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56178"
+        },
+        {
+          "code": "IDIS 106",
+          "title": "Introduction to Health Professions",
+          "credits": "1",
+          "courseId": 8469,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56188"
+        },
+        {
+          "code": "IDIS 192",
+          "title": "Crossing Cultures",
+          "credits": "1",
+          "courseId": 8471,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56190"
+        },
+        {
+          "code": "IDIS 196",
+          "title": "Transcultural Caring for the Health Professional",
+          "credits": "2",
+          "courseId": 8472,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56191"
+        },
+        {
+          "code": "IDIS 212",
+          "title": "Global Health",
+          "credits": "4",
+          "courseId": 8475,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56194"
+        },
+        {
+          "code": "IDIS 240",
+          "title": "Introduction to Archaeology",
+          "credits": "4",
+          "courseId": 8476,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56195"
+        },
+        {
+          "code": "IDIS 310",
+          "title": "Science in Society",
+          "credits": "4",
+          "courseId": 8477,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56196"
+        },
+        {
+          "code": "KIN 190",
+          "title": "Adapted Physical Education",
+          "credits": "1",
+          "courseId": 8585,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56204"
+        },
+        {
+          "code": "KIN 201",
+          "title": "Introduction to Kinesiology",
+          "credits": "2",
+          "courseId": 8587,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56206"
+        },
+        {
+          "code": "KIN 215",
+          "title": "Physical Education and Recreation for Persons with Disabilities",
+          "credits": "2",
+          "courseId": 8592,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56211"
+        },
+        {
+          "code": "KIN 223",
+          "title": "Educational Health, Movement, and Dance",
+          "credits": "2",
+          "courseId": 8595,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56214"
+        },
+        {
+          "code": "KIN 240",
+          "title": "Cardio-respiratory Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 8596,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56215"
+        },
+        {
+          "code": "KIN 241",
+          "title": "Muscular Fitness Assessment, Prescription, and Leadership",
+          "credits": "2",
+          "courseId": 8597,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56216"
+        },
+        {
+          "code": "KIN 243",
+          "title": "Psychology of Sport and Exercise",
+          "credits": "4",
+          "courseId": 8598,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56217"
+        },
+        {
+          "code": "KIN 302",
+          "title": "Sociology of Sport",
+          "credits": "2",
+          "courseId": 8601,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56220"
+        },
+        {
+          "code": "MATH 221",
+          "title": "The Real Number System and Methods for Elementary School Teachers",
+          "credits": "4",
+          "courseId": 8619,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56240"
+        },
+        {
+          "code": "MUSC 100",
+          "title": "Music Theory Fundamentals in Global Context",
+          "credits": "2",
+          "courseId": 8639,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56261"
+        },
+        {
+          "code": "MUSC 103",
+          "title": "Understanding and Enjoying Music",
+          "credits": "2",
+          "courseId": 8640,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56262"
+        },
+        {
+          "code": "MUSC 106",
+          "title": "American Music",
+          "credits": "4",
+          "courseId": 8641,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56263"
+        },
+        {
+          "code": "MUSC 107",
+          "title": "World Music",
+          "credits": "4",
+          "courseId": 8642,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56264"
+        },
+        {
+          "code": "MUSC 108",
+          "title": "Harmony and Voice Leading",
+          "credits": "4",
+          "courseId": 8643,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56265"
+        },
+        {
+          "code": "MUSC 131",
+          "title": "Campus Choir",
+          "credits": "1",
+          "courseId": 8646,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56268"
+        },
+        {
+          "code": "MUSC 182",
+          "title": "Gospel Choir",
+          "credits": "1",
+          "courseId": 8652,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56274"
+        },
+        {
+          "code": "MUSC 203",
+          "title": "Popular Music",
+          "credits": "4",
+          "courseId": 8655,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56277"
+        },
+        {
+          "code": "MUSC 207",
+          "title": "Chromatic Harmony and Form",
+          "credits": "4",
+          "courseId": 8656,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56278"
+        },
+        {
+          "code": "MUSC 208",
+          "title": "Advanced Techniques in Music",
+          "credits": "2",
+          "courseId": 8657,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56279"
+        },
+        {
+          "code": "MUSC 236",
+          "title": "Music in Worship",
+          "credits": "2",
+          "courseId": 8660,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56282"
+        },
+        {
+          "code": "MUSC 302",
+          "title": "Music and Global Society",
+          "credits": "4",
+          "courseId": 9917,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56640"
+        },
+        {
+          "code": "PHIL 137",
+          "title": "Disability, Community, and Advocacy",
+          "credits": "2",
+          "courseId": 10599,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56846"
+        },
+        {
+          "code": "PHIL 153",
+          "title": "Fundamental Questions in Philosophy",
+          "credits": "4",
+          "courseId": 8795,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56317"
+        },
+        {
+          "code": "PHIL 207",
+          "title": "Justice and the Common Good: Studies in Political Philosophy",
+          "credits": "4",
+          "courseId": 8799,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56321"
+        },
+        {
+          "code": "PHIL 211",
+          "title": "Philosophy of Gender",
+          "credits": "4",
+          "courseId": 8800,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56322"
+        },
+        {
+          "code": "PHIL 212",
+          "title": "Ethical Dimensions of Health Care",
+          "credits": "4",
+          "courseId": 8801,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56323"
+        },
+        {
+          "code": "POLS 110",
+          "title": "Foundations of Political Community",
+          "credits": "2",
+          "courseId": 8835,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56357"
+        },
+        {
+          "code": "POLS 234",
+          "title": "The President and Congress",
+          "credits": "4",
+          "courseId": 8841,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56363"
+        },
+        {
+          "code": "POLS 237",
+          "title": "Political Parties and Interest Groups",
+          "credits": "4",
+          "courseId": 8842,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56364"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        },
+        {
+          "code": "PSYC 212",
+          "title": "Psychopathology",
+          "credits": "4",
+          "courseId": 8862,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56384"
+        },
+        {
+          "code": "PSYC 220",
+          "title": "Psychological Perspectives on Marriage and the Family",
+          "credits": "2",
+          "courseId": 8863,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56385"
+        },
+        {
+          "code": "PSYC 222",
+          "title": "Human Sexuality and Gender",
+          "credits": "2",
+          "courseId": 8864,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56386"
+        },
+        {
+          "code": "PSYC 270",
+          "title": "Children at Risk",
+          "credits": "4",
+          "courseId": 10365,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56790"
+        },
+        {
+          "code": "PSYC 310",
+          "title": "Social Psychology",
+          "credits": "4",
+          "courseId": 8867,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56389"
+        },
+        {
+          "code": "PSYC 335",
+          "title": "Health Psychology",
+          "credits": "4",
+          "courseId": 8873,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56395"
+        },
+        {
+          "code": "PUBH 101",
+          "title": "Introduction to Public Health",
+          "credits": "4",
+          "courseId": 8881,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56403"
+        },
+        {
+          "code": "RECR 205",
+          "title": "Therapeutic Recreation and Diagnostic Groups",
+          "credits": "4",
+          "courseId": 9088,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56409"
+        },
+        {
+          "code": "REL 211",
+          "title": "From Creation to Promised Land",
+          "credits": "2",
+          "courseId": 9101,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56422"
+        },
+        {
+          "code": "REL 212",
+          "title": "From Conquest to Exile",
+          "credits": "2",
+          "courseId": 9102,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56423"
+        },
+        {
+          "code": "REL 213",
+          "title": "Psalms and Wisdom Literature",
+          "credits": "4",
+          "courseId": 9103,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56424"
+        },
+        {
+          "code": "REL 214",
+          "title": "Prophets",
+          "credits": "4",
+          "courseId": 9104,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56425"
+        },
+        {
+          "code": "REL 221",
+          "title": "Jesus in the Gospels and Acts",
+          "credits": "2",
+          "courseId": 9105,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56426"
+        },
+        {
+          "code": "REL 222",
+          "title": "The Gospel and Letters of John",
+          "credits": "2",
+          "courseId": 9106,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56427"
+        },
+        {
+          "code": "REL 223",
+          "title": "Paul's Letters",
+          "credits": "4",
+          "courseId": 9107,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56428"
+        },
+        {
+          "code": "REL 224",
+          "title": "Revelation and General Letters",
+          "credits": "4",
+          "courseId": 9108,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56429"
+        },
+        {
+          "code": "REL 230",
+          "title": "Revelation and Knowledge of God",
+          "credits": "4",
+          "courseId": 9109,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56430"
+        },
+        {
+          "code": "REL 231",
+          "title": "The Triune God",
+          "credits": "4",
+          "courseId": 9110,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56431"
+        },
+        {
+          "code": "REL 232",
+          "title": "Creation and Humanity",
+          "credits": "4",
+          "courseId": 9111,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56432"
+        },
+        {
+          "code": "REL 233",
+          "title": "Christ and Reconciliation",
+          "credits": "4",
+          "courseId": 9112,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56433"
+        },
+        {
+          "code": "REL 234",
+          "title": "Holy Spirit and Church",
+          "credits": "2",
+          "courseId": 9113,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56434"
+        },
+        {
+          "code": "REL 235",
+          "title": "The Christian Hope",
+          "credits": "2",
+          "courseId": 9114,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56435"
+        },
+        {
+          "code": "REL 237",
+          "title": "Christian Worship",
+          "credits": "2",
+          "courseId": 9115,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56436"
+        },
+        {
+          "code": "REL 243",
+          "title": "Theology: From the Early Church through the Middle Ages",
+          "credits": "4",
+          "courseId": 9116,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56437"
+        },
+        {
+          "code": "REL 244",
+          "title": "Theology: From the Reformation to the Present",
+          "credits": "2",
+          "courseId": 9117,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56438"
+        },
+        {
+          "code": "REL 251",
+          "title": "Christianity and Religious Plurality",
+          "credits": "4",
+          "courseId": 9118,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56439"
+        },
+        {
+          "code": "REL 261",
+          "title": "Christianity and Culture",
+          "credits": "4",
+          "courseId": 9121,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56442"
+        },
+        {
+          "code": "REL 262",
+          "title": "Social Justice from the Prophets to Jesus",
+          "credits": "4",
+          "courseId": 9905,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56628"
+        },
+        {
+          "code": "REL 321",
+          "title": "Judaism in the Time of Jesus",
+          "credits": "4",
+          "courseId": 9124,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56445"
+        },
+        {
+          "code": "REL 345",
+          "title": "Studies in Contemporary Theology",
+          "credits": "4",
+          "courseId": 9128,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56449"
+        },
+        {
+          "code": "SCES 110",
+          "title": "Science and a Changing World",
+          "credits": "4",
+          "courseId": 10591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56838"
+        },
+        {
+          "code": "SCES 210",
+          "title": "Science Content and Processes",
+          "credits": "4",
+          "courseId": 10592,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56839"
+        },
+        {
+          "code": "SOC 130",
+          "title": "Introduction to Cultural Anthropology",
+          "credits": "4",
+          "courseId": 9141,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56463"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        },
+        {
+          "code": "SOC 201",
+          "title": "Families",
+          "credits": "2",
+          "courseId": 9147,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56469"
+        },
+        {
+          "code": "SOC 202",
+          "title": "Urban Sociology",
+          "credits": "4",
+          "courseId": 9146,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56468"
+        },
+        {
+          "code": "SOC 203",
+          "title": "Sociology of Deviance",
+          "credits": "2",
+          "courseId": 9148,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56470"
+        },
+        {
+          "code": "SOC 231",
+          "title": "Intercultural Communication",
+          "credits": "4",
+          "courseId": 9144,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56466"
+        },
+        {
+          "code": "SOC 301",
+          "title": "Gender and Sexuality in the United States",
+          "credits": "4",
+          "courseId": 9471,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56592"
+        },
+        {
+          "code": "SOC 303",
+          "title": "Criminology",
+          "credits": "4",
+          "courseId": 9142,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56464"
+        },
+        {
+          "code": "SOC 304",
+          "title": "Religion, Society, and Culture",
+          "credits": "4",
+          "courseId": 9149,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56471"
+        },
+        {
+          "code": "SOWK 240",
+          "title": "Introduction to Social Work and Social Welfare",
+          "credits": "2",
+          "courseId": 9156,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56478"
+        },
+        {
+          "code": "SOWK 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 9157,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56479"
+        },
+        {
+          "code": "SOWK 260",
+          "title": "Global Issues and Perspectives",
+          "credits": "2",
+          "courseId": 9159,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56481"
+        },
+        {
+          "code": "SOWK 350",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "4",
+          "courseId": 9161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56483"
+        },
+        {
+          "code": "SPAUD 311",
+          "title": "Child Language Development",
+          "credits": "4",
+          "courseId": 9184,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56506"
+        },
+        {
+          "code": "THTR 120",
+          "title": "Calvin Theatre Company",
+          "credits": "2",
+          "courseId": 7886,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55900"
+        },
+        {
+          "code": "THTR 203",
+          "title": "Introduction to Performance Studies",
+          "credits": "4",
+          "courseId": 7893,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55907"
+        }
+      ],
+      "notes": [
+        {
+          "course": "KIN 302",
+          "placement": "after",
+          "text": "OR SOC 302 - Sociology of Sport"
+        },
+        {
+          "course": "MUSC 302",
+          "placement": "after",
+          "text": "PER courses of choice (up to 4 hours)"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

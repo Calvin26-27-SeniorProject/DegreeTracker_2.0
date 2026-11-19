@@ -1,0 +1,332 @@
+{
+  "id": "archaeology-minor",
+  "name": "Archaeology Minor",
+  "code": "ARCH.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 746,
+    "name": "Archaeology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13065",
+  "description": "For this interdisciplinary minor, in addition to two required courses, students may select a coherent set of at least three elective courses with the help and approval of an advisor in the minor program. This selection should be appropriate to their major and in keeping with their chosen interests, specialized skills, and plans for further study. Such a program design could stress specialized interests such as material analysis or computer graphics among others and choices from various fields in old world, new world, or marine archaeology for which field schools are available. There are no modern language requirements for the archaeology minor, but students are strongly encouraged to study an appropriate modern language. For Old World archaeology the best modern language choice is French or German, while Spanish is useful for much of New World archaeology. The minor in archaeology is administered by D. Rohl (Historical Studies). Interested students should consult with him for admission to and planning of the archaeology minor.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 240",
+          "title": "Introduction to Archaeology",
+          "credits": "4",
+          "courseId": 19296,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54085"
+        },
+        {
+          "code": "IDIS 340",
+          "title": "Field Work in Archaeology",
+          "credits": "4",
+          "courseId": 19298,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54087"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": "Archaeological Content (incl. internships at an approved site)",
+          "courses": [
+            {
+              "code": "HIST 393",
+              "title": "History Internship",
+              "credits": "1-4",
+              "courseId": 19286,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54075"
+            },
+            {
+              "code": "IDIS 340",
+              "title": "Field Work in Archaeology",
+              "credits": "4",
+              "courseId": 19298,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54087"
+            }
+          ],
+          "notes": [
+            {
+              "course": "IDIS 340",
+              "placement": "after",
+              "text": "an approved elective"
+            },
+            {
+              "course": "IDIS 340",
+              "placement": "right",
+              "text": "(second iteration)"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": "Archaeological Skills",
+          "courses": [
+            {
+              "code": "ARTS 250",
+              "title": "Introduction to Drawing",
+              "credits": "4",
+              "courseId": 17715,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53704"
+            },
+            {
+              "code": "ARTS 256",
+              "title": "Introduction to Photography",
+              "credits": "4",
+              "courseId": 17719,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53708"
+            },
+            {
+              "code": "ARTS 300",
+              "title": "Intermediate Drawing",
+              "credits": "4",
+              "courseId": 17722,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53711"
+            },
+            {
+              "code": "ARTS 316",
+              "title": "Digital Photography",
+              "credits": "4",
+              "courseId": 17728,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53717"
+            },
+            {
+              "code": "BIOL 323",
+              "title": "Comparative Vertebrate Anatomy",
+              "credits": "3",
+              "courseId": 17761,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53750"
+            },
+            {
+              "code": "BIOL 346",
+              "title": "Plant Taxonomy",
+              "credits": "3",
+              "courseId": 17772,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53761"
+            },
+            {
+              "code": "CS 104",
+              "title": "Applied Computing",
+              "credits": "1",
+              "courseId": 18262,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53852"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            },
+            {
+              "code": "CS 112",
+              "title": "Introduction to Data Structures",
+              "credits": "3",
+              "courseId": 18265,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53855"
+            },
+            {
+              "code": "ENGR 101",
+              "title": "Introduction to Engineering Design",
+              "credits": "3",
+              "courseId": 18749,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53937"
+            },
+            {
+              "code": "ENST 210",
+              "title": "Human Impacts on the Environment",
+              "credits": "4",
+              "courseId": 18791,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+            },
+            {
+              "code": "ENST 301",
+              "title": "American Environmentalism",
+              "credits": "2",
+              "courseId": 22591,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54887"
+            },
+            {
+              "code": "ENST 302",
+              "title": "Environmental Law",
+              "credits": "2",
+              "courseId": 18792,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+            },
+            {
+              "code": "GEO 260",
+              "title": "GIS and Cartography",
+              "credits": "4",
+              "courseId": 19218,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+            },
+            {
+              "code": "GEO 101",
+              "title": "People, Place, and Community",
+              "credits": "4",
+              "courseId": 19213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54001"
+            },
+            {
+              "code": "GEO 151",
+              "title": "Introduction to Geology",
+              "credits": "3",
+              "courseId": 19230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54018"
+            },
+            {
+              "code": "GEO 152",
+              "title": "Historical Geology",
+              "credits": "3",
+              "courseId": 19231,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54019"
+            },
+            {
+              "code": "GEO 317",
+              "title": "Sedimentation and Stratigraphy",
+              "credits": "3",
+              "courseId": 19240,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54028"
+            },
+            {
+              "code": "IDIS 210",
+              "title": "Introduction to the Digital Humanities",
+              "credits": "2",
+              "courseId": 21519,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54563"
+            },
+            {
+              "code": "SOC 130",
+              "title": "Introduction to Cultural Anthropology",
+              "credits": "4",
+              "courseId": 20635,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54374"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": "Cultural, Historical, or Linguistic Contexts",
+          "courses": [
+            {
+              "code": "ARTH 121",
+              "title": "Late Medieval Art, 1250-1400",
+              "credits": "2",
+              "courseId": 22278,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54765"
+            },
+            {
+              "code": "ARTH 241",
+              "title": "Chinese Art History",
+              "credits": "2",
+              "courseId": 17714,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53703"
+            },
+            {
+              "code": "ARTH 320",
+              "title": "Classical Architecture from Antiquity to Now",
+              "credits": "4",
+              "courseId": 22284,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54771"
+            },
+            {
+              "code": "BIOL 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 17759,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53748"
+            },
+            {
+              "code": "GEO 313",
+              "title": "Paleontology",
+              "credits": "3",
+              "courseId": 19238,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54026"
+            },
+            {
+              "code": "HIST 242",
+              "title": "Africa and the World",
+              "credits": "4",
+              "courseId": 19259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54048"
+            },
+            {
+              "code": "HIST 245",
+              "title": "East Asia to 1800",
+              "credits": "4",
+              "courseId": 19260,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54049"
+            },
+            {
+              "code": "HIST 261",
+              "title": "Ancient Mediterranean",
+              "credits": "4",
+              "courseId": 19267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54056"
+            },
+            {
+              "code": "REL 311",
+              "title": "History and Archaeology of Ancient Israel",
+              "credits": "2",
+              "courseId": 20616,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54355"
+            },
+            {
+              "code": "REL 321",
+              "title": "Judaism in the Time of Jesus",
+              "credits": "4",
+              "courseId": 20617,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54356"
+            }
+          ],
+          "notes": [
+            {
+              "course": "REL 321",
+              "placement": "after",
+              "text": "two courses in an ancient language, Greek, Latin, and others as available"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Additional Electives as Necessary",
+          "description": "additional electives to reach a minimum of 18 hours for the program",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

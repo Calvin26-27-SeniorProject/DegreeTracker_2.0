@@ -1,0 +1,270 @@
+{
+  "id": "environmental-studies-major-geography-concentration",
+  "name": "Environmental Studies Major: Geography Concentration",
+  "code": "ENST.GEOG.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 767,
+    "name": "Environmental Science, Environmental Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13170",
+  "description": null,
+  "totalHours": "52",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "ECON 232",
+          "title": "Environmental Economics",
+          "credits": "2",
+          "courseId": 18295,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+        },
+        {
+          "code": "ENST 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 18791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+        },
+        {
+          "code": "ENST 301",
+          "title": "American Environmentalism",
+          "credits": "2",
+          "courseId": 22591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54887"
+        },
+        {
+          "code": "ENST 302",
+          "title": "Environmental Law",
+          "credits": "2",
+          "courseId": 18792,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 19210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+        },
+        {
+          "code": "GEO 252",
+          "title": "Geomorphology",
+          "credits": "3",
+          "courseId": 19217,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54005"
+        },
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 19218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+        },
+        {
+          "code": "GEO 395",
+          "title": "Senior Seminar in Geology, Geography, and Environment",
+          "credits": "4",
+          "courseId": 19229,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54017"
+        },
+        {
+          "code": "POLS 212",
+          "title": "Institutions and Politics of US Public Policy",
+          "credits": "2",
+          "courseId": 20233,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54272"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 120",
+          "placement": "after",
+          "text": "OR GEO 151 - Introduction to Geology OR GEO 153 - Great Lakes Geology"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 16 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "GEO 101",
+              "title": "People, Place, and Community",
+              "credits": "4",
+              "courseId": 19213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54001"
+            },
+            {
+              "code": "GEO 181",
+              "title": "First-Year Research in Earth Sciences: Dunes",
+              "credits": "3",
+              "courseId": 19211,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53999"
+            },
+            {
+              "code": "GEO 230",
+              "title": "The Global Economy and Transforming Regions",
+              "credits": "2",
+              "courseId": 19214,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54002"
+            },
+            {
+              "code": "GEO 250",
+              "title": "Meteorology",
+              "credits": "3",
+              "courseId": 19216,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54004"
+            },
+            {
+              "code": "GEO 251",
+              "title": "Oceanography",
+              "credits": "3",
+              "courseId": 19235,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54023"
+            },
+            {
+              "code": "GEO 280",
+              "title": "Field Study",
+              "credits": "1-4",
+              "courseId": 22728,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54982"
+            },
+            {
+              "code": "GEO 295",
+              "title": "Special Topics in Geography",
+              "credits": "2, 4",
+              "courseId": 19220,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54008"
+            },
+            {
+              "code": "GEO 310",
+              "title": "Urban Geography",
+              "credits": "4",
+              "courseId": 19221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54009"
+            },
+            {
+              "code": "GEO 322",
+              "title": "Coastal Geomorphology",
+              "credits": "2",
+              "courseId": 19222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54010"
+            },
+            {
+              "code": "GEO 323",
+              "title": "Coastal Geomorphology Methods",
+              "credits": "2",
+              "courseId": 22565,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54861"
+            },
+            {
+              "code": "GEO 351",
+              "title": "City and Regional Planning",
+              "credits": "2",
+              "courseId": 19223,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54011"
+            },
+            {
+              "code": "GEO 352",
+              "title": "Sustainable Communities",
+              "credits": "2",
+              "courseId": 19224,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54012"
+            },
+            {
+              "code": "GEO 361",
+              "title": "Advanced GIS",
+              "credits": "4",
+              "courseId": 19225,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54013"
+            },
+            {
+              "code": "GEO 362",
+              "title": "Remote Sensing of Earth",
+              "credits": "4",
+              "courseId": 19226,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54014"
+            },
+            {
+              "code": "GEO 385",
+              "title": "Internship in Geography and Geology",
+              "credits": "1, 2, 4",
+              "courseId": 19227,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54015"
+            }
+          ],
+          "notes": [
+            {
+              "course": "GEO 101",
+              "placement": "after",
+              "text": "OR GEO 110 - World Regional Geography"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 243",
+              "title": "Statistics",
+              "credits": "4",
+              "courseId": 21011,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+            },
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 20259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 20639,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 52",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

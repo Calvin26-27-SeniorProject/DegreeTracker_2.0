@@ -1,0 +1,65 @@
+{
+  "id": "cybersecurity-certificate",
+  "name": "Cybersecurity, Certificate",
+  "code": null,
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 754,
+    "name": "Computer Science"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13835",
+  "description": "The cybersecurity certificate equips students with both the principles and the practical skills for protecting information, end hosts, and networks from cyber threats. The program offers an exposure to a range of cybersecurity problems confronting us today and, at the same time, provides an in-depth understanding of how the principles (e.g., of cryptography) can be applied to secure computers and networks. Students will be given opportunities to practice what they learn through hands-on labs and projects, and internships. All of the above are designed to serve the foundation for furthering studies at the graduate levels as well as for becoming security professionals in various business sectors and government agencies. NOTE: This certificate involves three new courses, CS 360, CS 361, and CS 363, which will not be offered until academic year 2026-27. Students wishing to obtain this certificate before then will have to substitute CS 300 - Special Topics in Computer Science (if the topic was network security) and CS 364 - Computer Security .",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "CS 212",
+          "title": "Data Structures and Algorithms",
+          "credits": "4",
+          "courseId": 18267,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53857"
+        },
+        {
+          "code": "CS 232",
+          "title": "Operating Systems and Networking",
+          "credits": "4",
+          "courseId": 18269,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53859"
+        },
+        {
+          "code": "CS 338",
+          "title": "System Administration: Infrastructure",
+          "credits": "2",
+          "courseId": 21049,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54492"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CS 338",
+          "placement": "after",
+          "text": "CS 360 - Fundamentals of Cybersecurity CS 361 - Fundamentals of Cyber Defense CS 363 - Network Security"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

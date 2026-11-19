@@ -1,0 +1,87 @@
+{
+  "id": "physics-education-minor",
+  "name": "Physics Education Minor",
+  "code": "MIN_PHYS_EDUC",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 795,
+    "name": "Physics"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13278",
+  "description": "For teacher certification, this minor must be combined with the Science Education 7-12 Major.",
+  "totalHours": "21",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Note that 300-level PHYS courses require mathematics prerequisites.)",
+      "courses": [
+        {
+          "code": "PHYS 131",
+          "title": "Matter, Light, and Energy",
+          "credits": "1.5",
+          "courseId": 20204,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54243"
+        },
+        {
+          "code": "PHYS 133",
+          "title": "Introductory Physics: Mechanics and Gravity",
+          "credits": "3",
+          "courseId": 20205,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54244"
+        },
+        {
+          "code": "PHYS 235",
+          "title": "Introductory Physics: Electricity and Magnetism",
+          "credits": "3",
+          "courseId": 20211,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54250"
+        },
+        {
+          "code": "PHYS 237",
+          "title": "Einstein's Theory of Relativity",
+          "credits": "1",
+          "courseId": 20212,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54251"
+        },
+        {
+          "code": "PHYS 246",
+          "title": "Waves, Optics, and Optical Technology",
+          "credits": "4",
+          "courseId": 20213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54252"
+        },
+        {
+          "code": "PHYS 306",
+          "title": "Introduction to Quantum Physics",
+          "credits": "4",
+          "courseId": 20216,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54255"
+        },
+        {
+          "code": "SCES 314",
+          "title": "Integration Methods and Pedagogies for Secondary Science Teachers",
+          "credits": "2",
+          "courseId": 20628,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54367"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 21",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

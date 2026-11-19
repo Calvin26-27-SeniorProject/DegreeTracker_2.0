@@ -1,0 +1,127 @@
+{
+  "id": "pre-professional-physician-assistant",
+  "name": "Pre-professional: Physician Assistant",
+  "code": "PRPA",
+  "type": null,
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 381,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13721",
+  "description": "Pre-physician assistant (Pre-PA) is a pre-professional advising track, not an academic major. Students preparing for physician assistant programs complete the prerequisite coursework while earning a bachelor's degree in a declared academic major. Students may major in any discipline and still meet admission requirements for physician assistant programs. However, because many prerequisite science courses are included in their curricula, many Calvin students pursuing physician assistant programs major in biology or biochemistry. Students interested in physician assistant programs should declare an academic major early in their undergraduate career and work with both the School of Health pre-health advisor for professional school preparation, application timelines, entrance examinations, direct patient care requirements, and application guidance; and their pre-health faculty advisor within their declared major for degree planning and completion of major requirements Students considering biology or biochemistry are encouraged to declare their major early so they can receive advising from both a departmental pre-health faculty advisor and the School of Health pre-health advisor. Students who would like to practice medicine under the supervision of a licensed physician should consider becoming a physician assistant (PA). Physician assistants practice medicine under the supervision of licensed physicians and may perform physical examinations, diagnose and treat illnesses, assist in surgery, order diagnostic tests, and prescribe medications in accordance with state law and clinical practice agreements. Each graduate program determines its prerequisite courses, and students should consult with the School of Health advising office (pre-health@calvin.edu) for advice about preparatory courses and hours of direct patient care required by particular clinical training programs. Some PA programs require the prerequisite courses to have been completed at the time of application to their program. Depending on the programs to which they apply, students may be required to take the GRE or the PA-CAT. The timing of these examinations depends on completion of prerequisite coursework and the student's planned application cycle. Advising Students should contact the School of Health advising office (pre-health@calvin.edu) upon entering Calvin. Students planning to major in biology or biochemistry are encouraged to declare their major early so that they receive timely advising from both a departmental pre-health faculty advisor and the School of Health pre-health advisor. Departmental Contacts Department of Biology: A. Wilstermann Department of Chemistry and Biochemistry: K. Sinniah",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Common Prerequisites",
+      "description": "Requirements for admission to physician assistant programs vary, but common prerequisites include the following:",
+      "courses": [
+        {
+          "code": "BCHM 321",
+          "title": "Principles of Biochemistry",
+          "credits": "3",
+          "courseId": 11709,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57060"
+        },
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 7834,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 7837,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 7838,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55853"
+        },
+        {
+          "code": "BIOL 207",
+          "title": "Medical Microbiology",
+          "credits": "3",
+          "courseId": 7839,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55854"
+        },
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 7916,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+        },
+        {
+          "code": "CHEM 102",
+          "title": "General Chemistry II",
+          "credits": "3",
+          "courseId": 7917,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55931"
+        },
+        {
+          "code": "CHEM 240",
+          "title": "Survey of Organic Chemistry",
+          "credits": "3",
+          "courseId": 7922,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55936"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 240",
+          "placement": "after",
+          "text": "OR BOTH CHEM 241 - Organic Chemistry I AND CHEM 242 - Organic Chemistry II"
+        },
+        {
+          "course": "BIOL 205",
+          "placement": "after",
+          "text": "OR BIOL 323 - Comparative Vertebrate Anatomy"
+        },
+        {
+          "course": "BIOL 206",
+          "placement": "after",
+          "text": "OR BIOL 331 - Comparative Animal and Human Physiology (some programs specify a 300-level or higher course)"
+        },
+        {
+          "course": "BIOL 207",
+          "placement": "after",
+          "text": "OR BIOL 336 - General Microbiology"
+        },
+        {
+          "course": "STAT 143",
+          "placement": "after",
+          "text": "OR STAT 145 - Biostatistics OR PSYC 255 - Statistics and Research Design"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

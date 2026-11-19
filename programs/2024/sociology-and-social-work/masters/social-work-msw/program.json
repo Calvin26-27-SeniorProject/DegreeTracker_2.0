@@ -1,0 +1,171 @@
+{
+  "id": "social-work-msw",
+  "name": "Social Work, MSW",
+  "code": "MSW_SOWK",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Social Work"
+  ],
+  "department": {
+    "id": 809,
+    "name": "Sociology and Social Work"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13575",
+  "description": "The master of social work (MSW) is designed for students who want to both deepen and broaden their understanding of the social work field in preparation for a career of service as an advanced professional social worker. The MSW program at Calvin is informed by the National Association of Social Workers (NASW) code of ethics, the integration of faith and learning, dependence on evidence-based practices, and engagement with scholarly research. MSW students at Calvin will explore historical, global, environmental, and cultural influences as they prepare to competently serve others by advancing the well-being (flourishing) of individuals, families, and systems of in a variety of clinical and macrolevel settings. Applicants who have earned a BSW from a CSWE-accredited program within the past seven years may be eligible for advanced standing. Upon completion of the program, students will be prepared to engage in clinical and/or macro advanced social work practice.",
+  "totalHours": "60",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOWK 501",
+          "title": "Foundations of Social Work",
+          "credits": "2",
+          "courseId": 22840,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55740"
+        },
+        {
+          "code": "SOWK 510",
+          "title": "Spirituality, Faith, and Social Work",
+          "credits": "2",
+          "courseId": 22841,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55741"
+        },
+        {
+          "code": "SOWK 520",
+          "title": "Diversity, Inequity, and Social Justice",
+          "credits": "2",
+          "courseId": 22846,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55746"
+        },
+        {
+          "code": "SOWK 550",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "2",
+          "courseId": 22847,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55747"
+        },
+        {
+          "code": "SOWK 555",
+          "title": "Introduction to Applied Social Research",
+          "credits": "2",
+          "courseId": 22842,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55742"
+        },
+        {
+          "code": "SOWK 560",
+          "title": "Social Welfare Policy",
+          "credits": "2",
+          "courseId": 22848,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55748"
+        },
+        {
+          "code": "SOWK 571",
+          "title": "Introduction to Practice: Individuals, Families, and Groups",
+          "credits": "2",
+          "courseId": 22849,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55749"
+        },
+        {
+          "code": "SOWK 575",
+          "title": "Introduction to Practice: Communities and Organizations",
+          "credits": "2",
+          "courseId": 22850,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55750"
+        },
+        {
+          "code": "SOWK 580",
+          "title": "Field Education I",
+          "credits": "4",
+          "courseId": 22843,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55743"
+        },
+        {
+          "code": "SOWK 581",
+          "title": "Field Education II",
+          "credits": "4",
+          "courseId": 22844,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55744"
+        },
+        {
+          "code": "SOWK 610",
+          "title": "Trauma-Informed Social Work Practice",
+          "credits": "4",
+          "courseId": 22856,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55756"
+        },
+        {
+          "code": "SOWK 620",
+          "title": "Anti-racist, Anti-oppressive Social Work Practice",
+          "credits": "4",
+          "courseId": 22858,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55758"
+        },
+        {
+          "code": "SOWK 630",
+          "title": "Mental Health and Social Work",
+          "credits": "4",
+          "courseId": 22853,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55753"
+        },
+        {
+          "code": "SOWK 640",
+          "title": "Ethical Leadership and Social Work Supervision",
+          "credits": "4",
+          "courseId": 22845,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55745"
+        },
+        {
+          "code": "SOWK 650",
+          "title": "Advanced Generalist Practice: Individuals",
+          "credits": "4",
+          "courseId": 22851,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55751"
+        },
+        {
+          "code": "SOWK 660",
+          "title": "Advanced Generalist Practice: Families and Groups",
+          "credits": "4",
+          "courseId": 22857,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55757"
+        },
+        {
+          "code": "SOWK 670",
+          "title": "Advanced Generalist Practice: Communities and Organizations",
+          "credits": "4",
+          "courseId": 22852,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55752"
+        },
+        {
+          "code": "SOWK 680",
+          "title": "Advanced Field Education I",
+          "credits": "4",
+          "courseId": 22854,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55754"
+        },
+        {
+          "code": "SOWK 681",
+          "title": "Advanced Field Education II",
+          "credits": "4",
+          "courseId": 22855,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55755"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 60",
+      "description": "Students with an accredited BSW and in advanced standing take only the 600-level courses, resulting in a 36-hour program.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

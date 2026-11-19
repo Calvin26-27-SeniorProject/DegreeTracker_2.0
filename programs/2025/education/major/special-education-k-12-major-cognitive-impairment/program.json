@@ -1,0 +1,143 @@
+{
+  "id": "special-education-k-12-major-cognitive-impairment",
+  "name": "Special Education K-12 Major: Cognitive Impairment",
+  "code": "SPED.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13660",
+  "description": "This program prepares candidates to teach in special education settings. Candidates earn the K-12 Cognitive Impairment endorsement on the Michigan teaching certificate. Unlike the Special Education K-12 Major: Cognitive Impairment, BA, program, this program requires candidates to complete another certifiable major or minor. Candidates choose one student-teaching option: Complete one semester of student teaching in both special- and general-education settings (EDUC 346). Complete two semesters of student teaching with one semester in general education (EDUC 346) and one semester in special education (EDUC 347). If combined with the elementary education birth-kindergarten major, complete one semester of student teaching in special education (EDUC 347).",
+  "totalHours": "50",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        },
+        {
+          "code": "EDUC 310",
+          "title": "Assessment in Early Childhood and Special Education",
+          "credits": "2",
+          "courseId": 8199,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56015"
+        },
+        {
+          "code": "EDUC 330",
+          "title": "Curriculum and Instruction: Cognitive Impairment",
+          "credits": "4",
+          "courseId": 8202,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56018"
+        },
+        {
+          "code": "EDUC 331",
+          "title": "Introduction to Cognitive Impairment: Birth through School Age",
+          "credits": "2",
+          "courseId": 11213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56964"
+        },
+        {
+          "code": "EDUC 332",
+          "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+          "credits": "2",
+          "courseId": 11214,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56965"
+        },
+        {
+          "code": "EDUC 346",
+          "title": "Internship II: Student Teaching",
+          "credits": "12",
+          "courseId": 8206,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56022"
+        }
+      ],
+      "notes": [
+        {
+          "course": "EDUC 346",
+          "placement": "after",
+          "text": "OR EDUC 347 - Directed Teaching: Cognitive Impairment"
+        }
+      ],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 115",
+              "title": "Literacy Instruction for Beginning Readers",
+              "credits": "4",
+              "courseId": 8200,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56016"
+            },
+            {
+              "code": "EDUC 250",
+              "title": "Social Studies Inquiry",
+              "credits": "4",
+              "courseId": 11210,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56961"
+            },
+            {
+              "code": "MATH 221",
+              "title": "The Real Number System and Methods for Elementary School Teachers",
+              "credits": "4",
+              "courseId": 8619,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56240"
+            },
+            {
+              "code": "SCES 110",
+              "title": "Science and a Changing World",
+              "credits": "4",
+              "courseId": 10591,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56838"
+            }
+          ],
+          "notes": [
+            {
+              "course": "SCES 110",
+              "placement": "after",
+              "text": "OR SCES 210 - Science Content and Processes"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 50",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

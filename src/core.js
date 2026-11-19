@@ -1,40 +1,8 @@
-// ========== TRANSCRIPT PARSER ==========
-// Transfer/AP core credit can come in as a placeholder with no course number,
-// e.g. "HIST CORE - AP/Transfer History Core". analyze() infers its category.
-const PLACEHOLDER_NUMBER = 'CORE';
-
-function courseEntry(subject, number, fields) {
-  const entry = { code: subject + ' ' + number, ...fields };
-  if (number === PLACEHOLDER_NUMBER) { entry.isPlaceholder = true; entry.subject = subject; }
-  return entry;
-}
-
-export function parseTranscript(text) {
-  const normalized = text
-    .replace(/\u00a0/g, ' ')
-    .replace(/\r\n?/g, '\n')
-    .replace(/\s+/g, ' ')
-    .trim();
-  const rowRe = /\b([A-Z]{2,5})\s+(\d{3}[A-Z]?|CORE)\s*-\s*(.+?)\s+([A-Z]{1,2}[+-]?)\s+\d+(?:\.\d+)?\s+(\d+(?:\.\d+)?)\s+\d+(?:\.\d+)?\b/g;
-  const raw = [];
-  let match = rowRe.exec(normalized);
-  while (match !== null) {
-    const [, subject, courseNumber, rawTitle, grade, hoursText] = match;
-    raw.push(courseEntry(subject, courseNumber, {
-      title: rawTitle.replace(/\s+/g, ' ').trim(),
-      grade,
-      hours: parseFloat(hoursText),
-      status: 'completed',
-    }));
-    match = rowRe.exec(normalized);
-  }
-
-  // Deduplicate by course code. A repeated course's later attempt wins
-  // (assumes the page lists attempts oldest first).
-  const byCode = new Map();
-  for (const c of raw) byCode.set(c.code, { ...c });
-  return Array.from(byCode.values());
-}
+// Requirement logic: grades and catalog years, catalog instruction rules,
+// analyze() for the core, and program checks for majors and minors. Input
+// parsing is in parse.js (Workday) and catalog-parse.js (the catalog page).
+import { TERM_ORDER, periodRank, PROGRESS_COURSE_RE } from './parse.js';
+import { normalizeText } from './catalog-parse.js';
 
 // Grades that earn no credit toward a requirement (catalog: F; I, incomplete;
 // W, authorized withdrawal; N, unauthorized withdrawal; NR, no report). A
@@ -49,372 +17,35 @@ export function resolvedGrade(grade) {
   return (grade || '').toUpperCase().replace(/^I(?=[A-F])/, '');
 }
 
-// "2025 Spring" → sortable number; null when absent or unrecognized.
-const TERM_ORDER = { winter: 0, interim: 0, spring: 1, summer: 2, fall: 3 };
-function periodRank(period) {
+// The period a student started in: the earliest period of a course on the
+// record, leaving out transfer credit and exemptions (which can predate
+// Calvin). records: courseAttempts or courses. null when none has a period.
+export function startPeriod(records) {
+  let best = null;
+  for (const c of records || []) {
+    if (c.status === 'transfer' || c.status === 'exemption') continue;
+    const rank = periodRank(c.period);
+    if (rank !== null && (best === null || rank < best.rank)) best = { rank, period: c.period };
+  }
+  return best?.period ?? null;
+}
+
+// The academic year (its fall's calendar year) a period belongs to: "2024 Fall"
+// and "2024 Summer" (before that fall) → 2024; "2025 Interim", "2025 Spring" → 2024.
+export function academicYearOf(period) {
   const m = (period || '').match(/^(\d{4})\s+(\w+)$/);
   if (!m || !(m[2].toLowerCase() in TERM_ORDER)) return null;
-  return +m[1] * 10 + TERM_ORDER[m[2].toLowerCase()];
+  return TERM_ORDER[m[2].toLowerCase()] >= TERM_ORDER.summer ? +m[1] : +m[1] - 1;
 }
 
-// Category an exemption satisfies, from its name ("Language Exemption") or the
-// requirement Workday lists it under ("World Languages I Core" for a
-// "High School Exemption").
-function exemptionTarget(name, requirement) {
-  if (/language/i.test(name) || /\bWorld Languages I\b/.test(requirement || '')) return 'World Languages I';
-  return null;
-}
-
-// ========== PROGRESS PARSER ==========
-// Both Academic Progress inputs (pasted text, .xlsx export) become records
-//   { requirement, item, period, hours, grade }
-// one per "Satisfied With" entry (item null for a requirement with none),
-// which progressFromRecords turns into courses.
-const PROGRESS_COURSE_RE = /^([A-Z]{2,5})\s+(\d{3}[A-Z]?L?|CORE)\s*-\s*(.+)$/;
-const PROGRESS_EXEMPTION_RE = /^(.+?\bExemption)\s*-\s*(\d{2}\/\d{2}\/\d{4})$/;
-// Any other dated registration ("Military - 05/01/2025"): not a course, but
-// Workday may count it toward a requirement.
-const PROGRESS_DATED_ITEM_RE = /^(.+?)\s*-\s*(\d{2}\/\d{2}\/\d{4})$/;
-const WORKDAY_STATUS_RE = /^(Satisfied|Not Satisfied|In Progress)$/;
-
-function cleanRequirementName(name) {
-  return name.replace(/\s*\(Click for more details\)/g, '').replace(/\s*\(Override Assigned\)/g, '').trim();
-}
-
-// Returns { courses: [...], exemptions: [...], overrides: Set, workdayStatus: Map }
-// Each course records the Workday requirement(s) it was listed under in
-// `requirements`, so analyze() can flag K&U claims it can't match.
-// workdayStatus: requirement name → { status, items } (Workday's Status and its
-// "Registrations Used" entries, verbatim), for analyze() to compare with its own.
-function progressFromRecords(records) {
-  const raw = [];
-  const exemptions = [];
-  const overrides = new Set();
-  const workdayStatus = new Map();
-
-  for (const { requirement: rawRequirement, item, period, hours, grade, status: reqStatus } of records) {
-    const requirement = rawRequirement ? cleanRequirementName(rawRequirement) : null;
-    if (rawRequirement && /\(Override Assigned\)/.test(rawRequirement)) overrides.add(requirement);
-    if (requirement) {
-      if (!workdayStatus.has(requirement)) workdayStatus.set(requirement, { status: null, items: [] });
-      const ws = workdayStatus.get(requirement);
-      if (reqStatus && !ws.status) ws.status = reqStatus;
-      if (item && !ws.items.includes(item)) ws.items.push(item);
-    }
-    if (!item) continue;
-
-    // Exemptions (e.g., "Language Exemption - 07/01/2023")
-    const exMatch = item.match(PROGRESS_EXEMPTION_RE);
-    if (exMatch) {
-      const exName = exMatch[1].trim();
-      const target = exemptionTarget(exName, requirement);
-      exemptions.push({ name: exName, date: exMatch[2], target });
-      if (target) {
-        raw.push({
-          code: null, title: exName, grade: null, hours,
-          status: 'exemption', exemptionTarget: target,
-        });
-      }
-      continue;
-    }
-
-    const cm = item.match(PROGRESS_COURSE_RE);
-    if (!cm) {
-      const dated = item.match(PROGRESS_DATED_ITEM_RE);
-      if (dated) exemptions.push({ name: dated[1].trim(), date: dated[2], target: null });
-      continue;
-    }
-    let title = cm[3].trim();
-    let status = 'completed';
-    if (/\(In Progress\)/.test(title)) {
-      status = 'in-progress';
-      title = title.replace(/\s*\(In Progress\)/, '').trim();
-    } else if (/\(Transfer Credit\)/.test(title)) {
-      status = 'transfer';
-      title = title.replace(/\s*\(Transfer Credit\)/, '').trim();
-    }
-    raw.push(courseEntry(cm[1], cm[2], { title, grade, hours, status, period,
-      requirements: requirement ? [requirement] : [] }));
-  }
-
-  // Deduplicate by code/title, remembering every requirement the course was
-  // listed under. A repeated course's later attempt wins: by academic period
-  // when both have one, else the later listing.
-  const byCode = new Map();
-  for (const c of raw) {
-    if (c.code === null) {
-      if (!byCode.has(c.title)) byCode.set(c.title, c);
-      continue;
-    }
-    const kept = byCode.get(c.code);
-    if (!kept) { byCode.set(c.code, { ...c, requirements: [...c.requirements] }); continue; }
-    const requirements = [...kept.requirements];
-    for (const r of c.requirements) if (!requirements.includes(r)) requirements.push(r);
-    const [a, b] = [periodRank(kept.period), periodRank(c.period)];
-    const later = a !== null && b !== null ? b > a : kept.period !== c.period;
-    byCode.set(c.code, later ? { ...c, requirements } : { ...kept, requirements });
-  }
-  const courses = Array.from(byCode.values());
-  return { courses, exemptions, overrides, workdayStatus };
-}
-
-// Parses copy-paste from Workday Academic Progress page: one field per line.
-export function parseProgress(text) {
-  const lines = text
-    .replace(/ /g, ' ')
-    .replace(/\r\n?/g, '\n')
-    .split('\n')
-    .map(l => l.trim())
-    .filter(l => l.length > 0);
-
-  const periodRe = /^\d{4}\s+(Fall|Spring|Summer|Winter|Interim)$/i;
-  const hoursRe = /^\d+(?:\.\d+)?$/;
-  const gradeRe = /^[A-Z]{1,2}[+-]?$/;
-  // Status/remaining lines and page chrome that aren't requirement names.
-  const notRequirementRe = /^(Satisfied|Not Satisfied|In Progress|Satisfied With|Minimum\b.*|.*Sort and filter column)$/;
-  const isItem = line => PROGRESS_COURSE_RE.test(line) || PROGRESS_DATED_ITEM_RE.test(line);
-  const records = [];
-  let requirement = null;
-  let requirementRecord = null;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    // The status line right after a requirement name is Workday's Status for it.
-    if (WORKDAY_STATUS_RE.test(line) && requirementRecord && !requirementRecord.status) {
-      requirementRecord.status = line;
-      continue;
-    }
-    if (PROGRESS_DATED_ITEM_RE.test(line)) {
-      // Look ahead for hours
-      let hours = 0;
-      for (let j = i + 1; j < Math.min(i + 4, lines.length); j++) {
-        if (hoursRe.test(lines[j])) { hours = parseFloat(lines[j]); break; }
-        if (PROGRESS_COURSE_RE.test(lines[j])) break;
-      }
-      records.push({ requirement, item: line, period: null, hours, grade: null });
-      requirementRecord = null;
-      continue;
-    }
-
-    if (!PROGRESS_COURSE_RE.test(line)) {
-      // Any other line that isn't a field value names the requirement that
-      // following courses are listed under.
-      if (!periodRe.test(line) && !hoursRe.test(line) && !gradeRe.test(line) && !notRequirementRe.test(line)) {
-        requirement = line;
-        requirementRecord = { requirement, item: null, status: null };
-        records.push(requirementRecord);
-      }
-      continue;
-    }
-
-    // Look ahead for academic period, hours, grade
-    let hours = 0;
-    let grade = null;
-    let period = null;
-    for (let j = i + 1; j < Math.min(i + 8, lines.length); j++) {
-      const next = lines[j];
-      if (isItem(next)) break;
-      if (periodRe.test(next)) {
-        period = next;
-      } else if (hoursRe.test(next) && hours === 0) {
-        hours = parseFloat(next);
-      } else if (gradeRe.test(next) || next === 'CR') {
-        grade = next;
-      }
-    }
-    records.push({ requirement, item: line, period, hours, grade });
-    requirementRecord = null;
-  }
-  return progressFromRecords(records);
-}
-
-// Parses the rows of a Workday "View Academic Progress for Student" .xlsx
-// export (cell values as strings; see src/xlsx.js). Each program's table
-// starts at a header row with "Requirement" and "Status" columns, and each
-// row under it is one requirement with at most one "Registrations Used"
-// entry, so no lookahead is needed. A table ends at the first row without
-// both a requirement and a status.
-// Also returns `programs`, for the Major & minor page: one per requirement table, in
-// order, named from the export's "Program of Study" summary (the tables follow it
-// in the same order; names stay null if the counts differ):
-//   [{ name, satisfied, total, requirements: [{ name, status, remaining, items: [{ text, period, hours, grade }] }] }]
-// Workday's wording, verbatim (the app shows grades only when its "Show grades"
-// toggle is on). Courses and workdayStatus don't depend on it.
-export function parseProgressRows(rows) {
-  const records = [];
-  let cols = null;
-  const summary = [];
-  let summaryCols = null;
-  const tables = [];
-  let table = null;
-  for (const row of rows) {
-    const cells = row.map(v => (v == null ? '' : String(v).replace(/ /g, ' ').trim()));
-    const requirementCol = cells.indexOf('Requirement');
-    if (requirementCol !== -1 && cells.includes('Status')) {
-      const col = name => cells.indexOf(name);
-      cols = { requirement: requirementCol, status: col('Status'), item: col('Registrations Used'),
-        period: col('Academic Period'), hours: col('Hours'), grade: col('Grade'), remaining: col('Remaining') };
-      table = new Map();
-      tables.push(table);
-      continue;
-    }
-    if (!cols) {
-      if (cells[0] === 'Program of Study' && cells.includes('Display ID')) {
-        summaryCols = { name: cells.indexOf('Display ID'), total: cells.indexOf('Count of Instances in Set'),
-          satisfied: cells.indexOf('Satisfied Academic Requirements Label') };
-      } else if (summaryCols && cells[summaryCols.name] && Number.isFinite(parseFloat(cells[summaryCols.total]))) {
-        // A program row has its requirement count; the rows after the table
-        // ("GPA Including Calvin Credit Exams", "Unused Registrations") don't,
-        // even when their first cell holds a value.
-        const num = i => { const n = parseFloat(cells[i]); return i !== -1 && Number.isFinite(n) ? n : null; };
-        summary.push({ name: cells[summaryCols.name], total: num(summaryCols.total), satisfied: num(summaryCols.satisfied) });
-      } else {
-        summaryCols = null;
-      }
-      continue;
-    }
-    const get = key => (cols[key] === -1 ? '' : cells[cols[key]] || '');
-    if (!get('requirement') || !get('status')) { cols = null; continue; }
-    const hours = parseFloat(get('hours'));
-    records.push({
-      requirement: get('requirement'),
-      item: get('item') || null,
-      period: get('period') || null,
-      hours: Number.isFinite(hours) ? hours : 0,
-      grade: get('grade') || null,
-      status: get('status'),
-    });
-    const name = cleanRequirementName(get('requirement'));
-    if (!table.has(name)) table.set(name, { name, status: get('status'), remaining: get('remaining') || null, items: [] });
-    if (get('item')) table.get(name).items.push({ text: get('item'), period: get('period') || null, hours: Number.isFinite(hours) ? hours : null, grade: get('grade') || null });
-  }
-  const named = summary.length === tables.length;
-  const programs = tables.map((t, i) => ({ name: named ? summary[i].name : null,
-    satisfied: named ? summary[i].satisfied : null, total: named ? summary[i].total : null, requirements: [...t.values()] }));
-  return { ...progressFromRecords(records), programs };
-}
-
-// ========== FORMAT DETECTION ==========
-export function detectInputFormat(text) {
-  if (/RequirementSort and filter column|StatusSort and filter column|Satisfied With/.test(text)) {
-    return 'progress';
-  }
-  if (/Opens in new window/.test(text)) {
-    return 'transcript';
-  }
-  // Fallback: try both parsers, use whichever returns more courses
-  const tCount = parseTranscript(text).length;
-  const pCount = parseProgress(text).courses.filter(c => c.code !== null).length;
-  return pCount > tCount ? 'progress' : 'transcript';
-}
-
-// ========== UTILITIES ==========
-export function slugify(name) {
-  return 'ca-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
-}
-
-// ========== DOM PARSER ==========
-// List items that join courses rather than name a sub-discipline.
-const CONNECTORS = ['Or', 'One from', 'And'];
-const NUMBER_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8 };
-
-export function normalizeText(s) {
-  return (s || '').replace(/ /g, ' ').replace(/\s+/g, ' ').trim();
-}
-
-// "Complete coursework totaling at least 26 semester hours from at least five of
-// the six Knowledge and Understanding categories, ..." → { minHours, minCategories, ofCategories }
-export const KU_AGGREGATE_RE = /Complete coursework totaling at least (\d+) semester hours from at least (\w+) of the (\w+) Knowledge and Understanding categories/;
-export function parseKuAggregate(instructions) {
-  const m = (instructions || '').match(KU_AGGREGATE_RE);
-  if (!m) return null;
-  const num = w => /^\d+$/.test(w) ? parseInt(w) : (NUMBER_WORDS[w.toLowerCase()] ?? null);
-  return { minHours: parseInt(m[1]), minCategories: num(m[2]), ofCategories: num(m[3]) };
-}
-
-// Accepts a root element (defaults to document in browser).
-// In tests, pass a jsdom document or a container element with querySelectorAll.
-export function parseCoreProgram(root) {
-  if (!root) root = document;
-  const blocks = root.querySelectorAll('div.acalog-core');
-  const cats = [];
-  let section = '';
-  for (let i = 0; i < blocks.length; i++) {
-    const b = blocks[i];
-    const h2 = b.querySelector('h2'), h3 = b.querySelector('h3'), h4 = b.querySelector('h4');
-    // Only the block's own paragraphs: list items (e.g. the "Or" connector) contain <p>s too.
-    const inst = normalizeText(Array.from(b.children).filter(el => el.tagName === 'P')
-      .map(p => p.textContent).join(' '));
-    const heading = h2 || h3 || h4;
-    const coreId = heading?.querySelector('a[id^="core_"]')?.id || null;
-
-    if (h2 && !h3 && !h4) {
-      section = normalizeText(h2.textContent);
-      if (heading) heading.id = slugify(section);
-      const header = { type: 'section-header', section, instructions: inst, element: b, coreIndex: i, slug: slugify(section), coreId };
-      const kuAggregate = parseKuAggregate(inst);
-      if (kuAggregate) header.kuAggregate = kuAggregate;
-      cats.push(header);
-      continue;
-    }
-
-    let name = '';
-    if (heading) {
-      name = Array.from(heading.childNodes)
-        .filter(n => n.nodeType === 3 || (n.nodeType === 1 && n.tagName === 'A'))
-        .map(n => n.textContent.trim()).join('').trim();
-      heading.id = slugify(name);
-    }
-
-    const isTag = h4 !== null;
-    const rng = inst.match(/(\d+)[–-](\d+)\s+semester hours/);
-    const disc = inst.match(/up to (\d+)\s+semester hours in any one discipline/);
-    const minH = rng ? parseInt(rng[1]) : null;
-    const maxH = rng ? parseInt(rng[2]) : null;
-    const maxPD = disc ? parseInt(disc[1]) : null;
-    const reqType = minH !== null ? 'hour-range' : 'pick-one';
-
-    const ul = b.querySelector('ul');
-    const courses = [];
-    const subDisciplineElements = [];
-    let curSub = null;
-    let connector = null;
-    // "A Or B C": each Or starts a new alternative; courses within one are all required.
-    const alternatives = [[]];
-    if (ul) {
-      for (const li of ul.children) {
-        if (li.classList.contains('acalog-adhoc')) {
-          const t = normalizeText(li.textContent);
-          if (CONNECTORS.includes(t)) {
-            connector = t;
-            if (t === 'Or') alternatives.push([]);
-          } else {
-            curSub = t;
-            subDisciplineElements.push({ name: t, element: li });
-          }
-        } else if (li.classList.contains('acalog-course')) {
-          const link = li.querySelector('a');
-          const lt = link ? normalizeText(link.textContent) : '';
-          const cm = lt.match(/^([A-Z]{2,5})\s+(\d{3}[A-Z]?)\s*-\s*(.+)$/);
-          if (!cm) continue;
-          const coid = (link.getAttribute('onclick') || '').match(/showCourse\('\d+',\s*'(\d+)'/)?.[1] || null;
-          const course = { code: cm[1] + ' ' + cm[2], title: cm[3].trim(), subDiscipline: curSub, coid, element: li };
-          if (connector) { course.connectorBefore = connector; connector = null; }
-          courses.push(course);
-          alternatives[alternatives.length - 1].push(course.code);
-        }
-      }
-    }
-
-    const cat = {
-      type: isTag ? 'tag' : 'category', section, name, instructions: inst,
-      reqType, minHours: minH, maxHours: maxH, maxPerDiscipline: maxPD,
-      courses, subDisciplineElements, element: b, coreIndex: i, slug: slugify(name), coreId
-    };
-    if (alternatives.length > 1) cat.alternatives = alternatives;
-    cats.push(cat);
-  }
-  return cats;
+// The catalog for a student who started in `period`: the one for that
+// academic year, or the newest one older than it; one who started before every
+// catalog here gets the oldest. metas: catalog _meta objects ({ catoid,
+// catalogYear: "2025-26" }), newest first. null without a usable period.
+export function catalogForStart(metas, period) {
+  const year = academicYearOf(period);
+  if (year === null || !metas.length) return null;
+  return metas.find(m => parseInt(m.catalogYear, 10) <= year) || metas[metas.length - 1];
 }
 
 // ========== CATALOG INSTRUCTION RULES ==========
@@ -609,26 +240,236 @@ export function programRequirements(input) {
   return groups.map(g => ({ ...g, requirements: g.requirements.filter(shown) })).filter(g => g.requirements.length);
 }
 
+// ========== WORKDAY REQUIREMENT NAMES → COURSES ==========
+// The courses a Workday requirement's name lists, for a program this tool has
+// no file for (the Major and Minor pages show them as course rows). Notes in
+// parentheses are dropped; a bare number takes the subject before it ("MATH
+// 161 or 162", "CS 108 and 108L"). Returns null when the name lists no course,
+// else { kind, options, codes }:
+//   'single'    "PSYC 244": [['PSYC 244']]
+//   'all'       "CS 396 and 398": [['CS 396', 'CS 398']]
+//   'any'       "BIOL 123 or both BIOL 160 and 161": [['BIOL 123'], ['BIOL 160', 'BIOL 161']]
+//   'list'      "10 hours from: CS 300, 312; ENGR 304": one option per course
+//   'mentioned' anything else naming courses ("any CS 300-level course except
+//               CS 312"): one option per course, with no claim about how they
+//               combine.
+// An Or/And reading is given only when every word in the name is understood;
+// "and" binds tighter than "or" only where that can't be misread: after "both"
+// ("or both BIOL 160 and 161") or for a course and its lab ("CS 108 and 108L").
+export function workdayRequirementCourses(name) {
+  const text = (name || '').replace(/\([^()]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+  const tokens = [];
+  const re = /\b([A-Z]{2,5}) (\d{3}[A-Z]?)(?![\w-])|\b(\d{3}[A-Z]?)(?![\w-])|(\d+)|([A-Za-z]+)|(\S)/g;
+  let subject = null;
+  for (let m; (m = re.exec(text));) {
+    if (m[1]) { subject = m[1]; tokens.push({ code: `${m[1]} ${m[2]}` }); }
+    else if (m[3]) tokens.push(subject ? { code: `${subject} ${m[3]}` } : { other: m[3] });
+    else if (m[4]) tokens.push({ num: m[4] });
+    else if (m[5]) tokens.push({ word: m[5].toLowerCase() });
+    else tokens.push({ sep: m[6] });
+  }
+  // An Oxford comma ("A, B, or C") is the "or" after it.
+  for (let i = tokens.length - 2; i >= 0; i--) {
+    if (tokens[i].sep === ',' && ['and', 'or'].includes(tokens[i + 1].word)) tokens.splice(i, 1);
+  }
+  const codes = [...new Set(tokens.filter(t => t.code).map(t => t.code))];
+  if (!codes.length) return null;
+  const one = list => list.map(code => [code]);
+  const mentioned = { kind: 'mentioned', options: one(codes), codes };
+  const is = (t, ...words) => words.includes(t.word) || words.includes(t.sep);
+
+  // "10 hours from: A, B; C", "One of the following: A, B, or C".
+  const at = tokens.findIndex(t => is(t, 'from', ':'));
+  if (at >= 0 && !tokens.slice(0, at).some(t => t.code)) {
+    const prefixOk = tokens.slice(0, at).every(t => t.num || is(t, 'take', 'one', 'two', 'three', 'four', 'hours', 'hour', 'course', 'courses', 'of', 'the', 'following'));
+    const rest = tokens.slice(at + 1).filter(t => !is(t, ':', 'the', 'following'));
+    const restOk = rest.every(t => t.code || is(t, ',', ';', 'and', 'or'));
+    return prefixOk && restOk ? { kind: 'list', options: one(codes), codes } : mentioned;
+  }
+
+  // An expression of courses joined by "and", "or", "/", and commas.
+  if (!tokens.every(t => t.code || is(t, 'and', 'or', 'both', 'either', ',', '/', '&'))) return mentioned;
+  const has = (...w) => tokens.some(t => is(t, ...w));
+  const hasOr = has('or', '/');
+  const hasAnd = has('and', '&');
+  if (has(',') && hasOr && hasAnd) return mentioned;
+  // Commas join like the word they sit with: "A, B, or C"; "A, B and C".
+  const orSep = t => is(t, 'or', '/') || (is(t, ',') && hasOr);
+  const parts = [[]];
+  for (const t of tokens) {
+    if (orSep(t)) parts.push([]);
+    else parts.at(-1).push(t);
+  }
+  const options = [];
+  for (const [i, part] of parts.entries()) {
+    const words = part.filter(t => !t.code);
+    // Codes and joiners alternate, starting and ending with a code (after an
+    // opening "both" or, first of all, "either").
+    let body = part;
+    if (body[0] && is(body[0], 'either') && i === 0) body = body.slice(1);
+    const both = body[0] && is(body[0], 'both');
+    if (both) body = body.slice(1);
+    if (!body.length || !body[0].code || !body.at(-1).code) return mentioned;
+    for (let j = 1; j < body.length; j++) if (!body[j].code === !body[j - 1].code) return mentioned;
+    if (body.some(t => is(t, 'either', 'both'))) return mentioned;
+    const option = body.filter(t => t.code).map(t => t.code);
+    if (both && option.length !== 2) return mentioned;
+    if (words.length && parts.length > 1 && option.length > 1 && !both) {
+      // "and" inside an "or": only a course with its lab can't be misread.
+      const lab = option.length === 2 && option[1] === option[0] + 'L';
+      if (!lab) return mentioned;
+    }
+    options.push(option);
+  }
+  if (options.length === 1) return { kind: options[0].length === 1 ? 'single' : 'all', options, codes };
+  return { kind: 'any', options, codes };
+}
+
 // ========== PROGRAM CHECKS (majors, minors) ==========
-// Program files (catalog/programs/<id>-<catoid>.json) hold one program's
-// requirements from one catalog year, checked against that year's catalog page
+// Program files (programs/<year>/<department>/<type>/<program>/<id>-<catoid>.json)
+// hold one program's requirements from one catalog year, checked against that year's catalog page
 // (poid, checkedAt). A Workday program is checked when a file has its exact name
 // and the selected catalog year.
 export function findProgram(programs, name, catoid) {
   return programs.find(p => p.programName === name && p.catoid === catoid) || null;
 }
 
+// A program as a student is checked against it. `base` is the file for the
+// catalog year they started in: its requirements, hours, and labels are theirs.
+// The course options shown are the newest catalog's for the same requirement
+// (same id, or the one an older requirement names as `currentId`), so a course
+// since renamed or dropped (BCS's CS 364, now CS 360, 361, 363) isn't offered.
+// A requirement the newest catalog doesn't have keeps its own options, less the
+// file's `retiredCourses` (courses the newest catalog no longer lists). Any
+// course any year lists for the requirement still counts, and checkProgram
+// shows it when it's on the record. years: every file of this program, newest
+// first (base among them).
+export function programForStudent(base, years) {
+  const newest = years[0] || base;
+  const reqs = p => p.requirements || [];
+  const groups = p => p.courseGroups || [];
+  const optionsOf = r => r.alternatives || r.codes.map(code => [code]);
+  const retired = new Set(base.retiredCourses || []);
+  const keyOf = option => option.join('+');
+  const uniqueOptions = list => {
+    const seen = new Set();
+    return list.filter(o => !seen.has(keyOf(o)) && seen.add(keyOf(o)));
+  };
+  // Every year's version of a requirement: the same id, or where an older
+  // file's requirement points with currentId.
+  const versions = (list, r) => years.flatMap(p => list(p).filter(x => x.id === r.id || x.id === r.currentId || x.currentId === r.id));
+  const current = (list, r) => list(newest).find(x => x.id === (r.currentId || r.id));
+  const merge = key => Object.assign({}, ...[...years].reverse().map(p => p[key] || {}));
+  return {
+    ...base,
+    labs: merge('labs'),
+    titles: merge('titles'),
+    // Newest first, for course titles and catalog links.
+    catoids: [...new Set(years.map(p => p.catoid))],
+    optionsCatalogYear: newest.catalogYear,
+    requirements: reqs(base).map(r => {
+      const now = current(reqs, r);
+      let shown = now ? optionsOf(now) : optionsOf(r).filter(o => !o.some(code => retired.has(code)));
+      if (!shown.length) shown = optionsOf(r);
+      const all = uniqueOptions([...shown, ...optionsOf(r), ...versions(reqs, r).flatMap(optionsOf)]);
+      return { ...r, alternatives: all, shownOptions: shown };
+    }),
+    courseGroups: groups(base).map(g => {
+      const now = current(groups, g);
+      const shownCodes = (now || g).courses.map(c => c.code).filter(code => now || !retired.has(code));
+      const seen = new Set();
+      const courses = [...(now?.courses || []), ...g.courses, ...versions(groups, g).flatMap(v => v.courses)]
+        .filter(c => !seen.has(c.code) && seen.add(c.code));
+      return { ...g, courses, shownCodes };
+    }),
+  };
+}
+
+// A program for the What if tab when no checked file covers it: an estimate
+// read from its catalog page (programs/whatif-programs.json, one entry with
+// blocks [heading, depth, codes, section]). Only what the headings say plainly
+// is checked:
+//   - a course listed directly under a section ("Program Requirements") is
+//     required, each its own requirement;
+//   - "Take One / Two / Three / Four from the Following", "(Take) at Least One
+//     from the Following": that many of the courses;
+//   - "Take (at Least) N Hours from the Following": N hours of them.
+// Anything else ("Cognates", "Electives", one of several concentrations,
+// tracks, or emphases to choose from, a block nested inside another, ...) is listed with its courses but not checked
+// (`unchecked`; checkProgram gives it status 'unknown' and leaves it out of the
+// counts). The catalog's own page can still say more (an "or" inside a list is
+// lost when it's generated), so the result is labeled an estimate.
+const PICK_WORDS = { one: 1, two: 2, three: 3, four: 4 };
+const PICK_HEADING_RE = /^(?:Take )?(?:at Least )?(One|Two|Three|Four) (?:from|of) the Following$/i;
+const HOURS_HEADING_RE = /^(?:Take )?(?:at Least )?(\d+) Hours? from the Following$/i;
+// Concentrations, tracks, emphases, and sequences are a choice only when the
+// page offers two or more (the Urban Studies Minor's Tracks 1-3); a program
+// that is one concentration ("English Major: Linguistics Concentration, BA")
+// requires its own. A combined program or a prior degree isn't read.
+const OPTION_RE = /\b(Concentration|Emphasis|Track|Sequence [A-Z])\b/i;
+const NOT_READ_RE = /\b(Combined|Completion of)\b/i;
+export function programFromCatalog(entry, { catoid, catalogYear }) {
+  const requirements = [];
+  const courseGroups = [];
+  const unchecked = [];
+  const options = new Set(entry.blocks.flatMap(([heading, depth, , section]) => [section, depth > 0 ? heading : null]).filter(x => x && OPTION_RE.test(x)));
+  const isChoice = text => NOT_READ_RE.test(text) || (options.size > 1 && options.has(text));
+  entry.blocks.forEach(([heading, depth, codes, section], b) => {
+    const id = `b${b}`;
+    const where = section || 'Program Requirements';
+    const courses = codes.map(code => ({ code }));
+    // A block inside another block (a "Take One" under "Chemistry" under
+    // "Cognates") may be one of several the student picks from: not checked.
+    if (depth > 1 || isChoice(where) || isChoice(heading)) {
+      unchecked.push({ id, section: where, label: heading || where, courses });
+      return;
+    }
+    // Listed directly under a section, or under the program's one concentration: required.
+    if (depth === 0 || (depth === 1 && options.size === 1 && options.has(heading))) {
+      codes.forEach((code, i) => requirements.push({ id: `${id}-${i}`, section: depth ? heading : where, label: code, codes: [code], credits: null }));
+      return;
+    }
+    const pick = PICK_HEADING_RE.exec(heading);
+    if (pick) {
+      const n = PICK_WORDS[pick[1].toLowerCase()];
+      if (n === 1) requirements.push({ id, section: where, label: heading, codes, credits: null });
+      else courseGroups.push({ id, section: where, label: heading, minCount: n, courses });
+      return;
+    }
+    const hours = HOURS_HEADING_RE.exec(heading);
+    if (hours) {
+      courseGroups.push({ id, section: where, label: heading, minHours: +hours[1], courses });
+      return;
+    }
+    unchecked.push({ id, section: where, label: heading || where, courses });
+  });
+  return {
+    id: 'whatif-' + (entry.poid || entry.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')),
+    name: entry.name, programName: entry.name, catoid, catalogYear,
+    poid: entry.poid, sourceUrl: entry.poid ? `https://catalog.calvin.edu/preview_program.php?catoid=${catoid}&poid=${entry.poid}` : null,
+    totalHours: entry.totalHours, estimate: true, labs: {}, titles: {},
+    requirements, courseGroups, unchecked,
+  };
+}
+
 // A program's requirements checked against a student's courses (as parsed:
 // labs are their own entries, e.g. CS 108L). Each requirement is 'done',
-// 'progress' (everything there, something in progress), 'todo', or 'check'
-// (there, but this tool can't tell, e.g. "3 semesters" of a seminar). A
-// lecture that needs a lab (program.labs) counts only with its lab.
-// courseGroups ("Take 10 hours from") count hours, labs included. Minimum
-// grades and manualRequirements aren't checked.
+// 'progress' (everything there, something in progress), or 'todo'. A lecture
+// that needs a lab (program.labs) counts only with its lab. A repeatable
+// seminar ("CS 195 (3 semesters)", requiredOccurrences) counts each semester
+// on the record (courseAttempts, one per course and period): it is done at
+// that many completed semesters, in progress with fewer. Which semesters isn't
+// checked. courseGroups ("Take 10 hours from") count hours, labs included.
+// Minimum grades and manualRequirements aren't checked.
+// Every option counts (r.alternatives / g.courses, from every catalog year with
+// programForStudent); options lists the ones shown: r.shownOptions (default
+// all) and any other the student has a course in. retired lists the codes
+// shown only because they're on the record (not among the shown options).
 // matched lists the student's courses that count, labs as their own entries
-// (lab: true), with the title, hours, and grade from the student's record.
-//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?, ... }], done, inProgress, total }
-export function checkProgram(program, courses) {
+// (lab: true), with the title, hours and grade from the student's record.
+//   { items: [{ kind, id, section, label, status, matched: [{ code, status, title, hours, grade, lab? }], missingLabs, hours?,
+//     occurrences?: { required, completed, inProgress, terms: [{ code, period, status, title, hours, grade }] }, ... }], done, inProgress, total }
+export function checkProgram(program, courses, courseAttempts = []) {
   const byCode = new Map();
   for (const c of courses) {
     if (!c.code || c.status === 'exemption' || isNonPassingGrade(c.grade)) continue;
@@ -656,6 +497,24 @@ export function checkProgram(program, courses) {
     return [entry(own, false), ...(lab && byCode.has(lab) ? [entry(byCode.get(lab), true)] : [])];
   };
 
+  // The semesters a repeatable seminar was taken in, oldest first: one entry
+  // per period (or per record when it has none).
+  const semesters = codes => {
+    const records = (courseAttempts.length ? courseAttempts : courses)
+      .filter(c => codes.includes(c.code) && c.status !== 'exemption' && !isNonPassingGrade(c.grade));
+    const seen = new Set();
+    const terms = [];
+    for (const c of records) {
+      const key = c.period || `${c.code}#${terms.length}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      terms.push({ code: c.code, period: c.period || null, status: c.status === 'in-progress' ? 'progress' : 'done',
+        title: c.title || null, hours: c.hours ?? null, grade: c.grade || null });
+    }
+    const rank = t => periodRank(t.period) ?? Infinity;
+    return terms.sort((a, b) => rank(a) - rank(b));
+  };
+
   const items = [];
   for (const r of program.requirements) {
     const options = r.alternatives || r.codes.map(code => [code]);
@@ -670,9 +529,22 @@ export function checkProgram(program, courses) {
     const matched = best.option.flatMap(records);
     const missingLabs = best.option.filter(code => withLab(code) === 'no-lab').map(labOf);
     let status = best.status === 'partial' ? 'todo' : best.status;
-    if (r.requiredOccurrences && status !== 'todo') status = 'check';
+    let occurrences = null;
+    if (r.requiredOccurrences) {
+      const terms = semesters(options.flat());
+      const completed = terms.filter(t => t.status === 'done').length;
+      const inProgress = terms.length - completed;
+      occurrences = { required: r.requiredOccurrences, completed, inProgress, terms };
+      status = completed >= r.requiredOccurrences ? 'done' : terms.length ? 'progress' : 'todo';
+    }
+    const shown = r.shownOptions || options;
+    const shownKeys = new Set(shown.map(o => o.join('+')));
+    const shownCodes = new Set(shown.flat());
+    const onRecord = o => o.some(code => state(code) || (r.requiredOccurrences && courseAttempts.some(c => c.code === code)));
+    const listed = [...shown, ...options.filter(o => !shownKeys.has(o.join('+')) && onRecord(o))];
+    const retired = [...new Set(listed.flat().filter(code => !shownCodes.has(code)))];
     items.push({ kind: 'requirement', id: r.id, section: r.section, label: r.label, credits: r.credits,
-      note: r.note || null, waivable: !!r.manualWhenMissing, options, status, matched, missingLabs });
+      note: r.note || null, waivable: !!r.manualWhenMissing, options: listed, status, matched, missingLabs, occurrences, retired });
   }
   for (const g of program.courseGroups || []) {
     let doneHours = 0;
@@ -689,15 +561,32 @@ export function checkProgram(program, courses) {
       if (s === 'no-lab') missingLabs.push(lab);
       matched.push(...records(code));
     }
-    const status = doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
+    // "Take Two from the Following" (minCount) counts courses; others count hours.
+    const doneCount = g.courses.filter(({ code }) => withLab(code) === 'done').length;
+    const anyCount = g.courses.filter(({ code }) => withLab(code)).length;
+    const status = g.minCount
+      ? (doneCount >= g.minCount ? 'done' : anyCount >= g.minCount ? 'progress' : 'todo')
+      : doneHours >= g.minHours ? 'done' : doneHours + progressHours >= g.minHours ? 'progress' : 'todo';
+    const shownCodes = new Set(g.shownCodes || g.courses.map(c => c.code));
+    const listed = g.courses.filter(c => shownCodes.has(c.code) || state(c.code));
     items.push({ kind: 'group', id: g.id, section: g.section, label: g.label, note: g.note || null,
-      minHours: g.minHours, hours: doneHours, inProgressHours: progressHours, courses: g.courses, status, matched, missingLabs });
+      minHours: g.minHours ?? null, minCount: g.minCount ?? null, count: doneCount,
+      hours: doneHours, inProgressHours: progressHours, courses: listed, status, matched, missingLabs,
+      retired: listed.map(c => c.code).filter(code => !shownCodes.has(code)) });
   }
+  // Blocks an estimate can't read (programFromCatalog): their courses, and
+  // which you have, but no status; not counted.
+  for (const u of program.unchecked || []) {
+    items.push({ kind: 'list', id: u.id, section: u.section, label: u.label, note: null, courses: u.courses,
+      status: 'unknown', matched: u.courses.flatMap(({ code }) => records(code)), missingLabs: [], retired: [] });
+  }
+  const counted = items.filter(i => i.status !== 'unknown');
   return {
     items,
-    done: items.filter(i => i.status === 'done').length,
-    inProgress: items.filter(i => i.status === 'progress' || i.status === 'check').length,
-    total: items.length,
+    done: counted.filter(i => i.status === 'done').length,
+    inProgress: counted.filter(i => i.status === 'progress').length,
+    total: counted.length,
+    unchecked: items.length - counted.length,
   };
 }
 

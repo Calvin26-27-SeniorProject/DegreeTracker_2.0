@@ -1,0 +1,250 @@
+{
+  "id": "human-resource-management-ba",
+  "name": "Human Resource Management, BA",
+  "code": "HRM.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 380,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13728",
+  "description": "Human resource management (HRM) is the field of study responsible for helping organizations achieve excellence in areas related to their people. Individuals in HRM are responsible for employee acquisition, employee relations and development, performance management, diversity and inclusion, compensation and benefits, as well as succession planning and government compliance. HRM practices directly impact a business's most valuable resource: its people. Overlap Policy This program may not be combined with the business minor program. No more than two majors from the School of Business may be obtained.",
+  "totalHours": "66",
+  "requirements": [
+    {
+      "name": "Business Foundational Courses",
+      "description": null,
+      "courses": [
+        {
+          "code": "ACCT 203",
+          "title": "Managerial Accounting",
+          "credits": "4",
+          "courseId": 7686,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55800"
+        },
+        {
+          "code": "ACCT 204",
+          "title": "Financial Accounting",
+          "credits": "4",
+          "courseId": 7786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55801"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "BUS 392",
+          "title": "Business Ethics",
+          "credits": "4",
+          "courseId": 7871,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55886"
+        },
+        {
+          "code": "BUS 393",
+          "title": "Strategic Management",
+          "credits": "4",
+          "courseId": 7882,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55897"
+        },
+        {
+          "code": "FIN 301",
+          "title": "Corporate Finance",
+          "credits": "4",
+          "courseId": 7875,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55890"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 12133,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57183"
+        },
+        {
+          "code": "MKTG 301",
+          "title": "Marketing",
+          "credits": "4",
+          "courseId": 7878,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55893"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "BUS 394",
+          "title": "Business Capstone",
+          "credits": "4",
+          "courseId": 7883,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55898"
+        },
+        {
+          "code": "HRM 301",
+          "title": "Human Resource Management",
+          "credits": "4",
+          "courseId": 7873,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55888"
+        },
+        {
+          "code": "HRM 305",
+          "title": "The Psychology of Work",
+          "credits": "4",
+          "courseId": 7874,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55889"
+        },
+        {
+          "code": "HRM 310",
+          "title": "Special Topics in Human Resource Management",
+          "credits": "2",
+          "courseId": 9903,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56625"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 10580,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56827"
+        },
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "ECON 221",
+          "title": "Principles of Microeconomics",
+          "credits": "2",
+          "courseId": 7978,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55993"
+        },
+        {
+          "code": "ECON 222",
+          "title": "Principles of Macroeconomics",
+          "credits": "2",
+          "courseId": 7979,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55994"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 9415,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BUS 350",
+              "title": "Business Law",
+              "credits": "4",
+              "courseId": 7867,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55882"
+            },
+            {
+              "code": "BUS 352",
+              "title": "Negotiation Skills and Theory",
+              "credits": "2",
+              "courseId": 10574,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56821"
+            },
+            {
+              "code": "BUS 391",
+              "title": "Business Internship",
+              "credits": "2",
+              "courseId": 7869,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55884"
+            },
+            {
+              "code": "COMM 362",
+              "title": "Small Group and Organizational Communication",
+              "credits": "4",
+              "courseId": 7911,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55925"
+            },
+            {
+              "code": "COMM 265",
+              "title": "Leadership Communication for Organizations",
+              "credits": "2",
+              "courseId": 7902,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55916"
+            },
+            {
+              "code": "ECON 335",
+              "title": "Human Resource Economics",
+              "credits": "4",
+              "courseId": 8186,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56002"
+            },
+            {
+              "code": "ENGL 241",
+              "title": "Business Writing",
+              "credits": "4",
+              "courseId": 8215,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56031"
+            },
+            {
+              "code": "PSYC 256",
+              "title": "Fundamentals of Research and Practice",
+              "credits": "4",
+              "courseId": 8866,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56388"
+            },
+            {
+              "code": "SCM 201",
+              "title": "Introduction to Operations and Supply Chain Management",
+              "credits": "4",
+              "courseId": 10575,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56822"
+            },
+            {
+              "code": "SOWK 370",
+              "title": "The Helping Interview",
+              "credits": "4",
+              "courseId": 9163,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56485"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BUS 391",
+              "placement": "right",
+              "text": "(in HR)"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 66",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

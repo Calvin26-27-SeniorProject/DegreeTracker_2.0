@@ -1,0 +1,58 @@
+{
+  "id": "semester-in-washington-dc-stdc",
+  "name": "Semester in Washington, DC (STDC)",
+  "code": "STDC",
+  "type": "Off-Campus Programs",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 739,
+    "name": "Off-Campus Programs"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13121",
+  "description": "The Henry Semester in Washington, DC, is offered each spring and offers students from a wide range of majors the opportunity to combine an internship in their major or minor with academic study in order to better understand the workings of the nation's capital.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "STDC 341",
+          "title": "Faith and Vocation",
+          "credits": "1",
+          "courseId": 22628,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54925"
+        },
+        {
+          "code": "STDC 342",
+          "title": "Special Topics in Public Life",
+          "credits": "2",
+          "courseId": 21476,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54519"
+        },
+        {
+          "code": "STDC 343",
+          "title": "Integrating Faith and Public Life",
+          "credits": "2, 3",
+          "courseId": 21018,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54458"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STDC 343",
+          "placement": "after",
+          "text": "a departmental internship course in the student's major or minor"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

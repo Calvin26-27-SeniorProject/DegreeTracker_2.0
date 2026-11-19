@@ -1,0 +1,240 @@
+{
+  "id": "honors-scholars-program",
+  "name": "Honors Scholars Program",
+  "code": "HONORS",
+  "type": "Program",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 385,
+    "name": "Honors and Collegiate Scholars"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13817",
+  "description": "The Honors Scholars Program offers Calvin University students the opportunity for advanced study in both the liberal arts and their selected field of study in a community of engaged, bold, and curious learners. Incoming students who are interested in exploring the intersections between the humanities, natural sciences, and social sciences; desire to learn in a challenging and encouraging environment with invested peers and faculty; and want to develop the skills of a scholar by working alongside a faculty mentor in their field of study are encouraged to apply to the Calvin Honors Scholars Program. Application materials can be found on Calvin's Honors and Collegiate Scholars website. Each year, a cohort of 48 students will be invited to participate in the Honors Scholars Program. Students in the cohort will fulfill 18 credits of their Calvin Core course requirements in alternative Honors Scholars Core courses. To graduate \"with Honors,\" a student must complete the courses shown above and achieve an overall GPA of 3.50. Students must also submit an \"Application to Graduate with Honors\" to the Honors and Collegiate Scholars Office at the beginning of their final year. For further information, contact the director (A. Wilstermann) or associate director (C. Hanson) of the Honors and Collegiate Scholars Program.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "HNRS 103",
+          "title": "Foundations in Biblical Literature and Theology",
+          "credits": "4",
+          "courseId": 10603,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56851"
+        },
+        {
+          "code": "HNRS 110",
+          "title": "Honors Community and Commitments",
+          "credits": "2",
+          "courseId": 12088,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57138"
+        },
+        {
+          "code": "HNRS 203",
+          "title": "Intermediate Studies in Biblical Literature and Theology",
+          "credits": "2",
+          "courseId": 10604,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56852"
+        },
+        {
+          "code": "HNRS 280",
+          "title": "Honors Colloquium",
+          "credits": "1, 2, 4",
+          "courseId": 9929,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56653"
+        },
+        {
+          "code": "HNRS 299",
+          "title": "Preparation for the Honors Thesis",
+          "credits": "1",
+          "courseId": 10609,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56857"
+        },
+        {
+          "code": "HNRS 395",
+          "title": "Prompte: Honors Capstone",
+          "credits": "1",
+          "courseId": 11733,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57084"
+        },
+        {
+          "code": "HNRS 399",
+          "title": "Honors Thesis",
+          "credits": "0-2",
+          "courseId": 9930,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56654"
+        }
+      ],
+      "notes": [
+        {
+          "course": "HNRS 280",
+          "placement": "right",
+          "text": "(take 4 hours)"
+        },
+        {
+          "course": "HNRS 399",
+          "placement": "after",
+          "text": "OR approved departmental independent research course"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "HNRS 211",
+              "title": "Honors Creative Writing",
+              "credits": "2",
+              "courseId": 11744,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57095"
+            },
+            {
+              "code": "HNRS 212",
+              "title": "Honors Rhetoric",
+              "credits": "2",
+              "courseId": 11745,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57096"
+            },
+            {
+              "code": "HNRS 213",
+              "title": "Honors Performing Arts",
+              "credits": "2",
+              "courseId": 11676,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57027"
+            },
+            {
+              "code": "HNRS 214",
+              "title": "Honors Visual Art",
+              "credits": "2",
+              "courseId": 11746,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57097"
+            },
+            {
+              "code": "HNRS 222",
+              "title": "Honors Literature",
+              "credits": "2",
+              "courseId": 11747,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57098"
+            },
+            {
+              "code": "HNRS 223",
+              "title": "Honors History",
+              "credits": "2",
+              "courseId": 11748,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57099"
+            },
+            {
+              "code": "HNRS 224",
+              "title": "Honors Philosophy",
+              "credits": "2",
+              "courseId": 10605,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56853"
+            },
+            {
+              "code": "HNRS 225",
+              "title": "Honors Religion",
+              "credits": "2",
+              "courseId": 11749,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57100"
+            },
+            {
+              "code": "HNRS 232",
+              "title": "Honors Physics and Astronomy",
+              "credits": "2",
+              "courseId": 11750,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57101"
+            },
+            {
+              "code": "HNRS 233",
+              "title": "Honors Biology",
+              "credits": "2",
+              "courseId": 11675,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57026"
+            },
+            {
+              "code": "HNRS 234",
+              "title": "Honors Chemistry",
+              "credits": "2",
+              "courseId": 11751,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57102"
+            },
+            {
+              "code": "HNRS 235",
+              "title": "Honors Geology and Earth Science",
+              "credits": "2",
+              "courseId": 11752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57103"
+            },
+            {
+              "code": "HNRS 241",
+              "title": "Honors Economics",
+              "credits": "2",
+              "courseId": 11753,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57104"
+            },
+            {
+              "code": "HNRS 242",
+              "title": "Honors Geography",
+              "credits": "2",
+              "courseId": 11754,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57105"
+            },
+            {
+              "code": "HNRS 243",
+              "title": "Honors Political Science",
+              "credits": "2",
+              "courseId": 11755,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57106"
+            },
+            {
+              "code": "HNRS 244",
+              "title": "Honors Psychology",
+              "credits": "2",
+              "courseId": 11756,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57107"
+            },
+            {
+              "code": "HNRS 245",
+              "title": "Honors Sociology and Social Work",
+              "credits": "2",
+              "courseId": 11757,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57108"
+            },
+            {
+              "code": "HNRS 251",
+              "title": "Honors Computer Science",
+              "credits": "2",
+              "courseId": 12147,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57197"
+            },
+            {
+              "code": "HNRS 252",
+              "title": "Honors Mathematics",
+              "credits": "2",
+              "courseId": 12674,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57872"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: At Least 26",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

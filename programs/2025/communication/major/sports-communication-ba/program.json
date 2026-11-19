@@ -1,0 +1,296 @@
+{
+  "id": "sports-communication-ba",
+  "name": "Sports Communication, BA",
+  "code": "MAJ_SPCOMM",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13821",
+  "description": "The Department of Communication offers the sports communication major, a multidimensional study of communication theory and communication practice in sports. Students will learn the relationship between sports and culture and how communication functions within sports organizations and society. Students will develop a strong theoretical and critical understanding of communication and will use this knowledge to create effective messages for their target audiences. Students also will develop the ability to communicate effectively through various media, adapting to the fast-paced changes in communication technology. In multiple courses and in the sports communication internship, students will develop the necessary professional skills to succeed in a variety of sports communication careers in social media, public relations, advertising, journalism, broadcasting, or community relations. Overlap Policy This program may not be combined with the strategic communication major.",
+  "totalHours": "46-48",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 101",
+          "title": "Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7884,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55899"
+        },
+        {
+          "code": "COMM 200",
+          "title": "Advanced Oral Rhetoric",
+          "credits": "4",
+          "courseId": 7891,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55905"
+        },
+        {
+          "code": "COMM 249",
+          "title": "Audio Storytelling",
+          "credits": "2",
+          "courseId": 7897,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55911"
+        },
+        {
+          "code": "COMM 250",
+          "title": "Multi-Camera Production",
+          "credits": "4",
+          "courseId": 7898,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55912"
+        },
+        {
+          "code": "COMM 287",
+          "title": "Strategic Sports Communication",
+          "credits": "4",
+          "courseId": 11725,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57076"
+        },
+        {
+          "code": "COMM 346",
+          "title": "Internship in Communication",
+          "credits": "2",
+          "courseId": 7909,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55923"
+        },
+        {
+          "code": "COMM 398",
+          "title": "Communication, Technology, and Society",
+          "credits": "4",
+          "courseId": 10581,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56828"
+        },
+        {
+          "code": "KIN 218",
+          "title": "Administration of Athletics",
+          "credits": "4",
+          "courseId": 8594,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56213"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 180",
+              "title": "Communicating with Digital Media",
+              "credits": "2",
+              "courseId": 7889,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55903"
+            },
+            {
+              "code": "COMM 190",
+              "title": "Media Production I",
+              "credits": "4",
+              "courseId": 7890,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 201",
+              "title": "New Media",
+              "credits": "4",
+              "courseId": 7892,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+            },
+            {
+              "code": "COMM 285",
+              "title": "Public Relations and Communication Practice",
+              "credits": "4",
+              "courseId": 7904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55918"
+            },
+            {
+              "code": "COMM 286",
+              "title": "Advertising and Communication Strategies",
+              "credits": "4",
+              "courseId": 9904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56626"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 305",
+              "title": "Persuasion and Propaganda",
+              "credits": "4",
+              "courseId": 7906,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55920"
+            },
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 7907,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+            },
+            {
+              "code": "COMM 362",
+              "title": "Small Group and Organizational Communication",
+              "credits": "4",
+              "courseId": 7911,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55925"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 240",
+              "title": "Journalism",
+              "credits": "4",
+              "courseId": 8216,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56032"
+            },
+            {
+              "code": "ENGL 341",
+              "title": "Feature Journalism",
+              "credits": "4",
+              "courseId": 8217,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56033"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": "(Courses already taken above may not be used to satisfy this requirement.)",
+          "courses": [
+            {
+              "code": "COMM 201",
+              "title": "New Media",
+              "credits": "4",
+              "courseId": 7892,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+            },
+            {
+              "code": "COMM 251",
+              "title": "Live and Studio Audio Production",
+              "credits": "2",
+              "courseId": 11222,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56973"
+            },
+            {
+              "code": "COMM 285",
+              "title": "Public Relations and Communication Practice",
+              "credits": "4",
+              "courseId": 7904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55918"
+            },
+            {
+              "code": "COMM 286",
+              "title": "Advertising and Communication Strategies",
+              "credits": "4",
+              "courseId": 9904,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56626"
+            },
+            {
+              "code": "COMM 290",
+              "title": "Media Production II",
+              "credits": "4",
+              "courseId": 7905,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55919"
+            },
+            {
+              "code": "COMM 305",
+              "title": "Persuasion and Propaganda",
+              "credits": "4",
+              "courseId": 7906,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55920"
+            },
+            {
+              "code": "COMM 311",
+              "title": "Argumentation and Advocacy",
+              "credits": "4",
+              "courseId": 7907,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55921"
+            },
+            {
+              "code": "COMM 362",
+              "title": "Small Group and Organizational Communication",
+              "credits": "4",
+              "courseId": 7911,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55925"
+            },
+            {
+              "code": "COMM 240",
+              "title": "Journalism",
+              "credits": "4",
+              "courseId": 8216,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56032"
+            },
+            {
+              "code": "ENGL 341",
+              "title": "Feature Journalism",
+              "credits": "4",
+              "courseId": 8217,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56033"
+            },
+            {
+              "code": "ENGL 360",
+              "title": "Creative Writing: Nonfiction",
+              "credits": "4",
+              "courseId": 8220,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56036"
+            },
+            {
+              "code": "KIN 302",
+              "title": "Sociology of Sport",
+              "credits": "2",
+              "courseId": 8601,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56220"
+            },
+            {
+              "code": "KIN 320",
+              "title": "Sports Marketing and Public Relations",
+              "credits": "4",
+              "courseId": 8602,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56221"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 46-48",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

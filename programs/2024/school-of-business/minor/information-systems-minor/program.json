@@ -1,0 +1,91 @@
+{
+  "id": "information-systems-minor",
+  "name": "Information Systems Minor",
+  "code": "INSYS.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 827,
+    "name": "School of Business"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13296",
+  "description": "Organizations use information systems to track, control, and steward their resources and their relationships with stakeholders, whether by keeping records, analyzing past performance, or predicting future performance. Therefore, information systems are relevant to most organizational functions. The information systems minor familiarizes students with relevant fundamentals in business and computing, so that in their future callings they may collaborate more effectively with technologists. Overlap Policy This program may not be combined with the business analytics, BS, program. No more than two minors from the School of Business may be obtained.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BUS 100",
+          "title": "Business Foundations",
+          "credits": "2",
+          "courseId": 22874,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55774"
+        },
+        {
+          "code": "BUS 205",
+          "title": "Project Management",
+          "credits": "4",
+          "courseId": 22633,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54930"
+        },
+        {
+          "code": "CS 106",
+          "title": "Introduction to Scientific Computation and Modeling",
+          "credits": "3",
+          "courseId": 18263,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+        },
+        {
+          "code": "DATA 102",
+          "title": "Foundations of Data Science and Analytics",
+          "credits": "2",
+          "courseId": 22275,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54762"
+        },
+        {
+          "code": "INFO 201",
+          "title": "Introduction to Management Information Systems",
+          "credits": "4",
+          "courseId": 22879,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55779"
+        },
+        {
+          "code": "INFO 301",
+          "title": "Business Enterprise Systems",
+          "credits": "4",
+          "courseId": 22634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54932"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CS 106",
+          "placement": "after",
+          "text": "OR CS 108 - Introduction to Computing"
+        },
+        {
+          "course": "BUS 100",
+          "placement": "after",
+          "text": "OR BUS 201 - Management and Organizational Behavior"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: at Least 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

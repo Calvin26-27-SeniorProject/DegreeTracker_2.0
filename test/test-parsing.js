@@ -5,7 +5,8 @@
 
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { parseTranscript, parseProgress, detectInputFormat, parseCoreProgram } from '../src/core.js';
+import { parseTranscript, parseProgress, detectInputFormat } from '../src/parse.js';
+import { parseCoreProgram } from '../src/catalog-parse.js';
 import { JSDOM } from 'jsdom';
 
 // ---- parseTranscript ----

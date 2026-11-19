@@ -1,0 +1,65 @@
+{
+  "id": "english-minor",
+  "name": "English Minor",
+  "code": "ENGL.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 360,
+    "name": "English"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13755",
+  "description": "The English department offers coursework in linguistics, literature, and writing—the art, craft, and science of language. The English studies minor allows students to choose courses to reflect individual interests and goals.",
+  "totalHours": "20",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ENGL 260",
+          "title": "The Craft of Writing",
+          "credits": "4",
+          "courseId": 8213,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56029"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 8223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+        },
+        {
+          "code": "ENGL 290",
+          "title": "Ways of Reading",
+          "credits": "4",
+          "courseId": 10327,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56752"
+        }
+      ],
+      "notes": [
+        {
+          "course": "ENGL 290",
+          "placement": "after",
+          "text": "an additional 8 hours of 300-level ENGL courses"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 20",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

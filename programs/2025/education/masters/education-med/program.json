@@ -1,0 +1,103 @@
+{
+  "id": "education-med",
+  "name": "Education, MEd",
+  "code": "MED.MAJ",
+  "type": "Master's",
+  "degreeTypes": [
+    "Master of Education"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13661",
+  "description": "The Master of Education (MEd) program engages educational practitioners in rigorous education. By engaging students with substantive scholarship, they develop educational expertise in various areas, to become leaders in the field of education. The MEd program includes four concentrations: curriculum and instruction, literacy, inclusion specialist, and educational leadership. The MEd program serves teachers, administrators, and educators more generally who desire to grow personally and professionally through advanced education.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Required Core Course",
+          "description": "(3 credits)",
+          "courses": [
+            {
+              "code": "EDUC 514",
+              "title": "Educational Research and Evaluation",
+              "credits": "3",
+              "courseId": 9438,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56559"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Flexible Core Courses: Choose Three",
+          "description": "(9 credits)",
+          "courses": [
+            {
+              "code": "EDUC 510",
+              "title": "Framing Questions, Global Forces, Constraining Structures",
+              "credits": "3",
+              "courseId": 9437,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56558"
+            },
+            {
+              "code": "EDUC 516",
+              "title": "Leading Educational Communities: Communication",
+              "credits": "3",
+              "courseId": 9439,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56560"
+            },
+            {
+              "code": "EDUC 522",
+              "title": "Reshaping Curriculum, Teaching, and Learning",
+              "credits": "3",
+              "courseId": 9440,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56561"
+            },
+            {
+              "code": "EDUC 554",
+              "title": "Pathways to Inclusion: Re-examining Beliefs about Learners",
+              "credits": "3",
+              "courseId": 9447,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56568"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Concentration Courses",
+          "description": "(9 credits) three concentration-specific courses",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electives",
+          "description": "(9 credits; may include concentration-specific requirements) three approved electives, which may include EDUC 596 - Specialized Literature Survey",
+          "courses": [],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: at least 30",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1628,6 +1628,11 @@
    "max": 4,
    "term": "26FA"
   },
+  "STAT 341": {
+   "min": 4,
+   "max": 4,
+   "term": "27SP"
+  },
   "STAT 343": {
    "min": 4,
    "max": 4,
@@ -2525,7 +2530,8 @@
     {
      "section": "A",
      "meets": "MWF 11:00 AM–12:05 PM",
-     "instructors": "Ken Arnold"
+     "instructors": "Ken Arnold",
+     "title": "Machine Learning"
     }
    ]
   },
@@ -2534,7 +2540,8 @@
     {
      "section": "A",
      "meets": "MWF 11:00 AM–12:05 PM",
-     "instructors": "Ken Arnold"
+     "instructors": "Ken Arnold",
+     "title": "Advanced Machine Learning"
     }
    ]
   },
@@ -3030,7 +3037,8 @@
     {
      "section": "A",
      "meets": "MWF 12:15–1:20 PM",
-     "instructors": "Melinda Higley"
+     "instructors": "Melinda Higley",
+     "title": "Earth History"
     },
     {
      "section": "A",
@@ -4944,6 +4952,15 @@
      "section": "B",
      "meets": "MWF 9:15–10:20 AM",
      "instructors": "Thomas Scofield"
+    }
+   ]
+  },
+  "STAT 341": {
+   "27SP": [
+    {
+     "section": "A",
+     "meets": "MWF 2:45–3:50 PM",
+     "instructors": "Stacy DeRuiter"
     }
    ]
   },

@@ -1,0 +1,438 @@
+{
+  "id": "speech-pathology-and-audiology-ba-ma-5-year",
+  "name": "Speech Pathology and Audiology, BA-MA (5 year)",
+  "code": "SPAUD.MAJ.5YR",
+  "type": "Dual Degree",
+  "degreeTypes": [
+    "Bachelor of Arts-Master of Arts"
+  ],
+  "department": {
+    "id": 374,
+    "name": "Speech Pathology and Audiology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13599",
+  "description": null,
+  "totalHours": "132-136",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses may fulfill Core requirements.)",
+      "courses": [
+        {
+          "code": "SPAUD 101",
+          "title": "Introduction to Speech Pathology and Audiology",
+          "credits": "2",
+          "courseId": 9181,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56503"
+        },
+        {
+          "code": "SPAUD 210",
+          "title": "Anatomy and Physiology of the Speech, Hearing, and Language Mechanisms",
+          "credits": "3",
+          "courseId": 9182,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56504"
+        },
+        {
+          "code": "SPAUD 212",
+          "title": "Speech and Hearing Science",
+          "credits": "4",
+          "courseId": 11181,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56931"
+        },
+        {
+          "code": "SPAUD 216",
+          "title": "Phonetics",
+          "credits": "3",
+          "courseId": 9183,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56505"
+        },
+        {
+          "code": "SPAUD 311",
+          "title": "Child Language Development",
+          "credits": "4",
+          "courseId": 9184,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56506"
+        },
+        {
+          "code": "SPAUD 343",
+          "title": "Principles of Communication Neuroscience",
+          "credits": "4",
+          "courseId": 9185,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56507"
+        },
+        {
+          "code": "SPAUD 344",
+          "title": "Audiology: Testing and Diagnosis",
+          "credits": "4",
+          "courseId": 9385,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56508"
+        },
+        {
+          "code": "SPAUD 370",
+          "title": "Introduction to Clinical Practicum",
+          "credits": "2",
+          "courseId": 9389,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56510"
+        },
+        {
+          "code": "SPAUD 381",
+          "title": "Speech Sound and Language Disorders across the Lifespan",
+          "credits": "4",
+          "courseId": 9390,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56511"
+        },
+        {
+          "code": "SPAUD 399",
+          "title": "Critical Reflections in Speech Pathology",
+          "credits": "4",
+          "courseId": 9410,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56531"
+        },
+        {
+          "code": "SPAUD 502",
+          "title": "Counseling in Speech-Language Pathology",
+          "credits": "2",
+          "courseId": 12135,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57185"
+        },
+        {
+          "code": "SPAUD 503",
+          "title": "Child Language Disorders I: Infants, Toddlers, and Preschool Children",
+          "credits": "4",
+          "courseId": 9391,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56512"
+        },
+        {
+          "code": "SPAUD 504",
+          "title": "Language Disorders II: School-Age Children",
+          "credits": "4",
+          "courseId": 9392,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56513"
+        },
+        {
+          "code": "SPAUD 505",
+          "title": "Research Methods in Speech-Language Pathology",
+          "credits": "4",
+          "courseId": 9393,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56514"
+        },
+        {
+          "code": "SPAUD 506",
+          "title": "Aphasia",
+          "credits": "4",
+          "courseId": 9394,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56515"
+        },
+        {
+          "code": "SPAUD 508",
+          "title": "Speech Sound Disorders",
+          "credits": "4",
+          "courseId": 9395,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56516"
+        },
+        {
+          "code": "SPAUD 510",
+          "title": "Fluency Disorders",
+          "credits": "2",
+          "courseId": 9396,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56517"
+        },
+        {
+          "code": "SPAUD 512",
+          "title": "Augmentative and Alternative Communication",
+          "credits": "2",
+          "courseId": 9397,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56518"
+        },
+        {
+          "code": "SPAUD 514",
+          "title": "Autism Spectrum Disorder",
+          "credits": "2",
+          "courseId": 9953,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56677"
+        },
+        {
+          "code": "SPAUD 515",
+          "title": "Seminar in Speech-Language Pathology",
+          "credits": "2",
+          "courseId": 9398,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56519"
+        },
+        {
+          "code": "SPAUD 519",
+          "title": "Aural Rehabilitation",
+          "credits": "4",
+          "courseId": 12136,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57186"
+        },
+        {
+          "code": "SPAUD 520",
+          "title": "Motor Speech Disorders",
+          "credits": "4",
+          "courseId": 9399,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56520"
+        },
+        {
+          "code": "SPAUD 521",
+          "title": "Voice and Voice Disorders",
+          "credits": "4",
+          "courseId": 9400,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56521"
+        },
+        {
+          "code": "SPAUD 522",
+          "title": "Cognitive Communication Disorders",
+          "credits": "4",
+          "courseId": 9401,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56522"
+        },
+        {
+          "code": "SPAUD 523",
+          "title": "Dysphagia",
+          "credits": "4",
+          "courseId": 9402,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56523"
+        },
+        {
+          "code": "SPAUD 524",
+          "title": "Cleft and Craniofacial Disorders",
+          "credits": "2",
+          "courseId": 9403,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56524"
+        },
+        {
+          "code": "SPAUD 530",
+          "title": "Clinical Practicum: Clinic 1",
+          "credits": "2",
+          "courseId": 9404,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56525"
+        },
+        {
+          "code": "SPAUD 531",
+          "title": "Clinical Practicum: Clinic 2",
+          "credits": "2",
+          "courseId": 9405,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56526"
+        },
+        {
+          "code": "SPAUD 532",
+          "title": "Clinical Practicum: Clinic 3",
+          "credits": "4",
+          "courseId": 9406,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56527"
+        },
+        {
+          "code": "SPAUD 540",
+          "title": "Clinical Practicum: Externship 1",
+          "credits": "6",
+          "courseId": 9407,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56528"
+        },
+        {
+          "code": "SPAUD 541",
+          "title": "Clinical Practicum: Externship 2",
+          "credits": "6",
+          "courseId": 9408,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56529"
+        },
+        {
+          "code": "SPAUD 595",
+          "title": "Thesis",
+          "credits": "1",
+          "courseId": 9409,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56530"
+        },
+        {
+          "code": "ENGL 270",
+          "title": "Introduction to Linguistics",
+          "credits": "4",
+          "courseId": 8223,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56039"
+        },
+        {
+          "code": "ENGL 275",
+          "title": "English Syntax",
+          "credits": "4",
+          "courseId": 8227,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56043"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 8861,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56383"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SPAUD 595",
+          "placement": "right",
+          "text": "(optional)"
+        },
+        {
+          "course": "ENGL 275",
+          "placement": "after",
+          "text": "OR ENGL 373 - Stylistics and Discourse Analysis"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 7832,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55847"
+            },
+            {
+              "code": "BIOL 123",
+              "title": "Living Systems",
+              "credits": "4",
+              "courseId": 7833,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55848"
+            },
+            {
+              "code": "BIOL 141",
+              "title": "Cell Biology and Genetics for the Health Sciences",
+              "credits": "3",
+              "courseId": 7834,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55849"
+            },
+            {
+              "code": "BIOL 161",
+              "title": "Cellular and Genetic Systems",
+              "credits": "3",
+              "courseId": 7836,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55851"
+            },
+            {
+              "code": "BIOL 205",
+              "title": "Human Anatomy",
+              "credits": "3",
+              "courseId": 7837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55852"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "CHEM 100",
+              "title": "The Molecular World",
+              "credits": "4",
+              "courseId": 7915,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55929"
+            },
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 7916,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55930"
+            },
+            {
+              "code": "CHEM 160",
+              "title": "Chemistry for the Health Sciences",
+              "credits": "3",
+              "courseId": 7919,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55933"
+            },
+            {
+              "code": "PHYS 133",
+              "title": "Introductory Physics: Mechanics and Gravity",
+              "credits": "3",
+              "courseId": 8811,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56333"
+            },
+            {
+              "code": "PHYS 212",
+              "title": "Inquiry-Based Physics",
+              "credits": "4",
+              "courseId": 8813,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56335"
+            },
+            {
+              "code": "PHYS 221",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 8814,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56336"
+            },
+            {
+              "code": "PHYS 223",
+              "title": "Physics for the Health Sciences",
+              "credits": "3",
+              "courseId": 8816,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56338"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 8865,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56387"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 9145,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56467"
+            },
+            {
+              "code": "SOWK 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 9158,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56480"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 9415,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56536"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 9416,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56537"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 132-136",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

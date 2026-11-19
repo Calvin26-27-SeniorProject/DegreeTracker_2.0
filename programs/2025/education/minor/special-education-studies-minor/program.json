@@ -1,0 +1,207 @@
+{
+  "id": "special-education-studies-minor",
+  "name": "Special Education Studies Minor",
+  "code": "SPDST.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 358,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13704",
+  "description": "Special education studies is the study of disability, special education, and supports provided to individuals with identified disabilities, including disability theory, historical views, principles, systems, and practices of support. Students earning this minor will become knowledgeable about disability, special education practices, and policies designed to support individuals with disabilities, while not earning certification as a professional educator.",
+  "totalHours": "18",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "EDUC 240",
+          "title": "The Social Context of Education",
+          "credits": "4",
+          "courseId": 11208,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56959"
+        },
+        {
+          "code": "EDUC 241",
+          "title": "Inclusive Teaching: Ability, Language, and Multicultural Education",
+          "credits": "4",
+          "courseId": 10613,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56861"
+        }
+      ],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Complete One Concentration",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": [
+        {
+          "name": "Clinical Concentration: Educational Assessment",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 310",
+              "title": "Assessment in Early Childhood and Special Education",
+              "credits": "2",
+              "courseId": 8199,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56015"
+            },
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 8874,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56396"
+            },
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 8865,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56387"
+            }
+          ],
+          "notes": [
+            {
+              "course": "PSYC 343",
+              "placement": "after",
+              "text": "OR PSYC 344 - Neuropsychology"
+            },
+            {
+              "course": "PSYC 255",
+              "placement": "after",
+              "text": "OR SOC 255 - Social Science Statistics"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Teaching and Learning Concentration: Early Childhood Special Education",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 236",
+              "title": "Foundations of Early Childhood Education",
+              "credits": "4",
+              "courseId": 8195,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56011"
+            },
+            {
+              "code": "EDUC 330",
+              "title": "Curriculum and Instruction: Cognitive Impairment",
+              "credits": "4",
+              "courseId": 8202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56018"
+            },
+            {
+              "code": "EDUC 238",
+              "title": "Developmentally Appropriate Practice with Young Children",
+              "credits": "2",
+              "courseId": 8196,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56012"
+            }
+          ],
+          "notes": [
+            {
+              "course": "EDUC 238",
+              "placement": "after",
+              "text": "OR EDUC 331 - Introduction to Cognitive Impairment: Birth through School Age"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Teaching and Learning Concentration: Education and Recreation",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 330",
+              "title": "Curriculum and Instruction: Cognitive Impairment",
+              "credits": "4",
+              "courseId": 8202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56018"
+            },
+            {
+              "code": "EDUC 331",
+              "title": "Introduction to Cognitive Impairment: Birth through School Age",
+              "credits": "2",
+              "courseId": 11213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56964"
+            },
+            {
+              "code": "EDUC 332",
+              "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+              "credits": "2",
+              "courseId": 11214,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56965"
+            },
+            {
+              "code": "KIN 215",
+              "title": "Physical Education and Recreation for Persons with Disabilities",
+              "credits": "2",
+              "courseId": 8592,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56211"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Teaching and Learning Concentration: Special Education: Cognitive Impairment",
+          "description": null,
+          "courses": [
+            {
+              "code": "EDUC 310",
+              "title": "Assessment in Early Childhood and Special Education",
+              "credits": "2",
+              "courseId": 8199,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56015"
+            },
+            {
+              "code": "EDUC 330",
+              "title": "Curriculum and Instruction: Cognitive Impairment",
+              "credits": "4",
+              "courseId": 8202,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56018"
+            },
+            {
+              "code": "EDUC 331",
+              "title": "Introduction to Cognitive Impairment: Birth through School Age",
+              "credits": "2",
+              "courseId": 11213,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56964"
+            },
+            {
+              "code": "EDUC 332",
+              "title": "Introduction to Cognitive Impairment: Transition to Adulthood",
+              "credits": "2",
+              "courseId": 11214,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56965"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 18",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

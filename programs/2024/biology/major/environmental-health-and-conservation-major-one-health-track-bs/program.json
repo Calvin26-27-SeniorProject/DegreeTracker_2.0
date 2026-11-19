@@ -1,0 +1,256 @@
+{
+  "id": "environmental-health-and-conservation-major-one-health-track-bs",
+  "name": "Environmental Health and Conservation Major: One Health Track, BS",
+  "code": "EHC.ONEH.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 741,
+    "name": "Biology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13223",
+  "description": null,
+  "totalHours": "61-65",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 17752,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+        },
+        {
+          "code": "BIOL 200",
+          "title": "Research Design and Methodology",
+          "credits": "4",
+          "courseId": 17757,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53746"
+        },
+        {
+          "code": "BIOL 231",
+          "title": "Introduction to Animal Physiology",
+          "credits": "1.5",
+          "courseId": 17756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+        },
+        {
+          "code": "BIOL 232",
+          "title": "Introduction to Plant Physiology",
+          "credits": "1.5",
+          "courseId": 22584,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54880"
+        },
+        {
+          "code": "BIOL 295",
+          "title": "Biology Seminar",
+          "credits": "0",
+          "courseId": 17758,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53747"
+        },
+        {
+          "code": "BIOL 395",
+          "title": "Perspectives in Biology",
+          "credits": "4",
+          "courseId": 17777,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53766"
+        },
+        {
+          "code": "ENST 285",
+          "title": "Environmental Practicum",
+          "credits": "2",
+          "courseId": 21517,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54561"
+        }
+      ],
+      "notes": [
+        {
+          "course": "BIOL 295",
+          "placement": "right",
+          "text": "(taken twice)"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 20 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 321",
+              "title": "Genetics and Development",
+              "credits": "3",
+              "courseId": 17760,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53749"
+            },
+            {
+              "code": "BIOL 323",
+              "title": "Comparative Vertebrate Anatomy",
+              "credits": "3",
+              "courseId": 17761,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53750"
+            },
+            {
+              "code": "BIOL 331",
+              "title": "Comparative Animal and Human Physiology",
+              "credits": "3",
+              "courseId": 17763,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53752"
+            },
+            {
+              "code": "BIOL 332",
+              "title": "Plant Physiology",
+              "credits": "3",
+              "courseId": 17764,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53753"
+            },
+            {
+              "code": "BIOL 336",
+              "title": "General Microbiology",
+              "credits": "3",
+              "courseId": 17767,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53756"
+            },
+            {
+              "code": "BIOL 354",
+              "title": "Specific Advanced Topics",
+              "credits": "1-4",
+              "courseId": 17773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53762"
+            },
+            {
+              "code": "BIOL 364",
+              "title": "Global Health, Environment, and Sustainability",
+              "credits": "4",
+              "courseId": 17774,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53763"
+            },
+            {
+              "code": "BIOL 372",
+              "title": "Dutch Sustainability: Is Orange the New Green?",
+              "credits": "2",
+              "courseId": 22711,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54960"
+            },
+            {
+              "code": "BIOL 385",
+              "title": "Internship in Biology",
+              "credits": "0-4",
+              "courseId": 17775,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53764"
+            },
+            {
+              "code": "ENST 302",
+              "title": "Environmental Law",
+              "credits": "2",
+              "courseId": 18792,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+            },
+            {
+              "code": "GEO 310",
+              "title": "Urban Geography",
+              "credits": "4",
+              "courseId": 19221,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54009"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BIOL 354",
+              "placement": "right",
+              "text": "(agro-ecology or tropical diseases)"
+            },
+            {
+              "course": "GEO 310",
+              "placement": "after",
+              "text": "an Au Sable course"
+            },
+            {
+              "course": "BIOL 385",
+              "placement": "after",
+              "text": "OR BIOL 399 - Undergraduate Research"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": "(Some courses may fulfill Core requirements.)",
+          "courses": [
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 18230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+            },
+            {
+              "code": "CHEM 240",
+              "title": "Survey of Organic Chemistry",
+              "credits": "3",
+              "courseId": 18236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+            },
+            {
+              "code": "GEO 260",
+              "title": "GIS and Cartography",
+              "credits": "4",
+              "courseId": 19218,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+            },
+            {
+              "code": "PUBH 248",
+              "title": "Epidemiology",
+              "credits": "3",
+              "courseId": 20576,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54315"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 101",
+              "placement": "right",
+              "text": "AND CHEM 102 - General Chemistry II"
+            },
+            {
+              "course": "CHEM 101",
+              "placement": "after",
+              "text": "OR CHEM 103 - Accelerated General Chemistry"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 61-65",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

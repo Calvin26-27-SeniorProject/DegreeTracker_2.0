@@ -1,0 +1,124 @@
+{
+  "id": "film-and-media-major-studies-concentration-ba",
+  "name": "Film and Media Major: Studies Concentration, BA",
+  "code": "CASMF.STUDIES.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13577",
+  "description": "The film and media major focuses on screen storytelling, providing students with opportunities to study digital media and how it communicates in film, television, and new media platforms, advertising, and other digital media arts. The film and media major provides an integrated liberal arts foundation emphasizing the intersections of faith, culture, and film and media as art, communication, an institution, and commercial product. Overlap Policy This program may not be combined with the applied film and media major, digital communication, film and media major: production concentration, or film and media minor.",
+  "totalHours": "40",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 145",
+          "title": "Introduction to Film and Media",
+          "credits": "4",
+          "courseId": 7888,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55902"
+        },
+        {
+          "code": "COMM 190",
+          "title": "Media Production I",
+          "credits": "4",
+          "courseId": 7890,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+        },
+        {
+          "code": "COMM 201",
+          "title": "New Media",
+          "credits": "4",
+          "courseId": 7892,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+        },
+        {
+          "code": "COMM 248",
+          "title": "Screenwriting",
+          "credits": "4",
+          "courseId": 7896,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55910"
+        },
+        {
+          "code": "COMM 249",
+          "title": "Audio Storytelling",
+          "credits": "2",
+          "courseId": 7897,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55911"
+        },
+        {
+          "code": "COMM 250",
+          "title": "Multi-Camera Production",
+          "credits": "4",
+          "courseId": 7898,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55912"
+        },
+        {
+          "code": "COMM 254",
+          "title": "Screen Storytelling: Theory and Criticism",
+          "credits": "2",
+          "courseId": 7899,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55913"
+        },
+        {
+          "code": "COMM 330",
+          "title": "Media and Society",
+          "credits": "4",
+          "courseId": 7895,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55909"
+        },
+        {
+          "code": "COMM 381",
+          "title": "Topics in Film and Media History",
+          "credits": "4",
+          "courseId": 7903,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55917"
+        },
+        {
+          "code": "COMM 399",
+          "title": "Advanced Communication Study",
+          "credits": "4",
+          "courseId": 7914,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55928"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 399",
+          "placement": "after",
+          "text": "4 hours from approved electives"
+        },
+        {
+          "course": "COMM 248",
+          "placement": "after",
+          "text": "OR COMM 255 - Documentary Film and Television"
+        },
+        {
+          "course": "COMM 250",
+          "placement": "after",
+          "text": "OR COMM 290 - Media Production II"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 40",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

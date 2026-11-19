@@ -1,0 +1,211 @@
+{
+  "id": "digital-communication-ba",
+  "name": "Digital Communication, BA",
+  "code": "CASCS.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 344,
+    "name": "Communication"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13626",
+  "description": "The digital communication major prepares students to create media for digital platforms, learning how to communicate well in those mediums for various audiences. Students take courses in film and media production, computer science, and either graphic design or photography. In theory and criticism courses, students also learn more about the relationship between communication, technology, and society. Overlap Policy This program may not be combined with the applied film and media major, Film and Media Major: Production Concentration, BA, Film and Media Major: Studies Concentration, BA, or film and media minor.",
+  "totalHours": "46",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "COMM 141",
+          "title": "Visual Rhetoric",
+          "credits": "2",
+          "courseId": 7887,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55901"
+        },
+        {
+          "code": "COMM 190",
+          "title": "Media Production I",
+          "credits": "4",
+          "courseId": 7890,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55904"
+        },
+        {
+          "code": "COMM 201",
+          "title": "New Media",
+          "credits": "4",
+          "courseId": 7892,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55906"
+        },
+        {
+          "code": "COMM 249",
+          "title": "Audio Storytelling",
+          "credits": "2",
+          "courseId": 7897,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55911"
+        },
+        {
+          "code": "COMM 285",
+          "title": "Public Relations and Communication Practice",
+          "credits": "4",
+          "courseId": 7904,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55918"
+        },
+        {
+          "code": "COMM 290",
+          "title": "Media Production II",
+          "credits": "4",
+          "courseId": 7905,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55919"
+        },
+        {
+          "code": "COMM 346",
+          "title": "Internship in Communication",
+          "credits": "2",
+          "courseId": 7909,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55923"
+        },
+        {
+          "code": "COMM 398",
+          "title": "Communication, Technology, and Society",
+          "credits": "4",
+          "courseId": 10581,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56828"
+        }
+      ],
+      "notes": [
+        {
+          "course": "COMM 290",
+          "placement": "right",
+          "text": "(or approved substitute)"
+        },
+        {
+          "course": "COMM 201",
+          "placement": "after",
+          "text": "OR COMM 330 - Media and Society"
+        },
+        {
+          "course": "COMM 285",
+          "placement": "after",
+          "text": "OR COMM 286 - Advertising and Communication Strategies"
+        },
+        {
+          "course": "COMM 398",
+          "placement": "after",
+          "text": "OR COMM 399 - Advanced Communication Study"
+        }
+      ],
+      "children": [
+        {
+          "name": "Cognates",
+          "description": "(Some courses have corequisite labs.)",
+          "courses": [
+            {
+              "code": "CS 100",
+              "title": "Creating Interactive Web Media",
+              "credits": "4",
+              "courseId": 7947,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55961"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 7950,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55964"
+            },
+            {
+              "code": "CS 112",
+              "title": "Introduction to Data Structures",
+              "credits": "3",
+              "courseId": 7951,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55965"
+            }
+          ],
+          "notes": [],
+          "children": [
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CS 262",
+                  "title": "Software Engineering",
+                  "credits": "4",
+                  "courseId": 7956,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55970"
+                },
+                {
+                  "code": "CS 336",
+                  "title": "Web Development",
+                  "credits": "4",
+                  "courseId": 9455,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56576"
+                },
+                {
+                  "code": "DATA 202",
+                  "title": "Introduction to Machine Learning",
+                  "credits": "4",
+                  "courseId": 7969,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55984"
+                }
+              ],
+              "notes": [],
+              "children": []
+            },
+            {
+              "name": "Take One from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "ARTS 255",
+                  "title": "Graphic Design 1: Process",
+                  "credits": "4",
+                  "courseId": 7802,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55817"
+                },
+                {
+                  "code": "ARTS 256",
+                  "title": "Introduction to Photography",
+                  "credits": "4",
+                  "courseId": 7803,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55818"
+                },
+                {
+                  "code": "ARTS 305",
+                  "title": "Graphic Design 2: Structures",
+                  "credits": "4",
+                  "courseId": 7808,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55823"
+                },
+                {
+                  "code": "ARTS 316",
+                  "title": "Digital Photography",
+                  "credits": "4",
+                  "courseId": 7812,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55827"
+                }
+              ],
+              "notes": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 46",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "id": "environmental-studies-major-politics-concentration",
+  "name": "Environmental Studies Major: Politics Concentration",
+  "code": "ENST.POLS.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 767,
+    "name": "Environmental Science, Environmental Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13171",
+  "description": null,
+  "totalHours": "52",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": "(Some courses have a corequisite laboratory section.)",
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "ECON 232",
+          "title": "Environmental Economics",
+          "credits": "2",
+          "courseId": 18295,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53885"
+        },
+        {
+          "code": "ENST 210",
+          "title": "Human Impacts on the Environment",
+          "credits": "4",
+          "courseId": 18791,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+        },
+        {
+          "code": "ENST 301",
+          "title": "American Environmentalism",
+          "credits": "2",
+          "courseId": 22591,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54887"
+        },
+        {
+          "code": "ENST 302",
+          "title": "Environmental Law",
+          "credits": "2",
+          "courseId": 18792,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53980"
+        },
+        {
+          "code": "GEO 120",
+          "title": "Earth Systems",
+          "credits": "3",
+          "courseId": 19210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53998"
+        },
+        {
+          "code": "GEO 252",
+          "title": "Geomorphology",
+          "credits": "3",
+          "courseId": 19217,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54005"
+        },
+        {
+          "code": "GEO 260",
+          "title": "GIS and Cartography",
+          "credits": "4",
+          "courseId": 19218,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54006"
+        },
+        {
+          "code": "GEO 395",
+          "title": "Senior Seminar in Geology, Geography, and Environment",
+          "credits": "4",
+          "courseId": 19229,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54017"
+        },
+        {
+          "code": "POLS 212",
+          "title": "Institutions and Politics of US Public Policy",
+          "credits": "2",
+          "courseId": 20233,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54272"
+        }
+      ],
+      "notes": [
+        {
+          "course": "GEO 120",
+          "placement": "after",
+          "text": "OR GEO 151 - Introduction to Geology OR GEO 153 - Great Lakes Geology"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 16 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "POLS 202",
+              "title": "Democracy in America: State and Federal Government",
+              "credits": "2",
+              "courseId": 20230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54269"
+            },
+            {
+              "code": "POLS 204",
+              "title": "Democracy in America: State and Local Government",
+              "credits": "2",
+              "courseId": 22593,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54889"
+            },
+            {
+              "code": "POLS 209",
+              "title": "Public and Non-Profit Administration",
+              "credits": "4",
+              "courseId": 20232,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54271"
+            },
+            {
+              "code": "POLS 237",
+              "title": "Political Parties and Interest Groups",
+              "credits": "4",
+              "courseId": 20236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54275"
+            },
+            {
+              "code": "POLS 238",
+              "title": "Campaigns and Elections",
+              "credits": "2",
+              "courseId": 20245,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54284"
+            },
+            {
+              "code": "POLS 277",
+              "title": "Asian Politics",
+              "credits": "4",
+              "courseId": 21045,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54488"
+            },
+            {
+              "code": "POLS 279",
+              "title": "African Politics",
+              "credits": "4",
+              "courseId": 20239,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54278"
+            },
+            {
+              "code": "POLS 309",
+              "title": "International Organizations and Law",
+              "credits": "4",
+              "courseId": 20243,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54282"
+            },
+            {
+              "code": "POLS 380",
+              "title": "Internship in Politics and Government",
+              "credits": "2-6",
+              "courseId": 20247,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54286"
+            }
+          ],
+          "notes": [
+            {
+              "course": "POLS 209",
+              "placement": "after",
+              "text": "OR POLS 234 - The President and Congress"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 243",
+              "title": "Statistics",
+              "credits": "4",
+              "courseId": 21011,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+            },
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 20259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 20639,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 52",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

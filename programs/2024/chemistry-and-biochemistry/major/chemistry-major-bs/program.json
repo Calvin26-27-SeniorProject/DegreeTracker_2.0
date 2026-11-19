@@ -1,0 +1,336 @@
+{
+  "id": "chemistry-major-bs",
+  "name": "Chemistry Major, BS",
+  "code": "CHEM.MAJ.BS",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 752,
+    "name": "Chemistry and Biochemistry"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13093",
+  "description": "Calvin University's BS in chemistry gives students the scientific knowledge and research skills to compete for jobs in the field of chemistry or biochemistry or to pursue an advanced degree in health, medicine, or science. The program provides a broad and rigorous foundation in the field of chemistry, then offers additional courses to tailor the program to the student's specific interests. For students interested in the following areas, we recommend completing sets of four courses: Computational Modeling: CHEM 353, CHEM 372, CHEM 373, and BCHM 324 Work in Industry: CHEM 311, CHEM 341, CHEM 371, and CHEM 372",
+  "totalHours": "55",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "CHEM 101",
+          "title": "General Chemistry I",
+          "credits": "3",
+          "courseId": 18230,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+        },
+        {
+          "code": "CHEM 210",
+          "title": "Analytical Chemistry",
+          "credits": "3",
+          "courseId": 18234,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53824"
+        },
+        {
+          "code": "CHEM 230",
+          "title": "Essential Inorganic Chemistry",
+          "credits": "3",
+          "courseId": 18235,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53825"
+        },
+        {
+          "code": "CHEM 240",
+          "title": "Survey of Organic Chemistry",
+          "credits": "3",
+          "courseId": 18236,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+        },
+        {
+          "code": "BCHM 321",
+          "title": "Principles of Biochemistry",
+          "credits": "3",
+          "courseId": 22756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55029"
+        },
+        {
+          "code": "CHEM 351",
+          "title": "Physical Chemistry",
+          "credits": "3",
+          "courseId": 18240,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53830"
+        },
+        {
+          "code": "CHEM 295",
+          "title": "Chemistry Seminar",
+          "credits": "0",
+          "courseId": 18239,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53829"
+        },
+        {
+          "code": "CHEM 396",
+          "title": "Writing a Formal Research Report",
+          "credits": "1",
+          "courseId": 21523,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54567"
+        },
+        {
+          "code": "CHEM 399",
+          "title": "Major Field Test",
+          "credits": "0",
+          "courseId": 21534,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54578"
+        },
+        {
+          "code": "IDIS 310",
+          "title": "Science in Society",
+          "credits": "4",
+          "courseId": 19297,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54086"
+        }
+      ],
+      "notes": [
+        {
+          "course": "CHEM 101",
+          "placement": "right",
+          "text": "AND CHEM 102 - General Chemistry II"
+        },
+        {
+          "course": "CHEM 101",
+          "placement": "after",
+          "text": "OR CHEM 103 - Accelerated General Chemistry"
+        },
+        {
+          "course": "CHEM 240",
+          "placement": "after",
+          "text": "OR CHEM 241 - Organic Chemistry I *"
+        },
+        {
+          "course": "CHEM 351",
+          "placement": "right",
+          "text": "**"
+        },
+        {
+          "course": "CHEM 295",
+          "placement": "right",
+          "text": "(three times)"
+        },
+        {
+          "course": "CHEM 399",
+          "placement": "right",
+          "text": "(offered on the Tuesday of Academic Advising each spring semester)"
+        },
+        {
+          "course": "IDIS 310",
+          "placement": "after",
+          "text": "OR IDIS 312 - The Science and Art of Modern Medicine"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 10 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BCHM 322",
+              "title": "Metabolism and Metabolic Disease",
+              "credits": "1.5",
+              "courseId": 22754,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55027"
+            },
+            {
+              "code": "BCHM 323",
+              "title": "Venom",
+              "credits": "1.5",
+              "courseId": 22752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55025"
+            },
+            {
+              "code": "BCHM 324",
+              "title": "Proteins Gone Awry",
+              "credits": "1.5",
+              "courseId": 22750,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55023"
+            },
+            {
+              "code": "CHEM 242",
+              "title": "Organic Chemistry II",
+              "credits": "3",
+              "courseId": 18238,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53828"
+            },
+            {
+              "code": "CHEM 311",
+              "title": "Forensics and Toxicology",
+              "credits": "1.5",
+              "courseId": 22748,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55021"
+            },
+            {
+              "code": "CHEM 341",
+              "title": "Evolving Complexity",
+              "credits": "1.5",
+              "courseId": 22746,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55019"
+            },
+            {
+              "code": "CHEM 353",
+              "title": "The Quantum World",
+              "credits": "1.5",
+              "courseId": 22744,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55017"
+            },
+            {
+              "code": "CHEM 371",
+              "title": "Chemistry and Sustainability: Life Cycle of an Electric Car",
+              "credits": "1.5",
+              "courseId": 22742,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55015"
+            },
+            {
+              "code": "CHEM 372",
+              "title": "Molecules in the Spotlight: Nanoparticles",
+              "credits": "1.5",
+              "courseId": 22740,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55013"
+            },
+            {
+              "code": "CHEM 373",
+              "title": "Elements in Transition",
+              "credits": "1.5",
+              "courseId": 22738,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55011"
+            },
+            {
+              "code": "ENGR 331",
+              "title": "Kinetics/Reactor Design",
+              "credits": "4",
+              "courseId": 18778,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53966"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take Three from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 161",
+              "title": "Cellular and Genetic Systems",
+              "credits": "3",
+              "courseId": 17752,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+            },
+            {
+              "code": "CS 106",
+              "title": "Introduction to Scientific Computation and Modeling",
+              "credits": "3",
+              "courseId": 18263,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+            },
+            {
+              "code": "CS 108",
+              "title": "Introduction to Computing",
+              "credits": "3",
+              "courseId": 18264,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53854"
+            },
+            {
+              "code": "MATH 132",
+              "title": "Calculus for Management, Life, and Social Sciences",
+              "credits": "4",
+              "courseId": 19808,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54134"
+            },
+            {
+              "code": "MATH 171",
+              "title": "Calculus I",
+              "credits": "4",
+              "courseId": 19809,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54135"
+            },
+            {
+              "code": "MATH 172",
+              "title": "Calculus II",
+              "credits": "4",
+              "courseId": 19810,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54136"
+            },
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            },
+            {
+              "code": "STAT 243",
+              "title": "Statistics",
+              "credits": "4",
+              "courseId": 21011,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54451"
+            },
+            {
+              "code": "PHYS 133",
+              "title": "Introductory Physics: Mechanics and Gravity",
+              "credits": "3",
+              "courseId": 20205,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54244"
+            },
+            {
+              "code": "PHYS 221",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 20208,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+            },
+            {
+              "code": "PHYS 222",
+              "title": "General Physics",
+              "credits": "3",
+              "courseId": 20209,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54248"
+            },
+            {
+              "code": "PHYS 223",
+              "title": "Physics for the Health Sciences",
+              "credits": "3",
+              "courseId": 20210,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54249"
+            },
+            {
+              "code": "PHYS 235",
+              "title": "Introductory Physics: Electricity and Magnetism",
+              "credits": "3",
+              "courseId": 20211,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54250"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 55",
+      "description": "* Students who enroll in CHEM 241 must also enroll in CHEM 242. ** MATH 171 (or MATH 132) and a physics course are prerequisites for this course.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

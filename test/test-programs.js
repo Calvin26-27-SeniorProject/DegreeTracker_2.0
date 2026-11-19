@@ -10,8 +10,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { JSDOM } from 'jsdom';
 import { readXlsxRows } from '../src/xlsx.js';
-import { parseProgressRows, parseProgress, programRequirements, analyze } from '../src/core.js';
-import { renderApp, renderPrograms, renderDashboard, coreProgress, programProgress, isMinor } from '../src/app-render.js';
+import { parseProgressRows, parseProgress } from '../src/parse.js';
+import { programRequirements, analyze } from '../src/core.js';
+import { renderApp, renderPrograms, renderDashboard, programTabs, coreProgress, programProgress, isMinor } from '../src/app-render.js';
 import { KNOWN_COURSE_CATEGORIES } from '../src/catalog-courses.js';
 import { makeCourse } from './helpers.js';
 
@@ -21,6 +22,21 @@ const sample = () => parseProgressRows(readXlsxRows(
 const norm = s => (s || '').replace(/\s+/g, ' ').trim();
 
 describe('programs in the .xlsx export', () => {
+  it('ends a requirement table at the lines under it that aren’t requirements (GPA, dates)', () => {
+    const { programs, courses } = parseProgressRows([
+      ['Requirement', 'Status', 'Remaining', 'Registrations Used', 'Academic Period', 'Hours', 'Grade'],
+      ['PSYC 151', 'Satisfied', '', 'PSYC 151 - Introductory Psychology', '2025 Fall', '4', 'A'],
+      ['PSYC 244', 'In Progress', '', 'PSYC 244 - Lifespan Development (In Progress)', '2026 Fall', '4', ''],
+      ['PSYC 399', 'Not Satisfied', '1 course', '', '', '', ''],
+      ['4', 'Program of Study GPA', '', '', '', '', ''],
+      ['Requirements Effective', '46104.0', '', '', '', '', ''],
+      ['Last Evaluated', '11/12/2026 10:36:00.000 AM GMT-05:00 Eastern Time (New York)', '', '', '', '', ''],
+    ]);
+    assert.deepEqual(programs[0].requirements.map(r => [r.name, r.status]),
+      [['PSYC 151', 'Satisfied'], ['PSYC 244', 'In Progress'], ['PSYC 399', 'Not Satisfied']]);
+    assert.deepEqual(courses.map(c => c.code), ['PSYC 151', 'PSYC 244']);
+  });
+
   it('names each requirement table from the Program of Study summary, in order', () => {
     const { programs } = sample();
     assert.deepEqual(programs.map(p => [p.name, p.satisfied, p.total]),
@@ -120,7 +136,7 @@ describe('progress counts', () => {
       const p = coreProgress(catalog, analysis);
       assert.equal(root.querySelector('.summary h2').textContent, `${p.done} of ${p.total} requirements met`);
       // The three columns hold the same requirements (K&U as one): satisfied, in progress, not satisfied.
-      const counts = [...root.querySelectorAll('.summary .status-column')].map(c => c.querySelectorAll('.summary-chip').length);
+      const counts = [...root.querySelectorAll('.summary .summary-status-group')].map(c => c.querySelectorAll('.summary-chip').length);
       assert.deepEqual(counts, [p.done, p.inProgress, p.total - p.done - p.inProgress]);
     }
   });
@@ -163,11 +179,30 @@ describe('renderPrograms (Major and Minor pages)', () => {
   it('lists each requirement with Workday’s status, remaining, and the courses applied', () => {
     const root = newRoot();
     renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
-    assert.equal(root.querySelector('.program h3').textContent, 'Entrepreneurship Minor');
-    const entr = [...root.querySelectorAll('.program-req')].find(li => /^12 hours from ENTR/.test(li.querySelector('.program-req-name').textContent));
+    assert.equal(root.querySelector('.req-section-title').textContent, 'Entrepreneurship Minor');
+    const entr = [...root.querySelectorAll('.req')].find(li => /^12 hours from ENTR/.test(li.querySelector('.req-name').textContent));
     assert.equal(entr.querySelector('.status-pill').textContent, 'In Progress');
-    assert.equal(norm(entr.querySelector('.program-req-remaining').textContent), 'Remaining: Minimum 4 Hour(s)');
-    assert.equal(entr.querySelectorAll('.program-items li').length, 3);
+    assert.equal(norm(entr.querySelector('.req-note').textContent), 'Remaining: Minimum 4 Hour(s)');
+    // Every course the name lists; the three Workday applied are green.
+    assert.deepEqual([...entr.querySelectorAll('.course-list li.course')].map(li => [li.dataset.code, li.classList.contains('is-active')]),
+      [['ENTR 210', true], ['ENTR 211', true], ['ENTR 301', false], ['ENTR 302', true], ['ENTR 303', false], ['ENTR 304', false]]);
+  });
+
+  it('draws Workday’s listing with the Core page’s cards and rows', () => {
+    const root = newRoot();
+    renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
+    const card = [...root.querySelectorAll('.req')].find(li => /^ENTR 201/.test(li.querySelector('.req-name').textContent));
+    assert.ok(card.classList.contains('status-done'));
+    assert.ok(card.querySelector('.req-header .status-pill.status-done'));
+    assert.ok(card.querySelector('.req-collapse'));
+    const row = card.querySelector('.course-list li.course.is-active');
+    assert.equal(row.querySelector('.course-code').textContent, 'ENTR 201');
+    assert.equal(row.querySelector('.course-title').textContent, 'Introduction to Entrepreneurship');
+    assert.deepEqual([...row.querySelectorAll('.course-flags .chip')].map(c => [c.className, c.textContent]),
+      [['chip chip-taken', 'Taken · 2 hrs']], 'no term chip');
+    const progress = [...root.querySelectorAll('.req')].find(li => /^ENTR 202/.test(li.querySelector('.req-name').textContent));
+    assert.equal(progress.querySelector('.chip-progress').textContent, 'In progress · 4 hrs');
+    assert.equal(root.querySelector('.program, .program-req, .program-option'), null);
   });
 
   it('puts every grade in a .grade element, which the page hides until “Show grades” is on', () => {
@@ -223,5 +258,219 @@ describe('renderDashboard (Overview)', () => {
     const none = newRoot();
     renderDashboard(none, { catalog, analysis: null, groups: [] });
     assert.match(none.textContent, /Upload your Academic Progress export/);
+  });
+
+  describe('with each page’s summary tiles under the donuts', () => {
+    const pageRoots = () => {
+      const core = newRoot();
+      renderApp(core, { catalog, analysis });
+      const major = newRoot();
+      renderPrograms(major, { groups: groups.filter(g => !isMinor(g)), hasInput: true, kind: 'major' });
+      const minor = newRoot();
+      renderPrograms(minor, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
+      return { core, major, minor };
+    };
+    const summaryOf = root => [...root.children].find(el => el.classList.contains('summary'));
+    const blocksFrom = ({ core, major, minor }) => [
+      { id: 'core', kind: 'core', title: 'Calvin Core', node: summaryOf(core) },
+      ...[...major.children].filter(el => el.classList.contains('summary')).map(node => ({ id: `major:${node.dataset.program}`, kind: 'major', title: node.dataset.program, node })),
+      ...[...minor.children].filter(el => el.classList.contains('summary')).map(node => ({ id: `minor:${node.dataset.program}`, kind: 'minor', title: node.dataset.program, node })),
+    ];
+
+    it('lists the core, then each major, then each minor, each in a panel headed by its name and kind', () => {
+      const roots = pageRoots();
+      const root = newRoot();
+      renderDashboard(root, { catalog, analysis, groups, blocks: blocksFrom(roots) });
+      const panels = [...root.querySelectorAll('.overview-blocks > .overview-block')];
+      assert.deepEqual(panels.map(p => [p.querySelector('.overview-block-header h3').textContent, p.querySelector('.overview-block-kind').textContent]), [
+        ['Calvin Core', 'Core'], ['Computer Science, BCS', 'Major'], ['Entrepreneurship Minor', 'Minor'],
+      ]);
+      assert.ok(root.querySelector('.dash-grid').compareDocumentPosition(root.querySelector('.overview-blocks')) & 4, 'the panels come after the donuts');
+    });
+
+    it('shows the same summary tiles as the page itself', () => {
+      const roots = pageRoots();
+      const root = newRoot();
+      renderDashboard(root, { catalog, analysis, groups, blocks: blocksFrom(roots) });
+      const [core, major, minor] = [...root.querySelectorAll('.overview-block-body')];
+      for (const [body, page] of [[core, roots.core], [major, roots.major], [minor, roots.minor]]) {
+        const source = summaryOf(page);
+        assert.equal(body.querySelector('.summary h2').textContent, source.querySelector('h2').textContent);
+        assert.equal(body.querySelectorAll('.summary-chip').length, source.querySelectorAll('.summary-chip').length);
+        assert.deepEqual([...body.querySelectorAll('.summary-chip')].map(a => a.getAttribute('href')),
+          [...source.querySelectorAll('.summary-chip')].map(a => a.getAttribute('href')));
+        assert.ok(summaryOf(page), 'the page keeps its own summary');
+      }
+      assert.equal(major.querySelectorAll('.summary-chip').length, 20);
+    });
+
+    it('opens every panel by default, and an arrow on the right folds one up', () => {
+      const roots = pageRoots();
+      const root = newRoot();
+      const toggled = [];
+      renderDashboard(root, { catalog, analysis, groups, blocks: blocksFrom(roots), onListToggle: (key, open) => toggled.push([key, open]) });
+      const panels = [...root.querySelectorAll('.overview-block')];
+      assert.ok(panels.every(p => !p.classList.contains('is-collapsed')));
+      assert.ok(panels.every(p => p.querySelector('.overview-block-header > .req-collapse').getAttribute('aria-expanded') === 'true'));
+      assert.equal(panels[0].querySelector('.overview-block-header').lastElementChild.className, 'req-collapse');
+      panels[1].querySelector('.req-collapse').click();
+      assert.ok(panels[1].classList.contains('is-collapsed'));
+      assert.equal(panels[1].querySelector('.req-collapse').getAttribute('aria-expanded'), 'false');
+      assert.ok(!panels[0].classList.contains('is-collapsed'));
+      panels[1].querySelector('.req-collapse').click();
+      assert.ok(!panels[1].classList.contains('is-collapsed'));
+      assert.deepEqual(toggled, [['overview:major:Computer Science, BCS', false], ['overview:major:Computer Science, BCS', true]]);
+    });
+
+    it('keeps a folded panel folded when the page is drawn again', () => {
+      const roots = pageRoots();
+      const root = newRoot();
+      const openLists = new Map([['overview:core', false]]);
+      renderDashboard(root, { catalog, analysis, groups, blocks: blocksFrom(roots), openLists });
+      assert.deepEqual([...root.querySelectorAll('.overview-block')].map(p => p.classList.contains('is-collapsed')), [true, false, false]);
+    });
+
+    it('lists no panels when there’s nothing to show', () => {
+      const root = newRoot();
+      renderDashboard(root, { catalog, analysis, groups });
+      assert.equal(root.querySelector('.overview-blocks'), null);
+    });
+  });
+});
+
+describe('programTabs (the Major and Minor tabs)', () => {
+  const g = name => ({ name, requirements: [] });
+  const shape = tabs => tabs.map(t => [t.id, t.label, t.title, t.groups.map(x => x.name)]);
+
+  it('one major and no minor: a Major tab and no Minor tab', () => {
+    assert.deepEqual(shape(programTabs([g('Computer Science, BCS')], true)), [
+      ['major', 'Major', 'Computer Science, BCS', ['Computer Science, BCS']],
+    ]);
+  });
+
+  it('two majors: Major 1 and Major 2, in Workday’s order, each with its own program', () => {
+    assert.deepEqual(shape(programTabs([g('Computer Science, BCS'), g('Entrepreneurship Minor'), g('Nursing, BSN')], true)), [
+      ['major-1', 'Major 1', 'Computer Science, BCS', ['Computer Science, BCS']],
+      ['major-2', 'Major 2', 'Nursing, BSN', ['Nursing, BSN']],
+      ['minor', 'Minor', 'Entrepreneurship Minor', ['Entrepreneurship Minor']],
+    ]);
+  });
+
+  it('two minors: Minor 1 and Minor 2', () => {
+    assert.deepEqual(programTabs([g('Computer Science, BCS'), g('Entrepreneurship Minor'), g('Data Science Minor')], true).map(t => t.label),
+      ['Major', 'Minor 1', 'Minor 2']);
+  });
+
+  it('a pasted page’s unnamed group is the Major tab', () => {
+    assert.deepEqual(shape(programTabs([g(null)], true)), [['major', 'Major', 'Major', [null]]]);
+  });
+
+  it('without a record (browsing the catalog), one empty Major and one empty Minor tab', () => {
+    assert.deepEqual(shape(programTabs([], false)), [['major', 'Major', 'Major', []], ['minor', 'Minor', 'Minor', []]]);
+  });
+
+  it('with the sample export, each tab’s page draws only its program, with ids that don’t clash', () => {
+    const { programs } = sample();
+    const [cs, minor] = programs;
+    const tabs = programTabs([cs, { ...cs, name: 'Second Major, BA' }, minor], true);
+    assert.deepEqual(tabs.map(t => t.id), ['major-1', 'major-2', 'minor']);
+    const ids = [];
+    for (const t of tabs) {
+      const root = newRoot();
+      renderPrograms(root, { groups: t.groups, hasInput: true, kind: t.kind, idPrefix: t.id });
+      assert.deepEqual([...root.querySelectorAll(':scope > .summary')].map(s => s.dataset.program), [t.groups[0].name]);
+      const own = [...root.querySelectorAll('[id]')].map(el => el.id);
+      assert.ok(own.length && own.every(id => id.startsWith(t.id + '-')), t.id);
+      ids.push(...own);
+    }
+    assert.equal(new Set(ids).size, ids.length);
+  });
+
+  it('the Overview’s “See requirements” opens each program’s own tab', () => {
+    const { programs } = sample();
+    const [cs, minor] = programs;
+    const second = { ...cs, name: 'Second Major, BA' };
+    const groups = [cs, second, minor];
+    const tabs = programTabs(groups, true);
+    const tabOf = new Map(tabs.flatMap(t => t.groups.map(x => [x, t.id])));
+    const analysis = analyze(catalog.categories, sample().courses, { extraCourses: KNOWN_COURSE_CATEGORIES });
+    const root = newRoot();
+    renderDashboard(root, { catalog, analysis, groups, tabOf: x => tabOf.get(x) });
+    assert.deepEqual([...root.querySelectorAll('.dash-open')].map(b => b.dataset.openTab).filter(t => t !== 'core'),
+      ['major-1', 'major-2', 'minor']);
+  });
+});
+
+describe('Major and Minor summaries: Not satisfied, In progress, Satisfied', () => {
+  const groups = programRequirements(sample());
+  const majorPage = (state = {}) => {
+    const root = newRoot();
+    renderPrograms(root, { groups: groups.filter(g => !isMinor(g)), hasInput: true, kind: 'major', ...state });
+    return root;
+  };
+  const sectionsOf = summary => [...summary.querySelectorAll('.summary-status > .summary-status-group')];
+  const headerText = sec => norm(sec.querySelector('.summary-status-header h3').textContent);
+
+  it('puts the chips in columns, Satisfied, In progress, Not satisfied, each with its count, one chip per requirement', () => {
+    const summary = majorPage().querySelector(':scope > .summary');
+    const sections = sectionsOf(summary);
+    assert.deepEqual(sections.map(s => s.dataset.status), ['done', 'min', 'todo'], 'always the three, in place');
+    const cs = groups.find(g => !isMinor(g));
+    const counts = { done: 0, min: 0, todo: 0 };
+    for (const r of cs.requirements) counts[{ Satisfied: 'done', 'In Progress': 'min' }[r.status] || 'todo']++;
+    for (const sec of sections) {
+      const label = { done: 'Satisfied', min: 'In progress', todo: 'Not satisfied' }[sec.dataset.status];
+      assert.equal(headerText(sec), `${label} (${counts[sec.dataset.status]})`);
+      assert.equal(sec.querySelectorAll('.summary-chip').length, counts[sec.dataset.status]);
+    }
+    assert.equal(summary.querySelectorAll('.summary-chip').length, cs.requirements.length);
+    for (const sec of sections.filter(s => !counts[s.dataset.status])) assert.equal(sec.querySelector('.summary-empty').textContent, 'None');
+  });
+
+  it('opens every column by default, each with a fold; an empty column has nothing to fold', () => {
+    const root = newRoot();
+    renderPrograms(root, { groups: groups.filter(isMinor), hasInput: true, kind: 'minor' });
+    const sections = sectionsOf(root.querySelector(':scope > .summary'));
+    const done = sections.find(s => s.dataset.status === 'done');
+    assert.ok(done.querySelector('.summary-chip'), 'the sample minor has a satisfied requirement');
+    for (const sec of sections) {
+      assert.ok(!sec.classList.contains('is-collapsed'), sec.dataset.status);
+      assert.equal(!!sec.querySelector('.req-collapse'), !!sec.querySelector('.summary-chip'), sec.dataset.status);
+    }
+    assert.equal(root.querySelector('.summary-more'), null, 'no “Show more”');
+    done.querySelector('.summary-status-header h3').click();
+    assert.ok(done.classList.contains('is-collapsed'), 'its header folds it too');
+  });
+
+  it('its arrow folds and unfolds a column, and the fold is kept', () => {
+    const toggled = [];
+    const sections = sectionsOf(majorPage({ onListToggle: (k, open) => toggled.push([k, open]) }).querySelector(':scope > .summary'));
+    const todo = sections.find(s => s.dataset.status === 'todo');
+    assert.ok(!todo.classList.contains('is-collapsed'));
+    const button = todo.querySelector('.summary-status-header > .req-collapse');
+    button.click();
+    assert.ok(todo.classList.contains('is-collapsed'));
+    assert.equal(button.getAttribute('aria-expanded'), 'false');
+    assert.deepEqual(toggled, [['summary:major-0:todo', false]]);
+    const again = sectionsOf(majorPage({ openLists: new Map(toggled) }).querySelector(':scope > .summary'));
+    assert.ok(again.find(s => s.dataset.status === 'todo').classList.contains('is-collapsed'));
+  });
+
+  it('the Overview shows the same columns, folding on their own without touching the page', () => {
+    const page = majorPage();
+    const summary = page.querySelector(':scope > .summary');
+    const catalog = JSON.parse(fs.readFileSync(new URL('../catalog/catalog-categories-25.json', import.meta.url), 'utf-8'));
+    const analysis = analyze(catalog.categories, sample().courses, { extraCourses: KNOWN_COURSE_CATEGORIES });
+    const toggled = [];
+    const root = newRoot();
+    renderDashboard(root, { catalog, analysis, groups, onListToggle: (k, open) => toggled.push([k, open]),
+      blocks: [{ id: 'major:CS', kind: 'major', title: 'CS', node: summary }] });
+    const copy = sectionsOf(root.querySelector('.overview-block-body .summary'));
+    assert.deepEqual(copy.map(headerText), sectionsOf(summary).map(headerText));
+    const todo = copy.find(s => s.dataset.status === 'todo');
+    todo.querySelector('.req-collapse').click();
+    assert.ok(todo.classList.contains('is-collapsed'));
+    assert.ok(!sectionsOf(summary).find(s => s.dataset.status === 'todo').classList.contains('is-collapsed'));
+    assert.deepEqual(toggled, [['overview:major:CS:summary:major-0:todo', false]]);
   });
 });

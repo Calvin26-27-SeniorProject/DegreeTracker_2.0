@@ -1,0 +1,276 @@
+{
+  "id": "comprehensive-postsecondary-education-certificate-health-wellness-and-recreation-concentration",
+  "name": "Comprehensive Postsecondary Education, Certificate: Health, Wellness, and Recreation Concentration",
+  "code": "CERT.HEALTH",
+  "type": "Certificate: Undergraduate",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 761,
+    "name": "Education"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13258",
+  "description": "Students pursuing a Health, Wellness, and Recreation concentration must also complete the Comprehensive Postsecondary Education Certificate program requirements and Ready for Life core requirements.",
+  "totalHours": "24",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "IDIS 106",
+          "title": "Introduction to Health Professions",
+          "credits": "1",
+          "courseId": 19289,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54078"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "COMM 263",
+              "title": "Communication and Conflict Resolution",
+              "credits": "2",
+              "courseId": 18215,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53805"
+            },
+            {
+              "code": "IDIS 196",
+              "title": "Transcultural Caring for the Health Professional",
+              "credits": "2",
+              "courseId": 19292,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54081"
+            },
+            {
+              "code": "SOC 231",
+              "title": "Intercultural Communication",
+              "credits": "4",
+              "courseId": 20638,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54377"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Electives",
+          "description": "(Take sufficient electives to achieve a minimum of 24 hours in the program.)",
+          "courses": [
+            {
+              "code": "ASC 110",
+              "title": "Learning Practices: Special Topics",
+              "credits": "1",
+              "courseId": 21484,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54528"
+            },
+            {
+              "code": "ASC 111",
+              "title": "Academic Transitions",
+              "credits": "2",
+              "courseId": 17709,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53697"
+            },
+            {
+              "code": "ASC 112",
+              "title": "Strategies for Academic Success",
+              "credits": "4",
+              "courseId": 22871,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55771"
+            },
+            {
+              "code": "BIOL 115",
+              "title": "Essentials of Human Anatomy and Physiology",
+              "credits": "4",
+              "courseId": 17748,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53737"
+            },
+            {
+              "code": "BIOL 123",
+              "title": "Living Systems",
+              "credits": "4",
+              "courseId": 17749,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53738"
+            },
+            {
+              "code": "ECON 241",
+              "title": "Health Economics and Health Policy",
+              "credits": "2",
+              "courseId": 18297,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53887"
+            },
+            {
+              "code": "HE 254",
+              "title": "Nutrition",
+              "credits": "2",
+              "courseId": 19251,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54039"
+            },
+            {
+              "code": "HE 266",
+              "title": "Basic Health Concepts",
+              "credits": "4",
+              "courseId": 19252,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54041"
+            },
+            {
+              "code": "IDIS 212",
+              "title": "Global Health",
+              "credits": "4",
+              "courseId": 19295,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54084"
+            },
+            {
+              "code": "KIN 190",
+              "title": "Adapted Physical Education",
+              "credits": "1",
+              "courseId": 19776,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54102"
+            },
+            {
+              "code": "KIN 201",
+              "title": "Introduction to Kinesiology",
+              "credits": "2",
+              "courseId": 19778,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54104"
+            },
+            {
+              "code": "KIN 215",
+              "title": "Physical Education and Recreation for Persons with Disabilities",
+              "credits": "2",
+              "courseId": 19783,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54109"
+            },
+            {
+              "code": "KIN 223",
+              "title": "Educational Health, Movement, and Dance",
+              "credits": "2",
+              "courseId": 19786,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54112"
+            },
+            {
+              "code": "KIN 240",
+              "title": "Cardio-respiratory Fitness Assessment, Prescription, and Leadership",
+              "credits": "2",
+              "courseId": 19787,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54113"
+            },
+            {
+              "code": "KIN 241",
+              "title": "Muscular Fitness Assessment, Prescription, and Leadership",
+              "credits": "2",
+              "courseId": 19788,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54114"
+            },
+            {
+              "code": "KIN 243",
+              "title": "Psychology of Sport and Exercise",
+              "credits": "4",
+              "courseId": 19789,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54115"
+            },
+            {
+              "code": "KIN 302",
+              "title": "Sociology of Sport",
+              "credits": "2",
+              "courseId": 19792,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54118"
+            },
+            {
+              "code": "PHIL 137",
+              "title": "Disability, Community, and Advocacy",
+              "credits": "2",
+              "courseId": 22294,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54781"
+            },
+            {
+              "code": "PHIL 212",
+              "title": "Ethical Dimensions of Health Care",
+              "credits": "4",
+              "courseId": 20195,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54234"
+            },
+            {
+              "code": "PSYC 201",
+              "title": "Developmental Psychology: Lifespan",
+              "credits": "4",
+              "courseId": 20255,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+            },
+            {
+              "code": "PSYC 212",
+              "title": "Psychopathology",
+              "credits": "4",
+              "courseId": 20256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 20267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54306"
+            },
+            {
+              "code": "PUBH 101",
+              "title": "Introduction to Public Health",
+              "credits": "4",
+              "courseId": 20575,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54314"
+            },
+            {
+              "code": "RECR 205",
+              "title": "Therapeutic Recreation and Diagnostic Groups",
+              "credits": "4",
+              "courseId": 20581,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54320"
+            },
+            {
+              "code": "RFLA 390",
+              "title": "Independent Study",
+              "credits": "1-2",
+              "courseId": 22256,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54743"
+            }
+          ],
+          "notes": [
+            {
+              "course": "KIN 302",
+              "placement": "after",
+              "text": "OR SOC 302 - Sociology of Sport"
+            },
+            {
+              "course": "KIN 302",
+              "placement": "after",
+              "text": "PER courses of choice"
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 24",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

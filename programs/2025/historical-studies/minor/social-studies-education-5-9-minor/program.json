@@ -1,0 +1,309 @@
+{
+  "id": "social-studies-education-5-9-minor",
+  "name": "Social Studies Education 5-9 Minor",
+  "code": "MIN_SOST_59",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 378,
+    "name": "Historical Studies"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13790",
+  "description": "Optionally, students may also complete the requirements for a 12-hour concentration. Students in the education program complete one of the following degree options for teacher certification: Elementary education: Birth-K, BA Elementary education: PK-3, BA Elementary education: 3-6, BA Secondary education, BA",
+  "totalHours": "26",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "ECON 191",
+          "title": "Introduction to Economics",
+          "credits": "2",
+          "courseId": 7977,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55992"
+        },
+        {
+          "code": "EDUC 250",
+          "title": "Social Studies Inquiry",
+          "credits": "4",
+          "courseId": 11210,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56961"
+        },
+        {
+          "code": "GEO 101",
+          "title": "People, Place, and Community",
+          "credits": "4",
+          "courseId": 8394,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56111"
+        },
+        {
+          "code": "HIST 151",
+          "title": "History of the West and the World I",
+          "credits": "4",
+          "courseId": 8434,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56153"
+        },
+        {
+          "code": "HIST 229",
+          "title": "Seminar in United States History",
+          "credits": "4",
+          "courseId": 8437,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56156"
+        },
+        {
+          "code": "IDIS 375",
+          "title": "Methods and Pedagogies for Secondary Social Studies",
+          "credits": "4",
+          "courseId": 8479,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56198"
+        },
+        {
+          "code": "POLS 202",
+          "title": "Democracy in America: State and Federal Government",
+          "credits": "2",
+          "courseId": 8836,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56358"
+        },
+        {
+          "code": "POLS 204",
+          "title": "Democracy in America: State and Local Government",
+          "credits": "2",
+          "courseId": 11195,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56946"
+        }
+      ],
+      "notes": [
+        {
+          "course": "HIST 151",
+          "placement": "after",
+          "text": "OR HIST 152 - History of the West and the World II"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 26",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Civics Education Concentration",
+      "description": "(total of 12 hours)",
+      "courses": [
+        {
+          "code": "POLS 110",
+          "title": "Foundations of Political Community",
+          "credits": "2",
+          "courseId": 8835,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56357"
+        }
+      ],
+      "notes": [
+        {
+          "course": "POLS 110",
+          "placement": "after",
+          "text": "one 300-level POLS elective"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ECON 232",
+              "title": "Environmental Economics",
+              "credits": "2",
+              "courseId": 7980,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55995"
+            },
+            {
+              "code": "ECON 241",
+              "title": "Health Economics and Health Policy",
+              "credits": "2",
+              "courseId": 7982,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55997"
+            },
+            {
+              "code": "POLS 222",
+              "title": "Contemporary Issues in US Public Policy",
+              "credits": "2",
+              "courseId": 11203,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56954"
+            },
+            {
+              "code": "POLS 226",
+              "title": "Contemporary Issues in US Urban Politics",
+              "credits": "2",
+              "courseId": 11205,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56956"
+            },
+            {
+              "code": "POLS 229",
+              "title": "Contemporary Issues in US Foreign Policy",
+              "credits": "2",
+              "courseId": 11207,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56958"
+            },
+            {
+              "code": "POLS 238",
+              "title": "Campaigns and Elections",
+              "credits": "2",
+              "courseId": 8851,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56373"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take 4 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ECON 237",
+              "title": "Regional Economies of the World",
+              "credits": "2",
+              "courseId": 7981,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55996"
+            },
+            {
+              "code": "POLS 214",
+              "title": "Governments and Globalization",
+              "credits": "4",
+              "courseId": 8840,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56362"
+            },
+            {
+              "code": "POLS 217",
+              "title": "International Cooperation and Conflict",
+              "credits": "4",
+              "courseId": 8837,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56359"
+            },
+            {
+              "code": "POLS 224",
+              "title": "Contemporary Issues in Comparative Politics",
+              "credits": "2",
+              "courseId": 11204,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56955"
+            },
+            {
+              "code": "POLS 227",
+              "title": "Contemporary Issues in International Politics",
+              "credits": "2",
+              "courseId": 11206,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56957"
+            },
+            {
+              "code": "POLS 277",
+              "title": "Asian Politics",
+              "credits": "4",
+              "courseId": 9452,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56573"
+            },
+            {
+              "code": "POLS 279",
+              "title": "African Politics",
+              "credits": "4",
+              "courseId": 8845,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56367"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Geography Education Concentration",
+      "description": "(total of 12 hours)",
+      "courses": [
+        {
+          "code": "GEO 310",
+          "title": "Urban Geography",
+          "credits": "4",
+          "courseId": 8401,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56119"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take 8 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "GEO 210",
+              "title": "Human Impacts on the Environment",
+              "credits": "4",
+              "courseId": 8273,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56089"
+            },
+            {
+              "code": "GEO 120",
+              "title": "Earth Systems",
+              "credits": "3",
+              "courseId": 8391,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56108"
+            },
+            {
+              "code": "GEO 230",
+              "title": "The Global Economy and Transforming Regions",
+              "credits": "2",
+              "courseId": 8395,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56112"
+            },
+            {
+              "code": "GEO 351",
+              "title": "City and Regional Planning",
+              "credits": "2",
+              "courseId": 8403,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56121"
+            },
+            {
+              "code": "GEO 352",
+              "title": "Sustainable Communities",
+              "credits": "2",
+              "courseId": 8404,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56122"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "History Education Concentration",
+      "description": "(total of 12 hours)",
+      "courses": [
+        {
+          "code": "HIST 294",
+          "title": "Research Methods of History",
+          "credits": "4",
+          "courseId": 8455,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56174"
+        }
+      ],
+      "notes": [
+        {
+          "course": "HIST 294",
+          "placement": "after",
+          "text": "an additional 8 hours of HIST electives; at least 4 hours must be at the 300 level"
+        }
+      ],
+      "children": []
+    }
+  ]
+}

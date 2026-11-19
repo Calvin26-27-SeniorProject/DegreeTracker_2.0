@@ -1,0 +1,271 @@
+{
+  "id": "occupational-therapy",
+  "name": "Occupational Therapy",
+  "code": "PROT",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 829,
+    "name": "School of Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13081",
+  "description": "Students wishing to enter the field of occupational therapy must complete a master's (MSOT) or doctoral degree (OTD) in occupational therapy, complete a six-month internship, and pass a national board examination. Calvin students have two options, described below, for preparing for admission to a graduate program in occupational therapy. Students should consult with the School of Health advising office (pre-health@calvin.edu) to discuss these options and design an academic plan.",
+  "totalHours": null,
+  "requirements": [
+    {
+      "name": "Completion of Bachelor of Arts or Bachelor of Science Degree",
+      "description": "Admission to most graduate MSOT and OTD programs requires a bachelor's degree. However, a particular major is not required, so long as specified prerequisite courses are taken. Students selecting this option will take courses that fulfill requirements for the completion of a Calvin major of their choice (such as kinesiology, psychology, Spanish, or therapeutic recreation) in addition to prerequisite courses specified by the graduate occupational therapy programs to which they intend to apply. While requirements vary between graduate schools, prerequisite courses typically include the following:",
+      "courses": [
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 17750,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 17753,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 17754,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 20255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+        },
+        {
+          "code": "PSYC 212",
+          "title": "Psychopathology",
+          "credits": "4",
+          "courseId": 20256,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        },
+        {
+          "code": "STAT 143",
+          "title": "Introduction to Probability and Statistics",
+          "credits": "4",
+          "courseId": 21008,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+        }
+      ],
+      "notes": [
+        {
+          "course": "STAT 143",
+          "placement": "after",
+          "text": "OR PSYC 255 - Statistics and Research Design"
+        },
+        {
+          "course": "STAT 143",
+          "placement": "after",
+          "text": "Admission to graduate programs also requires shadowing and volunteer experience in occupational therapy. Pre-health advisors can assist students seeking these experiences. Some graduate programs also require applicants to take the Graduate Record Exam (GRE)."
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "3-2 (or 3-3) Combined Curriculum Program with Washington University",
+      "description": "Calvin offers a combined curriculum with the Program in Occupational Therapy at Washington University School of Medicine in St. Louis, Missouri. A student participating in this program will spend three years at Calvin completing the coursework listed below (92 credits minimum). Additionally, students will gain work or volunteer experience in occupational therapy and complete the Graduate Record Exam. Students that meet admissions requirements will apply to the MSOT or ODT program at Washington University. If accepted, a student will transfer to Washington University for two (MSOT) or three (OTD) additional years of coursework and clinical training. Upon successful completion of the first year of study at Washington University (32 credits), the student will receive a Bachelor of Science in Letters and Occupational Therapy from Calvin. Upon completion of a second (or third) year of study, the student will receive a MSOT (or OTD) from Washington University. It should be noted that admission to graduate OT programs at Washington University is competitive and that 3-2 (3-3) students are not given preference in admissions decisions. Students that complete the Calvin (three-year) portion of the combined curriculum program but are not accepted into the graduate program at Washington University may continue their pursuit of a career in occupational therapy by completing a bachelor's degree of their choice at Calvin and fulfilling graduate program prerequisites. The requirements for the Calvin (three-year) portion of the 3-2 (or 3-3) Combined Curriculum Program are:",
+      "courses": [
+        {
+          "code": "BIOL 141",
+          "title": "Cell Biology and Genetics for the Health Sciences",
+          "credits": "3",
+          "courseId": 17750,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53739"
+        },
+        {
+          "code": "BIOL 205",
+          "title": "Human Anatomy",
+          "credits": "3",
+          "courseId": 17753,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53742"
+        },
+        {
+          "code": "BIOL 206",
+          "title": "Human Physiology",
+          "credits": "3",
+          "courseId": 17754,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53743"
+        },
+        {
+          "code": "CHEM 160",
+          "title": "Chemistry for the Health Sciences",
+          "credits": "3",
+          "courseId": 18233,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53823"
+        },
+        {
+          "code": "IDIS 106",
+          "title": "Introduction to Health Professions",
+          "credits": "1",
+          "courseId": 19289,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54078"
+        },
+        {
+          "code": "IDIS 396",
+          "title": "Preparation for Graduate Programs in the Health Professions",
+          "credits": "0",
+          "courseId": 19301,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54090"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "PSYC 201",
+          "title": "Developmental Psychology: Lifespan",
+          "credits": "4",
+          "courseId": 20255,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54294"
+        },
+        {
+          "code": "PSYC 212",
+          "title": "Psychopathology",
+          "credits": "4",
+          "courseId": 20256,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54295"
+        },
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        },
+        {
+          "code": "PSYC 255",
+          "title": "Statistics and Research Design",
+          "credits": "4",
+          "courseId": 20259,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+        },
+        {
+          "code": "RECR 324",
+          "title": "Therapeutic Recreation Clinical Practice",
+          "credits": "4",
+          "courseId": 20586,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54325"
+        },
+        {
+          "code": "BIOL 396",
+          "title": "Perspectives in Medicine",
+          "credits": "4",
+          "courseId": 17778,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53767"
+        }
+      ],
+      "notes": [
+        {
+          "course": "PSYC 255",
+          "placement": "after",
+          "text": "OR STAT 143 - Introduction to Probability and Statistics"
+        },
+        {
+          "course": "RECR 324",
+          "placement": "after",
+          "text": "OR KIN 215 - Physical Education and Recreation for Persons with Disabilities"
+        },
+        {
+          "course": "BIOL 396",
+          "placement": "after",
+          "text": "OR PHIL 318 - Minds, Brains, and Persons OR PSYC 399 - Psychology and Religion"
+        }
+      ],
+      "children": [
+        {
+          "name": "Additional Requirements",
+          "description": "completion of Calvin Core requirements completion of at least 92 credit hours of coursework at Calvin",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Recommended Electives",
+          "description": null,
+          "courses": [
+            {
+              "code": "KIN 213",
+              "title": "Biomechanics and Motor Learning",
+              "credits": "4",
+              "courseId": 19781,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54107"
+            },
+            {
+              "code": "KIN 216",
+              "title": "Medical Terminology",
+              "credits": "2",
+              "courseId": 19784,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54110"
+            },
+            {
+              "code": "KIN 325",
+              "title": "Physiology of Physical Activity",
+              "credits": "4",
+              "courseId": 19794,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54120"
+            },
+            {
+              "code": "KIN 328",
+              "title": "Clinical Physiology of Physical Activity",
+              "credits": "4",
+              "courseId": 19795,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54121"
+            },
+            {
+              "code": "PHYS 223",
+              "title": "Physics for the Health Sciences",
+              "credits": "3",
+              "courseId": 20210,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54249"
+            },
+            {
+              "code": "PSYC 343",
+              "title": "Behavioral Neuroscience",
+              "credits": "4",
+              "courseId": 20268,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54307"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

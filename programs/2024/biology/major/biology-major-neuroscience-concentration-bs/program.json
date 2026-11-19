@@ -1,0 +1,304 @@
+{
+  "id": "biology-major-neuroscience-concentration-bs",
+  "name": "Biology Major: Neuroscience Concentration, BS",
+  "code": "BIOL.NEURO.MAJ",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Science"
+  ],
+  "department": {
+    "id": 741,
+    "name": "Biology"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13075",
+  "description": "The neuroscience concentration in biology seeks to provide students with an interdisciplinary understanding of neuroscience, giving them a deep understanding of the biological sciences and integrating this knowledge with subject areas as diverse as psychology, chemistry/biochemistry, physics, computer science, and philosophy. This training prepares students for graduate school in neuroscience and professional fields (e.g., medicine, dentistry, clinical psychology, veterinary medicine, physical therapy), as well as careers in biotechnology firms, government laboratories, pharmaceutical companies, education, law, and business. Students considering this concentration should contact R. Bebej.",
+  "totalHours": "66-72",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "BIOL 160",
+          "title": "Ecological and Evolutionary Systems",
+          "credits": "3",
+          "courseId": 17751,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53740"
+        },
+        {
+          "code": "BIOL 161",
+          "title": "Cellular and Genetic Systems",
+          "credits": "3",
+          "courseId": 17752,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53741"
+        },
+        {
+          "code": "BIOL 200",
+          "title": "Research Design and Methodology",
+          "credits": "4",
+          "courseId": 17757,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53746"
+        },
+        {
+          "code": "BIOL 231",
+          "title": "Introduction to Animal Physiology",
+          "credits": "1.5",
+          "courseId": 17756,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53745"
+        },
+        {
+          "code": "BIOL 232",
+          "title": "Introduction to Plant Physiology",
+          "credits": "1.5",
+          "courseId": 22584,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54880"
+        },
+        {
+          "code": "BIOL 295",
+          "title": "Biology Seminar",
+          "credits": "0",
+          "courseId": 17758,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53747"
+        },
+        {
+          "code": "BIOL 331",
+          "title": "Comparative Animal and Human Physiology",
+          "credits": "3",
+          "courseId": 17763,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53752"
+        },
+        {
+          "code": "PHIL 318",
+          "title": "Minds, Brains, and Persons",
+          "credits": "4",
+          "courseId": 20198,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54237"
+        },
+        {
+          "code": "PSYC 343",
+          "title": "Behavioral Neuroscience",
+          "credits": "4",
+          "courseId": 20268,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54307"
+        },
+        {
+          "code": "PSYC 344",
+          "title": "Neuropsychology",
+          "credits": "2",
+          "courseId": 20269,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54308"
+        }
+      ],
+      "notes": [
+        {
+          "course": "BIOL 295",
+          "placement": "right",
+          "text": "(taken twice)"
+        },
+        {
+          "course": "BIOL 231",
+          "placement": "after",
+          "text": "OR BIOL 206 - Human Physiology"
+        },
+        {
+          "course": "BIOL 331",
+          "placement": "after",
+          "text": "OR BIOL 306 - Advanced Human Physiology and Pathophysiology"
+        }
+      ],
+      "children": [
+        {
+          "name": "Take 12 Hours from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 305L",
+              "title": "Advanced Human Anatomy Lab",
+              "credits": "2",
+              "courseId": 22768,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55041"
+            },
+            {
+              "code": "BIOL 321",
+              "title": "Genetics and Development",
+              "credits": "3",
+              "courseId": 17760,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53749"
+            },
+            {
+              "code": "BIOL 323",
+              "title": "Comparative Vertebrate Anatomy",
+              "credits": "3",
+              "courseId": 17761,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53750"
+            },
+            {
+              "code": "BIOL 333",
+              "title": "Immunology and Hematology",
+              "credits": "3",
+              "courseId": 17765,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53754"
+            },
+            {
+              "code": "BIOL 334",
+              "title": "Neurobiology of Disease",
+              "credits": "3",
+              "courseId": 21495,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54539"
+            },
+            {
+              "code": "BIOL 335",
+              "title": "Cell Physiology",
+              "credits": "3",
+              "courseId": 17766,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53755"
+            },
+            {
+              "code": "BIOL 336",
+              "title": "General Microbiology",
+              "credits": "3",
+              "courseId": 17767,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53756"
+            },
+            {
+              "code": "BIOL 338",
+              "title": "Animal Behavior",
+              "credits": "3",
+              "courseId": 17768,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53757"
+            },
+            {
+              "code": "BIOL 354",
+              "title": "Specific Advanced Topics",
+              "credits": "1-4",
+              "courseId": 17773,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53762"
+            },
+            {
+              "code": "BIOL 385",
+              "title": "Internship in Biology",
+              "credits": "0-4",
+              "courseId": 17775,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53764"
+            }
+          ],
+          "notes": [
+            {
+              "course": "BIOL 385",
+              "placement": "after",
+              "text": "OR BIOL 399 - Undergraduate Research"
+            }
+          ],
+          "children": []
+        },
+        {
+          "name": "Cognates",
+          "description": "(Some courses may fulfill Core requirements.)",
+          "courses": [
+            {
+              "code": "BCHM 321",
+              "title": "Principles of Biochemistry",
+              "credits": "3",
+              "courseId": 22756,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55029"
+            },
+            {
+              "code": "CHEM 101",
+              "title": "General Chemistry I",
+              "credits": "3",
+              "courseId": 18230,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53820"
+            },
+            {
+              "code": "CHEM 240",
+              "title": "Survey of Organic Chemistry",
+              "credits": "3",
+              "courseId": 18236,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53826"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            }
+          ],
+          "notes": [
+            {
+              "course": "CHEM 101",
+              "placement": "right",
+              "text": "AND CHEM 102 - General Chemistry II"
+            },
+            {
+              "course": "CHEM 240",
+              "placement": "after",
+              "text": "OR CHEM 241 - Organic Chemistry I"
+            },
+            {
+              "course": "CHEM 101",
+              "placement": "after",
+              "text": "OR CHEM 103 - Accelerated General Chemistry"
+            }
+          ],
+          "children": [
+            {
+              "name": "Take 8 Hours from the Following",
+              "description": null,
+              "courses": [
+                {
+                  "code": "CS 106",
+                  "title": "Introduction to Scientific Computation and Modeling",
+                  "credits": "3",
+                  "courseId": 18263,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53853"
+                },
+                {
+                  "code": "MATH 132",
+                  "title": "Calculus for Management, Life, and Social Sciences",
+                  "credits": "4",
+                  "courseId": 19808,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54134"
+                },
+                {
+                  "code": "PHYS 221",
+                  "title": "General Physics",
+                  "credits": "3",
+                  "courseId": 20208,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54247"
+                },
+                {
+                  "code": "PHYS 222",
+                  "title": "General Physics",
+                  "credits": "3",
+                  "courseId": 20209,
+                  "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54248"
+                }
+              ],
+              "notes": [
+                {
+                  "course": "MATH 132",
+                  "placement": "after",
+                  "text": "OR MATH 171 - Calculus I"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 66-72",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

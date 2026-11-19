@@ -1,0 +1,20 @@
+{
+  "id": "graduate-programs",
+  "name": "Graduate Programs",
+  "code": null,
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 733,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13188",
+  "description": "School of Business Master of Accounting (MAcc) Master of Business Administration (MBA) School of Education Master of Education (MEd), with concentrations in curriculum and instruction, educational leadership, inclusion education, and literacy Master of Arts in Teaching (MAT) School of Health Master of Science (MS) in exercise science, with two concentrations, online: Health and Exercise Rehabilitation Performance and Sport Science School of Humanities, Arts, and Social Sciences Master of Arts (MA) in media and strategic communication Master of Social Work (MSW) School of Sciences, Technology, Engineering, and Mathematics (STEM) Master of Arts (MA) in speech pathology, offered both on ground and online Master of Science (MS) in geographic information science, online",
+  "totalHours": null,
+  "requirements": []
+}

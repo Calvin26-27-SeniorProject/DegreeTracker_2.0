@@ -1,0 +1,140 @@
+{
+  "id": "applied-leadership-ba",
+  "name": "Applied Leadership, BA",
+  "code": "BA.APPLDR",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 388,
+    "name": "Adult Degree Completion (Knollcrest Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13826",
+  "description": "In collaboration with the School of Business, the School of Graduate and Continuing Studies offers a BA in applied leadership. The program prepares adult learners who are seeking a degree-completion program to move into areas of greater responsibility and accountability in their organizations through an interdisciplinary curriculum that explores human behavior and its application to leadership. This curriculum is rooted in Christian virtues and practices and includes relevant theory and principles. In addition to the requirements of the major, students also must satisfy the requirements of the degree-completion Core curriculum.",
+  "totalHours": "36-44",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 9140,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56462"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 8860,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56382"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 7870,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55885"
+        },
+        {
+          "code": "SOWK 350",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "4",
+          "courseId": 9161,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56483"
+        },
+        {
+          "code": "SOC 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 9143,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56465"
+        },
+        {
+          "code": "ENTR 202",
+          "title": "Design Thinking",
+          "credits": "4",
+          "courseId": 11260,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57011"
+        },
+        {
+          "code": "HRM 301",
+          "title": "Human Resource Management",
+          "credits": "4",
+          "courseId": 7873,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55888"
+        },
+        {
+          "code": "COMM 265",
+          "title": "Leadership Communication for Organizations",
+          "credits": "2",
+          "courseId": 7902,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=55916"
+        },
+        {
+          "code": "MGMT 342",
+          "title": "Servant Leadership and Transformation",
+          "credits": "4",
+          "courseId": 11227,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56978"
+        },
+        {
+          "code": "BUS 205",
+          "title": "Project Management",
+          "credits": "4",
+          "courseId": 11235,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56986"
+        },
+        {
+          "code": "GCS 300",
+          "title": "Career Exploration",
+          "credits": "2",
+          "courseId": 11228,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=56979"
+        },
+        {
+          "code": "GCS 391",
+          "title": "Leading through Change",
+          "credits": "4",
+          "courseId": 12093,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=25&coid=57143"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SOC 250",
+          "placement": "after",
+          "text": "OR SOC 231 - Intercultural Communication"
+        },
+        {
+          "course": "GCS 300",
+          "placement": "after",
+          "text": "OR GCS 380 - Internship for Continuing Studies"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Core Requirements",
+      "description": "FOUNDATIONS Community and Commitments: 2 hours CORE 100 Foundations of Christianity I: 4 hours REL 121 or REL 131 Foundations of Christianity II - at least 2 hours Course listings for this category may be found here. COMPETENCIES AND SKILLS Foundational Writing: ENGL 101 OR ENGL 100 and ENGL 102 Health and Movement: 1 hour Course listings for this category may be found here. World Languages I: 3 hours High school exemption from World Languages I is possible. To obtain a high school exemption, a student must complete three sequential years in the same language with a B or better for each semester. IDIS 101 KNOWLEDGE AND UNDERSTANDING Complete coursework totaling at least 18 semester hours from at least five of the six Knowledge and Understanding categories, including at least 2 semester hours from each of the following categories: Arts, Oral Rhetoric, Visual Rhetoric; Humanities; Social and Behavioral Sciences. Course listings for each category may be found here. World Languages II: 0-4 hours Arts, Oral Rhetoric, Visual Rhetoric: 2-6 hours Humanities: 2-6 hours Mathematical Sciences: 0-4 hours Natural Sciences: 0-6 hours Social and Behavioral Sciences: 2-6 hours CROSS-DISCIPLINARY INTEGRATION Engaged Citizenship Commitments Complete at least one tagged course in all four areas. These courses may also satisfy other core requirements. The full list of approved courses may be found here. Diversity and Difference Environmental Sustainability Global Regions and Cultures Rhetoric in the Disciplines Contemporary Challenges and Enduring Questions: 4 hours GCS 391 (Grand Rapids Campus) or ML 326 (Handlon Campus)",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 36-44",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

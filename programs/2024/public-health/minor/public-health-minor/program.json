@@ -1,0 +1,217 @@
+{
+  "id": "public-health-minor",
+  "name": "Public Health Minor",
+  "code": "PUBH.MIN",
+  "type": "Minor",
+  "degreeTypes": [
+    "Non-Degree"
+  ],
+  "department": {
+    "id": 735,
+    "name": "Public Health"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13096",
+  "description": null,
+  "totalHours": "22-25",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "PUBH 101",
+          "title": "Introduction to Public Health",
+          "credits": "4",
+          "courseId": 20575,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54314"
+        },
+        {
+          "code": "PUBH 248",
+          "title": "Epidemiology",
+          "credits": "3",
+          "courseId": 20576,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54315"
+        },
+        {
+          "code": "PUBH 295",
+          "title": "Public Health Seminar",
+          "credits": "0",
+          "courseId": 20577,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54316"
+        },
+        {
+          "code": "PUBH 395",
+          "title": "Human Flourishing through Public Health",
+          "credits": "4",
+          "courseId": 20579,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54318"
+        }
+      ],
+      "notes": [],
+      "children": [
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "BIOL 364",
+              "title": "Global Health, Environment, and Sustainability",
+              "credits": "4",
+              "courseId": 17774,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53763"
+            },
+            {
+              "code": "ENST 210",
+              "title": "Human Impacts on the Environment",
+              "credits": "4",
+              "courseId": 18791,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53979"
+            },
+            {
+              "code": "HE 254",
+              "title": "Nutrition",
+              "credits": "2",
+              "courseId": 19251,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54039"
+            },
+            {
+              "code": "HE 266",
+              "title": "Basic Health Concepts",
+              "credits": "4",
+              "courseId": 19252,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54041"
+            },
+            {
+              "code": "IDIS 212",
+              "title": "Global Health",
+              "credits": "4",
+              "courseId": 19295,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54084"
+            },
+            {
+              "code": "PSYC 335",
+              "title": "Health Psychology",
+              "credits": "4",
+              "courseId": 20267,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54306"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "ECON 241",
+              "title": "Health Economics and Health Policy",
+              "credits": "2",
+              "courseId": 18297,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53887"
+            },
+            {
+              "code": "IDIS 201",
+              "title": "Introduction to the United States Health Care System",
+              "credits": "2",
+              "courseId": 22297,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54784"
+            },
+            {
+              "code": "POLS 212",
+              "title": "Institutions and Politics of US Public Policy",
+              "credits": "2",
+              "courseId": 20233,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54272"
+            },
+            {
+              "code": "SOC 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 20637,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+            },
+            {
+              "code": "SOWK 360",
+              "title": "Social Welfare Policy Analysis",
+              "credits": "2",
+              "courseId": 20656,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54395"
+            },
+            {
+              "code": "SOWK 250",
+              "title": "Diversity and Inequality in the United States",
+              "credits": "4",
+              "courseId": 20651,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54390"
+            }
+          ],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Additional Elective",
+          "description": "one additional elective, from the lists above or approved by the advisor",
+          "courses": [],
+          "notes": [],
+          "children": []
+        },
+        {
+          "name": "Take One from the Following",
+          "description": null,
+          "courses": [
+            {
+              "code": "STAT 143",
+              "title": "Introduction to Probability and Statistics",
+              "credits": "4",
+              "courseId": 21008,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54448"
+            },
+            {
+              "code": "STAT 145",
+              "title": "Biostatistics",
+              "credits": "4",
+              "courseId": 21009,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54449"
+            },
+            {
+              "code": "PSYC 255",
+              "title": "Statistics and Research Design",
+              "credits": "4",
+              "courseId": 20259,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54298"
+            },
+            {
+              "code": "SOC 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 20639,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54378"
+            },
+            {
+              "code": "SOWK 255",
+              "title": "Social Science Statistics",
+              "credits": "4",
+              "courseId": 20652,
+              "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54391"
+            }
+          ],
+          "notes": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Total Semester Hours: 22-25",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}

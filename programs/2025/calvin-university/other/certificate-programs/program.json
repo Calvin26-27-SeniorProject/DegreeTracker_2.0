@@ -1,0 +1,20 @@
+{
+  "id": "certificate-programs",
+  "name": "Certificate Programs",
+  "code": null,
+  "type": null,
+  "degreeTypes": [],
+  "department": {
+    "id": 341,
+    "name": "Calvin University"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "25",
+    "year": "2026-27"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=25&poid=13761",
+  "description": "Undergraduate Certificates Computer Science Cybersecurity Geology, Geography, and Environment Geographic Information Science (online) Physics and Astronomy Astrophysics Ready for Life Academy Comprehensive Postsecondary Education Life and Career Studies School of Business Global Business​ School of Graduate and Continuing Studies Faith and Community Leadership (Handlon campus only) Liberal Arts and Sciences (Handlon campus only) Speech Pathology and Audiology Speech and Hearing Foundations (online) World Languages World Languages Proficiency Graduate Certificates (offered solely online) Geology, Geography, and Environment Geographic Information Science GIS Graduate Certificate for Local Government Kinesiology Cardiac Rehabilitation",
+  "totalHours": null,
+  "requirements": []
+}

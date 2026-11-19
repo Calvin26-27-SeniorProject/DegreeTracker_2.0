@@ -1,0 +1,140 @@
+{
+  "id": "applied-leadership-ba",
+  "name": "Applied Leadership, BA",
+  "code": "BA_APPLDR",
+  "type": "Major",
+  "degreeTypes": [
+    "Bachelor of Arts"
+  ],
+  "department": {
+    "id": 843,
+    "name": "Adult Degree Completion (Knollcrest Campus)"
+  },
+  "otherDepartments": [],
+  "catalog": {
+    "catoid": "24",
+    "year": "2025-26"
+  },
+  "sourceUrl": "https://catalog.calvin.edu/preview_program.php?catoid=24&poid=13574",
+  "description": "In collaboration with the School of Business, the School of Graduate and Continuing Studies offers a BA in Applied Leadership. The program prepares adult learners who are seeking a degree-completion program to move into areas of greater responsibility and accountability in their organizations through an interdisciplinary curriculum that explores human behavior and its application to leadership. This curriculum is rooted in Christian virtues and practices and includes relevant theory and principles. In addition to the requirements of the major, students also must satisfy the requirements of the degree-completion Core curriculum.",
+  "totalHours": "36-44",
+  "requirements": [
+    {
+      "name": "Program Requirements",
+      "description": null,
+      "courses": [
+        {
+          "code": "SOC 151",
+          "title": "Sociological Principles and Perspectives",
+          "credits": "2",
+          "courseId": 20634,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54373"
+        },
+        {
+          "code": "PSYC 151",
+          "title": "Introductory Psychology: Perspectives on the Self",
+          "credits": "4",
+          "courseId": 20254,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54293"
+        },
+        {
+          "code": "BUS 201",
+          "title": "Management and Organizational Behavior",
+          "credits": "4",
+          "courseId": 17786,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53775"
+        },
+        {
+          "code": "SOWK 350",
+          "title": "Human Behavior and the Social Environment",
+          "credits": "4",
+          "courseId": 20655,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54394"
+        },
+        {
+          "code": "SOC 250",
+          "title": "Diversity and Inequality in the United States",
+          "credits": "4",
+          "courseId": 20637,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54376"
+        },
+        {
+          "code": "ENTR 202",
+          "title": "Design Thinking",
+          "credits": "4",
+          "courseId": 22707,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54956"
+        },
+        {
+          "code": "HRM 301",
+          "title": "Human Resource Management",
+          "credits": "4",
+          "courseId": 17789,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53778"
+        },
+        {
+          "code": "COMM 265",
+          "title": "Leadership Communication for Organizations",
+          "credits": "2",
+          "courseId": 18216,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=53806"
+        },
+        {
+          "code": "MGMT 342",
+          "title": "Servant Leadership and Transformation",
+          "credits": "4",
+          "courseId": 22625,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54922"
+        },
+        {
+          "code": "BUS 205",
+          "title": "Project Management",
+          "credits": "4",
+          "courseId": 22633,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54930"
+        },
+        {
+          "code": "GCS 300",
+          "title": "Career Exploration",
+          "credits": "2",
+          "courseId": 22626,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=54923"
+        },
+        {
+          "code": "GCS 391",
+          "title": "Leading through Change",
+          "credits": "4",
+          "courseId": 22839,
+          "url": "https://catalog.calvin.edu/preview_course_nopop.php?catoid=24&coid=55739"
+        }
+      ],
+      "notes": [
+        {
+          "course": "SOC 250",
+          "placement": "after",
+          "text": "OR SOC 231 - Intercultural Communication"
+        },
+        {
+          "course": "GCS 300",
+          "placement": "after",
+          "text": "OR GCS 380 - Internship for Continuing Studies"
+        }
+      ],
+      "children": []
+    },
+    {
+      "name": "Core Requirements",
+      "description": "FOUNDATIONS Community and Commitments: 2 hours CORE 100 Foundations of Christianity I: 4 hours REL 121 or REL 131 Foundations of Christianity II - at least 2 hours Course listings for this category may be found here. COMPETENCIES AND SKILLS Foundational Writing: ENGL 101 OR ENGL 100 and ENGL 102 Health and Movement: 1 hour PER 1XX World Languages I: 3 hours IDIS 101 KNOWLEDGE AND UNDERSTANDING Complete coursework totaling at least 18 semester hours from at least five of the six Knowledge and Understanding categories, including at least 2 semester hours from each of the following categories: Arts, Oral Rhetoric, Visual Rhetoric; Humanities; Social and Behavioral Sciences. Course listings for each category may be found here. World Languages II: 0-4 hours Arts, Oral Rhetoric, Visual Rhetoric: 2-6 hours Humanities: 2-6 hours Mathematical Sciences: 0-4 hours Natural Sciences: 0-6 hours Social and Behavioral Sciences: 2-6 hours CROSS-DISCIPLINARY INTEGRATION Engaged Citizenship Commitments Complete at least one tagged course in all three areas. These courses may also satisfy other core requirements. The full list of approved courses may be found here. Diversity and Difference Environmental Sustainability Global Regions and Cultures Contemporary Challenges and Enduring Questions: 4 hours Course listings for each category may be found here.",
+      "courses": [],
+      "notes": [],
+      "children": []
+    },
+    {
+      "name": "Total Semester Hours: 36-44",
+      "description": null,
+      "courses": [],
+      "notes": [],
+      "children": []
+    }
+  ]
+}
